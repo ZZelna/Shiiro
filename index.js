@@ -548,12 +548,30 @@ if (!token) {
 
 client.on("interactionCreate", async (interaction) => {
 
-  // ───── Boutons ─────
-  if (interaction.isButton()) {
+  if (!interaction.isButton()) return;
 
-    if (interaction.customId === "customrole_add") {
+  if (interaction.customId === "customrole_add") {
+    return interaction.reply({
+      content: "➕ Bouton Ajouter détecté",
+      ephemeral: true
+    });
+  }
 
-      const roles = interaction.guild.roles.cache
+  if (interaction.customId === "customrole_remove") {
+    return interaction.reply({
+      content: "🗑️ Bouton Supprimer détecté",
+      ephemeral: true
+    });
+  }
+
+  if (interaction.customId === "customrole_list") {
+    return interaction.reply({
+      content: "📋 Bouton Liste détecté",
+      ephemeral: true
+    });
+  }
+
+});
 });
 
 client.login(token);
