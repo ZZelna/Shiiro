@@ -4,6 +4,9 @@ const {
   Partials,
   EmbedBuilder,
   ActivityType,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
 } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
@@ -14,12 +17,13 @@ const CONFIG_PATH = path.join(__dirname, "config.json");
 function loadConfig() {
   if (!fs.existsSync(CONFIG_PATH)) {
     const defaultCfg = {
-      prefix: "!",
-      owner_ids: [],
-      whitelist: [],
-      moderator_roles: [],
-      log_channel_id: null,
-    };
+  prefix: "!",
+  owner_ids: [],
+  whitelist: [],
+  moderator_roles: [],
+  log_channel_id: null,
+  custom_roles: {}
+};
     saveConfig(defaultCfg);
     return defaultCfg;
   }
@@ -28,6 +32,52 @@ function loadConfig() {
 
 function saveConfig(config) {
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, 2), "utf-8");
+}
+
+function getCustomRoles() {
+  const cfg = loadConfig();
+
+  if (!cfg.custom_roles) {
+    cfg.custom_roles = {};
+    saveConfig(cfg);
+  }
+
+  return cfg.custom_roles;
+}
+
+function addCustomRole(commandName, roleId) {
+  const cfg = loadConfig();
+
+  if (!cfg.custom_roles)
+    cfg.custom_roles = {};
+
+  cfg.custom_roles[commandName.toLowerCase()] = {
+    role_id: roleId,
+  };
+
+  saveConfig(cfg);
+}
+
+function removeCustomRole(commandName) {
+  const cfg = loadConfig();
+
+  if (!cfg.custom_roles)
+    return false;
+
+  delete cfg.custom_roles[commandName.toLowerCase()];
+
+  saveConfig(cfg);
+
+  return true;
+}
+
+function getCustomRole(commandName) {
+  const cfg = loadConfig();
+
+  if (!cfg.custom_roles)
+    return null;
+
+  return cfg.custom_roles[commandName.toLowerCase()];
 }
 
 function isOwner(userId) {
@@ -431,6 +481,45 @@ client.on("messageCreate", async (message) => {
     }
     return;
   }
+// ── !panel ────────────────────────────────────────────────
+if (command === "panel") {
+
+  if (!isOwner(message.author.id))
+    return message.reply({
+      embeds: [embedError("Seuls les owners peuvent ouvrir le panel.")]
+    });
+
+  const embed = new EmbedBuilder()
+    .setTitle("⚙️ Gestion des rôles personnalisés")
+    .setDescription(
+      "Utilisez les boutons ci-dessous pour gérer les rôles personnalisés."
+    )
+    .setColor(0x5865f2);
+
+  const row = new ActionRowBuilder()
+    .addComponents(
+      new ButtonBuilder()
+        .setCustomId("customrole_add")
+        .setLabel("➕ Ajouter")
+        .setStyle(ButtonStyle.Success),
+
+      new ButtonBuilder()
+        .setCustomId("customrole_remove")
+        .setLabel("🗑️ Supprimer")
+        .setStyle(ButtonStyle.Danger),
+
+      new ButtonBuilder()
+        .setCustomId("customrole_list")
+        .setLabel("📋 Liste")
+        .setStyle(ButtonStyle.Primary)
+    );
+
+  return message.reply({
+    embeds: [embed],
+    components: [row]
+  });
+
+}
 
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
