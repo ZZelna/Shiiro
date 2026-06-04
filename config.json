@@ -3,5 +3,6 @@
   "owner_ids": [],
   "whitelist": [],
   "moderator_roles": [],
-  "log_channel_id": null
+  "log_channel_id": null,
+  "custom_roles": {}
 }
