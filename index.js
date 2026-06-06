@@ -617,31 +617,26 @@ client.on("interactionCreate", async (interaction) => {
 
   if (interaction.isButton()) {
 
-    if (interaction.customId === "customrole_add") {
+  if (interaction.customId === "customrole_add") {
 
-      const roles = interaction.guild.roles.cache
-        .filter(r => !r.managed && r.name !== "@everyone")
-        .map(r => ({
-          label: r.name,
-          value: r.id
-        }))
-        .slice(0, 25);
+  const modal = new ModalBuilder()
+    .setCustomId("customrole_add_modal")
+    .setTitle("Ajouter un rôle personnalisé");
 
-      const menu = new StringSelectMenuBuilder()
-        .setCustomId("role_select")
-        .setPlaceholder("Choisissez un rôle")
-        .addOptions(roles);
+  const roleInput = new TextInputBuilder()
+    .setCustomId("role_name")
+    .setLabel("Nom exact du rôle Discord")
+    .setStyle(TextInputStyle.Short)
+    .setRequired(true);
 
-      const row = new ActionRowBuilder()
-        .addComponents(menu);
+  const row = new ActionRowBuilder()
+    .addComponents(roleInput);
 
-      return interaction.reply({
-        content: "Sélectionnez un rôle :",
-        components: [row],
-        ephemeral: true
-      });
+  modal.addComponents(row);
 
-    }
+  return interaction.showModal(modal);
+
+}
 if (interaction.customId === "customrole_remove") {
 
   const roles = getCustomRoles();
