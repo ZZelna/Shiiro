@@ -550,12 +550,31 @@ client.on("interactionCreate", async (interaction) => {
 
   if (!interaction.isButton()) return;
 
-  if (interaction.customId === "customrole_add") {
-    return interaction.reply({
-      content: "➕ Bouton Ajouter détecté",
-      ephemeral: true
-    });
-  }
+ if (interaction.customId === "customrole_add") {
+
+  const roles = interaction.guild.roles.cache
+    .filter(r => !r.managed && r.name !== "@everyone")
+    .map(r => ({
+      label: r.name,
+      value: r.id
+    }))
+    .slice(0, 25);
+
+  const menu = new StringSelectMenuBuilder()
+    .setCustomId("role_select")
+    .setPlaceholder("Choisissez un rôle")
+    .addOptions(roles);
+
+  const row = new ActionRowBuilder()
+    .addComponents(menu);
+
+  return interaction.reply({
+    content: "Sélectionnez un rôle :",
+    components: [row],
+    ephemeral: true
+  });
+
+}
 
   if (interaction.customId === "customrole_remove") {
     return interaction.reply({
@@ -588,6 +607,24 @@ client.on("interactionCreate", async (interaction) => {
     });
 
   }
+if (interaction.isStringSelectMenu()) {
 
+  if (interaction.customId === "role_select") {
+
+    const roleId = interaction.values[0];
+
+    addCustomRole(
+      interaction.guild.roles.cache.get(roleId).name.toLowerCase(),
+      roleId
+    );
+
+    return interaction.reply({
+      content:
+        `✅ Commande créée : !${interaction.guild.roles.cache.get(roleId).name.toLowerCase()}`,
+      ephemeral: true
+    });
+  }
+
+}
 });
 client.login(token);
