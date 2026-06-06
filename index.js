@@ -586,5 +586,6 @@ client.on("interactionCreate", async (interaction) => {
     content: txt,
     ephemeral: true
   });
-
+  }
+});
 client.login(token);
