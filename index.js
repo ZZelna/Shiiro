@@ -206,6 +206,73 @@ client.on("messageCreate", async (message) => {
   if (!parsed) return;
   const { command, args } = parsed;
 
+  // ─── Commandes de rôles personnalisés ─────────────────────
+const customRole = getCustomRole(command);
+
+if (customRole) {
+
+  const target = message.mentions.members.first();
+
+  if (!target) {
+    return message.reply({
+      embeds: [embedError(`Usage : !${command} @utilisateur`)]
+    });
+  }
+
+  const role = message.guild.roles.cache.get(
+    customRole.role_id
+  );
+
+  if (!role) {
+    return message.reply({
+      embeds: [embedError("Le rôle configuré n'existe plus.")]
+    });
+  }
+
+  if (!message.member.roles.cache.has(role.id)) {
+    return message.reply({
+      embeds: [embedError(`Vous devez posséder le rôle ${role.name}.`)]
+    });
+  }
+
+  try {
+
+    if (target.roles.cache.has(role.id)) {
+
+      await target.roles.remove(role);
+
+      return message.reply({
+        embeds: [
+          embedSuccess(`${role.name} retiré à ${target.user.tag}`)
+        ]
+      });
+
+    } else {
+
+      await target.roles.add(role);
+
+      return message.reply({
+        embeds: [
+          embedSuccess(`${role.name} ajouté à ${target.user.tag}`)
+        ]
+      });
+
+    }
+
+  } catch {
+
+    return message.reply({
+      embeds: [
+        embedError(
+          "Impossible de modifier le rôle. Vérifiez la hiérarchie."
+        )
+      ]
+    });
+
+  }
+
+}
+  
   // ── !help ──────────────────────────────────────────────────────────────────
   if (command === "help") {
     const cfg = loadConfig();
