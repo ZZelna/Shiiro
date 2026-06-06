@@ -642,13 +642,39 @@ client.on("interactionCreate", async (interaction) => {
       });
 
     }
+if (interaction.customId === "customrole_remove") {
 
-    if (interaction.customId === "customrole_remove") {
-      return interaction.reply({
-        content: "🗑️ Bouton Supprimer détecté",
-        ephemeral: true
-      });
-    }
+  const roles = getCustomRoles();
+
+  if (Object.keys(roles).length === 0) {
+    return interaction.reply({
+      content: "❌ Aucun rôle personnalisé configuré.",
+      ephemeral: true
+    });
+  }
+
+  const options = Object.keys(roles)
+    .slice(0, 25)
+    .map(cmd => ({
+      label: `!${cmd}`,
+      value: cmd
+    }));
+
+  const menu = new StringSelectMenuBuilder()
+    .setCustomId("customrole_delete_select")
+    .setPlaceholder("Choisissez une commande à supprimer")
+    .addOptions(options);
+
+  const row = new ActionRowBuilder()
+    .addComponents(menu);
+
+  return interaction.reply({
+    content: "🗑️ Sélectionnez la commande à supprimer :",
+    components: [row],
+    ephemeral: true
+  });
+
+}
 
     if (interaction.customId === "customrole_list") {
 
@@ -694,7 +720,18 @@ client.on("interactionCreate", async (interaction) => {
       });
 
     }
+if (interaction.customId === "customrole_delete_select") {
 
+  const commandName = interaction.values[0];
+
+  removeCustomRole(commandName);
+
+  return interaction.reply({
+    content: `✅ La commande !${commandName} a été supprimée.`,
+    ephemeral: true
+  });
+
+}
   }
 
 });
