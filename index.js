@@ -564,7 +564,7 @@ client.on("interactionCreate", async (interaction) => {
     });
   }
 
-  if (interaction.customId === "customrole_list") {
+if (interaction.customId === "customrole_list") {
 
   const roles = getCustomRoles();
 
@@ -574,6 +574,20 @@ client.on("interactionCreate", async (interaction) => {
       ephemeral: true
     });
   }
+
+  const txt = Object.entries(roles)
+    .map(([cmd, data]) => {
+      const role = interaction.guild.roles.cache.get(data.role_id);
+      return `• !${cmd} → ${role ? role.name : "Rôle supprimé"}`;
+    })
+    .join("\n");
+
+  return interaction.reply({
+    content: txt,
+    ephemeral: true
+  });
+
+}
 
   const txt = Object.entries(roles)
     .map(([cmd, data]) => {
