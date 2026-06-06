@@ -709,10 +709,13 @@ if (interaction.customId === "customrole_remove") {
 
       const roleId = interaction.values[0];
 
-      addCustomRole(
-        interaction.guild.roles.cache.get(roleId).name.toLowerCase(),
-        roleId
-      );
+      const commandName = interaction.guild.roles.cache
+  .get(roleId)
+  .name
+  .toLowerCase()
+  .replace(/\s+/g, "_");
+
+addCustomRole(commandName, roleId);
 
       return interaction.reply({
         content: `✅ Commande créée : !${interaction.guild.roles.cache.get(roleId).name.toLowerCase()}`,
