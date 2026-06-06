@@ -615,83 +615,87 @@ if (!token) {
 
 client.on("interactionCreate", async (interaction) => {
 
-  if (!interaction.isButton()) return;
+  if (interaction.isButton()) {
 
- if (interaction.customId === "customrole_add") {
+    if (interaction.customId === "customrole_add") {
 
-  const roles = interaction.guild.roles.cache
-    .filter(r => !r.managed && r.name !== "@everyone")
-    .map(r => ({
-      label: r.name,
-      value: r.id
-    }))
-    .slice(0, 25);
+      const roles = interaction.guild.roles.cache
+        .filter(r => !r.managed && r.name !== "@everyone")
+        .map(r => ({
+          label: r.name,
+          value: r.id
+        }))
+        .slice(0, 25);
 
-  const menu = new StringSelectMenuBuilder()
-    .setCustomId("role_select")
-    .setPlaceholder("Choisissez un rôle")
-    .addOptions(roles);
+      const menu = new StringSelectMenuBuilder()
+        .setCustomId("role_select")
+        .setPlaceholder("Choisissez un rôle")
+        .addOptions(roles);
 
-  const row = new ActionRowBuilder()
-    .addComponents(menu);
+      const row = new ActionRowBuilder()
+        .addComponents(menu);
 
-  return interaction.reply({
-    content: "Sélectionnez un rôle :",
-    components: [row],
-    ephemeral: true
-  });
-
-}
-
-  if (interaction.customId === "customrole_remove") {
-    return interaction.reply({
-      content: "🗑️ Bouton Supprimer détecté",
-      ephemeral: true
-    });
-  }
-
-  if (interaction.customId === "customrole_list") {
-
-    const roles = getCustomRoles();
-
-    if (Object.keys(roles).length === 0) {
       return interaction.reply({
-        content: "❌ Aucun rôle personnalisé configuré.",
+        content: "Sélectionnez un rôle :",
+        components: [row],
+        ephemeral: true
+      });
+
+    }
+
+    if (interaction.customId === "customrole_remove") {
+      return interaction.reply({
+        content: "🗑️ Bouton Supprimer détecté",
         ephemeral: true
       });
     }
 
-    const txt = Object.entries(roles)
-      .map(([cmd, data]) => {
-        const role = interaction.guild.roles.cache.get(data.role_id);
-        return `• !${cmd} → ${role ? role.name : "Rôle supprimé"}`;
-      })
-      .join("\n");
+    if (interaction.customId === "customrole_list") {
 
-    return interaction.reply({
-      content: txt,
-      ephemeral: true
-    });
+      const roles = getCustomRoles();
+
+      if (Object.keys(roles).length === 0) {
+        return interaction.reply({
+          content: "❌ Aucun rôle personnalisé configuré.",
+          ephemeral: true
+        });
+      }
+
+      const txt = Object.entries(roles)
+        .map(([cmd, data]) => {
+          const role = interaction.guild.roles.cache.get(data.role_id);
+          return `• !${cmd} → ${role ? role.name : "Rôle supprimé"}`;
+        })
+        .join("\n");
+
+      return interaction.reply({
+        content: txt,
+        ephemeral: true
+      });
+
+    }
 
   }
-if (interaction.isStringSelectMenu()) {
 
-  if (interaction.customId === "role_select") {
+  if (interaction.isStringSelectMenu()) {
 
-    const roleId = interaction.values[0];
+    if (interaction.customId === "role_select") {
 
-    addCustomRole(
-      interaction.guild.roles.cache.get(roleId).name.toLowerCase(),
-      roleId
-    );
+      const roleId = interaction.values[0];
 
-    return interaction.reply({
-      content:
-        `✅ Commande créée : !${interaction.guild.roles.cache.get(roleId).name.toLowerCase()}`,
-      ephemeral: true
-    });
+      addCustomRole(
+        interaction.guild.roles.cache.get(roleId).name.toLowerCase(),
+        roleId
+      );
+
+      return interaction.reply({
+        content: `✅ Commande créée : !${interaction.guild.roles.cache.get(roleId).name.toLowerCase()}`,
+        ephemeral: true
+      });
+
+    }
+
   }
 
-}
 });
 client.login(token);
