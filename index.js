@@ -732,5 +732,37 @@ if (interaction.customId === "customrole_delete_select") {
 }
   }
 
+if (interaction.isModalSubmit()) {
+
+  if (interaction.customId === "customrole_add_modal") {
+
+    const roleName = interaction.fields.getTextInputValue("role_name");
+
+    const role = interaction.guild.roles.cache.find(
+      r => r.name.toLowerCase() === roleName.toLowerCase()
+    );
+
+    if (!role) {
+      return interaction.reply({
+        content: `❌ Rôle introuvable : ${roleName}`,
+        ephemeral: true
+      });
+    }
+
+    const commandName = role.name
+      .toLowerCase()
+      .replace(/\s+/g, "_");
+
+    addCustomRole(commandName, role.id);
+
+    return interaction.reply({
+      content: `✅ Commande créée : !${commandName}`,
+      ephemeral: true
+    });
+
+  }
+
+}
+
 });
 client.login(token);
