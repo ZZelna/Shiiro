@@ -508,7 +508,50 @@ if (customRole) {
       return message.reply({ embeds: [embedError("Permission refusée. Vérifiez la hiérarchie des rôles du bot.")] });
     }
   }
+// ── !ban ──────────────────────────────────────────────────────────────
+if (command === "ban") {
 
+  if (!isWhitelisted(message.author.id))
+    return message.reply({
+      embeds: [embedError("Commande réservée aux owners et aux membres whitelist.")]
+    });
+
+  const member = message.mentions.members.first();
+
+  if (!member)
+    return message.reply({
+      embeds: [embedError("Usage : !ban @utilisateur")]
+    });
+
+  const modal = new ModalBuilder()
+    .setCustomId(`ban_modal_${member.id}`)
+    .setTitle("Bannir un utilisateur");
+
+  const reasonInput = new TextInputBuilder()
+    .setCustomId("ban_reason")
+    .setLabel("Raison du bannissement")
+    .setStyle(TextInputStyle.Paragraph)
+    .setRequired(true)
+    .setMaxLength(500);
+
+  modal.addComponents(
+    new ActionRowBuilder().addComponents(reasonInput)
+  );
+
+  await message.reply({
+    content: "Clique sur le bouton pour ouvrir le formulaire.",
+    components: [
+      new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+          .setCustomId(`open_ban_modal_${member.id}`)
+          .setLabel("🔨 Bannir")
+          .setStyle(ButtonStyle.Danger)
+      )
+    ]
+  });
+
+  return;
+}
   // ── !say ───────────────────────────────────────────────────────────────────
   if (command === "say") {
     if (!isWhitelisted(message.author.id))
@@ -615,8 +658,29 @@ if (!token) {
 
 client.on("interactionCreate", async (interaction) => {
 
-  if (interaction.isButton()) {
+ if (interaction.customId.startsWith("open_ban_modal_")) {
 
+      const userId = interaction.customId.replace(
+        "open_ban_modal_",
+        ""
+      );
+
+      const modal = new ModalBuilder()
+        .setCustomId(`ban_modal_${userId}`)
+        .setTitle("Bannir un utilisateur");
+
+      const reasonInput = new TextInputBuilder()
+        .setCustomId("ban_reason")
+        .setLabel("Raison du bannissement")
+        .setStyle(TextInputStyle.Paragraph)
+        .setRequired(true);
+
+      modal.addComponents(
+        new ActionRowBuilder().addComponents(reasonInput)
+      );
+
+      return interaction.showModal(modal);
+    }
   if (interaction.customId === "customrole_add") {
 
   const modal = new ModalBuilder()
@@ -734,6 +798,66 @@ if (interaction.customId === "customrole_delete_select") {
 
 if (interaction.isModalSubmit()) {
 
+    if (interaction.customId.startsWith("ban_modal_")) {
+
+      const userId = interaction.customId.replace(
+        "ban_modal_",
+        ""
+      );
+
+      const member = await interaction.guild.members
+        .fetch(userId)
+        .catch(() => null);
+
+      if (!member) {
+        return interaction.reply({
+          content: "❌ Utilisateur introuvable.",
+          ephemeral: true
+        });
+      }
+
+      const reason =
+        interaction.fields.getTextInputValue("ban_reason");
+
+      try {
+
+        try {
+
+          const dmEmbed = new EmbedBuilder()
+            .setColor(0xED4245)
+            .setTitle("🚫 Bannissement")
+            .setDescription(
+              "Tu as été banni de Shiiro.\n\n" +
+              "Pour demander ton unban, rejoins ce serveur et ouvre un ticket.\n\n" +
+              "https://discord.gg/FZqjCqMmXY"
+            );
+
+          await member.send({
+            embeds: [dmEmbed]
+          });
+
+        } catch {}
+
+        await member.ban({ reason });
+
+        return interaction.reply({
+          content: `✅ ${member.user.tag} a été banni.`,
+          ephemeral: true
+        });
+
+      } catch (err) {
+
+        console.error(err);
+
+        return interaction.reply({
+          content: "❌ Impossible de bannir cet utilisateur.",
+          ephemeral: true
+        });
+
+      }
+
+    }
+  
   if (interaction.customId === "customrole_add_modal") {
 
     const roleName = interaction.fields.getTextInputValue("role_name");
