@@ -765,6 +765,30 @@ if (interaction.isModalSubmit()) {
 }
 
 });
+client.on("guildMemberAdd", async (member) => {
+
+  const channel = member.guild.channels.cache.get("1508491934547574814");
+
+  if (!channel) return;
+
+  const embed = new EmbedBuilder()
+    .setColor(0x5865F2)
+    .setTitle("🎉 Bienvenue sur Shiiro")
+    .setDescription(
+      `Bienvenue ${member} !\n\nGrâce à toi, nous sommes désormais **${member.guild.memberCount} membres**.`
+    )
+    .setThumbnail(member.user.displayAvatarURL())
+    .setTimestamp();
+
+  await channel.send({ embeds: [embed] });
+
+  await channel.send({
+    files: [
+      "https://static.klipy.com/ii/2fd1ee858360694ebc7272832a866c2b/ca/f2/bmEfVFxeobVPBZAJZ.mp4"
+    ]
+  });
+
+});
 client.once("clientReady", () => {
   console.log(`${client.user.tag} connecté !`);
 
