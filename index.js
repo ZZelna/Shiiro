@@ -765,4 +765,19 @@ if (interaction.isModalSubmit()) {
 }
 
 });
+client.once("clientReady", () => {
+  console.log(`${client.user.tag} connecté !`);
+
+  client.user.setPresence({
+    activities: [
+      {
+        name: ".gg/shiiro",
+        type: ActivityType.Streaming,
+        url: "https://www.twitch.tv/leox123bs"
+      }
+    ],
+    status: "online"
+  });
+});
+
 client.login(token);
