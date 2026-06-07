@@ -772,23 +772,14 @@ client.on("guildMemberAdd", async (member) => {
   if (!channel) return;
 
   const embed = new EmbedBuilder()
-    .setColor(0x5865F2)
-    .setTitle("🎉 Bienvenue sur Shiiro")
-    .setDescription(
-      `Bienvenue ${member} !\n\nGrâce à toi, nous sommes désormais **${member.guild.memberCount} membres**.`
-    )
-    .setThumbnail(member.user.displayAvatarURL())
-    .setTimestamp();
-
-  await channel.send({ embeds: [embed] });
-
-  await channel.send({
-    files: [
-      "https://static.klipy.com/ii/2fd1ee858360694ebc7272832a866c2b/ca/f2/bmEfVFxeobVPBZAJZ.mp4"
-    ]
-  });
-
-});
+  .setColor(0x5865F2)
+  .setTitle("🎉 Bienvenue sur Shiiro")
+  .setDescription(
+    `Bienvenue ${member} !\n\nGrâce à toi, nous sommes désormais **${member.guild.memberCount} membres**.`
+  )
+  .setThumbnail(member.user.displayAvatarURL())
+  .setImage("https://static.klipy.com/ii/e1b92bb53e0c9e442408bc677a56c789/cf/4e/squUjOdmywiQ7oM8Q.gif")
+  .setTimestamp();
 client.once("clientReady", () => {
   console.log(`${client.user.tag} connecté !`);
 
