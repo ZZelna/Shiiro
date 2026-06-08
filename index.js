@@ -628,54 +628,78 @@ if (command === "unban") {
   }
 
 }
-  // ── !ban ─────────────────────────
-if (command === "ban") {
-   ...
-}
-
-// ── !unban ───────────────────────
-if (command === "unban") {
-   ...
-}
-
-// ── !bypass ──────────────────────
+ // ── !bypass ──────────────────────
 if (command === "bypass") {
 
   if (!isWhitelisted(message.author.id))
     return message.reply({
-      embeds: [embedError("Commande réservée aux owners et whitelist.")]
+      embeds: [
+        embedError("Commande réservée aux owners et whitelist.")
+      ]
     });
 
   const userId = args[0];
 
   if (!userId)
     return message.reply({
-      embeds: [embedError("Usage : !bypass ID_UTILISATEUR")]
+      embeds: [
+        embedError("Usage : !bypass ID_UTILISATEUR")
+      ]
     });
 
   try {
 
     const user = await client.users.fetch(userId);
 
-    const embed = new EmbedBuilder()
-      .setColor(0x57F287)
-      .setTitle("✅ Bypass accepté")
-      .setDescription(
-        "Ta demande de bypass a été acceptée.\n\n" +
-        "Tu peux maintenant rejoindre Shiiro :\n\n" +
-        "https://discord.gg/nCvVCmXdUZ"
-      );
+    // Déban
+    await message.guild.members.unban(
+      userId,
+      `Bypass accordé par ${message.author.tag}`
+    );
 
-    await user.send({ embeds: [embed] });
+    // MP
+    try {
+
+      const embed = new EmbedBuilder()
+        .setColor(0x57F287)
+        .setTitle("✅ Bypass accepté")
+        .setDescription(
+          "Ta demande de bypass a été acceptée.\n\n" +
+          "Tu peux maintenant rejoindre Shiiro :\n\n" +
+          "https://discord.gg/nCvVCmXdUZ"
+        );
+
+      await user.send({
+        embeds: [embed]
+      });
+
+    } catch {}
+
+    await logAction(
+      message.guild,
+      "Bypass",
+      message.author.id,
+      `<@${userId}>`
+    );
 
     return message.reply({
-      embeds: [embedSuccess(`Bypass envoyé à ${user.tag}.`)]
+      embeds: [
+        embedSuccess(
+          `${user.tag} a été débanni et a reçu le lien du serveur.`
+        )
+      ]
     });
 
-  } catch {
+  } catch (err) {
+
+    console.error(err);
 
     return message.reply({
-      embeds: [embedError("Impossible d'envoyer le bypass.")]
+      embeds: [
+        embedError(
+          "Utilisateur introuvable ou non banni."
+        )
+      ]
     });
 
   }
