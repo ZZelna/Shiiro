@@ -628,6 +628,54 @@ if (command === "unban") {
   }
 
 }
+  // ── !mp ──────────────────────────────────────────────
+if (command === "mp") {
+
+  if (!isWhitelisted(message.author.id))
+    return message.reply({
+      embeds: [embedError("Commande réservée aux owners et whitelist.")]
+    });
+
+  const member = message.mentions.members.first();
+
+  if (!member)
+    return message.reply({
+      embeds: [embedError("Usage : !mp @utilisateur")]
+    });
+
+  try {
+
+    const embed = new EmbedBuilder()
+      .setColor(0x5865F2)
+      .setTitle("📨 Invitation Shiiro")
+      .setDescription(
+        "Tu as été invité à rejoindre Shiiro.\n\n" +
+        "🔗 https://discord.gg/nCvVCmXdUZ"
+      );
+
+    await member.send({
+      embeds: [embed]
+    });
+
+    return message.reply({
+      embeds: [
+        embedSuccess(`Invitation envoyée à ${member.user.tag}.`)
+      ]
+    });
+
+  } catch {
+
+    return message.reply({
+      embeds: [
+        embedError(
+          "Impossible d'envoyer un message privé à cet utilisateur."
+        )
+      ]
+    });
+
+  }
+
+}
   // ── !say ───────────────────────────────────────────────────────────────────
   if (command === "say") {
     if (!isWhitelisted(message.author.id))
