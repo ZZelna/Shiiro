@@ -552,6 +552,82 @@ if (command === "ban") {
 
   return;
 }
+  // ── !unban ──────────────────────────────────────────────
+if (command === "unban") {
+
+  if (!isWhitelisted(message.author.id))
+    return message.reply({
+      embeds: [
+        embedError(
+          "Commande réservée aux owners et aux membres whitelist."
+        )
+      ]
+    });
+
+  const userId = args[0];
+
+  if (!userId)
+    return message.reply({
+      embeds: [
+        embedError("Usage : !unban ID_UTILISATEUR")
+      ]
+    });
+
+  try {
+
+    const user = await client.users.fetch(userId);
+
+    try {
+
+      const dmEmbed = new EmbedBuilder()
+        .setColor(0x57F287)
+        .setTitle("✅ Débannissement")
+        .setDescription(
+          "Tu as été débanni de Shiiro.\n\n" +
+          "Tu peux maintenant rejoindre le serveur."
+        );
+
+      await user.send({
+        embeds: [dmEmbed]
+      });
+
+    } catch {}
+
+    await message.guild.members.unban(
+      userId,
+      `Unban par ${message.author.tag}`
+    );
+
+    await logAction(
+      message.guild,
+      "Unban",
+      message.author.id,
+      `<@${userId}>`
+    );
+
+    return message.reply({
+      embeds: [
+        embedSuccess(
+          `${user.tag} a été débanni.`
+        )
+      ]
+    });
+
+  } catch (err) {
+
+    console.error(err);
+
+    return message.reply({
+      embeds: [
+        embedError(
+          "Utilisateur introuvable ou non banni."
+        )
+      ]
+    });
+
+  }
+
+}
   // ── !say ───────────────────────────────────────────────────────────────────
   if (command === "say") {
     if (!isWhitelisted(message.author.id))
