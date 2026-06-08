@@ -992,12 +992,31 @@ if (command === "gw") {
     confirmMsg.first().content.toLowerCase();
 
   if (confirmation !== "oui")
-    return message.channel.send("❌ Giveaway annulé.");
+  return message.channel.send("❌ Giveaway annulé.");
 
-  return message.channel.send(
-    "✅ Giveaway configuré avec succès."
-  );
-}
+const giveawayEmbed = new EmbedBuilder()
+  .setColor(0xFEE75C)
+  .setTitle("🎁 GIVEAWAY")
+  .setDescription(
+    `Réagis avec ${emoji} pour participer !`
+  )
+  .addFields(
+    { name: "🏆 Lot", value: prize },
+    { name: "👑 Gagnants", value: `${winnerCount}` },
+    { name: "⏳ Durée", value: duration }
+  )
+  .setTimestamp();
+
+const giveawayMessage =
+  await giveawayChannel.send({
+    embeds: [giveawayEmbed]
+  });
+
+await giveawayMessage.react(emoji);
+
+return message.channel.send(
+  `✅ Giveaway envoyé dans ${giveawayChannel}`
+);
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
