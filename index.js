@@ -658,7 +658,9 @@ if (!token) {
 
 client.on("interactionCreate", async (interaction) => {
 
- if (interaction.customId.startsWith("open_ban_modal_")) {
+  if (interaction.isButton()) {
+
+    if (interaction.customId.startsWith("open_ban_modal_")) {
 
       const userId = interaction.customId.replace(
         "open_ban_modal_",
