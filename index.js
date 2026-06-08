@@ -897,7 +897,7 @@ if (command === "wl") {
   });
 
 }
-  // ── !gw ──────────────────────────────────────────────
+ // ── !gw ──────────────────────────────────────────────
 if (command === "gw") {
 
   if (!isGiveawayWhitelisted(message.author.id))
@@ -905,12 +905,98 @@ if (command === "gw") {
       embeds: [embedError("Accès refusé.")]
     });
 
-  return message.reply({
+  const filter = m => m.author.id === message.author.id;
+
+  await message.channel.send("🎁 Quel est le lot ?");
+
+  const prizeMsg = await message.channel.awaitMessages({
+    filter,
+    max: 1,
+    time: 60000
+  });
+
+  const prize = prizeMsg.first().content;
+
+  await message.channel.send("⏳ Durée ? (ex: 1h, 30d, 90d)");
+
+  const durationMsg = await message.channel.awaitMessages({
+    filter,
+    max: 1,
+    time: 60000
+  });
+
+  const duration = durationMsg.first().content;
+
+  await message.channel.send("👑 Nombre de gagnants ?");
+
+  const winnersMsg = await message.channel.awaitMessages({
+    filter,
+    max: 1,
+    time: 60000
+  });
+
+  const winnerCount = parseInt(winnersMsg.first().content);
+
+  await message.channel.send("😀 Emoji de participation ?");
+
+  const emojiMsg = await message.channel.awaitMessages({
+    filter,
+    max: 1,
+    time: 60000
+  });
+
+  const emoji = emojiMsg.first().content;
+
+  await message.channel.send("📢 Mentionne le salon du giveaway");
+
+  const channelMsg = await message.channel.awaitMessages({
+    filter,
+    max: 1,
+    time: 60000
+  });
+
+  const giveawayChannel =
+    channelMsg.first().mentions.channels.first();
+
+  if (!giveawayChannel)
+    return message.reply({
+      embeds: [embedError("Salon invalide.")]
+    });
+
+  await message.channel.send({
     embeds: [
-      embedInfo("🎁 Système de giveaway en cours de configuration.")
+      new EmbedBuilder()
+        .setTitle("🎁 Prévisualisation Giveaway")
+        .setDescription(
+          `🏆 Lot : ${prize}\n` +
+          `⏳ Durée : ${duration}\n` +
+          `👑 Gagnants : ${winnerCount}\n` +
+          `😀 Emoji : ${emoji}\n` +
+          `📢 Salon : ${giveawayChannel}`
+        )
+        .setColor(0xFEE75C)
     ]
   });
 
+  await message.channel.send(
+    "✅ Tape `oui` pour confirmer ou `non` pour annuler."
+  );
+
+  const confirmMsg = await message.channel.awaitMessages({
+    filter,
+    max: 1,
+    time: 60000
+  });
+
+  const confirmation =
+    confirmMsg.first().content.toLowerCase();
+
+  if (confirmation !== "oui")
+    return message.channel.send("❌ Giveaway annulé.");
+
+  return message.channel.send(
+    "✅ Giveaway configuré avec succès."
+  );
 }
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
