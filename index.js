@@ -1016,6 +1016,37 @@ if (interaction.isModalSubmit()) {
 
 });
 client.on("guildMemberAdd", async (member) => {
+const accountAge =
+    Date.now() - member.user.createdTimestamp;
+
+  const sevenDays =
+    7 * 24 * 60 * 60 * 1000;
+
+  if (accountAge < sevenDays) {
+
+    try {
+
+      await member.send({
+        embeds: [
+          new EmbedBuilder()
+            .setColor(0xED4245)
+            .setTitle("🚫 Bannissement automatique")
+            .setDescription(
+              "Ton compte est trop récent donc il a été banni de Shiiro.\n\n" +
+              "Pour demander un bypass, ouvre un ticket ici :\n" +
+              "https://discord.gg/FZqjCqMmXY"
+            )
+        ]
+      });
+
+    } catch {}
+
+    await member.ban({
+      reason: "Compte Discord de moins de 7 jours"
+    });
+
+    return;
+  }
 
   const channel = member.guild.channels.cache.get("1508491934547574814");
 
