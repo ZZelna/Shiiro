@@ -4,5 +4,10 @@
   "whitelist": [],
   "moderator_roles": [],
   "log_channel_id": null,
-  "custom_roles": {}
+
+  "custom_roles": {},
+
+  "giveaway_whitelist": [],
+
+  "giveaways": {}
 }
