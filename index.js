@@ -1014,9 +1014,23 @@ const giveawayMessage =
 
 await giveawayMessage.react(emoji);
 
+const durationMs = parseDuration(duration);
+
+const endAt = Date.now() + durationMs;
+
+saveGiveaway(giveawayMessage.id, {
+  channelId: giveawayChannel.id,
+  prize,
+  emoji,
+  winnerCount,
+  endAt
+});
+
 return message.channel.send(
   `✅ Giveaway envoyé dans ${giveawayChannel}`
 );
+
+}
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
