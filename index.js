@@ -996,14 +996,25 @@ if (command === "gw") {
 
 const giveawayEmbed = new EmbedBuilder()
   .setColor(0xFEE75C)
-  .setTitle("🎁 GIVEAWAY")
+  .setTitle(`🎉 ${prize}`)
   .setDescription(
     `Réagis avec ${emoji} pour participer !`
   )
   .addFields(
-    { name: "🏆 Lot", value: prize },
-    { name: "👑 Gagnants", value: `${winnerCount}` },
-    { name: "⏳ Durée", value: duration }
+    {
+      name: "👑 Gagnants",
+      value: `${winnerCount}`,
+      inline: true
+    },
+    {
+      name: "🎤 Organisateur",
+      value: `${message.author}`,
+      inline: true
+    },
+    {
+      name: "⏰ Fin",
+      value: `<t:${endTimestamp}:F>\n<t:${endTimestamp}:R>`
+    }
   )
   .setTimestamp();
 
