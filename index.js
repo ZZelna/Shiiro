@@ -628,6 +628,64 @@ if (command === "unban") {
   }
 
 }
+  // ── !ban ─────────────────────────
+if (command === "ban") {
+   ...
+}
+
+// ── !unban ───────────────────────
+if (command === "unban") {
+   ...
+}
+
+// ── !bypass ──────────────────────
+if (command === "bypass") {
+
+  if (!isWhitelisted(message.author.id))
+    return message.reply({
+      embeds: [embedError("Commande réservée aux owners et whitelist.")]
+    });
+
+  const userId = args[0];
+
+  if (!userId)
+    return message.reply({
+      embeds: [embedError("Usage : !bypass ID_UTILISATEUR")]
+    });
+
+  try {
+
+    const user = await client.users.fetch(userId);
+
+    const embed = new EmbedBuilder()
+      .setColor(0x57F287)
+      .setTitle("✅ Bypass accepté")
+      .setDescription(
+        "Ta demande de bypass a été acceptée.\n\n" +
+        "Tu peux maintenant rejoindre Shiiro :\n\n" +
+        "https://discord.gg/nCvVCmXdUZ"
+      );
+
+    await user.send({ embeds: [embed] });
+
+    return message.reply({
+      embeds: [embedSuccess(`Bypass envoyé à ${user.tag}.`)]
+    });
+
+  } catch {
+
+    return message.reply({
+      embeds: [embedError("Impossible d'envoyer le bypass.")]
+    });
+
+  }
+
+}
+
+// ── !say ─────────────────────────
+if (command === "say") {
+   ...
+}
   // ── !mp ──────────────────────────────────────────────
 if (command === "mp") {
 
