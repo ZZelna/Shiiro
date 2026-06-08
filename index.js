@@ -92,7 +92,14 @@ function isWhitelisted(userId) {
   const cfg = loadConfig();
   return cfg.owner_ids.includes(userId) || cfg.whitelist.includes(userId);
 }
+function isGiveawayWhitelisted(userId) {
+  const cfg = loadConfig();
 
+  return (
+    cfg.owner_ids.includes(userId) ||
+    cfg.giveaway_whitelist.includes(userId)
+  );
+}
 // ─── Bot setup ────────────────────────────────────────────────────────────────
 const client = new Client({
   intents: [
@@ -853,7 +860,58 @@ if (command === "panel") {
   });
 
 }
+// ── !wl ──────────────────────────────────────────────
+if (command === "wl") {
 
+  if (!isOwner(message.author.id))
+    return message.reply({
+      embeds: [
+        embedError(
+          "Seuls les owners peuvent gérer la whitelist giveaway."
+        )
+      ]
+    });
+
+  const member = message.mentions.members.first();
+
+  if (!member)
+    return message.reply({
+      embeds: [
+        embedError("Usage : !wl @utilisateur")
+      ]
+    });
+
+  const cfg = loadConfig();
+
+  if (!cfg.giveaway_whitelist.includes(member.id)) {
+    cfg.giveaway_whitelist.push(member.id);
+    saveConfig(cfg);
+  }
+
+  return message.reply({
+    embeds: [
+      embedSuccess(
+        `${member.user.tag} ajouté à la whitelist giveaway.`
+      )
+    ]
+  });
+
+}
+  // ── !gw ──────────────────────────────────────────────
+if (command === "gw") {
+
+  if (!isGiveawayWhitelisted(message.author.id))
+    return message.reply({
+      embeds: [embedError("Accès refusé.")]
+    });
+
+  return message.reply({
+    embeds: [
+      embedInfo("🎁 Système de giveaway en cours de configuration.")
+    ]
+  });
+
+}
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
