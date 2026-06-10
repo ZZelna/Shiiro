@@ -1058,6 +1058,7 @@ return message.channel.send(
 
 // ─── Lancement ────────────────────────────────────────────────────────────────
 const token = process.env.DISCORD_TOKEN;
+console.log("Token chargé :", !!token);
 if (!token) {
   console.error("❌ DISCORD_TOKEN manquant. Définissez la variable d'environnement DISCORD_TOKEN.");
   process.exit(1);
