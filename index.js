@@ -1100,6 +1100,7 @@ saveGiveaway(giveawayMessage.id, {
   winnerCount,
   endAt
 });
+  console.log("Giveaways actuels :", loadGiveaways());
 
 return message.channel.send(
   `✅ Giveaway envoyé dans ${giveawayChannel}`
