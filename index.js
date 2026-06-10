@@ -1462,6 +1462,15 @@ setInterval(async () => {
         r => r.emoji.name === gw.emoji
       );
 
+      console.log(
+  "Réactions trouvées :",
+  message.reactions.cache.map(r => ({
+    name: r.emoji.name,
+    id: r.emoji.id
+  }))
+);
+
+console.log("Emoji sauvegardé :", gw.emoji);
       if (!reaction) continue;
 
       const users = await reaction.users.fetch();
