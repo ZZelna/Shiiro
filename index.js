@@ -1093,10 +1093,17 @@ const giveawayMessage = await giveawayChannel.send({
 
 await giveawayMessage.react(emoji);
 
+saveGiveaway(giveawayMessage.id, {
+  channelId: giveawayChannel.id,
+  prize,
+  emoji,
+  winnerCount,
+  endAt
+});
+
 return message.channel.send(
   `✅ Giveaway envoyé dans ${giveawayChannel}`
 );
-  }
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
