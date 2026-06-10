@@ -1429,5 +1429,75 @@ client.once("clientReady", () => {
     status: "online"
   });
 });
+setInterval(async () => {
+
+  const giveaways = loadGiveaways();
+
+  const remaining = [];
+
+  for (const gw of giveaways) {
+
+    if (Date.now() < gw.endAt) {
+      remaining.push(gw);
+      continue;
+    }
+
+    try {
+
+      const channel =
+        await client.channels.fetch(gw.channelId);
+
+      const message =
+        await channel.messages.fetch(gw.messageId);
+
+      const reaction = message.reactions.cache.find(
+        r => r.emoji.name === gw.emoji
+      );
+
+      if (!reaction) continue;
+
+      const users = await reaction.users.fetch();
+
+      const participants = users
+        .filter(u => !u.bot)
+        .map(u => u);
+
+      if (participants.length === 0) {
+        await channel.send(
+          `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
+        );
+        continue;
+      }
+
+      const winners = [];
+
+      for (
+        let i = 0;
+        i < Math.min(gw.winnerCount, participants.length);
+        i++
+      ) {
+        const randomIndex =
+          Math.floor(Math.random() * participants.length);
+
+        winners.push(
+          participants.splice(randomIndex, 1)[0]
+        );
+      }
+
+      await channel.send(
+        `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
+      );
+
+    } catch (err) {
+      console.error("Erreur giveaway :", err);
+    }
+  }
+
+  saveGiveaways(remaining);
+
+}, 30000);
+
+console.log(process.env.TEST);
+client.login(token);
 console.log(process.env.TEST);
 client.login(token);
