@@ -172,6 +172,31 @@ function parseMessage(message) {
   const command = args.shift().toLowerCase();
   return { command, args };
 }
+function parseDuration(str) {
+
+  const match = str.match(/^(\d+)(s|m|h|d)$/i);
+
+  if (!match) return null;
+
+  const value = parseInt(match[1]);
+
+  const unit = match[2].toLowerCase();
+
+  switch (unit) {
+
+    case "s": return value * 1000;
+
+    case "m": return value * 60 * 1000;
+
+    case "h": return value * 60 * 60 * 1000;
+
+    case "d": return value * 24 * 60 * 60 * 1000;
+
+    default: return null;
+
+  }
+
+}
 
 // ─── READY ────────────────────────────────────────────────────────────────────
 client.once("ready", () => {
