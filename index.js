@@ -1300,7 +1300,10 @@ if (interaction.isModalSubmit()) {
 
 });
 client.on("guildMemberAdd", async (member) => {
-const accountAge =
+
+  if (member.user.bot) return;
+
+  const accountAge =
     Date.now() - member.user.createdTimestamp;
 
   const sevenDays =
