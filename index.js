@@ -1019,6 +1019,16 @@ if (command === "gw") {
   if (confirmation !== "oui")
   return message.channel.send("❌ Giveaway annulé.");
 
+const durationMs = parseDuration(duration);
+
+if (!durationMs)
+  return message.reply({
+    embeds: [embedError("Durée invalide.")]
+  });
+
+const endAt = Date.now() + durationMs;
+const endTimestamp = Math.floor(endAt / 1000);
+
 const giveawayEmbed = new EmbedBuilder()
   .setColor(0xFEE75C)
   .setTitle(`🎉 ${prize}`)
@@ -1043,30 +1053,16 @@ const giveawayEmbed = new EmbedBuilder()
   )
   .setTimestamp();
 
-const giveawayMessage =
-  await giveawayChannel.send({
-    embeds: [giveawayEmbed]
-  });
+const giveawayMessage = await giveawayChannel.send({
+  embeds: [giveawayEmbed]
+});
 
 await giveawayMessage.react(emoji);
-
-const durationMs = parseDuration(duration);
-
-const endAt = Date.now() + durationMs;
-
-saveGiveaway(giveawayMessage.id, {
-  channelId: giveawayChannel.id,
-  prize,
-  emoji,
-  winnerCount,
-  endAt
-});
 
 return message.channel.send(
   `✅ Giveaway envoyé dans ${giveawayChannel}`
 );
-
-}
+  }
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
