@@ -100,6 +100,40 @@ function isGiveawayWhitelisted(userId) {
     cfg.giveaway_whitelist.includes(userId)
   );
 }
+
+
+// ─── Giveaways ─────────────────────────────────────────
+
+const GIVEAWAYS_PATH = path.join(__dirname, "giveaways.json");
+
+function loadGiveaways() {
+  if (!fs.existsSync(GIVEAWAYS_PATH)) {
+    fs.writeFileSync(GIVEAWAYS_PATH, "[]");
+  }
+
+  return JSON.parse(
+    fs.readFileSync(GIVEAWAYS_PATH, "utf8")
+  );
+}
+
+function saveGiveaways(data) {
+  fs.writeFileSync(
+    GIVEAWAYS_PATH,
+    JSON.stringify(data, null, 2)
+  );
+}
+
+function saveGiveaway(messageId, data) {
+  const giveaways = loadGiveaways();
+
+  giveaways.push({
+    messageId,
+    ...data
+  });
+
+  saveGiveaways(giveaways);
+}
+
 // ─── Bot setup ────────────────────────────────────────────────────────────────
 const client = new Client({
   intents: [
