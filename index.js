@@ -1057,7 +1057,7 @@ return message.channel.send(
 });
 
 // ─── Lancement ────────────────────────────────────────────────────────────────
-const const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
+const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
 console.log("Token chargé :", !!token);
 if (!token) {
   console.error("❌ DISCORD_TOKEN manquant. Définissez la variable d'environnement DISCORD_TOKEN.");
