@@ -1104,6 +1104,7 @@ saveGiveaway(giveawayMessage.id, {
 return message.channel.send(
   `✅ Giveaway envoyé dans ${giveawayChannel}`
 );
+  }
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
