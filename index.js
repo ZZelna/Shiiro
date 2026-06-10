@@ -1363,5 +1363,5 @@ client.once("clientReady", () => {
     status: "online"
   });
 });
-
+console.log(process.env.TEST);
 client.login(token);
