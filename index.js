@@ -1242,7 +1242,7 @@ if (command === "wl") {
  // ── !gw ──────────────────────────────────────────────
 if (command === "gw") {
 
-  if (!isGiveawayWhitelisted(message.author.id))
+if (!isCasinoWhitelisted(message.author.id))
     return message.reply({
       embeds: [embedError("Accès refusé.")]
     });
