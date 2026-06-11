@@ -811,8 +811,7 @@ if (customRole) {
     }
   }
 
-// ── !giverole 
-──────────────────────────────────────────────────────────────
+// ── !giverole ──────────────────────────────────────────────────────────────// ── !giverole ──────────────────────────────────────────────────────────────
   if (command === "giverole") {
     if (!isWhitelisted(message.author.id))
       return message.reply({ embeds: [embedError("Vous n'êtes pas dans la whitelist.")] });
