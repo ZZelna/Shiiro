@@ -1492,23 +1492,27 @@ console.log("Emoji sauvegardé :", gw.emoji);
 
       const winners = [];
 
-      for (
-        let i = 0;
-        i < Math.min(gw.winnerCount, participants.length);
-        i++
-      ) {
-        const randomIndex =
-          Math.floor(Math.random() * participants.length);
+for (
+  let i = 0;
+  i < Math.min(gw.winnerCount, participants.length);
+  i++
+) {
+  const randomIndex =
+    Math.floor(Math.random() * participants.length);
 
-        winners.push(
-          participants.splice(randomIndex, 1)[0]
-        );
-      }
+  winners.push(
+    participants.splice(randomIndex, 1)[0]
+  );
+}
 
-      await channel.send(
-        `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
-      );
+console.log(
+  "Gagnants :",
+  winners.map(w => w.tag)
+);
 
+await channel.send(
+  `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
+);
     } catch (err) {
       console.error("Erreur giveaway :", err);
     }
@@ -1518,7 +1522,5 @@ console.log("Emoji sauvegardé :", gw.emoji);
 
 }, 30000);
 
-console.log(process.env.TEST);
-client.login(token);
 console.log(process.env.TEST);
 client.login(token);
