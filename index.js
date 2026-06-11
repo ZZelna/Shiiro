@@ -1842,7 +1842,6 @@ return message.channel.send(
   }
 
 if (command === "lock") {
-  console.log("Commande LOCK détectée");
 
   if (!isModerator(message.member))
     return message.reply({
@@ -1851,14 +1850,20 @@ if (command === "lock") {
 
   const everyone = message.guild.roles.everyone;
 
-  const perms = message.channel.permissionsFor(everyone);
+  const overwrite =
+    message.channel.permissionOverwrites.cache.get(
+      everyone.id
+    );
 
-  const locked = !perms.has("SendMessages");
+  const locked =
+    overwrite?.deny?.has(
+      PermissionFlagsBits.SendMessages
+    );
 
   await message.channel.permissionOverwrites.edit(
     everyone,
     {
-      SendMessages: locked
+      SendMessages: !locked
     }
   );
 
@@ -1872,7 +1877,7 @@ if (command === "lock") {
     ]
   });
 }
-
+  
 if (command === "hide") {
   console.log("Commande HIDE détectée");
 
