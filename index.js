@@ -1101,18 +1101,12 @@ saveGiveaway(giveawayMessage.id, {
   endAt
 });
   console.log("Giveaways actuels :", loadGiveaways());
-  saveGiveaway(giveawayMessage.id, {
-  channelId: giveawayChannel.id,
-  prize,
-  emoji,
-  winnerCount,
-  endAt
-});
-  
+
 return message.channel.send(
+
   `✅ Giveaway envoyé dans ${giveawayChannel}`
+
 );
-  }
   // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
