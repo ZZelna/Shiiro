@@ -1879,23 +1879,30 @@ if (command === "lock") {
 }
   
 if (command === "hide") {
-  console.log("Commande HIDE détectée");
 
   if (!isModerator(message.member))
     return message.reply({
       embeds: [embedError("Permission refusée.")]
     });
 
+  const { PermissionFlagsBits } = require("discord.js");
+
   const everyone = message.guild.roles.everyone;
 
-  const perms = message.channel.permissionsFor(everyone);
+  const overwrite =
+    message.channel.permissionOverwrites.cache.get(
+      everyone.id
+    );
 
-  const hidden = !perms.has("ViewChannel");
+  const hidden =
+    overwrite?.deny?.has(
+      PermissionFlagsBits.ViewChannel
+    );
 
   await message.channel.permissionOverwrites.edit(
     everyone,
     {
-      ViewChannel: hidden
+      ViewChannel: !hidden
     }
   );
 
@@ -1909,9 +1916,6 @@ if (command === "hide") {
     ]
   });
 }
-  
-});
-
 // ─── Lancement ────────────────────────────────────────────────────────────────
 const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
 console.log("Token chargé :", !!token);
