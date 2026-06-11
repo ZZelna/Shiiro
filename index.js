@@ -58,8 +58,7 @@ function getCustomRoles() {
 
   return cfg.custom_roles;
 }
-
-function addCustomRole(commandName, roleId) {
+function addCustomRole(commandName, roleId, ownerId) {
   const cfg = loadConfig();
 
   if (!cfg.custom_roles)
@@ -67,6 +66,21 @@ function addCustomRole(commandName, roleId) {
 
   cfg.custom_roles[commandName.toLowerCase()] = {
     role_id: roleId,
+    owner_id: ownerId
+  };
+
+  saveConfig(cfg);
+}
+
+function addCustomRole(commandName, roleId, ownerId) {
+  const cfg = loadConfig();
+
+  if (!cfg.custom_roles)
+    cfg.custom_roles = {};
+
+  cfg.custom_roles[commandName.toLowerCase()] = {
+    role_id: roleId,
+    owner_id: ownerId
   };
 
   saveConfig(cfg);
@@ -1898,22 +1912,67 @@ if (interaction.customId === "customrole_remove") {
 
     if (interaction.customId === "role_select") {
 
-      const roleId = interaction.values[0];
+  const roleId = interaction.values[0];
 
-      const commandName = interaction.guild.roles.cache
-  .get(roleId)
-  .name
-  .toLowerCase()
-  .replace(/\s+/g, "_");
+  const role = interaction.guild.roles.cache.get(roleId);
 
-addCustomRole(commandName, roleId);
+  if (!role) {
+    return interaction.reply({
+      content: "❌ Rôle introuvable.",
+      ephemeral: true
+    });
+  }
 
-      return interaction.reply({
-        content: `✅ Commande créée : +${interaction.guild.roles.cache.get(roleId).name.toLowerCase()}`,
-        ephemeral: true
-      });
+  const commandName = role.name
+    .toLowerCase()
+    .replace(/\s+/g, "_");
 
-    }
+  addCustomRole(
+    commandName,
+    roleId,
+    interaction.user.id
+  );
+
+  return interaction.reply({
+    content:
+      `✅ Commande créée : +${commandName}\n` +
+      `👑 Propriétaire : ${interaction.user.tag}\n` +
+      `🎭 Rôle : ${role.name}`,
+    ephemeral: true
+  });
+
+}if (interaction.customId === "role_select") {
+
+  const roleId = interaction.values[0];
+
+  const role = interaction.guild.roles.cache.get(roleId);
+
+  if (!role) {
+    return interaction.reply({
+      content: "❌ Rôle introuvable.",
+      ephemeral: true
+    });
+  }
+
+  const commandName = role.name
+    .toLowerCase()
+    .replace(/\s+/g, "_");
+
+  addCustomRole(
+    commandName,
+    roleId,
+    interaction.user.id
+  );
+
+  return interaction.reply({
+    content:
+      `✅ Commande créée : +${commandName}\n` +
+      `👑 Propriétaire : ${interaction.user.tag}\n` +
+      `🎭 Rôle : ${role.name}`,
+    ephemeral: true
+  });
+
+}
 if (interaction.customId === "customrole_delete_select") {
 
   const commandName = interaction.values[0];
