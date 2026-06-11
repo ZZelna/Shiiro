@@ -1453,80 +1453,109 @@ setInterval(async () => {
     const giveaways = loadGiveaways();
     const remaining = [];
 
-    const channel =
-  await client.channels.fetch(gw.channelId);
+    for (const gw of giveaways) {
 
-const message =
-  await channel.messages.fetch(gw.messageId);
+      if (Date.now() < gw.endAt) {
+        remaining.push(gw);
+        continue;
+      }
 
-const reaction = message.reactions.cache.find(
-  r => gw.emoji.includes(r.emoji.id)
-);
+      try {
 
-console.log(
-  "Réactions trouvées :",
-  message.reactions.cache.map(r => ({
-    name: r.emoji.name,
-    id: r.emoji.id
-  }))
-);
+        const channel =
+          await client.channels.fetch(gw.channelId);
 
-console.log("Emoji sauvegardé :", gw.emoji);
+        const message =
+          await channel.messages.fetch(gw.messageId);
 
-if (!reaction) continue;
+        const reaction = message.reactions.cache.find(
+          r => gw.emoji.includes(r.emoji.id)
+        );
 
-const users = await reaction.users.fetch();
+        console.log(
+          "Réactions trouvées :",
+          message.reactions.cache.map(r => ({
+            name: r.emoji.name,
+            id: r.emoji.id
+          }))
+        );
 
-const participants = users
-  .filter(u => !u.bot)
-  .map(u => u);
+        console.log("Emoji sauvegardé :", gw.emoji);
 
-console.log(
-  "Participants :",
-  participants.map(p => p.tag)
-);
+        if (!reaction) {
+          console.log("Aucune réaction trouvée");
+          continue;
+        }
 
-if (participants.length === 0) {
-  await channel.send(
-    `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
-  );
-  continue;
-}
+        const users = await reaction.users.fetch();
 
-const winners = [];
+        const participants = users
+          .filter(u => !u.bot)
+          .map(u => u);
 
-for (
-  let i = 0;
-  i < Math.min(gw.winnerCount, participants.length);
-  i++
-) {
-  const randomIndex =
-    Math.floor(Math.random() * participants.length);
+        console.log(
+          "Participants :",
+          participants.map(p => p.tag)
+        );
 
-  winners.push(
-    participants.splice(randomIndex, 1)[0]
-  );
-}
+        if (participants.length === 0) {
+          await channel.send(
+            `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
+          );
+          continue;
+        }
 
-console.log(
-  "Gagnants :",
-  winners.map(w => w.tag)
-);
+        const winners = [];
 
-await channel.send(
-  `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
-);
+        for (
+          let i = 0;
+          i < Math.min(gw.winnerCount, participants.length);
+          i++
+        ) {
+          const randomIndex =
+            Math.floor(Math.random() * participants.length);
 
-console.log(
-  "Giveaway terminé et supprimé :",
-  gw.messageId
-);
+          winners.push(
+            participants.splice(randomIndex, 1)[0]
+          );
+        }
+
+        console.log(
+          "Gagnants :",
+          winners.map(w => w.tag)
+        );
+
+        await channel.send(
+          `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
+        );
+
+        console.log(
+          "Giveaway terminé et supprimé :",
+          gw.messageId
+        );
+
+        // On ne remet PAS le giveaway dans remaining
+        // donc il sera supprimé au prochain saveGiveaways()
+
+      } catch (err) {
+
+        console.error(
+          "Erreur giveaway :",
+          err
+        );
+
+      }
+
+    }
 
     saveGiveaways(remaining);
 
   } catch (err) {
 
-    console.error("Erreur giveaway :", err);
+    console.error(
+      "Erreur giveaway system :",
+      err
+    );
 
   } finally {
 
@@ -1535,5 +1564,9 @@ console.log(
   }
 
 }, 30000);
+
+// ─── Connexion ─────────────────────────────────────────
+
 console.log(process.env.TEST);
+
 client.login(token);
