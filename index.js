@@ -1449,12 +1449,12 @@ setInterval(async () => {
 
   for (const gw of giveaways) {
 
-    if (Date.now() < gw.endAt) {
-      remaining.push(gw);
-      continue;
-    }
+   if (Date.now() < gw.endAt) {
+    remaining.push(gw);
+    continue;
+  }
 
-    try {
+  try {
 
       const channel =
         await client.channels.fetch(gw.channelId);
@@ -1517,17 +1517,13 @@ console.log(
 await channel.send(
   `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
 );
+  
 
 console.log(
   "Giveaway terminé et supprimé :",
   gw.messageId
 );
-// Empêche un second tirage
-gw.ended = true;
 
-await channel.send(
-  `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
-);
     } catch (err) {
       console.error("Erreur giveaway :", err);
     }
