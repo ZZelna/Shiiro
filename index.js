@@ -307,6 +307,52 @@ client.on("messageCreate", async (message) => {
   if (!parsed) return;
   const { command, args } = parsed;
 
+  // Commandes non disponibles
+
+const unavailableCommands = [
+
+  "claim",
+
+  "unclaim",
+
+  "close",
+
+  "rename",
+
+  "jail",
+
+  "warn",
+
+  "warnlist",
+
+  "panelticket",
+
+  "shop",
+
+  "panelcasino",
+
+  "resetcasino"
+
+];
+
+if (unavailableCommands.includes(command)) {
+
+  return message.reply({
+
+    embeds: [
+
+      embedInfo(
+
+        "🚧 Cette commande est en cours de développement."
+
+      )
+
+    ]
+
+  });
+
+}
+  
 if (command === "help") {
 
   const pages = [
