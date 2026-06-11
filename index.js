@@ -1243,6 +1243,7 @@ if (command === "wl") {
 if (command === "gw") {
 
 if (!isCasinoWhitelisted(message.author.id))
+
     return message.reply({
       embeds: [embedError("Accès refusé.")]
     });
