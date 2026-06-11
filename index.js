@@ -1438,6 +1438,7 @@ client.once("clientReady", () => {
   });
 });
 
+console.log("✅ Giveaway system chargé");
 setInterval(async () => {
 
   console.log("🔄 Giveaway checker exécuté");
@@ -1512,6 +1513,17 @@ console.log(
   "Gagnants :",
   winners.map(w => w.tag)
 );
+
+await channel.send(
+  `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
+);
+
+console.log(
+  "Giveaway terminé et supprimé :",
+  gw.messageId
+);
+// Empêche un second tirage
+gw.ended = true;
 
 await channel.send(
   `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
