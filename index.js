@@ -1860,5 +1860,5 @@ for (let i = 0; i < winnerAmount; i++) {
 
 console.log(process.env.TEST);
 
-client.login(token);const {
+client.login(token);
   
