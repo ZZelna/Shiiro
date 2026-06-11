@@ -1794,7 +1794,6 @@ return message.channel.send(
     saveConfig(cfg);
     return message.reply({ embeds: [embedSuccess(`📌 Salon de log défini : ${channel}`)] });
   }
-});
 
 if (command === "lock") {
 
@@ -1857,6 +1856,8 @@ if (command === "hide") {
     ]
   });
 }
+  
+});
 
 // ─── Lancement ────────────────────────────────────────────────────────────────
 const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
