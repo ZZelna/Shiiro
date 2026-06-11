@@ -1507,19 +1507,21 @@ console.log("participants.length =", participants.length);
 
         const winners = [];
 
-        for (
-          let i = 0;
-          i < Math.min(gw.winnerCount, participants.length);
-          i++
-        ) {
-          const randomIndex =
-            Math.floor(Math.random() * participants.length);
+const winnerAmount = Math.min(
+  gw.winnerCount,
+  participants.length
+);
 
-          winners.push(
-            participants.splice(randomIndex, 1)[0]
-          );
-        }
+for (let i = 0; i < winnerAmount; i++) {
 
+  const randomIndex =
+    Math.floor(Math.random() * participants.length);
+
+  winners.push(
+    participants.splice(randomIndex, 1)[0]
+  );
+
+}
         console.log(
           "Gagnants :",
           winners.map(w => w.tag)
@@ -1529,6 +1531,10 @@ console.log("participants.length =", participants.length);
           `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
         );
 
+        console.log(
+  "Nombre final de gagnants =",
+  winners.length
+);
         console.log(
           "Giveaway terminé et supprimé :",
           gw.messageId
