@@ -307,6 +307,7 @@ client.on("messageCreate", async (message) => {
   const parsed = parseMessage(message);
   if (!parsed) return;
   const { command, args } = parsed;
+  console.log("Commande reçue :", command);
 
   // Commandes non disponibles
 
