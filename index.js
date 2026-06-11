@@ -1437,36 +1437,33 @@ client.once("clientReady", () => {
     status: "online"
   });
 });
+// ─── Giveaways ─────────────────────────────────────────
 
-console.log("✅ Giveaway system chargé");
+let giveawayRunning = false;
+
 setInterval(async () => {
 
-  console.log("🔄 Giveaway checker exécuté");
-
-  const giveaways = loadGiveaways();
-
-  const remaining = [];
-
-  for (const gw of giveaways) {
-
-   if (Date.now() < gw.endAt) {
-    remaining.push(gw);
-    continue;
-  }
+  if (giveawayRunning) return;
+  giveawayRunning = true;
 
   try {
 
-      const channel =
-        await client.channels.fetch(gw.channelId);
+    console.log("🔄 Giveaway checker exécuté");
 
-      const message =
-        await channel.messages.fetch(gw.messageId);
+    const giveaways = loadGiveaways();
+    const remaining = [];
 
-      const reaction = message.reactions.cache.find(
+    const channel =
+  await client.channels.fetch(gw.channelId);
+
+const message =
+  await channel.messages.fetch(gw.messageId);
+
+const reaction = message.reactions.cache.find(
   r => gw.emoji.includes(r.emoji.id)
 );
 
-      console.log(
+console.log(
   "Réactions trouvées :",
   message.reactions.cache.map(r => ({
     name: r.emoji.name,
@@ -1475,26 +1472,28 @@ setInterval(async () => {
 );
 
 console.log("Emoji sauvegardé :", gw.emoji);
-      if (!reaction) continue;
 
-      const users = await reaction.users.fetch();
+if (!reaction) continue;
 
-      const participants = users
-        .filter(u => !u.bot)
-        .map(u => u);
+const users = await reaction.users.fetch();
 
-      console.log(
+const participants = users
+  .filter(u => !u.bot)
+  .map(u => u);
+
+console.log(
   "Participants :",
   participants.map(p => p.tag)
 );
-      if (participants.length === 0) {
-        await channel.send(
-          `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
-        );
-        continue;
-      }
 
-      const winners = [];
+if (participants.length === 0) {
+  await channel.send(
+    `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
+  );
+  continue;
+}
+
+const winners = [];
 
 for (
   let i = 0;
@@ -1517,21 +1516,24 @@ console.log(
 await channel.send(
   `🎉 Giveaway terminé !\n\n🏆 Lot : **${gw.prize}**\n👑 Gagnant(s) : ${winners.join(", ")}`
 );
-  
 
 console.log(
   "Giveaway terminé et supprimé :",
   gw.messageId
 );
 
-    } catch (err) {
-      console.error("Erreur giveaway :", err);
-    }
+    saveGiveaways(remaining);
+
+  } catch (err) {
+
+    console.error("Erreur giveaway :", err);
+
+  } finally {
+
+    giveawayRunning = false;
+
   }
 
-  saveGiveaways(remaining);
-
 }, 30000);
-
 console.log(process.env.TEST);
 client.login(token);
