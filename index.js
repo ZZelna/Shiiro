@@ -1493,6 +1493,11 @@ setInterval(async () => {
           participants.map(p => p.tag)
         );
 
+        console.log("winnerCount =", gw.winnerCount);
+
+console.log("type =", typeof gw.winnerCount);
+
+console.log("participants.length =", participants.length);
         if (participants.length === 0) {
           await channel.send(
             `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
