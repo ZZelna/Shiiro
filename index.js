@@ -1796,6 +1796,7 @@ return message.channel.send(
   }
 
 if (command === "lock") {
+  console.log("Commande LOCK détectée");
 
   if (!isModerator(message.member))
     return message.reply({
@@ -1827,6 +1828,7 @@ if (command === "lock") {
 }
 
 if (command === "hide") {
+  console.log("Commande HIDE détectée");
 
   if (!isModerator(message.member))
     return message.reply({
