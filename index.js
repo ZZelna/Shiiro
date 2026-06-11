@@ -1239,6 +1239,29 @@ if (command === "wl") {
 
 }
 
+  // ── !wllist ──────────────────────────────────────────
+if (command === "wllist") {
+
+  if (!isOwner(message.author.id))
+    return message.reply({
+      embeds: [
+        embedError("Seuls les owners peuvent voir la liste.")
+      ]
+    });
+
+  const cfg = loadConfig();
+
+  const liste = cfg.giveaway_whitelist.length
+    ? cfg.giveaway_whitelist.map(id => `<@${id}>`).join("\n")
+    : "Aucun utilisateur.";
+
+  return message.reply({
+    embeds: [
+      embedInfo(`🎰 **Whitelist Giveaway**\n\n${liste}`)
+    ]
+  });
+
+}
  // ── !gw ──────────────────────────────────────────────
 if (command === "gw") {
 
