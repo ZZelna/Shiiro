@@ -1459,8 +1459,8 @@ setInterval(async () => {
         await channel.messages.fetch(gw.messageId);
 
       const reaction = message.reactions.cache.find(
-        r => r.emoji.name === gw.emoji
-      );
+  r => gw.emoji.includes(r.emoji.id)
+);
 
       console.log(
   "Réactions trouvées :",
@@ -1479,6 +1479,10 @@ console.log("Emoji sauvegardé :", gw.emoji);
         .filter(u => !u.bot)
         .map(u => u);
 
+      console.log(
+  "Participants :",
+  participants.map(p => p.tag)
+);
       if (participants.length === 0) {
         await channel.send(
           `❌ Giveaway terminé pour **${gw.prize}**. Aucun participant valide.`
