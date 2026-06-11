@@ -11,6 +11,7 @@ const {
   ModalBuilder,
   TextInputBuilder,
   TextInputStyle,
+  PermissionFlagsBits,
 } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
@@ -1711,7 +1712,7 @@ return message.channel.send(
     });
 
   }
-
+}
 // ── !setlog ────────────────────────────────────────────────────────────────
   if (command === "setlog") {
     if (!isOwner(message.author.id))
