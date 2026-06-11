@@ -1437,7 +1437,10 @@ client.once("clientReady", () => {
     status: "online"
   });
 });
+
 setInterval(async () => {
+
+  console.log("🔄 Giveaway checker exécuté");
 
   const giveaways = loadGiveaways();
 
