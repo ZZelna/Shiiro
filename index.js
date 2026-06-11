@@ -1796,6 +1796,68 @@ return message.channel.send(
   }
 });
 
+if (command === "lock") {
+
+  if (!isModerator(message.member))
+    return message.reply({
+      embeds: [embedError("Permission refusée.")]
+    });
+
+  const everyone = message.guild.roles.everyone;
+
+  const perms = message.channel.permissionsFor(everyone);
+
+  const locked = !perms.has("SendMessages");
+
+  await message.channel.permissionOverwrites.edit(
+    everyone,
+    {
+      SendMessages: locked
+    }
+  );
+
+  return message.reply({
+    embeds: [
+      embedSuccess(
+        locked
+          ? "🔓 Salon déverrouillé."
+          : "🔒 Salon verrouillé."
+      )
+    ]
+  });
+}
+
+if (command === "hide") {
+
+  if (!isModerator(message.member))
+    return message.reply({
+      embeds: [embedError("Permission refusée.")]
+    });
+
+  const everyone = message.guild.roles.everyone;
+
+  const perms = message.channel.permissionsFor(everyone);
+
+  const hidden = !perms.has("ViewChannel");
+
+  await message.channel.permissionOverwrites.edit(
+    everyone,
+    {
+      ViewChannel: hidden
+    }
+  );
+
+  return message.reply({
+    embeds: [
+      embedSuccess(
+        hidden
+          ? "👀 Salon affiché."
+          : "🙈 Salon masqué."
+      )
+    ]
+  });
+}
+
 // ─── Lancement ────────────────────────────────────────────────────────────────
 const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
 console.log("Token chargé :", !!token);
