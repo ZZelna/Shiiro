@@ -1762,7 +1762,6 @@ if (command === "lock") {
     ]
   });
 }
-  });
 // ─── Lancement ────────────────────────────────────────────────────────────────
 const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
 console.log("Token chargé :", !!token);
