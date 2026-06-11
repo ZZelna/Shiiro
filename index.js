@@ -638,11 +638,15 @@ if (customRole) {
     });
   }
 
-  if (!message.member.roles.cache.has(role.id)) {
-    return message.reply({
-      embeds: [embedError(`Vous devez posséder le rôle ${role.name}.`)]
-    });
-  }
+if (message.author.id !== customRole.owner_id) {
+  return message.reply({
+    embeds: [
+      embedError(
+        "Vous n'êtes pas le propriétaire de cette commande."
+      )
+    ]
+  });
+}
 
   try {
 
