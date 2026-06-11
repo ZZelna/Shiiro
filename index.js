@@ -1878,44 +1878,6 @@ if (command === "lock") {
   });
 }
   
-if (command === "hide") {
-
-  if (!isModerator(message.member))
-    return message.reply({
-      embeds: [embedError("Permission refusée.")]
-    });
-
-  const { PermissionFlagsBits } = require("discord.js");
-
-  const everyone = message.guild.roles.everyone;
-
-  const overwrite =
-    message.channel.permissionOverwrites.cache.get(
-      everyone.id
-    );
-
-  const hidden =
-    overwrite?.deny?.has(
-      PermissionFlagsBits.ViewChannel
-    );
-
-  await message.channel.permissionOverwrites.edit(
-    everyone,
-    {
-      ViewChannel: !hidden
-    }
-  );
-
-  return message.reply({
-    embeds: [
-      embedSuccess(
-        hidden
-          ? "👀 Salon affiché."
-          : "🙈 Salon masqué."
-      )
-    ]
-  });
-}
 // ─── Lancement ────────────────────────────────────────────────────────────────
 const token = "MTUxNDI4Njk2OTEyMTkzNTQwMA.GsZQgT.tWGRIV2kKcOCQa3-wHQfBBu2GFuotri8yH9PcM";
 console.log("Token chargé :", !!token);
