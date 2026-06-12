@@ -1,1 +1,1 @@
-[delcoins.js]
+[]
