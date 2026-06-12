@@ -1,1 +1,1 @@
-[logconfig.js]
+[]
