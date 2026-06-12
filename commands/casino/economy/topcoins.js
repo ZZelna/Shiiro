@@ -1,1 +1,1 @@
-[topcoins.js]
+[]
