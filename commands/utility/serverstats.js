@@ -1,1 +1,1 @@
-[serverstats.js]
+[]
