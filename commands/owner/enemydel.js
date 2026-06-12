@@ -1,1 +1,1 @@
-[enemydel.js]
+[]
