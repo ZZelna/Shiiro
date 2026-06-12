@@ -1,0 +1,1 @@
+[serieguess.js]
