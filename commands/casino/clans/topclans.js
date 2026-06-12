@@ -1,1 +1,1 @@
-[topclans.js]
+[]
