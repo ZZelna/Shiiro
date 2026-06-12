@@ -1,1 +1,1 @@
-[wlremove.js]
+[]
