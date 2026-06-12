@@ -1,1 +1,1 @@
-[deleteclan.js]
+[]
