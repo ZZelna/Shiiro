@@ -1,0 +1,1 @@
+[removeowner.js]
