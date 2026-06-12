@@ -1,1 +1,1 @@
-[whitelist.js]
+[]
