@@ -1,1 +1,1 @@
-[bannerserver.js]
+[]
