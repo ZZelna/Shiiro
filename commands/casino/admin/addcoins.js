@@ -1,0 +1,1 @@
+[addcoins.js]

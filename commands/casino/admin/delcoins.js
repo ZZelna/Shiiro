@@ -1,0 +1,1 @@
+[delcoins.js]
