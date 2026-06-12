@@ -1,0 +1,1 @@
+[resetcasino.js]
