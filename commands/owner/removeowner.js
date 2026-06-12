@@ -1,1 +1,1 @@
-[removeowner.js]
+[]
