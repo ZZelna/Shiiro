@@ -1,1 +1,1 @@
-[userinfo.js]
+[]
