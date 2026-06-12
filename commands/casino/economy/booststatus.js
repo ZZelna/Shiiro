@@ -1,1 +1,1 @@
-[booststatus.js]
+[]
