@@ -1,1 +1,1 @@
-[addcoins.js]
+[]
