@@ -2,6 +2,7 @@ const config = require("../../config.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
+    
     const guild = message.guild;
 
 const totalMembers = guild.memberCount;
