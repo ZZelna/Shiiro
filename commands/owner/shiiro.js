@@ -15,8 +15,8 @@ module.exports = {
         const totalMembers = guild.memberCount;
 
         const onlineMembers = guild.members.cache.filter(
-            m => m.presence?.status !== "offline"
-        ).size;
+    m => m.presence?.status !== "offline"
+).size;
 
         const vocalMembers = guild.members.cache.filter(
             m => m.voice.channel
