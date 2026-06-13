@@ -75,13 +75,13 @@ const comments = [
     }
 
     const comments = [
-        🎨 Une bannière qui attire le regard.,
-        ✨ ${user.username} sait soigner son profil.,
-        🌌 Cette bannière a beaucoup de caractère.,
-        🔥 Une bannière vraiment stylée.,
-        👀 Ça mérite qu'on s'y attarde quelques secondes.,
-        🎭 La bannière parfaite pour compléter le profil.
-    ];
+    `🎨 Une bannière qui attire le regard.`,
+    `✨ ${user.username} sait soigner son profil.`,
+    `🌌 Cette bannière a beaucoup de caractère.`,
+    `🔥 Une bannière vraiment stylée.`,
+    `👀 Ça mérite qu'on s'y attarde quelques secondes.`,
+    `🎭 La bannière parfaite pour compléter le profil.`
+];
 
     const comment = comments[Math.floor(Math.random() * comments.length)];
 
