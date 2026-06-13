@@ -1,15 +1,6 @@
 require("dotenv").config();
 
 const fs = require("fs");
-
-client.commands = new Map();
-
-const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
-
-for (const file of commandFiles) {
-    const command = require(`./commands/${file}`);
-    client.commands.set(command.name, command);
-}
 const { Client, GatewayIntentBits } = require("discord.js");
 
 const client = new Client({
@@ -21,6 +12,15 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates
     ]
 });
+
+client.commands = new Map();
+
+const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith(".js"));
+
+for (const file of commandFiles) {
+    const command = require(`./commands/${file}`);
+    client.commands.set(command.name, command);
+}
 
 client.on("messageCreate", async (message) => {
 
