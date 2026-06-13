@@ -12,6 +12,14 @@ const client = new Client({
     ]
 });
 
+client.on("messageCreate", (message) => {
+    if (message.author.bot) return;
+
+    if (message.content === "+ping") {
+        message.reply("🏓 Pong !");
+    }
+});
+
 client.once("ready", () => {
     console.log(`✅ ${client.user.tag} est connecté !`);
 });
