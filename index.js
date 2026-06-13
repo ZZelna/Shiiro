@@ -71,7 +71,7 @@ text: `Demandé par ${message.author.username}`
 });
 
 client.once("ready", () => {
-    console.log(✅ ${client.user.tag} est connecté !);
+console.log(`✅ ${client.user.tag} est connecté !`);
 });
 
 client.login(process.env.DISCORD_TOKEN);
