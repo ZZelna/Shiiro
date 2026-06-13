@@ -1,5 +1,6 @@
 const whitelist = require("../../data/whitelist/users.json");
 const config = require("../../config.json");
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "ban",
@@ -49,11 +50,32 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
     reason: `${reason} | Ban par ${message.author.tag}`
 });
 
-       message.reply(
-`✅ ${target.tag} a été banni.
+const embed = new EmbedBuilder()
+.setColor("#ED4245")
+.setTitle("🔨 Bannissement effectué")
+.setThumbnail(target.displayAvatarURL({ dynamic: true }))
+.addFields(
+    {
+        name: "👤 Utilisateur",
+        value: target.tag,
+        inline: true
+    },
+    {
+        name: "📋 Raison",
+        value: reason,
+        inline: true
+    },
+    {
+        name: "🛡️ Juge",
+        value: message.author.tag,
+        inline: true
+    }
+)
+.setTimestamp();
 
-📋 Raison : ${reason}
-🛡️ Juge : ${message.author.tag}`
-);
+return message.reply({
+    embeds: [embed]
+});
+
 }
 };
