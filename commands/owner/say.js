@@ -34,7 +34,8 @@ module.exports = {
         await channel.send(text);
 
         return message.reply(
-            ✅ Message envoyé dans ${channel}.
-        );
-    }
+    `✅ Message envoyé dans ${channel}.`
+);
+}
+
 };
