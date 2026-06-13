@@ -34,8 +34,8 @@ module.exports = {
             await target.send(msg);
 
             return message.reply(
-                ✅ Message envoyé à ${target.tag}.
-            );
+    `✅ Message envoyé à ${target.tag}.`
+);
 
         } catch (err) {
 
