@@ -22,10 +22,11 @@ module.exports = {
 
             await member.roles.add(role);
 
-            return message.reply(
+           return message.reply(
     `✅ Le rôle ${role.name} a été ajouté à ${member.user.tag}.`
+);
 
-} catch (err) {
+        } catch (err) {
 
             return message.reply(
                 "❌ Impossible d'ajouter ce rôle."
