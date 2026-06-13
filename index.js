@@ -15,14 +15,10 @@ const client = new Client({
 client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
-    if (message.content === "+ping") {
-        message.reply("🏓 Pong !");
-    }
-   if (message.content === "+help") {
+    if (message.content === "+help") {
     message.reply(`
 📚 **Commandes disponibles**
 
-🏓 +ping → Vérifie que le bot répond
 📖 +help → Affiche cette liste
 
 🖼️ +pic @user → Affiche l'avatar d'un utilisateur
