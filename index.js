@@ -34,14 +34,14 @@ client.on("messageCreate", async (message) => {
   if (message.content.startsWith("+pic")) {
     const user = message.mentions.users.first() || message.author;
 
-    const comments = [
-        📸 ${user.username} est plutôt photogénique aujourd'hui.,
-        ✨ Cet avatar représente parfaitement ${user.username}.,
-        🎭 Voici le visage numérique de ${user.username}.,
-        🌟 Un avatar digne d'une légende.,
-        👀 Regardez cet avatar de plus près...,
-        🔥 ${user.username} a du style !
-    ];
+const comments = [
+    `📸 ${user.username} est plutôt photogénique aujourd'hui.`,
+    `✨ Cet avatar représente parfaitement ${user.username}.`,
+    `🎭 Voici le visage numérique de ${user.username}.`,
+    `🌟 Un avatar digne d'une légende.`,
+    `👀 Regardez cet avatar de plus près...`,
+    `🔥 ${user.username} a du style !`
+];
 
     const comment = comments[Math.floor(Math.random() * comments.length)];
 
