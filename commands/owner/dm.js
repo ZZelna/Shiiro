@@ -26,8 +26,12 @@ module.exports = {
         try {
 
             await target.send(
-👋 Coucou,  Tu peux désormais revenir sur **Shiiro** !  🔗 https://discord.gg/5XkaE44EgN
-            );
+`👋 Coucou,
+
+Tu peux désormais revenir sur **Shiiro** !
+
+🔗 https://discord.gg/5XkaE44EgN`
+);
 
             return message.reply(
                 ✅ Message envoyé à ${target.tag}.
@@ -36,8 +40,8 @@ module.exports = {
         } catch (err) {
 
             return message.reply(
-                "❌ Impossible d'envoyer un message privé à cet utilisateur."
-            );
+    `✅ Message envoyé à ${target.tag}.`
+);
 
         }
     }
