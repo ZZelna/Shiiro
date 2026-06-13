@@ -1,27 +1,28 @@
 const whitelist = require("../../data/whitelist/users.json");
 const config = require("../../config.json");
 
-if (
-    !whitelist.users.includes(message.author.id) &&
-    !config.owner_ids.includes(message.author.id)
-) {
-    return message.reply("❌ Tu n'as pas la permission d'utiliser cette commande.");
-}
+module.exports = {
+    name: "ban",
+
+    async run(message, args) {
+
+        if (
+            !whitelist.users.includes(message.author.id) &&
+            !config.owner_ids.includes(message.author.id)
+        ) {
+            return message.reply("❌ Tu n'as pas la permission d'utiliser cette commande.");
+        }
 
         const target =
             message.mentions.users.first() ||
             await message.client.users.fetch(args[0]).catch(() => null);
 
         if (!target) {
-            return message.reply(
-                "❌ Utilisation : `+ban @user raison`"
-            );
+            return message.reply("❌ Utilisation : `+ban @user raison`");
         }
 
         if (target.id === message.author.id) {
-            return message.reply(
-                "❌ Tu ne peux pas te bannir toi-même."
-            );
+            return message.reply("❌ Tu ne peux pas te bannir toi-même.");
         }
 
         const reason =
@@ -29,13 +30,11 @@ if (
             "Aucune raison fournie.";
 
         try {
-
             await target.send({
                 embeds: [{
                     color: 0xED4245,
                     title: "🔨 Bannissement",
-                    description:
-`Bonjour,
+                    description: `Bonjour,
 
 Vous avez été banni du serveur **${message.guild.name}**.
 
@@ -52,7 +51,6 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
                     timestamp: new Date()
                 }]
             });
-
         } catch {}
 
         await message.guild.members.ban(target.id, {
@@ -63,8 +61,7 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
             embeds: [{
                 color: 0x57F287,
                 title: "✅ Utilisateur banni",
-                description:
-`👤 **Utilisateur :** ${target.tag}
+                description: `👤 **Utilisateur :** ${target.tag}
 📋 **Raison :** ${reason}
 🛡️ **Juge :** ${message.author.tag}`,
                 timestamp: new Date()
