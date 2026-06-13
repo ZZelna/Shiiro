@@ -16,8 +16,17 @@ client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
     if (message.content === "+help") {
-        message.reply(📚 **Commandes disponibles**  📖 +help → Affiche cette liste  🖼️ +pic @user → Affiche l'avatar d'un utilisateur 🎨 +banner @user → Affiche la bannière d'un utilisateur  🚧 D'autres commandes arrivent bientôt...);
-    }
+    message.reply(`
+📚 **Commandes disponibles**
+
+📖 +help → Affiche cette liste
+
+🖼️ +pic @user → Affiche l'avatar d'un utilisateur
+🎨 +banner @user → Affiche la bannière d'un utilisateur
+
+🚧 D'autres commandes arrivent bientôt...
+`);
+}
 
     if (message.content.startsWith("+banner")) {
         const target = message.mentions.users.first() || message.author;
