@@ -1,0 +1,1 @@
+// Voice join event
