@@ -12,7 +12,7 @@ const client = new Client({
     ]
 });
 
-client.on("messageCreate", (message) => {
+client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
     if (message.content === "+ping") {
@@ -27,6 +27,34 @@ client.on("messageCreate", (message) => {
 
 🚧 D'autres commandes arrivent bientôt...
 `);
+}
+    if (message.content.startsWith("+pic")) {
+    const user = message.mentions.users.first() || message.author;
+
+    message.reply(
+        user.displayAvatarURL({
+            size: 1024,
+            forceStatic: false
+        })
+    );
+}
+    if (message.content.startsWith("+banner")) {
+    const target = message.mentions.users.first() || message.author;
+
+    const user = await client.users.fetch(target.id, {
+        force: true
+    });
+
+    if (!user.banner) {
+        return message.reply("❌ Cet utilisateur n'a pas de bannière.");
+    }
+
+    message.reply(
+        user.bannerURL({
+            size: 1024,
+            forceStatic: false
+        })
+    );
 }
 });
 
