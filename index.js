@@ -42,21 +42,6 @@ if (command) {
     return command.run(message, args);
 }
 
-    if (message.content === "+help") {
-    message.reply(`
-📚 **Commandes disponibles**
-
-📖 +help → Affiche cette liste
-
-🖼️ +pic @user → Affiche l'avatar d'un utilisateur
-🎨 +banner @user → Affiche la bannière d'un utilisateur
-
-🚧 D'autres commandes arrivent bientôt...
-`);
-}
-
-});
-
 client.once("ready", () => {
 console.log(`✅ ${client.user.tag} est connecté !`);
 });
