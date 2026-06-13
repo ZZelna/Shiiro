@@ -36,8 +36,11 @@ async run(message) {
 
             })
 
-        }
-
+        },
+ footer: {
+    text: `Demandé par ${message.author.username}`
+},
+timestamp: new Date()
     };
 
     message.reply({ embeds: [embed] });
