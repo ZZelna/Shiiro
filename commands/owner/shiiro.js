@@ -30,7 +30,7 @@ module.exports = {
     .setColor("#2B2D31")
 .setTitle(`${guild.name} 🏆 #🇫🇷 Statistiques !`)
     .setDescription(
-👥 **Membres :** ${totalMembers.toLocaleString()} 🟢 **En ligne :** ${onlineMembers.toLocaleString()} 🎤 **En Vocal :** ${vocalMembers.toLocaleString()} 📺 **En stream :** ${streamingMembers.toLocaleString()} 🚀 **Boost :** ${guild.premiumSubscriptionCount.toLocaleString()}
+`👥 **Membres :** ${totalMembers.toLocaleString()} 🟢 **En ligne :** ${onlineMembers.toLocaleString()} 🎤 **En Vocal :** ${vocalMembers.toLocaleString()} 📺 **En stream :** ${streamingMembers.toLocaleString()} 🚀 **Boost :** ${guild.premiumSubscriptionCount.toLocaleString()}`
     )
     .setThumbnail(guild.iconURL({ dynamic: true }))
     .setTimestamp()
