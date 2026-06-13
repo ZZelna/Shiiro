@@ -25,24 +25,25 @@ module.exports = {
 
         try {
 
-            await target.send(
+    await target.send(
 `👋 Coucou,
 
 Tu peux désormais revenir sur **Shiiro** !
 
 🔗 https://discord.gg/5XkaE44EgN`
-);
+    );
 
-            return message.reply(
-                ✅ Message envoyé à ${target.tag}.
-            );
+    return message.reply(
+        `✅ Message envoyé à ${target.tag}.`
+    );
 
-        } catch (err) {
+} catch (err) {
 
-            return message.reply(
-    `✅ Message envoyé à ${target.tag}.`
-);
+    return message.reply(
+        "❌ Impossible d'envoyer un message privé à cet utilisateur."
+    );
 
-        }
-    }
+}
+            }
+
 };
