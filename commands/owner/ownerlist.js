@@ -1,4 +1,5 @@
 const config = require("../../config.json");
+const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "ownerlist",
@@ -9,7 +10,7 @@ module.exports = {
             return message.reply("❌ Cette commande est réservée aux owners.");
         }
 
-        let owners = [];
+        const owners = [];
 
         for (const id of config.owner_ids) {
 
@@ -19,15 +20,22 @@ module.exports = {
 
             owners.push(
                 user
-                    ? `• ${user.tag} (${id})`
-                    : `• Utilisateur inconnu (${id})`
+                    ? `👑 ${user.tag}\n\`${id}\``
+                    : `❓ Utilisateur inconnu\n\`${id}\``
             );
         }
 
-        return message.reply(
-`👑 Liste des owners du bot
+        const embed = new EmbedBuilder()
+            .setColor("#5865F2")
+            .setTitle("👑 Liste des Owners")
+            .setDescription(owners.join("\n\n"))
+            .setFooter({
+                text: `${config.owner_ids.length} owner(s)`
+            })
+            .setTimestamp();
 
-${owners.join("\n")}`
-        );
+        return message.reply({
+            embeds: [embed]
+        });
     }
 };
