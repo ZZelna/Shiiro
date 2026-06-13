@@ -52,7 +52,7 @@ client.on("messageCreate", async (message) => {
 
         const embed = {
             color: 0x5865F2,
-            title: 🎨 Bannière de ${user.username},
+title: `🎨 Bannière de ${user.username}`,
             description: comment,
             image: {
                 url: user.bannerURL({
@@ -61,7 +61,7 @@ client.on("messageCreate", async (message) => {
                 })
             },
             footer: {
-                text: Demandé par ${message.author.username}
+text: `Demandé par ${message.author.username}`
             },
             timestamp: new Date()
         };
