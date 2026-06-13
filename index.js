@@ -47,7 +47,7 @@ const comments = [
 
     const embed = {
         color: 0x5865F2,
-        title: 🖼️ Avatar de ${user.username},
+     title: `🖼️ Avatar de ${user.username}`,
         description: comment,
         image: {
             url: user.displayAvatarURL({
@@ -56,7 +56,7 @@ const comments = [
             })
         },
         footer: {
-            text: Demandé par ${message.author.username}
+text: `Demandé par ${message.author.username}`
         },
         timestamp: new Date()
     };
@@ -87,7 +87,7 @@ const comments = [
 
     const embed = {
         color: 0x5865F2,
-        title: 🎨 Bannière de ${user.username},
+        title: `🎨 Bannière de ${user.username}`,
         description: comment,
         image: {
             url: user.bannerURL({
@@ -96,13 +96,14 @@ const comments = [
             })
         },
         footer: {
-            text: Demandé par ${message.author.username}
+text: `Demandé par ${message.author.username}`
         },
         timestamp: new Date()
     };
 
     message.reply({ embeds: [embed] });
 }
+    });
 
 client.once("ready", () => {
     console.log(`✅ ${client.user.tag} est connecté !`);
