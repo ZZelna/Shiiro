@@ -18,7 +18,7 @@ module.exports = {
             await message.client.users.fetch(args[0]).catch(() => null);
 
         if (!target) {
-            return message.reply("❌ Utilisation : `+ban @user raison`");
+            return message.reply("❌ Utilisation : +ban @user raison");
         }
 
         if (target.id === message.author.id) {
@@ -30,42 +30,30 @@ module.exports = {
             "Aucune raison fournie.";
 
         try {
-            await target.send({
-                embeds: [{
-                    color: 0xED4245,
-                    title: "🔨 Bannissement",
-                    description: `Bonjour,
+           await target.send(
+`🔨 Tu as été banni du serveur **${message.guild.name}**
 
-Vous avez été banni du serveur **${message.guild.name}**.
-
-📋 **Raison :**
+📋 Raison :
 ${reason}
 
-🔓 **Serveur d'unban :**
+🔓 Serveur d'unban :
 https://discord.gg/FZqjCqMmXY
 
-Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner votre demande.`,
-                    thumbnail: {
-                        url: message.guild.iconURL()
-                    },
-                    timestamp: new Date()
-                }]
-            });
-        } catch {}
+Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner ta demande.`
+);
+        } catch (err) {
+            console.log("Impossible d'envoyer le MP.");
+        }
 
-        await message.guild.members.ban(target.id, {
-            reason: `${reason} | Ban par ${message.author.tag}`
-        });
+       await message.guild.members.ban(target.id, {
+    reason: `${reason} | Ban par ${message.author.tag}`
+});
 
-        message.reply({
-            embeds: [{
-                color: 0x57F287,
-                title: "✅ Utilisateur banni",
-                description: `👤 **Utilisateur :** ${target.tag}
-📋 **Raison :** ${reason}
-🛡️ **Juge :** ${message.author.tag}`,
-                timestamp: new Date()
-            }]
-        });
-    }
+       message.reply(
+`✅ ${target.tag} a été banni.
+
+📋 Raison : ${reason}
+🛡️ Juge : ${message.author.tag}`
+);
+}
 };
