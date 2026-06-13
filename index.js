@@ -45,5 +45,6 @@ if (command) {
 client.once("ready", () => {
 console.log(`✅ ${client.user.tag} est connecté !`);
 });
+    });
 
 client.login(process.env.DISCORD_TOKEN);
