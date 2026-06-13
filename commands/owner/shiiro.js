@@ -2,29 +2,21 @@ const config = require("../../config.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
-    name: "shiiro",
+    const guild = message.guild;
 
-    async run(message) {
+const totalMembers = guild.memberCount;
 
-        if (!config.owner_ids.includes(message.author.id)) {
-            return message.reply("❌ Cette commande est réservée aux owners.");
-        }
-
-        const guild = message.guild;
-
-        const totalMembers = guild.memberCount;
-
-        const onlineMembers = guild.members.cache.filter(
+const onlineMembers = guild.members.cache.filter(
     m => m.presence?.status !== "offline"
 ).size;
 
-        const vocalMembers = guild.members.cache.filter(
-            m => m.voice.channel
-        ).size;
+const vocalMembers = guild.members.cache.filter(
+    m => m.voice.channel
+).size;
 
-        const streamingMembers = guild.members.cache.filter(
-            m => m.voice.streaming
-        ).size;
+const streamingMembers = guild.members.cache.filter(
+    m => m.voice.streaming
+).size;
 
         const embed = new EmbedBuilder()
     .setColor("#2B2D31")
