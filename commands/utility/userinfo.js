@@ -1,22 +1,17 @@
 module.exports = {
     name: "userinfo",
 
-    async run(message) {
+    async run(message, args) {
+
         const member =
             message.mentions.members.first() ||
+            message.guild.members.cache.get(args[0]) ||
             message.member;
 
         const user = member.user;
 
-        const roles = member.roles.cache
-            .filter(role => role.id !== message.guild.id)
-            .map(role => role.toString())
-            .join(" ");
-
         const embed = {
-            color: member.displayHexColor === "#000000"
-                ? 0x5865F2
-                : parseInt(member.displayHexColor.replace("#", ""), 16),
+            color: 0x5865F2,
 
             title: `👤 Informations de ${user.username}`,
 
@@ -30,39 +25,19 @@ module.exports = {
             fields: [
                 {
                     name: "🆔 ID",
-                    value: user.id,
-                    inline: false
-                },
-                {
-                    name: "👤 Pseudo serveur",
-                    value: member.nickname || "Aucun",
-                    inline: false
+                    value: user.id
                 },
                 {
                     name: "📅 Compte créé",
-                    value: `<t:${Math.floor(user.createdTimestamp / 1000)}:F>`,
-                    inline: false
+                    value: `<t:${Math.floor(user.createdTimestamp / 1000)}:F>`
                 },
                 {
                     name: "📥 A rejoint le serveur",
-                    value: `<t:${Math.floor(member.joinedTimestamp / 1000)}:F>`,
-                    inline: false
+                    value: `<t:${Math.floor(member.joinedTimestamp / 1000)}:F>`
                 },
                 {
-                    name: "💎 Boost",
-                    value: member.premiumSince
-                        ? "Oui"
-                        : "Non",
-                    inline: true
-                },
-                {
-                    name: "🎭 Nombre de rôles",
-                    value: `${member.roles.cache.size - 1}`,
-                    inline: true
-                },
-                {
-                    name: "📋 Rôles",
-                    value: roles || "Aucun rôle"
+                    name: "🤖 Type",
+                    value: user.bot ? "Bot" : "Utilisateur"
                 }
             ],
 
