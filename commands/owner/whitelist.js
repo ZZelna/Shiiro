@@ -1,42 +1,80 @@
 const fs = require("fs");
 
+const config = require("../../config.json");
+
 module.exports = {
     name: "whitelist",
 
     async run(message, args) {
 
-        const file = "./data/whitelist/users.json";
+        if (!config.owner_ids.includes(message.author.id)) {
+            return message.reply("❌ Tu n'es pas owner.");
+        }
 
-        const data = JSON.parse(
-            fs.readFileSync(file, "utf8")
-        );
+        const data = require("../../data/whitelist/users.json");
 
-        if (args[0] === "add") {
+        const sub = args[0]?.toLowerCase();
+
+        if (!sub) {
+
+            const users = data.users.length
+                ? data.users.map(id => `<@${id}>`).join("\n")
+                : "Aucun utilisateur whitelist.";
+
+            return message.reply({
+                embeds: [{
+                    color: 0x5865F2,
+                    title: "🛡️ Liste des juges",
+                    description: users,
+                    footer: {
+                        text: `Total : ${data.users.length}`
+                    }
+                }]
+            });
+        }
+
+        if (sub === "add") {
 
             const user = message.mentions.users.first();
 
             if (!user) {
-                return message.reply("❌ Mentionne un utilisateur.");
-            }
-
-            if (!data.users.includes(user.id)) {
-                data.users.push(user.id);
-
-                fs.writeFileSync(
-                    file,
-                    JSON.stringify(data, null, 2)
+                return message.reply(
+                    "❌ Mentionne un utilisateur."
                 );
             }
 
-            return message.reply(`✅ ${user.tag} ajouté à la whitelist.`);
+            if (data.users.includes(user.id)) {
+                return message.reply(
+                    "❌ Cet utilisateur est déjà whitelist."
+                );
+            }
+
+            data.users.push(user.id);
+
+            fs.writeFileSync(
+                "./data/whitelist/users.json",
+                JSON.stringify(data, null, 2)
+            );
+
+            return message.reply(
+                `✅ ${user.tag} a été ajouté à la whitelist.`
+            );
         }
 
-        if (args[0] === "del") {
+        if (sub === "del") {
 
             const user = message.mentions.users.first();
 
             if (!user) {
-                return message.reply("❌ Mentionne un utilisateur.");
+                return message.reply(
+                    "❌ Mentionne un utilisateur."
+                );
+            }
+
+            if (!data.users.includes(user.id)) {
+                return message.reply(
+                    "❌ Cet utilisateur n'est pas whitelist."
+                );
             }
 
             data.users = data.users.filter(
@@ -44,17 +82,17 @@ module.exports = {
             );
 
             fs.writeFileSync(
-                file,
+                "./data/whitelist/users.json",
                 JSON.stringify(data, null, 2)
             );
 
-            return message.reply(`✅ ${user.tag} retiré de la whitelist.`);
+            return message.reply(
+                `✅ ${user.tag} a été retiré de la whitelist.`
+            );
         }
 
         return message.reply(
-            data.users.length
-                ? data.users.map(id => `<@${id}>`).join("\n")
-                : "Aucun utilisateur whitelist."
+            "❌ Utilisation : `+whitelist`, `+whitelist add @user`, `+whitelist del @user`"
         );
     }
 };
