@@ -2,6 +2,13 @@ const config = require("../../config.json");
 const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
+    name: "shiiro",
+
+    async run(message) {
+
+        if (!config.owner_ids.includes(message.author.id)) {
+            return message.reply("❌ Cette commande est réservée aux owners.");
+        }
     
     const guild = message.guild;
 
