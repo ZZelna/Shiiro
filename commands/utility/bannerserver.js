@@ -1,1 +1,0 @@
-[bannerserver.js]
