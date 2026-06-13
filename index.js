@@ -28,15 +28,26 @@ client.on("messageCreate", async (message) => {
 🚧 D'autres commandes arrivent bientôt...
 `);
 }
-    if (message.content.startsWith("+pic")) {
+  if (message.content.startsWith("+pic")) {
     const user = message.mentions.users.first() || message.author;
 
-    message.reply(
-        user.displayAvatarURL({
-            size: 1024,
-            forceStatic: false
-        })
-    );
+    const embed = {
+        color: 0x5865F2,
+        title: `🖼️ Avatar de ${user.username}`,
+        description: `Voici l'avatar de ${user}.`,
+        image: {
+            url: user.displayAvatarURL({
+                size: 1024,
+                forceStatic: false
+            })
+        },
+        footer: {
+            text: `Demandé par ${message.author.username}`
+        },
+        timestamp: new Date()
+    };
+
+    message.reply({ embeds: [embed] });
 }
     if (message.content.startsWith("+banner")) {
     const target = message.mentions.users.first() || message.author;
@@ -49,12 +60,23 @@ client.on("messageCreate", async (message) => {
         return message.reply("❌ Cet utilisateur n'a pas de bannière.");
     }
 
-    message.reply(
-        user.bannerURL({
-            size: 1024,
-            forceStatic: false
-        })
-    );
+    const embed = {
+        color: 0x5865F2,
+        title: `🎨 Bannière de ${user.username}`,
+        description: `Voici la bannière de ${user}.`,
+        image: {
+            url: user.bannerURL({
+                size: 1024,
+                forceStatic: false
+            })
+        },
+        footer: {
+            text: `Demandé par ${message.author.username}`
+        },
+        timestamp: new Date()
+    };
+
+    message.reply({ embeds: [embed] });
 }
 });
 
