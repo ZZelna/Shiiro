@@ -1,13 +1,12 @@
 const whitelist = require("../../data/whitelist/users.json");
+const config = require("../../config.json");
 
-module.exports = {
-    name: "ban",
-
-    async run(message, args) {
-
-        if (!whitelist.users.includes(message.author.id)) {
-            return message.reply("❌ Tu n'es pas whitelist.");
-        }
+if (
+    !whitelist.users.includes(message.author.id) &&
+    !config.owner_ids.includes(message.author.id)
+) {
+    return message.reply("❌ Tu n'as pas la permission d'utiliser cette commande.");
+}
 
         const target =
             message.mentions.users.first() ||
