@@ -1,4 +1,3 @@
-const whitelist = require("../../data/whitelist/users.json");
 const config = require("../../config.json");
 
 module.exports = {
@@ -6,12 +5,9 @@ module.exports = {
 
     async run(message, args) {
 
-        if (
-            !whitelist.users.includes(message.author.id) &&
-            !config.owner_ids.includes(message.author.id)
-        ) {
-            return message.reply("❌ Tu n'as pas la permission d'utiliser cette commande.");
-        }
+        if (!config.owner_ids.includes(message.author.id)) {
+    return message.reply("❌ Cette commande est réservée aux owners.");
+}
 
         const userId = args[0];
 
