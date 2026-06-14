@@ -119,8 +119,9 @@ const customStatus =
     );
 
 const hasShiiiro =
-    customStatus?.state?.toLowerCase()
-        .includes("/shiiiro");
+    customStatus?.state
+        ?.toLowerCase()
+        ?.includes("/shiiiro") || false;
 
 const member = newPresence.member;
 
