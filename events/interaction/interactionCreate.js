@@ -5,7 +5,7 @@ EmbedBuilder
 } = require("discord.js");
 
 
-const ticketConfig = require("../config/ticket");
+const ticketConfig = require("../../commands/config/tickets.js");
 
 module.exports = async (interaction) => {
 
