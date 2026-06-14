@@ -5,13 +5,10 @@ module.exports = {
 
     async run(message) {
 
-        console.log("TOPIC :", message.channel.topic);
-        console.log("AUTHOR :", message.author.id);
+        await message.channel.fetch();
 
         if (!message.channel.name.startsWith("ticket-")) {
-            return message.reply(
-                "❌ Cette commande doit être utilisée dans un ticket."
-            );
+            return message.reply("❌ Cette commande doit être utilisée dans un ticket.");
         }
 
         if (!message.channel.topic) {
@@ -21,6 +18,8 @@ module.exports = {
         }
 
         await message.channel.setTopic(null);
+
+        await message.channel.fetch();
 
         return message.channel.send(
             `🔓 Ticket libéré par ${message.author}`
