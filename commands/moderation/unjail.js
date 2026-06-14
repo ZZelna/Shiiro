@@ -47,10 +47,10 @@ module.exports = {
 
         delete jailData.users[member.id];
 
-        fs.writeFileSync(
-            "./data/jail.json",
-            JSON.stringify(jailData, null, 4)
-        );
+      fs.writeFileSync(
+    path.join(__dirname, "../../data/jail.json"),
+    JSON.stringify(jailData, null, 4)
+);
 
         return message.channel.send(
             `🔓 ${member} a été libéré par ${message.author}.`
