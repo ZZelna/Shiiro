@@ -1,7 +1,9 @@
 require("dotenv").config();
 
 const fs = require("fs");
-const { Client, GatewayIntentBits } = require("discord.js");
+const { Client, GatewayIntentBits,
+       ActivityType
+      } = require("discord.js");
 
 const client = new Client({
     intents: [
@@ -29,8 +31,23 @@ for (const folder of commandFolders) {
     }
 }
 
-client.once("ready", () => {
+const { ActivityType } = require("discord.js");
+
+client.once("clientReady", () => {
+
     console.log(`✅ ${client.user.tag} est connecté !`);
+
+    client.user.setPresence({
+        activities: [
+            {
+                name: ".gg/shiiro",
+                type: ActivityType.Streaming,
+                url: "https://twitch.tv/leox123bs"
+            }
+        ],
+        status: "online"
+    });
+
 });
 
 client.on("messageCreate", async (message) => {
