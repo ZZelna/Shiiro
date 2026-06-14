@@ -31,8 +31,6 @@ for (const folder of commandFolders) {
     }
 }
 
-const { ActivityType } = require("discord.js");
-
 client.once("clientReady", () => {
 
     console.log(`✅ ${client.user.tag} est connecté !`);
