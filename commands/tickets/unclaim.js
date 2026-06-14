@@ -20,6 +20,11 @@ name: "unclaim",
         }
 
         await message.channel.setTopic(null);
+      
+        claimModule.claimCooldown.set(
+    message.channel.id,
+    Date.now() + 10000
+);
 
         await message.channel.fetch();
 
