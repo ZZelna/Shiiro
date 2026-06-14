@@ -187,11 +187,8 @@ Statut : Supprimé
     )
     .setTimestamp();
 
-logs.send({
-    embeds: [embed]
-});
-                 logs.send({
-                embeds: [embed]
+ logs.send({
+embeds: [embed]
             });
         }
     }
