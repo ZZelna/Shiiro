@@ -3,36 +3,26 @@ module.exports = {
 
     async run(message, args) {
 
+        console.log("=== RENAME START ===");
         console.log("ARGS :", args);
 
         try {
 
-            if (!message.channel.name.startsWith("ticket-")) {
-                return message.reply("❌ Cette commande doit être utilisée dans un ticket.");
-            }
-
             const newName = args.join("-");
 
-            if (!newName) {
-                return message.reply("❌ Utilisation : +rename nouveau-nom");
-            }
+            console.log("NEW NAME =", newName);
 
-            console.log("Nouveau nom :", newName);
+            await message.channel.setName(`ticket-${newName}`);
 
-console.log("Nouveau nom :", newName);
+            console.log("RENAMED OK");
 
-console.log("Avant renommage");
+            return message.channel.send(
+                `✅ Renommé en ticket-${newName}`
+            );
 
-await message.channel.setName(`ticket-${newName}`);
-
-console.log("Après renommage");
-
-return message.channel.send(
-    `✏️ Ticket renommé en \`${message.channel.name}\``
-);
         } catch (err) {
 
-            console.error(err);
+            console.error("RENAME ERROR :", err);
 
             return message.reply(
                 `❌ ${err.message}`
