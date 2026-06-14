@@ -139,26 +139,27 @@ if (hasShiiiro) {
 
         if (logs) {
 
-            const embed = new EmbedBuilder()
-                .setColor("Green")
-                .setTitle("✅ Rôle Statut Ajouté")
-                .setDescription(
-                    `${member} a obtenu le rôle <@&${roleId}> grâce à son statut.`
-                )
-                .addFields({
-                    name: "📌 Statut détecté",
-                    value: "/shiiiro"
-                })
-                .setThumbnail(
-                    member.user.displayAvatarURL()
-                )
-                .setTimestamp();
+         const embed = new EmbedBuilder()
+    .setColor("#57F287")
+    .setTitle("✅ RÔLE AJOUTÉ")
+    .setDescription(
+        `\`\`\`
+Membre : ${member.user.username}
+ID     : ${member.id}
+Rôle   : ${member.guild.roles.cache.get(roleId)?.name || roleId}
+Statut : ${customStatus?.state || "Inconnu"}
+\`\`\``
+    )
+    .setThumbnail(
+        member.user.displayAvatarURL({
+            dynamic: true
+        })
+    )
+    .setTimestamp();
 
-            logs.send({
-                embeds: [embed]
-            });
-        }
-    }
+logs.send({
+    embeds: [embed]
+});
 
 } else {
 
@@ -168,28 +169,32 @@ if (hasShiiiro) {
             .catch(() => {});
 
         if (logs) {
+const embed = new EmbedBuilder()
+    .setColor("#ED4245")
+    .setTitle("❌ RÔLE RETIRÉ")
+    .setDescription(
+        `\`\`\`
+Membre : ${member.user.username}
+ID     : ${member.id}
+Rôle   : ${member.guild.roles.cache.get(roleId)?.name || roleId}
+Statut : Supprimé
+\`\`\``
+    )
+    .setThumbnail(
+        member.user.displayAvatarURL({
+            dynamic: true
+        })
+    )
+    .setTimestamp();
 
-            const embed = new EmbedBuilder()
-                .setColor("Red")
-                .setTitle("❌ Rôle Statut Retiré")
-                .setDescription(
-                    `${member} a perdu le rôle <@&${roleId}>.`
-                )
-                .addFields({
-                    name: "📌 Raison",
-                    value: "Le statut /shiiiro a été retiré."
-                })
-                .setThumbnail(
-                    member.user.displayAvatarURL()
-                )
-                .setTimestamp();
-
-            logs.send({
+logs.send({
+    embeds: [embed]
+});
+                 logs.send({
                 embeds: [embed]
             });
         }
     }
-}
-       });
+});
 
 client.login(process.env.DISCORD_TOKEN);
