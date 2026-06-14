@@ -2,9 +2,10 @@ const {
 ChannelType,
 PermissionFlagsBits,
 EmbedBuilder
-} = require(“discord.js”);
+} = require("discord.js");
 
-const ticketConfig = require(”../config/ticket”);
+
+const ticketConfig = require("../config/ticket");
 
 module.exports = async (interaction) => {
 
