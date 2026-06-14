@@ -19,9 +19,11 @@ module.exports = {
 
             console.log("Nouveau nom :", newName);
 
+console.log("Nouveau nom :", newName);
+
 console.log("Avant renommage");
 
-await message.reply("Je vais renommer...");
+await message.channel.setName(`ticket-${newName}`);
 
 console.log("Après renommage");
 
