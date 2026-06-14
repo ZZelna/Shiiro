@@ -105,4 +105,52 @@ const sticky = require("./events/sticky");
 
 client.on("messageCreate", sticky);
 
+client.on("presenceUpdate", async (oldPresence, newPresence) => {
+
+    if (!newPresence?.member) return;
+
+    const roleId =
+        "1514348874427404529";
+
+    const customStatus =
+        newPresence.activities.find(
+            activity =>
+                activity.type === 4
+        );
+
+    const hasShiiiro =
+        customStatus?.state?.includes(
+            "/shiiiro"
+        );
+
+    const member =
+        newPresence.member;
+
+    if (hasShiiiro) {
+
+        if (
+            !member.roles.cache.has(
+                roleId
+            )
+        ) {
+
+            await member.roles.add(
+                roleId
+            ).catch(() => {});
+        }
+
+    } else {
+
+        if (
+            member.roles.cache.has(
+                roleId
+            )
+        ) {
+
+            await member.roles.remove(
+                roleId
+            ).catch(() => {});
+        }
+    }
+});
 client.login(process.env.DISCORD_TOKEN);
