@@ -106,86 +106,73 @@ const sticky = require("./events/sticky");
 
 client.on("messageCreate", sticky);
 
-client.on("presenceUpdate", async (oldPresence, newPresence) => {
+client.on(“presenceUpdate”, async (oldPresence, newPresence) => {
 
-    if (!newPresence?.member) return;
-
+if (!newPresence?.member) return;
 const roleId = "1514348874427404529";
 const logChannelId = "1514369589310652517";
-
 const customStatus =
     newPresence.activities.find(
         activity => activity.type === 4
     );
-
 const hasShiiiro =
     customStatus?.state
         ?.toLowerCase()
         ?.includes("/shiiiro") || false;
-
 const member = newPresence.member;
-
 const logs =
     member.guild.channels.cache.get(
         logChannelId
     );
-
 if (hasShiiiro) {
-
     if (!member.roles.cache.has(roleId)) {
-
         await member.roles.add(roleId)
             .catch(() => {});
-
         if (logs) {
- const embed = new EmbedBuilder()
-    .setColor("Green")
-    .setTitle("✅ Rôle Statut Ajouté")
-    .setDescription(
-        `${member} a obtenu le rôle <@&${roleId}> grâce à son statut.`
-    )
-    .addFields({
-        name: "📌 Statut détecté",
-        value: "/shiiiro"
-    })
-    .setThumbnail(
-        member.user.displayAvatarURL()
-    )
-    .setTimestamp();
-
-logs.send({
-    embeds: [embed]
-});
-        }
-        
-        else {
-
-    if (member.roles.cache.has(roleId)) {
-
-        await member.roles.remove(roleId)
-            .catch(() => {});
-
-        if (logs) {
-const embed = new EmbedBuilder()
-    .setColor("Red")
-    .setTitle("❌ Rôle Statut Retiré")
-    .setDescription(
-        `${member} a perdu le rôle <@&${roleId}>.`
-    )
-    .addFields({
-        name: "📌 Raison",
-        value: "Le statut /shiiiro a été retiré."
-    })
-    .setThumbnail(
-        member.user.displayAvatarURL()
-    )
-    .setTimestamp();
-
-logs.send({
-    embeds: [embed]
-});
+            const embed = new EmbedBuilder()
+                .setColor("Green")
+                .setTitle("✅ Rôle Statut Ajouté")
+                .setDescription(
+                    `${member} a obtenu le rôle <@&${roleId}> grâce à son statut.`
+                )
+                .addFields({
+                    name: "📌 Statut détecté",
+                    value: "/shiiiro"
+                })
+                .setThumbnail(
+                    member.user.displayAvatarURL()
+                )
+                .setTimestamp();
+            logs.send({
+                embeds: [embed]
+            });
         }
     }
-});
+} else {
+    if (member.roles.cache.has(roleId)) {
+        await member.roles.remove(roleId)
+            .catch(() => {});
+        if (logs) {
+            const embed = new EmbedBuilder()
+                .setColor("Red")
+                .setTitle("❌ Rôle Statut Retiré")
+                .setDescription(
+                    `${member} a perdu le rôle <@&${roleId}>.`
+                )
+                .addFields({
+                    name: "📌 Raison",
+                    value: "Le statut /shiiiro a été retiré."
+                })
+                .setThumbnail(
+                    member.user.displayAvatarURL()
+                )
+                .setTimestamp();
+            logs.send({
+                embeds: [embed]
+            });
+        }
+    }
+}
 
+});
 client.login(process.env.DISCORD_TOKEN);
