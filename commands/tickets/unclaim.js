@@ -17,7 +17,7 @@ module.exports = {
             );
         }
 
-        await message.channel.setTopic("");
+        await message.channel.setTopic(null);
 
         return message.channel.send(
             `🔓 Ticket libéré par ${message.author}`
