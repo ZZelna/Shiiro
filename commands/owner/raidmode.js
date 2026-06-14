@@ -18,7 +18,7 @@ const allowedUsers = [
 
 const raidFile = path.join(
 __dirname,
-“../../data/raidmode.json”
+"../../data/raidmode.json"
 );
 
 module.exports = {
