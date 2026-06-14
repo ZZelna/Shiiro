@@ -5,28 +5,19 @@ module.exports = {
 
         console.log("=== RENAME START ===");
         console.log("ARGS :", args);
+try {
 
-        try {
+    await message.channel.setName(`ticket-${newName}`);
 
-            const newName = args.join("-");
+    console.log("RENAMED OK");
 
-            console.log("NEW NAME =", newName);
+} catch (err) {
 
-            await message.channel.setName(`ticket-${newName}`);
+    console.error("RENAME ERROR :", err);
 
-            console.log("RENAMED OK");
-
-            return message.channel.send(
-                `✅ Renommé en ticket-${newName}`
-            );
-
-        } catch (err) {
-
-            console.error("RENAME ERROR :", err);
-
-            return message.reply(
-                `❌ ${err.message}`
-            );
-        }
+    return message.reply(
+        `❌ ${err.message}`
+    );
+}
     }
 };
