@@ -29,27 +29,23 @@ for (const folder of commandFolders) {
     }
 }
 
-client.once(“ready”, () => {
-console.log(✅ ${client.user.tag} est connecté !);
+client.once("ready", () => {
+    console.log(`✅ ${client.user.tag} est connecté !`);
 });
 
-client.on(“messageCreate”, async (message) => {
+client.on("messageCreate", async (message) => {
 
-if (message.author.bot) return;
-if (!message.content.startsWith("+")) return;
-const args = message.content.slice(1).trim().split(/ +/);
-const commandName = args.shift()?.toLowerCase();
-const command = client.commands.get(commandName);
-if (command) {
-    return command.run(message, args);
-}
+    if (message.author.bot) return;
+    if (!message.content.startsWith("+")) return;
 
-});
+    const args = message.content.slice(1).trim().split(/ +/);
+    const commandName = args.shift()?.toLowerCase();
 
-const interactionHandler = require(”./events/interactionCreate”);
+    const command = client.commands.get(commandName);
 
-client.on(“interactionCreate”, async (interaction) => {
-interactionHandler(interaction);
+    if (command) {
+        return command.run(message, args);
+    }
 });
 
 client.login(process.env.DISCORD_TOKEN);
