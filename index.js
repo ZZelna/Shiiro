@@ -47,4 +47,10 @@ if (command) {
 
 });
 
+const interactionHandler = require(”./events/interactionCreate”);
+
+client.on(“interactionCreate”, async (interaction) => {
+interactionHandler(interaction);
+});
+
 client.login(process.env.DISCORD_TOKEN);
