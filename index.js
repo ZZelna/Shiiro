@@ -73,4 +73,8 @@ const welcome = require("./events/welcome");
 client.on("guildMemberAdd", antiAlt);
 client.on("guildMemberAdd", welcome);
 
+const sticky = require("./events/sticky");
+
+client.on("messageCreate", sticky);
+
 client.login(process.env.DISCORD_TOKEN);
