@@ -34,17 +34,17 @@ const streamingMembers = guild.members.cache.filter(
     m => m.voice.streaming
 ).size;
 
-        const embed = new EmbedBuilder()
+      const embed = new EmbedBuilder()
     .setColor("#2B2D31")
-.setTitle(`${guild.name} 🏆 #🇫🇷 Statistiques !`)
-.setDescription([
-    `👥 **Membres :** ${totalMembers.toLocaleString()}`,
-    `🟢 **En ligne :** ${(online + idle + dnd).toLocaleString()}`,
-    `🎤 **En Vocal :** ${vocalMembers.toLocaleString()}`,
-    `📺 **En stream :** ${streamingMembers.toLocaleString()}`,
-    `🚀 **Boost :** ${guild.premiumSubscriptionCount.toLocaleString()}`
-].join("\n"))
-    .setThumbnail(guild.iconURL({ dynamic: true }))
+    .setTitle(`${guild.name} 🏆 #🇫🇷 Statistiques !`)
+    .setDescription(
+`*Membres :* **${totalMembers.toLocaleString()}**
+*En ligne :* **${(online + idle + dnd).toLocaleString()}**
+*En Vocal :* **${vocalMembers.toLocaleString()}**
+*En stream :* **${streamingMembers.toLocaleString()}**
+*Boost :* **${guild.premiumSubscriptionCount.toLocaleString()}**`
+    )
+    .setThumbnail(guild.iconURL({ dynamic: true }));
     .setTimestamp()
 
         return message.channel.send({
