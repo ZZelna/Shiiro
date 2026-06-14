@@ -1,7 +1,10 @@
 const ticketConfig = require("../config/tickets");
 
+const claimCooldown = new Map();
+
 module.exports = {
     name: "claim",
+    claimCooldown,
 
     async run(message) {
 
