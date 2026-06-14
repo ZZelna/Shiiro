@@ -48,6 +48,34 @@ client.once("clientReady", () => {
 
 });
 
+client.snipes = new Map();
+
+client.on("messageDelete", async (message) => {
+
+    if (!message.guild) return;
+    if (message.author?.bot) return;
+
+    const snipes =
+        client.snipes.get(message.channel.id) || [];
+
+    snipes.unshift({
+        content: message.content || "Aucun texte",
+        author: message.author?.tag || "Inconnu",
+        authorId: message.author?.id,
+        image:
+            message.attachments.first()?.url || null,
+        createdAt: Date.now()
+    });
+
+    if (snipes.length > 10)
+        snipes.pop();
+
+    client.snipes.set(
+        message.channel.id,
+        snipes
+    );
+});
+
 client.on("messageCreate", async (message) => {
 
     if (message.author.bot) return;
