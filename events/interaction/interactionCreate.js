@@ -1,24 +1,88 @@
 const {
     ChannelType,
     PermissionFlagsBits,
-    EmbedBuilder
+    EmbedBuilder,
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle
 } = require("discord.js");
 
 const ticketConfig = require("../../commands/config/tickets.js");
 
+const claimedTickets = new Map();
+
 module.exports = async (interaction) => {
+
     try {
+
+        // =========================
+        // CLAIM / UNCLAIM
+        // =========================
+
+        if (interaction.isButton()) {
+
+            if (interaction.customId === "ticket_claim") {
+
+                if (claimedTickets.has(interaction.channel.id)) {
+                    return interaction.reply({
+                        content: `❌ Ticket déjà réclamé par <@${claimedTickets.get(interaction.channel.id)}>`,
+                        ephemeral: true
+                    });
+                }
+
+                claimedTickets.set(
+                    interaction.channel.id,
+                    interaction.user.id
+                );
+
+                return interaction.reply({
+                    content: `📌 Ticket réclamé par ${interaction.user}`,
+                    ephemeral: false
+                });
+            }
+
+            if (interaction.customId === "ticket_unclaim") {
+
+                if (!claimedTickets.has(interaction.channel.id)) {
+                    return interaction.reply({
+                        content: "❌ Ce ticket n'est pas réclamé.",
+                        ephemeral: true
+                    });
+                }
+
+                if (
+                    claimedTickets.get(interaction.channel.id) !==
+                    interaction.user.id
+                ) {
+                    return interaction.reply({
+                        content: "❌ Vous n'avez pas réclamé ce ticket.",
+                        ephemeral: true
+                    });
+                }
+
+                claimedTickets.delete(interaction.channel.id);
+
+                return interaction.reply({
+                    content: `🔓 Ticket libéré par ${interaction.user}`,
+                    ephemeral: false
+                });
+            }
+        }
+
+        // =========================
+        // CREATION TICKET
+        // =========================
 
         if (!interaction.isStringSelectMenu()) return;
         if (interaction.customId !== "ticket_create") return;
 
         const ticketType = interaction.values[0];
+
         console.log("Ticket sélectionné :", ticketType);
 
         const config = ticketConfig[ticketType];
 
         if (!config) {
-            console.log("Configuration introuvable");
             return interaction.reply({
                 content: "❌ Configuration du ticket introuvable.",
                 ephemeral: true
@@ -41,6 +105,7 @@ module.exports = async (interaction) => {
         ];
 
         for (const roleId of config.roles) {
+
             permissions.push({
                 id: roleId,
                 allow: [
@@ -49,6 +114,7 @@ module.exports = async (interaction) => {
                     PermissionFlagsBits.ReadMessageHistory
                 ]
             });
+
         }
 
         const channel = await interaction.guild.channels.create({
@@ -69,9 +135,27 @@ Merci de détailler votre demande.
 Un membre de l'équipe concernée va vous répondre prochainement.`
             );
 
+        const buttons = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setCustomId("ticket_claim")
+                    .setLabel("Claim")
+                    .setEmoji("📌")
+                    .setStyle(ButtonStyle.Success),
+
+                new ButtonBuilder()
+                    .setCustomId("ticket_unclaim")
+                    .setLabel("Unclaim")
+                    .setEmoji("🔓")
+                    .setStyle(ButtonStyle.Secondary)
+            );
+
         await channel.send({
-            content: config.roles.map(id => `<@&${id}>`).join(" "),
-            embeds: [embed]
+            content: config.roles
+                .map(id => `<@&${id}>`)
+                .join(" "),
+            embeds: [embed],
+            components: [buttons]
         });
 
         await interaction.reply({
@@ -80,9 +164,13 @@ Un membre de l'équipe concernée va vous répondre prochainement.`
         });
 
     } catch (error) {
+
         console.error("ERREUR TICKET :", error);
 
-        if (!interaction.replied && !interaction.deferred) {
+        if (
+            !interaction.replied &&
+            !interaction.deferred
+        ) {
             await interaction.reply({
                 content: "❌ Une erreur est survenue.",
                 ephemeral: true
