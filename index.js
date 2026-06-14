@@ -115,11 +115,13 @@ const customStatus =
     newPresence.activities.find(
         activity => activity.type === 4
     );
-const hasShiiiro =
+
+       const hasShiiiro =
     customStatus?.state
         ?.toLowerCase()
-        ?.includes("/shiiiro") || false;
-const member = newPresence.member;
+        ?.includes("/shiiro") || false;
+
+       const member = newPresence.member;
 const logs =
     member.guild.channels.cache.get(
         logChannelId
@@ -136,9 +138,9 @@ if (hasShiiiro) {
                     `${member} a obtenu le rôle <@&${roleId}> grâce à son statut.`
                 )
                 .addFields({
-                    name: "📌 Statut détecté",
-                    value: "/Shiiro"
-                })
+    name: "📌 Statut détecté",
+    value: "/Shiiro"
+})
                 .setThumbnail(
                     member.user.displayAvatarURL()
                 )
@@ -160,8 +162,9 @@ if (hasShiiiro) {
                     `${member} a perdu le rôle <@&${roleId}>.`
                 )
                 .addFields({
-                    name: "📌 Raison",
-                    value: "Le statut /Shiiro a été retiré."
+    name: "📌 Raison",
+    value: "Le statut /Shiiro a été retiré."
+})
                 })
                 .setThumbnail(
                     member.user.displayAvatarURL()
