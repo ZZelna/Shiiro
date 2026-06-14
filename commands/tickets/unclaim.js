@@ -5,6 +5,9 @@ module.exports = {
 
     async run(message) {
 
+        console.log("TOPIC :", message.channel.topic);
+        console.log("AUTHOR :", message.author.id);
+
         if (!message.channel.name.startsWith("ticket-")) {
             return message.reply(
                 "❌ Cette commande doit être utilisée dans un ticket."
@@ -14,12 +17,6 @@ module.exports = {
         if (!message.channel.topic) {
             return message.reply(
                 "❌ Ce ticket n'est pas réclamé."
-            );
-        }
-
-        if (message.channel.topic !== message.author.id) {
-            return message.reply(
-                `❌ Ce ticket est réclamé par <@${message.channel.topic}>`
             );
         }
 
