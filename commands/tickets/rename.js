@@ -3,36 +3,34 @@ module.exports = {
 
     async run(message, args) {
 
+        console.log("ARGS :", args);
+
         try {
 
             if (!message.channel.name.startsWith("ticket-")) {
-                return message.reply(
-                    "❌ Cette commande doit être utilisée dans un ticket."
-                );
+                return message.reply("❌ Cette commande doit être utilisée dans un ticket.");
             }
 
             const newName = args.join("-");
 
             if (!newName) {
-                return message.reply(
-                    "❌ Utilisation : +rename nouveau-nom"
-                );
+                return message.reply("❌ Utilisation : +rename nouveau-nom");
             }
 
-            await message.channel.setName(
-                `ticket-${newName}`
-            );
+            console.log("Nouveau nom :", newName);
+
+            await message.channel.setName(`ticket-${newName}`);
 
             return message.channel.send(
                 `✏️ Ticket renommé en \`${message.channel.name}\``
             );
 
-        } catch (error) {
+        } catch (err) {
 
-            console.error(error);
+            console.error(err);
 
             return message.reply(
-                `❌ Erreur : ${error.message}`
+                `❌ ${err.message}`
             );
         }
     }
