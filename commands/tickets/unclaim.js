@@ -1,6 +1,9 @@
 const ticketConfig = require("../config/tickets");
 
+const claimModule = require("./claim");
+
 module.exports = {
+
     name: "unclaim",
 
     async run(message) {
