@@ -10,7 +10,7 @@ const allowedUsers = [
 ];
 
 module.exports = {
-name: “purge”,
+name: "purge",
 
 async run(message, args) {
     if (!allowedUsers.includes(message.author.id)) {
