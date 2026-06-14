@@ -17,6 +17,12 @@ module.exports = {
             );
         }
 
+        if (message.channel.topic !== message.author.id) {
+            return message.reply(
+                `❌ Ce ticket est réclamé par <@${message.channel.topic}>`
+            );
+        }
+
         await message.channel.setTopic(null);
 
         return message.channel.send(
