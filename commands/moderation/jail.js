@@ -1,5 +1,5 @@
 const fs = require("fs");
-const jailData = require("../data/jail.json");
+const jailData = require("../../data/jail.json");
 
 module.exports = {
     name: "jail",
