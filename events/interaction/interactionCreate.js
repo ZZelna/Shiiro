@@ -9,8 +9,6 @@ const {
 
 const ticketConfig = require("../../commands/config/tickets.js");
 
-const claimedTickets = new Map();
-
 module.exports = async (interaction) => {
 
     try {
@@ -19,55 +17,6 @@ module.exports = async (interaction) => {
         // CLAIM / UNCLAIM
         // =========================
 
-        if (interaction.isButton()) {
-
-            if (interaction.customId === "ticket_claim") {
-
-                if (claimedTickets.has(interaction.channel.id)) {
-                    return interaction.reply({
-                        content: `❌ Ticket déjà réclamé par <@${claimedTickets.get(interaction.channel.id)}>`,
-                        ephemeral: true
-                    });
-                }
-
-                claimedTickets.set(
-                    interaction.channel.id,
-                    interaction.user.id
-                );
-
-                return interaction.reply({
-                    content: `📌 Ticket réclamé par ${interaction.user}`,
-                    ephemeral: false
-                });
-            }
-
-            if (interaction.customId === "ticket_unclaim") {
-
-                if (!claimedTickets.has(interaction.channel.id)) {
-                    return interaction.reply({
-                        content: "❌ Ce ticket n'est pas réclamé.",
-                        ephemeral: true
-                    });
-                }
-
-                if (
-                    claimedTickets.get(interaction.channel.id) !==
-                    interaction.user.id
-                ) {
-                    return interaction.reply({
-                        content: "❌ Vous n'avez pas réclamé ce ticket.",
-                        ephemeral: true
-                    });
-                }
-
-                claimedTickets.delete(interaction.channel.id);
-
-                return interaction.reply({
-                    content: `🔓 Ticket libéré par ${interaction.user}`,
-                    ephemeral: false
-                });
-            }
-        }
 
         // =========================
         // CREATION TICKET
@@ -135,28 +84,12 @@ Merci de détailler votre demande.
 Un membre de l'équipe concernée va vous répondre prochainement.`
             );
 
-        const buttons = new ActionRowBuilder()
-            .addComponents(
-                new ButtonBuilder()
-                    .setCustomId("ticket_claim")
-                    .setLabel("Claim")
-                    .setEmoji("📌")
-                    .setStyle(ButtonStyle.Success),
-
-                new ButtonBuilder()
-                    .setCustomId("ticket_unclaim")
-                    .setLabel("Unclaim")
-                    .setEmoji("🔓")
-                    .setStyle(ButtonStyle.Secondary)
-            );
-
-        await channel.send({
-            content: config.roles
-                .map(id => `<@&${id}>`)
-                .join(" "),
-            embeds: [embed],
-            components: [buttons]
-        });
+ await channel.send({
+    content: config.roles
+        .map(id => `<@&${id}>`)
+        .join(" "),
+    embeds: [embed]
+});
 
         await interaction.reply({
             content: `✅ Votre ticket a été créé : ${channel}`,
