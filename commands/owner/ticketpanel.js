@@ -3,10 +3,10 @@ const {
 EmbedBuilder,
 ActionRowBuilder,
 StringSelectMenuBuilder
-} = require(“discord.js”);
+} = require("discord.js");
 
 module.exports = {
-name: “ticketpanel”,
+name: "ticketpanel",
 
 async run(message) {
     if (!config.owner_ids.includes(message.author.id)) {
