@@ -67,4 +67,10 @@ const interactionCreate = require("./events/interaction/interactionCreate");
 
 client.on("interactionCreate", interactionCreate);
 
+const antiAlt = require("./events/antiAlt");
+const welcome = require("./events/welcome");
+
+client.on("guildMemberAdd", antiAlt);
+client.on("guildMemberAdd", welcome);
+
 client.login(process.env.DISCORD_TOKEN);
