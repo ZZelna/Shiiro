@@ -106,7 +106,7 @@ const sticky = require("./events/sticky");
 
 client.on("messageCreate", sticky);
 
-client.on(“presenceUpdate”, async (oldPresence, newPresence) => {
+client.on("presenceUpdate", async (oldPresence, newPresence) => {
 
 if (!newPresence?.member) return;
 const roleId = "1514348874427404529";
@@ -165,12 +165,12 @@ if (hasShiiiro) {
     name: "📌 Raison",
     value: "Le statut /Shiiro a été retiré."
 })
-                })
-                .setThumbnail(
-                    member.user.displayAvatarURL()
+   .setThumbnail(
+  member.user.displayAvatarURL()
                 )
-                .setTimestamp();
-            logs.send({
+ .setTimestamp();
+            
+               logs.send({
                 embeds: [embed]
             });
         }
