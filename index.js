@@ -137,7 +137,7 @@ if (hasShiiiro) {
                 )
                 .addFields({
                     name: "📌 Statut détecté",
-                    value: "/shiiiro"
+                    value: "/Shiiro"
                 })
                 .setThumbnail(
                     member.user.displayAvatarURL()
@@ -161,7 +161,7 @@ if (hasShiiiro) {
                 )
                 .addFields({
                     name: "📌 Raison",
-                    value: "Le statut /shiiiro a été retiré."
+                    value: "Le statut /Shiiro a été retiré."
                 })
                 .setThumbnail(
                     member.user.displayAvatarURL()
