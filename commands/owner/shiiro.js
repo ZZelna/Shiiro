@@ -45,9 +45,8 @@ const streamingMembers = guild.members.cache.filter(
 *Boost :* **${guild.premiumSubscriptionCount.toLocaleString()}**`
     )
     .setThumbnail(guild.iconURL({ dynamic: true }));
-    .setTimestamp()
-
-        return message.channel.send({
+    
+ return message.channel.send({
             embeds: [embed]
         });
     }
