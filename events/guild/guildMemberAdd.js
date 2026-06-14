@@ -1,6 +1,10 @@
 const bypassData = require("./data/bypass.json");
 
 module.exports = async (member) => {
+    
+    if (bypassData.users.includes(member.id)) {
+    return;
+}
 
     const sevenDays = 7 * 24 * 60 * 60 * 1000;
 
