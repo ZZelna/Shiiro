@@ -48,4 +48,8 @@ client.on("messageCreate", async (message) => {
     }
 });
 
+const interactionCreate = require("./events/interactionCreate");
+
+client.on("interactionCreate", interactionCreate);
+
 client.login(process.env.DISCORD_TOKEN);
