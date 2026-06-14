@@ -48,7 +48,10 @@ client.on("messageCreate", async (message) => {
     }
 });
 
-const interactionCreate = require("./events/interactionCreate");
+const interactionCreate = client.on(
+    "interactionCreate",
+    require("./events/interaction/interactionCreate")
+);
 
 client.on("interactionCreate", interactionCreate);
 
