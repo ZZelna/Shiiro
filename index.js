@@ -109,47 +109,51 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
 
     if (!newPresence?.member) return;
 
-    const roleId =
-        "1514348874427404529";
+    const roleId = "1514348874427404529";
+    const logChannelId = "1514369589310652517";
 
     const customStatus =
         newPresence.activities.find(
-            activity =>
-                activity.type === 4
+            activity => activity.type === 4
         );
 
     const hasShiiiro =
-        customStatus?.state?.includes(
-            "/shiiiro"
-        );
+        customStatus?.state?.toLowerCase()
+            .includes("/shiiiro");
 
-    const member =
-        newPresence.member;
+    const member = newPresence.member;
+
+    const logs =
+        member.guild.channels.cache.get(
+            logChannelId
+        );
 
     if (hasShiiiro) {
 
-        if (
-            !member.roles.cache.has(
-                roleId
-            )
-        ) {
+        if (!member.roles.cache.has(roleId)) {
 
-            await member.roles.add(
-                roleId
-            ).catch(() => {});
+            await member.roles.add(roleId)
+                .catch(() => {});
+
+            if (logs) {
+                logs.send(
+                    `✅ ${member} a obtenu le rôle <@&${roleId}> grâce à son statut \`/shiiiro\`.`
+                );
+            }
         }
 
     } else {
 
-        if (
-            member.roles.cache.has(
-                roleId
-            )
-        ) {
+        if (member.roles.cache.has(roleId)) {
 
-            await member.roles.remove(
-                roleId
-            ).catch(() => {});
+            await member.roles.remove(roleId)
+                .catch(() => {});
+
+            if (logs) {
+                logs.send(
+                    `❌ ${member} a perdu le rôle <@&${roleId}> car il a retiré \`/shiiiro\` de son statut.`
+                );
+            }
         }
     }
 });
