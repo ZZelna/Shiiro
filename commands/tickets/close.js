@@ -4,6 +4,14 @@ module.exports = {
     async run(message) {
 
         if (!message.channel.name.startsWith("ticket-")) {
+            if (
+    message.channel.topic &&
+    message.channel.topic !== message.author.id
+) {
+    return message.reply(
+        `❌ Ticket réclamé par <@${message.channel.topic}>`
+    );
+}
             return message.reply("❌ Cette commande doit être utilisée dans un ticket.");
         }
 
