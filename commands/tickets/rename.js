@@ -1,3 +1,5 @@
+const ticketConfig = require("../config/tickets");
+
 module.exports = {
     name: "rename",
 
