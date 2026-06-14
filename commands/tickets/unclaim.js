@@ -1,17 +1,13 @@
-const ticketConfig = require("../config/tickets");
-
-const claimModule = require("./claim");
-
 module.exports = {
-name: "unclaim",
+    name: "unclaim",
 
     async run(message) {
-
-        await message.channel.fetch();
 
         if (!message.channel.name.startsWith("ticket-")) {
             return message.reply("❌ Cette commande doit être utilisée dans un ticket.");
         }
+
+        await message.channel.fetch();
 
         if (!message.channel.topic) {
             return message.reply(
@@ -19,14 +15,13 @@ name: "unclaim",
             );
         }
 
-        await message.channel.setTopic(null);
-      
-        claimModule.claimCooldown.set(
-    message.channel.id,
-    Date.now() + 10000
-);
+        if (message.channel.topic !== message.author.id) {
+            return message.reply(
+                `❌ Ce ticket est réclamé par <@${message.channel.topic}>`
+            );
+        }
 
-        await message.channel.fetch();
+        await message.channel.setTopic(null);
 
         return message.channel.send(
             `🔓 Ticket libéré par ${message.author}`
