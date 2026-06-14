@@ -70,10 +70,10 @@ module.exports = {
 
         jailData.users[member.id] = oldRoles;
 
-        fs.writeFileSync(
-            "./data/jail.json",
-            JSON.stringify(jailData, null, 4)
-        );
+      fs.writeFileSync(
+    path.join(__dirname, "../../data/jail.json"),
+    JSON.stringify(jailData, null, 4)
+);
 
         await member.roles.set([
             prisonRole.id
