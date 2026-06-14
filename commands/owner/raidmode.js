@@ -22,7 +22,7 @@ __dirname,
 );
 
 module.exports = {
-name: “raidmode”,
+name: "raidmode",
 
 async run(message) {
     if (!allowedUsers.includes(message.author.id)) {
