@@ -145,7 +145,7 @@ if (
     userStats.xp >= nextLevel
 ) {
 
-    userStats.level++;
+       userStats.level++;
 
 }
 
