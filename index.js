@@ -136,6 +136,18 @@ userStats.dailyMessages.set(
         || 0
     ) + 1
 );
+       userStats.xp += 5;
+
+const nextLevel =
+    userStats.level * 100;
+
+if (
+    userStats.xp >= nextLevel
+) {
+
+    userStats.level++;
+
+}
 
     await userStats.save();
 
