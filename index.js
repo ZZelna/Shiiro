@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const fs = require("fs");
 const mongoose = require("mongoose");
+const Stats = require("./systems/stats");
 const { Client, GatewayIntentBits,
        ActivityType, 
        EmbedBuilder
