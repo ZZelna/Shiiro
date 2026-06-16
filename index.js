@@ -107,6 +107,27 @@ client.on("guildMemberAdd", welcome);
 const sticky = require("./events/sticky");
 
 client.on("messageCreate", sticky);
+client.on("messageCreate", async (message) => {
+
+    if (message.author.bot) return;
+
+    let userStats = await Stats.findOne({
+        userId: message.author.id
+    });
+
+    if (!userStats) {
+
+        userStats = await Stats.create({
+            userId: message.author.id
+        });
+
+    }
+
+    userStats.messages++;
+
+    await userStats.save();
+
+});
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
 
