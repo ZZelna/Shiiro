@@ -124,6 +124,18 @@ client.on("messageCreate", async (message) => {
     }
 
     userStats.messages++;
+       const today =
+    new Date()
+        .toISOString()
+        .slice(0, 10);
+
+userStats.dailyMessages.set(
+    today,
+    (
+        userStats.dailyMessages.get(today)
+        || 0
+    ) + 1
+);
 
     await userStats.save();
 
