@@ -17,8 +17,7 @@ __dirname,
 
 module.exports = async (interaction) => {
 
-if (!interaction.isButton())
-    return;
+if (interaction.isButton()) {
 if (
     interaction.customId ===
     "customrole_add"
@@ -118,22 +117,40 @@ if (
         });
 
     }
+const menu =
+    new StringSelectMenuBuilder()
 
-    return interaction.reply({
+    .setCustomId(
+        "delete_custom_role"
+    )
 
-        content:
-            "📋 Rôles personnalisés :\n\n" +
-            commands
-                .map(
-                    cmd => `+${cmd}`
-                )
-                .join("\n"),
+    .setPlaceholder(
+        "Choisir un rôle à supprimer"
+    )
 
-        ephemeral: true
+    .addOptions(
+        commands.map(cmd => ({
+            label: cmd,
+            value: cmd
+        }))
+    );
 
-    });
+return interaction.reply({
+
+    content:
+        "🗑️ Choisissez un rôle :",
+
+    components: [
+        new ActionRowBuilder()
+        .addComponents(menu)
+    ],
+
+    ephemeral: true
+
+});
 
 }
+    }
     if (interaction.isModalSubmit()) {
 
     if (
@@ -195,6 +212,49 @@ if (
                 `Propriétaire : ${ownerId}`,
 
             ephemeral: true
+
+        });
+
+    }
+
+}
+    if (interaction.isStringSelectMenu()) {
+
+    if (
+        interaction.customId ===
+        "delete_custom_role"
+    ) {
+
+        const command =
+            interaction.values[0];
+
+        const config =
+            JSON.parse(
+                fs.readFileSync(
+                    configPath,
+                    "utf8"
+                )
+            );
+
+        delete config.custom_roles[
+            command
+        ];
+
+        fs.writeFileSync(
+            configPath,
+            JSON.stringify(
+                config,
+                null,
+                2
+            )
+        );
+
+        return interaction.update({
+
+            content:
+                `✅ ${command} supprimé.`,
+
+            components: []
 
         });
 
