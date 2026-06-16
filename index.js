@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const fs = require("fs");
+const mongoose = require("mongoose");
 const { Client, GatewayIntentBits,
        ActivityType, 
        EmbedBuilder
