@@ -86,7 +86,54 @@ modal.addComponents(
         modal
     );
 }
-if (interaction.isModalSubmit()) {
+if (
+    interaction.customId ===
+    "customrole_remove"
+) {
+
+    const config =
+        JSON.parse(
+            fs.readFileSync(
+                configPath,
+                "utf8"
+            )
+        );
+
+    const roles =
+        config.custom_roles || {};
+
+    const commands =
+        Object.keys(roles);
+
+    if (!commands.length) {
+
+        return interaction.reply({
+
+            content:
+                "❌ Aucun rôle personnalisé.",
+
+            ephemeral: true
+
+        });
+
+    }
+
+    return interaction.reply({
+
+        content:
+            "📋 Rôles personnalisés :\n\n" +
+            commands
+                .map(
+                    cmd => `+${cmd}`
+                )
+                .join("\n"),
+
+        ephemeral: true
+
+    });
+
+}
+    if (interaction.isModalSubmit()) {
 
     if (
         interaction.customId ===
