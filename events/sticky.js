@@ -83,16 +83,24 @@ module.exports = async (message) => {
 
     try {
 
-        const oldSticky =
-            lastSticky.get(message.channel.id);
+const oldSticky =
+    lastSticky.get(message.channel.id);
 
-        if (oldSticky) {
+if (oldSticky) {
 
-            const oldMessage =
-                await message.channel.messages.fetch(oldSticky);
+    try {
 
-            await oldMessage.delete().catch(() => {});
-        }
+        const oldMessage =
+            await message.channel.messages.fetch(oldSticky);
+
+        await oldMessage.delete().catch(() => {});
+
+    } catch {
+
+        lastSticky.delete(message.channel.id);
+
+    }
+}
 
         const sticky =
             await message.channel.send(stickyContent);
