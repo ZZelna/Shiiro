@@ -179,4 +179,11 @@ if (hasShiiiro) {
 }
 
 });
+mongoose.connect(process.env.MONGO_URI)
+.then(() => {
+    console.log("✅ MongoDB connecté !");
+})
+.catch(err => {
+    console.error("❌ Erreur MongoDB :", err);
+});
 client.login(process.env.DISCORD_TOKEN);
