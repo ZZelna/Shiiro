@@ -8,6 +8,18 @@ const { Client, GatewayIntentBits,
        EmbedBuilder
 } = require("discord.js");
 
+const config = require("./config.json");
+
+function getCustomRole(commandName) {
+
+    if (!config.custom_roles)
+        return null;
+
+    return config.custom_roles[
+        commandName.toLowerCase()
+    ] || null;
+}
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -87,6 +99,67 @@ client.on("messageCreate", async (message) => {
     const args = message.content.slice(1).trim().split(/ +/);
     const commandName = args.shift()?.toLowerCase();
 
+       const customRole =
+    getCustomRole(commandName);
+
+if (customRole) {
+
+    const target =
+        message.mentions.members.first();
+
+    if (!target) {
+        return message.reply(
+            `❌ Utilisation : +${commandName} @utilisateur`
+        );
+    }
+
+    if (
+        message.author.id !==
+        customRole.owner_id
+    ) {
+        return message.reply(
+            "❌ Vous n'êtes pas propriétaire de ce rôle."
+        );
+    }
+
+    const role =
+        message.guild.roles.cache.get(
+            customRole.role_id
+        );
+
+    if (!role) {
+        return message.reply(
+            "❌ Rôle introuvable."
+        );
+    }
+
+    try {
+
+        if (
+            target.roles.cache.has(role.id)
+        ) {
+
+            await target.roles.remove(role);
+
+            return message.reply(
+                `➖ ${role.name} retiré à ${target.user.tag}`
+            );
+
+        }
+
+        await target.roles.add(role);
+
+        return message.reply(
+            `➕ ${role.name} ajouté à ${target.user.tag}`
+        );
+
+    } catch {
+
+        return message.reply(
+            "❌ Impossible de modifier ce rôle."
+        );
+    }
+}
     const command = client.commands.get(commandName);
 
     if (command) {
