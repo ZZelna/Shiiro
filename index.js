@@ -180,9 +180,25 @@ client.on(
     voiceMoveLogs
 );
 const welcome = require("./events/welcome");
+const memberJoin =
+require("./events/logs/memberJoin");
+
+const memberLeave =
+require("./events/logs/memberLeave");
+
+client.on(
+    "guildMemberAdd",
+    memberJoin
+);
+
+client.on(
+    "guildMemberRemove",
+    memberLeave
+);
 
 client.on("guildMemberAdd", antiAlt);
 client.on("guildMemberAdd", welcome);
+
 
 const sticky = require("./events/sticky");
 
