@@ -1,194 +1,22 @@
 [
-{
-"name": "Nike",
-"logo": "https://cdn.simpleicons.org/nike"
-},
-{
-"name": "Adidas",
-"logo": "https://cdn.simpleicons.org/adidas"
-},
-{
-"name": "Puma",
-"logo": "https://cdn.simpleicons.org/puma"
-},
-{
-"name": "Reebok",
-"logo": "https://cdn.simpleicons.org/reebok"
-},
-{
-"name": "Apple",
-"logo": "https://cdn.simpleicons.org/apple"
-},
-{
-"name": "Samsung",
-"logo": "https://cdn.simpleicons.org/samsung"
-},
-{
-"name": "Xiaomi",
-"logo": "https://cdn.simpleicons.org/xiaomi"
-},
-{
-"name": "Huawei",
-"logo": "https://cdn.simpleicons.org/huawei"
-},
-{
-"name": "Google",
-"logo": "https://cdn.simpleicons.org/google"
-},
-{
-"name": "Microsoft",
-"logo": "https://cdn.simpleicons.org/microsoft"
-},
-{
-"name": "Discord",
-"logo": "https://cdn.simpleicons.org/discord"
-},
-{
-"name": "Instagram",
-"logo": "https://cdn.simpleicons.org/instagram"
-},
-{
-"name": "TikTok",
-"logo": "https://cdn.simpleicons.org/tiktok"
-},
-{
-"name": "Snapchat",
-"logo": "https://cdn.simpleicons.org/snapchat"
-},
-{
-"name": "YouTube",
-"logo": "https://cdn.simpleicons.org/youtube"
-},
-{
-"name": "Netflix",
-"logo": "https://cdn.simpleicons.org/netflix"
-},
-{
-"name": "Spotify",
-"logo": "https://cdn.simpleicons.org/spotify"
-},
-{
-"name": "Twitch",
-"logo": "https://cdn.simpleicons.org/twitch"
-},
-{
-"name": "PlayStation",
-"logo": "https://cdn.simpleicons.org/playstation"
-},
-{
-"name": "Xbox",
-"logo": "https://cdn.simpleicons.org/xbox"
-},
-{
-"name": "Nintendo",
-"logo": "https://cdn.simpleicons.org/nintendo"
-},
-{
-"name": "Steam",
-"logo": "https://cdn.simpleicons.org/steam"
-},
-{
-"name": "Epic Games",
-"logo": "https://cdn.simpleicons.org/epicgames"
-},
-{
-"name": "Ubisoft",
-"logo": "https://cdn.simpleicons.org/ubisoft"
-},
-{
-"name": "Riot Games",
-"logo": "https://cdn.simpleicons.org/riotgames"
-},
-{
-"name": "Ferrari",
-"logo": "https://cdn.simpleicons.org/ferrari"
-},
-{
-"name": "BMW",
-"logo": "https://cdn.simpleicons.org/bmw"
-},
-{
-"name": "Mercedes-Benz",
-"logo": "https://cdn.simpleicons.org/mercedes"
-},
-{
-"name": "Audi",
-"logo": "https://cdn.simpleicons.org/audi"
-},
-{
-"name": "Porsche",
-"logo": "https://cdn.simpleicons.org/porsche"
-},
-{
-"name": "Tesla",
-"logo": "https://cdn.simpleicons.org/tesla"
-},
-{
-"name": "Lamborghini",
-"logo": "https://cdn.simpleicons.org/lamborghini"
-},
-{
-"name": "Bugatti",
-"logo": "https://cdn.simpleicons.org/bugatti"
-},
-{
- "name": "Louis Vuitton",
-"logo": "https://cdn.simpleicons.org/louisvuitton"
-},
-{
-"name": "Gucci",
-"logo": "https://cdn.simpleicons.org/gucci"
-},
-{
-"name": "Chanel",
-"logo": "https://cdn.simpleicons.org/chanel"
-},
-{
-"name": "Dior",
-"logo": "https://cdn.simpleicons.org/dior"
-},
-{
-"name": "Prada",
-"logo": "https://cdn.simpleicons.org/prada"
-},
-{
-"name": "Rolex",
-"logo": "https://cdn.simpleicons.org/rolex"
-},
-{
-"name": "Cartier",
-"logo": "https://cdn.simpleicons.org/cartier"
-},
-{
-"name": "Coca-Cola",
-"logo": "https://cdn.simpleicons.org/cocacola"
-},
-{
-"name": "Pepsi",
-"logo": "https://cdn.simpleicons.org/pepsi"
-},
-{
-"name": "Red Bull",
-"logo": "https://cdn.simpleicons.org/redbull"
-},
-{
-"name": "Monster Energy",
-"logo": "https://cdn.simpleicons.org/monster"
-},
-{
-"name": "McDonald’s",
-"logo": "https://cdn.simpleicons.org/mcdonalds"
-},
-{
-"name": "Burger King",
-"logo": "https://cdn.simpleicons.org/burgerking"
-},
-{
-"name": "KFC",
-"logo": "https://cdn.simpleicons.org/kfc"
-},
-{
-"name": "Subway",
-"logo": "https://cdn.simpleicons.org/subway"
-}
+  {
+    "name": "Nike",
+    "image": "nike.png"
+  },
+  {
+    "name": "Adidas",
+    "image": "adidas.png"
+  },
+  {
+    "name": "Apple",
+    "image": "apple.png"
+  },
+  {
+    "name": "Ferrari",
+    "image": "ferrari.png"
+  },
+  {
+    "name": "BMW",
+    "image": "bmw.png"
+  }
 ]
