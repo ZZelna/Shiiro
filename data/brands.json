@@ -1,0 +1,18 @@
+[
+  {
+    "brand": "Nike",
+    "image": "nike.png"
+  },
+  {
+    "brand": "Adidas",
+    "image": "adidas.png"
+  },
+  {
+    "brand": "Apple",
+    "image": "apple.png"
+  },
+  {
+    "brand": "McDonald's",
+    "image": "mcdonalds.png"
+  }
+]
