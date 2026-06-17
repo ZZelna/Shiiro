@@ -173,7 +173,7 @@ client.on("interactionCreate", interactionCreate);
 
 const antiAlt = require("./events/antiAlt");
 const voiceMoveLogs =
-    require("./events/voice/voiceMoveLogs");
+require("./events/voice/voiceMoveLogs");
 
 client.on(
     "voiceStateUpdate",
