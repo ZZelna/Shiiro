@@ -53,70 +53,34 @@ module.exports = {
             });
 
         collector.on(
-            "collect",
-            async m => {
+    "collect",
+    async m => {
 
-if (
-    m.content.toLowerCase() ===
-    question.capital.toLowerCase()
-)
-                    const winEmbed =
-                        new EmbedBuilder()
+        if (
+            m.content.toLowerCase() ===
+            question.capital.toLowerCase()
+        ) {
 
-                        .setColor(
-                            "Green"
-                        )
+            const winEmbed =
+                new EmbedBuilder()
 
-                        .setTitle(
-                            "✅ Bonne réponse !"
-                        )
+                .setColor("Green")
 
-                        .setDescription(
-`${m.author} a trouvé la capitale de **${question.country}**.\n\nRéponse : **${question.capital}**`
-                        );
+                .setTitle(
+                    "✅ Bonne réponse !"
+                )
 
-                    await message.channel.send({
-                        embeds: [winEmbed]
-                    });
+                .setDescription(
+                    `${m.author} a trouvé la capitale de **${question.country}**.\n\nRéponse : **${question.capital}**`
+                );
 
-                    collector.stop();
-                }
+            await message.channel.send({
+                embeds: [winEmbed]
+            });
 
-            }
-        );
+            collector.stop();
 
-        collector.on(
-            "end",
-            async (_, reason) => {
-
-                if (
-                    reason ===
-                    "time"
-                ) {
-
-                    const loseEmbed =
-                        new EmbedBuilder()
-
-                        .setColor(
-                            "Red"
-                        )
-
-                        .setTitle(
-                            "⏰ Temps écoulé"
-                        )
-
-                        .setDescription(
-`Personne n'a trouvé.\n\nRéponse : **${question.capital}**`
-                        );
-
-                    await message.channel.send({
-                        embeds: [loseEmbed]
-                    });
-
-                }
-
-            }
-        );
+        }
 
     }
-};
+);
