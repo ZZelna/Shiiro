@@ -2,48 +2,8 @@ const {
     EmbedBuilder
 } = require("discord.js");
 
-const questions = [
-    {
-        pays: "France",
-        capitale: "Paris"
-    },
-    {
-        pays: "Espagne",
-        capitale: "Madrid"
-    },
-    {
-        pays: "Italie",
-        capitale: "Rome"
-    },
-    {
-        pays: "Allemagne",
-        capitale: "Berlin"
-    },
-    {
-        pays: "Portugal",
-        capitale: "Lisbonne"
-    },
-    {
-        pays: "Belgique",
-        capitale: "Bruxelles"
-    },
-    {
-        pays: "Pays-Bas",
-        capitale: "Amsterdam"
-    },
-    {
-        pays: "Canada",
-        capitale: "Ottawa"
-    },
-    {
-        pays: "Maroc",
-        capitale: "Rabat"
-    },
-    {
-        pays: "Algérie",
-        capitale: "Alger"
-    }
-];
+const questions =
+    require("../../data/capitales.json");
 
 module.exports = {
 
