@@ -84,3 +84,33 @@ module.exports = {
 
     }
 );
+        collector.on(
+    "end",
+    async (_, reason) => {
+
+        if (reason === "time") {
+
+            const loseEmbed =
+                new EmbedBuilder()
+
+                .setColor("Red")
+
+                .setTitle(
+                    "⏰ Temps écoulé"
+                )
+
+                .setDescription(
+                    `Personne n'a trouvé.\n\nRéponse : **${question.capital}**`
+                );
+
+            await message.channel.send({
+                embeds: [loseEmbed]
+            });
+
+        }
+
+    }
+);
+
+    }
+};
