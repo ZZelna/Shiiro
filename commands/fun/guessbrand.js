@@ -1,12 +1,9 @@
 const {
-    EmbedBuilder,
-    AttachmentBuilder
+    EmbedBuilder
 } = require("discord.js");
 
 const brands =
     require("../../data/brands.json");
-
-const path = require("path");
 
 module.exports = {
 
@@ -22,15 +19,6 @@ module.exports = {
                 )
             ];
 
-        const file =
-            new AttachmentBuilder(
-                path.join(
-                    __dirname,
-                    "../../assets/logos",
-                    question.image
-                )
-            );
-
         const embed =
             new EmbedBuilder()
 
@@ -45,22 +33,26 @@ module.exports = {
             )
 
             .setImage(
-                `attachment://${question.image}`
+                question.logo
             )
 
             .setFooter({
                 text:
-                    "30 secondes"
-            });
+                    "Tu as 30 secondes pour répondre"
+            })
+
+            .setTimestamp();
 
         await message.channel.send({
-            embeds: [embed],
-            files: [file]
+            embeds: [embed]
         });
+
+        const filter = m =>
+            !m.author.bot;
 
         const collector =
             message.channel.createMessageCollector({
-                filter: m => !m.author.bot,
+                filter,
                 time: 30000
             });
 
@@ -69,24 +61,37 @@ module.exports = {
             async m => {
 
                 if (
-                    m.content.toLowerCase() ===
-                    question.brand.toLowerCase()
+                    m.content.toLowerCase()
+                    ===
+                    question.name.toLowerCase()
                 ) {
 
-                    collector.stop();
+                    const winEmbed =
+                        new EmbedBuilder()
 
-                    return message.channel.send({
-                        embeds: [
-                            new EmbedBuilder()
-                            .setColor("Green")
-                            .setTitle(
-                                "✅ Bonne réponse"
-                            )
-                            .setDescription(
-                                `${m.author} a trouvé **${question.brand}**`
-                            )
-                        ]
+                        .setColor(
+                            "Green"
+                        )
+
+                        .setTitle(
+                            "✅ Bonne réponse !"
+                        )
+
+                        .setDescription(
+                            `${m.author} a trouvé la marque !\n\n🏷️ Réponse : **${question.name}**`
+                        )
+
+                        .setImage(
+                            question.logo
+                        )
+
+                        .setTimestamp();
+
+                    await message.channel.send({
+                        embeds: [winEmbed]
                     });
+
+                    collector.stop();
 
                 }
 
@@ -101,17 +106,29 @@ module.exports = {
                     reason === "time"
                 ) {
 
+                    const loseEmbed =
+                        new EmbedBuilder()
+
+                        .setColor(
+                            "Red"
+                        )
+
+                        .setTitle(
+                            "⏰ Temps écoulé"
+                        )
+
+                        .setDescription(
+                            `Personne n'a trouvé.\n\n🏷️ Réponse : **${question.name}**`
+                        )
+
+                        .setImage(
+                            question.logo
+                        )
+
+                        .setTimestamp();
+
                     await message.channel.send({
-                        embeds: [
-                            new EmbedBuilder()
-                            .setColor("Red")
-                            .setTitle(
-                                "⏰ Temps écoulé"
-                            )
-                            .setDescription(
-                                `Réponse : **${question.brand}**`
-                            )
-                        ]
+                        embeds: [loseEmbed]
                     });
 
                 }
