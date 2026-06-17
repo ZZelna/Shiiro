@@ -6,7 +6,6 @@ const {
 } = require("discord.js");
 
 module.exports = {
-
     name: "casinohelp",
 
     async run(message) {
@@ -33,7 +32,7 @@ module.exports = {
 • +bountystatus
 • +bounty
 • +bountylist
-            `);
+`);
 
         const row = new ActionRowBuilder()
             .addComponents(
@@ -47,6 +46,5 @@ module.exports = {
             embeds: [embed],
             components: [row]
         });
-
     }
 };
