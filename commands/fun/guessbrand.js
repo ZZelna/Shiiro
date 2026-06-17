@@ -32,9 +32,7 @@ module.exports = {
                 "Quelle est cette marque ?"
             )
 
-            .setImage(
-                question.logo
-            )
+          .setThumbnail(question.logo)
 
             .setFooter({
                 text:
