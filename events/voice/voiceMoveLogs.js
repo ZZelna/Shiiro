@@ -3,14 +3,13 @@ const { EmbedBuilder } = require("discord.js");
 module.exports = async (oldState, newState) => {
 
     const logs =
-        newState.guild.channels.cache.get(
+        oldState.guild.channels.cache.get(
             "1516868193761890384"
         );
 
     if (!logs) return;
 
-    const member =
-        newState.member;
+    const member = oldState.member;
 
     // JOIN
 
@@ -19,16 +18,38 @@ module.exports = async (oldState, newState) => {
         newState.channel
     ) {
 
+        const embed =
+            new EmbedBuilder()
+
+            .setColor("#57F287")
+
+            .setAuthor({
+                name: `${member.user.username} (${member.id})`,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
+
+            .setTitle(
+                "🎧 Modification des Membres d'un Vocal"
+            )
+
+            .setDescription(
+                `${member} a rejoint le salon vocal ${newState.channel}.`
+            )
+
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true,
+                    size: 512
+                })
+            )
+
+            .setTimestamp();
+
         return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Green")
-                    .setTitle("🟢 Connexion Vocal")
-                    .setDescription(
-                        `${member} a rejoint **${newState.channel.name}**`
-                    )
-                    .setTimestamp()
-            ]
+            embeds: [embed]
         });
 
     }
@@ -40,16 +61,38 @@ module.exports = async (oldState, newState) => {
         !newState.channel
     ) {
 
+        const embed =
+            new EmbedBuilder()
+
+            .setColor("#ED4245")
+
+            .setAuthor({
+                name: `${member.user.username} (${member.id})`,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
+
+            .setTitle(
+                "🎧 Modification des Membres d'un Vocal"
+            )
+
+            .setDescription(
+                `${member} a quitté le salon vocal ${oldState.channel}.`
+            )
+
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true,
+                    size: 512
+                })
+            )
+
+            .setTimestamp();
+
         return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Red")
-                    .setTitle("🔴 Déconnexion Vocal")
-                    .setDescription(
-                        `${member} a quitté **${oldState.channel.name}**`
-                    )
-                    .setTimestamp()
-            ]
+            embeds: [embed]
         });
 
     }
@@ -59,247 +102,44 @@ module.exports = async (oldState, newState) => {
     if (
         oldState.channel &&
         newState.channel &&
-        oldState.channelId !== newState.channelId
+        oldState.channel.id !==
+        newState.channel.id
     ) {
 
-        await wait(1000);
+        const embed =
+            new EmbedBuilder()
 
-        const moderator =
-            await getModerator(
-                newState.guild,
-                member.id
-            );
+            .setColor("#FEE75C")
 
-        return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Blue")
-                    .setTitle("🔊 Déplacement Vocal")
-                    .addFields(
-                        {
-                            name: "👤 Utilisateur",
-                            value: member.user.tag,
-                            inline: true
-                        },
-                        {
-                            name: "👮 Modérateur",
-                            value: moderator
-                                ? moderator.tag
-                                : "Inconnu",
-                            inline: true
-                        },
-                        {
-                            name: "📍 Ancien salon",
-                            value: oldState.channel.name,
-                            inline: true
-                        },
-                        {
-                            name: "📍 Nouveau salon",
-                            value: newState.channel.name,
-                            inline: true
-                        }
-                    )
-                    .setThumbnail(
-                        member.user.displayAvatarURL({
-                            dynamic: true
-                        })
-                    )
-                    .setTimestamp()
-            ]
-        });
+            .setAuthor({
+                name: `${member.user.username} (${member.id})`,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
 
-    }
+            .setTitle(
+                "🎧 Déplacement Vocal"
+            )
 
-    // MUTE
+            .setDescription(
+                `${member} a été déplacé de ${oldState.channel} vers ${newState.channel}.`
+            )
 
-    if (
-        !oldState.serverMute &&
-        newState.serverMute
-    ) {
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true,
+                    size: 512
+                })
+            )
 
-        await wait(1000);
-
-        const moderator =
-            await getModerator(
-                newState.guild,
-                member.id
-            );
+            .setTimestamp();
 
         return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Orange")
-                    .setTitle("🔇 Mute Vocal")
-                    .addFields(
-                        {
-                            name: "👤 Utilisateur",
-                            value: member.user.tag,
-                            inline: true
-                        },
-                        {
-                            name: "👮 Modérateur",
-                            value: moderator
-                                ? moderator.tag
-                                : "Inconnu",
-                            inline: true
-                        }
-                    )
-                    .setTimestamp()
-            ]
-        });
-
-    }
-
-    // UNMUTE
-
-    if (
-        oldState.serverMute &&
-        !newState.serverMute
-    ) {
-
-        await wait(1000);
-
-        const moderator =
-            await getModerator(
-                newState.guild,
-                member.id
-            );
-
-        return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Green")
-                    .setTitle("🔊 Unmute Vocal")
-                    .addFields(
-                        {
-                            name: "👤 Utilisateur",
-                            value: member.user.tag,
-                            inline: true
-                        },
-                        {
-                            name: "👮 Modérateur",
-                            value: moderator
-                                ? moderator.tag
-                                : "Inconnu",
-                            inline: true
-                        }
-                    )
-                    .setTimestamp()
-            ]
-        });
-
-    }
-
-    // DEAF
-
-    if (
-        !oldState.serverDeaf &&
-        newState.serverDeaf
-    ) {
-
-        await wait(1000);
-
-        const moderator =
-            await getModerator(
-                newState.guild,
-                member.id
-            );
-
-        return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Orange")
-                    .setTitle("🔈 Deaf Vocal")
-                    .addFields(
-                        {
-                            name: "👤 Utilisateur",
-                            value: member.user.tag,
-                            inline: true
-                        },
-                        {
-                            name: "👮 Modérateur",
-                            value: moderator
-                                ? moderator.tag
-                                : "Inconnu",
-                            inline: true
-                        }
-                    )
-                    .setTimestamp()
-            ]
-        });
-
-    }
-
-    // UNDEAF
-
-    if (
-        oldState.serverDeaf &&
-        !newState.serverDeaf
-    ) {
-
-        await wait(1000);
-
-        const moderator =
-            await getModerator(
-                newState.guild,
-                member.id
-            );
-
-        return logs.send({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("Green")
-                    .setTitle("🔊 Undeaf Vocal")
-                    .addFields(
-                        {
-                            name: "👤 Utilisateur",
-                            value: member.user.tag,
-                            inline: true
-                        },
-                        {
-                            name: "👮 Modérateur",
-                            value: moderator
-                                ? moderator.tag
-                                : "Inconnu",
-                            inline: true
-                        }
-                    )
-                    .setTimestamp()
-            ]
+            embeds: [embed]
         });
 
     }
 
 };
-
-async function getModerator(
-    guild,
-    targetId
-) {
-
-    const fetchedLogs =
-        await guild.fetchAuditLogs({
-            limit: 10
-        }).catch(() => null);
-
-    if (!fetchedLogs) return null;
-
-    const entry =
-        fetchedLogs.entries.find(
-            log =>
-                log.target &&
-                log.target.id === targetId
-        );
-
-    return entry
-        ? entry.executor
-        : null;
-
-}
-
-function wait(ms) {
-    return new Promise(
-        resolve =>
-            setTimeout(resolve, ms)
-    );
-}
