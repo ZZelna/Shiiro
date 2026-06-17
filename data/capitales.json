@@ -14,5 +14,29 @@
   {
     "country": "Brésil",
     "capital": "Brasilia"
+  },
+  {
+    "country": "Espagne",
+    "capital": "Madrid"
+  },
+  {
+    "country": "Italie",
+    "capital": "Rome"
+  },
+  {
+    "country": "Allemagne",
+    "capital": "Berlin"
+  },
+  {
+    "country": "Maroc",
+    "capital": "Rabat"
+  },
+  {
+    "country": "Algérie",
+    "capital": "Alger"
+  },
+  {
+    "country": "Tunisie",
+    "capital": "Tunis"
   }
 ]
