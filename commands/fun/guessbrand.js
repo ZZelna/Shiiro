@@ -1,6 +1,9 @@
 const {
-    EmbedBuilder
+    EmbedBuilder,
+    AttachmentBuilder
 } = require("discord.js");
+
+const path = require("path");
 
 const brands =
     require("../../data/brands.json");
@@ -19,6 +22,15 @@ module.exports = {
                 )
             ];
 
+        const image =
+            new AttachmentBuilder(
+                path.join(
+                    __dirname,
+                    "../../assets/logos",
+                    question.image
+                )
+            );
+
         const embed =
             new EmbedBuilder()
 
@@ -32,7 +44,9 @@ module.exports = {
                 "Quelle est cette marque ?"
             )
 
-.setImage("https://i.imgur.com/1X4Jm6A.png")
+            .setImage(
+                `attachment://${question.image}`
+            )
 
             .setFooter({
                 text:
@@ -42,15 +56,13 @@ module.exports = {
             .setTimestamp();
 
         await message.channel.send({
-            embeds: [embed]
+            embeds: [embed],
+            files: [image]
         });
-
-        const filter = m =>
-            !m.author.bot;
 
         const collector =
             message.channel.createMessageCollector({
-                filter,
+                filter: m => !m.author.bot,
                 time: 30000
             });
 
@@ -59,8 +71,7 @@ module.exports = {
             async m => {
 
                 if (
-                    m.content.toLowerCase()
-                    ===
+                    m.content.toLowerCase() ===
                     question.name.toLowerCase()
                 ) {
 
@@ -79,9 +90,6 @@ module.exports = {
                             `${m.author} a trouvé la marque !\n\n🏷️ Réponse : **${question.name}**`
                         )
 
-
-                        .setImage("https://i.imgur.com/1X4Jm6A.png")
-                        
                         .setTimestamp();
 
                     await message.channel.send({
@@ -98,7 +106,6 @@ module.exports = {
         collector.on(
             "end",
             async (_, reason) => {
-                
 
                 if (
                     reason === "time"
@@ -119,7 +126,6 @@ module.exports = {
                             `Personne n'a trouvé.\n\n🏷️ Réponse : **${question.name}**`
                         )
 
-                    .setImage("https://i.imgur.com/1X4Jm6A.png")
                         .setTimestamp();
 
                     await message.channel.send({
