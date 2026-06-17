@@ -7,13 +7,23 @@ module.exports = {
 
     async run(message, args) {
 
-        if (
-            !whitelist.users.includes(message.author.id) &&
-            !config.owner_ids.includes(message.author.id)
-        ) {
-            return message.reply("❌ Tu n'as pas la permission d'utiliser cette commande.");
-        }
+        const allowedRoles = [
+    "1507082580414173234",
+    "1433895666823860295",
+    "1507851969572765756"
+];
 
+if (
+    !config.owner_ids.includes(message.author.id) &&
+    !whitelist.users.includes(message.author.id) &&
+    !message.member.roles.cache.some(role =>
+        allowedRoles.includes(role.id)
+    )
+) {
+    return message.reply(
+        "❌ Tu n'as pas la permission d'utiliser cette commande."
+    );
+}
         const target =
             message.mentions.users.first() ||
             await message.client.users.fetch(args[0]).catch(() => null);
