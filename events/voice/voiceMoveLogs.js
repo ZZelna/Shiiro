@@ -129,5 +129,123 @@ module.exports = async (
         });
 
     }
+    if (
+    oldState.serverMute !==
+    newState.serverMute
+) {
+
+    const embed =
+        new EmbedBuilder()
+
+        .setColor(
+            newState.serverMute
+                ? "#ED4245"
+                : "#57F287"
+        )
+
+        .setTitle(
+            newState.serverMute
+                ? "🔇 Mute Vocal"
+                : "🔈 Unmute Vocal"
+        )
+
+        .setThumbnail(
+            newState.member.user.displayAvatarURL({
+                dynamic: true
+            })
+        )
+
+        .addFields(
+            {
+                name: "👤 Utilisateur",
+                value: `${newState.member.user.tag}`
+            }
+        )
+
+        .setTimestamp();
+
+    logs.send({
+        embeds: [embed]
+    });
+
+}
+    if (
+    oldState.channel &&
+    !newState.channel
+) {
+
+    let moderator =
+        "Inconnu";
+
+    try {
+
+        const fetchedLogs =
+            await oldState.guild.fetchAuditLogs({
+                limit: 10
+            });
+
+        const entry =
+            fetchedLogs.entries.find(
+                log =>
+                    log.target?.id ===
+                    oldState.member.id &&
+                    Date.now() -
+                    log.createdTimestamp <
+                    5000
+            );
+
+        if (
+            entry?.executor
+        ) {
+
+            moderator =
+                entry.executor.tag;
+
+        }
+
+    } catch {}
+
+    const embed =
+        new EmbedBuilder()
+
+        .setColor(
+            "#ED4245"
+        )
+
+        .setTitle(
+            "🎧 Déconnexion Vocal"
+        )
+
+        .setThumbnail(
+            oldState.member.user.displayAvatarURL({
+                dynamic: true
+            })
+        )
+
+        .addFields(
+            {
+                name: "👤 Utilisateur",
+                value:
+                    oldState.member.user.tag
+            },
+            {
+                name: "👮 Modérateur",
+                value:
+                    moderator
+            },
+            {
+                name: "📢 Salon",
+                value:
+                    oldState.channel.name
+            }
+        )
+
+        .setTimestamp();
+
+    logs.send({
+        embeds: [embed]
+    });
+
+}
 
 };
