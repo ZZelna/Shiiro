@@ -56,11 +56,10 @@ module.exports = {
             "collect",
             async m => {
 
-                if (
-                    m.content.toLowerCase() ===
-                    question.capitale.toLowerCase()
-                ) {
-
+if (
+    m.content.toLowerCase() ===
+    question.capital.toLowerCase()
+)
                     const winEmbed =
                         new EmbedBuilder()
 
