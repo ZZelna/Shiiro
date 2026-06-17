@@ -172,6 +172,13 @@ const interactionCreate = require("./events/interaction/interactionCreate");
 client.on("interactionCreate", interactionCreate);
 
 const antiAlt = require("./events/antiAlt");
+const voiceMoveLogs =
+    require("./events/voiceMoveLogs");
+
+client.on(
+    "voiceStateUpdate",
+    voiceMoveLogs
+);
 const welcome = require("./events/welcome");
 
 client.on("guildMemberAdd", antiAlt);
