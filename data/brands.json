@@ -1,22 +1,6 @@
 [
   {
-    "name": "Nike",
-    "image": "nike.png"
-  },
-  {
     "name": "Adidas",
     "image": "adidas.png"
-  },
-  {
-    "name": "Apple",
-    "image": "apple.png"
-  },
-  {
-    "name": "Ferrari",
-    "image": "ferrari.png"
-  },
-  {
-    "name": "BMW",
-    "image": "bmw.png"
   }
 ]
