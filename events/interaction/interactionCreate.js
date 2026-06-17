@@ -103,40 +103,78 @@ module.exports = async (interaction) => {
         }
 
         // LISTE
-        if (interaction.customId === "customrole_list") {
+        if (
+    interaction.customId ===
+    "customrole_list"
+) {
 
-            const config = JSON.parse(
-                fs.readFileSync(configPath, "utf8")
-            );
+    const config =
+        JSON.parse(
+            fs.readFileSync(
+                configPath,
+                "utf8"
+            )
+        );
 
-            const roles =
-                config.custom_roles || {};
+    const roles =
+        config.custom_roles || {};
 
-            const commands =
-                Object.entries(roles);
+    const commands =
+        Object.entries(roles);
 
-            if (!commands.length) {
-                return interaction.reply({
-                    content:
-                        "❌ Aucun rôle personnalisé.",
-                    ephemeral: true
-                });
-            }
+    if (!commands.length) {
 
-            const liste = commands
-                .map(
-                    ([cmd, data]) =>
-                        `• +${cmd}\n👑 <@${data.owner_id}>\n🎭 <@&${data.role_id}>`
-                )
-                .join("\n\n");
+        return interaction.reply({
 
-            return interaction.reply({
-                content:
-                    `📋 **Rôles personnalisés**\n\n${liste}`,
-                ephemeral: true
-            });
-        }
+            content:
+                "❌ Aucun rôle personnalisé.",
+
+            ephemeral: true
+
+        });
+
     }
+
+    const embed =
+        new EmbedBuilder()
+
+        .setTitle(
+            "📋 Rôles personnalisés"
+        )
+
+        .setColor(
+            0x5865F2
+        )
+
+        .setTimestamp();
+
+    commands.forEach(
+        ([cmd, data]) => {
+
+            embed.addFields({
+
+                name:
+                    `+${cmd}`,
+
+                value:
+                    `👑 Propriétaire : <@${data.owner_id}>\n🎭 Rôle : <@&${data.role_id}>`,
+
+                inline: false
+
+            });
+
+        }
+    );
+
+    return interaction.reply({
+
+        embeds: [embed],
+
+        ephemeral: true
+
+    });
+
+}
 
     // =========================
     // MODAL
