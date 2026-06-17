@@ -16,60 +16,120 @@ module.exports = async (
     if (!logs) return;
 
     const member =
+        newState.member ||
         oldState.member;
 
+    // JOIN
+
     if (
-        oldState.channel &&
-        newState.channel &&
-        oldState.channel.id !==
-        newState.channel.id
+        !oldState.channel &&
+        newState.channel
     ) {
-
-        let moderator =
-            "Inconnu";
-
-        try {
-
-            const fetchedLogs =
-                await oldState.guild.fetchAuditLogs({
-                    limit: 10
-                });
-
-            const entry =
-                fetchedLogs.entries.find(
-                    log =>
-
-                        log.target?.id ===
-                        member.id &&
-
-                        Date.now() -
-                        log.createdTimestamp <
-                        5000
-                );
-
-            if (
-                entry?.executor
-            ) {
-
-                moderator =
-                    `${entry.executor.tag}`;
-
-            }
-
-        } catch (err) {
-            console.log(err);
-        }
 
         const embed =
             new EmbedBuilder()
 
-            .setColor(
-                "#FEE75C"
-            )
+            .setColor("#57F287")
 
             .setAuthor({
-                name:
-                    `${member.user.username} (${member.id})`,
+                name: member.user.tag,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
+
+            .setTitle(
+                "🎧 Modification des Membres d'un Vocal"
+            )
+
+            .setDescription(
+`${member} a rejoint le salon vocal 🔊 **${newState.channel.name}**.`
+            )
+
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true
+                })
+            )
+
+            .setTimestamp();
+
+        return logs.send({
+            embeds: [embed]
+        });
+
+    }
+
+    // LEAVE
+
+    if (
+        oldState.channel &&
+        !newState.channel
+    ) {
+
+        const embed =
+            new EmbedBuilder()
+
+            .setColor("#ED4245")
+
+            .setAuthor({
+                name: member.user.tag,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
+
+            .setTitle(
+                "🎧 Modification des Membres d'un Vocal"
+            )
+
+            .setDescription(
+`${member} a quitté le salon vocal 🔊 **${oldState.channel.name}**.`
+            )
+
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true
+                })
+            )
+
+            .setTimestamp();
+
+        return logs.send({
+            embeds: [embed]
+        });
+
+    }
+
+    // MOVE
+
+    if (
+        oldState.channel &&
+        newState.channel &&
+        oldState.channelId !==
+            newState.channelId
+    ) {
+
+        const fetched =
+            await oldState.guild.fetchAuditLogs({
+                limit: 1,
+                type:
+                    AuditLogEvent.MemberMove
+            });
+
+        const executor =
+            fetched.entries.first()
+                ?.executor;
+
+        const embed =
+            new EmbedBuilder()
+
+            .setColor("#FEE75C")
+
+            .setAuthor({
+                name: member.user.tag,
                 iconURL:
                     member.user.displayAvatarURL({
                         dynamic: true
@@ -80,172 +140,201 @@ module.exports = async (
                 "🎧 Déplacement Vocal"
             )
 
-            .addFields(
-                {
-                    name:
-                        "👮 Modérateur",
-                    value:
-                        moderator,
-                    inline:
-                        false
-                },
-                {
-                    name:
-                        "👤 Utilisateur",
-                    value:
-                        member.user.tag,
-                    inline:
-                        false
-                },
-                {
-                    name:
-                        "📢 Ancien salon",
-                    value:
-                        oldState.channel.name,
-                    inline:
-                        true
-                },
-                {
-                    name:
-                        "📢 Nouveau salon",
-                    value:
-                        newState.channel.name,
-                    inline:
-                        true
-                }
+            .setDescription(
+`${member} a été déplacé.
+
+📥 Ancien salon :
+🔊 **${oldState.channel.name}**
+
+📤 Nouveau salon :
+🔊 **${newState.channel.name}**
+
+👮 Modérateur :
+${executor ? executor.tag : "Inconnu"}`
             )
 
             .setThumbnail(
                 member.user.displayAvatarURL({
-                    dynamic: true,
-                    size: 512
+                    dynamic: true
                 })
             )
 
             .setTimestamp();
 
-        logs.send({
+        return logs.send({
             embeds: [embed]
         });
 
     }
+
+    // MUTE
+
     if (
-    oldState.serverMute !==
-    newState.serverMute
-) {
+        !oldState.serverMute &&
+        newState.serverMute
+    ) {
 
-    const embed =
-        new EmbedBuilder()
-
-        .setColor(
-            newState.serverMute
-                ? "#ED4245"
-                : "#57F287"
-        )
-
-        .setTitle(
-            newState.serverMute
-                ? "🔇 Mute Vocal"
-                : "🔈 Unmute Vocal"
-        )
-
-        .setThumbnail(
-            newState.member.user.displayAvatarURL({
-                dynamic: true
-            })
-        )
-
-        .addFields(
-            {
-                name: "👤 Utilisateur",
-                value: `${newState.member.user.tag}`
-            }
-        )
-
-        .setTimestamp();
-
-    logs.send({
-        embeds: [embed]
-    });
-
-}
-    if (
-    oldState.channel &&
-    !newState.channel
-) {
-
-    let moderator =
-        "Inconnu";
-
-    try {
-
-        const fetchedLogs =
+        const fetched =
             await oldState.guild.fetchAuditLogs({
-                limit: 10
+                limit: 1,
+                type:
+                    AuditLogEvent.MemberUpdate
             });
 
-        const entry =
-            fetchedLogs.entries.find(
-                log =>
-                    log.target?.id ===
-                    oldState.member.id &&
-                    Date.now() -
-                    log.createdTimestamp <
-                    5000
-            );
+        const executor =
+            fetched.entries.first()
+                ?.executor;
 
-        if (
-            entry?.executor
-        ) {
+        const embed =
+            new EmbedBuilder()
 
-            moderator =
-                entry.executor.tag;
+            .setColor("#ED4245")
 
-        }
-
-    } catch {}
-
-    const embed =
-        new EmbedBuilder()
-
-        .setColor(
-            "#ED4245"
-        )
-
-        .setTitle(
-            "🎧 Déconnexion Vocal"
-        )
-
-        .setThumbnail(
-            oldState.member.user.displayAvatarURL({
-                dynamic: true
+            .setAuthor({
+                name: member.user.tag,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
             })
-        )
 
-        .addFields(
-            {
-                name: "👤 Utilisateur",
-                value:
-                    oldState.member.user.tag
-            },
-            {
-                name: "👮 Modérateur",
-                value:
-                    moderator
-            },
-            {
-                name: "📢 Salon",
-                value:
-                    oldState.channel.name
-            }
-        )
+            .setTitle(
+                "🔇 Mute Vocal"
+            )
 
-        .setTimestamp();
+            .setDescription(
+`${member} a été mute vocalement.
 
-    logs.send({
-        embeds: [embed]
-    });
+👮 Modérateur :
+${executor ? executor.tag : "Inconnu"}`
+            )
 
-}
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true
+                })
+            )
+
+            .setTimestamp();
+
+        return logs.send({
+            embeds: [embed]
+        });
+
+    }
+
+    // UNMUTE
+
+    if (
+        oldState.serverMute &&
+        !newState.serverMute
+    ) {
+
+        const fetched =
+            await oldState.guild.fetchAuditLogs({
+                limit: 1,
+                type:
+                    AuditLogEvent.MemberUpdate
+            });
+
+        const executor =
+            fetched.entries.first()
+                ?.executor;
+
+        const embed =
+            new EmbedBuilder()
+
+            .setColor("#57F287")
+
+            .setAuthor({
+                name: member.user.tag,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
+
+            .setTitle(
+                "🔈 Unmute Vocal"
+            )
+
+            .setDescription(
+`${member} a été unmute vocalement.
+
+👮 Modérateur :
+${executor ? executor.tag : "Inconnu"}`
+            )
+
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true
+                })
+            )
+
+            .setTimestamp();
+
+        return logs.send({
+            embeds: [embed]
+        });
+
+    }
+
+    // DISCONNECT FORCE
+
+    if (
+        oldState.channel &&
+        !newState.channel
+    ) {
+
+        const fetched =
+            await oldState.guild.fetchAuditLogs({
+                limit: 1,
+                type:
+                    AuditLogEvent.MemberDisconnect
+            }).catch(() => null);
+
+        const executor =
+            fetched?.entries.first()
+                ?.executor;
+
+        if (!executor) return;
+
+        const embed =
+            new EmbedBuilder()
+
+            .setColor("#ED4245")
+
+            .setAuthor({
+                name: member.user.tag,
+                iconURL:
+                    member.user.displayAvatarURL({
+                        dynamic: true
+                    })
+            })
+
+            .setTitle(
+                "❌ Déconnexion Forcée"
+            )
+
+            .setDescription(
+`${member} a été déconnecté du vocal.
+
+👮 Modérateur :
+${executor.tag}`
+            )
+
+            .setThumbnail(
+                member.user.displayAvatarURL({
+                    dynamic: true
+                })
+            )
+
+            .setTimestamp();
+
+        return logs.send({
+            embeds: [embed]
+        });
+
+    }
 
 };
