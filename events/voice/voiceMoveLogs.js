@@ -1,6 +1,12 @@
-const { EmbedBuilder } = require("discord.js");
+const {
+    EmbedBuilder,
+    AuditLogEvent
+} = require("discord.js");
 
-module.exports = async (oldState, newState) => {
+module.exports = async (
+    oldState,
+    newState
+) => {
 
     const logs =
         oldState.guild.channels.cache.get(
@@ -9,95 +15,8 @@ module.exports = async (oldState, newState) => {
 
     if (!logs) return;
 
-    const member = oldState.member;
-
-    // JOIN
-
-    if (
-        !oldState.channel &&
-        newState.channel
-    ) {
-
-        const embed =
-            new EmbedBuilder()
-
-            .setColor("#57F287")
-
-            .setAuthor({
-                name: `${member.user.username} (${member.id})`,
-                iconURL:
-                    member.user.displayAvatarURL({
-                        dynamic: true
-                    })
-            })
-
-            .setTitle(
-                "🎧 Modification des Membres d'un Vocal"
-            )
-
-            .setDescription(
-                `${member} a rejoint le salon vocal ${newState.channel}.`
-            )
-
-            .setThumbnail(
-                member.user.displayAvatarURL({
-                    dynamic: true,
-                    size: 512
-                })
-            )
-
-            .setTimestamp();
-
-        return logs.send({
-            embeds: [embed]
-        });
-
-    }
-
-    // LEAVE
-
-    if (
-        oldState.channel &&
-        !newState.channel
-    ) {
-
-        const embed =
-            new EmbedBuilder()
-
-            .setColor("#ED4245")
-
-            .setAuthor({
-                name: `${member.user.username} (${member.id})`,
-                iconURL:
-                    member.user.displayAvatarURL({
-                        dynamic: true
-                    })
-            })
-
-            .setTitle(
-                "🎧 Modification des Membres d'un Vocal"
-            )
-
-            .setDescription(
-                `${member} a quitté le salon vocal ${oldState.channel}.`
-            )
-
-            .setThumbnail(
-                member.user.displayAvatarURL({
-                    dynamic: true,
-                    size: 512
-                })
-            )
-
-            .setTimestamp();
-
-        return logs.send({
-            embeds: [embed]
-        });
-
-    }
-
-    // MOVE
+    const member =
+        oldState.member;
 
     if (
         oldState.channel &&
@@ -106,13 +25,51 @@ module.exports = async (oldState, newState) => {
         newState.channel.id
     ) {
 
+        let moderator =
+            "Inconnu";
+
+        try {
+
+            const fetchedLogs =
+                await oldState.guild.fetchAuditLogs({
+                    limit: 10
+                });
+
+            const entry =
+                fetchedLogs.entries.find(
+                    log =>
+
+                        log.target?.id ===
+                        member.id &&
+
+                        Date.now() -
+                        log.createdTimestamp <
+                        5000
+                );
+
+            if (
+                entry?.executor
+            ) {
+
+                moderator =
+                    `${entry.executor.tag}`;
+
+            }
+
+        } catch (err) {
+            console.log(err);
+        }
+
         const embed =
             new EmbedBuilder()
 
-            .setColor("#FEE75C")
+            .setColor(
+                "#FEE75C"
+            )
 
             .setAuthor({
-                name: `${member.user.username} (${member.id})`,
+                name:
+                    `${member.user.username} (${member.id})`,
                 iconURL:
                     member.user.displayAvatarURL({
                         dynamic: true
@@ -123,8 +80,39 @@ module.exports = async (oldState, newState) => {
                 "🎧 Déplacement Vocal"
             )
 
-            .setDescription(
-                `${member} a été déplacé de ${oldState.channel} vers ${newState.channel}.`
+            .addFields(
+                {
+                    name:
+                        "👮 Modérateur",
+                    value:
+                        moderator,
+                    inline:
+                        false
+                },
+                {
+                    name:
+                        "👤 Utilisateur",
+                    value:
+                        member.user.tag,
+                    inline:
+                        false
+                },
+                {
+                    name:
+                        "📢 Ancien salon",
+                    value:
+                        oldState.channel.name,
+                    inline:
+                        true
+                },
+                {
+                    name:
+                        "📢 Nouveau salon",
+                    value:
+                        newState.channel.name,
+                    inline:
+                        true
+                }
             )
 
             .setThumbnail(
@@ -136,7 +124,7 @@ module.exports = async (oldState, newState) => {
 
             .setTimestamp();
 
-        return logs.send({
+        logs.send({
             embeds: [embed]
         });
 
