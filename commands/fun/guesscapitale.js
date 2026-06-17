@@ -29,7 +29,7 @@ module.exports = {
             )
 
             .setDescription(
-                `Quelle est la capitale de **${question.pays}** ?`
+`Quelle est la capitale de **${question.country}** ?`
             )
 
             .setFooter({
@@ -73,7 +73,7 @@ module.exports = {
                         )
 
                         .setDescription(
-                            `${m.author} a trouvé la capitale de **${question.pays}**.\n\nRéponse : **${question.capitale}**`
+`${m.author} a trouvé la capitale de **${question.country}**.\n\nRéponse : **${question.capital}**`
                         );
 
                     await message.channel.send({
@@ -107,7 +107,7 @@ module.exports = {
                         )
 
                         .setDescription(
-                            `Personne n'a trouvé.\n\nRéponse : **${question.capitale}**`
+`Personne n'a trouvé.\n\nRéponse : **${question.capital}**`
                         );
 
                     await message.channel.send({
