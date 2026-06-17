@@ -32,7 +32,7 @@ module.exports = {
                 "Quelle est cette marque ?"
             )
 
-          .setThumbnail(question.logo)
+.setImage("https://i.imgur.com/1X4Jm6A.png")
 
             .setFooter({
                 text:
@@ -79,9 +79,9 @@ module.exports = {
                             `${m.author} a trouvé la marque !\n\n🏷️ Réponse : **${question.name}**`
                         )
 
-                  .setThumbnail(
-    question.logo
-)
+
+                        .setImage("https://i.imgur.com/1X4Jm6A.png")
+                        
                         .setTimestamp();
 
                     await message.channel.send({
@@ -119,8 +119,7 @@ module.exports = {
                             `Personne n'a trouvé.\n\n🏷️ Réponse : **${question.name}**`
                         )
 
-                        .setThumbnail(question.logo)
-
+                    .setImage("https://i.imgur.com/1X4Jm6A.png")
                         .setTimestamp();
 
                     await message.channel.send({
