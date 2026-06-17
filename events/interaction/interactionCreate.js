@@ -3,7 +3,8 @@ const {
     TextInputBuilder,
     TextInputStyle,
     ActionRowBuilder,
-    StringSelectMenuBuilder
+    StringSelectMenuBuilder,
+    EmbedBuilder
 } = require("discord.js");
 
 const fs = require("fs");
@@ -175,6 +176,7 @@ module.exports = async (interaction) => {
     });
 
 }
+        }
 
     // =========================
     // MODAL
