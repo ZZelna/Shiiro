@@ -4,16 +4,8 @@
     "capital": "Paris"
   },
   {
-    "country": "Japon",
-    "capital": "Tokyo"
-  },
-  {
-    "country": "Canada",
-    "capital": "Ottawa"
-  },
-  {
-    "country": "Brésil",
-    "capital": "Brasilia"
+    "country": "Allemagne",
+    "capital": "Berlin"
   },
   {
     "country": "Espagne",
@@ -24,8 +16,60 @@
     "capital": "Rome"
   },
   {
-    "country": "Allemagne",
-    "capital": "Berlin"
+    "country": "Portugal",
+    "capital": "Lisbonne"
+  },
+  {
+    "country": "Belgique",
+    "capital": "Bruxelles"
+  },
+  {
+    "country": "Pays-Bas",
+    "capital": "Amsterdam"
+  },
+  {
+    "country": "Royaume-Uni",
+    "capital": "Londres"
+  },
+  {
+    "country": "États-Unis",
+    "capital": "Washington"
+  },
+  {
+    "country": "Canada",
+    "capital": "Ottawa"
+  },
+  {
+    "country": "Mexique",
+    "capital": "Mexico"
+  },
+  {
+    "country": "Japon",
+    "capital": "Tokyo"
+  },
+  {
+    "country": "Chine",
+    "capital": "Pékin"
+  },
+  {
+    "country": "Corée du Sud",
+    "capital": "Séoul"
+  },
+  {
+    "country": "Russie",
+    "capital": "Moscou"
+  },
+  {
+    "country": "Australie",
+    "capital": "Canberra"
+  },
+  {
+    "country": "Brésil",
+    "capital": "Brasilia"
+  },
+  {
+    "country": "Argentine",
+    "capital": "Buenos Aires"
   },
   {
     "country": "Maroc",
@@ -34,9 +78,5 @@
   {
     "country": "Algérie",
     "capital": "Alger"
-  },
-  {
-    "country": "Tunisie",
-    "capital": "Tunis"
   }
 ]
