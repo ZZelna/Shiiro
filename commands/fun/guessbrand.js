@@ -81,10 +81,9 @@ module.exports = {
                             `${m.author} a trouvé la marque !\n\n🏷️ Réponse : **${question.name}**`
                         )
 
-                        .setImage(
-                            question.logo
-                        )
-
+                  .setThumbnail(
+    question.logo
+)
                         .setTimestamp();
 
                     await message.channel.send({
@@ -101,6 +100,7 @@ module.exports = {
         collector.on(
             "end",
             async (_, reason) => {
+                
 
                 if (
                     reason === "time"
@@ -121,9 +121,7 @@ module.exports = {
                             `Personne n'a trouvé.\n\n🏷️ Réponse : **${question.name}**`
                         )
 
-                        .setImage(
-                            question.logo
-                        )
+                        .setThumbnail(question.logo)
 
                         .setTimestamp();
 
