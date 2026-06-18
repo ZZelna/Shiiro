@@ -46,7 +46,23 @@ module.exports = {
         const member =
             interaction.options.getMember(
                 "membre"
-            );
+            )
+            const protectedRoles = [
+    "1517238655444451520",
+    "1506674274826584284"
+];
+
+if (
+    member.roles.cache.some(role =>
+        protectedRoles.includes(role.id)
+    )
+) {
+    return interaction.reply({
+        content:
+            "❌ Impossible de jail cette personne.",
+        ephemeral: true
+    });
+}
 
         if (!member) {
             return interaction.reply({
