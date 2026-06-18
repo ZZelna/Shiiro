@@ -37,6 +37,27 @@ const client = new Client({
 
 client.commands = new Map();
 
+client.slashCommands = new Map();
+
+const slashCommands =
+    fs.readdirSync("./slashCommands")
+        .filter(file => file.endsWith(".js"));
+
+for (const file of slashCommands) {
+
+    const command =
+        require(`./slashCommands/${file}`);
+
+    client.slashCommands.set(
+        command.data.name,
+        command
+    );
+
+    console.log(
+        `✅ Slash chargée : ${command.data.name}`
+    );
+}
+
 const commandFolders = fs.readdirSync("./commands");
 
 for (const folder of commandFolders) {
@@ -67,7 +88,11 @@ client.once("clientReady", async () => {
 
     const commands = [];
 
-    for (const file of slashCommands) {
+    client.slashCommands.forEach(command => {
+    commands.push(
+        command.data.toJSON()
+    );
+});
 
         const command =
             require(`./slashCommands/${file}`);
