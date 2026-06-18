@@ -64,6 +64,21 @@ client.once("clientReady", () => {
 });
 
 client.snipes = new Map();
+client.slashCommands = new Map();
+const slashCommands =
+    fs.readdirSync("./slashCommands")
+        .filter(file => file.endsWith(".js"));
+
+for (const file of slashCommands) {
+
+    const command =
+        require(`./slashCommands/${file}`);
+
+    client.slashCommands.set(
+        command.data.name,
+        command
+    );
+}
 
 client.on("messageDelete", async (message) => {
 
