@@ -1,0 +1,5002 @@
+[
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 1
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 2
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 3
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 4
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 5
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 6
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 7
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 8
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 9
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 10
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 11
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 12
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 13
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 14
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 15
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 16
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 17
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 18
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 19
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 20
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 21
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 22
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 23
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 24
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 25
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 26
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 27
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 28
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 29
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 30
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 31
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 32
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 33
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 34
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 35
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 36
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 37
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 38
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 39
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 40
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 41
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 42
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 43
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 44
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 45
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 46
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 47
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 48
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 49
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 50
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 51
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 52
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 53
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 54
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 55
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 56
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 57
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 58
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 59
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 60
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 61
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 62
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 63
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 64
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 65
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 66
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 67
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 68
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 69
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 70
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 71
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 72
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 73
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 74
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 75
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 76
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 77
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 78
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 79
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 80
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 81
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 82
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 83
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 84
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 85
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 86
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 87
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 88
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 89
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 90
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 91
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 92
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 93
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 94
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 95
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 96
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 97
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 98
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 99
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 100
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 101
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 102
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 103
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 104
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 105
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 106
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 107
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 108
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 109
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 110
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 111
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 112
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 113
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 114
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 115
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 116
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 117
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 118
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 119
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 120
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 121
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 122
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 123
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 124
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 125
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 126
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 127
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 128
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 129
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 130
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 131
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 132
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 133
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 134
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 135
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 136
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 137
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 138
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 139
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 140
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 141
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 142
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 143
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 144
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 145
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 146
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 147
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 148
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 149
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 150
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 151
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 152
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 153
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 154
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 155
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 156
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 157
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 158
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 159
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 160
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 161
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 162
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 163
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 164
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 165
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 166
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 167
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 168
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 169
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 170
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 171
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 172
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 173
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 174
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 175
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 176
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 177
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 178
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 179
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 180
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 181
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 182
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 183
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 184
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 185
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 186
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 187
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 188
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 189
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 190
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 191
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 192
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 193
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 194
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 195
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 196
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 197
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 198
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 199
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 200
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 201
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 202
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 203
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 204
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 205
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 206
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 207
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 208
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 209
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 210
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 211
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 212
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 213
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 214
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 215
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 216
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 217
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 218
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 219
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 220
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 221
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 222
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 223
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 224
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 225
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 226
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 227
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 228
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 229
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 230
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 231
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 232
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 233
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 234
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 235
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 236
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 237
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 238
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 239
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 240
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 241
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 242
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 243
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 244
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 245
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 246
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 247
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 248
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 249
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 250
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 251
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 252
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 253
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 254
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 255
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 256
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 257
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 258
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 259
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 260
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 261
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 262
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 263
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 264
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 265
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 266
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 267
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 268
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 269
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 270
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 271
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 272
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 273
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 274
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 275
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 276
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 277
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 278
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 279
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 280
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 281
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 282
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 283
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 284
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 285
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 286
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 287
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 288
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 289
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 290
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 291
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 292
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 293
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 294
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 295
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 296
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 297
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 298
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 299
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 300
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 301
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 302
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 303
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 304
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 305
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 306
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 307
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 308
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 309
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 310
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 311
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 312
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 313
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 314
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 315
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 316
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 317
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 318
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 319
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 320
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 321
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 322
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 323
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 324
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 325
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 326
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 327
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 328
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 329
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 330
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 331
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 332
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 333
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 334
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 335
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 336
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 337
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 338
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 339
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 340
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 341
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 342
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 343
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 344
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 345
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 346
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 347
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 348
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 349
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 350
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 351
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 352
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 353
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 354
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 355
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 356
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 357
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 358
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 359
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 360
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 361
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 362
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 363
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 364
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 365
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 366
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 367
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 368
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 369
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 370
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 371
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 372
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 373
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 374
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 375
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 376
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 377
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 378
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 379
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 380
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 381
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 382
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 383
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 384
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 385
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 386
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 387
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 388
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 389
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 390
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 391
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 392
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 393
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 394
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 395
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 396
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 397
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 398
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 399
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 400
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 401
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 402
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 403
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 404
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 405
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 406
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 407
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 408
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 409
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 410
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 411
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 412
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 413
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 414
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 415
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 416
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 417
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 418
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 419
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 420
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 421
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 422
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 423
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 424
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 425
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 426
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 427
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 428
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 429
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 430
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 431
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 432
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 433
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 434
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 435
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 436
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 437
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 438
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 439
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 440
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 441
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 442
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 443
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 444
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 445
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 446
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 447
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 448
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 449
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 450
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 451
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 452
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 453
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 454
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 455
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 456
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 457
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 458
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 459
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 460
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 461
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 462
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 463
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 464
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 465
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 466
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 467
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 468
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 469
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 470
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 471
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 472
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 473
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 474
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 475
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 476
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 477
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 478
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 479
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 480
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 481
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 482
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 483
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 484
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 485
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 486
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 487
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 488
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 489
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 490
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 491
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 492
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 493
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 494
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 495
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 496
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 497
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 498
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 499
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 500
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 501
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 502
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 503
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 504
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 505
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 506
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 507
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 508
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 509
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 510
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 511
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 512
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 513
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 514
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 515
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 516
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 517
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 518
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 519
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 520
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 521
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 522
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 523
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 524
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 525
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 526
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 527
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 528
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 529
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 530
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 531
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 532
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 533
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 534
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 535
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 536
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 537
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 538
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 539
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 540
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 541
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 542
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 543
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 544
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 545
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 546
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 547
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 548
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 549
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 550
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 551
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 552
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 553
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 554
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 555
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 556
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 557
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 558
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 559
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 560
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 561
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 562
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 563
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 564
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 565
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 566
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 567
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 568
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 569
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 570
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 571
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 572
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 573
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 574
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 575
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 576
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 577
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 578
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 579
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 580
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 581
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 582
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 583
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 584
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 585
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 586
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 587
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 588
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 589
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 590
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 591
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 592
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 593
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 594
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 595
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 596
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 597
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 598
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 599
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 600
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 601
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 602
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 603
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 604
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 605
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 606
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 607
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 608
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 609
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 610
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 611
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 612
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 613
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 614
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 615
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 616
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 617
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 618
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 619
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 620
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 621
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 622
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 623
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 624
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 625
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 626
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 627
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 628
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 629
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 630
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 631
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 632
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 633
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 634
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 635
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 636
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 637
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 638
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 639
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 640
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 641
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 642
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 643
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 644
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 645
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 646
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 647
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 648
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 649
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 650
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 651
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 652
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 653
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 654
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 655
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 656
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 657
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 658
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 659
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 660
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 661
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 662
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 663
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 664
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 665
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 666
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 667
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 668
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 669
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 670
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 671
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 672
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 673
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 674
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 675
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 676
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 677
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 678
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 679
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 680
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 681
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 682
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 683
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 684
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 685
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 686
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 687
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 688
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 689
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 690
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 691
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 692
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 693
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 694
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 695
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 696
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 697
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 698
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 699
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 700
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 701
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 702
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 703
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 704
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 705
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 706
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 707
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 708
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 709
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 710
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 711
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 712
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 713
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 714
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 715
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 716
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 717
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 718
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 719
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 720
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 721
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 722
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 723
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 724
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 725
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 726
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 727
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 728
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 729
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 730
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 731
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 732
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 733
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 734
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 735
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 736
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 737
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 738
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 739
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 740
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 741
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 742
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 743
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 744
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 745
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 746
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 747
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 748
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 749
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 750
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 751
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 752
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 753
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 754
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 755
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 756
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 757
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 758
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 759
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 760
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 761
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 762
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 763
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 764
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 765
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 766
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 767
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 768
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 769
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 770
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 771
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 772
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 773
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 774
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 775
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 776
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 777
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 778
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 779
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 780
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 781
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 782
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 783
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 784
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 785
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 786
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 787
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 788
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 789
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 790
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 791
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 792
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 793
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 794
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 795
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 796
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 797
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 798
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 799
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 800
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 801
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 802
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 803
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 804
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 805
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 806
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 807
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 808
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 809
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 810
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 811
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 812
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 813
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 814
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 815
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 816
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 817
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 818
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 819
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 820
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 821
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 822
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 823
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 824
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 825
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 826
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 827
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 828
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 829
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 830
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 831
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 832
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 833
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 834
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 835
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 836
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 837
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 838
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 839
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 840
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 841
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 842
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 843
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 844
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 845
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 846
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 847
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 848
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 849
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 850
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 851
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 852
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 853
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 854
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 855
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 856
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 857
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 858
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 859
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 860
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 861
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 862
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 863
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 864
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 865
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 866
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 867
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 868
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 869
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 870
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 871
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 872
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 873
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 874
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 875
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 876
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 877
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 878
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 879
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 880
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 881
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 882
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 883
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 884
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 885
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 886
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 887
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 888
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 889
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 890
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 891
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 892
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 893
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 894
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 895
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 896
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 897
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 898
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 899
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 900
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 901
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 902
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 903
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 904
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 905
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 906
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 907
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 908
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 909
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 910
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 911
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 912
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 913
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 914
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 915
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 916
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 917
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 918
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 919
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 920
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 921
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 922
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 923
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 924
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 925
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 926
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 927
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 928
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 929
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 930
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 931
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 932
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 933
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 934
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 935
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 936
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 937
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 938
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 939
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 940
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 941
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 942
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 943
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 944
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 945
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 946
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 947
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 948
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 949
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 950
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 951
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 952
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 953
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 954
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 955
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 956
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 957
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 958
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 959
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 960
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 961
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 962
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 963
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 964
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 965
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 966
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 967
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 968
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 969
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 970
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 971
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 972
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 973
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 974
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 975
+  },
+  {
+    "author": "Socrate",
+    "quote": "Je sais que je ne sais rien.",
+    "id": 976
+  },
+  {
+    "author": "Platon",
+    "quote": "Le début est la moitié de tout.",
+    "id": 977
+  },
+  {
+    "author": "Aristote",
+    "quote": "Le bonheur dépend de nous-mêmes.",
+    "id": 978
+  },
+  {
+    "author": "Épicure",
+    "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas.",
+    "id": 979
+  },
+  {
+    "author": "Sénèque",
+    "quote": "La vie n'est pas courte, mais nous la rendons telle.",
+    "id": 980
+  },
+  {
+    "author": "Marc Aurèle",
+    "quote": "Notre vie est ce que nos pensées en font.",
+    "id": 981
+  },
+  {
+    "author": "Confucius",
+    "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres.",
+    "id": 982
+  },
+  {
+    "author": "Lao Tseu",
+    "quote": "Un voyage de mille lieues commence toujours par un premier pas.",
+    "id": 983
+  },
+  {
+    "author": "Descartes",
+    "quote": "Je pense, donc je suis.",
+    "id": 984
+  },
+  {
+    "author": "Pascal",
+    "quote": "Le cœur a ses raisons que la raison ne connaît point.",
+    "id": 985
+  },
+  {
+    "author": "Spinoza",
+    "quote": "Le désir est l'essence même de l'homme.",
+    "id": 986
+  },
+  {
+    "author": "Voltaire",
+    "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses.",
+    "id": 987
+  },
+  {
+    "author": "Rousseau",
+    "quote": "L'homme est né libre, et partout il est dans les fers.",
+    "id": 988
+  },
+  {
+    "author": "Kant",
+    "quote": "La science est un savoir organisé.",
+    "id": 989
+  },
+  {
+    "author": "Hegel",
+    "quote": "Rien de grand ne s'est accompli dans le monde sans passion.",
+    "id": 990
+  },
+  {
+    "author": "Schopenhauer",
+    "quote": "Le destin mélange les cartes, mais c'est nous qui jouons.",
+    "id": 991
+  },
+  {
+    "author": "Nietzsche",
+    "quote": "Deviens ce que tu es.",
+    "id": 992
+  },
+  {
+    "author": "Kierkegaard",
+    "quote": "La vie doit être vécue en regardant en avant.",
+    "id": 993
+  },
+  {
+    "author": "Marx",
+    "quote": "Il s'agit maintenant de transformer le monde.",
+    "id": 994
+  },
+  {
+    "author": "Sartre",
+    "quote": "L'existence précède l'essence.",
+    "id": 995
+  },
+  {
+    "author": "Camus",
+    "quote": "Créer, c'est vivre deux fois.",
+    "id": 996
+  },
+  {
+    "author": "Simone de Beauvoir",
+    "quote": "On ne naît pas femme : on le devient.",
+    "id": 997
+  },
+  {
+    "author": "Michel Foucault",
+    "quote": "Là où il y a pouvoir, il y a résistance.",
+    "id": 998
+  },
+  {
+    "author": "Hannah Arendt",
+    "quote": "Le pardon est la clé de l'action humaine.",
+    "id": 999
+  },
+  {
+    "author": "Montaigne",
+    "quote": "Parce que c'était lui, parce que c'était moi.",
+    "id": 1000
+  }
+]
