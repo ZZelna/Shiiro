@@ -3,9 +3,13 @@ require("dotenv").config();
 const fs = require("fs");
 const mongoose = require("mongoose");
 const Stats = require("./systems/stats");
-const { Client, GatewayIntentBits,
-       ActivityType, 
-       EmbedBuilder
+const {
+    Client,
+    GatewayIntentBits,
+    ActivityType,
+    EmbedBuilder,
+    REST,
+    Routes
 } = require("discord.js");
 
 const config = require("./config.json");
@@ -46,7 +50,7 @@ for (const folder of commandFolders) {
     }
 }
 
-client.once("clientReady", () => {
+client.once("clientReady", async () => {
 
     console.log(`✅ ${client.user.tag} est connecté !`);
 
@@ -61,29 +65,49 @@ client.once("clientReady", () => {
         status: "online"
     });
 
+    const commands = [];
+
+    for (const file of slashCommands) {
+
+        const command =
+            require(`./slashCommands/${file}`);
+
+        commands.push(
+            command.data.toJSON()
+        );
+    }
+
+    const rest = new REST({
+        version: "10"
+    }).setToken(
+        process.env.DISCORD_TOKEN
+    );
+
+    try {
+
+        await rest.put(
+            Routes.applicationCommands(
+                client.user.id
+            ),
+            {
+                body: commands
+            }
+        );
+
+        console.log(
+            "✅ Slash commands enregistrées"
+        );
+
+    } catch (err) {
+
+        console.error(
+            "❌ Erreur slash commands :",
+            err
+        );
+
+    }
+
 });
-
-client.snipes = new Map();
-client.slashCommands = new Map();
-
-const slashCommands =
-    fs.readdirSync("./slashCommands")
-        .filter(file => file.endsWith(".js"));
-
-for (const file of slashCommands) {
-
-    const command =
-        require(`./slashCommands/${file}`);
-
-    client.slashCommands.set(
-        command.data.name,
-        command
-    );
-
-    console.log(
-        `✅ Slash chargée : ${command.data.name}`
-    );
-}
 client.on("messageDelete", async (message) => {
 
     if (!message.guild) return;
