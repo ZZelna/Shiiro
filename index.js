@@ -123,6 +123,7 @@ try {
     );
 
 }
+    });
 client.on("messageDelete", async (message) => {
 
     if (!message.guild) return;
