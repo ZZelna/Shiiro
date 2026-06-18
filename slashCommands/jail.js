@@ -46,28 +46,27 @@ module.exports = {
         const member =
             interaction.options.getMember(
                 "membre"
-            )
-            const protectedRoles = [
-    "1517238655444451520",
-    "1506674274826584284"
-];
-
-if (
-    member.roles.cache.some(role =>
-        protectedRoles.includes(role.id)
-    )
-) {
-    return interaction.reply({
-        content:
-            "❌ Impossible de jail cette personne.",
-        ephemeral: true
-    });
-}
+            );
 
         if (!member) {
             return interaction.reply({
                 content:
                     "❌ Membre introuvable.",
+                ephemeral: true
+            });
+        }
+
+        if (
+            member.roles.cache.has(
+                "1517238655444451520"
+            ) ||
+            member.roles.cache.has(
+                "1506674274826584284"
+            )
+        ) {
+            return interaction.reply({
+                content:
+                    "❌ Impossible de jail cette personne.",
                 ephemeral: true
             });
         }
@@ -133,29 +132,30 @@ if (
         await member.roles.set([
             prisonRole.id
         ]);
+
         const logChannel =
-    interaction.guild.channels.cache.get(
-        "1517254629820338227"
-    );
+            interaction.guild.channels.cache.get(
+                "1517254629820338227"
+            );
 
-if (logChannel) {
+        if (logChannel) {
 
-    const embed =
-        new EmbedBuilder()
-            .setColor("Red")
-            .setTitle("🔒 Jail")
-            .setDescription(
-                `${member} a été jail par ${interaction.user}`
-            )
-            .setTimestamp();
+            const embed =
+                new EmbedBuilder()
+                    .setColor("Red")
+                    .setTitle("🔒 Jail")
+                    .setDescription(
+                        `${member} a été jail par ${interaction.user}`
+                    )
+                    .setTimestamp();
 
-    logChannel.send({
-        embeds: [embed]
-    });
-}
+            await logChannel.send({
+                embeds: [embed]
+            });
+        }
 
         return interaction.reply(
-            `🔒 ${member} a été jail par ${interaction.user}`
+            `🔒 ${member} a été jail.`
         );
     }
 };
