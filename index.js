@@ -196,9 +196,31 @@ client.on(
     memberLeave
 );
 
-client.on("guildMemberAdd", antiAlt);
-client.on("guildMemberAdd", welcome);
+client.on("guildMemberAdd", async (member) => {
 
+    const allowedBots = [
+        "123456789012345678",
+        "987654321098765432"
+    ];
+
+    if (member.user.bot) {
+
+        if (!allowedBots.includes(member.id)) {
+            try {
+                await member.kick("Bot non autorisé");
+                console.log(`🤖 Bot expulsé : ${member.user.tag}`);
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        return;
+    }
+
+    antiAlt(member);
+    welcome(member);
+
+});
 
 const sticky = require("./events/sticky");
 
