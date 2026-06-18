@@ -13,7 +13,7 @@ client.on("messageCreate", async (message) => {
             description: "Quel pays correspond à ce drapeau ?",
             image: {
     url: `https://raw.githubusercontent.com/ZZelna/Shiiro/main/assets/flags/${random.image}`
-}
+},
             color: 0x3498db
         };
 
