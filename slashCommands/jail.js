@@ -123,9 +123,19 @@ module.exports = {
     );
 
 if (logChannel) {
-    logChannel.send(
-        `🔒 ${member.user.tag} a été jail par ${interaction.user.tag}`
-    );
+
+    const embed =
+        new EmbedBuilder()
+            .setColor("Red")
+            .setTitle("🔒 Jail")
+            .setDescription(
+                `${member} a été jail par ${interaction.user}`
+            )
+            .setTimestamp();
+
+    logChannel.send({
+        embeds: [embed]
+    });
 }
 
         return interaction.reply(
