@@ -1,42 +1,52 @@
 [
-  {
-    "author": "Socrate",
-    "quote": "Connais-toi toi-même."
-  },
-  {
-    "author": "Socrate",
-    "quote": "Je sais que je ne sais rien."
-  },
-  {
-    "author": "Platon",
-    "quote": "Le début est la moitié de tout."
-  },
-  {
-    "author": "Aristote",
-    "quote": "Le bonheur dépend de nous-mêmes."
-  },
-  {
-    "author": "Descartes",
-    "quote": "Je pense, donc je suis."
-  },
-  {
-    "author": "Voltaire",
-    "quote": "Le doute est un état désagréable, mais la certitude est ridicule."
-  },
-  {
-    "author": "Rousseau",
-    "quote": "L'homme est né libre, et partout il est dans les fers."
-  },
-  {
-    "author": "Nietzsche",
-    "quote": "Ce qui ne me tue pas me rend plus fort."
-  },
-  {
-    "author": "Kant",
-    "quote": "Agis uniquement d'après la maxime qui fait que tu peux vouloir en même temps qu'elle devienne une loi universelle."
-  },
-  {
-    "author": "Sénèque",
-    "quote": "Ce n'est pas parce que les choses sont difficiles que nous n'osons pas, c'est parce que nous n'osons pas qu'elles sont difficiles."
-  }
+  { "author": "Socrate", "quote": "Une vie sans examen ne vaut pas la peine d'être vécue." },
+  { "author": "Socrate", "quote": "Je sais que je ne sais rien." },
+  { "author": "Platon", "quote": "La nécessité est la mère de l'invention." },
+  { "author": "Platon", "quote": "Le courage consiste à savoir ce qu'il faut craindre." },
+  { "author": "Aristote", "quote": "Le bonheur dépend de nous-mêmes." },
+  { "author": "Aristote", "quote": "L'homme est par nature un animal politique." },
+  { "author": "Épicure", "quote": "Le plaisir est le commencement et la fin de la vie heureuse." },
+  { "author": "Épicure", "quote": "Il ne faut pas gâcher ce que l'on a en désirant ce que l'on n'a pas." },
+  { "author": "Sénèque", "quote": "La vie n'est pas courte, mais nous la rendons telle." },
+  { "author": "Sénèque", "quote": "Partout où il y a un être humain, il y a une occasion de faire preuve de bonté." },
+  { "author": "Marc Aurèle", "quote": "Notre vie est ce que nos pensées en font." },
+  { "author": "Marc Aurèle", "quote": "La meilleure vengeance est de ne pas ressembler à celui qui a commis l'injustice." },
+  { "author": "Confucius", "quote": "Choisissez un travail que vous aimez et vous n'aurez pas à travailler un seul jour de votre vie." },
+  { "author": "Confucius", "quote": "Celui qui déplace une montagne commence par déplacer de petites pierres." },
+  { "author": "Lao Tseu", "quote": "Un voyage de mille lieues commence toujours par un premier pas." },
+  { "author": "Lao Tseu", "quote": "Connaître les autres est intelligence ; se connaître soi-même est sagesse." },
+  { "author": "Descartes", "quote": "Je pense, donc je suis." },
+  { "author": "Descartes", "quote": "Le bon sens est la chose du monde la mieux partagée." },
+  { "author": "Pascal", "quote": "Le cœur a ses raisons que la raison ne connaît point." },
+  { "author": "Pascal", "quote": "L'homme n'est qu'un roseau, le plus faible de la nature, mais c'est un roseau pensant." },
+  { "author": "Spinoza", "quote": "Le désir est l'essence même de l'homme." },
+  { "author": "Spinoza", "quote": "La paix n'est pas l'absence de guerre, mais une vertu." },
+  { "author": "Voltaire", "quote": "Le doute est un état désagréable, mais la certitude est ridicule." },
+  { "author": "Voltaire", "quote": "Jugez un homme à ses questions plutôt qu'à ses réponses." },
+  { "author": "Rousseau", "quote": "L'homme est né libre, et partout il est dans les fers." },
+  { "author": "Rousseau", "quote": "La patience est amère, mais son fruit est doux." },
+  { "author": "Kant", "quote": "Agis de telle sorte que tu traites l'humanité toujours comme une fin et jamais simplement comme un moyen." },
+  { "author": "Kant", "quote": "La science est un savoir organisé." },
+  { "author": "Hegel", "quote": "Rien de grand ne s'est accompli dans le monde sans passion." },
+  { "author": "Hegel", "quote": "L'histoire nous enseigne que l'homme n'apprend rien de l'histoire." },
+  { "author": "Schopenhauer", "quote": "La richesse ressemble à l'eau de mer : plus on en boit, plus on a soif." },
+  { "author": "Schopenhauer", "quote": "Le destin mélange les cartes, mais c'est nous qui jouons." },
+  { "author": "Nietzsche", "quote": "Ce qui ne me tue pas me rend plus fort." },
+  { "author": "Nietzsche", "quote": "Deviens ce que tu es." },
+  { "author": "Nietzsche", "quote": "Sans musique, la vie serait une erreur." },
+  { "author": "Kierkegaard", "quote": "La vie ne peut être comprise qu'en regardant en arrière, mais elle doit être vécue en regardant en avant." },
+  { "author": "Marx", "quote": "Les philosophes n'ont fait qu'interpréter le monde ; il s'agit maintenant de le transformer." },
+  { "author": "Marx", "quote": "L'histoire de toute société jusqu'à nos jours est l'histoire de la lutte des classes." },
+  { "author": "Sartre", "quote": "L'homme est condamné à être libre." },
+  { "author": "Sartre", "quote": "L'existence précède l'essence." },
+  { "author": "Sartre", "quote": "Nous sommes nos choix." },
+  { "author": "Camus", "quote": "Au milieu de l'hiver, j'apprenais enfin qu'il y avait en moi un été invincible." },
+  { "author": "Camus", "quote": "La vraie générosité envers l'avenir consiste à tout donner au présent." },
+  { "author": "Camus", "quote": "Créer, c'est vivre deux fois." },
+  { "author": "Simone de Beauvoir", "quote": "On ne naît pas femme : on le devient." },
+  { "author": "Simone de Beauvoir", "quote": "Changer sa vie aujourd'hui, ne pas parier sur l'avenir." },
+  { "author": "Michel Foucault", "quote": "Le savoir est le pouvoir." },
+  { "author": "Michel Foucault", "quote": "Là où il y a pouvoir, il y a résistance." },
+  { "author": "Hannah Arendt", "quote": "Le pardon est la clé de l'action humaine." },
+  { "author": "Hannah Arendt", "quote": "La promesse est le remède à l'imprévisibilité de l'avenir." }
 ]
