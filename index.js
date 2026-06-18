@@ -86,53 +86,43 @@ client.once("clientReady", async () => {
         status: "online"
     });
 
-    const commands = [];
+  const commands = [];
 
-    client.slashCommands.forEach(command => {
+client.slashCommands.forEach(command => {
     commands.push(
         command.data.toJSON()
     );
 });
 
-        const command =
-            require(`./slashCommands/${file}`);
+const rest = new REST({
+    version: "10"
+}).setToken(
+    process.env.DISCORD_TOKEN
+);
 
-        commands.push(
-            command.data.toJSON()
-        );
-    }
+try {
 
-    const rest = new REST({
-        version: "10"
-    }).setToken(
-        process.env.DISCORD_TOKEN
+    await rest.put(
+        Routes.applicationCommands(
+            client.user.id
+        ),
+        {
+            body: commands
+        }
     );
 
-    try {
+    console.log(
+        "✅ Slash commands enregistrées"
+    );
 
-        await rest.put(
-            Routes.applicationCommands(
-                client.user.id
-            ),
-            {
-                body: commands
-            }
-        );
+} catch (err) {
 
-        console.log(
-            "✅ Slash commands enregistrées"
-        );
+    console.error(
+        "❌ Erreur slash commands :",
+        err
+    );
 
-    } catch (err) {
-
-        console.error(
-            "❌ Erreur slash commands :",
-            err
-        );
-
-    }
-
-});
+}
 client.on("messageDelete", async (message) => {
 
     if (!message.guild) return;
