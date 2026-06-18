@@ -1,9 +1,9 @@
 const flags = require("../../data/flags.json");
 
-client.on("messageCreate", async (message) => {
-    if (message.author.bot) return;
+module.exports = {
+    name: "guessflags",
 
-    if (message.content === ".guessflags") {
+    async run(message, args) {
 
         const random =
             flags[Math.floor(Math.random() * flags.length)];
@@ -12,8 +12,8 @@ client.on("messageCreate", async (message) => {
             title: "🌍 Guess The Flag",
             description: "Quel pays correspond à ce drapeau ?",
             image: {
-    url: `https://raw.githubusercontent.com/ZZelna/Shiiro/main/assets/flags/${random.image}`
-},
+                url: `https://raw.githubusercontent.com/ZZelna/Shiiro/main/assets/flags/${random.image}`
+            },
             color: 0x3498db
         };
 
@@ -54,4 +54,4 @@ client.on("messageCreate", async (message) => {
             }
         });
     }
-});
+};
