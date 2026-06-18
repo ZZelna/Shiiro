@@ -183,31 +183,23 @@ if (customRole) {
 });
 
 const interactionCreate = require("./events/interaction/interactionCreate");
+client.on("interactionCreate", async (interaction) => {
 
-client.on("interactionCreate", interactionCreate);
-
-if (!interaction.isChatInputCommand())
-
+    if (!interaction.isChatInputCommand())
         return;
 
     const command =
-
         client.slashCommands.get(
-
             interaction.commandName
-
         );
 
     if (!command)
-
         return;
 
     try {
 
         await command.execute(
-
             interaction
-
         );
 
     } catch (error) {
@@ -215,18 +207,12 @@ if (!interaction.isChatInputCommand())
         console.error(error);
 
         await interaction.reply({
-
             content:
-
                 "❌ Une erreur est survenue.",
-
             ephemeral: true
-
         }).catch(() => {});
-
     }
 });
-
 
 const antiAlt = require("./events/antiAlt");
 const voiceMoveLogs =
