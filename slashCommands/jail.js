@@ -116,6 +116,16 @@ module.exports = {
         await member.roles.set([
             prisonRole.id
         ]);
+        const logChannel =
+    interaction.guild.channels.cache.get(
+        "1517254629820338227"
+    );
+
+if (logChannel) {
+    logChannel.send(
+        `🔒 ${member.user.tag} a été jail par ${interaction.user.tag}`
+    );
+}
 
         return interaction.reply(
             `🔒 ${member} a été jail par ${interaction.user}`
