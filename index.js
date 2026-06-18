@@ -65,6 +65,7 @@ client.once("clientReady", () => {
 
 client.snipes = new Map();
 client.slashCommands = new Map();
+
 const slashCommands =
     fs.readdirSync("./slashCommands")
         .filter(file => file.endsWith(".js"));
@@ -78,8 +79,11 @@ for (const file of slashCommands) {
         command.data.name,
         command
     );
-}
 
+    console.log(
+        `✅ Slash chargée : ${command.data.name}`
+    );
+}
 client.on("messageDelete", async (message) => {
 
     if (!message.guild) return;
@@ -185,35 +189,40 @@ if (customRole) {
 const interactionCreate = require("./events/interaction/interactionCreate");
 client.on("interactionCreate", async (interaction) => {
 
-    if (!interaction.isChatInputCommand())
+    // Slash commands
+    if (interaction.isChatInputCommand()) {
+
+        const command =
+            client.slashCommands.get(
+                interaction.commandName
+            );
+
+        if (!command) return;
+
+        try {
+
+            await command.execute(
+                interaction
+            );
+
+        } catch (error) {
+
+            console.error(error);
+
+            await interaction.reply({
+                content:
+                    "❌ Une erreur est survenue.",
+                ephemeral: true
+            }).catch(() => {});
+        }
+
         return;
-
-    const command =
-        client.slashCommands.get(
-            interaction.commandName
-        );
-
-    if (!command)
-        return;
-
-    try {
-
-        await command.execute(
-            interaction
-        );
-
-    } catch (error) {
-
-        console.error(error);
-
-        await interaction.reply({
-            content:
-                "❌ Une erreur est survenue.",
-            ephemeral: true
-        }).catch(() => {});
     }
-});
 
+    // Boutons / Modals / Menus
+    interactionCreate(interaction);
+
+});
 const antiAlt = require("./events/antiAlt");
 const voiceMoveLogs =
 require("./events/voice/voiceMoveLogs");
