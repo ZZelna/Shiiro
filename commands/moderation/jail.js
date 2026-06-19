@@ -44,13 +44,15 @@ module.exports = {
     );
 }
         const member =
-            message.mentions.members.first() ||
-            message.guild.members.cache.get(args[0]);
+    message.mentions.members.first() ||
+    message.guild.members.cache.get(args[0]);
 
-        if (!member) {
-            return message.reply(
-                "❌ Utilisation : +jail @membre"
-            );
+if (!member) {
+    return message.reply(
+        "❌ Utilisation : +jail @membre"
+    );
+}
+
 if (
     member.roles.cache.has(
         "1506674274826584284"
@@ -60,11 +62,12 @@ if (
         "❌ Vous ne pouvez pas jail un Owner."
     );
 }
- if (member.id === message.author.id) {
-            return message.reply(
-                "❌ Vous ne pouvez pas vous jail."
-            );
-        }
+
+if (member.id === message.author.id) {
+    return message.reply(
+        "❌ Vous ne pouvez pas vous jail."
+    );
+}
 
         const prisonRole = message.guild.roles.cache.get(
             "1508842233619677306"
