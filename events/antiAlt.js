@@ -1,18 +1,17 @@
-const bypassData = require("../data/bypass.json");
-
 module.exports = async (member) => {
-const bypassRoles = [
-    "1507082580414173234", // Juge
-    "1506674274826584284"  // Fondateur
-];
 
-if (
-    member.roles.cache.some(role =>
-        bypassRoles.includes(role.id)
-    )
-) {
-    return;
-}
+    const bypassRoles = [
+        "1507082580414173234", // Juge
+        "1506674274826584284"  // Fondateur
+    ];
+
+    if (
+        member.roles.cache.some(role =>
+            bypassRoles.includes(role.id)
+        )
+    ) {
+        return;
+    }
 
     const sevenDays = 7 * 24 * 60 * 60 * 1000;
 
