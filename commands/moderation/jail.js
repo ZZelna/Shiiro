@@ -102,9 +102,13 @@ if (member.id === message.author.id) {
 
      try {
 
-    await member.roles.set([
-        prisonRole.id
-    ]);
+    const rolesToKeep = member.roles.cache
+    .filter(role => role.managed)
+    .map(role => role.id);
+
+rolesToKeep.push(prisonRole.id);
+
+await member.roles.set(rolesToKeep);
 
 } catch (err) {
 
