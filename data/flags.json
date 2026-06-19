@@ -165,7 +165,7 @@
   { "country": "Vietnam", "image": "vietnam.png" },
   { "country": "Yémen", "image": "yemen.png" },
   { "country": "Zambie", "image": "zambia.png" },
-  { "country": "Zimbabwe", "image": "zimbabwe.png" }
+  { "country": "Zimbabwe", "image": "zimbabwe.png" },
   { "country": "Palestine", "image": "palestine.png" },
   { "country": "Hong Kong", "image": "hong-kong.png" },
   { "country": "Macao", "image": "macao.png" },
@@ -177,7 +177,7 @@
   { "country": "Aruba", "image": "aruba.png" },
   { "country": "Curaçao", "image": "curacao.png" },
   { "country": "Saint-Martin", "image": "saint-martin.png" },
-  { "country": "Saint-Marin", "image": "sint-maareen.png" },
+  { "country": "Saint-Marin", "image": "saint-marin.png" },
   { "country": "Bermudes", "image": "bermuda.png" },
   { "country": "Îles Caïmans", "image": "cayman-islands.png" },
   { "country": "Îles Turques-et-Caïques", "image": "turks-and-caicos.png" },
