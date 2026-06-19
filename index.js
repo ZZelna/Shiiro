@@ -38,7 +38,7 @@ const client = new Client({
 client.commands = new Map();
 
 client.slashCommands = new Map();
-
+client.snipes = new Map();
 const slashCommands =
     fs.readdirSync("./slashCommands")
         .filter(file => file.endsWith(".js"));
