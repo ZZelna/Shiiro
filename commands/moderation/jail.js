@@ -100,9 +100,21 @@ if (member.id === message.author.id) {
     JSON.stringify(jailData, null, 4)
 );
 
-        await member.roles.set([
-            prisonRole.id
-        ]);
+     try {
+
+    await member.roles.set([
+        prisonRole.id
+    ]);
+
+} catch (err) {
+
+    console.log("ERREUR JAIL :", err);
+
+    return message.reply(
+        `❌ ${err.message}`
+    );
+
+}
 
         return message.channel.send(
             `🔒 ${member} a été **JAIL** par ${message.author}, veuillez le contacter pour être libéré.`
