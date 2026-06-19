@@ -51,21 +51,16 @@ module.exports = {
             return message.reply(
                 "❌ Utilisation : +jail @membre"
             );
-        }
-const ownerRole =
-    message.guild.roles.cache.get(
-        "1506674274826584284"
-    );
-
 if (
-    ownerRole &&
-    member.roles.highest.position >= ownerRole.position
+    member.roles.cache.has(
+        "1506674274826584284"
+    )
 ) {
     return message.reply(
-        "❌ Vous ne pouvez pas jail un Owner ou un membre supérieur."
+        "❌ Vous ne pouvez pas jail un Owner."
     );
 }
-        if (member.id === message.author.id) {
+ if (member.id === message.author.id) {
             return message.reply(
                 "❌ Vous ne pouvez pas vous jail."
             );
