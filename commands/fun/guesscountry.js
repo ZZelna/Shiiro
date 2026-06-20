@@ -1,6 +1,4 @@
-const {
-    EmbedBuilder
-} = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 const countries =
 require("../../data/countries.json");
@@ -9,7 +7,21 @@ module.exports = {
 
     name: "guesscountry",
 
-    async run(message) {
+    async run(message, args) {
+
+        const difficulties = [
+            "easy",
+            "medium",
+            "hard",
+            "extreme"
+        ];
+
+        const difficulty =
+            difficulties.includes(
+                args?.[0]?.toLowerCase()
+            )
+                ? args[0].toLowerCase()
+                : "medium";
 
         const question =
             countries[
@@ -18,6 +30,17 @@ module.exports = {
                     countries.length
                 )
             ];
+
+        if (
+            !question ||
+            !question[difficulty]
+        ) {
+
+            return message.reply(
+                "❌ Impossible de charger une question."
+            );
+
+        }
 
         const embed =
             new EmbedBuilder()
@@ -28,10 +51,18 @@ module.exports = {
                 "🌍 Guess Country"
             )
 
-            .setDescription(
-`📖 Description :
+            .addFields({
+                name:
+                    "📊 Difficulté",
+                value:
+                    difficulty.toUpperCase(),
+                inline: true
+            })
 
-${question.description}
+            .setDescription(
+`📖 Indice :
+
+${question[difficulty]}
 
 ⏱️ Vous avez 30 secondes !`
             );
@@ -52,27 +83,40 @@ ${question.description}
             async m => {
 
                 if (
-                    m.content.toLowerCase() ===
-                    question.country.toLowerCase()
+                    m.content
+                        .toLowerCase()
+                        .trim() ===
+                    question.country
+                        .toLowerCase()
                 ) {
+
+                    collector.stop(
+                        "found"
+                    );
 
                     await message.channel.send({
                         embeds: [
                             new EmbedBuilder()
-                            .setColor("#57F287")
+
+                            .setColor(
+                                "#57F287"
+                            )
+
                             .setTitle(
                                 "✅ Bonne réponse"
                             )
+
                             .setDescription(
 `${m.author} a trouvé !
 
 🌍 Pays :
-**${question.country}**`
+**${question.country}**
+
+📊 Difficulté :
+**${difficulty.toUpperCase()}**`
                             )
                         ]
                     });
-
-                    collector.stop();
 
                 }
 
@@ -91,14 +135,22 @@ ${question.description}
                     await message.channel.send({
                         embeds: [
                             new EmbedBuilder()
-                            .setColor("#ED4245")
+
+                            .setColor(
+                                "#ED4245"
+                            )
+
                             .setTitle(
                                 "⏰ Temps écoulé"
                             )
+
                             .setDescription(
 `🌍 Réponse :
 
-**${question.country}**`
+**${question.country}**
+
+📊 Difficulté :
+**${difficulty.toUpperCase()}**`
                             )
                         ]
                     });
