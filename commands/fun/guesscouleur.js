@@ -14,8 +14,11 @@ module.exports = {
     description:
         "Deviner une couleur",
 
+    module.exports = {
+    name: "guesscouleur",
+    description: "Deviner une couleur",
+
     run: async (
-        client,
         message,
         args
     ) => {
