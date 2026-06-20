@@ -1,14 +1,15 @@
 {
-  "name": " [+] Gestion ",
+  "name": "[+] Gestion",
   "version": "1.0.0",
-  "description": "Bot Discord gestion uhq by Zzelna ",
+  "description": "Bot Discord gestion uhq by Zzelna",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-"dependencies": {
-  "discord.js": "^14.21.0",
-  "dotenv": "^16.4.5",
-  "mongoose": "^8.15.0"
-}
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.80",
+    "discord.js": "^14.21.0",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.15.0"
   }
+}
