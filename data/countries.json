@@ -1,802 +1,1121 @@
 [
   {
     "country": "France",
-    "description": "Je suis une puissance culturelle européenne réputée pour mon influence artistique et gastronomique."
-  },
-  {
-    "country": "Japon",
-    "description": "Je suis un archipel où la technologie avancée côtoie des traditions millénaires."
-  },
-  {
-    "country": "Brésil",
-    "description": "Je possède la plus vaste forêt tropicale de la planète."
-  },
-  {
-    "country": "Canada",
-    "description": "Mon territoire immense est associé à une feuille devenue symbole national."
-  },
-  {
-    "country": "Égypte",
-    "description": "Un fleuve vital traverse mes terres majoritairement désertiques."
+    "easy": "Je suis connu pour ma gastronomie et un célèbre monument métallique.",
+    "medium": "Mon territoire métropolitain est souvent comparé à un hexagone.",
+    "hard": "Je possède le plus grand nombre de fuseaux horaires grâce à mes territoires ultramarins.",
+    "extreme": "Ma langue est officielle dans des dizaines d'États répartis sur plusieurs continents."
   },
   {
     "country": "Allemagne",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis réputé pour mes voitures et mes châteaux.",
+    "medium": "Je suis l'économie la plus importante de l'Union européenne.",
+    "hard": "J'ai été séparé en deux États durant une partie du XXe siècle.",
+    "extreme": "Mon modèle fédéral repose sur seize entités disposant de compétences propres."
   },
   {
     "country": "Espagne",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour le flamenco et la paella.",
+    "medium": "Je partage une péninsule avec un seul autre pays européen.",
+    "hard": "Je possède deux enclaves situées sur le continent africain.",
+    "extreme": "Plusieurs langues régionales y bénéficient d'un statut officiel selon les territoires."
   },
   {
     "country": "Italie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis célèbre pour les pizzas et les pâtes.",
+    "medium": "Ma forme est souvent comparée à une botte.",
+    "hard": "Deux micro-États sont entièrement enclavés dans mon territoire.",
+    "extreme": "Je possède le plus grand nombre de sites classés au patrimoine mondial de l'UNESCO."
   },
   {
     "country": "Portugal",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour mes explorateurs et mes pastéis.",
+    "medium": "Je suis le pays le plus occidental d'Europe continentale.",
+    "hard": "J'ai autrefois contrôlé un immense empire maritime.",
+    "extreme": "Mon archipel atlantique est un point stratégique entre trois plaques tectoniques."
   },
   {
     "country": "Belgique",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour les frites, le chocolat et les gaufres.",
+    "medium": "Ma capitale accueille plusieurs institutions européennes.",
+    "hard": "Je possède trois langues officielles.",
+    "extreme": "Mon organisation politique est l'une des plus complexes du monde occidental."
   },
   {
     "country": "Pays-Bas",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour les tulipes et les moulins.",
+    "medium": "Une partie importante de mon territoire se situe sous le niveau de la mer.",
+    "hard": "J'ai développé un vaste système de polders.",
+    "extreme": "Ma gestion de l'eau est souvent étudiée comme référence mondiale."
   },
   {
     "country": "Suisse",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour le chocolat et les montagnes.",
+    "medium": "Je suis réputé pour ma neutralité.",
+    "hard": "Je possède quatre langues nationales.",
+    "extreme": "Mon système politique repose fortement sur la démocratie directe."
   },
   {
     "country": "Autriche",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis associé à Mozart et aux Alpes.",
+    "medium": "Ma capitale fut le centre d'un puissant empire européen.",
+    "hard": "Je partage mon nom avec une ancienne dynastie influente.",
+    "extreme": "Mon territoire constitue historiquement un carrefour entre Europe occidentale et orientale."
   },
   {
-    "country": "Pologne",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Royaume-Uni",
+    "easy": "Je suis connu pour la monarchie et le thé.",
+    "medium": "Je suis composé de plusieurs nations.",
+    "hard": "Je possédais autrefois le plus vaste empire de l'histoire moderne.",
+    "extreme": "Mon système juridique a fortement influencé celui de nombreux États."
   },
-  {
-    "country": "Grèce",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
-  },
-  {
+   {
     "country": "Irlande",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
-  },
-  {
-    "country": "Norvège",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
-  },
-  {
-    "country": "Suède",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
-  },
-  {
-    "country": "Finlande",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
-  },
-  {
-    "country": "Danemark",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis associé aux trèfles et à une grande fête verte célébrée dans le monde entier.",
+    "medium": "Je partage une île avec une autre entité politique du Royaume-Uni.",
+    "hard": "Ma langue nationale historique est d'origine celtique.",
+    "extreme": "Mon essor économique rapide m'a valu un surnom lié à un félin."
   },
   {
     "country": "Islande",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour mes volcans et mes geysers.",
+    "medium": "Je suis une île située entre l'Europe et l'Amérique du Nord.",
+    "hard": "Mon parlement est considéré comme l'un des plus anciens du monde.",
+    "extreme": "Mon territoire repose directement sur une dorsale océanique."
+  },
+  {
+    "country": "Norvège",
+    "easy": "Je suis célèbre pour mes fjords.",
+    "medium": "Je suis l'un des principaux producteurs européens d'hydrocarbures.",
+    "hard": "Mon fonds souverain est l'un des plus importants du monde.",
+    "extreme": "Mon littoral extrêmement découpé dépasse largement celui de nombreux pays plus vastes."
+  },
+  {
+    "country": "Suède",
+    "easy": "Je suis connu pour une célèbre marque de meubles à monter soi-même.",
+    "medium": "Je suis le plus vaste pays scandinave.",
+    "hard": "Je suis resté neutre durant les deux guerres mondiales.",
+    "extreme": "Mon modèle social est souvent cité dans les comparaisons internationales."
+  },
+  {
+    "country": "Finlande",
+    "easy": "Je suis souvent associé au Père Noël.",
+    "medium": "Je possède des milliers de lacs.",
+    "hard": "Ma langue appartient à une famille très différente de la majorité des langues européennes.",
+    "extreme": "Je suis régulièrement classé parmi les pays les plus heureux du monde."
+  },
+  {
+    "country": "Danemark",
+    "easy": "Je suis le pays d'une célèbre marque de briques de construction.",
+    "medium": "Je contrôle le Groenland malgré la distance.",
+    "hard": "Je relie l'Europe continentale à la Scandinavie.",
+    "extreme": "Mon territoire est composé de centaines d'îles."
+  },
+  {
+    "country": "Pologne",
+    "easy": "Je suis connu pour Cracovie et Varsovie.",
+    "medium": "Je suis l'un des pays les plus peuplés d'Europe centrale.",
+    "hard": "J'ai disparu des cartes pendant plus d'un siècle.",
+    "extreme": "Mon histoire est marquée par plusieurs partages entre puissances voisines."
+  },
+  {
+    "country": "République tchèque",
+    "easy": "Je suis célèbre pour Prague.",
+    "medium": "Je suis né de la séparation pacifique d'un État fédéral.",
+    "hard": "Je suis l'un des plus grands consommateurs de bière par habitant.",
+    "extreme": "Mon nom officiel court a longtemps fait débat à l'international."
+  },
+  {
+    "country": "Slovaquie",
+    "easy": "Je partage une histoire récente avec mon voisin occidental.",
+    "medium": "Je possède les montagnes des Tatras.",
+    "hard": "Ma capitale est située près de deux autres capitales nationales.",
+    "extreme": "Je suis né pacifiquement d'une dissolution étatique en 1993."
+  },
+  {
+    "country": "Hongrie",
+    "easy": "Je suis connu pour Budapest.",
+    "medium": "Je suis traversé par le Danube.",
+    "hard": "Ma langue n'appartient pas à la famille indo-européenne.",
+    "extreme": "Mon peuple est arrivé en Europe centrale à la fin du premier millénaire."
+  },
+  {
+    "country": "Roumanie",
+    "easy": "Je suis associé à Dracula.",
+    "medium": "Je possède une région célèbre appelée Transylvanie.",
+    "hard": "Ma langue est d'origine latine malgré ma position géographique.",
+    "extreme": "Je suis l'un des rares États d'Europe orientale à parler une langue romane."
+  },
+  {
+    "country": "Bulgarie",
+    "easy": "Je suis situé au bord de la mer Noire.",
+    "medium": "J'utilise l'alphabet cyrillique.",
+    "hard": "Je suis considéré comme l'un des plus anciens États européens encore existants.",
+    "extreme": "Mon territoire fut le cœur d'un puissant empire médiéval des Balkans."
+  },
+  {
+    "country": "Grèce",
+    "easy": "Je suis le berceau des Jeux olympiques.",
+    "medium": "Je possède des milliers d'îles.",
+    "hard": "Je suis considéré comme le berceau de la démocratie occidentale.",
+    "extreme": "Mon héritage antique influence encore fortement les institutions modernes."
+  },
+  {
+    "country": "Croatie",
+    "easy": "Je possède un littoral très touristique sur l'Adriatique.",
+    "medium": "Je suis récemment entré dans la zone euro.",
+    "hard": "Mon territoire forme une sorte de croissant.",
+    "extreme": "Mon littoral comprend plus d'un millier d'îles et îlots."
+  },
+  {
+    "country": "Serbie",
+    "easy": "Je suis situé dans les Balkans.",
+    "medium": "Je ne possède aucun accès à la mer.",
+    "hard": "J'étais au cœur d'une fédération disparue à la fin du XXe siècle.",
+    "extreme": "Mon histoire récente est marquée par plusieurs conflits liés à des sécessions."
+  },
+{
+    "country": "Slovénie",
+    "easy": "Je possède un petit accès à l'Adriatique.",
+    "medium": "Je suis souvent considéré comme le pays le plus développé des Balkans.",
+    "hard": "Mon nom contient le mot slave désignant les peuples slaves.",
+    "extreme": "Je fus le premier État à quitter une fédération balkanique dans les années 1990."
+  },
+  {
+    "country": "Bosnie-Herzégovine",
+    "easy": "Je suis connu pour Mostar et son célèbre pont.",
+    "medium": "Mon territoire est partagé entre plusieurs entités administratives.",
+    "hard": "Ma guerre des années 1990 a profondément marqué l'Europe.",
+    "extreme": "Mon système institutionnel résulte directement d'accords internationaux signés dans l'Ohio."
+  },
+  {
+    "country": "Monténégro",
+    "easy": "Mon nom signifie littéralement 'montagne noire'.",
+    "medium": "Je possède un magnifique fjord méditerranéen.",
+    "hard": "Je suis devenu indépendant au XXIe siècle.",
+    "extreme": "Je fais partie des plus jeunes États souverains d'Europe."
+  },
+  {
+    "country": "Macédoine du Nord",
+    "easy": "Je suis un pays enclavé des Balkans.",
+    "medium": "Mon nom a longtemps fait l'objet d'un différend diplomatique.",
+    "hard": "J'ai changé officiellement de nom récemment.",
+    "extreme": "Mon adhésion à certaines organisations internationales dépendait d'un accord sur mon identité nationale."
+  },
+  {
+    "country": "Albanie",
+    "easy": "Je suis situé sur la mer Adriatique.",
+    "medium": "Je suis connu pour mes bunkers construits au XXe siècle.",
+    "hard": "Ma langue constitue une branche unique des langues indo-européennes.",
+    "extreme": "Mon isolement politique durant la guerre froide fut l'un des plus extrêmes du continent."
+  },
+  {
+    "country": "Kosovo",
+    "easy": "Je suis un jeune État des Balkans.",
+    "medium": "Mon indépendance n'est pas reconnue par tous les pays.",
+    "hard": "Je suis au centre d'un différend territorial majeur en Europe.",
+    "extreme": "Mon statut international reste débattu malgré de nombreuses reconnaissances diplomatiques."
+  },
+  {
+    "country": "Estonie",
+    "easy": "Je suis l'un des trois États baltes.",
+    "medium": "Je suis réputé pour ma numérisation avancée.",
+    "hard": "Je propose le concept de e-résidence.",
+    "extreme": "Mon administration est souvent citée comme modèle mondial de gouvernance numérique."
+  },
+  {
+    "country": "Lettonie",
+    "easy": "Je suis situé sur la mer Baltique.",
+    "medium": "Je fais partie des trois États baltes.",
+    "hard": "Mon territoire est largement couvert de forêts.",
+    "extreme": "Mon histoire moderne est fortement liée aux occupations successives du XXe siècle."
+  },
+  {
+    "country": "Lituanie",
+    "easy": "Je suis le plus méridional des États baltes.",
+    "medium": "J'ai autrefois formé un immense État européen.",
+    "hard": "Mon union avec un royaume voisin fut l'une des plus puissantes du continent.",
+    "extreme": "Au Moyen Âge, mon territoire s'étendait jusqu'aux rives de la mer Noire."
+  },
+  {
+    "country": "Biélorussie",
+    "easy": "Je suis un pays d'Europe orientale sans accès à la mer.",
+    "medium": "Je suis l'un des alliés les plus proches de la Russie.",
+    "hard": "Mon nom signifie littéralement 'Russie blanche'.",
+    "extreme": "Je conserve plusieurs structures politiques héritées de l'époque soviétique."
+  },
+  {
+    "country": "Moldavie",
+    "easy": "Je suis un petit pays entre deux grands voisins.",
+    "medium": "Je suis réputé pour ma production viticole.",
+    "hard": "Une région séparatiste est présente sur mon territoire.",
+    "extreme": "Mon avenir géopolitique oscille entre plusieurs sphères d'influence."
   },
   {
     "country": "Ukraine",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
-  },
-  {
-    "country": "Turquie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis l'un des plus grands pays d'Europe.",
+    "medium": "Je possède de vastes plaines agricoles.",
+    "hard": "Mon territoire est au cœur d'un conflit majeur du XXIe siècle.",
+    "extreme": "Je suis souvent décrit comme un pivot géopolitique entre plusieurs mondes."
   },
   {
     "country": "Russie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis le plus vaste pays du monde.",
+    "medium": "Je m'étends sur deux continents.",
+    "hard": "Je couvre onze fuseaux horaires.",
+    "extreme": "Ma superficie dépasse celle de plusieurs continents pris individuellement."
   },
   {
-    "country": "Maroc",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Géorgie",
+    "easy": "Je suis situé dans le Caucase.",
+    "medium": "Mon alphabet est unique au monde.",
+    "hard": "Je suis considéré comme l'un des berceaux du vin.",
+    "extreme": "Mon écriture ne ressemble à aucune autre utilisée aujourd'hui."
   },
   {
-    "country": "Algérie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Arménie",
+    "easy": "Je suis un pays montagneux du Caucase.",
+    "medium": "Je fus le premier État à adopter officiellement le christianisme.",
+    "hard": "Mon symbole national est une montagne située hors de mes frontières actuelles.",
+    "extreme": "Mon identité historique reste profondément liée à un sommet visible depuis ma capitale mais situé dans un autre pays."
   },
   {
-    "country": "Tunisie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Azerbaïdjan",
+    "easy": "Je suis situé entre mer et montagnes.",
+    "medium": "Je suis riche en hydrocarbures.",
+    "hard": "Je suis parfois surnommé le pays du feu.",
+    "extreme": "Des phénomènes naturels liés au gaz ont fortement influencé mon identité culturelle."
+  },
+    {
+    "country": "Turquie",
+    "easy": "Je suis situé entre deux continents.",
+    "medium": "Une de mes villes est traversée par un détroit stratégique.",
+    "hard": "Je contrôle l'accès entre deux mers majeures.",
+    "extreme": "Mon territoire constitue depuis des siècles un pont géopolitique entre plusieurs civilisations."
   },
   {
-    "country": "Libye",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Chypre",
+    "easy": "Je suis une île de la Méditerranée orientale.",
+    "medium": "Mon territoire est divisé depuis plusieurs décennies.",
+    "hard": "Je possède une ligne de séparation surveillée par l'ONU.",
+    "extreme": "Mon statut politique reste marqué par un conflit gelé du XXe siècle."
   },
   {
-    "country": "Sénégal",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Israël",
+    "easy": "Je suis situé sur la côte orientale de la Méditerranée.",
+    "medium": "Je possède une importante industrie technologique.",
+    "hard": "Je suis souvent surnommé la 'Start-Up Nation'.",
+    "extreme": "Mon existence moderne résulte d'un projet national concrétisé au milieu du XXe siècle."
   },
   {
-    "country": "Mali",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Palestine",
+    "easy": "Mon statut international est partiellement reconnu.",
+    "medium": "Mon territoire est fragmenté en plusieurs zones.",
+    "hard": "Je suis au cœur d'un des conflits les plus médiatisés du monde.",
+    "extreme": "Ma souveraineté fait l'objet de débats diplomatiques depuis des décennies."
   },
   {
-    "country": "Nigeria",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Liban",
+    "easy": "Je suis connu pour mes cèdres.",
+    "medium": "Je possède un littoral méditerranéen relativement court.",
+    "hard": "Mon système politique repose sur un partage confessionnel du pouvoir.",
+    "extreme": "Ma diversité religieuse influence directement mes institutions."
   },
   {
-    "country": "Kenya",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Jordanie",
+    "easy": "Je possède un célèbre site antique creusé dans la roche.",
+    "medium": "Une partie de mon territoire est désertique.",
+    "hard": "Je suis l'un des pays les plus pauvres en eau du monde.",
+    "extreme": "Ma stabilité régionale contraste fortement avec celle de plusieurs voisins."
   },
   {
-    "country": "Éthiopie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Arabie saoudite",
+    "easy": "Je possède les lieux les plus sacrés de l'islam.",
+    "medium": "Je suis l'un des plus grands producteurs de pétrole.",
+    "hard": "Une grande partie de mon territoire est couverte de désert.",
+    "extreme": "Mon économie s'est historiquement construite autour d'une ressource énergétique stratégique."
   },
   {
-    "country": "Afrique du Sud",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Qatar",
+    "easy": "Je suis une petite péninsule du Golfe.",
+    "medium": "J'ai accueilli une Coupe du Monde récente.",
+    "hard": "Je possède l'un des PIB par habitant les plus élevés.",
+    "extreme": "Mon influence internationale dépasse largement ma taille géographique."
   },
   {
-    "country": "Australie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Émirats arabes unis",
+    "easy": "Je suis connu pour mes gratte-ciel géants.",
+    "medium": "Je suis une fédération de plusieurs émirats.",
+    "hard": "Mon économie s'est fortement diversifiée au-delà du pétrole.",
+    "extreme": "Je suis devenu un hub mondial du transport aérien et des affaires."
   },
   {
-    "country": "Nouvelle-Zélande",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Oman",
+    "easy": "Je suis situé à l'entrée du Golfe.",
+    "medium": "Je possède un long littoral stratégique.",
+    "hard": "Mon histoire est liée au commerce maritime de l'océan Indien.",
+    "extreme": "J'ai longtemps exercé une influence régionale grâce à ma puissance navale."
   },
   {
-    "country": "Chine",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Yémen",
+    "easy": "Je suis situé à l'extrémité sud-ouest de la péninsule Arabique.",
+    "medium": "Mon territoire contrôle un passage maritime majeur.",
+    "hard": "Je traverse une crise humanitaire importante.",
+    "extreme": "Ma position géographique me place sur l'une des routes commerciales les plus sensibles du monde."
   },
   {
+    "country": "Kazakhstan",
+    "easy": "Je suis un immense pays d'Asie centrale.",
+    "medium": "Je suis le plus grand État enclavé du monde.",
+    "hard": "Je possède un célèbre cosmodrome utilisé depuis l'époque soviétique.",
+    "extreme": "Ma superficie dépasse celle de toute l'Europe occidentale."
+  },
+  {
+    "country": "Ouzbékistan",
+    "easy": "Je suis connu pour les anciennes cités de la Route de la Soie.",
+    "medium": "Je suis enclavé au cœur de l'Asie centrale.",
+    "hard": "Je possède certaines des villes les plus célèbres du commerce médiéval.",
+    "extreme": "Mon histoire est profondément liée aux échanges entre Orient et Occident."
+  },
+  {
+    "country": "Turkménistan",
+    "easy": "Je possède de vastes déserts.",
+    "medium": "Je suis riche en gaz naturel.",
+    "hard": "Je suis connu pour une immense porte de feu dans le désert.",
+    "extreme": "Mon régime politique est l'un des plus fermés au monde."
+  },
+  {
+    "country": "Kirghizistan",
+    "easy": "Je suis un pays très montagneux.",
+    "medium": "Mes paysages sont dominés par les Tian Shan.",
+    "hard": "Je possède un immense lac d'altitude qui ne gèle presque jamais.",
+    "extreme": "Mon relief fait de moi l'un des États les plus élevés d'Asie centrale."
+  },
+  {
+    "country": "Tadjikistan",
+    "easy": "Je suis situé au cœur de hautes montagnes.",
+    "medium": "Je possède certains des sommets les plus élevés de l'ex-URSS.",
+    "hard": "Une grande partie de mon territoire appartient au Pamir.",
+    "extreme": "Ma géographie extrême limite fortement les terres habitables."
+  },
+ {
     "country": "Inde",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis l'un des pays les plus peuplés du monde.",
+    "medium": "Je possède une immense diversité linguistique et culturelle.",
+    "hard": "Je suis le berceau de plusieurs religions majeures.",
+    "extreme": "Mon influence historique s'étend de l'océan Indien aux grandes routes commerciales asiatiques."
   },
   {
     "country": "Pakistan",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis situé en Asie du Sud.",
+    "medium": "Je possède certains des plus hauts sommets du monde.",
+    "hard": "Je contrôle une partie du Karakoram.",
+    "extreme": "Mon territoire relie historiquement l'Asie centrale au sous-continent indien."
   },
   {
     "country": "Bangladesh",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis traversé par de nombreux fleuves.",
+    "medium": "Je possède l'une des plus fortes densités de population du monde.",
+    "hard": "Mon territoire forme l'un des plus grands deltas de la planète.",
+    "extreme": "Ma géographie me rend particulièrement vulnérable aux inondations."
   },
   {
-    "country": "Thaïlande",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Népal",
+    "easy": "Je suis un pays montagneux d'Asie.",
+    "medium": "Je possède le plus haut sommet du monde.",
+    "hard": "Je suis enclavé entre deux géants démographiques.",
+    "extreme": "Mon territoire concentre plusieurs des plus hauts sommets de la planète."
   },
   {
-    "country": "Vietnam",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Bhoutan",
+    "easy": "Je suis un petit royaume himalayen.",
+    "medium": "Je mesure le bonheur de ma population d'une manière particulière.",
+    "hard": "Mon indicateur le plus célèbre n'est pas économique.",
+    "extreme": "Je privilégie le Bonheur National Brut plutôt que la seule croissance économique."
   },
   {
-    "country": "Indonésie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Sri Lanka",
+    "easy": "Je suis une île située au sud de l'Asie.",
+    "medium": "Je suis connu pour mon thé.",
+    "hard": "Mon histoire est liée aux routes maritimes de l'océan Indien.",
+    "extreme": "Ma position stratégique m'a placé au cœur du commerce maritime pendant des siècles."
   },
   {
-    "country": "Philippines",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Maldives",
+    "easy": "Je suis composé de nombreuses îles tropicales.",
+    "medium": "Je possède certains des atolls les plus célèbres du monde.",
+    "hard": "Je suis l'un des pays les plus bas en altitude.",
+    "extreme": "Le changement climatique représente une menace existentielle pour mon territoire."
   },
   {
-    "country": "Malaisie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Afghanistan",
+    "easy": "Je suis un pays montagneux d'Asie.",
+    "medium": "Je suis traversé par une célèbre chaîne de montagnes.",
+    "hard": "Mon histoire est marquée par de nombreuses invasions.",
+    "extreme": "Ma position géographique a fait de moi un carrefour stratégique entre plusieurs empires."
   },
   {
-    "country": "Singapour",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Iran",
+    "easy": "Je suis l'un des plus grands pays du Moyen-Orient.",
+    "medium": "Je possède une civilisation très ancienne.",
+    "hard": "Mon territoire fut le cœur de plusieurs empires influents.",
+    "extreme": "Mon héritage historique remonte à l'une des plus anciennes puissances du monde antique."
+  },
+  {
+    "country": "Irak",
+    "easy": "Je suis situé entre deux grands fleuves.",
+    "medium": "Je fais partie du Croissant fertile.",
+    "hard": "Je suis considéré comme l'un des berceaux de la civilisation.",
+    "extreme": "Les premières grandes villes de l'humanité sont apparues sur mon territoire."
+  },
+  {
+    "country": "Syrie",
+    "easy": "Je suis situé sur la Méditerranée orientale.",
+    "medium": "Je possède certaines des plus anciennes villes habitées du monde.",
+    "hard": "Mon histoire moderne a été marquée par une guerre prolongée.",
+    "extreme": "Mon territoire a vu se succéder de nombreuses civilisations depuis l'Antiquité."
+  },
+  {
+    "country": "Mongolie",
+    "easy": "Je suis connu pour mes vastes steppes.",
+    "medium": "Je suis l'un des pays les moins densément peuplés du monde.",
+    "hard": "Mon histoire est associée à un immense empire nomade.",
+    "extreme": "Au XIIIe siècle, mes cavaliers ont fondé le plus grand empire contigu de l'histoire."
+  },
+  {
+    "country": "Myanmar",
+    "easy": "Je suis un pays d'Asie du Sud-Est.",
+    "medium": "Je possède de nombreux temples dorés.",
+    "hard": "Mon nom officiel a changé au cours de l'histoire récente.",
+    "extreme": "Mon patrimoine religieux est dominé par d'immenses complexes bouddhistes."
+  },
+  {
+    "country": "Laos",
+    "easy": "Je suis un pays enclavé d'Asie du Sud-Est.",
+    "medium": "Je suis traversé par un grand fleuve régional.",
+    "hard": "Je suis l'un des rares pays communistes encore existants.",
+    "extreme": "Mon économie et ma culture sont profondément liées au Mékong."
+  },
+  {
+    "country": "Cambodge",
+    "easy": "Je possède un célèbre complexe de temples.",
+    "medium": "Je suis situé dans la péninsule indochinoise.",
+    "hard": "Mon histoire récente fut marquée par l'un des régimes les plus meurtriers du XXe siècle.",
+    "extreme": "Je possède l'un des plus grands monuments religieux du monde."
+  },
+ {
+    "country": "Chine",
+    "easy": "Je suis le pays le plus peuplé d'Asie.",
+    "medium": "Je possède l'un des plus anciens États continus du monde.",
+    "hard": "Mon territoire est traversé par deux grands fleuves historiques.",
+    "extreme": "Ma civilisation écrite remonte à plus de trois millénaires."
+  },
+  {
+    "country": "Japon",
+    "easy": "Je suis un archipel asiatique.",
+    "medium": "Je suis connu pour les mangas et la technologie.",
+    "hard": "Mon territoire est situé sur plusieurs plaques tectoniques.",
+    "extreme": "Mon isolement historique a fortement façonné mon développement culturel."
   },
   {
     "country": "Corée du Sud",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis connu pour la K-Pop.",
+    "medium": "Mon économie repose fortement sur la technologie.",
+    "hard": "Je partage une péninsule divisée avec un autre État.",
+    "extreme": "Mon développement économique rapide est souvent qualifié de miracle."
   },
   {
     "country": "Corée du Nord",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je partage une péninsule avec mon voisin du sud.",
+    "medium": "Je suis l'un des pays les plus fermés du monde.",
+    "hard": "Mon régime repose sur une idéologie nationale spécifique.",
+    "extreme": "Ma politique d'autosuffisance constitue l'un des piliers de mon système."
+  },
+  {
+    "country": "Vietnam",
+    "easy": "Je suis un pays côtier d'Asie du Sud-Est.",
+    "medium": "Je suis connu pour mes rizières.",
+    "hard": "Mon histoire récente est marquée par un conflit majeur du XXe siècle.",
+    "extreme": "Ma réunification a profondément transformé la région."
+  },
+  {
+    "country": "Thaïlande",
+    "easy": "Je suis connu pour mes plages et mes temples.",
+    "medium": "Je suis le seul pays d'Asie du Sud-Est à ne pas avoir été colonisé.",
+    "hard": "Mon nom actuel est relativement récent à l'échelle historique.",
+    "extreme": "Mon indépendance a été préservée grâce à un subtil équilibre diplomatique."
+  },
+  {
+    "country": "Indonésie",
+    "easy": "Je suis composé de milliers d'îles.",
+    "medium": "Je suis le plus grand archipel du monde.",
+    "hard": "Je possède de nombreux volcans actifs.",
+    "extreme": "Ma diversité linguistique figure parmi les plus importantes de la planète."
+  },
+  {
+    "country": "Philippines",
+    "easy": "Je suis un archipel d'Asie.",
+    "medium": "Mon histoire est fortement liée à plusieurs puissances étrangères.",
+    "hard": "Je possède plus de 7000 îles.",
+    "extreme": "Ma culture résulte d'influences asiatiques, européennes et américaines."
+  },
+  {
+    "country": "Malaisie",
+    "easy": "Je suis connu pour mes forêts tropicales.",
+    "medium": "Mon territoire est divisé en deux parties séparées par la mer.",
+    "hard": "Je suis une fédération composée de plusieurs États.",
+    "extreme": "Ma géographie me place à proximité de l'un des détroits les plus stratégiques du monde."
+  },
+  {
+    "country": "Singapour",
+    "easy": "Je suis une cité-État asiatique.",
+    "medium": "Je possède l'un des ports les plus importants du monde.",
+    "hard": "Je suis devenu indépendant dans les années 1960.",
+    "extreme": "Ma prospérité repose largement sur ma position stratégique et le commerce mondial."
+  },
+  {
+    "country": "Brunei",
+    "easy": "Je suis un petit État riche d'Asie du Sud-Est.",
+    "medium": "Mon économie dépend fortement des hydrocarbures.",
+    "hard": "Je suis dirigé par un sultan.",
+    "extreme": "Mon niveau de vie élevé repose principalement sur une ressource naturelle exportée."
+  },
+  {
+    "country": "Timor oriental",
+    "easy": "Je suis l'un des plus jeunes États d'Asie.",
+    "medium": "Je partage une île avec un voisin beaucoup plus vaste.",
+    "hard": "Mon indépendance a été obtenue au XXIe siècle.",
+    "extreme": "Mon histoire récente est marquée par une longue lutte pour l'autodétermination."
+  },
+  {
+    "country": "Taïwan",
+    "easy": "Je suis une île d'Asie orientale.",
+    "medium": "Je suis un leader mondial dans les semi-conducteurs.",
+    "hard": "Mon statut international fait l'objet de débats.",
+    "extreme": "Mon importance économique dépasse largement ma superficie."
+  },
+  {
+    "country": "Hong Kong",
+    "easy": "Je suis un territoire très urbanisé d'Asie.",
+    "medium": "Je possède un système particulier hérité d'une histoire coloniale.",
+    "hard": "Je fonctionne selon le principe 'un pays, deux systèmes'.",
+    "extreme": "Mon rôle financier international reste majeur malgré ma faible superficie."
+  },
+  {
+    "country": "Macao",
+    "easy": "Je suis connu pour mes casinos.",
+    "medium": "J'ai été administré par une puissance européenne jusqu'à la fin du XXe siècle.",
+    "hard": "Mon économie dépend fortement du tourisme et des jeux.",
+    "extreme": "Je suis l'une des régions les plus densément peuplées du monde."
+  },
+  {
+    "country": "Maroc",
+    "easy": "Je suis situé au nord-ouest de l'Afrique.",
+    "medium": "Je suis séparé de l'Europe par un détroit célèbre.",
+    "hard": "Mon territoire comprend une chaîne de montagnes appelée Atlas.",
+    "extreme": "Je constitue depuis des siècles un carrefour entre l'Afrique, l'Europe et le monde arabe."
+  },
+  {
+    "country": "Algérie",
+    "easy": "Je suis le plus grand pays d'Afrique.",
+    "medium": "Une grande partie de mon territoire est désertique.",
+    "hard": "Je possède l'une des plus importantes réserves de gaz naturel du continent.",
+    "extreme": "Mon territoire couvre à lui seul une superficie supérieure à celle de plusieurs régions européennes réunies."
+  },
+  {
+    "country": "Tunisie",
+    "easy": "Je suis situé sur la côte méditerranéenne.",
+    "medium": "Mon nom est identique à celui de ma capitale.",
+    "hard": "Je suis considéré comme le point de départ du Printemps arabe.",
+    "extreme": "Mon histoire est intimement liée à l'une des plus grandes rivales de Rome."
+  },
+  {
+    "country": "Libye",
+    "easy": "Je suis situé en Afrique du Nord.",
+    "medium": "La majorité de mon territoire est couverte par le Sahara.",
+    "hard": "Je possède d'importantes réserves pétrolières.",
+    "extreme": "Mon désert abrite certaines des températures les plus extrêmes jamais enregistrées."
+  },
+  {
+    "country": "Égypte",
+    "easy": "Je suis connu pour mes pyramides.",
+    "medium": "Un fleuve essentiel traverse mon territoire du sud au nord.",
+    "hard": "Ma civilisation antique est l'une des plus célèbres de l'histoire.",
+    "extreme": "Mon développement historique s'est concentré autour d'une étroite bande fertile entourée de désert."
+  },
+  {
+    "country": "Mauritanie",
+    "easy": "Je suis situé entre l'Afrique du Nord et l'Afrique de l'Ouest.",
+    "medium": "Une grande partie de mon territoire est désertique.",
+    "hard": "Je possède l'un des plus longs trains du monde.",
+    "extreme": "Mon économie est historiquement liée à l'exploitation minière dans des zones très isolées."
+  },
+  {
+    "country": "Mali",
+    "easy": "Je suis un vaste pays d'Afrique de l'Ouest.",
+    "medium": "Je possède une ville historique célèbre pour ses manuscrits.",
+    "hard": "Une grande partie de mon territoire est sahélienne.",
+    "extreme": "J'ai abrité plusieurs empires médiévaux parmi les plus riches de leur époque."
+  },
+  {
+    "country": "Sénégal",
+    "easy": "Je suis situé à l'extrémité occidentale de l'Afrique.",
+    "medium": "Je possède un célèbre lac aux teintes roses.",
+    "hard": "Mon territoire entoure presque entièrement un autre État.",
+    "extreme": "Ma position géographique en a fait un point stratégique pour les routes atlantiques."
+  },
+  {
+    "country": "Côte d'Ivoire",
+    "easy": "Je suis un important producteur agricole africain.",
+    "medium": "Je suis le premier producteur mondial de cacao.",
+    "hard": "Ma capitale politique est différente de ma plus grande ville.",
+    "extreme": "Mon économie repose largement sur une matière première essentielle à une industrie mondiale."
+  },
+  {
+    "country": "Ghana",
+    "easy": "Je suis un pays côtier d'Afrique de l'Ouest.",
+    "medium": "J'ai été le premier pays subsaharien à obtenir son indépendance au XXe siècle.",
+    "hard": "Je suis un important producteur d'or.",
+    "extreme": "Mon nom fait référence à un ancien empire qui ne se trouvait pas exactement sur mon territoire actuel."
+  },
+  {
+    "country": "Nigeria",
+    "easy": "Je suis le pays le plus peuplé d'Afrique.",
+    "medium": "Je possède l'une des plus grandes économies du continent.",
+    "hard": "Mon industrie cinématographique est l'une des plus productives du monde.",
+    "extreme": "Ma diversité ethnique et linguistique compte parmi les plus importantes de la planète."
+  },
+  {
+    "country": "Cameroun",
+    "easy": "Je suis situé en Afrique centrale.",
+    "medium": "On me surnomme parfois 'l'Afrique en miniature'.",
+    "hard": "Je possède à la fois des zones sahéliennes, tropicales et montagneuses.",
+    "extreme": "Ma diversité géographique résume une grande partie des paysages du continent."
+  },
+  {
+    "country": "Éthiopie",
+    "easy": "Je suis situé dans la Corne de l'Afrique.",
+    "medium": "Je n'ai jamais été durablement colonisé par une puissance européenne.",
+    "hard": "Je possède mon propre calendrier.",
+    "extreme": "Mon histoire étatique continue remonte à plusieurs siècles avant l'époque moderne."
+  },
+  {
+    "country": "Kenya",
+    "easy": "Je suis célèbre pour mes safaris.",
+    "medium": "Je suis traversé par la vallée du Rift.",
+    "hard": "Mes athlètes dominent régulièrement les courses de fond.",
+    "extreme": "Ma géographie est marquée par une immense fracture tectonique visible depuis l'espace."
+  },
+  {
+    "country": "Tanzanie",
+    "easy": "Je possède le plus haut sommet d'Afrique.",
+    "medium": "Je suis bordé par l'océan Indien.",
+    "hard": "Je possède un archipel semi-autonome très connu.",
+    "extreme": "Mon territoire abrite certains des plus grands mouvements migratoires d'animaux terrestres."
+  },
+  {
+    "country": "Afrique du Sud",
+    "easy": "Je suis situé à l'extrémité sud du continent.",
+    "medium": "Je possède plusieurs capitales officielles.",
+    "hard": "Mon histoire récente est marquée par la fin d'un régime de ségrégation institutionnalisée.",
+    "extreme": "Je suis l'un des rares États au monde à répartir ses fonctions gouvernementales entre plusieurs villes."
+  },
+ {
+    "country": "République démocratique du Congo",
+    "easy": "Je suis l'un des plus grands pays d'Afrique.",
+    "medium": "Je possède une immense forêt tropicale.",
+    "hard": "Mon territoire est traversé par l'un des fleuves les plus puissants du monde.",
+    "extreme": "Je concentre une part considérable des ressources minières stratégiques mondiales."
+  },
+  {
+    "country": "République du Congo",
+    "easy": "Je partage mon nom avec un voisin beaucoup plus vaste.",
+    "medium": "Je suis situé en Afrique centrale.",
+    "hard": "Ma capitale fait face à celle d'un autre État de l'autre côté d'un fleuve.",
+    "extreme": "Deux capitales nationales se font face sur les rives d'un même cours d'eau."
+  },
+  {
+    "country": "Angola",
+    "easy": "Je suis situé sur la côte atlantique africaine.",
+    "medium": "Je suis un important producteur de pétrole.",
+    "hard": "Je possède une enclave séparée du reste de mon territoire.",
+    "extreme": "Mon territoire comprend une région isolée du reste du pays par un autre État."
+  },
+  {
+    "country": "Ouganda",
+    "easy": "Je suis situé en Afrique de l'Est.",
+    "medium": "Je borde l'un des plus grands lacs du monde.",
+    "hard": "Je suis souvent associé à la source d'un célèbre fleuve.",
+    "extreme": "Mon territoire joue un rôle clé dans le bassin d'un des plus longs cours d'eau de la planète."
+  },
+  {
+    "country": "Rwanda",
+    "easy": "Je suis un petit pays montagneux.",
+    "medium": "Je suis surnommé le pays des mille collines.",
+    "hard": "Mon histoire récente est marquée par un génocide.",
+    "extreme": "Ma reconstruction post-conflit est fréquemment étudiée en sciences politiques."
+  },
+  {
+    "country": "Burundi",
+    "easy": "Je suis un petit État d'Afrique de l'Est.",
+    "medium": "Je partage des caractéristiques géographiques avec mon voisin du nord.",
+    "hard": "Je fais partie de la région des Grands Lacs.",
+    "extreme": "Ma densité de population est parmi les plus élevées d'Afrique."
+  },
+  {
+    "country": "Mozambique",
+    "easy": "Je possède un long littoral sur l'océan Indien.",
+    "medium": "Je suis situé au sud-est du continent africain.",
+    "hard": "Mon canal maritime me sépare d'une grande île.",
+    "extreme": "Mon littoral constitue une voie stratégique pour le commerce régional."
+  },
+  {
+    "country": "Zimbabwe",
+    "easy": "Je suis connu pour de célèbres chutes d'eau.",
+    "medium": "Je suis enclavé en Afrique australe.",
+    "hard": "Mon économie a connu une hyperinflation historique.",
+    "extreme": "J'abrite des ruines médiévales qui ont donné leur nom à l'État moderne."
+  },
+  {
+    "country": "Zambie",
+    "easy": "Je suis situé en Afrique australe.",
+    "medium": "Je partage une célèbre frontière naturelle avec un voisin.",
+    "hard": "Je possède d'importantes ressources en cuivre.",
+    "extreme": "Mon économie dépend historiquement d'un métal essentiel à l'industrie mondiale."
+  },
+  {
+    "country": "Botswana",
+    "easy": "Je suis connu pour ma faune sauvage.",
+    "medium": "Une grande partie de mon territoire est occupée par un désert.",
+    "hard": "Je possède l'un des deltas intérieurs les plus célèbres du monde.",
+    "extreme": "Mon modèle de gestion des ressources naturelles est souvent cité comme exemple en Afrique."
+  },
+  {
+    "country": "Namibie",
+    "easy": "Je possède un désert côtier célèbre.",
+    "medium": "Je suis l'un des pays les moins densément peuplés du monde.",
+    "hard": "Mes dunes figurent parmi les plus hautes de la planète.",
+    "extreme": "Mon littoral est connu pour ses brouillards et ses nombreux naufrages historiques."
+  },
+  {
+    "country": "Madagascar",
+    "easy": "Je suis une grande île située au large de l'Afrique.",
+    "medium": "Une grande partie de ma faune est unique au monde.",
+    "hard": "Mon isolement a favorisé une biodiversité exceptionnelle.",
+    "extreme": "Je constitue l'un des plus remarquables laboratoires naturels de l'évolution."
+  },
+  {
+    "country": "Maurice",
+    "easy": "Je suis une île de l'océan Indien.",
+    "medium": "Je suis réputé pour mes plages.",
+    "hard": "Mon économie est l'une des plus développées d'Afrique.",
+    "extreme": "Je suis souvent cité comme un modèle de réussite économique insulaire."
+  },
+  {
+    "country": "Seychelles",
+    "easy": "Je suis un archipel tropical.",
+    "medium": "Je possède certaines des plages les plus célèbres du monde.",
+    "hard": "Ma population est l'une des plus faibles d'Afrique.",
+    "extreme": "Je suis l'État africain avec la plus petite population souveraine."
+  },
+  {
+    "country": "Comores",
+    "easy": "Je suis un archipel de l'océan Indien.",
+    "medium": "Je suis situé entre l'Afrique et une grande île voisine.",
+    "hard": "Mon territoire est d'origine volcanique.",
+    "extreme": "Mon histoire est marquée par de nombreux changements politiques depuis l'indépendance."
+  },
+ {
+    "country": "Canada",
+    "easy": "Je suis le deuxième plus grand pays du monde.",
+    "medium": "Mon symbole national est une feuille.",
+    "hard": "Je possède plus de lacs que tous les autres pays réunis.",
+    "extreme": "Ma frontière terrestre avec mon voisin du sud est la plus longue du monde."
+  },
+  {
+    "country": "États-Unis",
+    "easy": "Je suis composé de cinquante États.",
+    "medium": "Je possède l'une des plus grandes économies du monde.",
+    "hard": "Mon territoire s'étend de l'océan Atlantique au Pacifique.",
+    "extreme": "Mon influence culturelle, militaire et économique est souvent qualifiée d'hégémonique."
   },
   {
     "country": "Mexique",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis situé au sud des États-Unis.",
+    "medium": "Je suis connu pour mes tacos et mes civilisations précolombiennes.",
+    "hard": "Mon territoire abrite les vestiges de plusieurs grandes cultures mésoaméricaines.",
+    "extreme": "Je fais partie des rares États à posséder une mégadiversité biologique reconnue."
   },
   {
-    "country": "Argentine",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Guatemala",
+    "easy": "Je suis un pays d'Amérique centrale.",
+    "medium": "Je possède de nombreuses ruines mayas.",
+    "hard": "Mon territoire est marqué par une activité volcanique importante.",
+    "extreme": "Je conserve l'une des plus fortes proportions de populations autochtones du continent."
   },
   {
-    "country": "Chili",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Belize",
+    "easy": "Je suis un petit pays d'Amérique centrale.",
+    "medium": "L'anglais est ma langue officielle.",
+    "hard": "Je possède la deuxième plus grande barrière de corail du monde.",
+    "extreme": "Je suis le seul État continental d'Amérique centrale dont la langue officielle n'est pas l'espagnol."
   },
   {
-    "country": "Pérou",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Honduras",
+    "easy": "Je suis situé en Amérique centrale.",
+    "medium": "Je possède des côtes sur deux mers.",
+    "hard": "Mon territoire fut un centre important de la civilisation maya.",
+    "extreme": "Je suis souvent exposé aux ouragans en raison de ma position géographique."
   },
   {
-    "country": "Colombie",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Salvador",
+    "easy": "Je suis le plus petit pays d'Amérique centrale.",
+    "medium": "Je suis connu pour mes nombreux volcans.",
+    "hard": "Je suis le seul pays d'Amérique centrale sans façade sur la mer des Caraïbes.",
+    "extreme": "Ma densité de population figure parmi les plus élevées du continent américain."
   },
   {
-    "country": "Venezuela",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "country": "Nicaragua",
+    "easy": "Je suis connu pour mes grands lacs.",
+    "medium": "Je suis le plus vaste pays d'Amérique centrale.",
+    "hard": "Mon territoire a été envisagé pour un projet de canal interocéanique.",
+    "extreme": "Je possède l'un des plus grands lacs d'eau douce d'Amérique latine."
+  },
+  {
+    "country": "Costa Rica",
+    "easy": "Je suis réputé pour ma biodiversité.",
+    "medium": "Je n'ai plus d'armée depuis le XXe siècle.",
+    "hard": "Une grande partie de mon territoire est protégée.",
+    "extreme": "Je suis souvent cité comme modèle de développement durable."
+  },
+  {
+    "country": "Panama",
+    "easy": "Je relie deux continents.",
+    "medium": "Je possède un célèbre canal maritime.",
+    "hard": "Mon économie dépend fortement du commerce international.",
+    "extreme": "Je contrôle l'un des passages artificiels les plus stratégiques du monde."
   },
   {
     "country": "Cuba",
-    "description": "Je suis un pays reconnu internationalement dont l'histoire, la culture et la géographie constituent un indice pour les connaisseurs."
+    "easy": "Je suis une grande île des Caraïbes.",
+    "medium": "Je suis connu pour mes cigares.",
+    "hard": "Mon histoire récente est marquée par une révolution devenue emblématique.",
+    "extreme": "Mon système politique diffère fortement de celui de la majorité des États du continent."
   },
   {
-    "country": "Pays1",
-    "description": "Indice difficile numéro 1 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Jamaïque",
+    "easy": "Je suis associé au reggae.",
+    "medium": "Je suis une île des Caraïbes.",
+    "hard": "Je suis le pays natal de plusieurs sprinteurs légendaires.",
+    "extreme": "Mon influence culturelle mondiale dépasse largement ma taille géographique."
   },
   {
-    "country": "Pays2",
-    "description": "Indice difficile numéro 2 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Haïti",
+    "easy": "Je partage une île avec un autre État.",
+    "medium": "Je suis le premier État noir indépendant moderne.",
+    "hard": "Mon indépendance est issue d'une révolution d'esclaves victorieuse.",
+    "extreme": "Mon histoire a profondément influencé les mouvements anticoloniaux."
   },
   {
-    "country": "Pays3",
-    "description": "Indice difficile numéro 3 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "République dominicaine",
+    "easy": "Je partage une île avec Haïti.",
+    "medium": "Je suis une destination touristique majeure des Caraïbes.",
+    "hard": "Mon économie est l'une des plus importantes de la région caribéenne.",
+    "extreme": "Je possède la plus haute montagne des Caraïbes."
   },
   {
-    "country": "Pays4",
-    "description": "Indice difficile numéro 4 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Bahamas",
+    "easy": "Je suis un archipel tropical.",
+    "medium": "Je suis composé de centaines d'îles.",
+    "hard": "Je me situe à proximité immédiate de la Floride.",
+    "extreme": "Mes eaux peu profondes sont parmi les plus célèbres du monde."
   },
   {
-    "country": "Pays5",
-    "description": "Indice difficile numéro 5 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Brésil",
+    "easy": "Je suis le plus grand pays d'Amérique du Sud.",
+    "medium": "Je possède la plus grande forêt tropicale du monde.",
+    "hard": "Je suis le seul pays sud-américain dont la langue officielle est le portugais.",
+    "extreme": "Mon bassin fluvial représente le plus grand volume d'eau douce de la planète."
   },
   {
-    "country": "Pays6",
-    "description": "Indice difficile numéro 6 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Argentine",
+    "easy": "Je suis connu pour le tango.",
+    "medium": "Je possède une vaste région appelée Patagonie.",
+    "hard": "Je partage une longue frontière montagneuse avec un voisin occidental.",
+    "extreme": "Mon territoire s'étend des zones subtropicales jusqu'aux régions subantarctiques."
   },
   {
-    "country": "Pays7",
-    "description": "Indice difficile numéro 7 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Chili",
+    "easy": "Je suis un pays très long et étroit.",
+    "medium": "Je possède une partie du désert le plus aride du monde.",
+    "hard": "Mon territoire longe une immense chaîne de montagnes.",
+    "extreme": "Je m'étends sur plus de 4 000 km du nord au sud tout en restant très étroit."
   },
   {
-    "country": "Pays8",
-    "description": "Indice difficile numéro 8 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Pérou",
+    "easy": "Je suis connu pour une ancienne cité inca.",
+    "medium": "Je possède une partie de l'Amazonie.",
+    "hard": "Mon histoire est profondément liée à un grand empire précolombien.",
+    "extreme": "Je concentre trois grands ensembles géographiques : côte désertique, montagnes et forêt tropicale."
   },
   {
-    "country": "Pays9",
-    "description": "Indice difficile numéro 9 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Colombie",
+    "easy": "Je suis célèbre pour mon café.",
+    "medium": "Je possède des côtes sur deux océans.",
+    "hard": "Je suis l'un des pays les plus riches en biodiversité.",
+    "extreme": "Je suis le seul État sud-américain bordé à la fois par l'Atlantique et le Pacifique."
   },
   {
-    "country": "Pays10",
-    "description": "Indice difficile numéro 10 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Venezuela",
+    "easy": "Je possède la plus haute chute d'eau du monde.",
+    "medium": "Je suis riche en pétrole.",
+    "hard": "Mon territoire comprend une vaste région de plateaux anciens.",
+    "extreme": "Je possède certaines des réserves pétrolières les plus importantes de la planète."
   },
   {
-    "country": "Pays11",
-    "description": "Indice difficile numéro 11 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Équateur",
+    "easy": "Mon nom provient d'une ligne imaginaire.",
+    "medium": "Je possède un célèbre archipel volcanique.",
+    "hard": "Je suis l'un des plus petits pays andins.",
+    "extreme": "Mon territoire est traversé par la latitude 0°."
   },
   {
-    "country": "Pays12",
-    "description": "Indice difficile numéro 12 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Bolivie",
+    "easy": "Je suis un pays enclavé d'Amérique du Sud.",
+    "medium": "Je possède un immense désert de sel.",
+    "hard": "Ma capitale constitutionnelle n'est pas le siège du gouvernement.",
+    "extreme": "Je possède l'une des plus grandes réserves mondiales d'un métal essentiel aux batteries modernes."
   },
   {
-    "country": "Pays13",
-    "description": "Indice difficile numéro 13 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Paraguay",
+    "easy": "Je suis situé au cœur de l'Amérique du Sud.",
+    "medium": "Je partage mon nom avec un grand fleuve.",
+    "hard": "Je possède deux langues officielles largement utilisées.",
+    "extreme": "Une langue autochtone y est parlée par la majorité de la population."
   },
   {
-    "country": "Pays14",
-    "description": "Indice difficile numéro 14 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Uruguay",
+    "easy": "Je suis un petit pays situé entre deux géants.",
+    "medium": "Je possède un niveau de vie élevé pour la région.",
+    "hard": "Je suis souvent cité comme l'une des démocraties les plus stables d'Amérique latine.",
+    "extreme": "Mon modèle social est souvent comparé à celui de certains pays européens."
   },
   {
-    "country": "Pays15",
-    "description": "Indice difficile numéro 15 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Guyana",
+    "easy": "Je suis situé sur la côte nord de l'Amérique du Sud.",
+    "medium": "L'anglais est ma langue officielle.",
+    "hard": "Je fais partie du Commonwealth.",
+    "extreme": "Je suis le seul État sud-américain dont la langue officielle est l'anglais."
   },
   {
-    "country": "Pays16",
-    "description": "Indice difficile numéro 16 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Suriname",
+    "easy": "Je suis le plus petit pays indépendant d'Amérique du Sud.",
+    "medium": "Le néerlandais est ma langue officielle.",
+    "hard": "Une grande partie de mon territoire est couverte de forêt tropicale.",
+    "extreme": "Je suis le seul État souverain des Amériques où le néerlandais est langue officielle."
   },
   {
-    "country": "Pays17",
-    "description": "Indice difficile numéro 17 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Guyane française",
+    "easy": "Je suis situé en Amérique du Sud.",
+    "medium": "Je ne suis pas un État indépendant.",
+    "hard": "Je possède un centre spatial majeur.",
+    "extreme": "Je fais juridiquement partie de l'Union européenne malgré ma localisation sud-américaine."
   },
   {
-    "country": "Pays18",
-    "description": "Indice difficile numéro 18 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Australie",
+    "easy": "Je suis à la fois un pays et un continent.",
+    "medium": "Je suis connu pour mes kangourous et mes koalas.",
+    "hard": "Je possède l'une des plus grandes barrières de corail du monde.",
+    "extreme": "Mon territoire est dominé par des zones arides malgré un littoral très développé."
   },
   {
-    "country": "Pays19",
-    "description": "Indice difficile numéro 19 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Nouvelle-Zélande",
+    "easy": "Je suis composé de deux îles principales.",
+    "medium": "Je suis connu pour les All Blacks.",
+    "hard": "Ma faune a longtemps évolué sans mammifères terrestres indigènes.",
+    "extreme": "Mon isolement géographique a favorisé un fort endémisme biologique."
   },
   {
-    "country": "Pays20",
-    "description": "Indice difficile numéro 20 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Papouasie-Nouvelle-Guinée",
+    "easy": "Je partage une grande île avec un autre État.",
+    "medium": "Je possède une diversité linguistique exceptionnelle.",
+    "hard": "Plus de 800 langues y sont parlées.",
+    "extreme": "Je suis l'un des territoires les plus culturellement diversifiés de la planète."
   },
   {
-    "country": "Pays21",
-    "description": "Indice difficile numéro 21 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Fidji",
+    "easy": "Je suis un archipel du Pacifique.",
+    "medium": "Je suis réputé pour mes plages tropicales.",
+    "hard": "Je suis composé de plus de 300 îles.",
+    "extreme": "Mon rôle régional dépasse largement ma population."
   },
   {
-    "country": "Pays22",
-    "description": "Indice difficile numéro 22 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Samoa",
+    "easy": "Je suis un État insulaire du Pacifique.",
+    "medium": "Ma culture est fortement influencée par les traditions polynésiennes.",
+    "hard": "J'ai changé de côté de la ligne de changement de date au XXIe siècle.",
+    "extreme": "Mon calendrier national a littéralement sauté une journée pour des raisons économiques."
   },
   {
-    "country": "Pays23",
-    "description": "Indice difficile numéro 23 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Tonga",
+    "easy": "Je suis un royaume du Pacifique.",
+    "medium": "Je n'ai jamais été formellement colonisé.",
+    "hard": "Je suis composé de plus de 150 îles.",
+    "extreme": "Je suis la seule monarchie traditionnelle restante de Polynésie."
   },
   {
-    "country": "Pays24",
-    "description": "Indice difficile numéro 24 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Vanuatu",
+    "easy": "Je suis un archipel volcanique.",
+    "medium": "Je suis situé dans une zone sismique active.",
+    "hard": "Je possède plusieurs volcans encore en activité.",
+    "extreme": "Mon territoire fait partie de la ceinture de feu du Pacifique."
   },
   {
-    "country": "Pays25",
-    "description": "Indice difficile numéro 25 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Kiribati",
+    "easy": "Je suis composé de nombreuses petites îles.",
+    "medium": "Je suis traversé par l'équateur.",
+    "hard": "Mon territoire est réparti sur plusieurs fuseaux horaires.",
+    "extreme": "Je suis l'un des premiers États menacés par la montée des océans."
   },
   {
-    "country": "Pays26",
-    "description": "Indice difficile numéro 26 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Tuvalu",
+    "easy": "Je suis l'un des plus petits pays du monde.",
+    "medium": "Je suis constitué d'atolls coralliens.",
+    "hard": "Ma superficie est inférieure à celle de nombreuses villes.",
+    "extreme": "Mon existence même est remise en question par l'élévation du niveau marin."
   },
   {
-    "country": "Pays27",
-    "description": "Indice difficile numéro 27 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Nauru",
+    "easy": "Je suis une petite île indépendante.",
+    "medium": "Je suis l'un des plus petits États du monde.",
+    "hard": "Ma richesse passée provenait principalement d'un minerai particulier.",
+    "extreme": "L'exploitation intensive d'une ressource a profondément transformé mon territoire."
   },
   {
-    "country": "Pays28",
-    "description": "Indice difficile numéro 28 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Palaos",
+    "easy": "Je suis un archipel du Pacifique occidental.",
+    "medium": "Je suis réputé pour la plongée sous-marine.",
+    "hard": "Je possède des îles rocheuses très caractéristiques.",
+    "extreme": "Mon économie repose fortement sur la préservation de mon environnement marin."
   },
   {
-    "country": "Pays29",
-    "description": "Indice difficile numéro 29 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "États fédérés de Micronésie",
+    "easy": "Je suis un État composé de nombreuses îles.",
+    "medium": "Je suis situé dans l'océan Pacifique.",
+    "hard": "Je suis une fédération de plusieurs États insulaires.",
+    "extreme": "Mon territoire est dispersé sur une immense surface océanique."
   },
   {
-    "country": "Pays30",
-    "description": "Indice difficile numéro 30 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Îles Marshall",
+    "easy": "Je suis un État insulaire du Pacifique.",
+    "medium": "Je suis constitué principalement d'atolls.",
+    "hard": "Mon histoire est liée aux essais nucléaires du XXe siècle.",
+    "extreme": "Certaines de mes îles ont servi de site à des expérimentations atomiques majeures."
   },
   {
-    "country": "Pays31",
-    "description": "Indice difficile numéro 31 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
+    "country": "Îles Salomon",
+    "easy": "Je suis un archipel mélanésien.",
+    "medium": "Je suis situé à l'est de la Papouasie-Nouvelle-Guinée.",
+    "hard": "J'ai été le théâtre d'importantes batailles durant la Seconde Guerre mondiale.",
+    "extreme": "Ma position stratégique dans le Pacifique a influencé plusieurs campagnes militaires majeures."
   },
-  {
-    "country": "Pays32",
-    "description": "Indice difficile numéro 32 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays33",
-    "description": "Indice difficile numéro 33 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays34",
-    "description": "Indice difficile numéro 34 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays35",
-    "description": "Indice difficile numéro 35 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays36",
-    "description": "Indice difficile numéro 36 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays37",
-    "description": "Indice difficile numéro 37 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays38",
-    "description": "Indice difficile numéro 38 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays39",
-    "description": "Indice difficile numéro 39 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays40",
-    "description": "Indice difficile numéro 40 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays41",
-    "description": "Indice difficile numéro 41 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays42",
-    "description": "Indice difficile numéro 42 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays43",
-    "description": "Indice difficile numéro 43 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays44",
-    "description": "Indice difficile numéro 44 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays45",
-    "description": "Indice difficile numéro 45 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays46",
-    "description": "Indice difficile numéro 46 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays47",
-    "description": "Indice difficile numéro 47 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays48",
-    "description": "Indice difficile numéro 48 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays49",
-    "description": "Indice difficile numéro 49 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays50",
-    "description": "Indice difficile numéro 50 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays51",
-    "description": "Indice difficile numéro 51 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays52",
-    "description": "Indice difficile numéro 52 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays53",
-    "description": "Indice difficile numéro 53 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays54",
-    "description": "Indice difficile numéro 54 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays55",
-    "description": "Indice difficile numéro 55 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays56",
-    "description": "Indice difficile numéro 56 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays57",
-    "description": "Indice difficile numéro 57 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays58",
-    "description": "Indice difficile numéro 58 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays59",
-    "description": "Indice difficile numéro 59 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays60",
-    "description": "Indice difficile numéro 60 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays61",
-    "description": "Indice difficile numéro 61 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays62",
-    "description": "Indice difficile numéro 62 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays63",
-    "description": "Indice difficile numéro 63 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays64",
-    "description": "Indice difficile numéro 64 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays65",
-    "description": "Indice difficile numéro 65 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays66",
-    "description": "Indice difficile numéro 66 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays67",
-    "description": "Indice difficile numéro 67 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays68",
-    "description": "Indice difficile numéro 68 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays69",
-    "description": "Indice difficile numéro 69 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays70",
-    "description": "Indice difficile numéro 70 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays71",
-    "description": "Indice difficile numéro 71 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays72",
-    "description": "Indice difficile numéro 72 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays73",
-    "description": "Indice difficile numéro 73 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays74",
-    "description": "Indice difficile numéro 74 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays75",
-    "description": "Indice difficile numéro 75 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays76",
-    "description": "Indice difficile numéro 76 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays77",
-    "description": "Indice difficile numéro 77 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays78",
-    "description": "Indice difficile numéro 78 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays79",
-    "description": "Indice difficile numéro 79 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays80",
-    "description": "Indice difficile numéro 80 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays81",
-    "description": "Indice difficile numéro 81 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays82",
-    "description": "Indice difficile numéro 82 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays83",
-    "description": "Indice difficile numéro 83 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays84",
-    "description": "Indice difficile numéro 84 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays85",
-    "description": "Indice difficile numéro 85 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays86",
-    "description": "Indice difficile numéro 86 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays87",
-    "description": "Indice difficile numéro 87 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays88",
-    "description": "Indice difficile numéro 88 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays89",
-    "description": "Indice difficile numéro 89 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays90",
-    "description": "Indice difficile numéro 90 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays91",
-    "description": "Indice difficile numéro 91 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays92",
-    "description": "Indice difficile numéro 92 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays93",
-    "description": "Indice difficile numéro 93 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays94",
-    "description": "Indice difficile numéro 94 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays95",
-    "description": "Indice difficile numéro 95 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays96",
-    "description": "Indice difficile numéro 96 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays97",
-    "description": "Indice difficile numéro 97 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays98",
-    "description": "Indice difficile numéro 98 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays99",
-    "description": "Indice difficile numéro 99 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays100",
-    "description": "Indice difficile numéro 100 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays101",
-    "description": "Indice difficile numéro 101 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays102",
-    "description": "Indice difficile numéro 102 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays103",
-    "description": "Indice difficile numéro 103 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays104",
-    "description": "Indice difficile numéro 104 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays105",
-    "description": "Indice difficile numéro 105 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays106",
-    "description": "Indice difficile numéro 106 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays107",
-    "description": "Indice difficile numéro 107 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays108",
-    "description": "Indice difficile numéro 108 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays109",
-    "description": "Indice difficile numéro 109 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays110",
-    "description": "Indice difficile numéro 110 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays111",
-    "description": "Indice difficile numéro 111 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays112",
-    "description": "Indice difficile numéro 112 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays113",
-    "description": "Indice difficile numéro 113 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays114",
-    "description": "Indice difficile numéro 114 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays115",
-    "description": "Indice difficile numéro 115 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays116",
-    "description": "Indice difficile numéro 116 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays117",
-    "description": "Indice difficile numéro 117 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays118",
-    "description": "Indice difficile numéro 118 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays119",
-    "description": "Indice difficile numéro 119 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays120",
-    "description": "Indice difficile numéro 120 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays121",
-    "description": "Indice difficile numéro 121 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays122",
-    "description": "Indice difficile numéro 122 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays123",
-    "description": "Indice difficile numéro 123 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays124",
-    "description": "Indice difficile numéro 124 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays125",
-    "description": "Indice difficile numéro 125 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays126",
-    "description": "Indice difficile numéro 126 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays127",
-    "description": "Indice difficile numéro 127 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays128",
-    "description": "Indice difficile numéro 128 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays129",
-    "description": "Indice difficile numéro 129 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays130",
-    "description": "Indice difficile numéro 130 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays131",
-    "description": "Indice difficile numéro 131 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays132",
-    "description": "Indice difficile numéro 132 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays133",
-    "description": "Indice difficile numéro 133 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays134",
-    "description": "Indice difficile numéro 134 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays135",
-    "description": "Indice difficile numéro 135 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays136",
-    "description": "Indice difficile numéro 136 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays137",
-    "description": "Indice difficile numéro 137 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays138",
-    "description": "Indice difficile numéro 138 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays139",
-    "description": "Indice difficile numéro 139 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays140",
-    "description": "Indice difficile numéro 140 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays141",
-    "description": "Indice difficile numéro 141 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays142",
-    "description": "Indice difficile numéro 142 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays143",
-    "description": "Indice difficile numéro 143 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays144",
-    "description": "Indice difficile numéro 144 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  },
-  {
-    "country": "Pays145",
-    "description": "Indice difficile numéro 145 : identifie ce pays à partir d'éléments historiques, géographiques ou culturels."
-  }
-]
