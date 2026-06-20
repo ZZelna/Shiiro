@@ -76,7 +76,7 @@ module.exports = {
                         "Réponds dans le chat"
                 });
 
-        await message.reply({
+        await message.channel.send({
             embeds: [embed],
             files: [attachment]
         });
