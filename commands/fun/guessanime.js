@@ -1,3 +1,4 @@
+let lastAnime = null;
 module.exports = {
     name: "guessanime",
     description: "Deviner un anime à partir d'une scène",
@@ -21,11 +22,17 @@ delete require.cache[
 
 const animes = require("../../data/animes.json");
 
-        const randomIndex = Math.floor(Math.random() * animes.length);
+        let anime;
 
-console.log("Index :", randomIndex);
+do {
+    const randomIndex = Math.floor(Math.random() * animes.length);
+    anime = animes[randomIndex];
+} while (
+    animes.length > 1 &&
+    anime.anime === lastAnime
+);
 
-const anime = animes[randomIndex];
+lastAnime = anime.anime;
       console.log("Nombre d'animes :", animes.length);
 console.log("Liste :", animes.map(a => a.anime));
 console.log("Choisi :", anime.anime);
