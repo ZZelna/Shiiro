@@ -53,9 +53,7 @@ module.exports = {
                     "Tu as **30 secondes** pour trouver le nom de cet anime."
                 )
 
-                .setImage(
-                    `attachment://${anime.image}`
-                )
+               .setImage("https://media.tenor.com/2roX3uxz_68AAAAM/boruto.gif")
 
                 .setFooter({
                     text:
