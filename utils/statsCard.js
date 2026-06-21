@@ -34,6 +34,9 @@ module.exports = async (
         1280,
         720
     );
+    ctx.fillStyle = "#FF0000";
+ctx.font = "100px sans-serif";
+ctx.fillText("TEST", 100, 100);
 
     // Avatar
 
