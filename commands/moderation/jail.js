@@ -38,43 +38,32 @@ module.exports = {
 
     async run(message, args) {
 
-        const allowedUsers = [
-            "1441136552842367027",
-            "1292848857704566866",
-            "1507851969572765756",
-            "1421806026537173032",
-            "1500273343054614529",
-            "1010620278541402226",
-            "1386994361216274472",
-            "1418370654251778168",
-            "1277800588578521146",
-            "1495834533797298176",
-            "1433895666823860295",
-            "1437428643377713262",
-            "1270797559786635388",
-            "1359956098614038699",
-            "1035241635937783848",
-            "1135944293148786768",
-            "1359115571471585452",
-            "1196016822869303368",
-            "1453888913490972836",
-            "779124269518946314",
-            "1340746846871748719",
-            "1411762668003528904",
-            "1436025468133314687",
-            "1307161147203522570",
-            "1395650564057989242",
-            "1291775420735422523",
-            "1440416200646594612",
-            "1400111418358894646"
-        ];
+        const CAN_JAIL_ROLES = [
+    "1506674274826584284",
+    "1506678694352261301",
+    "1506678765982318743",
+    "1506696551706267688",
+    "1507082580414173234",
+    "1506696757642530982",
+    "1509601528242110525",
+    "1506709088451690708"
+];
 
-        if (!allowedUsers.includes(message.author.id)) {
-            return message.reply(
-                "❌ Vous n'avez pas la permission d'utiliser cette commande."
-            );
-        }
+const hasPermission =
+    message.member.roles.cache.some(
+        role =>
+            CAN_JAIL_ROLES.includes(
+                role.id
+            )
+    );
 
+if (!hasPermission) {
+
+    return message.reply(
+        "❌ Vous n'avez pas la permission d'utiliser cette commande."
+    );
+
+}
         const member =
             message.mentions.members.first() ||
             message.guild.members.cache.get(args[0]);
@@ -90,7 +79,16 @@ module.exports = {
                 "❌ Vous ne pouvez pas vous jail."
             );
         }
+if (
+    member.roles.highest.position >=
+    message.member.roles.highest.position
+) {
 
+    return message.reply(
+        "❌ Vous ne pouvez pas jail un membre ayant un rôle supérieur ou égal au vôtre."
+    );
+
+}
         if (
             member.roles.cache.has(
                 "1506674274826584284"
@@ -155,11 +153,16 @@ module.exports = {
         }
 
         const removedRoles =
-            member.roles.cache
-                .filter(role =>
-                    JAILABLE_ROLES.includes(role.id)
-                )
-                .map(role => role.id);
+    member.roles.cache
+
+        .filter(role =>
+            role.id !== message.guild.id &&
+            role.id !== JAIL_ROLE
+        )
+
+        .map(role =>
+            role.id
+        );
 
         jailData.users[member.id] = {
             roles: removedRoles,
