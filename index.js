@@ -424,167 +424,96 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch(err => {
     console.error("❌ Erreur MongoDB :", err);
 });
-const jailData = require("./data/jail.json");
 
-setInterval(async () => {
-    if (!jailData.users) return;
-
-const guild =
-    client.guilds.cache.first();
-
-if (!guild) return;
-
-for (const userId of Object.keys(jailData.users)) {
-
-    const data =
-        jailData.users[userId];
-
-    if (
-        !data.endTime ||
-        Date.now() < data.endTime
-    ) continue;
-
-    try {
-
-        const member =
-            await guild.members.fetch(
-                userId
-            );
-
-        await member.roles.remove(
-            "1508842233619677306"
-        );
-
-        if (
-            data.roles &&
-            data.roles.length
-        ) {
-
-            await member.roles.add(
-                data.roles
-            );
-
-        }
-
-        delete jailData.users[userId];
-
-        fs.writeFileSync(
-            path.join(
-                __dirname,
-                "./data/jail.json"
-            ),
-            JSON.stringify(
-                jailData,
-                null,
-                4
-            )
-        );
-
-        console.log(
-            `✅ Jail terminé pour ${member.user.tag}`
-        );
-
-    } catch (err) {
-
-        console.log(
-            `❌ Erreur unjail ${userId}`,
-            err
-        );
-
-    }
-
-}
-    }, 10000);
 const jailData =
-require("./data/jail.json");
+    require("./data/jail.json");
 
 setInterval(async () => {
+
     if (!jailData.users)
-    return;
+        return;
 
-const guild =
-    client.guilds.cache.get(
-        "1506672014679740546"
-    );
-
-if (!guild)
-    return;
-
-for (
-    const userId
-    of Object.keys(
-        jailData.users
-    )
-) {
-
-    const jailInfo =
-        jailData.users[
-            userId
-        ];
-
-    if (
-        Date.now() <
-        jailInfo.endTime
-    ) continue;
-
-    try {
-
-        const member =
-            await guild.members.fetch(
-                userId
-            );
-
-        // Retire le rôle prison
-
-        await member.roles.remove(
-            "1508842233619677306"
+    const guild =
+        client.guilds.cache.get(
+            "1506672014679740546"
         );
 
-        // Remet les anciens rôles
+    if (!guild)
+        return;
+
+    for (
+        const userId
+        of Object.keys(
+            jailData.users
+        )
+    ) {
+
+        const jailInfo =
+            jailData.users[
+                userId
+            ];
 
         if (
-            jailInfo.roles &&
-            jailInfo.roles.length
-        ) {
+            !jailInfo.endTime ||
+            Date.now() <
+            jailInfo.endTime
+        ) continue;
 
-            await member.roles.add(
-                jailInfo.roles
+        try {
+
+            const member =
+                await guild.members.fetch(
+                    userId
+                );
+
+            await member.roles.remove(
+                "1508842233619677306"
+            );
+
+            if (
+                jailInfo.roles &&
+                jailInfo.roles.length
+            ) {
+
+                await member.roles.add(
+                    jailInfo.roles
+                );
+
+            }
+
+            delete jailData.users[
+                userId
+            ];
+
+            fs.writeFileSync(
+                path.join(
+                    __dirname,
+                    "./data/jail.json"
+                ),
+                JSON.stringify(
+                    jailData,
+                    null,
+                    4
+                )
+            );
+
+            console.log(
+                `✅ Jail terminé pour ${member.user.tag}`
+            );
+
+        } catch (err) {
+
+            console.log(
+                `❌ Erreur unjail ${userId}`,
+                err
             );
 
         }
 
-        delete jailData.users[
-            userId
-        ];
-
-        fs.writeFileSync(
-
-            path.join(
-                __dirname,
-                "./data/jail.json"
-            ),
-
-            JSON.stringify(
-                jailData,
-                null,
-                4
-            )
-
-        );
-
-        console.log(
-            `✅ Jail terminé pour ${member.user.tag}`
-        );
-
-    } catch (err) {
-
-        console.log(
-            `❌ Erreur unjail ${userId}`,
-            err
-        );
-
     }
 
-}
-    }, 10000);
-client.login(process.env.DISCORD_TOKEN);
+}, 10000);
+
+client.login(
+    process.env.DISCORD_TOKEN
+);
