@@ -197,6 +197,42 @@ await member.roles.set([
     ...managedRoles,
     prisonRole.id
 ]);
+            const logChannel =
+    message.guild.channels.cache.get(
+        "1517254629820338227"
+    );
+
+if (logChannel) {
+
+    const { EmbedBuilder } =
+        require("discord.js");
+
+    const embed =
+        new EmbedBuilder()
+
+            .setColor("#ff0000")
+
+            .setTitle("🔒 Jail")
+
+            .setDescription(
+                `${member} a été jail par ${message.author}`
+            )
+
+        .addFields(
+{
+    name: "📌 Motif",
+    value: reason || "Aucun"
+},
+{
+    name: "⏳ Durée",
+    value: `${Math.floor(duration / 60000)} minute(s)`
+}
+)
+    logChannel.send({
+        embeds: [embed]
+    });
+
+}
 
         } catch (err) {
 
