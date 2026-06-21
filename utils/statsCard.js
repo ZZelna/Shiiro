@@ -84,40 +84,19 @@ ctx.fillText("TEST", 100, 100);
         105
     );
 
-    // Date création compte
+   // Date création compte
 
-    const createdAt =
-    member.createdAt
-            .toLocaleDateString(
-                "fr-FR"
-            );
+const createdAt =
+    member.user?.createdAt
+        ? member.user.createdAt.toLocaleDateString("fr-FR")
+        : "N/A";
 
-    ctx.font =
-        "28px Arial";
+// Date arrivée serveur
 
-    ctx.fillStyle =
-        "#FFFFFF";
-
-    ctx.fillText(
-        createdAt,
-        845,
-        95
-    );
-
-    // Date arrivée serveur
-
-    const joinedAt =
-        member.joinedAt
-            ?.toLocaleDateString(
-                "fr-FR"
-            ) || "N/A";
-
-    ctx.fillText(
-        joinedAt,
-        1080,
-        95
-    );
-
+const joinedAt =
+    member.joinedAt
+        ? member.joinedAt.toLocaleDateString("fr-FR")
+        : "N/A";
     // Bloc Messages
 
     ctx.font =
