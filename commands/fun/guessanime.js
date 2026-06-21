@@ -53,7 +53,7 @@ module.exports = {
                     "Tu as **30 secondes** pour trouver le nom de cet anime."
                 )
 
-.setImage(`attachment://${anime.image}`)
+      .setImage(`attachment://${anime.image}`)
 
                 .setFooter({
                     text:
