@@ -25,6 +25,8 @@ module.exports = {
                     animes.length
                 )
             ];
+        console.log("Nombre d'animes :", animes.length);
+console.log("Anime choisi :", anime.anime);
 
         const imagePath =
             path.join(
