@@ -15,19 +15,21 @@ module.exports = {
         const path =
             require("path");
 
-        const animes =
-            require("../../data/animes.json");
+delete require.cache[
+    require.resolve("../../data/animes.json")
+];
 
-        const anime =
-            animes[
-                Math.floor(
-                    Math.random() *
-                    animes.length
-                )
-            ];
-        console.log("Nombre d'animes :", animes.length);
-console.log("Anime choisi :", anime.anime);
+const animes = require("../../data/animes.json");
 
+        const randomIndex = Math.floor(Math.random() * animes.length);
+
+console.log("Index :", randomIndex);
+
+const anime = animes[randomIndex];
+      console.log("Nombre d'animes :", animes.length);
+console.log("Liste :", animes.map(a => a.anime));
+console.log("Choisi :", anime.anime);
+       
         const imagePath =
             path.join(
                 __dirname,
