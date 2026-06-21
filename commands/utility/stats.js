@@ -9,13 +9,13 @@ description: "Affiche les statistiques d’un membre",
 async run(message) {
 
     const target =
-        message.mentions.users.first() ||
-        message.author;
+    message.mentions.users.first() ||
+    message.author;
 
-    const guildMember =
-        message.guild.members.cache.get(
-            target.id
-        );
+const guildMember =
+    message.guild.members.cache.get(
+        target.id
+    );
 
     const userStats =
         await Stats.findOne({
