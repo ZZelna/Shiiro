@@ -148,8 +148,8 @@ ctx.fillText(
     260
 );
 
-    return canvas.encode(
-        "png"
-    );
+console.log(stats);
+
+return canvas.encode("png");
 
 };
