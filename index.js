@@ -478,6 +478,34 @@ setInterval(async () => {
                 await member.roles.add(
                     jailInfo.roles
                 );
+                const logChannel =
+    guild.channels.cache.get(
+        "1517254629820338227"
+    );
+
+if (logChannel) {
+
+    const { EmbedBuilder } =
+        require("discord.js");
+
+    const embed =
+        new EmbedBuilder()
+
+            .setColor("#00ff00")
+
+            .setTitle("🔓 Unjail")
+
+            .setDescription(
+                `${member} a été libéré automatiquement`
+            )
+
+            .setTimestamp();
+
+    logChannel.send({
+        embeds: [embed]
+    });
+
+}
 
             }
 
