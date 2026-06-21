@@ -118,35 +118,14 @@ module.exports = async (
     // Bloc Messages
 
     ctx.font =
-        "24px Arial";
+        "40px Arial";
 
-// 1 jour
-ctx.fillText(
-    `${stats.messagesToday || 0} messages`,
-    840,
-    320
-);
+ctx.fillStyle = "#FF0000";
+ctx.font = "40px Arial";
 
-// 7 jours
-ctx.fillText(
-    `${stats.messages7d || 0} messages`,
-    840,
-    380
-);
-
-// 14 jours
-ctx.fillText(
-    `${stats.messages14d || 0} messages`,
-    840,
-    440
-);
-
-// total
-ctx.fillText(
-    `${stats.messages || 0}`,
-    1160,
-    260
-);
+ctx.fillText(stats.messages.toString(), 800, 250);
+ctx.fillText(stats.messages7d.toString(), 800, 350);
+ctx.fillText(stats.messages14d.toString(), 800, 450);
 
 console.log(stats);
 
