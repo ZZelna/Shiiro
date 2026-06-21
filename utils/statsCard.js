@@ -35,6 +35,8 @@ module.exports = async (
         720
     );
 
+    // Avatar
+
     const avatar =
         await loadImage(
             member.displayAvatarURL({
@@ -51,6 +53,8 @@ module.exports = async (
         100
     );
 
+    // Pseudo
+
     ctx.fillStyle =
         "#FFFFFF";
 
@@ -58,32 +62,101 @@ module.exports = async (
         "bold 45px Arial";
 
     ctx.fillText(
-        member.username,
+        member.user.username,
         135,
         60
     );
 
+    // Serveur
+
+    ctx.font =
+        "26px Arial";
+
+    ctx.fillStyle =
+        "#E0E0E0";
+
+    ctx.fillText(
+        member.guild.name,
+        135,
+        105
+    );
+
+    // Date création compte
+
+    const createdAt =
+        member.user.createdAt
+            .toLocaleDateString(
+                "fr-FR"
+            );
+
     ctx.font =
         "28px Arial";
 
+    ctx.fillStyle =
+        "#FFFFFF";
+
     ctx.fillText(
-        `${stats.messages}`,
+        createdAt,
+        845,
+        95
+    );
+
+    // Date arrivée serveur
+
+    const joinedAt =
+        member.joinedAt
+            ?.toLocaleDateString(
+                "fr-FR"
+            ) || "N/A";
+
+    ctx.fillText(
+        joinedAt,
+        1080,
+        95
+    );
+
+    // Bloc Messages
+
+    ctx.font =
+        "24px Arial";
+
+    // 1 jour
+
+    ctx.fillText(
+        `${stats.messagesToday || 0} messages`,
         835,
+        318
+    );
+
+    // 7 jours
+
+    ctx.fillText(
+        `${stats.messages7d || 0} messages`,
+        835,
+        378
+    );
+
+    // 14 jours
+
+    ctx.fillText(
+        `${stats.messages14d || 0} messages`,
+        835,
+        438
+    );
+
+    // Total messages
+
+    ctx.font =
+        "26px Arial";
+
+    ctx.fillText(
+        `${stats.messages || 0}`,
+        1160,
         260
     );
 
-    ctx.fillText(
-        `${stats.messages7d}`,
-        835,
-        330
+    return canvas.encode(
+        "png"
     );
-
-    ctx.fillText(
-        `${stats.messages14d}`,
-        835,
-        400
-    );
-
-    return canvas.encode("png");
 
 };
