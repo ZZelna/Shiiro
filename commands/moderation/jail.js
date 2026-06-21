@@ -157,7 +157,8 @@ if (
 
         .filter(role =>
             role.id !== message.guild.id &&
-            role.id !== JAIL_ROLE
+            role.id !== JAIL_ROLE &&
+            !role.managed
         )
 
         .map(role =>
@@ -183,15 +184,19 @@ if (
 
         try {
 
-            if (removedRoles.length) {
-                await member.roles.remove(
-                    removedRoles
-                );
-            }
+            const managedRoles =
+    member.roles.cache
+        .filter(role =>
+            role.managed
+        )
+        .map(role =>
+            role.id
+        );
 
-            await member.roles.add(
-                prisonRole
-            );
+await member.roles.set([
+    ...managedRoles,
+    prisonRole.id
+]);
 
         } catch (err) {
 
