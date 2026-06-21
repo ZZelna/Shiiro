@@ -120,40 +120,33 @@ module.exports = async (
     ctx.font =
         "24px Arial";
 
-    // 1 jour
+// 1 jour
+ctx.fillText(
+    `${stats.messagesToday || 0} messages`,
+    840,
+    320
+);
 
-    ctx.fillText(
-        `${stats.messagesToday || 0} messages`,
-        835,
-        318
-    );
+// 7 jours
+ctx.fillText(
+    `${stats.messages7d || 0} messages`,
+    840,
+    380
+);
 
-    // 7 jours
+// 14 jours
+ctx.fillText(
+    `${stats.messages14d || 0} messages`,
+    840,
+    440
+);
 
-    ctx.fillText(
-        `${stats.messages7d || 0} messages`,
-        835,
-        378
-    );
-
-    // 14 jours
-
-    ctx.fillText(
-        `${stats.messages14d || 0} messages`,
-        835,
-        438
-    );
-
-    // Total messages
-
-    ctx.font =
-        "26px Arial";
-
-    ctx.fillText(
-        `${stats.messages || 0}`,
-        1160,
-        260
-    );
+// total
+ctx.fillText(
+    `${stats.messages || 0}`,
+    1160,
+    260
+);
 
     return canvas.encode(
         "png"
