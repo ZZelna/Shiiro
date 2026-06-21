@@ -53,21 +53,20 @@ async run(message) {
     }
 
     const image =
-        await createCard(
-            guildMember,
-            {
-                messages:
-                    userStats?.messages || 0,
+    await createCard(
+        guildMember,
+        {
+            messages:
+                userStats?.messages || 0,
 
-                messagesToday:
-                    userStats?.messagesToday || 0,
+            messagesToday:
+                userStats?.todayMessages || 0,
 
-                messages7d,
+            messages7d,
 
-                messages14d
-            }
-        );
-
+            messages14d
+        }
+    );
     const attachment =
         new AttachmentBuilder(
             image,
