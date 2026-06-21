@@ -65,7 +65,7 @@ ctx.fillText("TEST", 100, 100);
         "bold 45px Arial";
 
     ctx.fillText(
-        member.user.username,
+        member.username,
         135,
         60
     );
@@ -87,7 +87,7 @@ ctx.fillText("TEST", 100, 100);
     // Date création compte
 
     const createdAt =
-        member.user.createdAt
+    member.createdAt
             .toLocaleDateString(
                 "fr-FR"
             );
@@ -131,7 +131,10 @@ ctx.fillText(stats.messages7d.toString(), 800, 350);
 ctx.fillText(stats.messages14d.toString(), 800, 450);
 
 console.log(stats);
+ctx.fillStyle = "#FF0000";
+ctx.font = "50px Arial";
 
+ctx.fillText("TEST", 600, 300);
 return canvas.encode("png");
 
 };
