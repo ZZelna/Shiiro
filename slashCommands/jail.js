@@ -18,7 +18,27 @@ const REASONS = {
         duration: 5,
         label: "Insultes"
     },
-    nfsw: {
+    offensants: {
+        duration: 10,
+        label: "Messages offensants"
+    },
+    leak: {
+        duration: 60,
+        label: "Leak (ATT BAN)"
+    },
+    dox: {
+        duration: 60,
+        label: "Dox (ATT BAN)"
+    },
+    swatt: {
+        duration: 60,
+        label: "Swatt (ATT BAN)"
+    },
+    menaces: {
+        duration: 60,
+        label: "Menaces (ATT BAN)"
+    },
+    nsfw: {
         duration: 60,
         label: "NSFW (ATT BAN)"
     }
@@ -34,22 +54,36 @@ module.exports = {
                 .setDescription("Membre à jail")
                 .setRequired(true)
         )
-        .addStringOption(option =>
-            option
-                .setName("motif")
-                .setDescription("spam / insultes / nfsw")
-                .setRequired(true)
-        ),
-
+     .addStringOption(option =>
+    option
+        .setName("motif")
+        .setDescription("Motif du jail")
+        .setRequired(true)
+        .addChoices(
+            { name: "Spam", value: "spam" },
+            { name: "Insultes", value: "insultes" },
+            { name: "Messages offensants", value: "offensants" },
+            { name: "Leak", value: "leak" },
+            { name: "Dox", value: "dox" },
+            { name: "Swatt", value: "swatt" },
+            { name: "Menaces", value: "menaces" },
+            { name: "NSFW", value: "nsfw" },
+            { name: "Personnalisé", value: "custom" }
+        )
+)
+.addIntegerOption(option =>
+    option
+        .setName("minutes")
+        .setDescription("Durée personnalisée (uniquement si motif = Personnalisé)")
+        .setRequired(false)
+)
     async execute(interaction) {
 
         const member =
             interaction.options.getMember("membre");
 
-        const motif =
-            interaction.options
-                .getString("motif")
-                .toLowerCase();
+        const motif = interaction.options.getString("motif");
+const customMinutes = interaction.options.getInteger("minutes");
 
         if (!member) {
             return interaction.reply({
@@ -58,24 +92,27 @@ module.exports = {
             });
         }
 
-        if (!REASONS[motif]) {
-            return interaction.reply({
-                content: "❌ Motif invalide.",
-                ephemeral: true
-            });
-        }
+        let duration;
+let reason;
 
-        const prisonRole =
-            interaction.guild.roles.cache.get(
-                JAIL_ROLE
-            );
+if (motif === "custom") {
 
-        const duration =
-            REASONS[motif].duration;
+    if (!customMinutes || customMinutes <= 0) {
+        return interaction.reply({
+            content: "❌ Vous devez préciser une durée en minutes.",
+            ephemeral: true
+        });
+    }
 
-        const reason =
-            REASONS[motif].label;
+    duration = customMinutes;
+    reason = `Personnalisé (${customMinutes} min)`;
 
+} else {
+
+    duration = REASONS[motif].duration;
+    reason = REASONS[motif].label;
+
+}
         const removedRoles =
             member.roles.cache
                 .filter(role =>
