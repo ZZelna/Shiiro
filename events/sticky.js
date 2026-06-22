@@ -59,11 +59,10 @@ https://ngl.link/jestonoff11941`,
 "1507164423276466268": `# Durées de Jail
 
 - Spam = 5 minutes
-- Insulte = 5 minutes
-- Messages offensants = 5 minutes
+- Insultes = 5 minutes (+5 minutes si récidive)
+- Messages offensants = 10 minutes
 - Leak / Dox / Swatt / Menaces = 60 minutes (ATT BAN)
 - NSFW = 60 minutes (ATT BAN)`,
-
 "1507078497959546983": `# Format :
 
 ~~                      ~~
