@@ -84,6 +84,8 @@ https://ngl.link/jestonoff11941`,
 - Leak / Dox / Swatt / Menaces = 60 minutes (ATT BAN)
 - NSFW = 60 minutes (ATT BAN)`,
     
+
+
 "1507078497959546983": `__**Stickied Message:**__
 
 # Format :
@@ -91,11 +93,17 @@ https://ngl.link/jestonoff11941`,
 ~~                      ~~
 
 \`\`\`
+
 **PSEUDO :**
+
 **RANK :**
+
 **RAISON :**
+
 **DURÉE :**
+
 **PING :** vos managers ou directeurs ou superviseurs en fonction de votre mission/équipe
+
 \`\`\``,
 };
 
