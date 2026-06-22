@@ -1,36 +1,36 @@
 const stickyMessages = {
 
-    "1514677335293563012": `__**Stickied Message:**__
+ "1514677335293563012": `__**Stickied Message:**__
 
 **Uniquement des commandes ici !!! Pas de discussions !!!**`,
 
-    "1506684777678377001": `__**Stickied Message:**__
+ "1506684777678377001": `__**Stickied Message:**__
 
 **Uniquement des commandes ici !!! Pas de discussions !!!**`,
 
-    "1506688699893809152": `__**Stickied Message:**__
+ "1506688699893809152": `__**Stickied Message:**__
 
 **Uniquement des images ou des vidéos ici !!! Pas de discussions !!!**`,
 
-    "1506939756058120202": `__**Stickied Message:**__
+"1506939756058120202": `__**Stickied Message:**__
 
 un chiffre a la fois merci !!!!`,
 
-    "1506960053368782919": `__**Stickied Message:**__
+"1506960053368782919": `__**Stickied Message:**__
 
 uniquement des suggestions ici 👈
 
 Les owners répondront aux suggestions au plus vite !!!`,
 
-    "1510484744767410206": `__**Stickied Message:**__
+ "1510484744767410206": `__**Stickied Message:**__
 
 Vous pouvez bump le serveur toutes les 2h merci à tous ceux qui le font !!!`,
 
-    "1509881074417799168": `__**Stickied Message:**__
+"1509881074417799168": `__**Stickied Message:**__
 
 uniquement des citations ici !!!!`,
 
-    "1506944756524253284": `__**Stickied Message:**__
+"1506944756524253284": `__**Stickied Message:**__
 
 ## ✔️ Demande de bannissement
 
@@ -44,7 +44,7 @@ uniquement des citations ici !!!!`,
 
 \`\`📌 Preuve (screen) :`,
 
-    "1508433969711153203": `__**Stickied Message:**__
+"1508433969711153203": `__**Stickied Message:**__
 
 **Personne :** …
 
@@ -54,7 +54,7 @@ uniquement des citations ici !!!!`,
 
 **Par :** …`,
 
-    "1506942496884785152": `__**Stickied Message:**__
+"1506942496884785152": `__**Stickied Message:**__
 
 **Bienvenue dans le salon confession de Shiiro**
 
@@ -63,7 +63,7 @@ Ici la règle principale est l’anonymat.
 C’est ici : 👈
 https://ngl.link/jestonoff11941`,
 
-    "1507164423276466268": `__**Stickied Message:**__
+"1507164423276466268": `__**Stickied Message:**__
 
 ## Commande : /jail
 
