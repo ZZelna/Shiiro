@@ -39,19 +39,7 @@ Les owners répondront aux suggestions au plus vite !!!`,
 
 **Par :** …`,
 
-    "1507078497959546983": `# Format :
-
-~~                      ~~
-
-\`\`\`
-**PSEUDO :**
-**RANK :**
-**RAISON :**
-**DURÉE :**
-**PING :**
-\`\`\``,
-
-    "1506942496884785152": `__**Stickied Message:**__
+ "1506942496884785152": `__**Stickied Message:**__
 
 **Bienvenue dans le salon confession de Shiiro**
 
@@ -67,6 +55,26 @@ Bref tout ce qui te traverse à l’esprit
 
 C’est ici : 👈
 https://ngl.link/jestonoff11941`
+   
+"1507164423276466268": `# Durées de Jail
+
+- Spam = 5 minutes
+- Insulte = 5 minutes
+- Messages offensants = 5 minutes
+- Leak / Dox / Swatt / Menaces = 60 minutes (ATT BAN)
+- NSFW = 60 minutes (ATT BAN)`,
+
+"1507078497959546983": `# Format :
+
+~~                      ~~
+
+\`\`\`
+**PSEUDO :**
+**RANK :**
+**RAISON :**
+**DURÉE :**
+**PING :** vos managers ou directeurs ou superviseurs en fonction de votre mission/équipe
+\`\`\``,
 };
 
 const lastSticky = new Map();
