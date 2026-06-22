@@ -14,7 +14,7 @@ const stickyMessages = {
 
     "1506939756058120202": `__**Stickied Message:**__
 
-un chiffre à la fois merci !!!!`,
+un chiffre a la fois merci !!!!`,
 
     "1506960053368782919": `__**Stickied Message:**__
 
@@ -24,11 +24,11 @@ Les owners répondront aux suggestions au plus vite !!!`,
 
     "1510484744767410206": `__**Stickied Message:**__
 
-**Vous pouvez bump le serveur toutes les 2h merci à tous ceux qui le font !!!**`,
+Vous pouvez bump le serveur toutes les 2h merci à tous ceux qui le font !!!`,
 
     "1509881074417799168": `__**Stickied Message:**__
 
-**uniquement des citations ici !!!!**`,
+uniquement des citations ici !!!!`,
 
     "1506944756524253284": `__**Stickied Message:**__
 
@@ -58,21 +58,12 @@ Les owners répondront aux suggestions au plus vite !!!`,
 
 **Bienvenue dans le salon confession de Shiiro**
 
-Ici la règle principale est l’anonymat : tu peux envoyer tes confessions en toute liberté mais veille à ne pas trop en abuser 😰
-
-- **Anecdotes**
-- **Secrets**
-- **Révélations**
-- **Crush**
-- **Blagues**
-
-Bref, tout ce qui te traverse l’esprit.
+Ici la règle principale est l’anonymat.
 
 C’est ici : 👈
 https://ngl.link/jestonoff11941`,
-};
-   
-"1507164423276466268": `__**Stickied Message:**__
+
+    "1507164423276466268": `__**Stickied Message:**__
 
 ## Commande : /jail
 
@@ -83,28 +74,20 @@ https://ngl.link/jestonoff11941`,
 - Messages offensants = 10 minutes
 - Leak / Dox / Swatt / Menaces = 60 minutes (ATT BAN)
 - NSFW = 60 minutes (ATT BAN)`,
-    
 
-
-"1507078497959546983": `__**Stickied Message:**__
+    "1507078497959546983": `__**Stickied Message:**__
 
 # Format :
 
 ~~                      ~~
 
 \`\`\`
-
 **PSEUDO :**
-
 **RANK :**
-
 **RAISON :**
-
 **DURÉE :**
-
 **PING :** vos managers ou directeurs ou superviseurs en fonction de votre mission/équipe
-
-\`\`\``,
+\`\`\``
 };
 
 const lastSticky = new Map();
