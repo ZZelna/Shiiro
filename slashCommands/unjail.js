@@ -12,7 +12,7 @@ const jailPath = path.join(
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("unjail")
+        .setName("secureunjail")
         .setDescription("Libère un membre")
         .addUserOption(option =>
             option
