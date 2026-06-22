@@ -98,7 +98,6 @@ https://ngl.link/jestonoff11941`,
 
 # Pensez à ajouter le rôle absent aux membres de vos équipes / missions`,
 };
-
 const lastSticky = new Map();
 const cooldown = new Map();
 
