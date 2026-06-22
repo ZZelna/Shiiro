@@ -76,8 +76,9 @@ module.exports = {
         .setName("minutes")
         .setDescription("Durée personnalisée (uniquement si motif = Personnalisé)")
         .setRequired(false)
-)
-    async execute(interaction) {
+),
+
+async execute(interaction) {
 
         const member =
             interaction.options.getMember("membre");
@@ -149,7 +150,18 @@ if (motif === "custom") {
                 .filter(role => role.managed)
                 .map(role => role.id);
 
-        await member.roles.set([
+       const prisonRole =
+    interaction.guild.roles.cache.get(
+        JAIL_ROLE
+    );
+
+if (!prisonRole) {
+    return interaction.reply({
+        content: "❌ Rôle prison introuvable.",
+        ephemeral: true
+    });
+}
+    await member.roles.set([
             ...managedRoles,
             prisonRole.id
         ]);
