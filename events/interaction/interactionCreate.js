@@ -292,49 +292,40 @@ module.exports = async (interaction) => {
    // =========================
 // PANEL CASINO
 // =========================
-
-const CasinoProfile =
-    require("../../models/CasinoProfile");
-
 if (
     interaction.isButton() &&
     interaction.customId === "create_profile"
 ) {
 
-    const roleId =
-        "1507055410211848213";
+    const roleId = "1507055410211848213";
 
-    const alreadyProfile =
+    // Vérifie si le profil existe déjà
+    const existing =
         await CasinoProfile.findOne({
             userId: interaction.user.id
         });
 
-    if (alreadyProfile) {
-
+    if (existing) {
         return interaction.reply({
-            content:
-                "❌ Tu possèdes déjà un profil casino.",
+            content: "❌ Tu possèdes déjà un profil casino.",
             ephemeral: true
         });
-
     }
 
+    // Création du profil avec 1000 ¥
     await CasinoProfile.create({
         userId: interaction.user.id,
         yens: 1000,
         gifts: 0
     });
 
-    await interaction.member.roles.add(
-        roleId
-    );
+    // Ajout du rôle casino
+    await interaction.member.roles.add(roleId);
 
     return interaction.reply({
-        content:
-            "✅ Ton profil casino a été créé.\n💹 Tu reçois **1000 ¥** de bienvenue.",
+        content: "✅ Ton profil casino a été créé avec succès.\n💴 Tu reçois **1000 ¥** de bienvenue.",
         ephemeral: true
     });
-
 }
 // =========================
 // GIVEAWAYS
