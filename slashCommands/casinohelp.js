@@ -18,7 +18,6 @@ new EmbedBuilder()
             .setColor("Gold")
             .setTitle("🎰 Commandes globales casino (1/4)")
             .setDescription(`
-            .setDescription(`
 • \`+casino\` : voir son profil casino
 • \`+daily\` : avoir son quota quotidien
 • \`+claim\` : récupérer son quota
