@@ -3,7 +3,7 @@ SlashCommandBuilder,
 EmbedBuilder
 } = require("discord.js");
 
-const WARN1_ROLE = "1518890473727463485”;
+const WARN1_ROLE = "1518890473727463485";
 const WARN2_ROLE = "1518890512172453898";
 const WARN3_ROLE = "1518890554652496013";
 const BAN_ROLE = "1518890629310971944";
