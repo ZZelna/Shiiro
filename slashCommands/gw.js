@@ -84,18 +84,6 @@ const emoji =
         : `<:nitro:${NITRO_EMOJI}>`;
 
 const giveawayTitle = `Giveaway: ${prize}`;
-
-const embed = new EmbedBuilder()
-    .setColor("#0000FF")
-    .setDescription(
-`# ${giveawayTitle}
-
-Cliquez sur le bouton ${emoji} pour participer
-*Nombre de gagnants:* ${winnersCount}
-
-## Fin du giveaway
-<t:${Math.floor(endAt / 1000)}:R>`
-    );
 const giveaway =
             await Giveaway.create({
                 guildId: interaction.guild.id,
