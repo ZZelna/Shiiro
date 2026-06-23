@@ -7,7 +7,7 @@ const Giveaway = require("../models/Giveaway");
 
 const allowedRoles = [
     "1506674274826584284",
-    "1507082580414173234"
+    "1506709088451690708"
 ];
 
 module.exports = {
