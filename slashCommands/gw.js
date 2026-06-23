@@ -78,18 +78,12 @@ module.exports = {
         const endAt =
             Date.now() +
             duration * 60 * 1000;
-
-        const emoji =
-type === "casino"
-? `<:casino:${CASINO_EMOJI}>`
-: `<:nitro:${NITRO_EMOJI}>`;
-
-const embed = new EmbedBuilder()
-.setColor("#0000FF")
-const giveawayTitle =
+const emoji =
     type === "casino"
-        ? `Giveaway: ${prize}`
-        : `Giveaway: ${prize}`;
+        ? `<:casino:${CASINO_EMOJI}>`
+        : `<:nitro:${NITRO_EMOJI}>`;
+
+const giveawayTitle = `Giveaway: ${prize}`;
 
 const embed = new EmbedBuilder()
     .setColor("#0000FF")
@@ -101,8 +95,8 @@ Cliquez sur le bouton ${emoji} pour participer
 
 ## Fin du giveaway
 <t:${Math.floor(endAt / 1000)}:R>`
-);
-        const giveaway =
+    );
+const giveaway =
             await Giveaway.create({
                 guildId: interaction.guild.id,
                 channelId: interaction.channel.id,
