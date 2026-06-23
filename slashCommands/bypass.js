@@ -21,7 +21,7 @@ data: new SlashCommandBuilder()
         .setName("id")
         .setDescription("ID utilisateur à ajouter au bypass")
         .setRequired(true)
-)
+),
 async execute(interaction) {
 
     const hasPermission =
