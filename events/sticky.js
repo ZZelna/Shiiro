@@ -16,7 +16,7 @@ const stickyMessages = {
 
 un chiffre a la fois merci !!!!`,
 
-"1506960053368782919": `__**Stickied Message:**__
+"1519036331408494682": `__**Stickied Message:**__
 
 uniquement des suggestions ici 👈
 
