@@ -54,21 +54,14 @@ async execute(interaction) {
 
     bypassData.users.push(userId);
 
-}
-        fs.writeFileSync(
-            path.join(
-                __dirname,
-                "../data/bypass.json"
-            ),
-            JSON.stringify(
-                bypassData,
-                null,
-                4
-            )
-        );
-    }
+    fs.writeFileSync(
+        path.join(__dirname, "../data/bypass.json"),
+        JSON.stringify(bypassData, null, 4)
+    );
 
-    const embed = new EmbedBuilder()
+}
+
+const embed = new EmbedBuilder(
         .setColor("Green")
         .setTitle("✅ By-pass ajouté")
        .setDescription(
