@@ -287,7 +287,11 @@ module.exports = async (interaction) => {
     });
 }
         }
-    if (
+   // =========================
+// PANEL CASINO
+// =========================
+
+if (
     interaction.isButton() &&
     interaction.customId === "create_profile"
 ) {
@@ -306,7 +310,7 @@ module.exports = async (interaction) => {
     await interaction.member.roles.add(roleId);
 
     return interaction.reply({
-        content: "✅ Ton profil casino a été créé.",
+        content: "✅ Ton profil casino a été créé avec succès.",
         ephemeral: true
     });
 }
