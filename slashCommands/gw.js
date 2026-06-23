@@ -79,27 +79,16 @@ module.exports = {
             Date.now() +
             duration * 60 * 1000;
 const emoji =
+
     type === "casino"
+
         ? `<:casino:${CASINO_EMOJI}>`
+
         : `<:nitro:${NITRO_EMOJI}>`;
 
-const giveawayTitle = `Giveaway: ${prize}`;
-const giveaway =
-            await Giveaway.create({
-                guildId: interaction.guild.id,
-                channelId: interaction.channel.id,
-                prize,
-                type,
-                winnersCount,
-                endAt,
-                participants: []
-            });
-
-        const row = new ActionRowBuilder()
-.addComponents(
-    const embed = new EmbedBuilder()
-.setColor("#0000FF")
-.setDescription(
+const embed = new EmbedBuilder()
+    .setColor("#0000FF")
+    .setDescription(
 `# Giveaway: ${prize}
 
 Cliquez sur le bouton ${emoji} pour participer
@@ -108,18 +97,42 @@ Cliquez sur le bouton ${emoji} pour participer
 ## Fin du giveaway
 <t:${Math.floor(endAt / 1000)}:R>`
 );
-        const message =
-            await interaction.channel.send({
-                embeds: [embed],
-                components: [row]
-            });
+const giveaway =
+    await Giveaway.create({
+        guildId: interaction.guild.id,
+        channelId: interaction.channel.id,
+        prize,
+        type,
+        winnersCount,
+        endAt,
+        participants: []
+    });
 
-        giveaway.messageId = message.id;
-        await giveaway.save();
+const row = new ActionRowBuilder()
+.addComponents(
+    new ButtonBuilder()
+        .setCustomId(`gw_${giveaway._id}`)
+        .setStyle(ButtonStyle.Secondary)
+        .setEmoji(
+            type === "casino"
+                ? CASINO_EMOJI
+                : NITRO_EMOJI
+        )
+        .setLabel("0")
+);
 
-        await interaction.reply({
-            content: "✅ Giveaway créé.",
-            ephemeral: true
-        });
+const message =
+    await interaction.channel.send({
+        embeds: [embed],
+        components: [row]
+    });
+
+giveaway.messageId = message.id;
+await giveaway.save();
+
+await interaction.reply({
+    content: "✅ Giveaway créé.",
+    ephemeral: true
+});
     }
 };
