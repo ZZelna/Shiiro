@@ -16,12 +16,12 @@ module.exports = {
 data: new SlashCommandBuilder()
 .setName("bypass")
 .setDescription("Ajoute un utilisateur à la liste bypass")
-.addUserOption(option =>
-option
-.setName("membre")
-.setDescription("Membre à ajouter")
-.setRequired(true)
-),
+.addStringOption(option =>
+    option
+        .setName("id")
+        .setDescription("ID utilisateur à ajouter au bypass")
+        .setRequired(true)
+)
 async execute(interaction) {
 
     const hasPermission =
@@ -36,8 +36,8 @@ async execute(interaction) {
         });
     }
 
-    const member =
-        interaction.options.getUser("membre");
+    const userId =
+    interaction.options.getString("id");
 
     if (!member) {
         return interaction.reply({
@@ -70,9 +70,9 @@ async execute(interaction) {
     const embed = new EmbedBuilder()
         .setColor("Green")
         .setTitle("✅ By-pass ajouté")
-        .setDescription(
-            `${member} a été ajouté à la liste bypass.`
-        )
+       .setDescription(
+    `L'ID \`${userId}\` a été ajouté à la liste bypass.`
+)
         .addFields({
             name: "👮 Responsable",
             value: interaction.user.tag
