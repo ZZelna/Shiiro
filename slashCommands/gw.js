@@ -109,15 +109,16 @@ const giveaway =
 
         const row = new ActionRowBuilder()
 .addComponents(
-    new ButtonBuilder()
-        .setCustomId(`gw_${giveaway._id}`)
-        .setStyle(ButtonStyle.Secondary)
-        .setEmoji(
-            type === "casino"
-            ? CASINO_EMOJI
-            : NITRO_EMOJI
-        )
-        .setLabel("0")
+    const embed = new EmbedBuilder()
+.setColor("#0000FF")
+.setDescription(
+`# Giveaway: ${prize}
+
+Cliquez sur le bouton ${emoji} pour participer
+*Nombre de gagnants:* ${winnersCount}
+
+## Fin du giveaway
+<t:${Math.floor(endAt / 1000)}:R>`
 );
         const message =
             await interaction.channel.send({
