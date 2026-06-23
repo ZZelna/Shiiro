@@ -304,40 +304,28 @@ if (interaction.isButton()) {
             await Giveaway.findById(giveawayId);
 
         if (!giveaway) {
-
             return interaction.reply({
                 content: "❌ Giveaway introuvable.",
                 ephemeral: true
             });
-
         }
 
         if (giveaway.ended) {
-
             return interaction.reply({
                 content: "❌ Ce giveaway est terminé.",
                 ephemeral: true
             });
-
         }
 
-        if (
-            giveaway.participants.includes(
-                interaction.user.id
-            )
-        ) {
-
+        if (giveaway.participants.includes(interaction.user.id)) {
             giveaway.participants =
                 giveaway.participants.filter(
                     id => id !== interaction.user.id
                 );
-
         } else {
-
             giveaway.participants.push(
                 interaction.user.id
             );
-
         }
 
         await giveaway.save();
@@ -351,11 +339,13 @@ if (interaction.isButton()) {
             EmbedBuilder.from(
                 msg.embeds[0]
             );
-const emoji =
-    giveaway.type === "casino"
-        ? "<:casino:1507449727266979922>"
-        : "<:nitro:1508097922489647234>";
-embed.setDescription(
+
+        const emoji =
+            giveaway.type === "casino"
+                ? "<:casino:1507449727266979922>"
+                : "<:nitro:1508097922489647234>";
+
+        embed.setDescription(
 `# Giveaway: ${giveaway.prize}
 
 Cliquez sur le bouton ${emoji} pour participer
@@ -363,26 +353,27 @@ Cliquez sur le bouton ${emoji} pour participer
 
 ## Fin du giveaway
 <t:${Math.floor(giveaway.endAt / 1000)}:R>`
-);
-        const row = new ActionRowBuilder()
-.addComponents(
-    new ButtonBuilder()
-        .setCustomId(`gw_${giveaway._id}`)
-        .setStyle(ButtonStyle.Secondary)
-        .setEmoji(
-            giveaway.type === "casino"
-                ? "1507449727266979922"
-                : "1508097922489647234"
-        )
-        .setLabel(
-            String(giveaway.participants.length)
-        )
-);
+        );
 
-await msg.edit({
-    embeds: [embed],
-    components: [row]
-});
+        const row = new ActionRowBuilder()
+            .addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`gw_${giveaway._id}`)
+                    .setStyle(ButtonStyle.Secondary)
+                    .setEmoji(
+                        giveaway.type === "casino"
+                            ? "1507449727266979922"
+                            : "1508097922489647234"
+                    )
+                    .setLabel(
+                        String(giveaway.participants.length)
+                    )
+            );
+
+        await msg.edit({
+            embeds: [embed],
+            components: [row]
+        });
 
         return interaction.reply({
             content:
@@ -393,9 +384,7 @@ await msg.edit({
                     : "❌ Participation retirée.",
             ephemeral: true
         });
-
     }
-
 }
     // =========================
     // MODAL
