@@ -1,36 +1,35 @@
 const mongoose = require("mongoose");
 
-const giveawaySchema = new mongoose.Schema({
-    messageId: String,
-    channelId: String,
-    guildId: String,
-
-    type: String,
-    prize: String,
-
-    winnersCount: Number,
-
-    participants: {
-        type: [String],
-        default: []
-    },
-
-    endAt: Number,
-
-    ended: {
-        type: Boolean,
-        default: false
-    },
-
-    winners: {
-        type: [String],
-        default: []
-    },
-
-    createdBy: String
-});
-
 module.exports = mongoose.model(
     "Giveaway",
-    giveawaySchema
+    new mongoose.Schema({
+
+        messageId: String,
+        channelId: String,
+        guildId: String,
+
+        prize: String,
+
+        type: String,
+
+        winnersCount: Number,
+
+        participants: {
+            type: [String],
+            default: []
+        },
+
+        winners: {
+            type: [String],
+            default: []
+        },
+
+        endAt: Number,
+
+        ended: {
+            type: Boolean,
+            default: false
+        }
+
+    })
 );
