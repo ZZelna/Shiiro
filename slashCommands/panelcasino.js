@@ -50,7 +50,7 @@ Vous trouverez ici bas la boutique du serveur :`
                 new ButtonBuilder()
                     .setCustomId("create_profile")
                     .setLabel("Créer mon profil")
-                    .setEmoji("🎰")
+                    .setEmoji("💹")
                     .setStyle(ButtonStyle.Primary)
             );
 
