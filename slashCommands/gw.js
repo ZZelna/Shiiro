@@ -86,8 +86,15 @@ type === "casino"
 
 const embed = new EmbedBuilder()
 .setColor("#0000FF")
-.setDescription(
-`# Giveaway: ${prize}
+const giveawayTitle =
+    type === "casino"
+        ? `Giveaway: ${prize}`
+        : `Giveaway: ${prize}`;
+
+const embed = new EmbedBuilder()
+    .setColor("#0000FF")
+    .setDescription(
+`# ${giveawayTitle}
 
 Cliquez sur le bouton ${emoji} pour participer
 *Nombre de gagnants:* ${winnersCount}
