@@ -80,33 +80,21 @@ module.exports = {
             duration * 60 * 1000;
 
         const emoji =
-            type === "casino"
-                ? `<:casino:${CASINO_EMOJI}>`
-                : `<:nitro:${NITRO_EMOJI}>`;
+type === "casino"
+? `<:casino:${CASINO_EMOJI}>`
+: `<:nitro:${NITRO_EMOJI}>`;
 
-        const embed = new EmbedBuilder()
-            .setColor("Gold")
-            .setTitle(`${emoji} GIVEAWAY ${emoji}`)
-            .setDescription(
-                `### 🎁 Lot\n${prize}\n\n` +
-                `### ⏳ Fin\n<t:${Math.floor(endAt / 1000)}:R>`
-            )
-            .addFields(
-                {
-                    name: "🏆 Gagnants",
-                    value: String(winnersCount),
-                    inline: true
-                },
-                {
-                    name: "👥 Participants",
-                    value: "0",
-                    inline: true
-                }
-            )
-            .setFooter({
-                text: `Créé par ${interaction.user.tag}`
-            });
+const embed = new EmbedBuilder()
+.setColor("#0000FF")
+.setDescription(
+`# Giveaway: ${prize}
 
+Cliquez sur le bouton ${emoji} pour participer
+*Nombre de gagnants:* ${winnersCount}
+
+## Fin du giveaway
+<t:${Math.floor(endAt / 1000)}:R>`
+);
         const giveaway =
             await Giveaway.create({
                 guildId: interaction.guild.id,
@@ -118,24 +106,18 @@ module.exports = {
                 participants: []
             });
 
-        const row =
-            new ActionRowBuilder()
-                .addComponents(
-                    new ButtonBuilder()
-                        .setCustomId(
-                            `gw_${giveaway._id}`
-                        )
-                        .setLabel("Participer")
-                        .setStyle(
-                            ButtonStyle.Success
-                        )
-                        .setEmoji(
-                            type === "casino"
-                                ? CASINO_EMOJI
-                                : NITRO_EMOJI
-                        )
-                );
-
+        const row = new ActionRowBuilder()
+.addComponents(
+    new ButtonBuilder()
+        .setCustomId(`gw_${giveaway._id}`)
+        .setStyle(ButtonStyle.Secondary)
+        .setEmoji(
+            type === "casino"
+            ? CASINO_EMOJI
+            : NITRO_EMOJI
+        )
+        .setLabel("0")
+);
         const message =
             await interaction.channel.send({
                 embeds: [embed],
