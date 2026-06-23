@@ -6,6 +6,7 @@ EmbedBuilder
 const WARN1_ROLE = "1518890473727463485";
 const WARN2_ROLE = "1518890512172453898";
 const WARN3_ROLE = "1518890554652496013";
+const BAN_ROLE = "1518890629310971944";
 
 const STAFF_ROLES = [
 "1506674274826584284",
@@ -54,34 +55,41 @@ option
 
     let result;
 
-    if (member.roles.cache.has(WARN3_ROLE)) {
+    if (member.roles.cache.has(BAN_ROLE)) {
 
-        await member.roles.remove(WARN3_ROLE);
-        await member.roles.add(WARN2_ROLE);
+    await member.roles.remove(BAN_ROLE);
+    await member.roles.add(WARN3_ROLE);
 
-        result = "Warn 3 ➜ Warn 2";
+    result = "BAN ➜ Warn 3";
 
-    } else if (member.roles.cache.has(WARN2_ROLE)) {
+} else if (member.roles.cache.has(WARN3_ROLE)) {
 
-        await member.roles.remove(WARN2_ROLE);
-        await member.roles.add(WARN1_ROLE);
+    await member.roles.remove(WARN3_ROLE);
+    await member.roles.add(WARN2_ROLE);
 
-        result = "Warn 2 ➜ Warn 1";
+    result = "Warn 3 ➜ Warn 2";
 
-    } else if (member.roles.cache.has(WARN1_ROLE)) {
+} else if (member.roles.cache.has(WARN2_ROLE)) {
 
-        await member.roles.remove(WARN1_ROLE);
+    await member.roles.remove(WARN2_ROLE);
+    await member.roles.add(WARN1_ROLE);
 
-        result = "Warn 1 supprimé";
+    result = "Warn 2 ➜ Warn 1";
 
-    } else {
+} else if (member.roles.cache.has(WARN1_ROLE)) {
 
-        return interaction.reply({
-            content: "❌ Ce membre n'a aucun warn.",
-            ephemeral: true
-        });
-    }
+    await member.roles.remove(WARN1_ROLE);
 
+    result = "Warn 1 supprimé";
+
+} else {
+
+    return interaction.reply({
+        content: "❌ Ce membre n'a aucun warn.",
+        ephemeral: true
+    });
+
+}
     const embed =
         new EmbedBuilder()
             .setColor("Green")
