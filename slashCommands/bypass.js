@@ -61,7 +61,7 @@ async execute(interaction) {
 
 }
 
-const embed = new EmbedBuilder(
+const embed = new EmbedBuilder()
         .setColor("Green")
         .setTitle("✅ By-pass ajouté")
        .setDescription(
