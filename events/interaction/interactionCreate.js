@@ -351,32 +351,38 @@ if (interaction.isButton()) {
             EmbedBuilder.from(
                 msg.embeds[0]
             );
+const emoji =
+    giveaway.type === "casino"
+        ? "<:casino:1507449727266979922>"
+        : "<:nitro:1508097922489647234>";
+embed.setDescription(
+`# Giveaway: ${giveaway.prize}
 
-        embed.setFields(
-            {
-                name: "🎁 Lot",
-                value: giveaway.prize,
-                inline: true
-            },
-            {
-                name: "🏆 Gagnants",
-                value: String(
-                    giveaway.winnersCount
-                ),
-                inline: true
-            },
-            {
-                name: "👥 Participants",
-                value: String(
-                    giveaway.participants.length
-                ),
-                inline: true
-            }
-        );
+Cliquez sur le bouton ${emoji} pour participer
+*Nombre de gagnants:* ${giveaway.winnersCount}
 
-        await msg.edit({
-            embeds: [embed]
-        });
+## Fin du giveaway
+<t:${Math.floor(giveaway.endAt / 1000)}:R>`
+);
+        const row = new ActionRowBuilder()
+.addComponents(
+    new ButtonBuilder()
+        .setCustomId(`gw_${giveaway._id}`)
+        .setStyle(ButtonStyle.Secondary)
+        .setEmoji(
+            giveaway.type === "casino"
+                ? "1507449727266979922"
+                : "1508097922489647234"
+        )
+        .setLabel(
+            String(giveaway.participants.length)
+        )
+);
+
+await msg.edit({
+    embeds: [embed],
+    components: [row]
+});
 
         return interaction.reply({
             content:
