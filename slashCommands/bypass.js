@@ -39,13 +39,6 @@ async execute(interaction) {
     const userId =
     interaction.options.getString("id");
 
-    if (!member) {
-        return interaction.reply({
-            content: "❌ Utilisateur introuvable.",
-            ephemeral: true
-        });
-    }
-
     if (!bypassData.users) {
         bypassData.users = [];
     }
