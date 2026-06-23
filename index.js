@@ -541,6 +541,86 @@ if (logChannel) {
     }
 
 }, 10000);
+const Giveaway = require("./models/Giveaway");
+
+setInterval(async () => {
+
+    const giveaways = await Giveaway.find({
+        ended: false,
+        endAt: { $lte: Date.now() }
+    });
+
+    for (const giveaway of giveaways) {
+
+        giveaway.ended = true;
+
+        let winners = [];
+
+        if (giveaway.participants.length > 0) {
+
+            const shuffled =
+                [...giveaway.participants]
+                    .sort(() => Math.random() - 0.5);
+
+            winners =
+                shuffled.slice(
+                    0,
+                    giveaway.winnersCount
+                );
+
+            giveaway.winners = winners;
+
+        }
+
+        await giveaway.save();
+
+        try {
+
+            const channel =
+                await client.channels.fetch(
+                    giveaway.channelId
+                );
+
+            const msg =
+                await channel.messages.fetch(
+                    giveaway.messageId
+                );
+
+            const { EmbedBuilder } =
+                require("discord.js");
+
+            const embed =
+                EmbedBuilder.from(
+                    msg.embeds[0]
+                );
+
+            embed
+                .setColor("Red")
+                .setTitle("🎉 GIVEAWAY TERMINÉ");
+
+            await msg.edit({
+                embeds: [embed],
+                components: []
+            });
+
+            if (winners.length > 0) {
+
+                await channel.send({
+                    content:
+                        `🎉 Félicitations ${winners.map(id => `<@${id}>`).join(", ")} ! Vous remportez **${giveaway.prize}**`
+                });
+
+            }
+
+        } catch (err) {
+
+            console.log(err);
+
+        }
+
+    }
+
+}, 10000);
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
 client.login(
     process.env.DISCORD_TOKEN
