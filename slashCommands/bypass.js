@@ -50,10 +50,11 @@ async execute(interaction) {
         bypassData.users = [];
     }
 
-    if (!bypassData.users.includes(member.id)) {
+    if (!bypassData.users.includes(userId)) {
 
-        bypassData.users.push(member.id);
+    bypassData.users.push(userId);
 
+}
         fs.writeFileSync(
             path.join(
                 __dirname,
