@@ -34,7 +34,7 @@ new EmbedBuilder()
 • \`+bountystatus\` : voir une prime
 • \`+bounty\` : poser une prime
 • \`+bountylist\` : liste des primes
-`)
+`),
 new EmbedBuilder()
  .setColor("Blue")
  .setTitle("🛠️ Commandes admins casino (2/4)")
@@ -50,7 +50,7 @@ new EmbedBuilder()
 • \`+pingcasino\` : mentionner les joueurs
 • \`+giveboosts\` : donner un boost
 • \`+giverobs\` : donner des robs
-`)
+`),
 new EmbedBuilder()
 .setColor("Red")
 .setTitle("👑 Owners casino (3/4)")
@@ -65,7 +65,7 @@ new EmbedBuilder()
 • \`+wl\` : nouvelle gestion coins
 • \`+wlremove\` : retirer gestion coins
 • \`+wllist\` : voir la liste gestion coins
-`)
+`),
 new EmbedBuilder()
 .setColor("Green")
 .setTitle("🏆 Commandes GDC casino (4/4)")
