@@ -287,6 +287,29 @@ module.exports = async (interaction) => {
     });
 }
         }
+    if (
+    interaction.isButton() &&
+    interaction.customId === "create_profile"
+) {
+
+    const roleId = "1507055410211848213";
+
+    if (
+        interaction.member.roles.cache.has(roleId)
+    ) {
+        return interaction.reply({
+            content: "❌ Tu possèdes déjà un profil casino.",
+            ephemeral: true
+        });
+    }
+
+    await interaction.member.roles.add(roleId);
+
+    return interaction.reply({
+        content: "✅ Ton profil casino a été créé.",
+        ephemeral: true
+    });
+}
 // =========================
 // GIVEAWAYS
 // =========================
