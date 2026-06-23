@@ -287,7 +287,110 @@ module.exports = async (interaction) => {
     });
 }
         }
+// =========================
+// GIVEAWAYS
+// =========================
 
+const Giveaway = require("../../models/Giveaway");
+
+if (interaction.isButton()) {
+
+    if (interaction.customId.startsWith("gw_")) {
+
+        const giveawayId =
+            interaction.customId.replace("gw_", "");
+
+        const giveaway =
+            await Giveaway.findById(giveawayId);
+
+        if (!giveaway) {
+
+            return interaction.reply({
+                content: "❌ Giveaway introuvable.",
+                ephemeral: true
+            });
+
+        }
+
+        if (giveaway.ended) {
+
+            return interaction.reply({
+                content: "❌ Ce giveaway est terminé.",
+                ephemeral: true
+            });
+
+        }
+
+        if (
+            giveaway.participants.includes(
+                interaction.user.id
+            )
+        ) {
+
+            giveaway.participants =
+                giveaway.participants.filter(
+                    id => id !== interaction.user.id
+                );
+
+        } else {
+
+            giveaway.participants.push(
+                interaction.user.id
+            );
+
+        }
+
+        await giveaway.save();
+
+        const msg =
+            await interaction.channel.messages.fetch(
+                giveaway.messageId
+            );
+
+        const embed =
+            EmbedBuilder.from(
+                msg.embeds[0]
+            );
+
+        embed.setFields(
+            {
+                name: "🎁 Lot",
+                value: giveaway.prize,
+                inline: true
+            },
+            {
+                name: "🏆 Gagnants",
+                value: String(
+                    giveaway.winnersCount
+                ),
+                inline: true
+            },
+            {
+                name: "👥 Participants",
+                value: String(
+                    giveaway.participants.length
+                ),
+                inline: true
+            }
+        );
+
+        await msg.edit({
+            embeds: [embed]
+        });
+
+        return interaction.reply({
+            content:
+                giveaway.participants.includes(
+                    interaction.user.id
+                )
+                    ? "✅ Participation enregistrée."
+                    : "❌ Participation retirée.",
+            ephemeral: true
+        });
+
+    }
+
+}
     // =========================
     // MODAL
     // =========================
