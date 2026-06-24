@@ -763,14 +763,15 @@ client.on(
         for (const role of addedRoles.values()) {
 
             await logChannel.send({
-                content:
-`\\`\\`\\`diff
+               await logChannel.send({
+    content: `\`\`\`diff
 + Rôle ajouté.
 Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})
 Modérateur: ${moderator} (ID: ${moderatorId})
 Rôle: ${role.name} (ID: ${role.id})
 Action: Rôle ajouté. ✅
-\\`\\`\\``
+\`\`\``
+});
             });
 
         }
