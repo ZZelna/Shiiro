@@ -76,7 +76,24 @@ if (!target) {
         await GlobalBlacklist.deleteOne({
             userId: target.id
         });
+const logChannel =
+interaction.client.channels.cache.get(
+    "1519342181893148784"
+);
 
+if (logChannel) {
+
+    await logChannel.send({
+        content:
+`\`\`\`diff
+- Blacklist Globale retirée.
+Utilisateur: ${target.tag} (ID: ${target.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Action: Utilisateur retiré de la blacklist. ✅
+\`\`\``
+    });
+
+}
         return interaction.reply({
             content:
 `\`\`\`diff
