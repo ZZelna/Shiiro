@@ -108,10 +108,15 @@ if (!target) {
             console.log(err);
 
         }
+const logGuild =
+    interaction.client.guilds.cache.get(
+        "1519364880677867550"
+    );
+
 const logChannel =
-interaction.client.channels.cache.get(
-    "1519342181893148784"
-);
+    logGuild?.channels.cache.get(
+        "1519400651745132575"
+    );
 
 if (logChannel) {
 
