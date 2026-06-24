@@ -108,7 +108,25 @@ if (!target) {
             console.log(err);
 
         }
+const logChannel =
+interaction.client.channels.cache.get(
+    "1519342181893148784"
+);
 
+if (logChannel) {
+
+    await logChannel.send({
+        content:
+`\`\`\`diff
+- Blacklist Globale ajoutée.
+Utilisateur: ${target.tag} (ID: ${target.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Raison: ${reason}
+Action: Utilisateur blacklisté. ⛔
+\`\`\``
+    });
+
+}
         return interaction.reply({
             content:
 `\`\`\`diff
