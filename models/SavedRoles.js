@@ -8,6 +8,10 @@ mongoose.model(
     "SavedRoles",
     new mongoose.Schema({
         userId: String,
-        roles: [String]
+        roles: [String],
+        savedAt: {
+            type: Date,
+            default: Date.now
+        }
     })
 );
