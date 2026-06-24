@@ -21,6 +21,11 @@ module.exports = mongoose.model(
             default: 0
         },
 
+        weeklyYens: {
+            type: Number,
+            default: 0
+        },
+
         channelId: String,
 
         createdAt: {
