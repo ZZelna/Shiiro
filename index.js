@@ -741,13 +741,13 @@ client.on(
 
             await logChannel.send({
                 content:
-`\\`\\`\\`diff
-- Rôle retiré.
-Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})
-Modérateur: ${moderator} (ID: ${moderatorId})
-Rôle: ${role.name} (ID: ${role.id})
-Action: Rôle retiré. ❌
-\\`\\`\\``
+"```diff\n" +
+"- Rôle retiré.\n" +
+`Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
+`Modérateur: ${moderator} (ID: ${moderatorId})\n` +
+`Rôle: ${role.name} (ID: ${role.id})\n` +
+"Action: Rôle retiré. ❌\n" +
+"```"
             });
 
         }
