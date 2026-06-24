@@ -2,7 +2,7 @@ module.exports = async (member) => {
 
     const logs =
         member.guild.channels.cache.get(
-            "1516880006075383909"
+            "1516880092725248160"
         );
 
     if (!logs) return;
