@@ -1,27 +1,34 @@
-const Clan = require("../models/Clan");
-const CasinoProfile = require("../models/CasinoProfile");
+const Clan =
+require("../models/Clan");
 
-module.exports = async (userId) => {
+const CasinoProfile =
+require("../models/CasinoProfile");
 
-    const clan = await Clan.findOne({
+module.exports = async (
+    userId
+) => {
+
+    const clan =
+    await Clan.findOne({
         members: userId
     });
 
     if (!clan) return;
 
     const profiles =
-        await CasinoProfile.find({
-            userId: {
-                $in: clan.members
-            }
-        });
+    await CasinoProfile.find({
+        userId: {
+            $in: clan.members
+        }
+    });
 
     const total =
-        profiles.reduce(
-            (sum, profile) =>
-                sum + (profile.yens || 0),
-            0
-        );
+    profiles.reduce(
+        (sum, profile) =>
+            sum +
+            (profile.yens || 0),
+        0
+    );
 
     clan.totalYens = total;
 
