@@ -11,14 +11,14 @@ module.exports = {
         .setDescription(
             "Retirer un utilisateur de la blacklist globale"
         )
-        .addUserOption(option =>
-            option
-                .setName("joueur")
-                .setDescription(
-                    "Utilisateur à retirer de la BL"
-                )
-                .setRequired(true)
-        ),
+        .addStringOption(option =>
+    option
+        .setName("id")
+        .setDescription(
+            "ID de l'utilisateur"
+        )
+        .setRequired(true)
+)
 
     async execute(interaction) {
 
@@ -39,11 +39,25 @@ module.exports = {
 
         }
 
-        const target =
-        interaction.options.getUser(
-            "joueur"
-        );
+        const targetId =
+interaction.options.getString(
+    "id"
+);
 
+const target =
+await interaction.client.users
+    .fetch(targetId)
+    .catch(() => null);
+
+if (!target) {
+
+    return interaction.reply({
+        content:
+        "❌ Utilisateur introuvable.",
+        ephemeral: true
+    });
+
+}
         const blacklisted =
         await GlobalBlacklist.findOne({
             userId: target.id
