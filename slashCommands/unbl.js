@@ -76,6 +76,18 @@ if (!target) {
         await GlobalBlacklist.deleteOne({
             userId: target.id
         });
+        try {
+
+    await interaction.guild.members.unban(
+        target.id,
+        "Retrait de la blacklist globale"
+    );
+
+} catch (err) {
+
+    console.log(err);
+
+}
 const logChannel =
 interaction.client.channels.cache.get(
     "1519342181893148784"
