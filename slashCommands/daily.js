@@ -57,6 +57,12 @@ module.exports = {
         profile.lastDaily = new Date();
 
         await profile.save();
+        const updateClanYens =
+require("../utils/updateClanYens");
+
+await updateClanYens(
+    interaction.user.id
+);
 
         const embed =
     new EmbedBuilder()
