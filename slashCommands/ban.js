@@ -87,37 +87,16 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
             reason: `${reason} | Ban par ${interaction.user.tag}`
         });
 
-        const embed = new EmbedBuilder()
-            .setColor("#ED4245")
-            .setTitle("🔨 Bannissement effectué")
-            .setThumbnail(
-                member.user.displayAvatarURL({
-                    dynamic: true
-                })
-            )
-            .addFields(
-                {
-                    name: "👤 Utilisateur",
-                    value: member.user.tag,
-                    inline: true
-                },
-                {
-                    name: "📋 Raison",
-                    value: reason,
-                    inline: true
-                },
-                {
-                    name: "🛡️ Juge",
-                    value: interaction.user.tag,
-                    inline: true
-                }
-            )
-            .setTimestamp();
-
         await interaction.reply({
-            embeds: [embed]
-        });
-
+    content:
+`\`\`\`diff
+- Bannissement effectué.
+Utilisateur: ${member.user.tag} (ID: ${member.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Raison: ${reason}
+Action: Utilisateur banni. 🔨
+\`\`\``
+});
     } catch (err) {
 
         console.error(err);
