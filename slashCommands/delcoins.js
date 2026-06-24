@@ -82,7 +82,20 @@ module.exports = {
             profile.yens = 0;
 
         await profile.save();
-        await updateClanYens(
+       try {
+
+    await updateClanYens(
+        target.id
+    );
+
+} catch (err) {
+
+    console.error(
+        "[CLAN ERROR DELCOINS]",
+        err
+    );
+
+}
     user.id
 );
 
