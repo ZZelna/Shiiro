@@ -1,6 +1,6 @@
 const stickyMessages = {
 
- "1519324372329042020": `__**Stickied Message:**__
+ "1506685260291768532": `__**Stickied Message:**__
 
 **Uniquement des commandes ici !!! Pas de discussions !!!**`,
 
@@ -63,7 +63,7 @@ Ici la règle principale est l’anonymat.
 C’est ici : 👈
 https://ngl.link/jestonoff11941`,
 
-"1507164423276466268": `__**Stickied Message:**__
+"1519324372329042020": `__**Stickied Message:**__
 
 ## Commande : /jail
 
