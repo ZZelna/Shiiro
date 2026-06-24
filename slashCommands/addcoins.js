@@ -80,6 +80,12 @@ module.exports = {
         profile.yens += amount;
 
         await profile.save();
+        const updateClanYens =
+require("../utils/updateClanYens");
+
+await updateClanYens(
+    user.id
+);
 
         const embed =
             new EmbedBuilder()
