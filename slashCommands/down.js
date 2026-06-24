@@ -74,14 +74,10 @@ module.exports = {
         await member.roles.set([]);
 
         await interaction.reply({
-            content:
-`\\`\\`\\`diff
+    content: `\`\`\`diff
 - Down effectué.
 Utilisateur: ${member.user.tag} (ID: ${member.id})
 Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
 Action: Tous les rôles ont été retirés. ⛔
-\\`\\`\\``
-        });
-
-    }
-};
+\`\`\``
+});
