@@ -48,7 +48,10 @@ module.exports = {
             });
         }
 
-        const reward = 500;
+        const reward =
+    Math.floor(
+        Math.random() * (5000 - 1000 + 1)
+    ) + 1000;
 
         profile.yens += reward;
         profile.lastDaily = new Date();
@@ -56,13 +59,16 @@ module.exports = {
         await profile.save();
 
         const embed =
-            new EmbedBuilder()
-                .setColor("Gold")
-                .setTitle("🎁 Récompense quotidienne")
-                .setDescription(
-                    `Tu as reçu **${reward} ¥** !\n\n💴 Solde actuel : **${profile.yens.toLocaleString()} ¥**`
-                );
-
+    new EmbedBuilder()
+        .setColor("Gold")
+        .setTitle("🎁 Daily Casino")
+        .setDescription(
+            `Tu as reçu **${reward.toLocaleString()} ¥** !`
+        )
+        .addFields({
+            name: "💴 Nouveau solde",
+            value: `${profile.yens.toLocaleString()} ¥`
+        });
         return interaction.reply({
             embeds: [embed],
             ephemeral: true
