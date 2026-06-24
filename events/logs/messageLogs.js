@@ -51,7 +51,10 @@ client.on(
         if (!channel)
             return;
 
-        await channel.send({
+        const attachment =
+message.attachments.first();
+
+await channel.send({
     content: `\`\`\`diff
 - Message supprimé.
 Utilisateur: ${message.author?.tag || "Inconnu"} (ID: ${message.author?.id || "Inconnu"})
@@ -60,11 +63,13 @@ Salon: #${message.channel.name}
 
 Contenu:
 ${shorten(message.content)}
-\`\`\``
+\`\`\``,
+    files: attachment
+        ? [attachment.url]
+        : []
 });
-        }
+  }
 );
-
 client.on(
     "messageUpdate",
     async (
@@ -102,7 +107,11 @@ client.on(
         if (!channel)
             return;
 
-        await channel.send({
+        const attachment =
+newMessage.attachments.first()
+|| oldMessage.attachments.first();
+
+await channel.send({
     content: `\`\`\`diff
 ~ Message modifié.
 Utilisateur: ${oldMessage.author.tag} (ID: ${oldMessage.author.id})
@@ -114,8 +123,10 @@ ${shorten(oldMessage.content)}
 
 Nouveau:
 ${shorten(newMessage.content)}
-\`\`\``
+\`\`\``,
+    files: attachment
+        ? [attachment.url]
+        : []
 });
-    }
 );
 };
