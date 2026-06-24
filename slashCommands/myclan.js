@@ -58,7 +58,22 @@ module.exports = {
                     {
                         name: "💴 Yens du Clan",
                         value:
-                            `${(clan.totalYens || 0).toLocaleString()} ¥`,
+                          const CasinoProfile =
+require("../models/CasinoProfile");
+
+const profiles =
+await CasinoProfile.find({
+    userId: {
+        $in: clan.members
+    }
+});
+
+const totalYens =
+profiles.reduce(
+    (sum, profile) =>
+        sum + (profile.yens || 0),
+    0
+);
                         inline: true
                     },
                     {
