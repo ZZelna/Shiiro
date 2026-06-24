@@ -34,6 +34,7 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates
     ]
 });
+require("./events/logs/messageLogs")(client);
 
 client.commands = new Map();
 
