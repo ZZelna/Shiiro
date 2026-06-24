@@ -5,7 +5,8 @@ const {
 
 const CasinoProfile =
     require("../models/CasinoProfile");
-
+const updateClanYens =
+    require("../systems/updateClanYens");
 const allowedRoles = [
     "1506674274826584284",
     "1506709088451690708"
@@ -85,8 +86,9 @@ module.exports = {
        try {
 
     await updateClanYens(
-        target.id
-    );
+    target.id,
+    -amount
+);
 
 } catch (err) {
 
