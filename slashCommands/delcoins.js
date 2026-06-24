@@ -96,10 +96,7 @@ module.exports = {
     );
 
 }
-    user.id
-);
-
-        const embed =
+  const embed =
             new EmbedBuilder()
                 .setColor("Red")
                 .setTitle(
