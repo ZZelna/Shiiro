@@ -1,6 +1,5 @@
 const {
-    SlashCommandBuilder,
-    EmbedBuilder
+    SlashCommandBuilder
 } = require("discord.js");
 
 const GlobalBlacklist =
@@ -96,30 +95,15 @@ module.exports = {
 
         }
 
-        const embed =
-        new EmbedBuilder()
-            .setColor("Red")
-            .setTitle(
-                "⛔ Blacklist Globale"
-            )
-            .setDescription(
-                `${target} a été blacklisté globalement.`
-            )
-            .addFields(
-                {
-                    name: "📝 Raison",
-                    value: reason
-                },
-                {
-                    name: "👮 Modérateur",
-                    value:
-                    `${interaction.user}`
-                }
-            )
-            .setTimestamp();
-
         return interaction.reply({
-            embeds: [embed]
+            content:
+`\`\`\`diff
+- Blacklist Globale ajoutée.
+Utilisateur: ${target.tag} (ID: ${target.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Raison: ${reason}
+Action: Utilisateur blacklisté. ⛔
+\`\`\``
         });
 
     }
