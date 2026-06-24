@@ -81,3 +81,6 @@ Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
 Action: Tous les rôles ont été retirés. ⛔
 \`\`\``
 });
+    }
+
+};
