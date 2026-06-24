@@ -11,13 +11,14 @@ module.exports = {
         .setDescription(
             "Blacklist globale un utilisateur"
         )
-        .addUserOption(option =>
-            option
-                .setName("joueur")
-                .setDescription(
-                    "Utilisateur à blacklist"
-                )
-                .setRequired(true)
+     .addStringOption(option =>
+    option
+        .setName("id")
+        .setDescription(
+            "ID de l'utilisateur"
+        )
+        .setRequired(true)
+)
         )
         .addStringOption(option =>
             option
@@ -47,11 +48,25 @@ module.exports = {
 
         }
 
-        const target =
-        interaction.options.getUser(
-            "joueur"
-        );
+        const targetId =
+interaction.options.getString(
+    "id"
+);
 
+const target =
+await interaction.client.users
+    .fetch(targetId)
+    .catch(() => null);
+
+if (!target) {
+
+    return interaction.reply({
+        content:
+        "❌ Utilisateur introuvable.",
+        ephemeral: true
+    });
+
+}
         const reason =
         interaction.options.getString(
             "raison"
