@@ -9,7 +9,8 @@ const {
     ActivityType,
     EmbedBuilder,
     REST,
-    Routes
+    Routes,
+    AuditLogEvent
 } = require("discord.js");
 
 const config = require("./config.json");
