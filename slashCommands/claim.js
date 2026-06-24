@@ -61,6 +61,9 @@ module.exports = {
         profile.lastClaim = now;
 
         await profile.save();
+        await updateClanYens(
+    interaction.user.id
+);
 
         const embed =
             new EmbedBuilder()
