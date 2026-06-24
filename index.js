@@ -659,9 +659,6 @@ client.on(
 
     }
 );
-const {
-    AuditLogEvent
-} = require("discord.js");
 
 client.on(
     "guildMemberUpdate",
@@ -787,7 +784,7 @@ client.on("roleCreate", async role => {
 
     const logChannel =
         logGuild.channels.cache.get(
-            "1519374123162271897"
+            "1519374244063084644"
         );
 
     if (!logChannel) return;
@@ -858,7 +855,7 @@ client.on("roleDelete", async role => {
 
     const logChannel =
         logGuild.channels.cache.get(
-            "1519374123162271897"
+            "1519374244063084644"
         );
 
     if (!logChannel) return;
@@ -918,10 +915,7 @@ client.on("roleDelete", async role => {
 
 });
 
-console.log(
-    "TOKEN =",
-    process.env.DISCORD_TOKEN
-);
+console.log("TOKEN =", process.env.DISCORD_TOKEN);
 
 client.login(
     process.env.DISCORD_TOKEN
