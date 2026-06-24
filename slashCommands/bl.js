@@ -18,8 +18,7 @@ module.exports = {
             "ID de l'utilisateur"
         )
         .setRequired(true)
-)
-        )
+ )
         .addStringOption(option =>
             option
                 .setName("raison")
