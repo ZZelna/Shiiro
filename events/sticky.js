@@ -1,6 +1,6 @@
 const stickyMessages = {
 
- "1514677335293563012": `__**Stickied Message:**__
+ "1519324372329042020": `__**Stickied Message:**__
 
 **Uniquement des commandes ici !!! Pas de discussions !!!**`,
 
