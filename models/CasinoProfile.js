@@ -15,6 +15,10 @@ module.exports = mongoose.model(
         lastDaily: {
             type: Date,
             default: null
-        }
+        },
+        lastClaim: {
+    type: Number,
+    default: 0
+}
     })
 );
