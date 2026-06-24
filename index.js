@@ -728,19 +728,18 @@ client.on(
             );
 
         }
+const removedRoles =
+    oldMember.roles.cache.filter(
+        role =>
+            !newMember.roles.cache.has(
+                role.id
+            )
+    );
 
-        const removedRoles =
-            oldMember.roles.cache.filter(
-                role =>
-                    !newMember.roles.cache.has(
-                        role.id
-                    )
-            );
+for (const role of removedRoles.values()) {
 
-        for (const role of removedRoles.values()) {
-
-            await logChannel.send({
-                content:
+    await logChannel.send({
+        content:
 "```diff\n" +
 "- Rôle retiré.\n" +
 `Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
@@ -748,37 +747,37 @@ client.on(
 `Rôle: ${role.name} (ID: ${role.id})\n` +
 "Action: Rôle retiré. ❌\n" +
 "```"
-            });
+    });
 
-        }
+}
 
-        const addedRoles =
-            newMember.roles.cache.filter(
-                role =>
-                    !oldMember.roles.cache.has(
-                        role.id
-                    )
-            );
+const addedRoles =
+    newMember.roles.cache.filter(
+        role =>
+            !oldMember.roles.cache.has(
+                role.id
+            )
+    );
 
-        for (const role of addedRoles.values()) {
+for (const role of addedRoles.values()) {
 
-            await logChannel.send({
-               await logChannel.send({
-    content: `\`\`\`diff
-+ Rôle ajouté.
-Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})
-Modérateur: ${moderator} (ID: ${moderatorId})
-Rôle: ${role.name} (ID: ${role.id})
-Action: Rôle ajouté. ✅
-\`\`\``
-});
-            });
+    await logChannel.send({
+        content:
+"```diff\n" +
+"+ Rôle ajouté.\n" +
+`Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
+`Modérateur: ${moderator} (ID: ${moderatorId})\n` +
+`Rôle: ${role.name} (ID: ${role.id})\n` +
+"Action: Rôle ajouté. ✅\n" +
+"```"
+    });
 
-        }
-
-    }
+}
+            }
 );
+
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
+
 client.login(
     process.env.DISCORD_TOKEN
 );
