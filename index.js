@@ -621,6 +621,42 @@ setInterval(async () => {
     }
 
 }, 10000);
+const GlobalBlacklist =
+require("./models/GlobalBlacklist");
+
+client.on(
+    "guildBanRemove",
+    async ban => {
+
+        const blacklisted =
+        await GlobalBlacklist.findOne({
+            userId: ban.user.id
+        });
+
+        if (!blacklisted) return;
+
+        try {
+
+            await ban.guild.members.ban(
+                ban.user.id,
+                {
+                    reason:
+                    "Blacklist globale active"
+                }
+            );
+
+            console.log(
+                `[BL] ${ban.user.tag} a été rebanni automatiquement.`
+            );
+
+        } catch (err) {
+
+            console.log(err);
+
+        }
+
+    }
+);
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
 client.login(
     process.env.DISCORD_TOKEN
