@@ -1,6 +1,5 @@
 const {
-    SlashCommandBuilder,
-    EmbedBuilder
+    SlashCommandBuilder
 } = require("discord.js");
 
 const GlobalBlacklist =
@@ -64,23 +63,14 @@ module.exports = {
             userId: target.id
         });
 
-        const embed =
-        new EmbedBuilder()
-            .setColor("Green")
-            .setTitle(
-                "✅ Blacklist supprimée"
-            )
-            .setDescription(
-                `${target} a été retiré de la blacklist globale.`
-            )
-            .setFooter({
-                text:
-                `Retiré par ${interaction.user.tag}`
-            })
-            .setTimestamp();
-
         return interaction.reply({
-            embeds: [embed]
+            content:
+`\`\`\`diff
+- Blacklist Globale retirée.
+Utilisateur: ${target.tag} (ID: ${target.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Action: Utilisateur retiré de la blacklist. ✅
+\`\`\``
         });
 
     }
