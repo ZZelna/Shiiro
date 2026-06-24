@@ -1,7 +1,3 @@
-const {
-    EmbedBuilder
-} = require("discord.js");
-
 module.exports = async (member) => {
 
     const logs =
@@ -11,60 +7,16 @@ module.exports = async (member) => {
 
     if (!logs) return;
 
-    const embed =
-        new EmbedBuilder()
-
-        .setColor("#57F287")
-
-        .setAuthor({
-            name:
-                `${member.user.tag} (${member.id})`,
-            iconURL:
-                member.user.displayAvatarURL({
-                    dynamic: true
-                })
-        })
-
-        .setTitle(
-            "🟢 Arrivée d'un membre"
-        )
-
-        .setDescription(
-            `${member} a rejoint le serveur.`
-        )
-
-        .addFields(
-            {
-                name: "👤 Utilisateur",
-                value:
-                    member.user.tag,
-                inline: true
-            },
-            {
-                name: "🆔 ID",
-                value:
-                    member.id,
-                inline: true
-            },
-            {
-                name:
-                    "📅 Compte créé",
-                value:
-                    `<t:${Math.floor(member.user.createdTimestamp / 1000)}:F>`
-            }
-        )
-
-        .setThumbnail(
-            member.user.displayAvatarURL({
-                dynamic: true,
-                size: 1024
-            })
-        )
-
-        .setTimestamp();
-
-    logs.send({
-        embeds: [embed]
+    await logs.send({
+        content:
+`\
+\`\`\`diff
++ Arrivée d'un membre.
+Utilisateur: ${member.user.tag} (ID: ${member.id})
+Compte créé: ${new Date(member.user.createdTimestamp).toLocaleDateString("fr-FR")}
+Action: Utilisateur a rejoint le serveur. 🟢
+\`\`\`
+`
     });
 
 };
