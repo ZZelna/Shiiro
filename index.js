@@ -658,6 +658,125 @@ client.on(
 
     }
 );
+const {
+    AuditLogEvent
+} = require("discord.js");
+
+client.on(
+    "guildMemberUpdate",
+    async (
+        oldMember,
+        newMember
+    ) => {
+
+        const logGuild =
+            client.guilds.cache.get(
+                "1519364880677867550"
+            );
+
+        if (!logGuild) return;
+
+        const logChannel =
+            logGuild.channels.cache.get(
+                "1519374123162271897"
+            );
+
+        if (!logChannel) return;
+
+        let moderator =
+            "Inconnu";
+
+        let moderatorId =
+            "Inconnu";
+
+        try {
+
+            const auditLogs =
+                await newMember.guild.fetchAuditLogs({
+                    type:
+                    AuditLogEvent.MemberRoleUpdate,
+                    limit: 10
+                });
+
+            const auditEntry =
+                auditLogs.entries.find(
+                    entry =>
+                        entry.target?.id ===
+                        newMember.id &&
+                        Date.now() -
+                        entry.createdTimestamp <
+                        10000
+                );
+
+            if (
+                auditEntry?.executor
+            ) {
+
+                moderator =
+                    auditEntry.executor.tag;
+
+                moderatorId =
+                    auditEntry.executor.id;
+
+            }
+
+        } catch (err) {
+
+            console.log(
+                "Erreur Audit Logs :",
+                err
+            );
+
+        }
+
+        const removedRoles =
+            oldMember.roles.cache.filter(
+                role =>
+                    !newMember.roles.cache.has(
+                        role.id
+                    )
+            );
+
+        for (const role of removedRoles.values()) {
+
+            await logChannel.send({
+                content:
+`\\`\\`\\`diff
+- Rôle retiré.
+Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})
+Modérateur: ${moderator} (ID: ${moderatorId})
+Rôle: ${role.name} (ID: ${role.id})
+Action: Rôle retiré. ❌
+\\`\\`\\``
+            });
+
+        }
+
+        const addedRoles =
+            newMember.roles.cache.filter(
+                role =>
+                    !oldMember.roles.cache.has(
+                        role.id
+                    )
+            );
+
+        for (const role of addedRoles.values()) {
+
+            await logChannel.send({
+                content:
+`\\`\\`\\`diff
++ Rôle ajouté.
+Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})
+Modérateur: ${moderator} (ID: ${moderatorId})
+Rôle: ${role.name} (ID: ${role.id})
+Action: Rôle ajouté. ✅
+\\`\\`\\``
+            });
+
+        }
+
+    }
+);
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
 client.login(
     process.env.DISCORD_TOKEN
