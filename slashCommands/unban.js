@@ -44,7 +44,7 @@ async execute(interaction) {
 
         const logChannel =
 interaction.client.channels.cache.get(
-    "1519342181893148784"
+    "1519346310837440623"
 );
 
 if (logChannel) {
