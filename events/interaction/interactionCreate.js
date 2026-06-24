@@ -505,6 +505,86 @@ if (
         components: []
     });
 }
+if (
+    interaction.isButton() &&
+    interaction.customId.startsWith(
+        "deleteclan_confirm_"
+    )
+) {
+
+    const clanId =
+    interaction.customId.replace(
+        "deleteclan_confirm_",
+        ""
+    );
+
+    const clan =
+    await Clan.findById(clanId);
+
+    if (!clan) {
+
+        return interaction.reply({
+            content:
+            "❌ Clan introuvable.",
+            ephemeral: true
+        });
+
+    }
+
+    if (
+        clan.ownerId !==
+        interaction.user.id
+    ) {
+
+        return interaction.reply({
+            content:
+            "❌ Tu n'es pas le chef de ce clan.",
+            ephemeral: true
+        });
+
+    }
+
+    try {
+
+        const channel =
+        await interaction.guild.channels.fetch(
+            clan.channelId
+        );
+
+        if (channel) {
+
+            await channel.delete();
+
+        }
+
+    } catch (err) {}
+
+    await Clan.deleteOne({
+        _id: clan._id
+    });
+
+    return interaction.update({
+        content:
+        `🗑️ Le clan **${clan.name}** a été supprimé.`,
+        embeds: [],
+        components: []
+    });
+}
+
+if (
+    interaction.isButton() &&
+    interaction.customId.startsWith(
+        "deleteclan_cancel_"
+    )
+) {
+
+    return interaction.update({
+        content:
+        "❌ Suppression annulée.",
+        embeds: [],
+        components: []
+    });
+}
 // =========================
 // GIVEAWAYS
 // =========================
