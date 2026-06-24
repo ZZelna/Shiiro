@@ -5,6 +5,8 @@ const {
 
 const CasinoProfile =
     require("../models/CasinoProfile");
+const updateClanYens =
+    require("../systems/updateClanYens");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -65,7 +67,8 @@ module.exports = {
 try {
 
     await updateClanYens(
-        interaction.user.id
+        interaction.user.id,
+        reward
     );
 
 } catch (err) {
@@ -76,7 +79,6 @@ try {
     );
 
 }
-
 const embed =
     new EmbedBuilder()
                 .setColor("Gold")
