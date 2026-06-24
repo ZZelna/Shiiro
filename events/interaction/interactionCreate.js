@@ -13,7 +13,8 @@ const fs = require("fs");
 const path = require("path");
 const CasinoProfile =
     require("../../models/CasinoProfile");
-
+const Clan =
+require("../../models/Clan");
 const configPath = path.join(
     __dirname,
     "../../config.json"
