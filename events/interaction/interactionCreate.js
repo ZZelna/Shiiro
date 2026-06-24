@@ -428,7 +428,15 @@ if (
             ephemeral: true
         });
     }
+if (clan.members.length >= 10) {
 
+    return interaction.reply({
+        content:
+            "❌ Ce clan est déjà complet (10/10 membres).",
+        ephemeral: true
+    });
+
+}
     clan.members.push(
         interaction.user.id
     );
