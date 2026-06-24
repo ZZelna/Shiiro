@@ -647,9 +647,29 @@ client.on(
                 }
             );
 
-            console.log(
-                `[BL] ${ban.user.tag} a été rebanni automatiquement.`
-            );
+            const logGuild =
+    client.guilds.cache.get(
+        "1519364880677867550"
+    );
+
+const logChannel =
+    logGuild?.channels.cache.get(
+        "1519374123162271897"
+    );
+
+if (logChannel) {
+
+    logChannel.send({
+        content:
+"```diff\n" +
+"! Blacklist Globale détectée.\n" +
+`Utilisateur: ${ban.user.tag} (ID: ${ban.user.id})\n` +
+`Serveur: ${ban.guild.name}\n` +
+"Action: Rebanni automatiquement. ⛔\n" +
+"```"
+    });
+
+}
 
         } catch (err) {
 
