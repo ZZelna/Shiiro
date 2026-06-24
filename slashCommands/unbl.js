@@ -18,7 +18,7 @@ module.exports = {
             "ID de l'utilisateur"
         )
         .setRequired(true)
-)
+),
 
     async execute(interaction) {
 
