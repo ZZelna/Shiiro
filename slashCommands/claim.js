@@ -61,7 +61,20 @@ module.exports = {
         profile.lastClaim = now;
 
         await profile.save();
-        await updateClanYens(
+       try {
+
+    await updateClanYens(
+        interaction.user.id
+    );
+
+} catch (err) {
+
+    console.error(
+        "[CLAN ERROR]",
+        err
+    );
+
+}
     interaction.user.id
 );
 
