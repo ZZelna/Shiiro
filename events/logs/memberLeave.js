@@ -13,7 +13,7 @@ module.exports = async (member) => {
 \`\`\`diff
 - Départ d'un membre.
 Utilisateur: ${member.user.tag} (ID: ${member.id})
-Action: Utilisateur a quitté le serveur. 🔴
+Action: Utilisateur a quitté le serveur. 😭
 \`\`\`
 `
     });
