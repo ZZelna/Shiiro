@@ -86,7 +86,25 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
       await member.ban({
             reason: `${reason} | Ban par ${interaction.user.tag}`
         });
+const logChannel =
+interaction.client.channels.cache.get(
+    "1519342181893148784"
+);
 
+if (logChannel) {
+
+    await logChannel.send({
+        content:
+`\`\`\`diff
+- Bannissement effectué.
+Utilisateur: ${member.user.tag} (ID: ${member.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Raison: ${reason}
+Action: Utilisateur banni. 🔨
+\`\`\``
+    });
+
+}
         await interaction.reply({
     content:
 `\`\`\`diff
