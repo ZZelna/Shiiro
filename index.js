@@ -654,7 +654,7 @@ client.on(
 
 const logChannel =
     logGuild?.channels.cache.get(
-        "1519374123162271897"
+        "1519400651745132575"
     );
 
 if (logChannel) {
