@@ -64,10 +64,8 @@ module.exports = {
        try {
 
     await updateClanYens(
-        interaction.user.id
-    );
-
-} catch (err) {
+        
+       } catch (err) {
 
     console.error(
         "[CLAN ERROR]",
