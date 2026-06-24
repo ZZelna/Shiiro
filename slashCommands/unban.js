@@ -42,26 +42,34 @@ async execute(interaction) {
             `Unban par ${interaction.user.tag}`
         );
 
-        const embed = new EmbedBuilder()
-            .setColor("#57F287")
-            .setTitle("🔓 Débannissement effectué")
-            .addFields(
-                {
-                    name: "👤 ID Utilisateur",
-                    value: userId,
-                    inline: true
-                },
-                {
-                    name: "🛡️ Juge",
-                    value: interaction.user.tag,
-                    inline: true
-                }
-            )
-            .setTimestamp();
+        const logChannel =
+interaction.client.channels.cache.get(
+    "1519342181893148784"
+);
 
-        await interaction.reply({
-            embeds: [embed]
-        });
+if (logChannel) {
+
+    await logChannel.send({
+        content:
+`\`\`\`diff
+- Débannissement effectué.
+Utilisateur: ${userId}
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Action: Utilisateur débanni. 🔓
+\`\`\``
+    });
+
+}
+
+await interaction.reply({
+    content:
+`\`\`\`diff
+- Débannissement effectué.
+Utilisateur: ${userId}
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Action: Utilisateur débanni. 🔓
+\`\`\``
+});
 
     } catch (err) {
 
