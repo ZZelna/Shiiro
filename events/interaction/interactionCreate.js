@@ -327,6 +327,55 @@ if (
         ephemeral: true
     });
 }
+    if (
+
+    interaction.isButton() &&
+
+    interaction.customId === "create_clan"
+
+) {
+
+    const modal = new ModalBuilder()
+
+        .setCustomId("create_clan_modal")
+
+        .setTitle("Créer un clan");
+
+    const clanName =
+
+        new TextInputBuilder()
+
+            .setCustomId("clan_name")
+
+            .setLabel("Nom du clan")
+
+            .setStyle(
+
+                TextInputStyle.Short
+
+            )
+
+            .setMinLength(3)
+
+            .setMaxLength(20)
+
+            .setRequired(true);
+
+    modal.addComponents(
+
+        new ActionRowBuilder()
+
+            .addComponents(clanName)
+
+    );
+
+    return interaction.showModal(
+
+        modal
+
+    );
+
+}
 // =========================
 // GIVEAWAYS
 // =========================
@@ -430,6 +479,103 @@ Cliquez sur le bouton ${emoji} pour participer
     // MODAL
     // =========================
     if (interaction.isModalSubmit()) {
+        const Clan =
+require("../../models/Clan");
+
+const CasinoProfile =
+require("../../models/CasinoProfile");
+
+if (
+    interaction.customId ===
+    "create_clan_modal"
+) {
+
+    const clanName =
+        interaction.fields.getTextInputValue(
+            "clan_name"
+        );
+
+    const profile =
+        await CasinoProfile.findOne({
+            userId:
+            interaction.user.id
+        });
+
+    if (
+        !profile ||
+        profile.yens < 10000
+    ) {
+
+        return interaction.reply({
+            content:
+            "❌ Il faut 10 000 ¥ pour créer un clan.",
+            ephemeral: true
+        });
+
+    }
+
+    const alreadyClan =
+        await Clan.findOne({
+            members:
+            interaction.user.id
+        });
+
+    if (alreadyClan) {
+
+        return interaction.reply({
+            content:
+            "❌ Tu possèdes déjà un clan.",
+            ephemeral: true
+        });
+
+    }
+
+    profile.yens -= 10000;
+    await profile.save();
+
+    const categoryId =
+    "1519061386192224376";
+
+const channel =
+    await interaction.guild.channels.create({
+        name: `🏰・${clanName}`,
+        type: 0, // salon texte
+        parent: categoryId,
+        permissionOverwrites: [
+            {
+                id: interaction.guild.id,
+                deny: ["ViewChannel"]
+            },
+            {
+                id: interaction.user.id,
+                allow: [
+                    "ViewChannel",
+                    "SendMessages",
+                    "ReadMessageHistory"
+                ]
+            }
+        ]
+    });
+
+const clan =
+    await Clan.create({
+        name: clanName,
+        ownerId: interaction.user.id,
+        members: [interaction.user.id],
+        channelId: channel.id
+    });
+
+await channel.send({
+    content:
+        `👑 Bienvenue <@${interaction.user.id}> dans le clan **${clanName}** !`
+});
+
+return interaction.reply({
+    content:
+        `✅ Clan **${clanName}** créé.\n💴 10 000 ¥ retirés.\n📍 Salon : ${channel}`,
+    ephemeral: true
+});
+}
 
         if (
             interaction.customId ===
