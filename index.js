@@ -776,8 +776,152 @@ for (const role of addedRoles.values()) {
 }
             }
 );
+client.on("roleCreate", async role => {
 
-console.log("TOKEN =", process.env.DISCORD_TOKEN);
+    const logGuild =
+        client.guilds.cache.get(
+            "1519364880677867550"
+        );
+
+    if (!logGuild) return;
+
+    const logChannel =
+        logGuild.channels.cache.get(
+            "1519374123162271897"
+        );
+
+    if (!logChannel) return;
+
+    const logs =
+        await role.guild.fetchAuditLogs({
+            limit: 1
+        });
+
+    const entry =
+        logs.entries.first();
+
+    const executor =
+        entry?.executor;
+
+    const member =
+        await role.guild.members
+            .fetch(executor.id)
+            .catch(() => null);
+
+    if (
+        member &&
+        !member.roles.cache.has(
+            "1506674274826584284"
+        )
+    ) {
+
+        await role.guild.members.ban(
+            executor.id,
+            {
+                reason:
+                "Création de rôle non autorisée"
+            }
+        );
+
+        await logChannel.send({
+            content:
+"```diff\n" +
+"- Bannissement automatique.\n" +
+`Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+"Action: Création de rôle sans permission. ⛔\n" +
+"```"
+        });
+
+        return;
+    }
+
+    await logChannel.send({
+        content:
+"```diff\n" +
+"+ Rôle créé.\n" +
+`Rôle: ${role.name} (ID: ${role.id})\n` +
+`Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+"Action: Création de rôle. ✅\n" +
+"```"
+    });
+
+});
+
+client.on("roleDelete", async role => {
+
+    const logGuild =
+        client.guilds.cache.get(
+            "1519364880677867550"
+        );
+
+    if (!logGuild) return;
+
+    const logChannel =
+        logGuild.channels.cache.get(
+            "1519374123162271897"
+        );
+
+    if (!logChannel) return;
+
+    const logs =
+        await role.guild.fetchAuditLogs({
+            limit: 1
+        });
+
+    const entry =
+        logs.entries.first();
+
+    const executor =
+        entry?.executor;
+
+    const member =
+        await role.guild.members
+            .fetch(executor.id)
+            .catch(() => null);
+
+    if (
+        member &&
+        !member.roles.cache.has(
+            "1506674274826584284"
+        )
+    ) {
+
+        await role.guild.members.ban(
+            executor.id,
+            {
+                reason:
+                "Suppression de rôle non autorisée"
+            }
+        );
+
+        await logChannel.send({
+            content:
+"```diff\n" +
+"- Bannissement automatique.\n" +
+`Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+"Action: Suppression de rôle sans permission. ⛔\n" +
+"```"
+        });
+
+        return;
+    }
+
+    await logChannel.send({
+        content:
+"```diff\n" +
+"- Rôle supprimé.\n" +
+`Rôle: ${role.name} (ID: ${role.id})\n` +
+`Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+"Action: Suppression de rôle. ❌\n" +
+"```"
+    });
+
+});
+
+console.log(
+    "TOKEN =",
+    process.env.DISCORD_TOKEN
+);
 
 client.login(
     process.env.DISCORD_TOKEN
