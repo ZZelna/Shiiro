@@ -60,12 +60,15 @@ module.exports = {
         profile.yens += reward;
         profile.lastClaim = now;
 
-        await profile.save();
-       try {
+       await profile.save();
+
+try {
 
     await updateClanYens(
-        
-       } catch (err) {
+        interaction.user.id
+    );
+
+} catch (err) {
 
     console.error(
         "[CLAN ERROR]",
@@ -73,11 +76,9 @@ module.exports = {
     );
 
 }
-    interaction.user.id
-);
 
-        const embed =
-            new EmbedBuilder()
+const embed =
+    new EmbedBuilder()
                 .setColor("Gold")
                 .setTitle("💰 Claim Casino")
                 .setDescription(
