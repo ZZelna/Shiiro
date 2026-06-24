@@ -5,6 +5,8 @@ const {
 
 const Clan =
     require("../models/Clan");
+const CasinoProfile =
+require("../models/CasinoProfile");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -17,12 +19,8 @@ module.exports = {
 
         const clans =
             await Clan.find()
-                .sort({
-                    totalYens: -1
-                })
-                .limit(5);
-
-        if (!clans.length) {
+               
+ if (!clans.length) {
 
             return interaction.reply({
                 content:
@@ -42,17 +40,48 @@ module.exports = {
 
         let description = "";
 
-        clans.forEach(
-            (clan, index) => {
+const clansWithYens = [];
 
-                description +=
-`${medals[index]} **${clan.name}**
-💴 ${(clan.totalYens || 0).toLocaleString()} ¥
-👥 ${clan.members.length}/10 membres
+for (const clan of clans) {
+
+    const profiles =
+        await CasinoProfile.find({
+            userId: {
+                $in: clan.members
+            }
+        });
+
+    const totalYens =
+        profiles.reduce(
+            (sum, profile) =>
+                sum + (profile.yens || 0),
+            0
+        );
+
+    clansWithYens.push({
+        clan,
+        totalYens
+    });
+
+}
+
+clansWithYens.sort(
+    (a, b) =>
+        b.totalYens -
+        a.totalYens
+);
+
+clansWithYens.forEach(
+    (data, index) => {
+
+        description +=
+`${medals[index]} **${data.clan.name}**
+💴 ${data.totalYens.toLocaleString()} ¥
+👥 ${data.clan.members.length}/10 membres
 
 `;
-            }
-        );
+    }
+);
 
         const embed =
             new EmbedBuilder()
