@@ -1,3 +1,6 @@
+const LOG_GUILD =
+"1519364880677867550";
+
 const LOG_CHANNEL =
 "1519366440375812246";
 
@@ -32,23 +35,34 @@ client.on(
         )
             return;
 
+        const logGuild =
+            client.guilds.cache.get(
+                LOG_GUILD
+            );
+
+        if (!logGuild)
+            return;
+
         const channel =
-            message.guild.channels.cache.get(
+            logGuild.channels.cache.get(
                 LOG_CHANNEL
             );
 
         if (!channel)
             return;
 
-       await channel.send({
+        await channel.send({
     content: `\`\`\`diff
 - Message supprimé.
-Utilisateur: ${message.author?.tag}
+Utilisateur: ${message.author?.tag || "Inconnu"} (ID: ${message.author?.id || "Inconnu"})
+Serveur: ${message.guild.name}
+Salon: #${message.channel.name}
+
 Contenu:
 ${shorten(message.content)}
 \`\`\``
 });
-    }
+        }
 );
 
 client.on(
@@ -72,8 +86,16 @@ client.on(
         )
             return;
 
+        const logGuild =
+            client.guilds.cache.get(
+                LOG_GUILD
+            );
+
+        if (!logGuild)
+            return;
+
         const channel =
-            oldMessage.guild.channels.cache.get(
+            logGuild.channels.cache.get(
                 LOG_CHANNEL
             );
 
@@ -83,7 +105,9 @@ client.on(
         await channel.send({
     content: `\`\`\`diff
 ~ Message modifié.
-Utilisateur: ${oldMessage.author.tag}
+Utilisateur: ${oldMessage.author.tag} (ID: ${oldMessage.author.id})
+Serveur: ${oldMessage.guild.name}
+Salon: #${oldMessage.channel.name}
 
 Ancien:
 ${shorten(oldMessage.content)}
