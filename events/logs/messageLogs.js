@@ -68,7 +68,9 @@ ${shorten(message.content)}
         ? [attachment.url]
         : []
 });
-  }
+
+    }
+
 );
 client.on(
     "messageUpdate",
@@ -128,5 +130,8 @@ ${shorten(newMessage.content)}
         ? [attachment.url]
         : []
 });
+
+    }
 );
+
 };
