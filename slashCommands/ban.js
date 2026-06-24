@@ -88,7 +88,7 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
         });
 const logChannel =
 interaction.client.channels.cache.get(
-    "1519342181893148784"
+    "1519346310837440623"
 );
 
 if (logChannel) {
