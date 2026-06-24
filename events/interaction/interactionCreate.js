@@ -377,6 +377,126 @@ if (
     );
 
 }
+    if (
+    interaction.isButton() &&
+    interaction.customId.startsWith(
+        "clan_accept_"
+    )
+) {
+
+    const [
+        ,
+        ,
+        clanId,
+        targetId
+    ] =
+        interaction.customId.split("_");
+
+    if (
+        interaction.user.id !== targetId
+    ) {
+
+        return interaction.reply({
+            content:
+                "❌ Cette invitation ne t'est pas destinée.",
+            ephemeral: true
+        });
+    }
+
+    const clan =
+        await Clan.findById(clanId);
+
+    if (!clan) {
+
+        return interaction.reply({
+            content:
+                "❌ Clan introuvable.",
+            ephemeral: true
+        });
+    }
+
+    const alreadyClan =
+        await Clan.findOne({
+            members: interaction.user.id
+        });
+
+    if (alreadyClan) {
+
+        return interaction.reply({
+            content:
+                "❌ Tu es déjà dans un clan.",
+            ephemeral: true
+        });
+    }
+
+    clan.members.push(
+        interaction.user.id
+    );
+
+    await clan.save();
+
+    const channel =
+        await interaction.guild.channels.fetch(
+            clan.channelId
+        );
+
+    if (channel) {
+
+        await channel.permissionOverwrites.create(
+            interaction.user.id,
+            {
+                ViewChannel: true,
+                SendMessages: true,
+                ReadMessageHistory: true
+            }
+        );
+
+        await channel.send({
+            content:
+                `👋 Bienvenue <@${interaction.user.id}> dans **${clan.name}** !`
+        });
+    }
+
+    await interaction.update({
+        content:
+            `✅ Tu as rejoint **${clan.name}**.`,
+        embeds: [],
+        components: []
+    });
+}
+if (
+    interaction.isButton() &&
+    interaction.customId.startsWith(
+        "clan_decline_"
+    )
+) {
+
+    const [
+        ,
+        ,
+        clanId,
+        targetId
+    ] =
+        interaction.customId.split("_");
+
+    if (
+        interaction.user.id !== targetId
+    ) {
+
+        return interaction.reply({
+            content:
+                "❌ Cette invitation ne t'est pas destinée.",
+            ephemeral: true
+        });
+    }
+
+    await interaction.update({
+        content:
+            "❌ Tu as refusé l'invitation du clan.",
+        embeds: [],
+        components: []
+    });
+}
 // =========================
 // GIVEAWAYS
 // =========================
