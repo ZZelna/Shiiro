@@ -14,7 +14,7 @@ module.exports = async (member) => {
 + Arrivée d'un membre.
 Utilisateur: ${member.user.tag} (ID: ${member.id})
 Compte créé: ${new Date(member.user.createdTimestamp).toLocaleDateString("fr-FR")}
-Action: Utilisateur a rejoint le serveur. 🟢
+Action: Utilisateur a rejoint le serveur. 😉
 \`\`\`
 `
     });
