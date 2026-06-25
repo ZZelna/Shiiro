@@ -378,162 +378,210 @@ if (
 
 }
     if (
-    interaction.isButton() &&
-    interaction.customId.startsWith(
-        "gift_open_"
-    )
+interaction.isButton() &&
+interaction.customId.startsWith(
+"gift_open_"
+)
+) {
+    const CasinoProfile =
+require("../../models/CasinoProfile");
+
+const userId =
+    interaction.customId.replace(
+        "gift_open_",
+        ""
+    );
+
+if (
+    interaction.user.id !== userId
 ) {
 
-    const userId =
-        interaction.customId.replace(
-            "gift_open_",
-            ""
-        );
-
-    if (
-        interaction.user.id !== userId
-    ) {
-
-        return interaction.reply({
-            content:
-                "❌ Ce cadeau ne t'appartient pas.",
-            ephemeral: true
-        });
-
-    }
-
-    const rewards = [
-        {
-            chance: 20,
-            roleId:
-                "1519383713014878279",
-            name:
-                "🔊 Perm VOC Chat"
-        },
-        {
-            chance: 15,
-            roleId:
-                "1519633537156907088",
-            name:
-                "🖼️ Perm Pic"
-        },
-        {
-            chance: 15,
-            roleId:
-                "1519633572850438225",
-            name:
-                "🎨 Perm Banner"
-        },
-        {
-            chance: 10,
-            roleId:
-                "1514311105588101332",
-            name:
-                "✨ Perm Animation"
-        },
-        {
-            chance: 10,
-            roleId:
-                "1513950039289106502",
-            name:
-                "✏️ Perm Rename"
-        },
-        {
-            chance: 15,
-            roleId:
-                "1519383437419610332",
-            name:
-                "💴 50 000 ¥"
-        },
-        {
-            chance: 8,
-            roleId:
-                "1519383482113982474",
-            name:
-                "💴 100 000 ¥"
-        },
-        {
-            chance: 4,
-            roleId:
-                "1519383516658405456",
-            name:
-                "💴 250 000 ¥"
-        },
-        {
-            chance: 2,
-            roleId:
-                "1519383549223108618",
-            name:
-                "💴 500 000 ¥"
-        },
-        {
-            chance: 1,
-            roleId:
-                "1519383582198464593",
-            name:
-                "💴 1 000 000 ¥"
-        }
-    ];
-
-    let roll =
-        Math.random() * 100;
-
-    let cumulative = 0;
-
-    let reward = null;
-
-    for (const item of rewards) {
-
-        cumulative += item.chance;
-
-        if (
-            roll <= cumulative
-        ) {
-
-            reward = item;
-            break;
-
-        }
-
-    }
-
-    const role =
-        interaction.guild.roles.cache.get(
-            reward.roleId
-        );
-
-    if (
-        role &&
-        !interaction.member.roles.cache.has(
-            role.id
-        )
-    ) {
-
-        await interaction.member.roles.add(
-            role
-        );
-
-    }
-
-    const resultEmbed =
-        new EmbedBuilder()
-            .setColor("Gold")
-            .setTitle(
-                "🎁 Cadeau Ouvert"
-            )
-            .setDescription(
-                `Tu as obtenu :\n\n**${reward.name}**`
-            )
-            .setImage(
-                "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
-            );
-
-    return interaction.update({
-        embeds: [resultEmbed],
-        components: []
+    return interaction.reply({
+        content:
+            "❌ Ce cadeau ne t'appartient pas.",
+        ephemeral: true
     });
 
 }
+
+const profile =
+await CasinoProfile.findOne({
+    userId:
+    interaction.user.id
+});
+
+if (
+    !profile ||
+    profile.gifts <= 0
+) {
+
+    return interaction.reply({
+        content:
+            "❌ Tu ne possèdes aucun Gift.",
+        ephemeral: true
+    });
+
+}
+
+profile.gifts -= 1;
+
+await profile.save();
+
+const rewards = [
+    {
+        chance: 20,
+        roleId:
+            "1519383713014878279",
+        name:
+            "🔊 Perm VOC Chat"
+    },
+    {
+        chance: 15,
+        roleId:
+            "1519633537156907088",
+        name:
+            "🖼️ Perm Pic"
+    },
+    {
+        chance: 15,
+        roleId:
+            "1519633572850438225",
+        name:
+            "🎨 Perm Banner"
+    },
+    {
+        chance: 10,
+        roleId:
+            "1514311105588101332",
+        name:
+            "✨ Perm Animation"
+    },
+    {
+        chance: 10,
+        roleId:
+            "1513950039289106502",
+        name:
+            "✏️ Perm Rename"
+    },
+    {
+        chance: 15,
+        roleId:
+            "1519383437419610332",
+        name:
+            "💴 50 000 ¥"
+    },
+    {
+        chance: 8,
+        roleId:
+            "1519383482113982474",
+        name:
+            "💴 100 000 ¥"
+    },
+    {
+        chance: 4,
+        roleId:
+            "1519383516658405456",
+        name:
+            "💴 250 000 ¥"
+    },
+    {
+        chance: 2,
+        roleId:
+            "1519383549223108618",
+        name:
+            "💴 500 000 ¥"
+    },
+    {
+        chance: 1,
+        roleId:
+            "1519383582198464593",
+        name:
+            "💴 1 000 000 ¥"
+    }
+];
+
+let roll =
+    Math.random() * 100;
+
+let cumulative = 0;
+
+let reward = null;
+
+for (const item of rewards) {
+
+    cumulative += item.chance;
+
+    if (
+        roll <= cumulative
+    ) {
+
+        reward = item;
+        break;
+
+    }
+
+}
+
+const role =
+    interaction.guild.roles.cache.get(
+        reward.roleId
+    );
+
+let rewardText =
+    reward.name;
+
+if (
+    role &&
+    interaction.member.roles.cache.has(
+        role.id
+    )
+) {
+
+    profile.yens += 5000;
+
+    await profile.save();
+
+    rewardText =
+`${reward.name}
+
+💰 Récompense déjà possédée
+➜ Compensation : 5 000 ¥`;
+    }
+
+else if (role) {
+
+    await interaction.member.roles.add(
+        role
+    );
+
+}
+
+const resultEmbed =
+    new EmbedBuilder()
+        .setColor("Gold")
+        .setTitle(
+            "🎁 Cadeau Ouvert"
+        )
+        .setDescription(
+            rewardText
+        )
+        .addFields({
+            name:
+                "🎁 Gifts restants",
+            value:
+                `${profile.gifts}`,
+            inline: true
+        })
+        .setImage(
+            "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
+        );
+
+return interaction.update({
+    embeds: [resultEmbed],
+    components: []
+});
+    }
+
     if (
     interaction.isButton() &&
     interaction.customId.startsWith(
