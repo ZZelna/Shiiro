@@ -1,3 +1,12 @@
+module.exports =
+async (oldState, newState) => {
+
+    console.log(
+        "VOICE EVENT",
+        oldState.channelId,
+        "=>",
+        newState.channelId
+    );
 const VoiceStats =
 require("../models/VoiceStats");
 
@@ -15,6 +24,10 @@ async (oldState, newState) => {
         !oldState.channelId &&
         newState.channelId
     ) {
+        console.log(
+    "JOIN",
+    userId
+);
 
         global.voiceJoins.set(
             userId,
@@ -28,8 +41,11 @@ async (oldState, newState) => {
         oldState.channelId &&
         !newState.channelId
     ) {
-
-        const joinTime =
+        console.log(
+    "LEAVE",
+    userId
+);
+ const joinTime =
             global.voiceJoins.get(
                 userId
             );
@@ -62,6 +78,10 @@ async (oldState, newState) => {
         stats.totalSeconds +=
             seconds;
 
+        console.log(
+    "SAVE",
+    seconds
+);
         await stats.save();
 
         global.voiceJoins.delete(
