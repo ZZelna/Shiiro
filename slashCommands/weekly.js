@@ -64,7 +64,27 @@ module.exports = {
 
                 .setTimestamp();
 
-        await Clan.deleteMany({});
+        for (const clan of clans) {
+
+    if (!clan.channelId)
+        continue;
+
+    const channel =
+        interaction.guild.channels.cache.get(
+            clan.channelId
+        );
+
+    if (channel) {
+
+        await channel.delete(
+            "Fin de la GDC"
+        ).catch(() => {});
+
+    }
+
+}
+
+await Clan.deleteMany({});
 
         await interaction.reply({
             embeds: [embed]
