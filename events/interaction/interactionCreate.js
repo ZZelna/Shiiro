@@ -428,11 +428,11 @@ if (
             ephemeral: true
         });
     }
-if (clan.members.length >= 10) {
+if (clan.members.length >= 5) {
 
     return interaction.reply({
         content:
-            "❌ Ce clan est déjà complet (10/10 membres).",
+            "❌ Ce clan est déjà complet (5/5 membres).",
         ephemeral: true
     });
 
