@@ -6,8 +6,8 @@ AttachmentBuilder
 const path =
 require("path");
 
-const User =
-require("../../models/User");
+const CasinoProfile =
+require("../../models/CasinoProfile");
 
 let lastAnime = null;
 
@@ -148,7 +148,7 @@ run: async (
                     isGift
                 ) {
 
-                    await User.findOneAndUpdate(
+                   await CasinoProfile.findOneAndUpdate(
                         {
                             userId:
                                 m.author.id
@@ -174,7 +174,7 @@ run: async (
                             901
                         ) + 100;
 
-                    await User.findOneAndUpdate(
+await CasinoProfile.findOneAndUpdate(
                         {
                             userId:
                                 m.author.id
