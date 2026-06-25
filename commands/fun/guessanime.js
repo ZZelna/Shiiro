@@ -1,178 +1,255 @@
+const {
+EmbedBuilder,
+AttachmentBuilder
+} = require("discord.js");
+
+const path =
+require("path");
+
+const User =
+require("../../models/User");
+
 let lastAnime = null;
+
 module.exports = {
-    name: "guessanime",
-    description: "Deviner un anime à partir d'une scène",
+name: "guessanime",
 
-    run: async (
-        message,
-        args
-    ) => {
-        const roleAllowed =
-"1506674274826584284";
+description:
+    "Deviner un anime à partir d'une scène",
 
-if (
-    !message.member.roles.cache.has(
-        roleAllowed
-    )
-) {
+run: async (
+    message,
+    args
+) => {
 
-    return message.reply(
-        "❌ Tu n'as pas la permission d'utiliser ce mini-jeu."
+    const roleAllowed =
+        "1506674274826584284";
+
+    if (
+        !message.member.roles.cache.has(
+            roleAllowed
+        )
+    ) {
+
+        return message.reply(
+            "❌ Tu n'as pas la permission d'utiliser ce mini-jeu."
+        );
+
+    }
+
+    delete require.cache[
+        require.resolve(
+            "../../data/animes.json"
+        )
+    ];
+
+    const animes =
+        require(
+            "../../data/animes.json"
+        );
+
+    let anime;
+
+    do {
+
+        const randomIndex =
+            Math.floor(
+                Math.random() *
+                animes.length
+            );
+
+        anime =
+            animes[randomIndex];
+
+    } while (
+        animes.length > 1 &&
+        anime.anime ===
+        lastAnime
     );
 
-}
+    lastAnime =
+        anime.anime;
 
-        const {
-            EmbedBuilder,
-            AttachmentBuilder
-        } = require("discord.js");
+    const imagePath =
+        path.join(
+            __dirname,
+            "../../assets/animes",
+            anime.image
+        );
 
-        const path =
-            require("path");
+    const attachment =
+        new AttachmentBuilder(
+            imagePath
+        );
 
-delete require.cache[
-    require.resolve("../../data/animes.json")
-];
+    const embed =
+        new EmbedBuilder()
 
-const animes = require("../../data/animes.json");
+            .setColor(
+                "#5865F2"
+            )
 
-        let anime;
+            .setTitle(
+                "🎌 Devine l'anime"
+            )
 
-do {
-    const randomIndex = Math.floor(Math.random() * animes.length);
-    anime = animes[randomIndex];
-} while (
-    animes.length > 1 &&
-    anime.anime === lastAnime
-);
+            .setDescription(
+                "Tu as **30 secondes** pour trouver le nom de cet anime."
+            )
 
-lastAnime = anime.anime;
-      console.log("Nombre d'animes :", animes.length);
-console.log("Liste :", animes.map(a => a.anime));
-console.log("Choisi :", anime.anime);
-       
-        const imagePath =
-            path.join(
-                __dirname,
-                "../../assets/animes",
-                anime.image
-            );
+            .setImage(
+                `attachment://${anime.image}`
+            )
 
-        const attachment =
-            new AttachmentBuilder(
-                imagePath
-            );
-
-        const embed =
-            new EmbedBuilder()
-
-                .setColor(
-                    "#5865F2"
-                )
-
-                .setTitle(
-                    "🎌 Devine l'anime"
-                )
-
-                .setDescription(
-                    "Tu as **30 secondes** pour trouver le nom de cet anime."
-                )
-
-      .setImage(`attachment://${anime.image}`)
-
-                .setFooter({
-                    text:
-                        "Réponds dans le chat"
-                });
-
-        await message.channel.send({
-            embeds: [embed],
-            files: [attachment]
-        });
-
-        const filter = m =>
-            !m.author.bot &&
-            m.channel.id ===
-                message.channel.id;
-
-        const collector =
-            message.channel.createMessageCollector({
-                filter,
-                time: 30000
+            .setFooter({
+                text:
+                    "Réponds dans le chat"
             });
 
-        collector.on(
-            "collect",
-            async m => {
+    await message.channel.send({
+        embeds: [embed],
+        files: [attachment]
+    });
+
+    const filter =
+        m =>
+            !m.author.bot &&
+            m.channel.id ===
+            message.channel.id;
+
+    const collector =
+        message.channel.createMessageCollector({
+            filter,
+            time: 30000
+        });
+
+    collector.on(
+        "collect",
+        async m => {
+
+            if (
+                m.content
+                    .toLowerCase()
+                    .trim() ===
+                anime.anime
+                    .toLowerCase()
+            ) {
+
+                collector.stop(
+                    "found"
+                );
+
+                const isGift =
+                    Math.random() < 0.10;
+
+                let rewardText;
 
                 if (
-                    m.content
-                        .toLowerCase()
-                        .trim() ===
-                    anime.anime
-                        .toLowerCase()
+                    isGift
                 ) {
 
-                    collector.stop(
-                        "found"
+                    await User.findOneAndUpdate(
+                        {
+                            userId:
+                                m.author.id
+                        },
+                        {
+                            $inc: {
+                                gifts: 1
+                            }
+                        },
+                        {
+                            upsert: true
+                        }
                     );
 
-                    return m.reply({
-                        embeds: [
-                            new EmbedBuilder()
+                    rewardText =
+                        "🎁 1 Gift";
 
-                                .setColor(
-                                    "#57F287"
-                                )
+                } else {
 
-                                .setTitle(
-                                    "✅ Bonne réponse"
-                                )
+                    const reward =
+                        Math.floor(
+                            Math.random() *
+                            901
+                        ) + 100;
 
-                                .setDescription(
-                                    `L'anime était **${anime.anime}**.`
-                                )
-                        ]
-                    });
+                    await User.findOneAndUpdate(
+                        {
+                            userId:
+                                m.author.id
+                        },
+                        {
+                            $inc: {
+                                yens: reward
+                            }
+                        },
+                        {
+                            upsert: true
+                        }
+                    );
+
+                    rewardText =
+                        `💴 ${reward} yens`;
 
                 }
 
-            }
-        );
-
-        collector.on(
-            "end",
-            async (
-                collected,
-                reason
-            ) => {
-
-                if (
-                    reason ===
-                    "found"
-                )
-                    return;
-
-                await message.channel.send({
+                return m.reply({
                     embeds: [
                         new EmbedBuilder()
 
                             .setColor(
-                                "#ED4245"
+                                "#57F287"
                             )
 
                             .setTitle(
-                                "⏰ Temps écoulé"
+                                "✅ Bonne réponse"
                             )
 
                             .setDescription(
-                                `La bonne réponse était **${anime.anime}**.`
+                                `L'anime était **${anime.anime}**.\n\nRécompense : ${rewardText}`
                             )
                     ]
                 });
 
             }
-        );
 
-    }
+        }
+    );
+
+    collector.on(
+        "end",
+        async (
+            collected,
+            reason
+        ) => {
+
+            if (
+                reason ===
+                "found"
+            )
+                return;
+
+            await message.channel.send({
+                embeds: [
+                    new EmbedBuilder()
+
+                        .setColor(
+                            "#ED4245"
+                        )
+
+                        .setTitle(
+                            "⏰ Temps écoulé"
+                        )
+
+                        .setDescription(
+                            `La bonne réponse était **${anime.anime}**.`
+                        )
+                ]
+            });
+
+        }
+    );
+
+}
 };
