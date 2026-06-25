@@ -939,12 +939,6 @@ client.on("roleDelete", async role => {
 });
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
-const VoiceStats =
-require("./models/VoiceStats");
-
-const voiceJoins =
-new Map();
-
 client.on(
     "voiceStateUpdate",
     async (
@@ -964,10 +958,10 @@ client.on(
         const userId =
             member.id;
 
-        // Join vocal
+        // Entrée dans un vocal
         if (
-            !oldState.channelId &&
-            newState.channelId
+            newState.channelId &&
+            !voiceJoins.has(userId)
         ) {
 
             voiceJoins.set(
@@ -981,10 +975,10 @@ client.on(
 
         }
 
-        // Leave vocal
+        // Quitte OU change de salon
         if (
-            oldState.channelId &&
-            !newState.channelId
+            oldState.channelId !==
+            newState.channelId
         ) {
 
             const joinTime =
@@ -992,49 +986,59 @@ client.on(
                     userId
                 );
 
-            if (!joinTime)
-                return;
+            if (
+                joinTime &&
+                oldState.channelId
+            ) {
 
-            const duration =
-                Math.floor(
-                    (
-                        Date.now() -
-                        joinTime
-                    ) / 1000
+                const duration =
+                    Math.floor(
+                        (
+                            Date.now() -
+                            joinTime
+                        ) / 1000
+                    );
+
+                await VoiceStats.findOneAndUpdate(
+                    {
+                        userId
+                    },
+                    {
+                        $inc: {
+                            totalSeconds:
+                                duration
+                        }
+                    },
+                    {
+                        upsert: true
+                    }
                 );
 
-            voiceJoins.delete(
-                userId
-            );
+                console.log(
+                    `${userId} : ${duration}s sauvegardées`
+                );
 
-            await VoiceStats.findOneAndUpdate(
-                {
+                voiceJoins.delete(
                     userId
-                },
-                {
-                    $inc: {
-                        totalSeconds:
-                            duration
-                    },
-                    $set: {
-                        updatedAt:
-                            new Date()
-                    }
-                },
-                {
-                    upsert: true
-                }
-            );
+                );
 
-            console.log(
-                `${userId} : ${duration}s sauvegardées`
-            );
+            }
+
+            if (
+                newState.channelId
+            ) {
+
+                voiceJoins.set(
+                    userId,
+                    Date.now()
+                );
+
+            }
 
         }
 
     }
 );
-
 client.login(
     process.env.DISCORD_TOKEN
 );
