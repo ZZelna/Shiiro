@@ -37,6 +37,13 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates
     ]
 });
+const voiceTracker =
+require("./events/voiceTracker");
+
+client.on(
+    "voiceStateUpdate",
+    voiceTracker
+);
 require("./events/logs/messageLogs")(client);
 
 client.commands = new Map();
