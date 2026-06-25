@@ -77,3 +77,5 @@ await Clan.deleteMany({});
 await interaction.reply({
     embeds: [embed]
 });
+    }
+};
