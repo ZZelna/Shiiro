@@ -774,12 +774,15 @@ const clan =
         channelId: channel.id
     });
 
-return interaction.reply({
-    content:
-        `✅ Clan créé\n💰 TotalYens = ${clan.totalYens}`,
-    ephemeral: true
-});
+console.log(
+    "Clan créé :",
+    clan
+);
 
+await channel.send({
+    content:
+        `👑 Bienvenue <@${interaction.user.id}> dans le clan **${clanName}** !`
+});
         if (
             interaction.customId ===
             "customrole_add_modal"
