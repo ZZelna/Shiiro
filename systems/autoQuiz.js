@@ -18,11 +18,14 @@ module.exports = function startAutoQuiz(client) {
         try {
 
             const games = [
-                "guessanime",
-                "guessbrand",
-                "guesscountry",
-                "guesscapital"
-            ];
+    "guessanime",
+    "guessbrand",
+    "guesscapitale",
+    "guesscountry",
+    "guessflags",
+    "guesscouleur",
+    "guesscita"
+];
 
             const randomGame =
             games[
