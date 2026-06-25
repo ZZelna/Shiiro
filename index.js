@@ -90,6 +90,12 @@ client.once("clientReady", async () => {
         status: "online"
     });
 
+    autoQuiz(client);
+
+    console.log("🎯 Auto Quiz démarré");
+
+});
+
   const commands = [];
 
 client.slashCommands.forEach(command => {
