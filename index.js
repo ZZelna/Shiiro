@@ -14,8 +14,6 @@ const {
 } = require("discord.js");
 const autoQuiz =
 require("./systems/autoQuiz");
-const VoiceStats =
-require("./models/VoiceStats");
 
 const config = require("./config.json");
 
