@@ -80,34 +80,23 @@ module.exports = {
                     (profile.yens || 0),
                 0
             );
-
-        const embed =
-            new EmbedBuilder()
-                .setColor("Blue")
-                .setTitle(
-                    `📊 ${clan.name}`
-                )
-                .setDescription(
-                    description
-                )
-                .addFields(
-{
-    name:
-        "⚔️ Score GDC",
-    value:
-        `${clan.weeklyYens.toLocaleString()} ¥`,
-    inline: false
-},
-{
-    name:
-        "💰 Total Clan",
-    value:
-        `${clan.totalYens.toLocaleString()} ¥`,
-    inline: false
-}
-)
-                })
-                .setTimestamp();
+const embed = new EmbedBuilder()
+    .setColor("Blue")
+    .setTitle(`📊 ${clan.name}`)
+    .setDescription(description)
+    .addFields(
+        {
+            name: "⚔️ Score GDC",
+            value: `${(clan.weeklyYens || 0).toLocaleString()} ¥`,
+            inline: false
+        },
+        {
+            name: "💰 Total Clan",
+            value: `${(clan.totalYens || 0).toLocaleString()} ¥`,
+            inline: false
+        }
+    )
+    .setTimestamp();
 
         await interaction.reply({
             embeds: [embed],
