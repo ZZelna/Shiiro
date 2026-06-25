@@ -158,6 +158,63 @@ client.on("messageDelete", async (message) => {
 client.on("messageCreate", async (message) => {
 
     if (message.author.bot) return;
+         const toxicWords = [
+
+            "fdp",
+
+            "ntm",
+
+            "tg",
+
+            "je te V ",
+
+            "connard",
+                
+            "fils de pute",
+
+            "nique ta mere ",
+
+            "pute",
+
+            "salope",
+
+            "ntr",
+
+            "enculé"
+
+        ];
+
+        const content = message.content.toLowerCase();
+
+        const detected = toxicWords.some(word =>
+
+            content.includes(word)
+
+        );
+
+        if (!detected) return;
+
+        await message.delete().catch(() => {});
+
+        await message.member.timeout(
+
+            20 * 1000,
+
+            "Langage toxique"
+
+        );
+
+        await message.channel.send({
+
+            content:
+
+                `⚠️ ${message.author}**Votre message est trop toxique**.`
+
+        });
+
+    }
+
+}
     if (!message.content.startsWith("+")) return;
 
     const args = message.content.slice(1).trim().split(/ +/);
