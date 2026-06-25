@@ -17,7 +17,7 @@ async (oldState, newState) => {
     const userId =
         newState.id;
 
-    // Join vocal
+    // Join
     if (
         !oldState.channelId &&
         newState.channelId
@@ -35,14 +35,15 @@ async (oldState, newState) => {
 
     }
 
-    // Leave vocal
+    // Quitte ou change de salon
     if (
         oldState.channelId &&
-        !newState.channelId
+        oldState.channelId !==
+        newState.channelId
     ) {
 
         console.log(
-            "LEAVE",
+            "LEAVE DETECTED",
             userId
         );
 
@@ -51,7 +52,8 @@ async (oldState, newState) => {
                 userId
             );
 
-        if (!joinTime) return;
+        if (!joinTime)
+            return;
 
         const seconds =
             Math.floor(
@@ -79,12 +81,12 @@ async (oldState, newState) => {
         stats.totalSeconds +=
             seconds;
 
+        await stats.save();
+
         console.log(
             "SAVE",
-            seconds
+            stats.totalSeconds
         );
-
-        await stats.save();
 
         global.voiceJoins.delete(
             userId
