@@ -57,7 +57,7 @@ clansWithYens.forEach(
         description +=
 `${medals[index]} **${data.clan.name}**
 ⚔️ ${data.weeklyYens.toLocaleString()} ¥
-👥 ${data.clan.members.length}/10 membres
+👥 ${data.clan.members.length}/5 membres
 
 `;
     }
