@@ -212,9 +212,8 @@ client.on("messageCreate", async (message) => {
 
         });
 
-    }
+});
 
-}
     if (!message.content.startsWith("+")) return;
 
     const args = message.content.slice(1).trim().split(/ +/);
