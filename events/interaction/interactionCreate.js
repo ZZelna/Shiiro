@@ -783,6 +783,8 @@ await channel.send({
     content:
         `👑 Bienvenue <@${interaction.user.id}> dans le clan **${clanName}** !`
 });
+    }
+    };
         if (
             interaction.customId ===
             "customrole_add_modal"
