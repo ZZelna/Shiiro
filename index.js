@@ -1000,6 +1000,11 @@ client.on(
                     );
 
                 await VoiceStats.findOneAndUpdate(
+                    console.log(
+    "Mongo update:",
+    userId,
+    duration
+);
                     {
                         userId
                     },
