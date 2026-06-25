@@ -939,6 +939,11 @@ client.on("roleDelete", async role => {
 });
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
+const VoiceStats =
+require("./models/VoiceStats");
+
+const voiceJoins =
+new Map();
 client.on(
     "voiceStateUpdate",
     async (
