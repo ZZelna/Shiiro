@@ -55,7 +55,7 @@ async execute(interaction) {
                 {
                     name: "👥 Membres",
                     value:
-                        `${clan.members.length}/10`,
+                        `${clan.members.length}/5`,
                     inline: true
                 },
 {
