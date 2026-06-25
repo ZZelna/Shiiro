@@ -999,27 +999,26 @@ client.on(
                         ) / 1000
                     );
 
-                await VoiceStats.findOneAndUpdate(
-                    console.log(
+                console.log(
     "Mongo update:",
     userId,
     duration
 );
-                    {
-                        userId
-                    },
-                    {
-                        $inc: {
-                            totalSeconds:
-                                duration
-                        }
-                    },
-                    {
-                        upsert: true
-                    }
-                );
 
-                console.log(
+await VoiceStats.findOneAndUpdate(
+    {
+        userId
+    },
+    {
+        $inc: {
+            totalSeconds: duration
+        }
+    },
+    {
+        upsert: true
+    }
+);
+console.log(
                     `${userId} : ${duration}s sauvegardées`
                 );
 
@@ -1044,8 +1043,6 @@ client.on(
 
     }
 );
-const VoiceStats =
-require("./models/VoiceStats");
 
 setInterval(async () => {
 
