@@ -11,8 +11,8 @@ module.exports = mongoose.model(
             type: [String],
             default: [],
             validate: [
-                arr => arr.length <= 10,
-                "Un clan ne peut pas dépasser 10 membres."
+                arr => arr.length <= 5,
+                "Un clan ne peut pas dépasser 5 membres."
             ]
         },
 
