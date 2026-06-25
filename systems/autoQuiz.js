@@ -1,62 +1,92 @@
+const CHANNEL_ID =
+"1508491934547574814";
+
 let quizRunning = false;
 
-module.exports = function startAutoQuiz(client) {
+module.exports = (client) => {
 
-    setInterval(async () => {
+    const games = [
+        "guessanime",
+        "guessbrand",
+        "guesscapitale",
+        "guesscita",
+        "guesscouleur",
+        "guesscountry",
+        "guessflags"
+    ];
 
-        if (quizRunning) return;
+    console.log(
+        "✅ Auto Quiz chargé"
+    );
 
-        const channel =
-        client.channels.cache.get(
-            "1508491934547574814"
-        );
+    setInterval(
+        async () => {
 
-        if (!channel) return;
+            if (quizRunning)
+                return;
 
-        quizRunning = true;
+            const channel =
+                client.channels.cache.get(
+                    CHANNEL_ID
+                );
 
-        try {
+            if (!channel)
+                return;
 
-            const games = [
-    "guessanime",
-    "guessbrand",
-    "guesscapitale",
-    "guesscountry",
-    "guessflags",
-    "guesscouleur",
-    "guesscita"
-];
+            quizRunning = true;
 
             const randomGame =
-            games[
-                Math.floor(
-                    Math.random() *
-                    games.length
-                )
-            ];
+                games[
+                    Math.floor(
+                        Math.random() *
+                        games.length
+                    )
+                ];
 
-            await channel.send(
-                `🎯 Lancement automatique : **${randomGame}**`
+            try {
+
+                console.log(
+                    `🎯 Quiz lancé : ${randomGame}`
+                );
+
+                const game =
+                    require(
+                        `../commands/fun/${randomGame}.js`
+                    );
+
+                await game.run(
+                    {
+                        channel,
+                        author: {
+                            id:
+                                client.user.id,
+                            bot: true
+                        },
+                        member: null
+                    },
+                    []
+                );
+
+            } catch (err) {
+
+                console.error(
+                    `❌ Erreur AutoQuiz (${randomGame})`,
+                    err
+                );
+
+            }
+
+            setTimeout(
+                () => {
+
+                    quizRunning = false;
+
+                },
+                30000
             );
 
-            // Plus tard :
-            // lancer le vrai mini-jeu ici
-
-        } catch (err) {
-
-            console.error(
-                "[AUTO QUIZ ERROR]",
-                err
-            );
-
-        }
-
-        setTimeout(() => {
-
-            quizRunning = false;
-
-        }, 30000);
-
-    }, 5 * 60 * 1000);
+        },
+        5 * 60 * 1000
+    );
 
 };
