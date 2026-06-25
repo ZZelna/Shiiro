@@ -158,133 +158,98 @@ client.on("messageDelete", async (message) => {
 client.on("messageCreate", async (message) => {
 
     if (message.author.bot) return;
-         const toxicWords = [
 
-            "fdp",
+    // Anti-toxicité
+    const toxicWords = [
+        "fdp",
+        "ntm",
+        "tg",
+        "je te v",
+        "connard",
+        "fils de pute",
+        "nique ta mere",
+        "pute",
+        "salope",
+        "ntr",
+        "enculé"
+    ];
 
-            "ntm",
+    const content = message.content.toLowerCase();
 
-            "tg",
+    const detected = toxicWords.some(word =>
+        content.includes(word)
+    );
 
-            "je te V ",
-
-            "connard",
-                
-            "fils de pute",
-
-            "nique ta mere ",
-
-            "pute",
-
-            "salope",
-
-            "ntr",
-
-            "enculé"
-
-        ];
-
-        const content = message.content.toLowerCase();
-
-        const detected = toxicWords.some(word =>
-
-            content.includes(word)
-
-        );
-
-        if (!detected) return;
+    if (detected) {
 
         await message.delete().catch(() => {});
 
         await message.member.timeout(
-
             20 * 1000,
-
             "Langage toxique"
-
-        );
+        ).catch(() => {});
 
         await message.channel.send({
-
-            content:
-
-                `⚠️ ${message.author}**Votre message est trop toxique**.`
-
+            content: `⚠️ ${message.author} **Votre message est trop toxique.**`
         });
 
-});
+        return;
+    }
 
+    // Commandes
     if (!message.content.startsWith("+")) return;
 
     const args = message.content.slice(1).trim().split(/ +/);
     const commandName = args.shift()?.toLowerCase();
 
-       const customRole =
-    getCustomRole(commandName);
+    const customRole = getCustomRole(commandName);
 
-if (customRole) {
+    if (customRole) {
 
-    const target =
-        message.mentions.members.first();
+        const target = message.mentions.members.first();
 
-    if (!target) {
-        return message.reply(
-            `❌ Utilisation : +${commandName} @utilisateur`
-        );
-    }
+        if (!target) {
+            return message.reply(`❌ Utilisation : +${commandName} @utilisateur`);
+        }
 
-    if (
-        message.author.id !==
-        customRole.owner_id
-    ) {
-        return message.reply(
-            "❌ Vous n'êtes pas propriétaire de ce rôle."
-        );
-    }
+        if (message.author.id !== customRole.owner_id) {
+            return message.reply("❌ Vous n'êtes pas propriétaire de ce rôle.");
+        }
 
-    const role =
-        message.guild.roles.cache.get(
-            customRole.role_id
-        );
+        const role = message.guild.roles.cache.get(customRole.role_id);
 
-    if (!role) {
-        return message.reply(
-            "❌ Rôle introuvable."
-        );
-    }
+        if (!role) {
+            return message.reply("❌ Rôle introuvable.");
+        }
 
-    try {
+        try {
 
-        if (
-            target.roles.cache.has(role.id)
-        ) {
+            if (target.roles.cache.has(role.id)) {
 
-            await target.roles.remove(role);
+                await target.roles.remove(role);
 
-            return message.reply(
-                `➖ ${role.name} retiré à ${target.user.tag}`
-            );
+                return message.reply(`➖ ${role.name} retiré à ${target.user.tag}`);
+
+            }
+
+            await target.roles.add(role);
+
+            return message.reply(`➕ ${role.name} ajouté à ${target.user.tag}`);
+
+        } catch {
+
+            return message.reply("❌ Impossible de modifier ce rôle.");
 
         }
 
-        await target.roles.add(role);
-
-        return message.reply(
-            `➕ ${role.name} ajouté à ${target.user.tag}`
-        );
-
-    } catch {
-
-        return message.reply(
-            "❌ Impossible de modifier ce rôle."
-        );
     }
-}
+
     const command = client.commands.get(commandName);
 
     if (command) {
         return command.run(message, args);
     }
+
 });
 
 const interactionCreate = require("./events/interaction/interactionCreate");
