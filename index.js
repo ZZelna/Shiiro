@@ -14,6 +14,8 @@ const {
 } = require("discord.js");
 const autoQuiz =
 require("./systems/autoQuiz");
+const VoiceStats =
+require("./models/VoiceStats");
 
 const config = require("./config.json");
 
@@ -939,7 +941,93 @@ client.on("roleDelete", async role => {
 });
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
+const VoiceStats =
+require("./models/VoiceStats");
 
+const voiceJoins =
+new Map();
+
+client.on(
+    "voiceStateUpdate",
+    async (
+        oldState,
+        newState
+    ) => {
+
+        const member =
+            newState.member ||
+            oldState.member;
+
+        if (
+            !member ||
+            member.user.bot
+        ) return;
+
+        const userId =
+            member.id;
+
+        // Join vocal
+        if (
+            !oldState.channelId &&
+            newState.channelId
+        ) {
+
+            voiceJoins.set(
+                userId,
+                Date.now()
+            );
+
+        }
+
+        // Leave vocal
+        if (
+            oldState.channelId &&
+            !newState.channelId
+        ) {
+
+          global.voiceJoins =
+new Map();
+
+const voiceJoins =
+global.voiceJoins;
+            if (!joinTime)
+                return;
+
+            const duration =
+                Math.floor(
+                    (
+                        Date.now() -
+                        joinTime
+                    ) / 1000
+                );
+
+            voiceJoins.delete(
+                userId
+            );
+
+            await VoiceStats.findOneAndUpdate(
+                {
+                    userId
+                },
+                {
+                    $inc: {
+                        totalSeconds:
+                            duration
+                    },
+                    $set: {
+                        updatedAt:
+                            new Date()
+                    }
+                },
+                {
+                    upsert: true
+                }
+            );
+
+        }
+
+    }
+);
 client.login(
     process.env.DISCORD_TOKEN
 );
