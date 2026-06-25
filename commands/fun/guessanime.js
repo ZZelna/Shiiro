@@ -7,6 +7,20 @@ module.exports = {
         message,
         args
     ) => {
+        const roleAllowed =
+"1506674274826584284";
+
+if (
+    !message.member.roles.cache.has(
+        roleAllowed
+    )
+) {
+
+    return message.reply(
+        "❌ Tu n'as pas la permission d'utiliser ce mini-jeu."
+    );
+
+}
 
         const {
             EmbedBuilder,
