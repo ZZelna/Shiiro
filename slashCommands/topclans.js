@@ -40,43 +40,23 @@ module.exports = {
 
         let description = "";
 
-const clansWithYens = [];
-
-for (const clan of clans) {
-
-    const profiles =
-        await CasinoProfile.find({
-            userId: {
-                $in: clan.members
-            }
-        });
-
-    const totalYens =
-        profiles.reduce(
-            (sum, profile) =>
-                sum + (profile.yens || 0),
-            0
-        );
-
-    clansWithYens.push({
+const clansWithYens = clans
+    .map(clan => ({
         clan,
-        totalYens
-    });
-
-}
-
-clansWithYens.sort(
-    (a, b) =>
-        b.totalYens -
-        a.totalYens
-);
+        weeklyYens: clan.weeklyYens || 0
+    }))
+    .sort(
+        (a, b) =>
+            b.weeklyYens -
+            a.weeklyYens
+    );
 
 clansWithYens.forEach(
     (data, index) => {
 
         description +=
 `${medals[index]} **${data.clan.name}**
-💴 ${data.totalYens.toLocaleString()} ¥
+⚔️ ${data.weeklyYens.toLocaleString()} ¥
 👥 ${data.clan.members.length}/10 membres
 
 `;
