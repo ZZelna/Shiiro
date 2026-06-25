@@ -19,9 +19,9 @@ module.exports = {
 
         const clans =
             await Clan.find()
-                .sort({
-                    totalYens: -1
-                });
+               .sort({
+    weeklyYens: -1
+})
 
         if (!clans.length) {
 
@@ -45,26 +45,14 @@ module.exports = {
             clans[0];
 
         const embed =
-            new EmbedBuilder()
+    new EmbedBuilder()
+        .setColor("Gold")
+        .setTitle("🏆 Fin de la GDC")
+        .setDescription(
+            `👑 Clan gagnant : **${winner.name}**\n\n${classement}`
+        );
 
-                .setColor("Gold")
-
-                .setTitle(
-                    "🏆 Fin de la GDC"
-                )
-
-                .setDescription(
-                    `👑 Clan gagnant : **${winner.name}**\n\n${classement}`
-                )
-
-                .setFooter({
-                    text:
-                        "Tous les clans ont été réinitialisés."
-                })
-
-                .setTimestamp();
-
-        for (const clan of clans) {
+for (const clan of clans) {
 
     if (!clan.channelId)
         continue;
@@ -86,10 +74,6 @@ module.exports = {
 
 await Clan.deleteMany({});
 
-        await interaction.reply({
-            embeds: [embed]
-        });
-
-    }
-
-};
+await interaction.reply({
+    embeds: [embed]
+});
