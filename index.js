@@ -1039,6 +1039,111 @@ client.on(
 
     }
 );
+const VoiceStats =
+require("./models/VoiceStats");
+
+setInterval(async () => {
+
+    try {
+
+        const channel =
+            client.channels.cache.get(
+                "1519715683863105596"
+            );
+
+        if (!channel) return;
+
+        const stats =
+            await VoiceStats.find()
+            .sort({
+                totalSeconds: -1
+            })
+            .limit(10);
+
+        let content =
+            "🎤 **TOP 10 VOCAL (24H)**\n\n";
+
+        if (!stats.length) {
+
+            content +=
+                "Aucune donnée.";
+
+        } else {
+
+            for (
+                let i = 0;
+                i < stats.length;
+                i++
+            ) {
+
+                const user =
+                    await client.users
+                        .fetch(
+                            stats[i].userId
+                        )
+                        .catch(
+                            () => null
+                        );
+
+                const hours =
+                    Math.floor(
+                        stats[i]
+                        .totalSeconds /
+                        3600
+                    );
+
+                const minutes =
+                    Math.floor(
+                        (
+                            stats[i]
+                            .totalSeconds %
+                            3600
+                        ) / 60
+                    );
+
+                content +=
+                    `${i + 1}. ${user ? user.username : "Inconnu"} — ${hours}h ${minutes}m\n`;
+
+            }
+
+        }
+
+        const messages =
+            await channel.messages.fetch({
+                limit: 10
+            });
+
+        const botMessage =
+            messages.find(
+                m =>
+                    m.author.id ===
+                    client.user.id
+            );
+
+        if (botMessage) {
+
+            await botMessage.edit(
+                content
+            );
+
+        } else {
+
+            await channel.send(
+                content
+            );
+
+        }
+
+    } catch (err) {
+
+        console.log(
+            "Erreur Top Vocal :",
+            err
+        );
+
+    }
+
+}, 5000);
 client.login(
     process.env.DISCORD_TOKEN
 );
