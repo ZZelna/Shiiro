@@ -12,6 +12,8 @@ const {
     Routes,
     AuditLogEvent
 } = require("discord.js");
+const autoQuiz =
+require("./systems/autoQuiz");
 
 const config = require("./config.json");
 
