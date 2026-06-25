@@ -774,17 +774,11 @@ const clan =
         channelId: channel.id
     });
 
-await channel.send({
-    content:
-        `👑 Bienvenue <@${interaction.user.id}> dans le clan **${clanName}** !`
-});
-
 return interaction.reply({
     content:
-        `✅ Clan **${clanName}** créé.\n💴 10 000 ¥ retirés.\n📍 Salon : ${channel}`,
+        `✅ Clan créé\n💰 TotalYens = ${clan.totalYens}`,
     ephemeral: true
 });
-}
 
         if (
             interaction.customId ===
