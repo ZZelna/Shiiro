@@ -94,46 +94,41 @@ client.once("clientReady", async () => {
 
     console.log("🎯 Auto Quiz démarré");
 
-});
+    const commands = [];
 
-  const commands = [];
-
-client.slashCommands.forEach(command => {
-    commands.push(
-        command.data.toJSON()
-    );
-});
-
-const rest = new REST({
-    version: "10"
-}).setToken(
-    process.env.DISCORD_TOKEN
-);
-
-try {
-
-    await rest.put(
-        Routes.applicationCommands(
-            client.user.id
-        ),
-        {
-            body: commands
-        }
-    );
-
-    console.log(
-        "✅ Slash commands enregistrées"
-    );
-
-} catch (err) {
-
-    console.error(
-        "❌ Erreur slash commands :",
-        err
-    );
-
-}
+    client.slashCommands.forEach(command => {
+        commands.push(command.data.toJSON());
     });
+
+    const rest = new REST({
+        version: "10"
+    }).setToken(process.env.DISCORD_TOKEN);
+
+    try {
+
+        await rest.put(
+            Routes.applicationCommands(
+                client.user.id
+            ),
+            {
+                body: commands
+            }
+        );
+
+        console.log(
+            "✅ Slash commands enregistrées"
+        );
+
+    } catch (err) {
+
+        console.error(
+            "❌ Erreur slash commands :",
+            err
+        );
+
+    }
+
+});
 client.on("messageDelete", async (message) => {
 
     if (!message.guild) return;
