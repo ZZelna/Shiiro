@@ -783,9 +783,14 @@ await channel.send({
     content:
         `👑 Bienvenue <@${interaction.user.id}> dans le clan **${clanName}** !`
 });
+
+return interaction.reply({
+    content:
+        `✅ Clan **${clanName}** créé avec succès.\n📍 Salon : ${channel}`,
+    ephemeral: true
+});
     }
-    
-        if (
+if (
             interaction.customId ===
             "customrole_add_modal"
         ) {
