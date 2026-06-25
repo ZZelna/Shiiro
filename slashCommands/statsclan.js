@@ -90,12 +90,22 @@ module.exports = {
                 .setDescription(
                     description
                 )
-                .addFields({
-                    name:
-                        "💰 Total du Clan",
-                    value:
-                        `${totalYens.toLocaleString()} ¥`,
-                    inline: false
+                .addFields(
+{
+    name:
+        "⚔️ Score GDC",
+    value:
+        `${clan.weeklyYens.toLocaleString()} ¥`,
+    inline: false
+},
+{
+    name:
+        "💰 Total Clan",
+    value:
+        `${clan.totalYens.toLocaleString()} ¥`,
+    inline: false
+}
+)
                 })
                 .setTimestamp();
 
