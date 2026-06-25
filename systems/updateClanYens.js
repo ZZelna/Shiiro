@@ -15,9 +15,13 @@ async function updateClanYens(
     if (!clan) return;
 
     clan.totalYens += amount;
+    clan.weeklyYens += amount;
 
     if (clan.totalYens < 0)
         clan.totalYens = 0;
+
+    if (clan.weeklyYens < 0)
+        clan.weeklyYens = 0;
 
     await clan.save();
 
