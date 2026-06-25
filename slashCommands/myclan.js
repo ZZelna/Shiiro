@@ -38,21 +38,8 @@ async execute(interaction) {
             .map(id => `<@${id}>`)
             .join("\n");
 
-    const profiles =
-        await CasinoProfile.find({
-            userId: {
-                $in: clan.members
-            }
-        });
-
-    const totalYens =
-        profiles.reduce(
-            (sum, profile) =>
-                sum + (profile.yens || 0),
-            0
-        );
-
-    const embed =
+    
+ const embed =
         new EmbedBuilder()
             .setColor("Blue")
             .setTitle(
@@ -71,12 +58,18 @@ async execute(interaction) {
                         `${clan.members.length}/10`,
                     inline: true
                 },
-                {
-                    name: "💴 Yens du Clan",
-                    value:
-                        `${totalYens.toLocaleString()} ¥`,
-                    inline: true
-                },
+{
+    name: "⚔️ Score GDC",
+    value:
+        `${(clan.weeklyYens || 0).toLocaleString()} ¥`,
+    inline: true
+},
+{
+    name: "💰 Total Clan",
+    value:
+        `${(clan.totalYens || 0).toLocaleString()} ¥`,
+    inline: true
+},
                 {
                     name: "📍 Salon",
                     value:
