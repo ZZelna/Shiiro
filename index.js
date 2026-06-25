@@ -37,13 +37,6 @@ const client = new Client({
         GatewayIntentBits.GuildVoiceStates
     ]
 });
-const voiceTracker =
-require("./events/voiceTracker");
-
-client.on(
-    "voiceStateUpdate",
-    voiceTracker
-);
 require("./events/logs/messageLogs")(client);
 
 client.commands = new Map();
@@ -982,6 +975,10 @@ client.on(
                 Date.now()
             );
 
+            console.log(
+                `${userId} a rejoint un vocal`
+            );
+
         }
 
         // Leave vocal
@@ -990,11 +987,11 @@ client.on(
             !newState.channelId
         ) {
 
-          global.voiceJoins =
-new Map();
+            const joinTime =
+                voiceJoins.get(
+                    userId
+                );
 
-const voiceJoins =
-global.voiceJoins;
             if (!joinTime)
                 return;
 
@@ -1029,10 +1026,15 @@ global.voiceJoins;
                 }
             );
 
+            console.log(
+                `${userId} : ${duration}s sauvegardées`
+            );
+
         }
 
     }
 );
+
 client.login(
     process.env.DISCORD_TOKEN
 );
