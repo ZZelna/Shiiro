@@ -16,6 +16,22 @@ module.exports = {
             ),
 
     async execute(interaction) {
+    const roleAllowed =
+    "1506674274826584284";
+
+if (
+    !interaction.member.roles.cache.has(
+        roleAllowed
+    )
+) {
+
+    return interaction.reply({
+        content:
+            "❌ Tu n'as pas la permission d'utiliser cette commande.",
+        ephemeral: true
+    });
+
+}
 
         const clans =
             await Clan.find()
