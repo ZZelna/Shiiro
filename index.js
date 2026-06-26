@@ -197,6 +197,7 @@ client.on("messageCreate", async (message) => {
          "viens sur",
         "le serv",
         "mon serv",
+         "Shiro",
         "encul"
     ];
 
