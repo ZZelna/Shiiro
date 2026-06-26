@@ -38,6 +38,8 @@ module.exports = {
 try {  
         const guild =
             interaction.guild;
+    console.log("Guild ID pour restore:", guild.id);
+
 
         // ==========================
         // CHARGEMENT DU BACKUP
