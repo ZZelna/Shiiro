@@ -17,14 +17,12 @@ module.exports = {
         .setDescription(
             "Ajouter des yens à un joueur"
         )
-        .addUserOption(option =>
-            option
-                .setName("utilisateur")
-                .setDescription(
-                    "Joueur"
-                )
-                .setRequired(true)
-        )
+       .addStringOption(option =>
+    option
+        .setName("id")
+        .setDescription("ID Discord du joueur")
+        .setRequired(true)
+)
         .addIntegerOption(option =>
             option
                 .setName("montant")
@@ -50,12 +48,18 @@ module.exports = {
                 ephemeral: true
             });
         }
+const userId = interaction.options.getString("id");
 
-        const user =
-            interaction.options.getUser(
-                "utilisateur"
-            );
+let user;
 
+try {
+    user = await interaction.client.users.fetch(userId);
+} catch {
+    return interaction.reply({
+        content: "❌ ID Discord invalide ou utilisateur introuvable.",
+        ephemeral: true
+    });
+}
         const amount =
             interaction.options.getInteger(
                 "montant"
