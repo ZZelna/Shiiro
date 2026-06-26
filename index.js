@@ -183,6 +183,14 @@ client.on("messageCreate", async (message) => {
         "batard",
         "viol",
         "je vais te bz",
+        "sale noich",
+        "negro",
+        "nigga",
+        "esclave",
+        "hitler",
+        "nazi",
+        "URSS",
+        "staline",
         "encul"
     ];
 
