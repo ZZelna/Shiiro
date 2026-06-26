@@ -127,5 +127,4 @@ const BackupSchema = new mongoose.Schema({
     ]
 
 });
-
-module.exports = mongoose.model("Backup", BackupSchema);
+module.exports = mongoose.models.Backup || mongoose.model("Backup", backupSchema);
