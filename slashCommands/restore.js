@@ -76,13 +76,15 @@ try {
         // SUPPRESSION DES RÔLES
         // ==========================
 
-        const rolesToDelete =
-            guild.roles.cache
-                .filter(role =>
-                    role.id !== guild.id &&
-                    role.id !== guild.members.me.roles.highest.id
-                )
-                .sort((a, b) => b.position - a.position);
+        const botRole = guild.members.me?.roles?.highest?.id;
+
+const rolesToDelete = guild.roles.cache
+    .filter(role =>
+        role.id !== guild.id &&
+        role.id !== botRole
+    )
+    .sort((a, b) => b.position - a.position);
+
 
         for (const role of rolesToDelete.values()) {
 
