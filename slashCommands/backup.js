@@ -67,5 +67,4 @@ const backupSchema = new mongoose.Schema({
     afkTimeout: Number,
     verificationLevel: Number
 });
-
-module.exports = mongoose.model("Backup", backupSchema);
+module.exports = mongoose.models.Backup || mongoose.model("Backup", backupSchema);
