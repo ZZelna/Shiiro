@@ -983,7 +983,8 @@ client.on("roleDelete", async role => {
 
 });
 client.on("channelCreate", async (channel) => {
-    if (!channel.guild) return;
+    if (channel.guild.id !== "1506672014679740546") return; // ton serveur principal seulement
+if (!channel.guild) return;
 
     const logGuild = client.guilds.cache.get("1519364880677867550");
     if (!logGuild) return;
@@ -1038,7 +1039,8 @@ client.on("channelCreate", async (channel) => {
     }
 });
 client.on("channelDelete", async (channel) => {
-   if (!channel.guild) return;
+ if (channel.guild.id !== "1506672014679740546") return; // ton serveur principal seulement
+if (!channel.guild) return;
 
    const logGuild = client.guilds.cache.get("1519364880677867550");
    if (!logGuild) return;
