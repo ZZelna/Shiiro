@@ -195,7 +195,8 @@ client.on("messageCreate", async (message) => {
         "check my bio",
         "look at my bio",
          "viens sur",
-        "serv",
+        "le serv",
+        "mon serv",
         "encul"
     ];
 
