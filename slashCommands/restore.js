@@ -461,6 +461,166 @@ module.exports = {
             }
 
         }
+        // ==========================
+// BANNIÈRE DU SERVEUR
+// ==========================
+
+if (backup.guildBanner) {
+
+    try {
+
+        await guild.setBanner(
+            backup.guildBanner
+        );
+
+    } catch (err) {
+
+        console.log(
+            "Impossible de restaurer la bannière."
+        );
+
+    }
+
+}
+
+// ==========================
+// NIVEAU DE VÉRIFICATION
+// ==========================
+
+if (backup.verificationLevel !== undefined) {
+
+    try {
+
+        await guild.setVerificationLevel(
+            backup.verificationLevel
+        );
+
+    } catch (err) {
+
+        console.log(
+            "Impossible de restaurer le niveau de vérification."
+        );
+
+    }
+
+}
+
+// ==========================
+// SYSTÈME AFK
+// ==========================
+
+if (backup.afkChannel) {
+
+    try {
+
+        const afk =
+            guild.channels.cache.find(
+                c => c.name === backup.afkChannel
+            );
+
+        if (afk) {
+
+            await guild.edit({
+
+                afkChannel: afk,
+
+                afkTimeout:
+                    backup.afkTimeout
+
+            });
+
+        }
+
+    } catch (err) {
+
+        console.log(
+            "Impossible de restaurer l'AFK."
+        );
+
+    }
+
+}
+
+// ==========================
+// EMOJIS
+// ==========================
+
+if (backup.emojis?.length) {
+
+    for (const emoji of backup.emojis) {
+
+        try {
+
+            await guild.emojis.create({
+
+                attachment: emoji.url,
+
+                name: emoji.name
+
+            });
+
+        } catch {}
+
+    }
+
+}
+
+// ==========================
+// STICKERS
+// ==========================
+
+if (backup.stickers?.length) {
+
+    for (const sticker of backup.stickers) {
+
+        try {
+
+            await guild.stickers.create({
+
+                file: sticker.url,
+
+                name: sticker.name,
+
+                tags: sticker.tags || "backup"
+
+            });
+
+        } catch {}
+
+    }
+
+}
+
+// ==========================
+// WEBHOOKS
+// ==========================
+
+if (backup.webhooks?.length) {
+
+    for (const hook of backup.webhooks) {
+
+        try {
+
+            const channel =
+                guild.channels.cache.find(
+                    c => c.name === hook.channel
+                );
+
+            if (!channel) continue;
+
+            await channel.createWebhook({
+
+                name: hook.name,
+
+                avatar: hook.avatar
+
+            });
+
+        } catch {}
+
+    }
+
+}
 
         // ==========================
         // FIN
