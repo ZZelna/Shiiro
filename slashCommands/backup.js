@@ -1,180 +1,71 @@
- const {
-    SlashCommandBuilder
-} = require("discord.js");
+const mongoose = require("mongoose");
 
-const Backup =
-require("../models/Backup");
+const permissionOverwriteSchema = new mongoose.Schema({
+    id: String,
+    type: Number,
+    allow: String,
+    deny: String
+}, { _id: false });
 
-module.exports = {
+const channelSchema = new mongoose.Schema({
+    id: String,
+    name: String,
+    type: Number,
+    position: Number,
+    parentId: String,
+    topic: String,
+    nsfw: Boolean,
+    rateLimitPerUser: Number,
+    bitrate: Number,
+    userLimit: Number,
+    rtcRegion: String,
+    videoQualityMode: Number,
+    defaultAutoArchiveDuration: Number,
+    permissionOverwrites: [permissionOverwriteSchema]
+}, { _id: false });
 
-    data: new SlashCommandBuilder()
+const roleSchema = new mongoose.Schema({
+    id: String,
+    name: String,
+    color: Number,
+    permissions: String,
+    hoist: Boolean,
+    mentionable: Boolean,
+    position: Number,
+    icon: String,
+    unicodeEmoji: String,
+    managed: Boolean
+}, { _id: false });
 
-        .setName("backup")
+const emojiSchema = new mongoose.Schema({
+    name: String,
+    url: String,
+    animated: Boolean
+}, { _id: false });
 
-        .setDescription("Créer une sauvegarde complète du serveur"),
+const stickerSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    tags: String,
+    url: String
+}, { _id: false });
 
-    async execute(interaction) {
+const backupSchema = new mongoose.Schema({
+    guildId: { type: String, unique: true },
+    guildName: String,
+    guildIcon: String,
+    guildBanner: String,
+    createdBy: String,
+    createdAt: Date,
+    settings: mongoose.Schema.Types.Mixed,
+    roles: [roleSchema],
+    channels: [channelSchema],
+    emojis: [emojiSchema],
+    stickers: [stickerSchema],
+    webhooks: [mongoose.Schema.Types.Mixed],
+    afkChannel: String,
+    afkTimeout: Number,
+    verificationLevel: Number
+});
 
-        if (
-            interaction.user.id !==
-            "1418370654251778168"
-        ) {
-
-            return interaction.reply({
-                content:
-                "❌ Seul le propriétaire du bot peut utiliser cette commande.",
-                ephemeral: true
-            });
-
-        }
-
-        await interaction.reply(
-            "💾 Création du backup..."
-        );
-
-        const guild =
-            interaction.guild;
-
-        // RÔLES
-        const roles = guild.roles.cache
-    .filter(role => role.id !== guild.id)
-    .sort((a, b) => b.position - a.position)
-    .map(role => ({
-        id: role.id,
-        name: role.name,
-        color: role.color,
-        permissions: role.permissions.bitfield.toString(),
-        hoist: role.hoist,
-        mentionable: role.mentionable,
-        position: role.position,
-        icon: role.iconURL(),
-        unicodeEmoji: role.unicodeEmoji,
-        managed: role.managed
-    }));
-
-        // SALONS
-     const channels = guild.channels.cache
-    .sort((a, b) => a.rawPosition - b.rawPosition)
-    .map(channel => ({
-
-        id: channel.id,
-        name: channel.name,
-        type: channel.type,
-
-        position: channel.rawPosition,
-
-        parentId: channel.parentId,
-
-        topic: channel.topic || null,
-
-        nsfw: channel.nsfw || false,
-
-        rateLimitPerUser:
-            channel.rateLimitPerUser || 0,
-
-        bitrate:
-            channel.bitrate || null,
-
-        userLimit:
-            channel.userLimit || null,
-
-        rtcRegion:
-            channel.rtcRegion || null,
-
-        videoQualityMode:
-            channel.videoQualityMode || null,
-
-        defaultAutoArchiveDuration:
-            channel.defaultAutoArchiveDuration || null,
-
-        permissionOverwrites:
-            channel.permissionOverwrites.cache.map(overwrite => ({
-
-                id: overwrite.id,
-
-                type: overwrite.type,
-
-                allow:
-                    overwrite.allow.bitfield.toString(),
-
-                deny:
-                    overwrite.deny.bitfield.toString()
-
-            }))
-
-    }));
-     // EMOJIS
-const emojis = guild.emojis.cache.map(emoji => ({
-    name: emoji.name,
-    url: emoji.url,
-    animated: emoji.animated
-}));
-// STICKERS
-const stickers = guild.stickers.cache.map(sticker => ({
-    name: sticker.name,
-    description: sticker.description,
-    tags: sticker.tags,
-    url: sticker.url
-}));
-// PARAMÈTRES DU SERVEUR
-const settings = {
-
-    name: guild.name,
-
-    icon: guild.iconURL({
-        extension: "png",
-        size: 4096
-    }),
-
-    banner: guild.bannerURL({
-        extension: "png",
-        size: 4096
-    }),
-
-    description: guild.description,
-
-    verificationLevel:
-        guild.verificationLevel,
-
-    explicitContentFilter:
-        guild.explicitContentFilter,
-
-    defaultNotifications:
-        guild.defaultMessageNotifications,
-
-    preferredLocale:
-        guild.preferredLocale,
-
-    afkTimeout:
-        guild.afkTimeout
-};
-await Backup.findOneAndUpdate(
-    {
-        guildId: guild.id
-    },
-    {
-        guildId: guild.id,
-        guildName: guild.name,
-        guildIcon: guild.iconURL(),
-        createdBy: interaction.user.id,
-        createdAt: new Date(),
-
-        settings,
-        roles,
-        channels,
-        emojis,
-        stickers
-
-    },
-    {
-        upsert: true
-    }
-);
-
-        await interaction.editReply(
-            "✅ Backup terminé avec succès."
-        );
-
-    }
-
-};
+module.exports = mongoose.model("Backup", backupSchema);
