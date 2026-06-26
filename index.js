@@ -191,7 +191,7 @@ client.on("messageCreate", async (message) => {
         "nazi",
         "URSS",
         "staline",
-        "venez",
+        "venez sur ",
         "check my bio",
         "look at my bio",
         "serv",
