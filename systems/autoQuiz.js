@@ -54,18 +54,18 @@ module.exports = (client) => {
                         `../commands/fun/${randomGame}.js`
                     );
 
-                await game.run(
-                    {
-                        channel,
-                        author: {
-                            id:
-                                client.user.id,
-                            bot: true
-                        },
-                        member: null
-                    },
-                    []
-                );
+              await game.run(
+    {
+        channel,
+        author: {
+            id: client.user.id,
+            bot: true
+        },
+        member: null
+    },
+    [],
+    { auto: true } // ← ajoute ça
+);
 
             } catch (err) {
 
