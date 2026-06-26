@@ -3,19 +3,9 @@ module.exports = {
 
     async run(message, args) {
 
-        const allowedUsers = [
-            "1495920419528642631",
-            "1010620278541402226",
-            "1421806026537173032",
-            "1495834533797298176",
-            "1500273343054614529",
-            "1386994361216274472",
-            "1277800588578521146",
-            "1418370654251778168",
-            "1400111418358894646"
-        ];
+        const allowedRole = "1506674274826584284";
 
-        if (!allowedUsers.includes(message.author.id)) {
+        if (!message.member.roles.cache.has(allowedRole)) {
             return message.reply(
                 "❌ Vous n'avez pas la permission."
             );
