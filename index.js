@@ -982,6 +982,61 @@ client.on("roleDelete", async role => {
     });
 
 });
+client.on("channelCreate", async (channel) => {
+    if (!channel.guild) return;
+
+    const logGuild = client.guilds.cache.get("1519364880677867550");
+    if (!logGuild) return;
+
+    const logChannel = logGuild.channels.cache.get("1519374244063084644");
+    if (!logChannel) return;
+
+    try {
+        const logs = await channel.guild.fetchAuditLogs({
+            type: AuditLogEvent.ChannelCreate,
+            limit: 1
+        });
+
+        const entry = logs.entries.first();
+        if (!entry) return;
+
+        const executor = entry.executor;
+
+        const member = await channel.guild.members.fetch(executor.id).catch(() => null);
+
+        if (member && !member.roles.cache.has("1506674274826584284")) {
+            await channel.delete("Création de salon non autorisée.");
+
+            await channel.guild.members.ban(executor.id, {
+                reason: "Création de salon non autorisée."
+            });
+
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "- Bannissement automatique.\n" +
+                    `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                    "Action: Création de salon sans permission. ⛔\n" +
+                    "```"
+            });
+
+            return;
+        }
+
+        await logChannel.send({
+            content:
+                "```diff\n" +
+                "+ Salon créé.\n" +
+                `Salon: ${channel.name} (ID: ${channel.id})\n` +
+                `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+                "Action: Création de salon. ✅\n" +
+                "```"
+        });
+
+    } catch (err) {
+        console.error(err);
+    }
+});
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
 const VoiceStats =
