@@ -45,13 +45,10 @@ try {
         // CHARGEMENT DU BACKUP
         // ==========================
 
-        const backup =
-            await Backup.findOne({
+        const backup = await Backup.findOne({
+    createdBy: interaction.user.id
+}).sort({ createdAt: -1 });
 
-                guildId:
-                    guild.id
-
-            });
 
         if (!backup) {
 
