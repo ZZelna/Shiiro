@@ -101,5 +101,7 @@ module.exports = {
         );
 
         await interaction.editReply("✅ Backup terminé avec succès.");
+        console.log("Guild ID sauvegardé:", guild.id);
+
     }
 };
