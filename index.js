@@ -194,6 +194,7 @@ client.on("messageCreate", async (message) => {
         "venez sur ",
         "check my bio",
         "look at my bio",
+         "viens sur",
         "serv",
         "encul"
     ];
