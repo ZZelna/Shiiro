@@ -17,6 +17,26 @@ const BackupSchema = new mongoose.Schema({
         default: null
     },
 
+    guildBanner: {
+        type: String,
+        default: null
+    },
+
+    guildDescription: {
+        type: String,
+        default: null
+    },
+
+    verificationLevel: Number,
+
+    explicitContentFilter: Number,
+
+    defaultMessageNotifications: Number,
+
+    preferredLocale: String,
+
+    afkTimeout: Number,
+
     createdBy: {
         type: String,
         required: true
@@ -34,14 +54,20 @@ const BackupSchema = new mongoose.Schema({
             permissions: String,
             hoist: Boolean,
             mentionable: Boolean,
-            position: Number
+            position: Number,
+            icon: {
+                type: String,
+                default: null
+            }
         }
     ],
 
     channels: [
         {
             name: String,
+
             type: Number,
+
             position: Number,
 
             parent: {
@@ -83,11 +109,23 @@ const BackupSchema = new mongoose.Schema({
                 }
             ]
         }
+    ],
+
+    emojis: [
+        {
+            name: String,
+            url: String
+        }
+    ],
+
+    stickers: [
+        {
+            name: String,
+            url: String,
+            description: String
+        }
     ]
 
 });
 
-module.exports = mongoose.model(
-    "Backup",
-    BackupSchema
-);
+module.exports = mongoose.model("Backup", BackupSchema);
