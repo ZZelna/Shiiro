@@ -293,7 +293,9 @@ const rolesToDelete = guild.roles.cache
                     (a, b) =>
                         a.position - b.position
                 );
-
+const idToName = new Map(
+    backup.channels.map(c => [c.id, c.name])
+);
         for (const channel of normalChannels) {
 
             try {
@@ -321,16 +323,16 @@ const rolesToDelete = guild.roles.cache
 
                 const options = {
 
-                    name:
-                        channel.name,
+    name:
+        channel.name,
 
-                    type:
-                        channel.type,
+    type:
+        channel.type,
 
-                    parent:
-                        channel.parent
-                            ? categoryMap.get(channel.parent)
-                            : null,
+    parent:
+        channel.parentId
+            ? categoryMap.get(idToName.get(channel.parentId))
+            : null,
 
                     permissionOverwrites:
                         overwrites
