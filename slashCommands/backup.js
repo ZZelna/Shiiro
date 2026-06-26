@@ -59,12 +59,13 @@ module.exports = {
                 rtcRegion: channel.rtcRegion || null,
                 videoQualityMode: channel.videoQualityMode || null,
                 defaultAutoArchiveDuration: channel.defaultAutoArchiveDuration || null,
-                permissionOverwrites: channel.permissionOverwrites.cache.map(o => ({
-                    id: o.id,
-                    type: o.type,
-                    allow: o.allow.bitfield.toString(),
-                    deny: o.deny.bitfield.toString()
-                }))
+                permissionOverwrites: channel.permissionOverwrites?.cache?.map(o => ({
+    id: o.id,
+    type: o.type,
+    allow: o.allow.bitfield.toString(),
+    deny: o.deny.bitfield.toString()
+})) ?? []
+
             }));
 
         const emojis = guild.emojis.cache.map(emoji => ({
