@@ -1099,7 +1099,7 @@ client.on("guildBanAdd", async (ban) => {
    const logGuild = client.guilds.cache.get("1519364880677867550");
    if (!logGuild) return;
 
-   const logChannel = logGuild.channels.cache.get("1520108165008592988");
+   const logChannel = logGuild.channels.cache.get("1520116351904120852");
    if (!logChannel) return;
 
    try {
@@ -1134,7 +1134,7 @@ client.on("guildBanRemove", async (ban) => {
    const logGuild = client.guilds.cache.get("1519364880677867550");
    if (!logGuild) return;
 
-   const logChannel = logGuild.channels.cache.get("1520108165008592988");
+   const logChannel = logGuild.channels.cache.get("1520116351904120852");
    if (!logChannel) return;
 
    try {
@@ -1160,7 +1160,6 @@ client.on("guildBanRemove", async (ban) => {
        console.error(err);
    }
 });
-
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
 const VoiceStats =
