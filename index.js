@@ -51,6 +51,10 @@ for (const file of slashCommands) {
 
     const command =
         require(`./slashCommands/${file}`);
+if (!command.data) {  
+        console.log(`❌ Fichier sans 'data' : ${file}`);
+        continue;
+    }
 
     client.slashCommands.set(
         command.data.name,
