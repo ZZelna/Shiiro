@@ -6,18 +6,35 @@ const SavedRoles =
 require("../models/SavedRoles");
 
 module.exports = {
+
     data: new SlashCommandBuilder()
+
         .setName("rerank")
-        .setDescription(
-            "Remet les anciens rôles d'un membre"
+
+        .setDescription("Restaure les rôles sauvegardés")
+
+        .addStringOption(option =>
+            option
+                .setName("mode")
+                .setDescription("Membre ou tout le serveur")
+                .setRequired(true)
+                .addChoices(
+                    {
+                        name: "membre",
+                        value: "member"
+                    },
+                    {
+                        name: "all",
+                        value: "all"
+                    }
+                )
         )
+
         .addUserOption(option =>
             option
                 .setName("membre")
-                .setDescription(
-                    "Membre à rerank"
-                )
-                .setRequired(true)
+                .setDescription("Membre à rerank")
+                .setRequired(false)
         ),
 
     async execute(interaction) {
@@ -35,67 +52,105 @@ module.exports = {
 
         }
 
-        const member =
-            interaction.options.getMember(
-                "membre"
-            );
+        const mode =
+            interaction.options.getString("mode");
 
-        if (!member) {
+        // =========================
+        // RERANK D'UN MEMBRE
+        // =========================
 
-            return interaction.reply({
-                content:
-                "❌ Membre introuvable.",
-                ephemeral: true
-            });
+        if (mode === "member") {
+
+            const member =
+                interaction.options.getMember("membre");
+
+            if (!member) {
+
+                return interaction.reply({
+                    content:
+                    "❌ Tu dois préciser un membre.",
+                    ephemeral: true
+                });
+
+            }
+
+            const saved =
+                await SavedRoles.findOne({
+                    userId: member.id
+                });
+
+            if (!saved) {
+
+                return interaction.reply({
+                    content:
+                    "❌ Aucun rôle sauvegardé.",
+                    ephemeral: true
+                });
+
+            }
+
+            try {
+
+                await member.roles.add(saved.roles);
+
+                return interaction.reply({
+                    content:
+                    `✅ ${member.user.tag} rerank avec succès.`
+                });
+
+            } catch {
+
+                return interaction.reply({
+                    content:
+                    "❌ Impossible de restaurer les rôles.",
+                    ephemeral: true
+                });
+
+            }
 
         }
 
-        const saved =
-            await SavedRoles.findOne({
-                userId: member.id
-            });
+        // =========================
+        // RERANK ALL
+        // =========================
 
-        if (
-            !saved ||
-            !saved.roles ||
-            !saved.roles.length
-        ) {
+        if (mode === "all") {
 
-            return interaction.reply({
-                content:
-                "❌ Aucun rôle sauvegardé pour cet utilisateur.",
-                ephemeral: true
-            });
-
-        }
-
-        try {
-
-            await member.roles.add(
-                saved.roles
+            await interaction.reply(
+                "⏳ Rerank de tous les membres..."
             );
 
-            await interaction.reply({
-                content:
-`\`\`\`diff
-+ Rerank effectué.
-Utilisateur: ${member.user.tag} (ID: ${member.id})
-Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
-Action: Les rôles sauvegardés ont été restaurés. ✅
-\`\`\``
-            });
+            const members =
+                await interaction.guild.members.fetch();
 
-        } catch (err) {
+            const saves =
+                await SavedRoles.find();
 
-            console.error(err);
+            let count = 0;
 
-            return interaction.reply({
-                content:
-                "❌ Impossible de restaurer les rôles.",
-                ephemeral: true
-            });
+            for (const save of saves) {
+
+                const member =
+                    members.get(save.userId);
+
+                if (!member) continue;
+
+                try {
+
+                    await member.roles.add(save.roles);
+
+                    count++;
+
+                } catch {}
+
+            }
+
+            return interaction.editReply(
+                `✅ ${count} membre(s) rerank.`
+            );
 
         }
 
     }
+
 };
