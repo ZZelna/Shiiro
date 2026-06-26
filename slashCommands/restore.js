@@ -33,15 +33,22 @@ module.exports = {
         }
 
         await interaction.reply(
-            "♻️ Restauration du serveur..."
+            "♻️ Début de la restauration..."
         );
 
         const guild =
             interaction.guild;
 
+        // ==========================
+        // CHARGEMENT DU BACKUP
+        // ==========================
+
         const backup =
             await Backup.findOne({
-                guildId: guild.id
+
+                guildId:
+                    guild.id
+
             });
 
         if (!backup) {
@@ -52,155 +59,176 @@ module.exports = {
 
         }
 
-        //
-        // SUPPRESSION DES SALONS
-        //
+        // ==========================
+        // MAPS
+        // ==========================
 
-        for (const channel of guild.channels.cache.values()) {
+        const roleMap =
+            new Map();
 
-            try {
+        const categoryMap =
+            new Map();
 
-                await channel.delete();
-
-            } catch {}
-
-        }
-
-        //
+        console.log(
+            "✅ Backup chargé."
+        );
+                // ==========================
         // SUPPRESSION DES RÔLES
-        //
+        // ==========================
 
-        for (const role of guild.roles.cache.values()) {
+        const rolesToDelete =
+            guild.roles.cache
+                .filter(role =>
+                    role.id !== guild.id &&
+                    role.id !== guild.members.me.roles.highest.id
+                )
+                .sort((a, b) => b.position - a.position);
 
-            if (
-                role.id === guild.id
-            ) continue;
-
-            if (
-                role.managed
-            ) continue;
-
-            try {
-
-                await role.delete();
-
-            } catch {}
-
-        }
-
-        //
-        // DICTIONNAIRES
-        //
-
-        const createdRoles =
-            new Map();
-
-        const createdCategories =
-            new Map();
-              //
-        // RECRÉATION DES RÔLES
-        //
-
-        const sortedRoles =
-            [...backup.roles]
-                .sort(
-                    (a, b) =>
-                        a.position - b.position
-                );
-
-        for (const role of sortedRoles) {
+        for (const role of rolesToDelete.values()) {
 
             try {
 
-                const newRole =
-                    await guild.roles.create({
-
-                        name:
-                            role.name,
-
-                        color:
-                            role.color,
-
-                        hoist:
-                            role.hoist,
-
-                        mentionable:
-                            role.mentionable,
-
-                        permissions:
-                            new PermissionsBitField(
-                                BigInt(
-                                    role.permissions
-                                )
-                            )
-
-                    });
-
-                createdRoles.set(
-                    role.name,
-                    newRole
+                await role.delete(
+                    "Restauration du serveur"
                 );
 
             } catch (err) {
 
                 console.log(
-                    "Erreur rôle :",
-                    role.name
+                    `Impossible de supprimer ${role.name}`
                 );
 
             }
 
         }
 
-        //
-        // RECRÉATION DES CATÉGORIES
-        //
+        // ==========================
+        // CRÉATION DES RÔLES
+        // ==========================
+
+        const roles =
+            [...backup.roles]
+                .sort((a, b) => a.position - b.position);
+
+        for (const role of roles) {
+
+            try {
+
+                const createdRole =
+                    await guild.roles.create({
+
+                        name: role.name,
+
+                        color: role.color,
+
+                        permissions:
+                            BigInt(role.permissions),
+
+                        hoist: role.hoist,
+
+                        mentionable:
+                            role.mentionable,
+
+                        reason:
+                            "Restauration du serveur"
+
+                    });
+
+                roleMap.set(
+                    role.name,
+                    createdRole.id
+                );
+
+            } catch (err) {
+
+                console.log(
+                    `Erreur création rôle ${role.name}`,
+                    err.message
+                );
+
+            }
+
+        }
+
+        // ==========================
+        // REMISE DES POSITIONS
+        // ==========================
+
+        const createdRoles =
+            guild.roles.cache
+                .filter(role =>
+                    role.id !== guild.id
+                );
+
+        for (const role of roles) {
+
+            const created =
+                createdRoles.find(
+                    r => r.name === role.name
+                );
+
+            if (!created)
+                continue;
+
+            try {
+
+                await created.setPosition(
+                    role.position
+                );
+
+            } catch {}
+
+        }
+
+        console.log(
+            "✅ Tous les rôles ont été restaurés."
+        );
+                // ==========================
+        // SUPPRESSION DES SALONS
+        // ==========================
+
+        const channelsToDelete =
+            guild.channels.cache.sort(
+                (a, b) => b.rawPosition - a.rawPosition
+            );
+
+        for (const channel of channelsToDelete.values()) {
+
+            try {
+
+                await channel.delete(
+                    "Restauration du serveur"
+                );
+
+            } catch (err) {
+
+                console.log(
+                    `Impossible de supprimer ${channel.name}`
+                );
+
+            }
+
+        }
+
+        // ==========================
+        // CRÉATION DES CATÉGORIES
+        // ==========================
 
         const categories =
-            backup.channels.filter(
-                c =>
-                    c.type ===
-                    ChannelType.GuildCategory
-            );
+            backup.channels
+                .filter(
+                    c => c.type === ChannelType.GuildCategory
+                )
+                .sort(
+                    (a, b) =>
+                        a.position - b.position
+                );
 
         for (const category of categories) {
 
             try {
 
-                const overwrites = [];
-
-                for (
-                    const perm
-                    of category.permissionOverwrites
-                ) {
-
-                    const role =
-                        createdRoles.get(
-                            perm.id
-                        );
-
-                    overwrites.push({
-
-                        id:
-                            role
-                                ? role.id
-                                : guild.id,
-
-                        allow:
-                            BigInt(
-                                perm.allow
-                            ),
-
-                        deny:
-                            BigInt(
-                                perm.deny
-                            )
-
-                    });
-
-                }
-
-                const newCategory =
+                const createdCategory =
                     await guild.channels.create({
 
                         name:
@@ -210,22 +238,247 @@ module.exports = {
                             ChannelType.GuildCategory,
 
                         permissionOverwrites:
-                            overwrites
+                            category.permissionOverwrites.map(
+                                overwrite => ({
+
+                                    id:
+                                        roleMap.get(overwrite.id)
+                                        || overwrite.id,
+
+                                    type:
+                                        overwrite.type,
+
+                                    allow:
+                                        BigInt(overwrite.allow),
+
+                                    deny:
+                                        BigInt(overwrite.deny)
+
+                                })
+                            )
 
                     });
 
-                createdCategories.set(
+                categoryMap.set(
                     category.name,
-                    newCategory
+                    createdCategory.id
                 );
 
             } catch (err) {
 
                 console.log(
-                    "Erreur catégorie :",
-                    category.name
+                    `Erreur catégorie ${category.name}`,
+                    err.message
                 );
 
             }
 
         }
+
+        console.log(
+            "✅ Catégories restaurées."
+        );
+                // ==========================
+        // CRÉATION DES SALONS
+        // ==========================
+
+        const normalChannels =
+            backup.channels
+                .filter(
+                    c => c.type !== ChannelType.GuildCategory
+                )
+                .sort(
+                    (a, b) =>
+                        a.position - b.position
+                );
+
+        for (const channel of normalChannels) {
+
+            try {
+
+                const overwrites =
+                    channel.permissionOverwrites.map(
+                        overwrite => ({
+
+                            id:
+                                roleMap.get(overwrite.id) ||
+                                categoryMap.get(overwrite.id) ||
+                                overwrite.id,
+
+                            type:
+                                overwrite.type,
+
+                            allow:
+                                BigInt(overwrite.allow),
+
+                            deny:
+                                BigInt(overwrite.deny)
+
+                        })
+                    );
+
+                const options = {
+
+                    name:
+                        channel.name,
+
+                    type:
+                        channel.type,
+
+                    parent:
+                        channel.parent
+                            ? categoryMap.get(channel.parent)
+                            : null,
+
+                    permissionOverwrites:
+                        overwrites
+
+                };
+
+                // Salons texte
+                if (
+                    channel.type ===
+                    ChannelType.GuildText
+                ) {
+
+                    options.topic =
+                        channel.topic;
+
+                    options.nsfw =
+                        channel.nsfw;
+
+                    options.rateLimitPerUser =
+                        channel.rateLimitPerUser;
+
+                }
+
+                // Salons vocaux
+                if (
+                    channel.type ===
+                    ChannelType.GuildVoice
+                ) {
+
+                    options.bitrate =
+                        channel.bitrate;
+
+                    options.userLimit =
+                        channel.userLimit;
+
+                }
+
+                // Forum
+                if (
+                    channel.type ===
+                    ChannelType.GuildForum
+                ) {
+
+                    options.nsfw =
+                        channel.nsfw;
+
+                }
+
+                await guild.channels.create(
+                    options
+                );
+
+            } catch (err) {
+
+                console.log(
+                    `Erreur création salon ${channel.name}`,
+                    err.message
+                );
+
+            }
+
+        }
+
+        console.log(
+            "✅ Tous les salons restaurés."
+        );
+                // ==========================
+        // REMISE DES POSITIONS
+        // ==========================
+
+        const guildChannels =
+            guild.channels.cache;
+
+        for (const savedChannel of backup.channels) {
+
+            const created =
+                guildChannels.find(
+                    c => c.name === savedChannel.name
+                );
+
+            if (!created)
+                continue;
+
+            try {
+
+                await created.setPosition(
+                    savedChannel.position
+                );
+
+            } catch {}
+
+        }
+
+        // ==========================
+        // NOM DU SERVEUR
+        // ==========================
+
+        try {
+
+            await guild.setName(
+                backup.guildName
+            );
+
+        } catch (err) {
+
+            console.log(
+                "Impossible de restaurer le nom."
+            );
+
+        }
+
+        // ==========================
+        // ICÔNE DU SERVEUR
+        // ==========================
+
+        if (backup.guildIcon) {
+
+            try {
+
+                await guild.setIcon(
+                    backup.guildIcon
+                );
+
+            } catch (err) {
+
+                console.log(
+                    "Impossible de restaurer l'icône."
+                );
+
+            }
+
+        }
+
+        // ==========================
+        // FIN
+        // ==========================
+
+        await interaction.editReply(
+            "✅ **Serveur restauré avec succès.**"
+        );
+
+    } catch (err) {
+
+        console.error(err);
+
+        await interaction.editReply(
+            "❌ Une erreur est survenue pendant la restauration."
+        );
+
+    }
+
+}
+};
