@@ -175,7 +175,11 @@ client.on("messageCreate", async (message) => {
         "pute",
         "salope",
         "ntr",
-        "enculé"
+        "slp",
+        "nique ta race",
+        "enfoire",
+        "enfant de",
+        "encul"
     ];
 
     const content = message.content.toLowerCase();
