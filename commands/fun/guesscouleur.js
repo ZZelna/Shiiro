@@ -13,10 +13,18 @@ module.exports = {
     name: "guesscouleur",
     description: "Deviner une couleur",
 
-    run: async (
-        message,
-        args
-    ) => {
+    run: async (message, args, options = {}) => {
+
+    if (!message.member && !options.auto) return;
+
+    if (!options.auto) {
+        const roleAllowed = "1506674274826584284";
+        if (!message.member.roles.cache.has(roleAllowed)) {
+            return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
+        }
+    }
+    // reste inchangé...
+
 
         const color =
             colors[
