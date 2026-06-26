@@ -12,7 +12,18 @@ module.exports = {
 
     name: "guessbrand",
 
-    async run(message) {
+    run: async (message, args, options = {}) => {
+
+    if (!message.member && !options.auto) return;
+
+    if (!options.auto) {
+        const roleAllowed = "1506674274826584284";
+        if (!message.member.roles.cache.has(roleAllowed)) {
+            return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
+        }
+    }
+    // reste inchangé...
+
 
         const question =
             brands[
