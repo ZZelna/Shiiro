@@ -35,7 +35,7 @@ module.exports = {
         await interaction.reply(
             "♻️ Début de la restauration..."
         );
-
+try {  
         const guild =
             interaction.guild;
 
