@@ -179,6 +179,10 @@ client.on("messageCreate", async (message) => {
         "nique ta race",
         "enfoire",
         "enfant de",
+        "tocard",
+        "batard",
+        "viol",
+        "je vais te bz",
         "encul"
     ];
 
