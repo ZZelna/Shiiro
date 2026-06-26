@@ -164,65 +164,107 @@ client.on("messageCreate", async (message) => {
     if (message.author.bot) return;
 
     // Anti-toxicité
-    const toxicWords = [
-        "fdp",
-        "ntm",
-        "tg",
-        "je te v",
-        "connard",
-        "fils de pute",
-        "nique ta mere",
-        "pute",
-        "salope",
-        "ntr",
-        "slp",
-        "nique ta race",
-        "enfoire",
-        "enfant de",
-        "tocard",
-        "batard",
-        "viol",
-        "je vais te bz",
-        "sale noich",
-        "negro",
-        "nigga",
-        "esclave",
-        "hitler",
-        "nazi",
-        "URSS",
-        "staline",
-        "venez sur ",
-        "check my bio",
-        "look at my bio",
-         "viens sur",
-        "le serv",
-        "mon serv",
-         "Shiro",
-        "encul"
-    ];
+    const content = message.content
+    .toLowerCase()
 
-    const content = message.content.toLowerCase();
+    // Anti-leetspeak
+    .replace(/0/g, "o")
+    .replace(/1/g, "i")
+    .replace(/3/g, "e")
+    .replace(/4/g, "a")
+    .replace(/5/g, "s")
+    .replace(/7/g, "t")
+    .replace(/8/g, "b")
+    .replace(/9/g, "g")
 
-    const detected = toxicWords.some(word =>
-        content.includes(word)
-    );
+    // Retire les accents
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 
-    if (detected) {
+// Caractères autorisés entre les lettres
+const separators = "[\\s._\\-*~`'\",!?/\\\\|()\$begin:math:display$\\$end:math:display${}]*";
 
-        await message.delete().catch(() => {});
+// Génère automatiquement une regex
+function buildPattern(word) {
 
-        await message.member.timeout(
-            20 * 1000,
-            "Langage toxique"
-        ).catch(() => {});
+    const escaped = word
+        .split("")
+        .map(c =>
+            c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+        )
+        .join(separators);
 
-        await message.channel.send({
-            content: `⚠️ ${message.author} **Votre message est trop toxique.**`
-        });
+    return new RegExp(`\\b${escaped}\\b`, "i");
 
-        return;
-    }
+}
 
+const toxicPatterns = [
+
+    // Abréviations
+    buildPattern("fdp"),
+    buildPattern("ntm"),
+    buildPattern("tg"),
+
+    // Insultes
+    buildPattern("pute"),
+    buildPattern("salope"),
+    buildPattern("connard"),
+    buildPattern("connasse"),
+    buildPattern("batard"),
+    buildPattern("tocard"),
+    buildPattern("encule"),
+    buildPattern("enculer"),
+    buildPattern("enculee"),
+    buildPattern("enculees"),
+
+    // Racisme
+    buildPattern("negro"),
+    buildPattern("nigga"),
+    buildPattern("noich"),
+
+    // Idéologies
+    buildPattern("hitler"),
+    buildPattern("nazi"),
+    buildPattern("staline"),
+
+    // Expressions
+    /\bfils\s+de\s+pute\b/i,
+    /\bnique\s+ta\s+mere\b/i,
+    /\bnique\s+ta\s+race\b/i,
+    /\bsale\s+noich\b/i,
+    /\bje\s+vais\s+te\s+bz\b/i,
+
+    // Pub
+    /\bcheck\s+my\s+bio\b/i,
+    /\blook\s+at\s+my\s+bio\b/i,
+    /\bviens\s+sur\b/i,
+    /\bvenez\s+sur\b/i,
+    /\bmon\s+serveur\b/i,
+    /\bnotre\s+serveur\b/i,
+    /\bdiscord\.gg\b/i,
+    /\bdiscord\.com\/invite\b/i
+
+];
+
+const detected = toxicPatterns.some(regex =>
+    regex.test(content)
+);
+
+if (detected) {
+
+    await message.delete().catch(() => {});
+
+    await message.member.timeout(
+        20 * 1000,
+        "Langage toxique"
+    ).catch(() => {});
+
+    await message.channel.send({
+        content: `⚠️ ${message.author} **Votre message est trop toxique.**`
+    });
+
+    return;
+}
     // Commandes
     if (!message.content.startsWith("+")) return;
 
