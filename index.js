@@ -1093,6 +1093,74 @@ client.on("channelDelete", async (channel) => {
        console.error(err);
    }
 });
+client.on("guildBanAdd", async (ban) => {
+   if (ban.guild.id !== "1506672014679740546") return;
+
+   const logGuild = client.guilds.cache.get("1519364880677867550");
+   if (!logGuild) return;
+
+   const logChannel = logGuild.channels.cache.get("1520108165008592988");
+   if (!logChannel) return;
+
+   try {
+       const logs = await ban.guild.fetchAuditLogs({
+           type: AuditLogEvent.MemberBanAdd,
+           limit: 1
+       });
+
+       const entry = logs.entries.first();
+       const executor = entry?.executor;
+       const reason = entry?.reason || "Aucune raison";
+
+       await logChannel.send({
+           content:
+               "```diff\n" +
+               "- Bannissement.\n" +
+               `Utilisateur: ${ban.user.tag} (ID: ${ban.user.id})\n` +
+               `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+               `Raison: ${reason}\n` +
+               "Action: Ban. ⛔\n" +
+               "```"
+       });
+
+   } catch (err) {
+       console.error(err);
+   }
+});
+
+client.on("guildBanRemove", async (ban) => {
+   if (ban.guild.id !== "1506672014679740546") return;
+
+   const logGuild = client.guilds.cache.get("1519364880677867550");
+   if (!logGuild) return;
+
+   const logChannel = logGuild.channels.cache.get("1520108165008592988");
+   if (!logChannel) return;
+
+   try {
+       const logs = await ban.guild.fetchAuditLogs({
+           type: AuditLogEvent.MemberBanRemove,
+           limit: 1
+       });
+
+       const entry = logs.entries.first();
+       const executor = entry?.executor;
+
+       await logChannel.send({
+           content:
+               "```diff\n" +
+               "+ Unban.\n" +
+               `Utilisateur: ${ban.user.tag} (ID: ${ban.user.id})\n` +
+               `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+               "Action: Unban. ✅\n" +
+               "```"
+       });
+
+   } catch (err) {
+       console.error(err);
+   }
+});
+
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
 const VoiceStats =
