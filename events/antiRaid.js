@@ -11,7 +11,7 @@ module.exports = async (member) => {
             });
 
             const log = member.guild.channels.cache.get(
-                "ID_LOGS"
+                "1520445114097598665"
             );
 
             if (log) {
