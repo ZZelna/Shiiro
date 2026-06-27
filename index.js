@@ -7,6 +7,8 @@ const autoReact = require("./events/autoReact");
 const photoOnly = require("./events/photoOnly");
 const antiToxic = require("./events/antiToxic");
 const antiSpam = require("./events/antiSpam");
+const antiInvite = require("./events/antiInvite");
+const antiLink = require("./events/antiLink");
 const {
     Client,
     GatewayIntentBits,
