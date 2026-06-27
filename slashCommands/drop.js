@@ -41,7 +41,7 @@ module.exports = {
 
      if (!user) {
        await i.reply({
-         content: "❌ Tu n'as pas de profil casino. Utilise `/casino` pour en créer un.",
+         content: "❌ Tu n'as pas de profil casino. Utilise vas dans creer mon profil pour en créer un.",
          ephemeral: true
        });
        return;
