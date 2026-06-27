@@ -176,105 +176,23 @@ autoReact(message);
     if (message.author.bot) return;
 
     
-    const content = message.content
-    .toLowerCase()
+client.on("messageCreate", async (message) => {
 
-    .replace(/0/g, "o")
-    .replace(/1/g, "i")
-    .replace(/3/g, "e")
-    .replace(/4/g, "a")
-    .replace(/5/g, "s")
-    .replace(/7/g, "t")
-    .replace(/8/g, "b")
-    .replace(/9/g, "g")
+    autoReact(message);
 
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+    photoOnly(message);
 
+    antiToxic(message);
 
-const separators = "[\\s._\\-*~`'\",!?/\\\\|()\$begin:math:display$\\$end:math:display${}]*";
+    antiSpam(message);
 
+    antiInvite(message);
 
-function buildPattern(word) {
+    antiLink(message);
 
-    const escaped = word
-        .split("")
-        .map(c =>
-            c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-        )
-        .join(separators);
+    antiMassMention(message);
 
-    return new RegExp(`\\b${escaped}\\b`, "i");
-
-}
-
-const toxicPatterns = [
-
-
-    buildPattern("fdp"),
-    buildPattern("ntm"),
-    buildPattern("tg"),
-
-
-    buildPattern("pute"),
-    buildPattern("salope"),
-    buildPattern("connard"),
-    buildPattern("connasse"),
-    buildPattern("batard"),
-    buildPattern("tocard"),
-    buildPattern("encule"),
-    buildPattern("enculer"),
-    buildPattern("enculee"),
-    buildPattern("enculees"),
-
-
-    buildPattern("negro"),
-    buildPattern("nigga"),
-    buildPattern("noich"),
-
-
-    buildPattern("hitler"),
-    buildPattern("nazi"),
-    buildPattern("staline"),
-
-
-    /\bfils\s+de\s+pute\b/i,
-    /\bnique\s+ta\s+mere\b/i,
-    /\bnique\s+ta\s+race\b/i,
-    /\bsale\s+noich\b/i,
-    /\bje\s+vais\s+te\s+bz\b/i,
-
-
-    /\bcheck\s+my\s+bio\b/i,
-    /\blook\s+at\s+my\s+bio\b/i,
-    /\bviens\s+sur\b/i,
-    /\bvenez\s+sur\b/i,
-    /\bmon\s+serveur\b/i,
-    /\bnotre\s+serveur\b/i,
-    /\bdiscord\.gg\b/i,
-    /\bdiscord\.com\/invite\b/i
-
-];
-
-const detected = toxicPatterns.some(regex =>
-    regex.test(content)
-);
-
-if (detected) {
-
-    await message.delete().catch(() => {});
-
-    await message.member.timeout(
-        20 * 1000,
-        "Langage toxique"
-    ).catch(() => {});
-
-    await message.channel.send({
-        content: `⚠️ ${message.author} **Votre message est trop toxique.**`
-    });
-
-    return;
-}
+    if (message.author.bot) return;
     // Commandes
     if (!message.content.startsWith("+")) return;
 
