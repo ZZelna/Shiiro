@@ -381,7 +381,7 @@ const GlobalBlacklist = require("./models/GlobalBlacklist");
 
 client.on("guildBanRemove", async (ban) => {
     if (ban.guild.id !== "1506672014679740546") return;
-
+if (ban.user.bot) return;
     const blacklisted = await GlobalBlacklist.findOne({ userId: ban.user.id });
     if (!blacklisted) return;
 
