@@ -166,11 +166,10 @@ autoReact(message);
     photoOnly(message);
     if (message.author.bot) return;
 
-    // Anti-toxicité
+    
     const content = message.content
     .toLowerCase()
 
-    // Anti-leetspeak
     .replace(/0/g, "o")
     .replace(/1/g, "i")
     .replace(/3/g, "e")
@@ -180,14 +179,13 @@ autoReact(message);
     .replace(/8/g, "b")
     .replace(/9/g, "g")
 
-    // Retire les accents
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 
-// Caractères autorisés entre les lettres
+
 const separators = "[\\s._\\-*~`'\",!?/\\\\|()\$begin:math:display$\\$end:math:display${}]*";
 
-// Génère automatiquement une regex
+
 function buildPattern(word) {
 
     const escaped = word
@@ -203,12 +201,12 @@ function buildPattern(word) {
 
 const toxicPatterns = [
 
-    // Abréviations
+
     buildPattern("fdp"),
     buildPattern("ntm"),
     buildPattern("tg"),
 
-    // Insultes
+
     buildPattern("pute"),
     buildPattern("salope"),
     buildPattern("connard"),
@@ -220,24 +218,24 @@ const toxicPatterns = [
     buildPattern("enculee"),
     buildPattern("enculees"),
 
-    // Racisme
+
     buildPattern("negro"),
     buildPattern("nigga"),
     buildPattern("noich"),
 
-    // Idéologies
+
     buildPattern("hitler"),
     buildPattern("nazi"),
     buildPattern("staline"),
 
-    // Expressions
+
     /\bfils\s+de\s+pute\b/i,
     /\bnique\s+ta\s+mere\b/i,
     /\bnique\s+ta\s+race\b/i,
     /\bsale\s+noich\b/i,
     /\bje\s+vais\s+te\s+bz\b/i,
 
-    // Pub
+
     /\bcheck\s+my\s+bio\b/i,
     /\blook\s+at\s+my\s+bio\b/i,
     /\bviens\s+sur\b/i,
