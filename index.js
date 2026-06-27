@@ -9,6 +9,7 @@ const antiToxic = require("./events/antiToxic");
 const antiSpam = require("./events/antiSpam");
 const antiInvite = require("./events/antiInvite");
 const antiLink = require("./events/antiLink");
+const antiRaid = require("./events/antiRaid");
 const {
     Client,
     GatewayIntentBits,
