@@ -1,169 +1,94 @@
 const {
-    SlashCommandBuilder,
-    EmbedBuilder,
-    ActionRowBuilder,
-    ButtonBuilder,
-    ButtonStyle
+  SlashCommandBuilder,
+  EmbedBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle
 } = require("discord.js");
 
-const Economy = require("../models/Economy");
+const CasinoProfile = require("../models/CasinoProfile");
 
 module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("drop")
+    .setDescription("Lance un drop."),
 
-    data: new SlashCommandBuilder()
-        .setName("drop")
-        .setDescription("Lance un drop."),
+  async execute(interaction) {
+    const button = new ButtonBuilder()
+      .setCustomId("claim_drop")
+      .setLabel("🎉 Récupérer")
+      .setStyle(ButtonStyle.Success);
 
-    async execute(interaction) {
+    const row = new ActionRowBuilder().addComponents(button);
 
-        const button =
-            new ButtonBuilder()
-            .setCustomId("claim_drop")
-            .setLabel("🎉 Récupérer")
-            .setStyle(ButtonStyle.Success);
+    const embed = new EmbedBuilder()
+      .setColor("Gold")
+      .setTitle("🎁 DROP")
+      .setDescription("Le premier à cliquer sur **🎉 Récupérer** gagne une récompense !");
 
-        const row =
-            new ActionRowBuilder()
-            .addComponents(button);
+    const msg = await interaction.reply({
+      embeds: [embed],
+      components: [row],
+      fetchReply: true
+    });
 
-        const embed =
-            new EmbedBuilder()
+    const collector = msg.createMessageComponentCollector({
+      time: 60000,
+      max: 1
+    });
 
-            .setColor("Gold")
+    collector.on("collect", async (i) => {
+      const random = Math.random();
+      let reward = "";
 
-            .setTitle("🎁 DROP")
+      let user = await CasinoProfile.findOne({ userId: i.user.id });
+      if (!user) {
+        user = await CasinoProfile.create({ userId: i.user.id });
+      }
 
-            .setDescription(
-                "Le premier à cliquer sur **🎉 Récupérer** gagne une récompense !"
-            );
+      if (random < 0.60) {
+        const value = Math.floor(Math.random() * 4000) + 1000;
+        user.yens += value;
+        reward = `💴 **${value} Yens**`;
+      } else if (random < 0.90) {
+        user.gifts += 1;
+        reward = "🎁 **1 Gift**";
+      } else {
+        // Boost x2 pendant 1 heure
+        user.boostMultiplier = 2;
+        user.boostEnd = new Date(Date.now() + 60 * 60 * 1000);
+        reward = "💰 **1 Doubleur de Yens (1h)**";
+      }
 
-        const msg =
-            await interaction.reply({
-                embeds: [embed],
-                components: [row],
-                fetchReply: true
-            });
+      await user.save();
 
-        const collector =
-            msg.createMessageComponentCollector({
-                time: 60000,
-                max: 1
-            });
+      button.setDisabled(true);
 
-        collector.on("collect", async i => {
+      await i.update({
+        embeds: [
+          new EmbedBuilder()
+            .setColor("Green")
+            .setTitle("🎉 Drop récupéré")
+            .setDescription(`${i.user} a remporté ${reward} !`)
+        ],
+        components: [new ActionRowBuilder().addComponents(button)]
+      });
+    });
 
-            const random =
-                Math.random();
+    collector.on("end", async (collected) => {
+      if (collected.size > 0) return;
 
-            let reward = "";
-            let value = 0;
+      button.setDisabled(true);
 
-            let user =
-                await Economy.findOne({
-                    userId: i.user.id
-                });
-
-            if (!user) {
-
-                user =
-                    await Economy.create({
-                        userId: i.user.id,
-                        yens: 0,
-                        gifts: 0,
-                        boosters: 0
-                    });
-
-            }
-
-            if (random < 0.60) {
-
-                value =
-                    Math.floor(
-                        Math.random() * 4000
-                    ) + 1000;
-
-                user.yens += value;
-
-                reward =
-                    `💴 **${value} Yens**`;
-
-            } else if (random < 0.90) {
-
-                user.gifts += 1;
-
-                reward =
-                    "🎁 **1 Gift**";
-
-            } else {
-
-                user.boosters += 1;
-
-                reward =
-                    "💰 **1 Doubleur de Yens**";
-
-            }
-
-            await user.save();
-
-            button.setDisabled(true);
-
-            await i.update({
-
-                embeds: [
-
-                    new EmbedBuilder()
-
-                    .setColor("Green")
-
-                    .setTitle("🎉 Drop récupéré")
-
-                    .setDescription(
-                        `${i.user} a remporté ${reward} !`
-                    )
-
-                ],
-
-                components: [
-                    new ActionRowBuilder()
-                    .addComponents(button)
-                ]
-
-            });
-
-        });
-
-        collector.on("end", async collected => {
-
-            if (collected.size > 0)
-                return;
-
-            button.setDisabled(true);
-
-            await msg.edit({
-
-                embeds: [
-
-                    new EmbedBuilder()
-
-                    .setColor("Red")
-
-                    .setTitle("❌ Drop expiré")
-
-                    .setDescription(
-                        "Personne n'a récupéré le drop."
-                    )
-
-                ],
-
-                components: [
-                    new ActionRowBuilder()
-                    .addComponents(button)
-                ]
-
-            }).catch(() => {});
-
-        });
-
-    }
-
+      await msg.edit({
+        embeds: [
+          new EmbedBuilder()
+            .setColor("Red")
+            .setTitle("❌ Drop expiré")
+            .setDescription("Personne n'a récupéré le drop.")
+        ],
+        components: [new ActionRowBuilder().addComponents(button)]
+      }).catch(() => {});
+    });
+  }
 };
