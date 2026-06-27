@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const Stats = require("./systems/stats");
 const autoReact = require("./events/autoReact");
 const photoOnly = require("./events/photoOnly");
+const antiToxic = require("./events/antiToxic");
+const antiSpam = require("./events/antiSpam");
 const {
     Client,
     GatewayIntentBits,
