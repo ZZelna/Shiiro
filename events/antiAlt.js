@@ -1,5 +1,5 @@
 module.exports = async (member) => {
-
+if (member.user.bot) return;
     const bypassRoles = [
         "1507082580414173234", // Juge
         "1506674274826584284"  // Fondateur
