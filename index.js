@@ -12,8 +12,6 @@ const antiLink = require("./events/antiLink");
 const antiRaid = require("./events/antiRaid");
 const antiMassMention =
 require("./events/antiMassMention");
-const antiGhostPing =
-require("./events/antiGhostPing");
 const {
     Client,
     GatewayIntentBits,
@@ -1370,6 +1368,24 @@ setInterval(async () => {
     }
 
 }, 5000);
-client.login(
-    process.env.DISCORD_TOKEN
+const antiGhostPing =
+
+require("./events/antiGhostPing");
+
+client.on(
+
+    "messageCreate",
+
+    antiGhostPing.messageCreate
+
 );
+
+client.on(
+
+    "messageDelete",
+
+    antiGhostPing.messageDelete
+
+);
+
+client.login(process.env.DISCORD_TOKEN);
