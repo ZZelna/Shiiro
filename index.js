@@ -10,6 +10,10 @@ const antiSpam = require("./events/antiSpam");
 const antiInvite = require("./events/antiInvite");
 const antiLink = require("./events/antiLink");
 const antiRaid = require("./events/antiRaid");
+const antiMassMention =
+require("./events/antiMassMention");
+const antiGhostPing =
+require("./events/antiGhostPing");
 const {
     Client,
     GatewayIntentBits,
