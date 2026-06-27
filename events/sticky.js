@@ -65,9 +65,9 @@ https://ngl.link/jestonoff11941`,
 
 "1519324372329042020": `__**Stickied Message:**__
 
-## Commande : /jail
+## Commande : /mute
 
-### Durées de Jail
+### Durées de mute
 
 - Spam = 5 minutes
 - Insultes = 5 minutes (+5 minutes si récidive)
