@@ -777,84 +777,44 @@ if (logChannel) {
     }
 );
 
-client.on(
-    "guildMemberUpdate",
-    async (
-        oldMember,
-        newMember
-    ) => {
+client.on("guildMemberUpdate", async (oldMember, newMember) => {
 
-        const logGuild =
-            client.guilds.cache.get(
-                "1519364880677867550"
-            );
+    const logGuild = client.guilds.cache.get("1519364880677867550");
+    if (!logGuild) return;
 
-        if (!logGuild) return;
+    const logChannel = logGuild.channels.cache.get("1519374123162271897");
+    if (!logChannel) return;
 
-        const logChannel =
-            logGuild.channels.cache.get(
-                "1519374123162271897"
-            );
+    let moderator = "Inconnu";
+    let moderatorId = "Inconnu";
 
-        if (!logChannel) return;
+    try {
+        const auditLogs = await newMember.guild.fetchAuditLogs({
+            type: AuditLogEvent.MemberRoleUpdate,
+            limit: 10
+        });
 
-        let moderator =
-            "Inconnu";
+        const auditEntry = auditLogs.entries.find(
+            entry =>
+                entry.target?.id === newMember.id &&
+                Date.now() - entry.createdTimestamp < 10000
+        );
 
-        let moderatorId =
-            "Inconnu";
-
-        try {
-
-            const auditLogs =
-                await newMember.guild.fetchAuditLogs({
-                    type:
-                    AuditLogEvent.MemberRoleUpdate,
-                    limit: 10
-                });
-
-            const auditEntry =
-                auditLogs.entries.find(
-                    entry =>
-                        entry.target?.id ===
-                        newMember.id &&
-                        Date.now() -
-                        entry.createdTimestamp <
-                        10000
-                );
-
-            if (
-                auditEntry?.executor
-            ) {
-
-                moderator =
-                    auditEntry.executor.tag;
-
-                moderatorId =
-                    auditEntry.executor.id;
-
-            }
-
-        } catch (err) {
-
-            console.log(
-                "Erreur Audit Logs :",
-                err
-            );
-
+        if (auditEntry?.executor) {
+            moderator = auditEntry.executor.tag;
+            moderatorId = auditEntry.executor.id;
         }
-const removedRoles =
-    oldMember.roles.cache.filter(
-        role =>
-            !newMember.roles.cache.has(
-                role.id
-            )
+    } catch (err) {
+        console.log("Erreur Audit Logs :", err);
+    }
+
+    const removedRoles = oldMember.roles.cache.filter(
+        role => !newMember.roles.cache.has(role.id)
     );
 
-for (const role of removedRoles.values()) {
-
-    await logChannel.send({
-        content:
+    for (const role of removedRoles.values()) {
+        await logChannel.send({
+            content:
 "```diff\n" +
 "- Rôle retiré.\n" +
 `Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
@@ -862,22 +822,16 @@ for (const role of removedRoles.values()) {
 `Rôle: ${role.name} (ID: ${role.id})\n` +
 "Action: Rôle retiré. ❌\n" +
 "```"
-    });
+        });
+    }
 
-}
-
-const addedRoles =
-    newMember.roles.cache.filter(
-        role =>
-            !oldMember.roles.cache.has(
-                role.id
-            )
+    const addedRoles = newMember.roles.cache.filter(
+        role => !oldMember.roles.cache.has(role.id)
     );
 
-for (const role of addedRoles.values()) {
-
-    await logChannel.send({
-        content:
+    for (const role of addedRoles.values()) {
+        await logChannel.send({
+            content:
 "```diff\n" +
 "+ Rôle ajouté.\n" +
 `Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
@@ -885,10 +839,45 @@ for (const role of addedRoles.values()) {
 `Rôle: ${role.name} (ID: ${role.id})\n` +
 "Action: Rôle ajouté. ✅\n" +
 "```"
-    });
+        });
+    }
 
-}
+});
+
+// Détection expiration mute
 const mutedLogged = new Set();
+
+setInterval(async () => {
+    const guild = client.guilds.cache.get("1506672014679740546");
+    if (!guild) return;
+
+    const members = await guild.members.fetch();
+
+    members.forEach(async member => {
+        if (
+            member.communicationDisabledUntil &&
+            member.communicationDisabledUntil < new Date() &&
+            !mutedLogged.has(member.id)
+        ) {
+            mutedLogged.add(member.id);
+            const logChannel = client.channels.cache.get("1520445447263486236");
+            if (logChannel) {
+                await logChannel.send({
+                    content:
+`\`\`\`diff
++ Mute expiré.
+Utilisateur: ${member.user.tag} (ID: ${member.id})
+Action: Mute terminé. 🔊
+\`\`\``
+                });
+            }
+        }
+
+        if (!member.communicationDisabledUntil) {
+            mutedLogged.delete(member.id);
+        }
+    });
+}, 60000);
 
 setInterval(async () => {
    const guild = client.guilds.cache.get("1506672014679740546");
