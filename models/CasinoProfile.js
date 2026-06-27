@@ -12,9 +12,14 @@ module.exports = mongoose.model(
             type: Number,
             default: 0
         },
-        boosters: {
+        boostMultiplier: {
     type: Number,
-    default: 0
+    default: 1
+},
+
+boostEnd: {
+    type: Date,
+    default: null
 },
         lastDaily: {
             type: Date,
