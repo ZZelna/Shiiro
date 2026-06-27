@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder } = require("discord.js");
 
 const allowedRoles = [
     "1506698593199718644",
@@ -20,6 +20,18 @@ const allowedRoles = [
     "1509967284754583683"
 ];
 
+const REASONS = {
+    spam: { duration: 5, label: "Spam" },
+    insultes: { duration: 5, label: "Insultes" },
+    insultes_recidive: { duration: 10, label: "Insultes (récidive)" },
+    offensants: { duration: 10, label: "Messages offensants" },
+    leak: { duration: 60, label: "Leak (ATT BAN)" },
+    dox: { duration: 60, label: "Dox (ATT BAN)" },
+    swatt: { duration: 60, label: "Swatt (ATT BAN)" },
+    menaces: { duration: 60, label: "Menaces (ATT BAN)" },
+    nsfw: { duration: 60, label: "NSFW (ATT BAN)" }
+};
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("mute")
@@ -27,11 +39,29 @@ module.exports = {
         .addUserOption(option =>
             option.setName("membre").setDescription("Membre à mute").setRequired(true)
         )
-        .addIntegerOption(option =>
-            option.setName("minutes").setDescription("Durée en minutes").setRequired(true)
-        )
         .addStringOption(option =>
-            option.setName("raison").setDescription("Raison du mute").setRequired(true)
+            option
+                .setName("motif")
+                .setDescription("Motif du mute")
+                .setRequired(true)
+                .addChoices(
+                    { name: "Spam (5 min)", value: "spam" },
+                    { name: "Insultes (5 min)", value: "insultes" },
+                    { name: "Insultes récidive (10 min)", value: "insultes_recidive" },
+                    { name: "Messages offensants (10 min)", value: "offensants" },
+                    { name: "Leak (60 min)", value: "leak" },
+                    { name: "Dox (60 min)", value: "dox" },
+                    { name: "Swatt (60 min)", value: "swatt" },
+                    { name: "Menaces (60 min)", value: "menaces" },
+                    { name: "NSFW (60 min)", value: "nsfw" },
+                    { name: "Personnalisé", value: "custom" }
+                )
+        )
+        .addIntegerOption(option =>
+            option
+                .setName("minutes")
+                .setDescription("Durée personnalisée (uniquement si motif = Personnalisé)")
+                .setRequired(false)
         ),
 
     async execute(interaction) {
@@ -48,14 +78,11 @@ module.exports = {
         }
 
         const member = interaction.options.getMember("membre");
-        const minutes = interaction.options.getInteger("minutes");
-        const raison = interaction.options.getString("raison");
+        const motif = interaction.options.getString("motif");
+        const customMinutes = interaction.options.getInteger("minutes");
 
         if (!member) {
-            return interaction.reply({
-                content: "❌ Membre introuvable.",
-                ephemeral: true
-            });
+            return interaction.reply({ content: "❌ Membre introuvable.", ephemeral: true });
         }
 
         if (member.id === interaction.user.id) {
@@ -72,9 +99,26 @@ module.exports = {
             });
         }
 
+        let duration;
+        let reason;
+
+        if (motif === "custom") {
+            if (!customMinutes || customMinutes <= 0) {
+                return interaction.reply({
+                    content: "❌ Vous devez préciser une durée en minutes.",
+                    ephemeral: true
+                });
+            }
+            duration = customMinutes;
+            reason = `Personnalisé (${customMinutes} min)`;
+        } else {
+            duration = REASONS[motif].duration;
+            reason = REASONS[motif].label;
+        }
+
         try {
 
-            await member.timeout(minutes * 60 * 1000, raison);
+            await member.timeout(duration * 60 * 1000, reason);
 
             if (member.voice.channel) {
                 await member.voice.disconnect("Mute").catch(() => {});
@@ -88,24 +132,25 @@ module.exports = {
 - Mute effectué.
 Utilisateur: ${member.user.tag} (ID: ${member.id})
 Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
-Raison: ${raison}
-Durée: ${minutes} minute(s)
+Motif: ${reason}
+Durée: ${duration} minute(s)
 Action: Mute. 🔇
 \`\`\``
                 });
             }
 
-            const embed = new EmbedBuilder()
-                .setColor("Orange")
-                .setTitle("🔇 Mute")
-                .setDescription(`${member} a été mute`)
-                .addFields(
-                    { name: "📌 Raison", value: raison },
-                    { name: "⏳ Durée", value: `${minutes} minute(s)` }
-                )
-                .setTimestamp();
+            await interaction.reply({
+    content:
+`\`\`\`diff
+- Mute effectué.
+Utilisateur: ${member.user.tag} (ID: ${member.id})
+Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
+Motif: ${reason}
+Durée: ${duration} minute(s)
+Action: Mute. 🔇
+\`\`\``
+});
 
-            await interaction.reply({ embeds: [embed] });
 
         } catch (err) {
             console.error(err);
