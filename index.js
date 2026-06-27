@@ -3,6 +3,8 @@ require("dotenv").config();
 const fs = require("fs");
 const mongoose = require("mongoose");
 const Stats = require("./systems/stats");
+const autoReact = require("./events/autoReact");
+const photoOnly = require("./events/photoOnly");
 const {
     Client,
     GatewayIntentBits,
@@ -160,7 +162,8 @@ client.on("messageDelete", async (message) => {
 });
 
 client.on("messageCreate", async (message) => {
-
+autoReact(message);
+    photoOnly(message);
     if (message.author.bot) return;
 
     // Anti-toxicité
