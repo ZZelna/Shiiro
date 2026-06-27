@@ -1,94 +1,99 @@
 const {
-  SlashCommandBuilder,
-  EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle
+ SlashCommandBuilder,
+ EmbedBuilder,
+ ActionRowBuilder,
+ ButtonBuilder,
+ ButtonStyle
 } = require("discord.js");
 
 const CasinoProfile = require("../models/CasinoProfile");
 
 module.exports = {
-  data: new SlashCommandBuilder()
-    .setName("drop")
-    .setDescription("Lance un drop."),
+ data: new SlashCommandBuilder()
+   .setName("drop")
+   .setDescription("Lance un drop."),
 
-  async execute(interaction) {
-    const button = new ButtonBuilder()
-      .setCustomId("claim_drop")
-      .setLabel("🎉 Récupérer")
-      .setStyle(ButtonStyle.Success);
+ async execute(interaction) {
+   const button = new ButtonBuilder()
+     .setCustomId("claim_drop")
+     .setLabel("🎉 Récupérer")
+     .setStyle(ButtonStyle.Success);
 
-    const row = new ActionRowBuilder().addComponents(button);
+   const row = new ActionRowBuilder().addComponents(button);
 
-    const embed = new EmbedBuilder()
-      .setColor("Gold")
-      .setTitle("🎁 DROP")
-      .setDescription("Le premier à cliquer sur **🎉 Récupérer** gagne une récompense !");
+   const embed = new EmbedBuilder()
+     .setColor("Gold")
+     .setTitle("🎁 DROP")
+     .setDescription("Le premier à cliquer sur **🎉 Récupérer** gagne une récompense !");
 
-    const msg = await interaction.reply({
-      embeds: [embed],
-      components: [row],
-      fetchReply: true
-    });
+   const msg = await interaction.reply({
+     embeds: [embed],
+     components: [row],
+     fetchReply: true
+   });
 
-    const collector = msg.createMessageComponentCollector({
-      time: 60000,
-      max: 1
-    });
+   const collector = msg.createMessageComponentCollector({
+     time: 60000
+   });
 
-    collector.on("collect", async (i) => {
-      const random = Math.random();
-      let reward = "";
+   collector.on("collect", async (i) => {
+     const user = await CasinoProfile.findOne({ userId: i.user.id });
 
-      let user = await CasinoProfile.findOne({ userId: i.user.id });
-      if (!user) {
-        user = await CasinoProfile.create({ userId: i.user.id });
-      }
+     if (!user) {
+       await i.reply({
+         content: "❌ Tu n'as pas de profil casino. Utilise `/casino` pour en créer un.",
+         ephemeral: true
+       });
+       return;
+     }
 
-      if (random < 0.60) {
-        const value = Math.floor(Math.random() * 4000) + 1000;
-        user.yens += value;
-        reward = `💴 **${value} Yens**`;
-      } else if (random < 0.90) {
-        user.gifts += 1;
-        reward = "🎁 **1 Gift**";
-      } else {
-        // Boost x2 pendant 1 heure
-        user.boostMultiplier = 2;
-        user.boostEnd = new Date(Date.now() + 60 * 60 * 1000);
-        reward = "💰 **1 Doubleur de Yens (1h)**";
-      }
+     collector.stop("claimed");
 
-      await user.save();
+     const random = Math.random();
+     let reward = "";
 
-      button.setDisabled(true);
+     if (random < 0.60) {
+       const value = Math.floor(Math.random() * 4000) + 1000;
+       user.yens += value;
+       reward = `💴 **${value} Yens**`;
+     } else if (random < 0.90) {
+       user.gifts += 1;
+       reward = "🎁 **1 Gift**";
+     } else {
+       user.boostMultiplier = 2;
+       user.boostEnd = new Date(Date.now() + 60 * 60 * 1000);
+       reward = "💰 **1 Doubleur de Yens (1h)**";
+     }
 
-      await i.update({
-        embeds: [
-          new EmbedBuilder()
-            .setColor("Green")
-            .setTitle("🎉 Drop récupéré")
-            .setDescription(`${i.user} a remporté ${reward} !`)
-        ],
-        components: [new ActionRowBuilder().addComponents(button)]
-      });
-    });
+     await user.save();
 
-    collector.on("end", async (collected) => {
-      if (collected.size > 0) return;
+     button.setDisabled(true);
 
-      button.setDisabled(true);
+     await i.update({
+       embeds: [
+         new EmbedBuilder()
+           .setColor("Green")
+           .setTitle("🎉 Drop récupéré")
+           .setDescription(`${i.user} a remporté ${reward} !`)
+       ],
+       components: [new ActionRowBuilder().addComponents(button)]
+     });
+   });
 
-      await msg.edit({
-        embeds: [
-          new EmbedBuilder()
-            .setColor("Red")
-            .setTitle("❌ Drop expiré")
-            .setDescription("Personne n'a récupéré le drop.")
-        ],
-        components: [new ActionRowBuilder().addComponents(button)]
-      }).catch(() => {});
-    });
-  }
+   collector.on("end", async (collected, reason) => {
+     if (reason === "claimed") return;
+
+     button.setDisabled(true);
+
+     await msg.edit({
+       embeds: [
+         new EmbedBuilder()
+           .setColor("Red")
+           .setTitle("❌ Drop expiré")
+           .setDescription("Personne n'a récupéré le drop.")
+       ],
+       components: [new ActionRowBuilder().addComponents(button)]
+     }).catch(() => {});
+   });
+ }
 };
