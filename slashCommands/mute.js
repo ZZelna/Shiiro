@@ -1,25 +1,23 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
-const MUTE_ROLE = "1508842233619677306"; // ← remplace par l'ID du rôle mute
-
 const allowedRoles = [
-   "1506698593199718644",
-   "1509601528242110525",
-   "1506674274826584284",
-   "1506696551706267688",
-   "1506678765982318743",
-   "1506678694352261301",
-   "1506696757642530982",
-   "1506702398029172796",
-   "1517238655444451520",
-   "1506709088451690708",
-   "1507052310151434300",
-   "1507802146521878678",
-   "1507084485663916032",
-   "1507082580414173234",
-   "1509228874179809512",
-   "1508500076635623546",
-   "1509967284754583683"
+    "1506698593199718644",
+    "1509601528242110525",
+    "1506674274826584284",
+    "1506696551706267688",
+    "1506678765982318743",
+    "1506678694352261301",
+    "1506696757642530982",
+    "1506702398029172796",
+    "1517238655444451520",
+    "1506709088451690708",
+    "1507052310151434300",
+    "1507802146521878678",
+    "1507084485663916032",
+    "1507082580414173234",
+    "1509228874179809512",
+    "1508500076635623546",
+    "1509967284754583683"
 ];
 
 module.exports = {
@@ -54,7 +52,24 @@ module.exports = {
         const raison = interaction.options.getString("raison");
 
         if (!member) {
-            return interaction.reply({ content: "❌ Membre introuvable.", ephemeral: true });
+            return interaction.reply({
+                content: "❌ Membre introuvable.",
+                ephemeral: true
+            });
+        }
+
+        if (member.id === interaction.user.id) {
+            return interaction.reply({
+                content: "❌ Vous ne pouvez pas vous mute vous-même.",
+                ephemeral: true
+            });
+        }
+
+        if (member.roles.highest.position >= interaction.member.roles.highest.position) {
+            return interaction.reply({
+                content: "❌ Vous ne pouvez pas mute un membre avec un rôle supérieur ou égal.",
+                ephemeral: true
+            });
         }
 
         try {
@@ -94,7 +109,10 @@ Action: Mute. 🔇
 
         } catch (err) {
             console.error(err);
-            return interaction.reply({ content: "❌ Impossible de mute ce membre.", ephemeral: true });
+            return interaction.reply({
+                content: "❌ Impossible de mute ce membre.",
+                ephemeral: true
+            });
         }
     }
 };
