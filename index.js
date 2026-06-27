@@ -300,15 +300,12 @@ const memberLeave =
 require("./events/logs/memberLeave");
 
 client.on(
-    "guildMemberAdd",
-    memberJoin
-);
-
-client.on(
     "guildMemberRemove",
     memberLeave
 );
-client.on("guildMemberAdd", (member) => {
+client.on("guildMemberAdd", async (member) => {
+
+    await antiRaid(member);
 
     if (member.user.bot) return;
 
