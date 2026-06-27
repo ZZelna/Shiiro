@@ -41,7 +41,7 @@ module.exports = {
 
      if (!user) {
        await i.reply({
-         content: "❌ Tu n'as pas de profil casino. Utilise vas dans creer mon profil pour en créer un.",
+         content: "❌ Tu n'as pas de profil casino. Utilise `/casino` pour en créer un.",
          ephemeral: true
        });
        return;
@@ -49,21 +49,24 @@ module.exports = {
 
      collector.stop("claimed");
 
-     const random = Math.random();
-     let reward = "";
+     const rewards = [
+       () => {
+         const value = Math.floor(Math.random() * 4000) + 1000;
+         user.yens += value;
+         return `💴 **${value} Yens**`;
+       },
+       () => {
+         user.gifts += 1;
+         return "🎁 **1 Gift**";
+       },
+       () => {
+         user.boostMultiplier = 2;
+         user.boostEnd = new Date(Date.now() + 60 * 60 * 1000);
+         return "💰 **1 Doubleur de Yens (1h)**";
+       }
+     ];
 
-     if (random < 0.60) {
-       const value = Math.floor(Math.random() * 4000) + 1000;
-       user.yens += value;
-       reward = `💴 **${value} Yens**`;
-     } else if (random < 0.90) {
-       user.gifts += 1;
-       reward = "🎁 **1 Gift**";
-     } else {
-       user.boostMultiplier = 2;
-       user.boostEnd = new Date(Date.now() + 60 * 60 * 1000);
-       reward = "💰 **1 Doubleur de Yens (1h)**";
-     }
+     const reward = rewards[Math.floor(Math.random() * rewards.length)]();
 
      await user.save();
 
