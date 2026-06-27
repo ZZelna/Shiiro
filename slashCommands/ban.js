@@ -86,10 +86,10 @@ Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner
       await member.ban({
             reason: `${reason} | Ban par ${interaction.user.tag}`
         });
-const logChannel =
-interaction.client.channels.cache.get(
-    "1519346310837440623"
+const logChannel = interaction.client.channels.cache.get(
+    "1520116351904120852" // ← logs-ban dans Shiiro logs
 );
+
 
 if (logChannel) {
 
