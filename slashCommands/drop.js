@@ -90,3 +90,24 @@ module.exports = {
             .setTitle("🎉 Drop récupéré")
             .setDescription(`${i.user} a remporté ${reward} !`)
         ],
+        components: [new ActionRowBuilder().addComponents(button)]
+      });
+    });
+
+    collector.on("end", async (collected, reason) => {
+      if (reason === "claimed") return;
+
+      button.setDisabled(true);
+
+      await msg.edit({
+        embeds: [
+          new EmbedBuilder()
+            .setColor("Red")
+            .setTitle("❌ Drop expiré")
+            .setDescription("Personne n'a récupéré le drop.")
+        ],
+        components: [new ActionRowBuilder().addComponents(button)]
+      }).catch(() => {});
+    });
+  }
+};
