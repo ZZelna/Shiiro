@@ -921,13 +921,8 @@ Action: Mute terminé. 🔊
         }
     });
 }, 60000);
-
-            });
-        }
-    }
-
-            }
 );
+
 client.on("roleCreate", async role => {
 
     const logGuild =
