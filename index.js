@@ -888,6 +888,20 @@ for (const role of addedRoles.values()) {
     });
 
 }
+if (oldMember.communicationDisabledUntil && !newMember.communicationDisabledUntil) {
+        const muteLogChannel = client.channels.cache.get("1520445447263486236");
+        if (muteLogChannel) {
+            await muteLogChannel.send({
+                content:
+`\`\`\`diff
++ Mute expiré.
+Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})
+Action: Mute terminé. 🔊
+\`\`\``
+            });
+        }
+    }
+
             }
 );
 client.on("roleCreate", async role => {
