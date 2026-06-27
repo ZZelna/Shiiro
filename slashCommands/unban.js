@@ -42,9 +42,8 @@ async execute(interaction) {
             `Unban par ${interaction.user.tag}`
         );
 
-        const logChannel =
-interaction.client.channels.cache.get(
-    "1519346310837440623"
+       const logChannel = interaction.client.channels.cache.get(
+    "1520116351904120852" // ← logs-ban dans Shiiro logs
 );
 
 if (logChannel) {
