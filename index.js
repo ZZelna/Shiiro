@@ -891,36 +891,37 @@ for (const role of addedRoles.values()) {
 const mutedLogged = new Set();
 
 setInterval(async () => {
-    const guild = client.guilds.cache.get("1506672014679740546");
-    if (!guild) return;
+   const guild = client.guilds.cache.get("1506672014679740546");
+   if (!guild) return;
 
-    const members = await guild.members.fetch();
+   const members = await guild.members.fetch();
 
-    members.forEach(async member => {
-        if (
-            member.communicationDisabledUntil &&
-            member.communicationDisabledUntil < new Date() &&
-            !mutedLogged.has(member.id)
-        ) {
-            mutedLogged.add(member.id);
-            const logChannel = client.channels.cache.get("1520445447263486236");
-            if (logChannel) {
-                await logChannel.send({
-                    content:
+   members.forEach(async member => {
+       if (
+           member.communicationDisabledUntil &&
+           member.communicationDisabledUntil < new Date() &&
+           !mutedLogged.has(member.id)
+       ) {
+           mutedLogged.add(member.id);
+           const logChannel = client.channels.cache.get("1520445447263486236");
+           if (logChannel) {
+               await logChannel.send({
+                   content:
 `\`\`\`diff
 + Mute expiré.
 Utilisateur: ${member.user.tag} (ID: ${member.id})
 Action: Mute terminé. 🔊
 \`\`\``
-                });
-            }
-        }
+               });
+           }
+       }
 
-        if (!member.communicationDisabledUntil) {
-            mutedLogged.delete(member.id);
-        }
-    });
+       if (!member.communicationDisabledUntil) {
+           mutedLogged.delete(member.id);
+       }
+   });
 }, 60000);
+
 
 client.on("roleCreate", async role => {
 
