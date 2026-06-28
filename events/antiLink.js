@@ -23,6 +23,21 @@ module.exports = async (message) => {
     if (config.ignoredChannels.includes(message.channel.id))
         return;
 
+    // Autoriser les GIFs et médias Discord
+    if (
+        message.embeds.some(embed =>
+            embed.type === "gifv" ||
+            embed.provider?.name?.toLowerCase() === "tenor" ||
+            embed.provider?.name?.toLowerCase() === "giphy"
+        )
+    ) {
+        return;
+    }
+
+    // Autoriser les pièces jointes (images, vidéos, GIF...)
+    if (message.attachments.size > 0)
+        return;
+
     let content = message.content
         .toLowerCase()
 
@@ -54,9 +69,9 @@ module.exports = async (message) => {
         .replace(/[\u0300-\u036f]/g, "");
 
     const normalized = content.replace(
-    /[\s._\-~*`\\/|()[\]{}:;"',!?+=<>]/g,
-    ""
-);
+        /[\s._\-~*`\\/|()[\]{}:;"',!?+=<>]/g,
+        ""
+    );
 
     // Liens autorisés
     if (config.whitelistLinks?.length) {
@@ -73,12 +88,22 @@ module.exports = async (message) => {
 
         if (allowed)
             return;
-
     }
 
-const detected =
+    // Autoriser certains domaines (GIFs / CDN Discord)
+    if (
+        /tenor\.com/i.test(content) ||
+        /media\.tenor\.com/i.test(content) ||
+        /giphy\.com/i.test(content) ||
+        /media\.giphy\.com/i.test(content) ||
+        /cdn\.discordapp\.com/i.test(content) ||
+        /media\.discordapp\.net/i.test(content)
+    ) {
+        return;
+    }
 
-    // HTTP / HTTPS
+    const detected =
+        // HTTP / HTTPS
     /https?:\/\/\S+/i.test(content) ||
     /https?:\/\S+/i.test(content) ||
     /https?:\S+/i.test(content) ||
@@ -105,51 +130,48 @@ const detected =
     normalized.includes("https") ||
     normalized.includes("www");
 
-if (!detected)
-    return;
-
     if (!detected)
-    return;
+        return;
 
-try {
-    await message.delete();
-} catch {}
+    try {
+        await message.delete();
+    } catch {}
 
-try {
+    try {
 
-    switch (config.punishment) {
+        switch (config.punishment) {
 
-        case "timeout":
-            await message.member.timeout(
-                config.timeoutDuration * 1000,
-                "Lien interdit"
-            );
-            break;
+            case "timeout":
+                await message.member.timeout(
+                    config.timeoutDuration * 1000,
+                    "Lien interdit"
+                );
+                break;
 
-        case "kick":
-            await message.member.kick(
-                "Lien interdit"
-            );
-            break;
+            case "kick":
+                await message.member.kick(
+                    "Lien interdit"
+                );
+                break;
 
-        case "ban":
-            await message.member.ban({
-                reason: "Lien interdit"
-            });
-            break;
+            case "ban":
+                await message.member.ban({
+                    reason: "Lien interdit"
+                });
+                break;
 
+        }
+
+    } catch {}
+
+    const warn = await message.channel.send({
+        content: `🔗 ${message.author} Les liens sont interdits.`
+    }).catch(() => null);
+
+    if (warn) {
+        setTimeout(() => {
+            warn.delete().catch(() => {});
+        }, 5000);
     }
-
-} catch {}
-
-const warn = await message.channel.send({
-    content: `🔗 ${message.author} Les liens sont interdits.`
-}).catch(() => null);
-
-if (warn) {
-    setTimeout(() => {
-        warn.delete().catch(() => {});
-    }, 5000);
-}
 
 };
