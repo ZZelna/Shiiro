@@ -515,7 +515,11 @@ client.on("roleCreate", async role => {
     const entry = logs.entries.first();
     const executor = entry?.executor;
 
-    const member = await role.guild.members.fetch(executor.id).catch(() => null);
+if (executor?.bot) {
+        await logChannel.send({ content: "```diff\n+ Rôle créé.\nRôle: " + role.name + " (ID: " + role.id + ")\nModérateur: " + (executor?.tag || "Inconnu") + " (BOT)\nAction: Création de rôle. ✅\n```" });
+        return;
+    }
+const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
     if (member && !member.roles.cache.has("1506674274826584284")) {
         await role.guild.members.ban(executor.id, { reason: "Création de rôle non autorisée" });
@@ -551,6 +555,10 @@ client.on("roleDelete", async role => {
     const logs = await role.guild.fetchAuditLogs({ limit: 1 });
     const entry = logs.entries.first();
     const executor = entry?.executor;
+    if (executor?.bot) {
+       await logChannel.send({ content: "```diff\n- Rôle supprimé.\nRôle: " + role.name + " (ID: " + role.id + ")\nModérateur: " + (executor?.tag || "Inconnu") + " (BOT)\nAction: Suppression de rôle. ❌\n```" });
+       return;
+   }
 
     const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
