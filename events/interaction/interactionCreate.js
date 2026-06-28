@@ -696,6 +696,93 @@ if (
 
     return;
 }
+    // =========================
+// BOUNTY
+// =========================
+if (
+    interaction.isButton() &&
+    interaction.customId.startsWith("bounty_claim_")
+) {
+    const parts = interaction.customId.split("_");
+    // bounty_claim_<targetId>_<posterId>_<amount>
+    const targetId = parts[2];
+    const posterId = parts[3];
+    const amount = parseInt(parts[4]);
+
+    // ✅ La cible ne peut pas réclamer sa propre prime
+    if (interaction.user.id === targetId) {
+        return interaction.reply({
+            content: "❌ Tu ne peux pas réclamer ta propre prime.",
+            ephemeral: true
+        });
+    }
+
+    // ✅ Le poseur ne peut pas réclamer non plus
+    if (interaction.user.id === posterId) {
+        return interaction.reply({
+            content: "❌ Tu ne peux pas réclamer une prime que tu as posée.",
+            ephemeral: true
+        });
+    }
+
+    // ✅ Vérification clan
+    const clan = await Clan.findOne({ members: interaction.user.id });
+    if (!clan) {
+        return interaction.reply({
+            content: "❌ Tu dois être dans un clan pour réclamer une prime.",
+            ephemeral: true
+        });
+    }
+
+    // ✅ Attribution des yens
+    const profile = await CasinoProfile.findOneAndUpdate(
+        { userId: interaction.user.id },
+        { $setOnInsert: { userId: interaction.user.id } },
+        { upsert: true, new: true }
+    );
+
+    profile.yens += amount;
+    await profile.save();
+
+    // ✅ Mise à jour de l'embed
+    const claimedEmbed = new EmbedBuilder()
+        .setColor("DarkGreen")
+        .setTitle("✅ PRIME RÉCLAMÉE")
+        .setDescription(`La prime sur <@${targetId}> a été réclamée par ${interaction.user} !`)
+        .addFields(
+            { name: "🏆 Chasseur", value: `${interaction.user} (Clan: **${clan.name}**)`, inline: true },
+            { name: "💴 Récompense", value: `\`${amount.toLocaleString()} ¥\``, inline: true }
+        )
+        .setFooter({ text: "Shiiro Casino • Bounty", iconURL: interaction.guild.iconURL() })
+        .setTimestamp();
+
+    await interaction.update({ embeds: [claimedEmbed], components: [] });
+
+    // ✅ Logs
+    try {
+        const LOGS_CASINO = "1520766436388245585";
+        const logsGuild = interaction.client.guilds.cache.find(g =>
+            g.channels.cache.has(LOGS_CASINO)
+        );
+        const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+        if (logsChannel) {
+            await logsChannel.send({
+                content:
+                    "```diff\n" +
+                    "+ Prime réclamée.\n" +
+                    `Chasseur: ${interaction.user.username} (ID: ${interaction.user.id})\n` +
+                    `Clan: ${clan.name}\n` +
+                    `Cible: <@${targetId}> (ID: ${targetId})\n` +
+                    `Montant: ${amount.toLocaleString()} ¥\n` +
+                    "Action: Yens transférés au chasseur. ✅\n" +
+                    "```"
+            });
+        }
+    } catch (err) {
+        console.error("Erreur logs bounty claim :", err);
+    }
+}
+
 // =========================
 // GIVEAWAYS
 // =========================
