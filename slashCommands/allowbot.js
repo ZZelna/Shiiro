@@ -3,49 +3,50 @@ const {
     PermissionFlagsBits
 } = require("discord.js");
 
-const AllowedBot = require("../models/AllowedBot");
+const ShieldConfig = require("../models/ShieldConfig");
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("allowbot")
         .setDescription("Autorise un bot à rejoindre le serveur.")
-        .addUserOption(option =>
+        .addStringOption(option =>
             option
-                .setName("bot")
-                .setDescription("Le bot à autoriser")
+                .setName("id")
+                .setDescription("ID du bot")
                 .setRequired(true)
         )
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
     async execute(interaction) {
 
-        const bot = interaction.options.getUser("bot");
+        const botId = interaction.options.getString("id");
 
-        if (!bot.bot) {
-            return interaction.reply({
-                content: "❌ Cet utilisateur n'est pas un bot.",
-                ephemeral: true
+        let config = await ShieldConfig.findOne({
+            guildId: interaction.guild.id
+        });
+
+        if (!config) {
+            config = await ShieldConfig.create({
+                guildId: interaction.guild.id,
+                allowedBots: []
             });
         }
 
-        const exists = await AllowedBot.findOne({
-            botId: bot.id
-        });
+        if (!config.allowedBots)
+            config.allowedBots = [];
 
-        if (exists) {
+        if (config.allowedBots.includes(botId)) {
             return interaction.reply({
                 content: "❌ Ce bot est déjà autorisé.",
                 ephemeral: true
             });
         }
 
-        await AllowedBot.create({
-            botId: bot.id,
-            addedBy: interaction.user.id
-        });
+        config.allowedBots.push(botId);
+        await config.save();
 
         interaction.reply({
-            content: `✅ **${bot.tag}** est maintenant autorisé.`
+            content: `✅ Bot autorisé : \`${botId}\``
         });
 
     }
