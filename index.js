@@ -511,14 +511,24 @@ client.on("roleCreate", async role => {
     const logChannel = logGuild.channels.cache.get("1519374244063084644");
     if (!logChannel) return;
 
-    const logs = await role.guild.fetchAuditLogs({ limit: 1 });
-    const entry = logs.entries.first();
-    const executor = entry?.executor;
+    const logs = await role.guild.fetchAuditLogs({
+    type: AuditLogEvent.RoleCreate,
+    limit: 5
+});
 
-if (executor?.bot) {
-        await logChannel.send({ content: "```diff\n+ Rôle créé.\nRôle: " + role.name + " (ID: " + role.id + ")\nModérateur: " + (executor?.tag || "Inconnu") + " (BOT)\nAction: Création de rôle. ✅\n```" });
-        return;
-    }
+const entry = logs.entries.find(e =>
+    e.target?.id === role.id &&
+    Date.now() - e.createdTimestamp < 5000
+);
+
+if (!entry) return;
+
+const executor = entry.executor;
+
+if (executor.bot) {
+    // Log puis return
+    return;
+}
 const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
     if (member && !member.roles.cache.has("1506674274826584284")) {
@@ -552,14 +562,26 @@ client.on("roleDelete", async role => {
     const logChannel = logGuild.channels.cache.get("1519374244063084644");
     if (!logChannel) return;
 
-    const logs = await role.guild.fetchAuditLogs({ limit: 1 });
-    const entry = logs.entries.first();
-    const executor = entry?.executor;
-    if (executor?.bot) {
-       await logChannel.send({ content: "```diff\n- Rôle supprimé.\nRôle: " + role.name + " (ID: " + role.id + ")\nModérateur: " + (executor?.tag || "Inconnu") + " (BOT)\nAction: Suppression de rôle. ❌\n```" });
-       return;
+    
    }
+const logs = await role.guild.fetchAuditLogs({
+    type: AuditLogEvent.RoleDelete,
+    limit: 5
+});
 
+const entry = logs.entries.find(e =>
+    e.target?.id === role.id &&
+    Date.now() - e.createdTimestamp < 5000
+);
+
+if (!entry) return;
+
+const executor = entry.executor;
+
+if (executor.bot) {
+    // Log puis return
+    return;
+}
     const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
     if (member && !member.roles.cache.has("1506674274826584284")) {
@@ -572,10 +594,7 @@ client.on("roleDelete", async role => {
                 "Action: Suppression de rôle sans permission. ⛔\n" +
                 "```"
         });
-        return;
-    }
-
-    await logChannel.send({
+          await logChannel.send({
         content:
             "```diff\n" +
             "- Rôle supprimé.\n" +
