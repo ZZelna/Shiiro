@@ -1,88 +1,75 @@
 const {
-    SlashCommandBuilder,
-    EmbedBuilder
+   SlashCommandBuilder,
+   EmbedBuilder
 } = require("discord.js");
 
-const CasinoProfile =
-require("../models/CasinoProfile");
+const CasinoProfile = require("../models/CasinoProfile");
+
+const LOGS_CASINO = "1520766436388245585";
 
 module.exports = {
 
-    data: new SlashCommandBuilder()
-        .setName("addgift")
-        .setDescription(
-            "Ajouter un gift à un joueur"
-        )
-        .addUserOption(option =>
-            option
-                .setName("joueur")
-                .setDescription(
-                    "Joueur"
-                )
-                .setRequired(true)
-        ),
+   data: new SlashCommandBuilder()
+       .setName("addgift")
+       .setDescription("Ajouter un gift à un joueur")
+       .addUserOption(option =>
+           option
+               .setName("joueur")
+               .setDescription("Joueur")
+               .setRequired(true)
+       ),
 
-    async execute(interaction) {
+   async execute(interaction) {
 
-        const roles =
-        [
-            "1506709088451690708",
-            "1506674274826584284"
-        ];
+       const roles = [
+           "1506709088451690708",
+           "1506674274826584284"
+       ];
 
-        if (
-            !roles.some(role =>
-                interaction.member.roles.cache.has(
-                    role
-                )
-            )
-        ) {
+       if (
+           !roles.some(role =>
+               interaction.member.roles.cache.has(role)
+           )
+       ) {
+           return interaction.reply({
+               content: "❌ Permission refusée.",
+               ephemeral: true
+           });
+       }
 
-            return interaction.reply({
-                content:
-                "❌ Permission refusée.",
-                ephemeral: true
-            });
+       const target = interaction.options.getUser("joueur");
 
-        }
+       let profile = await CasinoProfile.findOne({ userId: target.id });
 
-        const target =
-        interaction.options.getUser(
-            "joueur"
-        );
+       if (!profile) {
+           profile = await CasinoProfile.create({ userId: target.id });
+       }
 
-        let profile =
-        await CasinoProfile.findOne({
-            userId:
-            target.id
-        });
+       profile.gifts += 1;
 
-        if (!profile) {
+       await profile.save();
 
-            profile =
-            await CasinoProfile.create({
-                userId:
-                target.id
-            });
+       const embed = new EmbedBuilder()
+           .setColor("Green")
+           .setTitle("🎁 Gift ajouté")
+           .setDescription(
+               `${target} possède maintenant **${profile.gifts} Gifts**`
+           );
 
-        }
+       await interaction.reply({ embeds: [embed] });
 
-        profile.gifts += 1;
+       try {
+           const logsGuild = interaction.client.guilds.cache.find(g =>
+               g.channels.cache.has(LOGS_CASINO)
+           );
+           const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+           if (logsChannel) {
+               await logsChannel.send({
+                   content: `\`\`\`- Gift ajouté.\nUtilisateur: ${target.username} (ID: ${target.id})\nModérateur: ${interaction.user.username} (ID: ${interaction.user.id})\nGifts total: ${profile.gifts}\nAction: Gift crédité. 🎁\`\`\``
+               });
+           }
+       } catch {}
 
-        await profile.save();
-
-        const embed =
-        new EmbedBuilder()
-        .setColor("Green")
-        .setTitle("🎁 Gift ajouté")
-        .setDescription(
-            `${target} possède maintenant **${profile.gifts} Gifts**`
-        );
-
-        return interaction.reply({
-            embeds: [embed]
-        });
-
-    }
+   }
 
 };
