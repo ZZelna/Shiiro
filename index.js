@@ -504,7 +504,8 @@ setInterval(async () => {
 
 // ─── roleCreate / roleDelete ──────────────────────────────────────────────────
 
-client.on("roleCreate", async role => {
+client.on("roleCreate", async (role) => {
+
     const logGuild = client.guilds.cache.get("1519364880677867550");
     if (!logGuild) return;
 
@@ -512,27 +513,42 @@ client.on("roleCreate", async role => {
     if (!logChannel) return;
 
     const logs = await role.guild.fetchAuditLogs({
-    type: AuditLogEvent.RoleCreate,
-    limit: 5
-});
+        type: AuditLogEvent.RoleCreate,
+        limit: 5
+    });
 
-const entry = logs.entries.find(e =>
-    e.target?.id === role.id &&
-    Date.now() - e.createdTimestamp < 5000
-);
+    const entry = logs.entries.find(e =>
+        e.target?.id === role.id &&
+        Date.now() - e.createdTimestamp < 5000
+    );
 
-if (!entry) return;
+    if (!entry) return;
 
-const executor = entry.executor;
+    const executor = entry.executor;
 
-if (executor.bot) {
-    // Log puis return
-    return;
-}
-const member = await role.guild.members.fetch(executor.id).catch(() => null);
+    if (executor?.bot) {
+
+        await logChannel.send({
+            content:
+                "```diff\n" +
+                "+ Rôle créé.\n" +
+                `Rôle: ${role.name} (ID: ${role.id})\n` +
+                `Modérateur: ${executor.tag} (BOT)\n` +
+                "Action: Création de rôle. 🤖\n" +
+                "```"
+        });
+
+        return;
+    }
+
+    const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
     if (member && !member.roles.cache.has("1506674274826584284")) {
-        await role.guild.members.ban(executor.id, { reason: "Création de rôle non autorisée" });
+
+        await role.guild.members.ban(executor.id, {
+            reason: "Création de rôle non autorisée"
+        });
+
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -541,6 +557,7 @@ const member = await role.guild.members.fetch(executor.id).catch(() => null);
                 "Action: Création de rôle sans permission. ⛔\n" +
                 "```"
         });
+
         return;
     }
 
@@ -549,43 +566,58 @@ const member = await role.guild.members.fetch(executor.id).catch(() => null);
             "```diff\n" +
             "+ Rôle créé.\n" +
             `Rôle: ${role.name} (ID: ${role.id})\n` +
-            `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+            `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
             "Action: Création de rôle. ✅\n" +
             "```"
     });
+
 });
 
-client.on("roleDelete", async role => {
+client.on("roleDelete", async (role) => {
+
     const logGuild = client.guilds.cache.get("1519364880677867550");
     if (!logGuild) return;
 
     const logChannel = logGuild.channels.cache.get("1519374244063084644");
     if (!logChannel) return;
 
-    
-   }
-const logs = await role.guild.fetchAuditLogs({
-    type: AuditLogEvent.RoleDelete,
-    limit: 5
-});
+    const logs = await role.guild.fetchAuditLogs({
+        type: AuditLogEvent.RoleDelete,
+        limit: 5
+    });
 
-const entry = logs.entries.find(e =>
-    e.target?.id === role.id &&
-    Date.now() - e.createdTimestamp < 5000
-);
+    const entry = logs.entries.find(e =>
+        e.target?.id === role.id &&
+        Date.now() - e.createdTimestamp < 5000
+    );
 
-if (!entry) return;
+    if (!entry) return;
 
-const executor = entry.executor;
+    const executor = entry.executor;
 
-if (executor.bot) {
-    // Log puis return
-    return;
-}
+    if (executor?.bot) {
+
+        await logChannel.send({
+            content:
+                "```diff\n" +
+                "- Rôle supprimé.\n" +
+                `Rôle: ${role.name} (ID: ${role.id})\n` +
+                `Modérateur: ${executor.tag} (BOT)\n` +
+                "Action: Suppression de rôle. 🤖\n" +
+                "```"
+        });
+
+        return;
+    }
+
     const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
     if (member && !member.roles.cache.has("1506674274826584284")) {
-        await role.guild.members.ban(executor.id, { reason: "Suppression de rôle non autorisée" });
+
+        await role.guild.members.ban(executor.id, {
+            reason: "Suppression de rôle non autorisée"
+        });
+
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -594,17 +626,21 @@ if (executor.bot) {
                 "Action: Suppression de rôle sans permission. ⛔\n" +
                 "```"
         });
-          await logChannel.send({
+
+        return;
+    }
+
+    await logChannel.send({
         content:
             "```diff\n" +
             "- Rôle supprimé.\n" +
             `Rôle: ${role.name} (ID: ${role.id})\n` +
-            `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+            `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
             "Action: Suppression de rôle. ❌\n" +
             "```"
     });
-});
 
+});
 // ─── channelCreate / channelDelete ───────────────────────────────────────────
 
 client.on("channelCreate", async (channel) => {
@@ -618,16 +654,45 @@ client.on("channelCreate", async (channel) => {
     if (!logChannel) return;
 
     try {
-        const logs = await channel.guild.fetchAuditLogs({ type: AuditLogEvent.ChannelCreate, limit: 1 });
-        const entry = logs.entries.first();
+
+        const logs = await channel.guild.fetchAuditLogs({
+            type: AuditLogEvent.ChannelCreate,
+            limit: 5
+        });
+
+        const entry = logs.entries.find(e =>
+            e.target?.id === channel.id &&
+            Date.now() - e.createdTimestamp < 5000
+        );
+
         if (!entry) return;
 
         const executor = entry.executor;
+
+        // Ignore les actions du bot
+        if (executor?.bot) {
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "+ Salon créé.\n" +
+                    `Salon: ${channel.name} (ID: ${channel.id})\n` +
+                    `Modérateur: ${executor.tag} (BOT)\n` +
+                    "Action: Création de salon. 🤖\n" +
+                    "```"
+            });
+            return;
+        }
+
         const member = await channel.guild.members.fetch(executor.id).catch(() => null);
 
         if (member && !member.roles.cache.has("1506674274826584284")) {
-            await channel.delete("Création de salon non autorisée.");
-            await channel.guild.members.ban(executor.id, { reason: "Création de salon non autorisée." });
+
+            await channel.delete("Création de salon non autorisée.").catch(() => {});
+
+            await channel.guild.members.ban(executor.id, {
+                reason: "Création de salon non autorisée."
+            });
+
             await logChannel.send({
                 content:
                     "```diff\n" +
@@ -636,6 +701,7 @@ client.on("channelCreate", async (channel) => {
                     "Action: Création de salon sans permission. ⛔\n" +
                     "```"
             });
+
             return;
         }
 
@@ -644,10 +710,11 @@ client.on("channelCreate", async (channel) => {
                 "```diff\n" +
                 "+ Salon créé.\n" +
                 `Salon: ${channel.name} (ID: ${channel.id})\n` +
-                `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+                `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
                 "Action: Création de salon. ✅\n" +
                 "```"
         });
+
     } catch (err) {
         console.error(err);
     }
@@ -664,15 +731,43 @@ client.on("channelDelete", async (channel) => {
     if (!logChannel) return;
 
     try {
-        const logs = await channel.guild.fetchAuditLogs({ type: AuditLogEvent.ChannelDelete, limit: 1 });
-        const entry = logs.entries.first();
+
+        const logs = await channel.guild.fetchAuditLogs({
+            type: AuditLogEvent.ChannelDelete,
+            limit: 5
+        });
+
+        const entry = logs.entries.find(e =>
+            e.target?.id === channel.id &&
+            Date.now() - e.createdTimestamp < 5000
+        );
+
         if (!entry) return;
 
         const executor = entry.executor;
+
+        // Ignore les actions du bot
+        if (executor?.bot) {
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "- Salon supprimé.\n" +
+                    `Salon: ${channel.name} (ID: ${channel.id})\n` +
+                    `Modérateur: ${executor.tag} (BOT)\n` +
+                    "Action: Suppression de salon. 🤖\n" +
+                    "```"
+            });
+            return;
+        }
+
         const member = await channel.guild.members.fetch(executor.id).catch(() => null);
 
         if (member && !member.roles.cache.has("1506674274826584284")) {
-            await channel.guild.members.ban(executor.id, { reason: "Suppression de salon non autorisée." });
+
+            await channel.guild.members.ban(executor.id, {
+                reason: "Suppression de salon non autorisée."
+            });
+
             await logChannel.send({
                 content:
                     "```diff\n" +
@@ -681,6 +776,7 @@ client.on("channelDelete", async (channel) => {
                     "Action: Suppression de salon sans permission. ⛔\n" +
                     "```"
             });
+
             return;
         }
 
@@ -689,15 +785,15 @@ client.on("channelDelete", async (channel) => {
                 "```diff\n" +
                 "- Salon supprimé.\n" +
                 `Salon: ${channel.name} (ID: ${channel.id})\n` +
-                `Modérateur: ${executor?.tag || "Inconnu"} (ID: ${executor?.id || "Inconnu"})\n` +
+                `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
                 "Action: Suppression de salon. ❌\n" +
                 "```"
         });
+
     } catch (err) {
         console.error(err);
     }
 });
-
 // ─── guildBanAdd / guildBanRemove (logs bans) ────────────────────────────────
 // ✅ NOTE : le guildBanRemove de la blacklist globale est plus haut.
 // Celui-ci gère uniquement le LOG de l'unban normal.
