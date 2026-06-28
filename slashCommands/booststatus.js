@@ -28,7 +28,7 @@ module.exports = {
        embeds: [
          new EmbedBuilder()
            .setColor("Grey")
-           .setTitle("💰 Statut du boost")
+           .setTitle("🚀 Statut du boost")
            .setDescription("Tu n'as pas de boost actif en ce moment.")
        ],
        ephemeral: true
@@ -43,7 +43,7 @@ module.exports = {
      embeds: [
        new EmbedBuilder()
          .setColor("Gold")
-         .setTitle("💰 Statut du boost")
+         .setTitle("🚀 Statut du boost")
          .setDescription(
            `🔮 Boost actif : **x${user.boostMultiplier}**\n` +
            `⏳ Temps restant : **${minutes}m ${seconds}s**`
