@@ -45,7 +45,7 @@ module.exports = {
          .setColor("Gold")
          .setTitle("💰 Statut du boost")
          .setDescription(
-           `🚀 Boost actif : **x${user.boostMultiplier}**\n` +
+           `🔮 Boost actif : **x${user.boostMultiplier}**\n` +
            `⏳ Temps restant : **${minutes}m ${seconds}s**`
          )
      ],
