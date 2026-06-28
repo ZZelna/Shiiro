@@ -54,9 +54,9 @@ module.exports = async (message) => {
         .replace(/[\u0300-\u036f]/g, "");
 
     const normalized = content.replace(
-        /[\s._\-~*`\\/|()[\]{}:;"',!?+=<>]/g,
-        ""
-    );
+    /[\s._\-~*`\\/|()[\]{}:;"',!?+=<>]/g,
+    ""
+);
 
     // Liens autorisés
     if (config.whitelistLinks?.length) {
@@ -76,29 +76,43 @@ module.exports = async (message) => {
 
     }
 
-    const detected =
+const detected =
 
-        /https?:\/\/\S+/i.test(content) ||
-        /https?:\/\S+/i.test(content) ||
-        /https?:\S+/i.test(content) ||
+    // HTTP / HTTPS
+    /https?:\/\/\S+/i.test(content) ||
+    /https?:\/\S+/i.test(content) ||
+    /https?:\S+/i.test(content) ||
 
-        /www\.\S+/i.test(content) ||
+    // WWW
+    /www\.\S+/i.test(content) ||
 
-        /\b\S+\.(com|fr|net|gg|xyz|shop|io|org|me|tv|site|vip|co|ru|uk|eu|fun|live)\b/i.test(content) ||
+    // Domaines
+    /\b\S+\.(com|fr|net|gg|xyz|shop|io|org|me|tv|site|vip|co|ru|uk|eu|fun|live)\b/i.test(content) ||
 
-        /\b\d{1,3}(\.\d{1,3}){3}\b/.test(content) ||
+    // Discord
+    /discord\.gg\/\S*/i.test(content) ||
+    /discord\.g\/\S*/i.test(content) ||
+    /discord\.com\/invite\/\S*/i.test(content) ||
+    /discordapp\.com\/invite\/\S*/i.test(content) ||
+    /\.gg\/\S*/i.test(content) ||
+    /gg\/\S*/i.test(content) ||
 
-        normalized.includes("discordgg") ||
-        normalized.includes("discordg") ||
-        normalized.includes("discordcominvite") ||
-        normalized.includes("discordappcominvite") ||
-        normalized.includes("discordinvite") ||
-        normalized.includes("discordcom") ||
-        normalized.includes("discordapp") ||
-        normalized.includes("www") ||
-        normalized.includes("http") ||
-        normalized.includes("https");
+    // Adresse IP
+    /\b\d{1,3}(\.\d{1,3}){3}\b/.test(content) ||
 
+    // Détection après normalisation
+    normalized.includes("discord") ||
+    normalized.includes("discordgg") ||
+    normalized.includes("discordg") ||
+    normalized.includes("discordcominvite") ||
+    normalized.includes("discordappcominvite") ||
+    normalized.includes("discordinvite") ||
+    normalized.includes("discordcom") ||
+    normalized.includes("discordapp") ||
+    normalized.includes("http") ||
+    normalized.includes("https") ||
+    normalized.includes("www") ||
+ 
     if (!detected)
         return;
 
