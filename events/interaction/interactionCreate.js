@@ -632,7 +632,70 @@ if (
        components: []
    });
 }
+// =========================
+// SHOP
+// =========================
+if (
+    interaction.isButton() &&
+    interaction.customId.startsWith("shop_buy_")
+) {
+    const { SHOP_ITEMS } = require("../slashCommands/shop");
+    const LOGS_CASINO = "1520766436388245585";
 
+    const itemId = interaction.customId.replace("shop_buy_", "");
+    const item = SHOP_ITEMS.find(i => i.id === itemId);
+    if (!item) return interaction.reply({ content: "❌ Article introuvable.", ephemeral: true });
+
+    const profile = await CasinoProfile.findOne({ userId: interaction.user.id });
+    if (!profile) return interaction.reply({ content: "❌ Tu n'as pas de profil casino.", ephemeral: true });
+
+    if (profile.yens < item.price) {
+        return interaction.reply({
+            content: `❌ Solde insuffisant. Il te faut **${item.price.toLocaleString()} ¥** (tu as **${profile.yens.toLocaleString()} ¥**).`,
+            ephemeral: true
+        });
+    }
+
+    const member = await interaction.guild.members.fetch(interaction.user.id);
+
+    if (member.roles.cache.has(item.roleId)) {
+        return interaction.reply({ content: "❌ Tu possèdes déjà cet article.", ephemeral: true });
+    }
+
+    profile.yens -= item.price;
+    await profile.save();
+
+    await member.roles.add(item.roleId).catch(() => null);
+
+    await interaction.reply({
+        content: `✅ Tu as acheté **${item.label}** pour **${item.price.toLocaleString()} ¥** !\n💴 Solde restant : \`${profile.yens.toLocaleString()} ¥\``,
+        ephemeral: true
+    });
+
+    try {
+        const logsGuild = interaction.client.guilds.cache.find(g =>
+            g.channels.cache.has(LOGS_CASINO)
+        );
+        const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+        if (logsChannel) {
+            await logsChannel.send({
+                content:
+                    "```diff\n" +
+                    "+ Achat boutique.\n" +
+                    `Acheteur: ${interaction.user.username} (ID: ${interaction.user.id})\n` +
+                    `Article: ${item.label}\n` +
+                    `Prix: ${item.price.toLocaleString()} ¥\n` +
+                    `Solde restant: ${profile.yens.toLocaleString()} ¥\n` +
+                    "Action: Rôle attribué. ✅\n" +
+                    "```"
+            });
+        }
+    } catch (err) {
+        console.error("Erreur logs shop :", err);
+    }
+
+    return;
+}
 // =========================
 // GIVEAWAYS
 // =========================
