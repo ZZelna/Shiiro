@@ -20,6 +20,14 @@ module.exports = async (message) => {
     ) return;
 
     const content = message.content.toLowerCase();
+ // Supprime les blocs de code ```...```
+    .replace(/```[\s\S]*?```/g, "")
+
+    // Supprime les backticks `
+    .replace(/`+/g, "")
+
+    // Supprime les espaces invisibles
+    .replace(/[\u200B-\u200D\uFEFF]/g, "");
 
     // Liens autorisés
     if (config.whitelistLinks) {
