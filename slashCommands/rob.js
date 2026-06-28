@@ -5,7 +5,7 @@ const {
 
 const CasinoProfile = require("../models/CasinoProfile");
 
-const COOLDOWN = 30 * 60 * 1000; // 30 minutes
+const COOLDOWN = 30 * 60 * 1000;
 
 module.exports = {
  data: new SlashCommandBuilder()
@@ -43,7 +43,6 @@ module.exports = {
      });
    }
 
-   // Cooldown
    const now = Date.now();
    if (robber.lastClaim && now - robber.lastClaim < COOLDOWN) {
      const remaining = COOLDOWN - (now - robber.lastClaim);
@@ -71,9 +70,7 @@ module.exports = {
      });
    }
 
-   // Entre 10% et 40% des yens de la victime
-   const percent = Math.floor(Math.random() * 31) + 10;
-   const stolen = Math.floor(victim.yens * (percent / 100));
+   const stolen = Math.min(Math.floor(Math.random() * 5001), victim.yens);
 
    victim.yens -= stolen;
    robber.yens += stolen;
@@ -87,7 +84,7 @@ module.exports = {
        new EmbedBuilder()
          .setColor("DarkRed")
          .setTitle("😉 Vol réussi !")
-         .setDescription(`${interaction.user} a pillé **${stolen} Yens** (${percent}%) à ${target} !`)
+         .setDescription(`${interaction.user} a pillé **${stolen} Yens** à ${target} !`)
      ]
    });
  }
