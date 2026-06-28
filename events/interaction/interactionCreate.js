@@ -189,17 +189,17 @@ module.exports = async (interaction) => {
         .setDescription(`
 ## Commandes Admins Casino
 
-• +gw
-• +greroll
-• +addcoins
-• +delcoins
-• +addgifts
-• +delgifts
-• +drop
-• +renew
-• +pingcasino
-• +giveboosts
-• +giverobs
+• /gw
+• /greroll
+• /addcoins
+• /delcoins
+• /addgifts
+• /delgifts
+• /drop
+• /renew
+• /pingcasino
+• /giveboosts
+• /giverobs
 `);
 
     const row = new ActionRowBuilder()
@@ -228,16 +228,16 @@ module.exports = async (interaction) => {
         .setDescription(`
 ## Commandes Owners Casino
 
-• +gend
-• +panelcasino
-• +shop
-• +resetcasino
-• +blacklistcasino
-• +blacklist
-• +weeklycasino
-• +wl
-• +wlremove
-• +wllist
+• /gend
+• /panelcasino
+• /shop
+• /resetcasino
+• /blacklistcasino
+• /blacklist
+• /weeklycasino
+• /wl
+• /wlremove
+• /wllist
 `);
 
     const row = new ActionRowBuilder()
@@ -266,14 +266,14 @@ module.exports = async (interaction) => {
         .setDescription(`
 ## Commandes GDC Casino
 
-• +clancreate
-• +invite
-• +leave
-• +transfer
-• +deleteclan
-• +topclans
-• +myclan
-• +statsclan
+• /clancreate
+• /invite
+• /leave
+• /transfer
+• /deleteclan
+• /topclans
+• /myclan
+• /statsclan
 `);
 
     const row = new ActionRowBuilder()
