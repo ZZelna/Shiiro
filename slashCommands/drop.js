@@ -9,6 +9,7 @@ const {
 const CasinoProfile = require("../models/CasinoProfile");
 
 const allowedRoles = ["1506709088451690708", "1506674274826584284"];
+const LOGS_CASINO = "1520766436388245585";
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -64,16 +65,16 @@ module.exports = {
         () => {
           const value = Math.floor(Math.random() * 4000) + 1000;
           user.yens += value;
-          return `💴 **${value} Yens**`;
+          return { label: `💴 ${value} Yens`, type: "yens" };
         },
         () => {
           user.gifts += 1;
-          return "🎁 **1 Gift**";
+          return { label: "🎁 1 Gift", type: "gift" };
         },
         () => {
           user.boostMultiplier = 2;
           user.boostEnd = new Date(Date.now() + 60 * 60 * 1000);
-          return "💰 **1 Doubleur de Yens (1h)**";
+          return { label: "💰 1 Doubleur de Yens (1h)", type: "boost" };
         }
       ];
 
@@ -88,10 +89,25 @@ module.exports = {
           new EmbedBuilder()
             .setColor("Green")
             .setTitle("🎉 Drop récupéré")
-            .setDescription(`${i.user} a remporté ${reward} !`)
+            .setDescription(`${i.user} a remporté ${reward.label} !`)
         ],
         components: [new ActionRowBuilder().addComponents(button)]
       });
+
+      try {
+        const logsChannel = interaction.guild.channels.cache.get(LOGS_CASINO);
+        if (logsChannel) {
+          await logsChannel.send({
+            content: [
+              `- Drop réclamé.`,
+              `Utilisateur: ${i.user.username} (ID: ${i.user.id})`,
+              `Récompense: ${reward.label}`,
+              `Lancé par: ${interaction.user.username} (ID: ${interaction.user.id})`
+            ].join("\n")
+          });
+        }
+      } catch {}
+
     });
 
     collector.on("end", async (collected, reason) => {
@@ -108,6 +124,19 @@ module.exports = {
         ],
         components: [new ActionRowBuilder().addComponents(button)]
       }).catch(() => {});
+
+      try {
+        const logsChannel = interaction.guild.channels.cache.get(LOGS_CASINO);
+        if (logsChannel) {
+          await logsChannel.send({
+            content: [
+              `- Drop expiré.`,
+              `Lancé par: ${interaction.user.username} (ID: ${interaction.user.id})`,
+              `Action: Personne n'a réclamé le drop.`
+            ].join("\n")
+          });
+        }
+      } catch {}
     });
   }
 };
