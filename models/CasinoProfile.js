@@ -27,6 +27,10 @@ module.exports = mongoose.model(
     lastClaim: {
       type: Number,
       default: 0
-    }
+      },
+   dailyBet: {
+     type: Number,
+     default: 0
+   }
   })
 );
