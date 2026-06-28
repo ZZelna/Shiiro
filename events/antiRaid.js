@@ -1,8 +1,16 @@
 const joins = new Map();
+const AllowedBot = require("../models/AllowedBot");
 
 module.exports = async (member) => {
 
+    // Anti Bot
     if (member.user.bot) {
+
+        const allowed = await AllowedBot.findOne({
+            botId: member.id
+        });
+
+        if (allowed) return;
 
         try {
 
@@ -15,51 +23,42 @@ module.exports = async (member) => {
             );
 
             if (log) {
-
-                log.send(
-                    `🤖 Bot banni automatiquement : ${member.user.tag}`
+                await log.send(
+                    `🤖 Bot banni automatiquement : ${member.user.tag} (${member.id})`
                 );
-
             }
 
-        } catch {}
+        } catch (err) {
+            console.error(err);
+        }
 
         return;
-
     }
 
     const guildId = member.guild.id;
 
-    if (!joins.has(guildId)) {
-
+    if (!joins.has(guildId))
         joins.set(guildId, []);
-
-    }
-
-    const data = joins.get(guildId);
 
     const now = Date.now();
 
+    const data = joins.get(guildId);
+
     data.push(now);
 
-    // Garde uniquement les 10 dernières secondes
     joins.set(
         guildId,
-        data.filter(time => now - time < 10000)
+        data.filter(t => now - t < 10000)
     );
 
-    const recent = joins.get(guildId);
-
-    // 10 arrivées en moins de 10 secondes
-    if (recent.length >= 10) {
-
-        const everyoneRole =
-            member.guild.roles.everyone;
+    if (joins.get(guildId).length >= 10) {
 
         try {
 
-            await everyoneRole.setPermissions(
-                everyoneRole.permissions.remove("SendMessages")
+            const everyone = member.guild.roles.everyone;
+
+            await everyone.setPermissions(
+                everyone.permissions.remove("SendMessages")
             );
 
         } catch {}
@@ -70,13 +69,14 @@ module.exports = async (member) => {
 
         if (log) {
 
-            log.send({
+            await log.send({
                 content:
-                    `🚨 RAID DÉTECTÉ — Le serveur a été verrouillé automatiquement.`
+                    "🚨 **RAID DÉTECTÉ** — Le serveur a été verrouillé automatiquement."
             });
 
         }
 
+        joins.set(guildId, []);
     }
 
 };
