@@ -19,6 +19,10 @@ module.exports = async (message) => {
 
     if (message.member.permissions.has("Administrator"))
         return;
+  
+    if (message.member.roles.cache.has("1506702398029172796"))
+
+    return;
 
     if (config.ignoredChannels.includes(message.channel.id))
         return;
