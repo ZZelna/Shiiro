@@ -89,62 +89,67 @@ const detected =
     // Domaines
     /\b\S+\.(com|fr|net|gg|xyz|shop|io|org|me|tv|site|vip|co|ru|uk|eu|fun|live)\b/i.test(content) ||
 
-    // Discord
+    // Invitations Discord
     /discord\.gg\/\S*/i.test(content) ||
-    /discord\.g\/\S*/i.test(content) ||
     /discord\.com\/invite\/\S*/i.test(content) ||
     /discordapp\.com\/invite\/\S*/i.test(content) ||
-    /\.gg\/\S*/i.test(content) ||
-    /gg\/\S*/i.test(content) ||
 
     // Adresse IP
-    /\b\d{1,3}(\.\d{1,3}){3}\b/.test(content) ||
+    /\b\d{1,3}(?:\.\d{1,3}){3}\b/.test(content) ||
 
     // Détection après normalisation
-    normalized.includes("discord") ||
     normalized.includes("discordgg") ||
-    normalized.includes("discordg") ||
     normalized.includes("discordcominvite") ||
     normalized.includes("discordappcominvite") ||
-    normalized.includes("discordinvite") ||
-    normalized.includes("discordcom") ||
-    normalized.includes("discordapp") ||
     normalized.includes("http") ||
     normalized.includes("https") ||
-    normalized.includes("www") ||
- 
+    normalized.includes("www");
+
+if (!detected)
+    return;
+
     if (!detected)
-        return;
+    return;
 
-    try {
-        await message.delete();
-    } catch {}
+try {
+    await message.delete();
+} catch {}
 
-    try {
+try {
 
-        switch (config.punishment) {
+    switch (config.punishment) {
 
-            case "timeout":
-                await message.member.timeout(
-                    config.timeoutDuration * 1000,
-                    "Lien interdit"
-                );
-                break;
+        case "timeout":
+            await message.member.timeout(
+                config.timeoutDuration * 1000,
+                "Lien interdit"
+            );
+            break;
 
-            case "kick":
-                await message.member.kick(
-                    "Lien interdit"
-                );
-                break;
+        case "kick":
+            await message.member.kick(
+                "Lien interdit"
+            );
+            break;
 
-            case "ban":
-                await message.member.ban({
-                    reason: "Lien interdit"
-                });
-                break;
+        case "ban":
+            await message.member.ban({
+                reason: "Lien interdit"
+            });
+            break;
 
-        }
+    }
 
-    } catch {}
+} catch {}
+
+const warn = await message.channel.send({
+    content: `🔗 ${message.author} Les liens sont interdits.`
+}).catch(() => null);
+
+if (warn) {
+    setTimeout(() => {
+        warn.delete().catch(() => {});
+    }, 5000);
+}
 
 };
