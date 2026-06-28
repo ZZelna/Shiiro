@@ -27,7 +27,6 @@ module.exports = async (message) => {
     if (config.ignoredChannels.includes(message.channel.id))
         return;
 
-    // Autoriser les GIFs et médias Discord
     if (
         message.embeds.some(embed =>
             embed.type === "gifv" ||
@@ -38,26 +37,26 @@ module.exports = async (message) => {
         return;
     }
 
-    // Autoriser les pièces jointes (images, vidéos, GIF...)
+
     if (message.attachments.size > 0)
         return;
 
     let content = message.content
         .toLowerCase()
 
-        // Blocs de code
+
         .replace(/```[\s\S]*?```/g, "")
 
-        // Backticks
+
         .replace(/`+/g, "")
 
-        // Emojis Discord
+
         .replace(/<a?:\w+:\d+>/g, "")
 
-        // Caractères invisibles
+
         .replace(/[\u200B-\u200D\uFEFF]/g, "")
 
-        // Leetspeak
+
         .replace(/0/g, "o")
         .replace(/1/g, "i")
         .replace(/3/g, "e")
@@ -68,7 +67,7 @@ module.exports = async (message) => {
         .replace(/9/g, "g")
         .replace(/@/g, "a")
 
-        // Accents
+        
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
@@ -77,7 +76,7 @@ module.exports = async (message) => {
         ""
     );
 
-    // Liens autorisés
+
     if (config.whitelistLinks?.length) {
 
         const allowed = config.whitelistLinks.some(link => {
