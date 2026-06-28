@@ -1,8 +1,10 @@
+
 const ShieldConfig = require("../models/ShieldConfig");
 
 const warnings = new Map();
 
 module.exports = async (message) => {
+    console.log("Message reçu :", message.content);
 
     if (!message.guild) return;
     if (message.author.bot) return;
@@ -10,6 +12,7 @@ module.exports = async (message) => {
     const config = await ShieldConfig.findOne({
         guildId: message.guild.id
     });
+    console.log("CONFIG =", config);
 
     if (!config?.enabled) return;
 
@@ -91,10 +94,11 @@ module.exports = async (message) => {
 
     const detected = blacklist.some(regex => regex.test(content));
 
+  console.log("Texte nettoyé :", content);
+console.log("Détecté :", detected);
     if (!detected)
         return;
-
-    await message.delete().catch(() => {});
+ await message.delete().catch(() => {});
 
     const warnCount =
         (warnings.get(message.author.id) || 0) + 1;
