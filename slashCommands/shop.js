@@ -113,7 +113,6 @@ module.exports = {
        await interaction.reply({
            embeds: [embed],
            components: [row1, row2],
-           ephemeral: true
-       });
+            });
    }
 };
