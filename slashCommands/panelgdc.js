@@ -50,7 +50,7 @@ module.exports = {
                 ].join("\n")
             )
             .setImage(
-                "https://cdn.discordapp.com/attachments/1512167770286985319/1519241022641799228/0216B92A-B9BC-4E06-AFC8-21DB87AFE040.png"
+                "https://cdn.discordapp.com/attachments/1516131929244696586/1520890841244238015/0216B92A-B9BC-4E06-AFC8-21DB87AFE040.png?ex=6a42d779&is=6a4185f9&hm=2cef2fb45cd38c0eb36385459551b4e86f4369d1e445998235ab60c598329e3c&"
             )
             .setFooter({
                 text: "Shiiro Casino • Guerre de Clans"
