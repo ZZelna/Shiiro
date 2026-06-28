@@ -1,81 +1,86 @@
 const ghostMentions = new Map();
+const ghostCounts = new Map();
 
 module.exports = {
 
-    messageCreate(message) {
+   messageCreate(message) {
 
-        if (message.author.bot) return;
+       if (message.author.bot) return;
 
-        if (message.mentions.users.size === 0)
-            return;
+       if (message.mentions.users.size === 0)
+           return;
 
-        ghostMentions.set(message.id, {
+       ghostMentions.set(message.id, {
 
-            author: message.author.id,
+           author: message.author.id,
 
-            mentions: [...message.mentions.users.keys()],
+           mentions: [...message.mentions.users.keys()],
 
-            channel: message.channel.id,
+           channel: message.channel.id,
 
-            guild: message.guild.id
+           guild: message.guild.id
 
-        });
+       });
 
-    },
+   },
 
-    async messageDelete(message) {
+   async messageDelete(message) {
 
-        if (!ghostMentions.has(message.id))
-            return;
+       if (!ghostMentions.has(message.id))
+           return;
 
-        const data =
-            ghostMentions.get(message.id);
+       const data = ghostMentions.get(message.id);
 
-        ghostMentions.delete(message.id);
+       ghostMentions.delete(message.id);
 
-        try {
+       if (data.mentions.length < 5) return;
 
-            const guild =
-                message.client.guilds.cache.get(
-                    data.guild
-                );
+       const count = (ghostCounts.get(data.author) || 0) + 1;
 
-            const member =
-                await guild.members.fetch(
-                    data.author
-                );
+       ghostCounts.set(data.author, count);
 
-            await member.timeout(
-                20 * 1000,
-                "Ghost Ping"
-            ).catch(() => {});
+       if (count < 5) return;
 
-            const channel =
-                guild.channels.cache.get(
-                    data.channel
-                );
+       ghostCounts.set(data.author, 0);
 
-            const users =
-                data.mentions
-                    .map(id => `<@${id}>`)
-                    .join(", ");
+       try {
 
-            const warn =
-                await channel.send({
+           const guild =
+               message.client.guilds.cache.get(
+                   data.guild
+               );
 
-                    content:
-                        `👻 ${member} Ghost Ping détecté.\nMentions : ${users}`
+           const member =
+               await guild.members.fetch(
+                   data.author
+               );
 
-                });
+           const channel =
+               guild.channels.cache.get(
+                   data.channel
+               );
 
-            setTimeout(() => {
+           const users =
+               data.mentions
+                   .map(id => `<@${id}>`)
+                   .join(", ");
 
-                warn.delete().catch(() => {});
+           const warn =
+               await channel.send({
 
-            }, 5000);
+                   content:
+                       `👻 ${member} Ghost Ping en masse détecté (5 fois).\nMentions : ${users}`
 
-        } catch {}
+               });
 
-    }
+           setTimeout(() => {
+
+               warn.delete().catch(() => {});
+
+           }, 5000);
+
+       } catch {}
+
+   }
 
 };
