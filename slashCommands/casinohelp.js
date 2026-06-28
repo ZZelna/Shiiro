@@ -18,66 +18,66 @@ new EmbedBuilder()
             .setColor("Gold")
             .setTitle("🎰 Commandes globales casino (1/4)")
             .setDescription(`
-• \`+casino\` : voir son profil casino
-• \`+daily\` : avoir son quota quotidien
-• \`+claim\` : récupérer son quota
-• \`+gift\` : ouvrir un cadeau
-• \`+rob\` : voler un utilisateur
-• \`+pileface pile montant\` : parier côté pile
-• \`+pileface face montant\` : parier côté face
-• \`+blackjack\` : parier contre la banque
-• \`+timers\` : voir ses compteurs
-• \`+luck\` : voir les taux de chances
-• \`+topcoins\` : voir le top casino
-• \`+attack\` : tenter de frapper le coffre
-• \`+donate\` : faire un don
-• \`+bountystatus\` : voir une prime
-• \`+bounty\` : poser une prime
-• \`+bountylist\` : liste des primes
+• \`/casino\` : voir son profil casino
+• \`/daily\` : avoir son quota quotidien
+• \`/claim\` : récupérer son quota
+• \`/gift\` : ouvrir un cadeau
+• \`/rob\` : voler un utilisateur
+• \`/pileface pile montant\` : parier côté pile
+• \`/pileface face montant\` : parier côté face
+• \`/blackjack\` : parier contre la banque
+• \`/timers\` : voir ses compteurs
+• \`/luck\` : voir les taux de chances
+• \`/topcoins\` : voir le top casino
+• \`/attack\` : tenter de frapper le coffre
+• \`/donate\` : faire un don
+• \`/bountystatus\` : voir une prime
+• \`/bounty\` : poser une prime
+• \`/bountylist\` : liste des primes
 `),
 new EmbedBuilder()
  .setColor("Blue")
  .setTitle("🛠️ Commandes admins casino (2/4)")
 .setDescription(`
-• \`+gw\` : créer un giveaway
-• \`+greroll\` : retirer au sort
-• \`+addcoins\` : ajouter des 💹
-• \`+delcoins\` : retirer des 💹
-• \`+addgifts\` : ajouter des cadeaux
-• \`+delgifts\` : retirer des cadeaux
-• \`+drop\` : lancer un drop
-• \`+renew\` : recréer un salon
-• \`+pingcasino\` : mentionner les joueurs
-• \`+giveboosts\` : donner un boost
-• \`+giverobs\` : donner des robs
+• \`/gw\` : créer un giveaway
+• \`/greroll\` : retirer au sort
+• \`/addcoins\` : ajouter des 💹
+• \`/delcoins\` : retirer des 💹
+• \`/addgifts\` : ajouter des cadeaux
+• \`/delgifts\` : retirer des cadeaux
+• \`/drop\` : lancer un drop
+• \`/renew\` : recréer un salon
+• \`/pingcasino\` : mentionner les joueurs
+• \`/giveboosts\` : donner un boost
+• \`/giverobs\` : donner des robs
 `),
 new EmbedBuilder()
 .setColor("Red")
 .setTitle("👑 Owners casino (3/4)")
 .setDescription(`
-• \`+gend\` : terminer un giveaway
-• \`+panelcasino\` : afficher le panel casino
-• \`+shop\` : panel boutique
-• \`+resetcasino\` : réinitialiser le casino
-• \`+blacklistcasino\` : bannir du casino
-• \`+blacklist\` : voir les bannis
-• \`+weeklycasino\` : relancer le GDC
-• \`+wl\` : nouvelle gestion coins
-• \`+wlremove\` : retirer gestion coins
-• \`+wllist\` : voir la liste gestion coins
+• \`/gend\` : terminer un giveaway
+• \`/panelcasino\` : afficher le panel casino
+• \`/shop\` : panel boutique
+• \`/resetcasino\` : réinitialiser le casino
+• \`/blacklistcasino\` : bannir du casino
+• \`/blacklist\` : voir les bannis
+• \`/weeklycasino\` : relancer le GDC
+• \`/wl\` : nouvelle gestion coins
+• \`/wlremove\` : retirer gestion coins
+• \`/wllist\` : voir la liste gestion coins
 `),
 new EmbedBuilder()
 .setColor("Green")
 .setTitle("🏆 Commandes GDC casino (4/4)")
 .setDescription(`
-• \`+clancreate\` : créer un clan
-• \`+invite\` : inviter quelqu'un
-• \`+leave\` : quitter son clan
-• \`+transfer\` : transférer la propriété
-• \`+deleteclan\` : supprimer son clan
-• \`+topclans\` : classement des clans
-• \`+myclan\` : voir son clan
-• \`+statsclan\` : statistiques d'un clan
+• \`/clancreate\` : créer un clan
+• \`/invite\` : inviter quelqu'un
+• \`/leave\` : quitter son clan
+• \`/transfer\` : transférer la propriété
+• \`/deleteclan\` : supprimer son clan
+• \`/topclans\` : classement des clans
+• \`/myclan\` : voir son clan
+• \`/statsclan\` : statistiques d'un clan
 `)
  ];
 
