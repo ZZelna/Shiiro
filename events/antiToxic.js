@@ -54,8 +54,11 @@ module.exports = async (message) => {
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
-    const separators =
-        "[\\s._\\-*~'\",!?/\\\\|()\$begin:math:display$\\$end:math:display${}]*";
+    content = content.trim();
+
+if (!content)
+    return;
+    const separators = "[\\s._\\-*~'\",!?/\\\\|(){}]*";
 
     function build(word) {
 
