@@ -11,31 +11,37 @@ module.exports = async (message) => {
 
     if (!config?.enabled) return;
 
-    if (
-        message.member.permissions.has("Administrator")
-    ) return;
+    if (message.member.permissions.has("Administrator"))
+        return;
 
-    if (
-        config.ignoredChannels.includes(message.channel.id)
-    ) return;
+    if (config.ignoredChannels.includes(message.channel.id))
+        return;
 
-    const content = message.content.toLowerCase();
- // Supprime les blocs de code ```...```
-    .replace(/```[\s\S]*?```/g, "")
+    let content = message.content
+        .toLowerCase()
 
-    // Supprime les backticks `
-    .replace(/`+/g, "")
+        // Blocs de code Discord
+        .replace(/```[\s\S]*?```/g, "")
 
-    // Supprime les espaces invisibles
-    .replace(/[\u200B-\u200D\uFEFF]/g, "");
+        // Backticks
+        .replace(/`+/g, "")
+
+        // Caractères invisibles
+        .replace(/[\u200B-\u200D\uFEFF]/g, "")
+
+        // Supprime les séparateurs
+        .replace(/[\s._\-~*]+/g, "");
 
     // Liens autorisés
-    if (config.whitelistLinks) {
+    if (config.whitelistLinks?.length) {
 
-        const allowed =
-            config.whitelistLinks.some(link =>
-                content.includes(link.toLowerCase())
-            );
+        const allowed = config.whitelistLinks.some(link =>
+            content.includes(
+                link
+                    .toLowerCase()
+                    .replace(/[\s._\-~*]+/g, "")
+            )
+        );
 
         if (allowed) return;
 
@@ -49,45 +55,38 @@ module.exports = async (message) => {
 
         /\b\S+\.(com|fr|net|gg|xyz|shop|io|org|me|tv|site|vip|co|ru|uk|eu|fun|live)\b/i,
 
-        /\b\d{1,3}(\.\d{1,3}){3}\b/i
+        /\b\d{1,3}(\.\d{1,3}){3}\b/i,
+
+        /discordgg/i,
+        /discordcominvite/i,
+        /discordappcominvite/i
 
     ];
 
-    const detected =
-        patterns.some(regex =>
-            regex.test(content)
-        );
+    const detected = patterns.some(regex =>
+        regex.test(content)
+    );
 
     if (!detected)
         return;
 
     try {
-
         await message.delete();
-
     } catch {}
 
     try {
-
         await message.member.timeout(
             config.timeoutDuration * 1000,
             "Lien interdit"
         );
-
     } catch {}
 
-    const warn =
-        await message.channel.send({
-
-            content:
-                `🔗 ${message.author} Les liens sont interdits.`
-
-        });
+    const warn = await message.channel.send({
+        content: `🔗 ${message.author} Les liens sont interdits.`
+    });
 
     setTimeout(() => {
-
         warn.delete().catch(() => {});
-
     }, 5000);
 
 };
