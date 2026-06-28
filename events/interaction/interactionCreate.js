@@ -294,502 +294,345 @@ module.exports = async (interaction) => {
 // PANEL CASINO
 // =========================
 if (
-    interaction.isButton() &&
-    interaction.customId === "create_profile"
+   interaction.isButton() &&
+   interaction.customId === "create_profile"
 ) {
-
-    const roleId = "1507055410211848213";
-
-    // Vérifie si le profil existe déjà
-    const existing =
-        await CasinoProfile.findOne({
-            userId: interaction.user.id
-        });
-
-    if (existing) {
-        return interaction.reply({
-            content: "❌ Tu possèdes déjà un profil casino.",
-            ephemeral: true
-        });
-    }
-
-    // Création du profil avec 1000 ¥
-    await CasinoProfile.create({
-        userId: interaction.user.id,
-        yens: 1000,
-        gifts: 0
-    });
-
-    // Ajout du rôle casino
-    await interaction.member.roles.add(roleId);
-
-    return interaction.reply({
-        content: "✅ Ton profil casino a été créé avec succès.\n💴 Tu reçois **1000 ¥** de bienvenue.",
-        ephemeral: true
-    });
-}
-    if (
-
-    interaction.isButton() &&
-
-    interaction.customId === "create_clan"
-
-) {
-
-    const modal = new ModalBuilder()
-
-        .setCustomId("create_clan_modal")
-
-        .setTitle("Créer un clan");
-
-    const clanName =
-
-        new TextInputBuilder()
-
-            .setCustomId("clan_name")
-
-            .setLabel("Nom du clan")
-
-            .setStyle(
-
-                TextInputStyle.Short
-
-            )
-
-            .setMinLength(3)
-
-            .setMaxLength(20)
-
-            .setRequired(true);
-
-    modal.addComponents(
-
-        new ActionRowBuilder()
-
-            .addComponents(clanName)
-
-    );
-
-    return interaction.showModal(
-
-        modal
-
-    );
-
-}
-    if (
-interaction.isButton() &&
-interaction.customId.startsWith(
-"gift_open_"
-)
-) {
-    const CasinoProfile =
-require("../../models/CasinoProfile");
-
-const userId =
-    interaction.customId.replace(
-        "gift_open_",
-        ""
-    );
-
-if (
-    interaction.user.id !== userId
-) {
-
-    return interaction.reply({
-        content:
-            "❌ Ce cadeau ne t'appartient pas.",
-        ephemeral: true
-    });
-
-}
-
-const profile =
-await CasinoProfile.findOne({
-    userId:
-    interaction.user.id
-});
-
-if (
-    !profile ||
-    profile.gifts <= 0
-) {
-
-    return interaction.reply({
-        content:
-            "❌ Tu ne possèdes aucun Gift.",
-        ephemeral: true
-    });
-
-}
-
-profile.gifts -= 1;
-
-await profile.save();
-
-const rewards = [
-    {
-        chance: 20,
-        roleId:
-            "1519383713014878279",
-        name:
-            "🔊 Perm VOC Chat"
-    },
-    {
-        chance: 15,
-        roleId:
-            "1519633537156907088",
-        name:
-            "🖼️ Perm Pic"
-    },
-    {
-        chance: 15,
-        roleId:
-            "1519633572850438225",
-        name:
-            "🎨 Perm Banner"
-    },
-    {
-        chance: 10,
-        roleId:
-            "1514311105588101332",
-        name:
-            "✨ Perm Animation"
-    },
-    {
-        chance: 10,
-        roleId:
-            "1513950039289106502",
-        name:
-            "✏️ Perm Rename"
-    },
-    {
-        chance: 15,
-        roleId:
-            "1519383437419610332",
-        name:
-            "💴 50 000 ¥"
-    },
-    {
-        chance: 8,
-        roleId:
-            "1519383482113982474",
-        name:
-            "💴 100 000 ¥"
-    },
-    {
-        chance: 4,
-        roleId:
-            "1519383516658405456",
-        name:
-            "💴 250 000 ¥"
-    },
-    {
-        chance: 2,
-        roleId:
-            "1519383549223108618",
-        name:
-            "💴 500 000 ¥"
-    },
-    {
-        chance: 1,
-        roleId:
-            "1519383582198464593",
-        name:
-            "💴 1 000 000 ¥"
-    }
-];
-
-let roll =
-    Math.random() * 100;
-
-let cumulative = 0;
-
-let reward = null;
-
-for (const item of rewards) {
-
-    cumulative += item.chance;
-
-    if (
-        roll <= cumulative
-    ) {
-
-        reward = item;
-        break;
-
-    }
-
-}
-
-const role =
-    interaction.guild.roles.cache.get(
-        reward.roleId
-    );
-
-let rewardText =
-    reward.name;
-
-if (
-    role &&
-    interaction.member.roles.cache.has(
-        role.id
-    )
-) {
-
-    profile.yens += 5000;
-
-    await profile.save();
-
-    rewardText =
-`${reward.name}
-
-💰 Récompense déjà possédée
-➜ Compensation : 5 000 ¥`;
-    }
-
-else if (role) {
-
-    await interaction.member.roles.add(
-        role
-    );
-
-}
-
-const resultEmbed =
-    new EmbedBuilder()
-        .setColor("Gold")
-        .setTitle(
-            "🎁 Cadeau Ouvert"
-        )
-        .setDescription(
-            rewardText
-        )
-        .addFields({
-            name:
-                "🎁 Gifts restants",
-            value:
-                `${profile.gifts}`,
-            inline: true
-        })
-        .setImage(
-            "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
-        );
-
-return interaction.update({
-    embeds: [resultEmbed],
-    components: []
-});
-    }
-
-    if (
-    interaction.isButton() &&
-    interaction.customId.startsWith(
-        "clan_accept_"
-    )
-) {
-
-    const [
-        ,
-        ,
-        clanId,
-        targetId
-    ] =
-        interaction.customId.split("_");
-
-    if (
-        interaction.user.id !== targetId
-    ) {
-
-        return interaction.reply({
-            content:
-                "❌ Cette invitation ne t'est pas destinée.",
-            ephemeral: true
-        });
-    }
-
-    const clan =
-        await Clan.findById(clanId);
-
-    if (!clan) {
-
-        return interaction.reply({
-            content:
-                "❌ Clan introuvable.",
-            ephemeral: true
-        });
-    }
-
-    const alreadyClan =
-        await Clan.findOne({
-            members: interaction.user.id
-        });
-
-    if (alreadyClan) {
-
-        return interaction.reply({
-            content:
-                "❌ Tu es déjà dans un clan.",
-            ephemeral: true
-        });
-    }
-if (clan.members.length >= 5) {
-
-    return interaction.reply({
-        content:
-            "❌ Ce clan est déjà complet (5/5 membres).",
-        ephemeral: true
-    });
-
-}
-    clan.members.push(
-        interaction.user.id
-    );
-
-    await clan.save();
-
-    const channel =
-        await interaction.guild.channels.fetch(
-            clan.channelId
-        );
-
-    if (channel) {
-
-        await channel.permissionOverwrites.create(
-            interaction.user.id,
-            {
-                ViewChannel: true,
-                SendMessages: true,
-                ReadMessageHistory: true
-            }
-        );
-
-        await channel.send({
-            content:
-                `👋 Bienvenue <@${interaction.user.id}> dans **${clan.name}** !`
-        });
-    }
-
-    await interaction.update({
-        content:
-            `✅ Tu as rejoint **${clan.name}**.`,
-        embeds: [],
-        components: []
-    });
-}
-if (
-    interaction.isButton() &&
-    interaction.customId.startsWith(
-        "clan_decline_"
-    )
-) {
-
-    const [
-        ,
-        ,
-        clanId,
-        targetId
-    ] =
-        interaction.customId.split("_");
-
-    if (
-        interaction.user.id !== targetId
-    ) {
-
-        return interaction.reply({
-            content:
-                "❌ Cette invitation ne t'est pas destinée.",
-            ephemeral: true
-        });
-    }
-
-    await interaction.update({
-        content:
-            "❌ Tu as refusé l'invitation du clan.",
-        embeds: [],
-        components: []
-    });
-}
-if (
-    interaction.isButton() &&
-    interaction.customId.startsWith(
-        "deleteclan_confirm_"
-    )
-) {
-
-    const clanId =
-    interaction.customId.replace(
-        "deleteclan_confirm_",
-        ""
-    );
-
-    const clan =
-    await Clan.findById(clanId);
-
-    if (!clan) {
-
-        return interaction.reply({
-            content:
-            "❌ Clan introuvable.",
-            ephemeral: true
-        });
-
-    }
-
-    if (
-        clan.ownerId !==
-        interaction.user.id
-    ) {
-
-        return interaction.reply({
-            content:
-            "❌ Tu n'es pas le chef de ce clan.",
-            ephemeral: true
-        });
-
-    }
-
-    try {
-
-        const channel =
-        await interaction.guild.channels.fetch(
-            clan.channelId
-        );
-
-        if (channel) {
-
-            await channel.delete();
-
-        }
-
-    } catch (err) {}
-
-    await Clan.deleteOne({
-        _id: clan._id
-    });
-
-    return interaction.update({
-        content:
-        `🗑️ Le clan **${clan.name}** a été supprimé.`,
-        embeds: [],
-        components: []
-    });
+   const roleId = "1507055410211848213";
+   const LOGS_CASINO = "1520766436388245585";
+
+   const existing = await CasinoProfile.findOne({
+       userId: interaction.user.id
+   });
+
+   if (existing) {
+       return interaction.reply({
+           content: "❌ Tu possèdes déjà un profil casino.",
+           ephemeral: true
+       });
+   }
+
+   await CasinoProfile.create({
+       userId: interaction.user.id,
+       yens: 1000,
+       gifts: 0
+   });
+
+   await interaction.member.roles.add(roleId);
+
+   await interaction.reply({
+       content: "✅ Ton profil casino a été créé avec succès.\n💴 Tu reçois **1000 ¥** de bienvenue.",
+       ephemeral: true
+   });
+
+   try {
+       const logsGuild = interaction.client.guilds.cache.find(g =>
+           g.channels.cache.has(LOGS_CASINO)
+       );
+       const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+       if (logsChannel) {
+           await logsChannel.send({
+               content: `\`\`\`- Profil casino créé.\nUtilisateur: ${interaction.user.username} (ID: ${interaction.user.id})\nSolde initial: 1 000 ¥\nAction: Profil créé et rôle attribué. ✅\`\`\``
+           });
+       }
+   } catch {}
 }
 
 if (
-    interaction.isButton() &&
-    interaction.customId.startsWith(
-        "deleteclan_cancel_"
-    )
+   interaction.isButton() &&
+   interaction.customId === "create_clan"
 ) {
+   const modal = new ModalBuilder()
+       .setCustomId("create_clan_modal")
+       .setTitle("Créer un clan");
 
-    return interaction.update({
-        content:
-        "❌ Suppression annulée.",
-        embeds: [],
-        components: []
-    });
+   const clanName = new TextInputBuilder()
+       .setCustomId("clan_name")
+       .setLabel("Nom du clan")
+       .setStyle(TextInputStyle.Short)
+       .setMinLength(3)
+       .setMaxLength(20)
+       .setRequired(true);
+
+   modal.addComponents(
+       new ActionRowBuilder().addComponents(clanName)
+   );
+
+   return interaction.showModal(modal);
 }
+ if (
+   interaction.isButton() &&
+   interaction.customId.startsWith("gift_open_")
+) {
+   const CasinoProfile = require("../../models/CasinoProfile");
+
+   const LOGS_CASINO = "1520766436388245585";
+
+   const userId = interaction.customId.replace("gift_open_", "");
+
+   if (interaction.user.id !== userId) {
+       return interaction.reply({
+           content: "❌ Ce cadeau ne t'appartient pas.",
+           ephemeral: true
+       });
+   }
+
+   const profile = await CasinoProfile.findOne({
+       userId: interaction.user.id
+   });
+
+   if (!profile || profile.gifts <= 0) {
+       return interaction.reply({
+           content: "❌ Tu ne possèdes aucun Gift.",
+           ephemeral: true
+       });
+   }
+
+   profile.gifts -= 1;
+
+   await profile.save();
+
+   const rewards = [
+       { chance: 20, roleId: "1519383713014878279", name: "🔊 Perm VOC Chat" },
+       { chance: 15, roleId: "1519633537156907088", name: "🖼️ Perm Pic" },
+       { chance: 15, roleId: "1519633572850438225", name: "🎨 Perm Banner" },
+       { chance: 10, roleId: "1514311105588101332", name: "✨ Perm Animation" },
+       { chance: 10, roleId: "1513950039289106502", name: "✏️ Perm Rename" },
+       { chance: 15, roleId: "1519383437419610332", name: "💴 50 000 ¥" },
+       { chance: 8,  roleId: "1519383482113982474", name: "💴 100 000 ¥" },
+       { chance: 4,  roleId: "1519383516658405456", name: "💴 250 000 ¥" },
+       { chance: 2,  roleId: "1519383549223108618", name: "💴 500 000 ¥" },
+       { chance: 1,  roleId: "1519383582198464593", name: "💴 1 000 000 ¥" }
+   ];
+
+   let roll = Math.random() * 100;
+   let cumulative = 0;
+   let reward = null;
+
+   for (const item of rewards) {
+       cumulative += item.chance;
+       if (roll <= cumulative) {
+           reward = item;
+           break;
+       }
+   }
+
+   const role = interaction.guild.roles.cache.get(reward.roleId);
+
+   let rewardText = reward.name;
+   let logAction = "";
+
+   if (role && interaction.member.roles.cache.has(role.id)) {
+       profile.yens += 5000;
+       await profile.save();
+       rewardText = `${reward.name}\n\n💰 Récompense déjà possédée\n➜ Compensation : 5 000 ¥`;
+       logAction = `Récompense déjà possédée — Compensation: 5 000 ¥`;
+   } else if (role) {
+       await interaction.member.roles.add(role);
+       logAction = `Rôle attribué.`;
+   }
+
+   const resultEmbed = new EmbedBuilder()
+       .setColor("Gold")
+       .setTitle("🎁 Cadeau Ouvert")
+       .setDescription(rewardText)
+       .addFields({
+           name: "🎁 Gifts restants",
+           value: `${profile.gifts}`,
+           inline: true
+       })
+       .setImage(
+           "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
+       );
+
+   await interaction.update({
+       embeds: [resultEmbed],
+       components: []
+   });
+
+   try {
+       const logsGuild = interaction.client.guilds.cache.find(g =>
+           g.channels.cache.has(LOGS_CASINO)
+       );
+       const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+       if (logsChannel) {
+           await logsChannel.send({
+               content: `\`\`\`- Gift ouvert.\nUtilisateur: ${interaction.user.username} (ID: ${interaction.user.id})\nRécompense: ${reward.name}\nAction: ${logAction}\nGifts restants: ${profile.gifts}\`\`\``
+           });
+       }
+   } catch {}
+}
+if (
+   interaction.isButton() &&
+   interaction.customId.startsWith("clan_accept_")
+) {
+   const LOGS_CLAN = "1520771804610822234";
+
+   const [, , clanId, targetId] = interaction.customId.split("_");
+
+   if (interaction.user.id !== targetId) {
+       return interaction.reply({
+           content: "❌ Cette invitation ne t'est pas destinée.",
+           ephemeral: true
+       });
+   }
+
+   const clan = await Clan.findById(clanId);
+
+   if (!clan) {
+       return interaction.reply({
+           content: "❌ Clan introuvable.",
+           ephemeral: true
+       });
+   }
+
+   const alreadyClan = await Clan.findOne({ members: interaction.user.id });
+
+   if (alreadyClan) {
+       return interaction.reply({
+           content: "❌ Tu es déjà dans un clan.",
+           ephemeral: true
+       });
+   }
+
+   if (clan.members.length >= 5) {
+       return interaction.reply({
+           content: "❌ Ce clan est déjà complet (5/5 membres).",
+           ephemeral: true
+       });
+   }
+
+   clan.members.push(interaction.user.id);
+   await clan.save();
+
+   const channel = await interaction.guild.channels.fetch(clan.channelId);
+
+   if (channel) {
+       await channel.permissionOverwrites.create(interaction.user.id, {
+           ViewChannel: true,
+           SendMessages: true,
+           ReadMessageHistory: true
+       });
+
+       await channel.send({
+           content: `👋 Bienvenue <@${interaction.user.id}> dans **${clan.name}** !`
+       });
+   }
+
+   await interaction.update({
+       content: `✅ Tu as rejoint **${clan.name}**.`,
+       embeds: [],
+       components: []
+   });
+
+   try {
+       const logsGuild = interaction.client.guilds.cache.find(g =>
+           g.channels.cache.has(LOGS_CLAN)
+       );
+       const logsChannel = logsGuild?.channels.cache.get(LOGS_CLAN);
+       if (logsChannel) {
+           await logsChannel.send({
+               content: `\`\`\`- Invitation acceptée.\nUtilisateur: ${interaction.user.username} (ID: ${interaction.user.id})\nClan: ${clan.name} (ID: ${clan._id})\nMembres: ${clan.members.length}/5\nAction: Membre ajouté au clan. ✅\`\`\``
+           });
+       }
+   } catch {}
+}
+
+if (
+   interaction.isButton() &&
+   interaction.customId.startsWith("clan_decline_")
+) {
+   const LOGS_CLAN = "1520771804610822234";
+
+   const [, , clanId, targetId] = interaction.customId.split("_");
+
+   if (interaction.user.id !== targetId) {
+       return interaction.reply({
+           content: "❌ Cette invitation ne t'est pas destinée.",
+           ephemeral: true
+       });
+   }
+
+   const clan = await Clan.findById(clanId);
+
+   await interaction.update({
+       content: "❌ Tu as refusé l'invitation du clan.",
+       embeds: [],
+       components: []
+   });
+
+   try {
+       const logsGuild = interaction.client.guilds.cache.find(g =>
+           g.channels.cache.has(LOGS_CLAN)
+       );
+       const logsChannel = logsGuild?.channels.cache.get(LOGS_CLAN);
+       if (logsChannel) {
+           await logsChannel.send({
+               content: `\`\`\`- Invitation refusée.\nUtilisateur: ${interaction.user.username} (ID: ${interaction.user.id})\nClan: ${clan?.name ?? "Inconnu"} (ID: ${clanId})\nAction: Invitation déclinée. ❌\`\`\``
+           });
+       }
+   } catch {}
+}
+
+if (
+   interaction.isButton() &&
+   interaction.customId.startsWith("deleteclan_confirm_")
+) {
+   const LOGS_CLAN = "1520771804610822234";
+
+   const clanId = interaction.customId.replace("deleteclan_confirm_", "");
+   const clan = await Clan.findById(clanId);
+
+   if (!clan) {
+       return interaction.reply({
+           content: "❌ Clan introuvable.",
+           ephemeral: true
+       });
+   }
+
+   if (clan.ownerId !== interaction.user.id) {
+       return interaction.reply({
+           content: "❌ Tu n'es pas le chef de ce clan.",
+           ephemeral: true
+       });
+   }
+
+   try {
+       const channel = await interaction.guild.channels.fetch(clan.channelId);
+       if (channel) await channel.delete();
+   } catch {}
+
+   await Clan.deleteOne({ _id: clan._id });
+
+   await interaction.update({
+       content: `🗑️ Le clan **${clan.name}** a été supprimé.`,
+       embeds: [],
+       components: []
+   });
+
+   try {
+       const logsGuild = interaction.client.guilds.cache.find(g =>
+           g.channels.cache.has(LOGS_CLAN)
+       );
+       const logsChannel = logsGuild?.channels.cache.get(LOGS_CLAN);
+       if (logsChannel) {
+           await logsChannel.send({
+               content: `\`\`\`- Clan supprimé.\nChef: ${interaction.user.username} (ID: ${interaction.user.id})\nClan: ${clan.name} (ID: ${clan._id})\nAction: Clan et salon supprimés. 🗑️\`\`\``
+           });
+       }
+   } catch {}
+}
+
+if (
+   interaction.isButton() &&
+   interaction.customId.startsWith("deleteclan_cancel_")
+) {
+   return interaction.update({
+       content: "❌ Suppression annulée.",
+       embeds: [],
+       components: []
+   });
+}
+
 // =========================
 // GIVEAWAYS
 // =========================
