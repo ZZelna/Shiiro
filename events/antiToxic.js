@@ -13,12 +13,12 @@ module.exports = async (message) => {
 
     if (!config?.enabled) return;
 
-    if (config.ignoredChannels.includes(message.channel.id))
+    if (config?.ignoredChannels?.includes(message.channel.id))
         return;
 
     if (
         message.member.roles.cache.some(role =>
-            config.ignoredRoles.includes(role.id)
+            config?.ignoredRoles?.includes(role.id)
         )
     ) return;
 
@@ -28,6 +28,7 @@ module.exports = async (message) => {
     let content = message.content
         .toLowerCase()
 
+        // Chiffres
         .replace(/0/g, "o")
         .replace(/1/g, "i")
         .replace(/3/g, "e")
@@ -37,25 +38,33 @@ module.exports = async (message) => {
         .replace(/8/g, "b")
         .replace(/9/g, "g")
 
+        // Emojis Discord
         .replace(/<a?:\w+:\d+>/g, "")
 
+        // Blocs de code
+        .replace(/```[\s\S]*?```/g, "")
+
+        // Backticks
+        .replace(/`+/g, "")
+
+        // Accents
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
 
     const separators =
-        "[\\s._\\-*~`'\",!?/\\\\|()\$begin:math:display$\\$end:math:display${}]*";
+        "[\\s._\\-*~'\",!?/\\\\|()\$begin:math:display$\\$end:math:display${}]*";
 
     function build(word) {
 
-        const escaped =
-            word.split("")
-                .map(c =>
-                    c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-                )
-                .join(separators);
+        const escaped = word
+            .split("")
+            .map(c =>
+                c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            )
+            .join(separators);
 
         return new RegExp(
-            `\\b${escaped}\\b`,
+            `(^|[^a-z])${escaped}([^a-z]|$)`,
             "i"
         );
 
@@ -80,10 +89,7 @@ module.exports = async (message) => {
 
     ];
 
-    const detected =
-        blacklist.some(regex =>
-            regex.test(content)
-        );
+    const detected = blacklist.some(regex => regex.test(content));
 
     if (!detected)
         return;
@@ -93,56 +99,44 @@ module.exports = async (message) => {
     const warnCount =
         (warnings.get(message.author.id) || 0) + 1;
 
-    warnings.set(
-        message.author.id,
-        warnCount
-    );
-
-    let sanction =
-        config.punishment;
+    warnings.set(message.author.id, warnCount);
 
     try {
 
-        if (sanction === "timeout") {
+        switch (config.punishment) {
 
-            await message.member.timeout(
-                config.timeoutDuration * 1000,
-                "Shield Protection"
-            );
-
-        }
-
-        if (sanction === "kick") {
-
-            await message.member.kick(
-                "Shield Protection"
-            );
-
-        }
-
-        if (sanction === "ban") {
-
-            await message.member.ban({
-                reason:
+            case "timeout":
+                await message.member.timeout(
+                    config.timeoutDuration * 1000,
                     "Shield Protection"
-            });
+                );
+                break;
+
+            case "kick":
+                await message.member.kick(
+                    "Shield Protection"
+                );
+                break;
+
+            case "ban":
+                await message.member.ban({
+                    reason: "Shield Protection"
+                });
+                break;
 
         }
 
-    } catch {}
+    } catch (err) {
+        console.error(err);
+    }
 
-    const warn =
-        await message.channel.send({
-
-            content:
-                `⚠️ ${message.author} langage interdit détecté.\nAvertissements : **${warnCount}**`
-
-        });
+    const warn = await message.channel.send({
+        content:
+            `⚠️ ${message.author} langage interdit détecté.\nAvertissements : **${warnCount}**`
+    });
 
     setTimeout(() => {
-
         warn.delete().catch(() => {});
-
     }, 5000);
 
 };
