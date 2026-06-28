@@ -14,6 +14,9 @@ module.exports = async (message) => {
     if (
         message.member.permissions.has("Administrator")
     ) return;
+    // Rôle autorisé à envoyer des invitations
+if (message.member.roles.cache.has("1506702398029172796"))
+    return;
 
     if (
         config.ignoredChannels.includes(
