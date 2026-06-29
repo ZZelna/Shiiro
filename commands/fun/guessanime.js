@@ -93,7 +93,11 @@ if (options.reward !== false) {
                         new EmbedBuilder()
                             .setColor("#57F287")
                             .setTitle("✅ Bonne réponse")
-                            .setDescription(`L'anime était **${anime.anime}**.\n\nRécompense : ${rewardText}`)
+                         .setDescription(
+    options.reward === false
+        ? `L'anime était **${anime.anime}**.`
+        : `L'anime était **${anime.anime}**.\n\nRécompense : ${rewardText}`
+)
                             .setTimestamp()
                     ]
                 });
