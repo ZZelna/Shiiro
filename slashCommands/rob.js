@@ -80,37 +80,102 @@ module.exports = {
         robber.lastRob = now;
 
         await victim.save();
-        await robber.save();
+await robber.save();
 
-        await interaction.reply({
-            embeds: [
-                new EmbedBuilder()
-                    .setColor("DarkRed")
-                    .setTitle("😈 Vol réussi !")
-                    .setDescription(`${interaction.user} a pillé **${stolen.toLocaleString()} ¥** à ${target} !`)
-            ]
-        });
+await interaction.reply({
+    embeds: [
+        new EmbedBuilder()
+            .setColor("DarkRed")
+            .setTitle("😈 Vol réussi !")
+            .setDescription(`${interaction.user} a pillé **${stolen.toLocaleString()} ¥** à ${target} !`)
+    ]
+});
 
-        // ✅ CORRIGÉ : logs bien formatés
-        try {
-            const logsGuild = interaction.client.guilds.cache.find(g =>
-                g.channels.cache.has(LOGS_CASINO)
-            );
-            const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
-            if (logsChannel) {
-                await logsChannel.send({
-                    content:
-                        "```diff\n" +
-                        "- Vol effectué.\n" +
-                        `Pilleur: ${interaction.user.username} (ID: ${interaction.user.id})\n` +
-                        `Victime: ${target.username} (ID: ${target.id})\n` +
-                        `Montant volé: ${stolen.toLocaleString()} ¥\n` +
-                        "Action: Yens transférés. 😈\n" +
-                        "```"
-                });
+// ✅ Vérification prime active sur la cible
+const Bounty = require("../models/Bounty");
+const bounty = await Bounty.findOne({ targetId: target.id });
+
+if (bounty && stolen >= bounty.amount) {
+    // Transfert de la prime au pilleur
+    robber.yens += bounty.amount;
+    await robber.save();
+
+    // Mise à jour embed dans le salon bounty
+    try {
+        const bountyChannel = interaction.guild.channels.cache.get("1519247019246616598");
+        if (bountyChannel && bounty.messageId) {
+            const bountyMsg = await bountyChannel.messages.fetch(bounty.messageId).catch(() => null);
+            if (bountyMsg) {
+                const claimedEmbed = new EmbedBuilder()
+                    .setColor("DarkGreen")
+                    .setTitle("✅ PRIME RÉCLAMÉE")
+                    .setDescription(`La prime sur <@${target.id}> a été réclamée par ${interaction.user} !`)
+                    .addFields(
+                        { name: "🏆 Chasseur", value: `${interaction.user}`, inline: true },
+                        { name: "💴 Récompense", value: `\`${bounty.amount.toLocaleString()} ¥\``, inline: true },
+                        { name: "💰 Montant pillé", value: `\`${stolen.toLocaleString()} ¥\``, inline: true }
+                    )
+                    .setFooter({ text: "Shiiro Casino • Bounty", iconURL: interaction.guild.iconURL() })
+                    .setTimestamp();
+
+                await bountyMsg.edit({ embeds: [claimedEmbed], components: [] });
             }
-        } catch (err) {
-            console.error("Erreur logs rob :", err);
         }
+    } catch (err) {
+        console.error("Erreur update bounty message :", err);
     }
-};
+
+    // Suppression de la prime
+    await Bounty.deleteOne({ targetId: target.id });
+
+    await interaction.followUp({
+        content: `🎯 Tu as réclamé la prime sur ${target} ! **+${bounty.amount.toLocaleString()} ¥** ajoutés à ton compte.`,
+        ephemeral: true
+    });
+
+    // Logs
+    try {
+        const LOGS_CASINO = "1520766436388245585";
+        const logsGuild = interaction.client.guilds.cache.find(g =>
+            g.channels.cache.has(LOGS_CASINO)
+        );
+        const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+        if (logsChannel) {
+            await logsChannel.send({
+                content:
+                    "```diff\n" +
+                    "+ Prime réclamée via pillage.\n" +
+                    `Chasseur: ${interaction.user.username} (ID: ${interaction.user.id})\n` +
+                    `Cible: ${target.username} (ID: ${target.id})\n` +
+                    `Pillé: ${stolen.toLocaleString()} ¥\n` +
+                    `Prime: ${bounty.amount.toLocaleString()} ¥\n` +
+                    "Action: Yens transférés au chasseur. ✅\n" +
+                    "```"
+            });
+        }
+    } catch (err) {
+        console.error("Erreur logs bounty claim :", err);
+    }
+}
+
+// Logs rob normaux
+try {
+    const logsGuild = interaction.client.guilds.cache.find(g =>
+        g.channels.cache.has(LOGS_CASINO)
+    );
+    const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+    if (logsChannel) {
+        await logsChannel.send({
+            content:
+                "```diff\n" +
+                "- Vol effectué.\n" +
+                `Pilleur: ${interaction.user.username} (ID: ${interaction.user.id})\n` +
+                `Victime: ${target.username} (ID: ${target.id})\n` +
+                `Montant volé: ${stolen.toLocaleString()} ¥\n` +
+                "Action: Yens transférés. 😈\n" +
+                "```"
+        });
+    }
+} catch (err) {
+    console.error("Erreur logs rob :", err);
+}
