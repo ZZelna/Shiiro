@@ -24,14 +24,15 @@ module.exports = {
            .setTitle("🌍 Guess The Flag")
            .setDescription("Quel pays correspond à ce drapeau ?")
            .setImage(`https://raw.githubusercontent.com/ZZelna/Shiiro/main/assets/flags/${random.image}`)
-           .setFooter({ text: "Tu as 15 secondes pour répondre" });
+           .setFooter({ text: "Tu as 30 secondes pour répondre" })
+
 
        await message.channel.send({ embeds: [embed] });
 
        const collector = message.channel.createMessageCollector({
            filter: m => !m.author.bot && m.channel.id === message.channel.id,
-           time: 15000
-       });
+           time: 30000
+    });
 
        collector.on("collect", async m => {
            if (m.content.toLowerCase().trim() === random.country.toLowerCase().trim()) {
