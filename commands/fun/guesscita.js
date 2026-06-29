@@ -42,32 +42,47 @@ module.exports = {
             if (m.content.toLowerCase() === question.author.toLowerCase()) {
                 collector.stop("found");
 
-                const isGift = Math.random() < 0.10;
-                let rewardText;
+                let rewardText = "🎮 Aucune récompense";
 
-                if (isGift) {
-                    await CasinoProfile.findOneAndUpdate(
-                        { userId: m.author.id },
-                        { $inc: { gifts: 1 } },
-                        { upsert: true }
-                    );
-                    rewardText = "🎁 1 Gift";
-                } else {
-                    const reward = Math.floor(Math.random() * 901) + 100;
-                    await CasinoProfile.findOneAndUpdate(
-                        { userId: m.author.id },
-                        { $inc: { yens: reward } },
-                        { upsert: true }
-                    );
-                    rewardText = `💴 ${reward} Yens`;
-                }
+if (options.reward !== false) {
 
+    const isGift = Math.random() < 0.10;
+
+    if (isGift) {
+
+        await CasinoProfile.findOneAndUpdate(
+            { userId: m.author.id },
+            { $inc: { gifts: 1 } },
+            { upsert: true }
+        );
+
+        rewardText = "🎁 1 Gift";
+
+    } else {
+
+        const reward = Math.floor(Math.random() * 901) + 100;
+
+        await CasinoProfile.findOneAndUpdate(
+            { userId: m.author.id },
+            { $inc: { yens: reward } },
+            { upsert: true }
+        );
+
+        rewardText = `💴 ${reward} Yens`;
+
+    }
+
+}
                 await m.reply({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#57F287")
                             .setTitle("✅ Bonne réponse !")
-                            .setDescription(`${m.author} a trouvé !\n\n👤 Philosophe : **${question.author}**\n\nRécompense : ${rewardText}`)
+.setDescription(
+    options.reward === false
+        ? `${m.author} a trouvé !\n\n👤 Philosophe : **${question.author}**`
+        : `${m.author} a trouvé !\n\n👤 Philosophe : **${question.author}**\n\nRécompense : ${rewardText}`
+)
                             .setTimestamp()
                     ]
                 });
