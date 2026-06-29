@@ -1,80 +1,102 @@
-const {
-    SlashCommandBuilder,
-    ActionRowBuilder,
-    StringSelectMenuBuilder
-} = require("discord.js");
+const { SlashCommandBuilder } = require("discord.js");
 
 module.exports = {
 
     data: new SlashCommandBuilder()
+
         .setName("games")
-        .setDescription("Lance un mini-jeu sans récompense."),
+
+        .setDescription("Lance un mini-jeu sans récompense.")
+
+        .addStringOption(option =>
+            option
+                .setName("jeu")
+                .setDescription("Choisissez un mini-jeu")
+                .setRequired(true)
+
+                .addChoices(
+
+                    {
+                        name: "🌸 Guess Anime",
+                        value: "guessanime"
+                    },
+
+                    {
+                        name: "🏷️ Guess Brand",
+                        value: "guessbrand"
+                    },
+
+                    {
+                        name: "🎨 Guess Couleur",
+                        value: "guesscouleur"
+                    },
+
+                    {
+                        name: "🏙️ Guess Citation",
+                        value: "guesscita"
+                    },
+
+                    {
+                        name: "🌍 Guess Country",
+                        value: "guesscountry"
+                    },
+
+                    {
+                        name: "🏛️ Guess Capitale",
+                        value: "guesscapitale"
+                    },
+
+                    {
+                        name: "🚩 Guess Flags",
+                        value: "guessflags"
+                    }
+
+                )
+        ),
 
     async execute(interaction) {
 
-        const menu = new StringSelectMenuBuilder()
+        const gameName =
+            interaction.options.getString("jeu");
 
-            .setCustomId("games_menu")
+        const game =
+            interaction.client.commands.get(gameName);
 
-            .setPlaceholder("Choisissez un mini-jeu")
+        if (!game) {
 
-            .addOptions(
+            return interaction.reply({
+                content: "❌ Mini-jeu introuvable.",
+                ephemeral: true
+            });
 
-                {
-                    label: "Guess Anime",
-                    value: "guessanime",
-                    emoji: "🌸"
-                },
-
-                {
-                    label: "Guess Brand",
-                    value: "guessbrand",
-                    emoji: "🏷️"
-                },
-
-                {
-                    label: "Guess Couleur",
-                    value: "guesscouleur",
-                    emoji: "🎨"
-                },
-
-                {
-                    label: "Guess Cita",
-                    value: "guesscita",
-                    emoji: "🏙️"
-                },
-
-                {
-                    label: "Guess Country",
-                    value: "guesscountry",
-                    emoji: "🌍"
-                },
-
-                {
-                    label: "Guess Capitale",
-                    value: "guesscapitale",
-                    emoji: "🏛️"
-                },
-
-                {
-                    label: "Guess Flags",
-                    value: "guessflags",
-                    emoji: "🚩"
-                }
-
-            );
-
-        const row = new ActionRowBuilder()
-            .addComponents(menu);
+        }
 
         await interaction.reply({
-
-            content:
-                "🎮 **Choisissez un mini-jeu.**\n*Aucune récompense ne sera donnée.*",
-
-            components: [row]
-
+            content: "🎮 Lancement du mini-jeu...\n*Aucune récompense ne sera donnée.*"
         });
+
+        const fakeMessage = {
+
+            channel: interaction.channel,
+
+            guild: interaction.guild,
+
+            author: interaction.user,
+
+            member: interaction.member,
+
+            reply: (data) => interaction.followUp(data)
+
+        };
+
+        await game.run(
+            fakeMessage,
+            [],
+            {
+                reward: false,
+                fromGames: true
+            }
+        );
 
     }
 
