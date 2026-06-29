@@ -43,32 +43,48 @@ module.exports = {
             if (m.content.toLowerCase() === question.capital.toLowerCase()) {
                 collector.stop("found");
 
-                const isGift = Math.random() < 0.10;
-                let rewardText;
+                let rewardText = "🎮 Aucune récompense";
 
-                if (isGift) {
-                    await CasinoProfile.findOneAndUpdate(
-                        { userId: m.author.id },
-                        { $inc: { gifts: 1 } },
-                        { upsert: true }
-                    );
-                    rewardText = "🎁 1 Gift";
-                } else {
-                    const reward = Math.floor(Math.random() * 901) + 100;
-                    await CasinoProfile.findOneAndUpdate(
-                        { userId: m.author.id },
-                        { $inc: { yens: reward } },
-                        { upsert: true }
-                    );
-                    rewardText = `💴 ${reward} Yens`;
-                }
+if (options.reward !== false) {
+
+    const isGift = Math.random() < 0.10;
+
+    if (isGift) {
+
+        await CasinoProfile.findOneAndUpdate(
+            { userId: m.author.id },
+            { $inc: { gifts: 1 } },
+            { upsert: true }
+        );
+
+        rewardText = "🎁 1 Gift";
+
+    } else {
+
+        const reward = Math.floor(Math.random() * 901) + 100;
+
+        await CasinoProfile.findOneAndUpdate(
+            { userId: m.author.id },
+            { $inc: { yens: reward } },
+            { upsert: true }
+        );
+
+        rewardText = `💴 ${reward} Yens`;
+
+    }
+
+}
 
                 await m.reply({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("Green")
                             .setTitle("✅ Bonne réponse !")
-                            .setDescription(`${m.author} a trouvé la capitale de **${question.country}**.\n\nRéponse : **${question.capital}**\n\nRécompense : ${rewardText}`)
+.setDescription(
+    options.reward === false
+        ? `${m.author} a trouvé la capitale de **${question.country}**.\n\nRéponse : **${question.capital}**`
+        : `${m.author} a trouvé la capitale de **${question.country}**.\n\nRéponse : **${question.capital}**\n\nRécompense : ${rewardText}`
+)
                             .setTimestamp()
                     ]
                 });
