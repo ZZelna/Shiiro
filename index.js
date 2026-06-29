@@ -205,43 +205,7 @@ client.on("messageCreate", async (message) => {
 // ─── interactionCreate ───────────────────────────────────────────────────────
 
 const interactionCreate = require("./events/interaction/interactionCreate");
-
 client.on("interactionCreate", async (interaction) => {
-    if (interaction.isStringSelectMenu()) {
-
-    if (interaction.customId !== "games_menu") return;
-
-    const gameName = interaction.values[0];
-
-    const game = client.commands.get(gameName);
-
-    if (!game) {
-        return interaction.reply({
-            content: "❌ Mini-jeu introuvable.",
-            ephemeral: true
-        });
-    }
-
-    await interaction.deferUpdate();
-
-    const fakeMessage = {
-        channel: interaction.channel,
-        author: interaction.user,
-        member: interaction.member,
-        guild: interaction.guild,
-        reply: (data) => interaction.followUp(data)
-    };
-
-    game.run(
-        fakeMessage,
-        [],
-        {
-            reward: false,
-            fromGames: true
-        }
-    );
-
-}
     if (interaction.isChatInputCommand()) {
         const command = client.slashCommands.get(interaction.commandName);
         if (!command) return;
