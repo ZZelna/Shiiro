@@ -209,32 +209,37 @@ const interactionCreate = require("./events/interaction/interactionCreate");
 client.on("interactionCreate", async (interaction) => {
     if (interaction.isStringSelectMenu()) {
 
-    if (interaction.customId === "games_menu") {
+    if (interaction.customId !== "games_menu") return;
 
-        const game = require(`./commands/fun/${interaction.values[0]}.js`);
+    const gameName = interaction.values[0];
 
-        const fakeMessage = {
+    const game = client.commands.get(gameName);
 
-            channel: interaction.channel,
-            guild: interaction.guild,
-            author: interaction.user,
-            member: interaction.member,
-
-            reply: (...args) => interaction.followUp(...args)
-
-        };
-
-        await interaction.deferUpdate();
-
-        return game.run(
-            fakeMessage,
-            [],
-            {
-                reward: false
-            }
-        );
-
+    if (!game) {
+        return interaction.reply({
+            content: "❌ Mini-jeu introuvable.",
+            ephemeral: true
+        });
     }
+
+    await interaction.deferUpdate();
+
+    const fakeMessage = {
+        channel: interaction.channel,
+        author: interaction.user,
+        member: interaction.member,
+        guild: interaction.guild,
+        reply: (data) => interaction.followUp(data)
+    };
+
+    game.run(
+        fakeMessage,
+        [],
+        {
+            reward: false,
+            fromGames: true
+        }
+    );
 
 }
     if (interaction.isChatInputCommand()) {
