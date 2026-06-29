@@ -39,7 +39,7 @@ module.exports = {
                 },
 
                 {
-                    label: "Guess City",
+                    label: "Guess Cita",
                     value: "guesscita",
                     emoji: "🏙️"
                 },
