@@ -207,6 +207,36 @@ client.on("messageCreate", async (message) => {
 const interactionCreate = require("./events/interaction/interactionCreate");
 
 client.on("interactionCreate", async (interaction) => {
+    if (interaction.isStringSelectMenu()) {
+
+    if (interaction.customId === "games_menu") {
+
+        const game = require(`./commands/fun/${interaction.values[0]}.js`);
+
+        const fakeMessage = {
+
+            channel: interaction.channel,
+            guild: interaction.guild,
+            author: interaction.user,
+            member: interaction.member,
+
+            reply: (...args) => interaction.followUp(...args)
+
+        };
+
+        await interaction.deferUpdate();
+
+        return game.run(
+            fakeMessage,
+            [],
+            {
+                reward: false
+            }
+        );
+
+    }
+
+}
     if (interaction.isChatInputCommand()) {
         const command = client.slashCommands.get(interaction.commandName);
         if (!command) return;
