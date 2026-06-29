@@ -10,7 +10,7 @@ module.exports = {
 
         if (!message.member && !options.auto) return;
 
-        if (!options.auto) {
+if (!options.auto && !options.fromGames) {
             const roleAllowed = "1506674274826584284";
             if (!message.member.roles.cache.has(roleAllowed)) {
                 return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
