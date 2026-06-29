@@ -48,7 +48,7 @@ module.exports = {
         await interaction.guild.members.fetch();
 
         const members =
-            [...interaction.guild.members.cache.values()];
+    interaction.guild.members.cache;
 
         let done = 0;
         let added = 0;
