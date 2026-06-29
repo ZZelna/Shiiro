@@ -1,4 +1,4 @@
-const CHANNEL_ID = "1508491934547574814";
+const CHANNEL_ID = "1517885581319868481";
 
 module.exports = (client) => {
 
