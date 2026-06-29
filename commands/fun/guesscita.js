@@ -31,6 +31,13 @@ module.exports = {
             time: 30000
         });
 
+        let ended = false;
+        const safeEnd = () => {
+            if (ended) return;
+            ended = true;
+            if (options?.onEnd) options.onEnd();
+        };
+
         collector.on("collect", async m => {
             if (m.content.toLowerCase() === question.author.toLowerCase()) {
                 collector.stop("found");
@@ -65,7 +72,7 @@ module.exports = {
                     ]
                 });
 
-                if (options?.onEnd) options.onEnd();
+                safeEnd();
             }
         });
 
@@ -81,7 +88,7 @@ module.exports = {
                     ]
                 });
             }
-            if (options?.onEnd) options.onEnd();
+            safeEnd();
         });
     }
 };
