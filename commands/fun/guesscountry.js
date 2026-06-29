@@ -24,7 +24,8 @@ module.exports = {
         const question = countries[Math.floor(Math.random() * countries.length)];
 
         if (!question || !question[difficulty]) {
-            return message.reply("❌ Impossible de charger une question.");
+            if (options?.onEnd) options.onEnd();
+            return;
         }
 
         const embed = new EmbedBuilder()
@@ -39,6 +40,13 @@ module.exports = {
             filter: m => !m.author.bot,
             time: 30000
         });
+
+        let ended = false;
+        const safeEnd = () => {
+            if (ended) return;
+            ended = true;
+            if (options?.onEnd) options.onEnd();
+        };
 
         collector.on("collect", async m => {
             if (m.content.toLowerCase().trim() === question.country.toLowerCase()) {
@@ -74,7 +82,7 @@ module.exports = {
                     ]
                 });
 
-                if (options?.onEnd) options.onEnd();
+                safeEnd();
             }
         });
 
@@ -90,7 +98,7 @@ module.exports = {
                     ]
                 });
             }
-            if (options?.onEnd) options.onEnd();
+            safeEnd();
         });
     }
 };
