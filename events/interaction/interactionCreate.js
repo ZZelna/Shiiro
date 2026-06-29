@@ -451,9 +451,12 @@ if (
 
     if (yensRoles.includes(role.id)) {
 
-        await interaction.channel.send(
-            `<@&1506709088451690708> ${interaction.user} a obtenu **${reward.name}** !`
-        );
+        await interaction.channel.send({
+    content:
+`<@&1506709088451690708> <@&1506674274826584284>
+
+🎁 ${interaction.user} a obtenu **${reward.name}**.`
+});
 
     }
 
