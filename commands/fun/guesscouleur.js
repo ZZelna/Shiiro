@@ -1,175 +1,103 @@
 const {
-    EmbedBuilder,
-    AttachmentBuilder
+   EmbedBuilder,
+   AttachmentBuilder
 } = require("discord.js");
 
-const Canvas =
-    require("@napi-rs/canvas");
-
-const colors =
-    require("../../data/colors.json");
+const Canvas = require("@napi-rs/canvas");
+const CasinoProfile = require("../../models/CasinoProfile");
+const colors = require("../../data/colors.json");
 
 module.exports = {
-    name: "guesscouleur",
-    description: "Deviner une couleur",
+   name: "guesscouleur",
+   description: "Deviner une couleur",
 
-    run: async (message, args, options = {}) => {
+   run: async (message, args, options = {}) => {
 
-    if (!message.member && !options.auto) return;
+       if (!message.member && !options.auto) return;
 
-    if (!options.auto) {
-        const roleAllowed = "1506674274826584284";
-        if (!message.member.roles.cache.has(roleAllowed)) {
-            return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
-        }
-    }
-    // reste inchangé...
+       if (!options.auto) {
+           const roleAllowed = "1506674274826584284";
+           if (!message.member.roles.cache.has(roleAllowed)) {
+               return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
+           }
+       }
 
+       const color = colors[Math.floor(Math.random() * colors.length)];
 
-        const color =
-            colors[
-                Math.floor(
-                    Math.random() *
-                    colors.length
-                )
-            ];
+       const canvas = Canvas.createCanvas(512, 512);
+       const ctx = canvas.getContext("2d");
+       ctx.fillStyle = color.hex;
+       ctx.fillRect(0, 0, 512, 512);
 
-        const canvas =
-            Canvas.createCanvas(
-                512,
-                512
-            );
+       const attachment = new AttachmentBuilder(
+           await canvas.encode("png"),
+           { name: "color.png" }
+       );
 
-        const ctx =
-            canvas.getContext("2d");
+       const embed = new EmbedBuilder()
+           .setTitle("🎨 Devine la couleur")
+           .setDescription("Tu as **30 secondes** pour trouver le nom exact de cette couleur.")
+           .setImage("attachment://color.png")
+           .setFooter({ text: "Réponds dans le chat" });
 
-        ctx.fillStyle =
-            color.hex;
+       await message.channel.send({ embeds: [embed], files: [attachment] });
 
-        ctx.fillRect(
-            0,
-            0,
-            512,
-            512
-        );
+       const collector = message.channel.createMessageCollector({
+           filter: m => !m.author.bot && m.channel.id === message.channel.id,
+           time: 30000
+       });
 
-        const attachment =
-            new AttachmentBuilder(
-                await canvas.encode("png"),
-                {
-                    name:
-                        "color.png"
-                }
-            );
+       collector.on("collect", async m => {
+           if (m.content.toLowerCase().trim() === color.name.toLowerCase()) {
+               collector.stop("found");
 
-        const embed =
-            new EmbedBuilder()
+               // ✅ Récompense
+               const isGift = Math.random() < 0.10;
+               let rewardText;
 
-                .setTitle(
-                    "🎨 Devine la couleur"
-                )
+               if (isGift) {
+                   await CasinoProfile.findOneAndUpdate(
+                       { userId: m.author.id },
+                       { $inc: { gifts: 1 } },
+                       { upsert: true }
+                   );
+                   rewardText = "🎁 1 Gift";
+               } else {
+                   const reward = Math.floor(Math.random() * 901) + 100;
+                   await CasinoProfile.findOneAndUpdate(
+                       { userId: m.author.id },
+                       { $inc: { yens: reward } },
+                       { upsert: true }
+                   );
+                   rewardText = `💴 ${reward} Yens`;
+               }
 
-                .setDescription(
-                    "Tu as **30 secondes** pour trouver le nom exact de cette couleur."
-                )
+               return m.reply({
+                   embeds: [
+                       new EmbedBuilder()
+                           .setColor("#57F287")
+                           .setTitle("✅ Bonne réponse")
+                           .setDescription(
+                               `La couleur était **${color.name}**.\n\nRécompense : ${rewardText}`
+                           )
+                           .setTimestamp()
+                   ]
+               });
+           }
+       });
 
-                .setImage(
-                    "attachment://color.png"
-                )
+       collector.on("end", async (collected, reason) => {
+           if (reason === "found") return;
 
-                .setFooter({
-                    text:
-                        "Réponds dans le chat"
-                });
-
-        await message.channel.send({
-            embeds: [embed],
-            files: [attachment]
-        });
-
-        const filter = m =>
-            !m.author.bot &&
-            m.channel.id ===
-                message.channel.id;
-
-        const collector =
-            message.channel.createMessageCollector({
-                filter,
-                time: 30000
-            });
-
-        collector.on(
-            "collect",
-            async m => {
-
-                if (
-                    m.content
-                        .toLowerCase()
-                        .trim() ===
-                    color.name
-                        .toLowerCase()
-                ) {
-
-                    collector.stop(
-                        "found"
-                    );
-
-                    return m.reply({
-                        embeds: [
-                            new EmbedBuilder()
-
-                                .setColor(
-                                    "#57F287"
-                                )
-
-                                .setTitle(
-                                    "✅ Bonne réponse"
-                                )
-
-                                .setDescription(
-                                    `La couleur était **${color.name}**.`
-                                )
-                        ]
-                    });
-
-                }
-
-            }
-        );
-
-        collector.on(
-            "end",
-            async (
-                collected,
-                reason
-            ) => {
-
-                if (
-                    reason ===
-                    "found"
-                )
-                    return;
-
-                await message.channel.send({
-                    embeds: [
-                        new EmbedBuilder()
-
-                            .setColor(
-                                "#ED4245"
-                            )
-
-                            .setTitle(
-                                "⏰ Temps écoulé"
-                            )
-
-                            .setDescription(
-                                `La bonne réponse était **${color.name}**.`
-                            )
-                    ]
-                });
-
-            }
-        );
-
-    }
+           await message.channel.send({
+               embeds: [
+                   new EmbedBuilder()
+                       .setColor("#ED4245")
+                       .setTitle("⏰ Temps écoulé")
+                       .setDescription(`La bonne réponse était **${color.name}**.`)
+                       .setTimestamp()
+               ]
+           });
+       });
+   }
 };
