@@ -20,19 +20,19 @@ module.exports = {
     async execute(interaction) {
 
         const role =
-            interaction.options.getRole("role");
+    interaction.options.getRole("role");
 
-        const members =
-            [...role.members.values()];
+const members =
+    [...role.members.values()];
 
-        const lines =
-            members.length === 0
-                ? ["Aucun membre."]
-                : members.map(member =>
-                    `${member.user.username} (ID: ${member.id})`
-                );
+const lines =
+    members.length === 0
+        ? ["Aucun membre."]
+        : members.map(member =>
+            `${member.user.tag} (ID: ${member.id})`
+        );
 
-        const header =
+const header =
 `- Informations du rôle.
 Rôle: ${role.name} (ID: ${role.id})
 Nombre de membres: ${members.length}
@@ -40,40 +40,46 @@ Nombre de membres: ${members.length}
 Membres:
 `;
 
-        const footer =
-`\n\nAction: Liste des membres récupérée.
+const footer =
+`\nAction: Liste des membres récupérée.
 Demandé par: ${interaction.user.tag} (ID: ${interaction.user.id})`;
 
-        let messages = [];
-        let current = header;
+let messages = [];
+let current = header;
 
-        for (const line of lines) {
+for (const line of lines) {
 
-            if ((current + line + "\n" + footer).length > 2000) {
-
-                messages.push(current + footer);
-                current = header;
-
-            }
-
-            current += line + "\n";
-
-        }
+    if ((current + line + "\n" + footer).length > 1980) {
 
         messages.push(current + footer);
-
-        await interaction.reply({
-            content: messages.shift()
-        });
-
-        for (const msg of messages) {
-
-            await interaction.followUp({
-                content: msg
-            });
-
-        }
+        current = header;
 
     }
 
-};
+    current += line + "\n";
+
+}
+
+messages.push(current + footer);
+
+await interaction.reply({
+
+    content:
+`\`\`\`diff
+${messages.shift()}
+\`\`\``
+
+});
+
+for (const msg of messages) {
+
+    await interaction.followUp({
+
+        content:
+`\`\`\`diff
+${msg}
+\`\`\``
+
+    });
+
+}
