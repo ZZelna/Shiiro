@@ -98,13 +98,44 @@ client.once("clientReady", async () => {
     const rest = new REST({ version: "10" }).setToken(process.env.DISCORD_TOKEN);
 
     try {
-        await rest.put(Routes.applicationCommands(client.user.id), { body: commands });
+        await rest.put(
+            Routes.applicationCommands(client.user.id),
+            { body: commands }
+        );
         console.log("✅ Slash commands enregistrées");
     } catch (err) {
         console.error("❌ Erreur slash commands :", err);
     }
-});
 
+    // ==========================
+    // CACHE DES MEMBRES
+    // ==========================
+
+    console.log("🔄 Chargement du cache des membres...");
+
+    for (const guild of client.guilds.cache.values()) {
+
+        try {
+
+            await guild.members.fetch();
+
+            console.log(
+                `✅ ${guild.name} : ${guild.members.cache.size} membres chargés`
+            );
+
+        } catch (err) {
+
+            console.log(
+                `❌ Impossible de charger ${guild.name}`
+            );
+
+        }
+
+    }
+
+    console.log("✅ Cache des membres prêt.");
+
+});
 // ─── messageDelete (snipe) ───────────────────────────────────────────────────
 
 client.on("messageDelete", async (message) => {
