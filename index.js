@@ -502,6 +502,8 @@ setInterval(async () => {
     });
 }, 60000);
 
+const WHITELIST_IDS = ["1400111418358894646"];
+
 // ─── roleCreate / roleDelete ──────────────────────────────────────────────────
 
 client.on("roleCreate", async (role) => {
@@ -527,7 +529,6 @@ client.on("roleCreate", async (role) => {
     const executor = entry.executor;
 
     if (executor?.bot) {
-
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -537,13 +538,12 @@ client.on("roleCreate", async (role) => {
                 "Action: Création de rôle. 🤖\n" +
                 "```"
         });
-
         return;
     }
 
     const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
-    if (member && !member.roles.cache.has("1506674274826584284")) {
+    if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
 
         await role.guild.members.ban(executor.id, {
             reason: "Création de rôle non autorisée"
@@ -596,7 +596,6 @@ client.on("roleDelete", async (role) => {
     const executor = entry.executor;
 
     if (executor?.bot) {
-
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -606,13 +605,12 @@ client.on("roleDelete", async (role) => {
                 "Action: Suppression de rôle. 🤖\n" +
                 "```"
         });
-
         return;
     }
 
     const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
-    if (member && !member.roles.cache.has("1506674274826584284")) {
+    if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
 
         await role.guild.members.ban(executor.id, {
             reason: "Suppression de rôle non autorisée"
@@ -641,6 +639,7 @@ client.on("roleDelete", async (role) => {
     });
 
 });
+
 // ─── channelCreate / channelDelete ───────────────────────────────────────────
 
 client.on("channelCreate", async (channel) => {
@@ -669,7 +668,6 @@ client.on("channelCreate", async (channel) => {
 
         const executor = entry.executor;
 
-        // Ignore les actions du bot
         if (executor?.bot) {
             await logChannel.send({
                 content:
@@ -685,7 +683,7 @@ client.on("channelCreate", async (channel) => {
 
         const member = await channel.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has("1506674274826584284")) {
+        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
 
             await channel.delete("Création de salon non autorisée.").catch(() => {});
 
@@ -746,7 +744,6 @@ client.on("channelDelete", async (channel) => {
 
         const executor = entry.executor;
 
-        // Ignore les actions du bot
         if (executor?.bot) {
             await logChannel.send({
                 content:
@@ -762,7 +759,7 @@ client.on("channelDelete", async (channel) => {
 
         const member = await channel.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has("1506674274826584284")) {
+        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
 
             await channel.guild.members.ban(executor.id, {
                 reason: "Suppression de salon non autorisée."
@@ -794,6 +791,7 @@ client.on("channelDelete", async (channel) => {
         console.error(err);
     }
 });
+
 // ─── guildBanAdd / guildBanRemove (logs bans) ────────────────────────────────
 // ✅ NOTE : le guildBanRemove de la blacklist globale est plus haut.
 // Celui-ci gère uniquement le LOG de l'unban normal.
