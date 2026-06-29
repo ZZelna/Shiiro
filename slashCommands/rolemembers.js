@@ -23,7 +23,7 @@ module.exports = {
     interaction.options.getRole("role");
 
 const members =
-    [...role.members.values()];
+    interaction.guild.members.cache;
 
 const lines =
     members.length === 0
