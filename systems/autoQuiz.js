@@ -1,7 +1,5 @@
 const CHANNEL_ID = "1508491934547574814";
 
-let quizRunning = false;
-
 module.exports = (client) => {
 
    const games = [
@@ -16,14 +14,12 @@ module.exports = (client) => {
 
    console.log("✅ Auto Quiz chargé");
 
-   setInterval(async () => {
-
-       if (quizRunning) return;
-
+   const launchQuiz = async () => {
        const channel = client.channels.cache.get(CHANNEL_ID);
-       if (!channel) return;
-
-       quizRunning = true;
+       if (!channel) {
+           setTimeout(launchQuiz, 5 * 60 * 1000);
+           return;
+       }
 
        const randomGame = games[Math.floor(Math.random() * games.length)];
 
@@ -32,29 +28,30 @@ module.exports = (client) => {
 
            const game = require(`../commands/fun/${randomGame}.js`);
 
+           // ✅ On passe onEnd comme callback
            await game.run(
                {
                    channel,
-                   author: {
-                       id: client.user.id,
-                       bot: true
-                   },
+                   author: { id: client.user.id, bot: true },
                    member: null,
-                   reply: (content) => channel.send(content) // ✅ reply factice
+                   reply: (content) => channel.send(content)
                },
                [],
-               { auto: true }
+               {
+                   auto: true,
+                   onEnd: () => {
+                       console.log("✅ Quiz terminé, prochain dans 2 minutes");
+                       setTimeout(launchQuiz, 2 * 60 * 1000);
+                   }
+               }
            );
 
        } catch (err) {
            console.error(`❌ Erreur AutoQuiz (${randomGame})`, err);
-           quizRunning = false; // ✅ reset si erreur
+           setTimeout(launchQuiz, 2 * 60 * 1000);
        }
+   };
 
-       setTimeout(() => {
-           quizRunning = false;
-       }, 35000); // ✅ 35s pour couvrir les 30s du collector
-
-   }, 5 * 60 * 1000);
-
+   // ✅ Premier quiz après 1 minute au démarrage
+   setTimeout(launchQuiz, 60 * 1000);
 };
