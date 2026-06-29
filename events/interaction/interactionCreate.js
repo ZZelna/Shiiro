@@ -435,6 +435,21 @@ if (
     logAction =
 `Récompense déjà possédée — Compensation : 5 000 ¥`;
 
+    const yensRoles = [
+        "1519383437419610332",
+        "1519383482113982474",
+        "1519383516658405456",
+        "1519383549223108618",
+        "1519383582198464593"
+    ];
+
+    if (yensRoles.includes(role.id)) {
+
+        await interaction.channel.send(
+            `<@&1506709088451690708> <@&1506674274826584284>\n${interaction.user} a reçu une **compensation de 5 000 ¥** (récompense déjà possédée).`
+        );
+
+    }
 } else if (role) {
 
     await interaction.member.roles.add(role);
