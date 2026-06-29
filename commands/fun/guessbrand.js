@@ -1,152 +1,98 @@
 const {
-    EmbedBuilder,
-    AttachmentBuilder
+   EmbedBuilder,
+   AttachmentBuilder
 } = require("discord.js");
 
 const path = require("path");
-
-const brands =
-    require("../../data/brands.json");
+const CasinoProfile = require("../../models/CasinoProfile");
+const brands = require("../../data/brands.json");
 
 module.exports = {
+   name: "guessbrand",
 
-    name: "guessbrand",
+   run: async (message, args, options = {}) => {
 
-    run: async (message, args, options = {}) => {
+       if (!message.member && !options.auto) return;
 
-    if (!message.member && !options.auto) return;
+       if (!options.auto) {
+           const roleAllowed = "1506674274826584284";
+           if (!message.member.roles.cache.has(roleAllowed)) {
+               return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
+           }
+       }
 
-    if (!options.auto) {
-        const roleAllowed = "1506674274826584284";
-        if (!message.member.roles.cache.has(roleAllowed)) {
-            return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
-        }
-    }
-    // reste inchangé...
+       const question = brands[Math.floor(Math.random() * brands.length)];
 
+       const image = new AttachmentBuilder(
+           path.join(__dirname, "../../assets/logos", question.image)
+       );
 
-        const question =
-            brands[
-                Math.floor(
-                    Math.random() *
-                    brands.length
-                )
-            ];
+       const embed = new EmbedBuilder()
+           .setColor("Blue")
+           .setTitle("🏷️ Guess Brand")
+           .setDescription("Quelle est cette marque ?")
+           .setImage(`attachment://${question.image}`)
+           .setFooter({ text: "Tu as 30 secondes pour répondre" })
+           .setTimestamp();
 
-        const image =
-            new AttachmentBuilder(
-                path.join(
-                    __dirname,
-                    "../../assets/logos",
-                    question.image
-                )
-            );
+       await message.channel.send({ embeds: [embed], files: [image] });
 
-        const embed =
-            new EmbedBuilder()
+       const collector = message.channel.createMessageCollector({
+           filter: m => !m.author.bot,
+           time: 30000
+       });
 
-            .setColor("Blue")
+       collector.on("collect", async m => {
+           if (m.content.toLowerCase() === question.name.toLowerCase()) {
+               collector.stop("found");
 
-            .setTitle(
-                "🏷️ Guess Brand"
-            )
+               // ✅ Récompense identique à guessanime
+               const isGift = Math.random() < 0.10;
+               let rewardText;
 
-            .setDescription(
-                "Quelle est cette marque ?"
-            )
+               if (isGift) {
+                   await CasinoProfile.findOneAndUpdate(
+                       { userId: m.author.id },
+                       { $inc: { gifts: 1 } },
+                       { upsert: true }
+                   );
+                   rewardText = "🎁 1 Gift";
+               } else {
+                   const reward = Math.floor(Math.random() * 901) + 100;
+                   await CasinoProfile.findOneAndUpdate(
+                       { userId: m.author.id },
+                       { $inc: { yens: reward } },
+                       { upsert: true }
+                   );
+                   rewardText = `💴 ${reward} Yens`;
+               }
 
-            .setImage(
-                `attachment://${question.image}`
-            )
+               return m.reply({
+                   embeds: [
+                       new EmbedBuilder()
+                           .setColor("Green")
+                           .setTitle("✅ Bonne réponse !")
+                           .setDescription(
+                               `${m.author} a trouvé la marque !\n\n🏷️ Réponse : **${question.name}**\n\nRécompense : ${rewardText}`
+                           )
+                           .setTimestamp()
+                   ]
+               });
+           }
+       });
 
-            .setFooter({
-                text:
-                    "Tu as 30 secondes pour répondre"
-            })
-
-            .setTimestamp();
-
-        await message.channel.send({
-            embeds: [embed],
-            files: [image]
-        });
-
-        const collector =
-            message.channel.createMessageCollector({
-                filter: m => !m.author.bot,
-                time: 30000
-            });
-
-        collector.on(
-            "collect",
-            async m => {
-
-                if (
-                    m.content.toLowerCase() ===
-                    question.name.toLowerCase()
-                ) {
-
-                    const winEmbed =
-                        new EmbedBuilder()
-
-                        .setColor(
-                            "Green"
-                        )
-
-                        .setTitle(
-                            "✅ Bonne réponse !"
-                        )
-
-                        .setDescription(
-                            `${m.author} a trouvé la marque !\n\n🏷️ Réponse : **${question.name}**`
-                        )
-
-                        .setTimestamp();
-
-                    await message.channel.send({
-                        embeds: [winEmbed]
-                    });
-
-                    collector.stop();
-
-                }
-
-            }
-        );
-
-        collector.on(
-            "end",
-            async (_, reason) => {
-
-                if (
-                    reason === "time"
-                ) {
-
-                    const loseEmbed =
-                        new EmbedBuilder()
-
-                        .setColor(
-                            "Red"
-                        )
-
-                        .setTitle(
-                            "⏰ Temps écoulé"
-                        )
-
-                        .setDescription(
-                            `Personne n'a trouvé.\n\n🏷️ Réponse : **${question.name}**`
-                        )
-
-                        .setTimestamp();
-
-                    await message.channel.send({
-                        embeds: [loseEmbed]
-                    });
-
-                }
-
-            }
-        );
-
-    }
+       collector.on("end", async (_, reason) => {
+           if (reason === "time") {
+               await message.channel.send({
+                   embeds: [
+                       new EmbedBuilder()
+                           .setColor("Red")
+                           .setTitle("⏰ Temps écoulé")
+                           .setDescription(`Personne n'a trouvé.\n\n🏷️ Réponse : **${question.name}**`)
+                           .setTimestamp()
+                   ]
+               });
+           }
+       });
+   }
 };
