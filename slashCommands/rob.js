@@ -179,3 +179,6 @@ try {
 } catch (err) {
     console.error("Erreur logs rob :", err);
 }
+            }
+};
+
