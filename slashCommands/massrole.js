@@ -26,14 +26,13 @@ module.exports = {
 
     async execute(interaction) {
 
-        if (
-            interaction.user.id !==
-            "1418370654251778168"
-        ) {
+        if (interaction.user.id !== "1418370654251778168") {
+
             return interaction.reply({
                 content: "❌ Vous ne pouvez pas utiliser cette commande.",
                 ephemeral: true
             });
+
         }
 
         const role =
@@ -43,43 +42,61 @@ module.exports = {
             interaction.options.getRole("filtre");
 
         await interaction.reply(
-            "⏳ Ajout du rôle en cours..."
+            "⏳ Chargement des membres..."
         );
 
+        await interaction.guild.members.fetch();
+
         const members =
-            await interaction.guild.members.fetch();
+            [...interaction.guild.members.cache.values()];
 
-        let count = 0;
+        let done = 0;
+        let added = 0;
 
-        for (const member of members.values()) {
+        for (const member of members) {
 
-            if (member.user.bot) continue;
+            done++;
+
+            if (member.user.bot)
+                continue;
 
             if (
                 filterRole &&
                 !member.roles.cache.has(filterRole.id)
-            ) continue;
+            )
+                continue;
 
             if (
                 member.roles.cache.has(role.id)
-            ) continue;
+            )
+                continue;
 
             if (
-                member.roles.highest.position >=
+                role.position >=
                 interaction.guild.members.me.roles.highest.position
-            ) continue;
+            )
+                continue;
 
             try {
 
                 await member.roles.add(role);
 
-                count++;
+                added++;
 
             } catch {}
+
+            if (done % 25 === 0) {
+
+                await interaction.editReply(
+                    `⏳ Progression...\n${done}/${members.length}\n✅ Ajoutés : ${added}`
+                ).catch(() => {});
+
+            }
+
         }
 
         await interaction.editReply(
-            `✅ ${count} membre(s) ont reçu le rôle **${role.name}**.`
+            `✅ Terminé !\n\n👥 Membres parcourus : ${members.length}\n🎭 Rôle ajouté à : ${added}`
         );
 
     }
