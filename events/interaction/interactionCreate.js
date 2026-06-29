@@ -422,15 +422,44 @@ if (
    let logAction = "";
 
    if (role && interaction.member.roles.cache.has(role.id)) {
-       profile.yens += 5000;
-       await profile.save();
-       rewardText = `${reward.name}\n\n💰 Récompense déjà possédée\n➜ Compensation : 5 000 ¥`;
-       logAction = `Récompense déjà possédée — Compensation: 5 000 ¥`;
-   } else if (role) {
-       await interaction.member.roles.add(role);
-       logAction = `Rôle attribué.`;
-   }
 
+    profile.yens += 5000;
+    await profile.save();
+
+    rewardText =
+`${reward.name}
+
+💰 Récompense déjà possédée
+➜ Compensation : 5 000 ¥`;
+
+    logAction =
+`Récompense déjà possédée — Compensation : 5 000 ¥`;
+
+} else if (role) {
+
+    await interaction.member.roles.add(role);
+
+    const yensRoles = [
+
+        "1519383437419610332", // 50 000 ¥
+        "1519383482113982474", // 100 000 ¥
+        "1519383516658405456", // 250 000 ¥
+        "1519383549223108618", // 500 000 ¥
+        "1519383582198464593"  // 1 000 000 ¥
+
+    ];
+
+    if (yensRoles.includes(role.id)) {
+
+        await interaction.channel.send(
+            `<@&1506709088451690708> ${interaction.user} a obtenu **${reward.name}** !`
+        );
+
+    }
+
+    logAction = "Rôle attribué.";
+
+}
    const resultEmbed = new EmbedBuilder()
        .setColor("Gold")
        .setTitle("🎁 Cadeau Ouvert")
