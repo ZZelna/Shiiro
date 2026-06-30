@@ -115,5 +115,12 @@
 
 },
   
-  "giveaways": {}
+  "giveaways": {},
+"tiktok": {
+  "channel": "1521598638168604862",
+  "role": "1521597704227000494",
+  "interval": 60000,
+  "accounts": [
+    "https://www.tiktok.com/@skibiditoilet1921?_r=1&_t=ZN-97eUjIS3WKM",
+     ]
 }
