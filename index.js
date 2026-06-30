@@ -437,9 +437,10 @@ if (ban.user.bot) return;
     }
 });
 
-// ─── guildMemberUpdate (logs rôles) ──────────────────────────────────────────
+// ─── guildMemberUpdate (logs rôles + protection) ─────────────────────────────
 
 client.on("guildMemberUpdate", async (oldMember, newMember) => {
+
     const logGuild = client.guilds.cache.get("1519364880677867550");
     if (!logGuild) return;
 
@@ -450,25 +451,49 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     let moderatorId = "Inconnu";
 
     try {
+
         const auditLogs = await newMember.guild.fetchAuditLogs({
             type: AuditLogEvent.MemberRoleUpdate,
             limit: 10
         });
+
         const auditEntry = auditLogs.entries.find(
             entry =>
                 entry.target?.id === newMember.id &&
                 Date.now() - entry.createdTimestamp < 10000
         );
+
         if (auditEntry?.executor) {
+
             moderator = auditEntry.executor.tag;
             moderatorId = auditEntry.executor.id;
+
         }
+
     } catch (err) {
+
         console.log("Erreur Audit Logs :", err);
+
     }
 
-    const removedRoles = oldMember.roles.cache.filter(role => !newMember.roles.cache.has(role.id));
+    const managerRoleId = "1506678694352261301";
+    const bypassRoleId = "1506674274826584284";
+
+    const executor = await newMember.guild.members
+        .fetch(moderatorId)
+        .catch(() => null);
+
+    const managerRole =
+        newMember.guild.roles.cache.get(managerRoleId);
+
+    // ───── Rôles retirés ─────
+
+    const removedRoles = oldMember.roles.cache.filter(
+        role => !newMember.roles.cache.has(role.id)
+    );
+
     for (const role of removedRoles.values()) {
+
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -479,10 +504,39 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
                 "Action: Rôle retiré. ❌\n" +
                 "```"
         });
+
     }
 
-    const addedRoles = newMember.roles.cache.filter(role => !oldMember.roles.cache.has(role.id));
+    // ───── Rôles ajoutés ─────
+
+    const addedRoles = newMember.roles.cache.filter(
+        role => !oldMember.roles.cache.has(role.id)
+    );
+
     for (const role of addedRoles.values()) {
+
+        // Protection des rôles supérieurs
+        if (
+            executor &&
+            managerRole &&
+            !executor.roles.cache.has(bypassRoleId) &&
+            role.position > managerRole.position
+        ) {
+
+            await newMember.roles.remove(role).catch(() => {});
+
+            try {
+
+                await executor.send(
+                    `❌ Vous ne pouvez pas attribuer le rôle **${role.name}** car il est au-dessus de votre niveau d'autorisation.`
+                );
+
+            } catch {}
+
+            continue;
+
+        }
+
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -493,9 +547,10 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
                 "Action: Rôle ajouté. ✅\n" +
                 "```"
         });
-    }
-});
 
+    }
+
+});
 // ─── Détection expiration mute ────────────────────────────────────────────────
 // ✅ CORRIGÉ : le doublon du setInterval a été supprimé
 
