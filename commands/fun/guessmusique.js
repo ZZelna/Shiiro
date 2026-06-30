@@ -30,6 +30,12 @@ module.exports = {
 
         await message.channel.send({ embeds: [embed], files: [audio] });
 
+        // ✅ Liste des réponses valides (titre + alias)
+        const validAnswers = [
+            question.title.toLowerCase().trim(),
+            ...(question.aliases || []).map(a => a.toLowerCase().trim())
+        ];
+
         const collector = message.channel.createMessageCollector({
             filter: m => !m.author.bot && m.channel.id === message.channel.id,
             time: 30000
@@ -43,7 +49,9 @@ module.exports = {
         };
 
         collector.on("collect", async m => {
-            if (m.content.toLowerCase().trim() === question.name.toLowerCase().trim()) {
+            const guess = m.content.toLowerCase().trim();
+
+            if (validAnswers.includes(guess)) {
                 collector.stop("found");
 
                 const isGift = Math.random() < 0.10;
@@ -71,7 +79,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#57F287")
                             .setTitle("✅ Bonne réponse !")
-                            .setDescription(`${m.author} a trouvé !\n\n🎵 Musique : **${question.name}**\n👤 Artiste : **${question.artist}**\n\nRécompense : ${rewardText}`)
+                            .setDescription(`${m.author} a trouvé !\n\n🎵 Musique : **${question.title}**\n👤 Artiste : **${question.artist}**\n\nRécompense : ${rewardText}`)
                             .setTimestamp()
                     ]
                 });
@@ -87,7 +95,7 @@ module.exports = {
                         new EmbedBuilder()
                             .setColor("#ED4245")
                             .setTitle("⏰ Temps écoulé")
-                            .setDescription(`Personne n'a trouvé.\n\n🎵 Musique : **${question.name}**\n👤 Artiste : **${question.artist}**`)
+                            .setDescription(`Personne n'a trouvé.\n\n🎵 Musique : **${question.title}**\n👤 Artiste : **${question.artist}**`)
                             .setTimestamp()
                     ]
                 });
