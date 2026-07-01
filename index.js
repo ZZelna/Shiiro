@@ -1054,7 +1054,28 @@ setInterval(async () => {
 const antiGhostPing = require("./events/antiGhostPing");
 client.on("messageCreate", antiGhostPing.messageCreate);
 client.on("messageDelete", antiGhostPing.messageDelete);
+// ─── GuildmemberAdd ────────────────────────────────────────────────────────────
+const AutoRole = require("../models/AutoRole");
 
+client.on("guildMemberAdd", async member => {
+
+    const data = await AutoRole.findOne({
+        guildId: member.guild.id
+    });
+
+    if (!data) return;
+
+    const role = member.guild.roles.cache.get(data.roleId);
+
+    if (!role) return;
+
+    try {
+        await member.roles.add(role);
+    } catch (err) {
+        console.log(err);
+    }
+
+});
 // ─── Login ────────────────────────────────────────────────────────────────────
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
