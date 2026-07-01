@@ -6,5 +6,1596 @@
     "difficulty": "Easy",
     "audio": "1.mp3",
     "aliases": ["blinding lights"]
-  }
-]
+  },
+  {
+    "id": 2,
+    "title": "Shape of You",
+    "artist": "Ed Sheeran",
+    "difficulty": "Easy",
+    "audio": "2.mp3",
+    "aliases": ["shape of you"]
+  },
+  {
+    "id": 3,
+    "title": "Someone Like You",
+    "artist": "Adele",
+    "difficulty": "Easy",
+    "audio": "3.mp3",
+    "aliases": ["someone like you"]
+  },
+  {
+    "id": 4,
+    "title": "Bad Guy",
+    "artist": "Billie Eilish",
+    "difficulty": "Easy",
+    "audio": "4.mp3",
+    "aliases": ["bad guy"]
+  },
+  {
+    "id": 5,
+    "title": "Sunflower",
+    "artist": "Post Malone & Swae Lee",
+    "difficulty": "Easy",
+    "audio": "5.mp3",
+    "aliases": ["sunflower"]
+  },
+  {
+    "id": 6,
+    "title": "God's Plan",
+    "artist": "Drake",
+    "difficulty": "Easy",
+    "audio": "6.mp3",
+    "aliases": ["god's plan", "gods plan"]
+  },
+  {
+    "id": 7,
+    "title": "HUMBLE.",
+    "artist": "Kendrick Lamar",
+    "difficulty": "Medium",
+    "audio": "7.mp3",
+    "aliases": ["humble"]
+  },
+  {
+    "id": 8,
+    "title": "Lose Yourself",
+    "artist": "Eminem",
+    "difficulty": "Easy",
+    "audio": "8.mp3",
+    "aliases": ["lose yourself"]
+  },
+  {
+    "id": 9,
+    "title": "Without Me",
+    "artist": "Eminem",
+    "difficulty": "Easy",
+    "audio": "9.mp3",
+    "aliases": ["without me"]
+  },
+  {
+    "id": 10,
+    "title": "Not Like Us",
+    "artist": "Kendrick Lamar",
+    "difficulty": "Medium",
+    "audio": "10.mp3",
+    "aliases": ["not like us"]
+  },
+  {
+    "id": 11,
+    "title": "Bella",
+    "artist": "Gims",
+    "difficulty": "Easy",
+    "audio": "11.mp3",
+    "aliases": ["bella"]
+  },
+  {
+    "id": 12,
+    "title": "Sapés comme jamais",
+    "artist": "Gims",
+    "difficulty": "Easy",
+    "audio": "12.mp3",
+    "aliases": ["sapés comme jamais", "sapes comme jamais"]
+  },
+  {
+    "id": 13,
+    "title": "Djadja",
+    "artist": "Aya Nakamura",
+    "difficulty": "Easy",
+    "audio": "13.mp3",
+    "aliases": ["djadja"]
+  },
+  {
+    "id": 14,
+    "title": "Pookie",
+    "artist": "Aya Nakamura",
+    "difficulty": "Easy",
+    "audio": "14.mp3",
+    "aliases": ["pookie"]
+  },
+  {
+    "id": 15,
+    "title": "Basique",
+    "artist": "Orelsan",
+    "difficulty": "Easy",
+    "audio": "15.mp3",
+    "aliases": ["basique"]
+  },
+  {
+    "id": 16,
+    "title": "Macarena",
+    "artist": "Damso",
+    "difficulty": "Easy",
+    "audio": "16.mp3",
+    "aliases": ["macarena"]
+  },
+  {
+    "id": 17,
+    "title": "La Kiffance",
+    "artist": "Naps",
+    "difficulty": "Easy",
+    "audio": "17.mp3",
+    "aliases": ["la kiffance"]
+  },
+  {
+    "id": 18,
+    "title": "Bande Organisée",
+    "artist": "13 Organisé",
+    "difficulty": "Easy",
+    "audio": "18.mp3",
+    "aliases": ["bande organisée", "bande organisee"]
+  },
+  {
+    "id": 19,
+    "title": "Sur ma route",
+    "artist": "Black M",
+    "difficulty": "Easy",
+    "audio": "19.mp3",
+    "aliases": ["sur ma route"]
+  },
+  {
+    "id": 20,
+    "title": "Andalouse",
+    "artist": "Kendji Girac",
+    "difficulty": "Easy",
+    "audio": "20.mp3",
+    "aliases": ["andalouse"]
+  },
+  {
+    "id": 21,
+    "title": "Papaoutai",
+    "artist": "Stromae",
+    "difficulty": "Easy",
+    "audio": "21.mp3",
+    "aliases": ["papaoutai"]
+  },
+  {
+    "id": 22,
+    "title": "Alors on danse",
+    "artist": "Stromae",
+    "difficulty": "Easy",
+    "audio": "22.mp3",
+    "aliases": ["alors on danse"]
+  },
+  {
+    "id": 23,
+    "title": "Le Coach",
+    "artist": "Soprano",
+    "difficulty": "Easy",
+    "audio": "23.mp3",
+    "aliases": ["le coach"]
+  },
+  {
+    "id": 24,
+    "title": "Angela",
+    "artist": "Hatik",
+    "difficulty": "Medium",
+    "audio": "24.mp3",
+    "aliases": ["angela"]
+  },
+  {
+    "id": 25,
+    "title": "Casanova",
+    "artist": "Soolking",
+    "difficulty": "Easy",
+    "audio": "25.mp3",
+    "aliases": ["casanova"]
+  },
+  {
+    "id": 26,
+    "title": "Suavemente",
+    "artist": "Soolking",
+    "difficulty": "Easy",
+    "audio": "26.mp3",
+    "aliases": ["suavemente"]
+  },
+  {
+    "id": 27,
+    "title": "Despacito",
+    "artist": "Luis Fonsi & Daddy Yankee",
+    "difficulty": "Easy",
+    "audio": "27.mp3",
+    "aliases": ["despacito"]
+  },
+  {
+    "id": 28,
+    "title": "Bailando",
+    "artist": "Enrique Iglesias",
+    "difficulty": "Easy",
+    "audio": "28.mp3",
+    "aliases": ["bailando"]
+  },
+  {
+    "id": 29,
+    "title": "Waka Waka",
+    "artist": "Shakira",
+    "difficulty": "Easy",
+    "audio": "29.mp3",
+    "aliases": ["waka waka"]
+  },
+  {
+    "id": 30,
+    "title": "Hips Don't Lie",
+    "artist": "Shakira",
+    "difficulty": "Easy",
+    "audio": "30.mp3",
+    "aliases": ["hips don't lie", "hips dont lie"]
+  },
+  {
+    "id": 31,
+    "title": "Gangnam Style",
+    "artist": "PSY",
+    "difficulty": "Easy",
+    "audio": "31.mp3",
+    "aliases": ["gangnam style"]
+  },
+  {
+    "id": 32,
+    "title": "Dynamite",
+    "artist": "BTS",
+    "difficulty": "Easy",
+    "audio": "32.mp3",
+    "aliases": ["dynamite"]
+  },
+  {
+    "id": 33,
+    "title": "Butter",
+    "artist": "BTS",
+    "difficulty": "Easy",
+    "audio": "33.mp3",
+    "aliases": ["butter"]
+  },
+  {
+    "id": 34,
+    "title": "Pink Venom",
+    "artist": "BLACKPINK",
+    "difficulty": "Medium",
+    "audio": "34.mp3",
+    "aliases": ["pink venom"]
+  },
+  {
+    "id": 35,
+    "title": "How You Like That",
+    "artist": "BLACKPINK",
+    "difficulty": "Medium",
+    "audio": "35.mp3",
+    "aliases": ["how you like that"]
+  },
+  {
+    "id": 36,
+    "title": "Believer",
+    "artist": "Imagine Dragons",
+    "difficulty": "Easy",
+    "audio": "36.mp3",
+    "aliases": ["believer"]
+  },
+  {
+    "id": 37,
+    "title": "Thunder",
+    "artist": "Imagine Dragons",
+    "difficulty": "Easy",
+    "audio": "37.mp3",
+    "aliases": ["thunder"]
+  },
+  {
+    "id": 38,
+    "title": "Radioactive",
+    "artist": "Imagine Dragons",
+    "difficulty": "Easy",
+    "audio": "38.mp3",
+    "aliases": ["radioactive"]
+  },
+  {
+    "id": 39,
+    "title": "Counting Stars",
+    "artist": "OneRepublic",
+    "difficulty": "Easy",
+    "audio": "39.mp3",
+    "aliases": ["counting stars"]
+  },
+  {
+    "id": 40,
+    "title": "Wake Me Up",
+    "artist": "Avicii",
+    "difficulty": "Easy",
+    "audio": "40.mp3",
+    "aliases": ["wake me up"]
+  },
+  {
+    "id": 41,
+    "title": "Levels",
+    "artist": "Avicii",
+    "difficulty": "Medium",
+    "audio": "41.mp3",
+    "aliases": ["levels"]
+  },
+  {
+    "id": 42,
+    "title": "Titanium",
+    "artist": "David Guetta feat. Sia",
+    "difficulty": "Easy",
+    "audio": "42.mp3",
+    "aliases": ["titanium"]
+  },
+  {
+    "id": 43,
+    "title": "Animals",
+    "artist": "Martin Garrix",
+    "difficulty": "Medium",
+    "audio": "43.mp3",
+    "aliases": ["animals"]
+  },
+  {
+    "id": 44,
+    "title": "Lean On",
+    "artist": "Major Lazer & DJ Snake",
+    "difficulty": "Easy",
+    "audio": "44.mp3",
+    "aliases": ["lean on"]
+  },
+  {
+    "id": 45,
+    "title": "Faded",
+    "artist": "Alan Walker",
+    "difficulty": "Easy",
+    "audio": "45.mp3",
+    "aliases": ["faded"]
+  },
+  {
+    "id": 46,
+    "title": "Love Nwantiti",
+    "artist": "CKay",
+    "difficulty": "Easy",
+    "audio": "46.mp3",
+    "aliases": ["love nwantiti"]
+  },
+  {
+    "id": 47,
+    "title": "Calm Down",
+    "artist": "Rema & Selena Gomez",
+    "difficulty": "Easy",
+    "audio": "47.mp3",
+    "aliases": ["calm down"]
+  },
+  {
+    "id": 48,
+    "title": "Rush",
+    "artist": "Ayra Starr",
+    "difficulty": "Medium",
+    "audio": "48.mp3",
+    "aliases": ["rush"]
+  },
+  {
+    "id": 49,
+    "title": "Last Last",
+    "artist": "Burna Boy",
+    "difficulty": "Medium",
+    "audio": "49.mp3",
+    "aliases": ["last last"]
+  },
+  {
+    "id": 50,
+    "title": "People",
+    "artist": "Libianca",
+    "difficulty": "Easy",
+    "audio": "50.mp3",
+    "aliases": ["people"]
+  },
+  {
+    "id": 51,
+    "title": "J'oublie tout",
+    "artist": "Ninho",
+    "difficulty": "Easy",
+    "audio": "51.mp3",
+    "aliases": ["j'oublie tout", "joublie tout"]
+  },
+  {
+    "id": 52,
+    "title": "Lettre à une femme",
+    "artist": "Ninho",
+    "difficulty": "Easy",
+    "audio": "52.mp3",
+    "aliases": ["lettre à une femme"]
+  },
+  {
+    "id": 53,
+    "title": "Zipette",
+    "artist": "Ninho",
+    "difficulty": "Medium",
+    "audio": "53.mp3",
+    "aliases": ["zipette"]
+  },
+  {
+    "id": 54,
+    "title": "Réseaux",
+    "artist": "Niska",
+    "difficulty": "Easy",
+    "audio": "54.mp3",
+    "aliases": ["réseaux", "reseaux"]
+  },
+  {
+    "id": 55,
+    "title": "Médicament",
+    "artist": "Niska feat. Booba",
+    "difficulty": "Easy",
+    "audio": "55.mp3",
+    "aliases": ["médicament", "medicament"]
+  },
+  {
+    "id": 56,
+    "title": "Salé",
+    "artist": "Niska",
+    "difficulty": "Medium",
+    "audio": "56.mp3",
+    "aliases": ["salé", "sale"]
+  },
+  {
+    "id": 57,
+    "title": "Toka",
+    "artist": "SDM",
+    "difficulty": "Medium",
+    "audio": "57.mp3",
+    "aliases": ["toka"]
+  },
+  {
+    "id": 58,
+    "title": "Bolide Allemand",
+    "artist": "SDM",
+    "difficulty": "Easy",
+    "audio": "58.mp3",
+    "aliases": ["bolide allemand"]
+  },
+  {
+    "id": 59,
+    "title": "Redescends",
+    "artist": "Tiakola",
+    "difficulty": "Medium",
+    "audio": "59.mp3",
+    "aliases": ["redescends"]
+  },
+  {
+    "id": 60,
+    "title": "Gasolina",
+    "artist": "Tiakola",
+    "difficulty": "Easy",
+    "audio": "60.mp3",
+    "aliases": ["gasolina"]
+  },
+  {
+    "id": 61,
+    "title": "La Clé",
+    "artist": "Tiakola",
+    "difficulty": "Easy",
+    "audio": "61.mp3",
+    "aliases": ["la clé", "la cle"]
+  },
+  {
+    "id": 62,
+    "title": "Petit Génie",
+    "artist": "Jungeli",
+    "difficulty": "Easy",
+    "audio": "62.mp3",
+    "aliases": ["petit génie", "petit genie"]
+  },
+  {
+    "id": 63,
+    "title": "Anissa",
+    "artist": "Wejdene",
+    "difficulty": "Easy",
+    "audio": "63.mp3",
+    "aliases": ["anissa"]
+  },
+  {
+    "id": 64,
+    "title": "Coco",
+    "artist": "Wejdene",
+    "difficulty": "Easy",
+    "audio": "64.mp3",
+    "aliases": ["coco"]
+  },
+  {
+    "id": 65,
+    "title": "Moulaga",
+    "artist": "Heuss L'Enfoiré",
+    "difficulty": "Easy",
+    "audio": "65.mp3",
+    "aliases": ["moulaga"]
+  },
+  {
+    "id": 66,
+    "title": "Khapta",
+    "artist": "Heuss L'Enfoiré feat. Sofiane",
+    "difficulty": "Medium",
+    "audio": "66.mp3",
+    "aliases": ["khapta"]
+  },
+  {
+    "id": 67,
+    "title": "Maman ne le sait pas",
+    "artist": "Ninho feat. Niska",
+    "difficulty": "Medium",
+    "audio": "67.mp3",
+    "aliases": ["maman ne le sait pas"]
+  },
+  {
+    "id": 68,
+    "title": "91's",
+    "artist": "SCH",
+    "difficulty": "Medium",
+    "audio": "68.mp3",
+    "aliases": ["91's", "91s"]
+  },
+  {
+    "id": 69,
+    "title": "Ototo",
+    "artist": "SCH",
+    "difficulty": "Medium",
+    "audio": "69.mp3",
+    "aliases": ["ototo"]
+  },
+  {
+    "id": 70,
+    "title": "Crack",
+    "artist": "SCH",
+    "difficulty": "Hard",
+    "audio": "70.mp3",
+    "aliases": ["crack"]
+  },
+  {
+    "id": 71,
+    "title": "Au DD",
+    "artist": "PNL",
+    "difficulty": "Easy",
+    "audio": "71.mp3",
+    "aliases": ["au dd"]
+  },
+  {
+    "id": 72,
+    "title": "Le Monde ou Rien",
+    "artist": "PNL",
+    "difficulty": "Easy",
+    "audio": "72.mp3",
+    "aliases": ["le monde ou rien"]
+  },
+  {
+    "id": 73,
+    "title": "DA",
+    "artist": "PNL",
+    "difficulty": "Easy",
+    "audio": "73.mp3",
+    "aliases": ["da"]
+  },
+  {
+    "id": 74,
+    "title": "Jusqu'au Dernier Gramme",
+    "artist": "PNL",
+    "difficulty": "Medium",
+    "audio": "74.mp3",
+    "aliases": ["jusqu'au dernier gramme"]
+  },
+  {
+    "id": 75,
+    "title": "Deux Frères",
+    "artist": "PNL",
+    "difficulty": "Easy",
+    "audio": "75.mp3",
+    "aliases": ["deux frères", "deux freres"]
+  },
+  {
+    "id": 76,
+    "title": "One Dance",
+    "artist": "Drake",
+    "difficulty": "Easy",
+    "audio": "76.mp3",
+    "aliases": ["one dance"]
+  },
+  {
+    "id": 77,
+    "title": "Hotline Bling",
+    "artist": "Drake",
+    "difficulty": "Easy",
+    "audio": "77.mp3",
+    "aliases": ["hotline bling"]
+  },
+  {
+    "id": 78,
+    "title": "SICKO MODE",
+    "artist": "Travis Scott",
+    "difficulty": "Easy",
+    "audio": "78.mp3",
+    "aliases": ["sicko mode"]
+  },
+  {
+    "id": 79,
+    "title": "goosebumps",
+    "artist": "Travis Scott",
+    "difficulty": "Easy",
+    "audio": "79.mp3",
+    "aliases": ["goosebumps"]
+  },
+  {
+    "id": 80,
+    "title": "FE!N",
+    "artist": "Travis Scott",
+    "difficulty": "Medium",
+    "audio": "80.mp3",
+    "aliases": ["fein", "fe!n"]
+  },
+  {
+    "id": 81,
+    "title": "Rockstar",
+    "artist": "Post Malone feat. 21 Savage",
+    "difficulty": "Easy",
+    "audio": "81.mp3",
+    "aliases": ["rockstar"]
+  },
+  {
+    "id": 82,
+    "title": "Circles",
+    "artist": "Post Malone",
+    "difficulty": "Easy",
+    "audio": "82.mp3",
+    "aliases": ["circles"]
+  },
+  {
+    "id": 83,
+    "title": "Congratulations",
+    "artist": "Post Malone feat. Quavo",
+    "difficulty": "Medium",
+    "audio": "83.mp3",
+    "aliases": ["congratulations"]
+  },
+  {
+    "id": 84,
+    "title": "Lucid Dreams",
+    "artist": "Juice WRLD",
+    "difficulty": "Easy",
+    "audio": "84.mp3",
+    "aliases": ["lucid dreams"]
+  },
+  {
+    "id": 85,
+    "title": "All Girls Are The Same",
+    "artist": "Juice WRLD",
+    "difficulty": "Medium",
+    "audio": "85.mp3",
+    "aliases": ["all girls are the same"]
+  },
+  {
+    "id": 86,
+    "title": "XO TOUR Llif3",
+    "artist": "Lil Uzi Vert",
+    "difficulty": "Medium",
+    "audio": "86.mp3",
+    "aliases": ["xo tour llif3"]
+  },
+  {
+    "id": 87,
+    "title": "Money Longer",
+    "artist": "Lil Uzi Vert",
+    "difficulty": "Hard",
+    "audio": "87.mp3",
+    "aliases": ["money longer"]
+  },
+  {
+    "id": 88,
+    "title": "Industry Baby",
+    "artist": "Lil Nas X feat. Jack Harlow",
+    "difficulty": "Easy",
+    "audio": "88.mp3",
+    "aliases": ["industry baby"]
+  },
+  {
+    "id": 89,
+    "title": "Old Town Road",
+    "artist": "Lil Nas X",
+    "difficulty": "Easy",
+    "audio": "89.mp3",
+    "aliases": ["old town road"]
+  },
+  {
+    "id": 90,
+    "title": "As It Was",
+    "artist": "Harry Styles",
+    "difficulty": "Easy",
+    "audio": "90.mp3",
+    "aliases": ["as it was"]
+  },
+  {
+    "id": 91,
+    "title": "Watermelon Sugar",
+    "artist": "Harry Styles",
+    "difficulty": "Easy",
+    "audio": "91.mp3",
+    "aliases": ["watermelon sugar"]
+  },
+  {
+    "id": 92,
+    "title": "Levitating",
+    "artist": "Dua Lipa",
+    "difficulty": "Easy",
+    "audio": "92.mp3",
+    "aliases": ["levitating"]
+  },
+  {
+    "id": 93,
+    "title": "Don't Start Now",
+    "artist": "Dua Lipa",
+    "difficulty": "Easy",
+    "audio": "93.mp3",
+    "aliases": ["don't start now", "dont start now"]
+  },
+  {
+    "id": 94,
+    "title": "Dance Monkey",
+    "artist": "Tones and I",
+    "difficulty": "Easy",
+    "audio": "94.mp3",
+    "aliases": ["dance monkey"]
+  },
+  {
+    "id": 95,
+    "title": "Bad Romance",
+    "artist": "Lady Gaga",
+    "difficulty": "Easy",
+    "audio": "95.mp3",
+    "aliases": ["bad romance"]
+  },
+  {
+    "id": 96,
+    "title": "Poker Face",
+    "artist": "Lady Gaga",
+    "difficulty": "Easy",
+    "audio": "96.mp3",
+    "aliases": ["poker face"]
+  },
+  {
+    "id": 97,
+    "title": "Born This Way",
+    "artist": "Lady Gaga",
+    "difficulty": "Medium",
+    "audio": "97.mp3",
+    "aliases": ["born this way"]
+  },
+  {
+    "id": 98,
+    "title": "Rolling in the Deep",
+    "artist": "Adele",
+    "difficulty": "Easy",
+    "audio": "98.mp3",
+    "aliases": ["rolling in the deep"]
+  },
+  {
+    "id": 99,
+    "title": "Hello",
+    "artist": "Adele",
+    "difficulty": "Easy",
+    "audio": "99.mp3",
+    "aliases": ["hello"]
+  },
+  {
+    "id": 100,
+    "title": "Set Fire to the Rain",
+    "artist": "Adele",
+    "difficulty": "Medium",
+    "audio": "100.mp3",
+    "aliases": ["set fire to the rain"]
+  },
+  {
+    "id": 101,
+    "title": "Shake It Off",
+    "artist": "Taylor Swift",
+    "difficulty": "Easy",
+    "audio": "101.mp3",
+    "aliases": ["shake it off"]
+  },
+  {
+    "id": 102,
+    "title": "Blank Space",
+    "artist": "Taylor Swift",
+    "difficulty": "Easy",
+    "audio": "102.mp3",
+    "aliases": ["blank space"]
+  },
+  {
+    "id": 103,
+    "title": "Cruel Summer",
+    "artist": "Taylor Swift",
+    "difficulty": "Easy",
+    "audio": "103.mp3",
+    "aliases": ["cruel summer"]
+  },
+  {
+    "id": 104,
+    "title": "Anti-Hero",
+    "artist": "Taylor Swift",
+    "difficulty": "Easy",
+    "audio": "104.mp3",
+    "aliases": ["anti hero", "anti-hero"]
+  },
+  {
+    "id": 105,
+    "title": "Uptown Funk",
+    "artist": "Mark Ronson feat. Bruno Mars",
+    "difficulty": "Easy",
+    "audio": "105.mp3",
+    "aliases": ["uptown funk"]
+  },
+  {
+    "id": 106,
+    "title": "Treasure",
+    "artist": "Bruno Mars",
+    "difficulty": "Easy",
+    "audio": "106.mp3",
+    "aliases": ["treasure"]
+  },
+  {
+    "id": 107,
+    "title": "Locked Out of Heaven",
+    "artist": "Bruno Mars",
+    "difficulty": "Easy",
+    "audio": "107.mp3",
+    "aliases": ["locked out of heaven"]
+  },
+  {
+    "id": 108,
+    "title": "Just the Way You Are",
+    "artist": "Bruno Mars",
+    "difficulty": "Easy",
+    "audio": "108.mp3",
+    "aliases": ["just the way you are"]
+  },
+  {
+    "id": 109,
+    "title": "Happy",
+    "artist": "Pharrell Williams",
+    "difficulty": "Easy",
+    "audio": "109.mp3",
+    "aliases": ["happy"]
+  },
+  {
+    "id": 110,
+    "title": "Can't Stop the Feeling!",
+    "artist": "Justin Timberlake",
+    "difficulty": "Easy",
+    "audio": "110.mp3",
+    "aliases": ["can't stop the feeling", "cant stop the feeling"]
+  },
+  {
+    "id": 111,
+    "title": "Firework",
+    "artist": "Katy Perry",
+    "difficulty": "Easy",
+    "audio": "111.mp3",
+    "aliases": ["firework"]
+  },
+  {
+    "id": 112,
+    "title": "Roar",
+    "artist": "Katy Perry",
+    "difficulty": "Easy",
+    "audio": "112.mp3",
+    "aliases": ["roar"]
+  },
+  {
+    "id": 113,
+    "title": "Dark Horse",
+    "artist": "Katy Perry feat. Juicy J",
+    "difficulty": "Easy",
+    "audio": "113.mp3",
+    "aliases": ["dark horse"]
+  },
+  {
+    "id": 114,
+    "title": "Cheap Thrills",
+    "artist": "Sia",
+    "difficulty": "Easy",
+    "audio": "114.mp3",
+    "aliases": ["cheap thrills"]
+  },
+  {
+    "id": 115,
+    "title": "Chandelier",
+    "artist": "Sia",
+    "difficulty": "Easy",
+    "audio": "115.mp3",
+    "aliases": ["chandelier"]
+  },
+  {
+    "id": 116,
+    "title": "Unstoppable",
+    "artist": "Sia",
+    "difficulty": "Easy",
+    "audio": "116.mp3",
+    "aliases": ["unstoppable"]
+  },
+  {
+    "id": 117,
+    "title": "Memories",
+    "artist": "Maroon 5",
+    "difficulty": "Easy",
+    "audio": "117.mp3",
+    "aliases": ["memories"]
+  },
+  {
+    "id": 118,
+    "title": "Sugar",
+    "artist": "Maroon 5",
+    "difficulty": "Easy",
+    "audio": "118.mp3",
+    "aliases": ["sugar"]
+  },
+  {
+    "id": 119,
+    "title": "Girls Like You",
+    "artist": "Maroon 5 feat. Cardi B",
+    "difficulty": "Easy",
+    "audio": "119.mp3",
+    "aliases": ["girls like you"]
+  },
+  {
+    "id": 120,
+    "title": "Bohemian Rhapsody",
+    "artist": "Queen",
+    "difficulty": "Medium",
+    "audio": "120.mp3",
+    "aliases": ["bohemian rhapsody"]
+  },
+  {
+    "id": 121,
+    "title": "We Will Rock You",
+    "artist": "Queen",
+    "difficulty": "Easy",
+    "audio": "121.mp3",
+    "aliases": ["we will rock you"]
+  },
+  {
+    "id": 122,
+    "title": "Another One Bites the Dust",
+    "artist": "Queen",
+    "difficulty": "Easy",
+    "audio": "122.mp3",
+    "aliases": ["another one bites the dust"]
+  },
+  {
+    "id": 123,
+    "title": "Billie Jean",
+    "artist": "Michael Jackson",
+    "difficulty": "Easy",
+    "audio": "123.mp3",
+    "aliases": ["billie jean"]
+  },
+  {
+    "id": 124,
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "difficulty": "Easy",
+    "audio": "124.mp3",
+    "aliases": ["thriller"]
+  },
+  {
+    "id": 125,
+    "title": "Beat It",
+    "artist": "Michael Jackson",
+    "difficulty": "Easy",
+    "audio": "125.mp3",
+    "aliases": ["beat it"]
+  },
+  {
+    "id": 126,
+    "title": "Smooth Criminal",
+    "artist": "Michael Jackson",
+    "difficulty": "Medium",
+    "audio": "126.mp3",
+    "aliases": ["smooth criminal"]
+  },
+  {
+    "id": 127,
+    "title": "Wonderwall",
+    "artist": "Oasis",
+    "difficulty": "Easy",
+    "audio": "127.mp3",
+    "aliases": ["wonderwall"]
+  },
+  {
+    "id": 128,
+    "title": "Smells Like Teen Spirit",
+    "artist": "Nirvana",
+    "difficulty": "Medium",
+    "audio": "128.mp3",
+    "aliases": ["smells like teen spirit"]
+  },
+  {
+    "id": 129,
+    "title": "Sweet Child O' Mine",
+    "artist": "Guns N' Roses",
+    "difficulty": "Easy",
+    "audio": "129.mp3",
+    "aliases": ["sweet child o mine", "sweet child o' mine"]
+  },
+  {
+    "id": 130,
+    "title": "Hotel California",
+    "artist": "Eagles",
+    "difficulty": "Medium",
+    "audio": "130.mp3",
+    "aliases": ["hotel california"]
+  },
+  {
+    "id": 131,
+    "title": "Take On Me",
+    "artist": "a-ha",
+    "difficulty": "Easy",
+    "audio": "131.mp3",
+    "aliases": ["take on me"]
+  },
+  {
+    "id": 132,
+    "title": "Africa",
+    "artist": "Toto",
+    "difficulty": "Easy",
+    "audio": "132.mp3",
+    "aliases": ["africa"]
+  },
+  {
+    "id": 133,
+    "title": "Eye of the Tiger",
+    "artist": "Survivor",
+    "difficulty": "Easy",
+    "audio": "133.mp3",
+    "aliases": ["eye of the tiger"]
+  },
+  {
+    "id": 134,
+    "title": "Livin' on a Prayer",
+    "artist": "Bon Jovi",
+    "difficulty": "Medium",
+    "audio": "134.mp3",
+    "aliases": ["livin on a prayer", "livin' on a prayer"]
+  },
+  {
+    "id": 135,
+    "title": "Blue Bird",
+    "artist": "Ikimono-gakari",
+    "difficulty": "Medium",
+    "audio": "135.mp3",
+    "aliases": ["blue bird"]
+  },
+  {
+    "id": 136,
+    "title": "Silhouette",
+    "artist": "KANA-BOON",
+    "difficulty": "Medium",
+    "audio": "136.mp3",
+    "aliases": ["silhouette"]
+  },
+  {
+    "id": 137,
+    "title": "Gurenge",
+    "artist": "LiSA",
+    "difficulty": "Medium",
+    "audio": "137.mp3",
+    "aliases": ["gurenge"]
+  },
+  {
+    "id": 138,
+    "title": "Kaikai Kitan",
+    "artist": "Eve",
+    "difficulty": "Hard",
+    "audio": "138.mp3",
+    "aliases": ["kaikai kitan"]
+  },
+  {
+    "id": 139,
+    "title": "Idol",
+    "artist": "YOASOBI",
+    "difficulty": "Easy",
+    "audio": "139.mp3",
+    "aliases": ["idol"]
+  },
+  {
+    "id": 140,
+    "title": "KICK BACK",
+    "artist": "Kenshi Yonezu",
+    "difficulty": "Medium",
+    "audio": "140.mp3",
+    "aliases": ["kick back"]
+  },
+  {
+    "id": 141,
+    "title": "The Rumbling",
+    "artist": "SiM",
+    "difficulty": "Hard",
+    "audio": "141.mp3",
+    "aliases": ["the rumbling"]
+  },
+  {
+    "id": 142,
+    "title": "Unravel",
+    "artist": "TK from Ling Tosite Sigure",
+    "difficulty": "Hard",
+    "audio": "142.mp3",
+    "aliases": ["unravel"]
+  },
+  {
+    "id": 143,
+    "title": "SPECIALZ",
+    "artist": "King Gnu",
+    "difficulty": "Hard",
+    "audio": "143.mp3",
+    "aliases": ["specialz"]
+  },
+  {
+    "id": 144,
+    "title": "We Are!",
+    "artist": "Hiroshi Kitadani",
+    "difficulty": "Medium",
+    "audio": "144.mp3",
+    "aliases": ["we are", "we are!"]
+  },
+  {
+    "id": 145,
+    "title": "Espresso",
+    "artist": "Sabrina Carpenter",
+    "difficulty": "Easy",
+    "audio": "145.mp3",
+    "aliases": ["espresso"]
+  },
+  {
+    "id": 146,
+    "title": "Please Please Please",
+    "artist": "Sabrina Carpenter",
+    "difficulty": "Easy",
+    "audio": "146.mp3",
+    "aliases": ["please please please"]
+  },
+  {
+    "id": 147,
+    "title": "Beautiful Things",
+    "artist": "Benson Boone",
+    "difficulty": "Easy",
+    "audio": "147.mp3",
+    "aliases": ["beautiful things"]
+  },
+  {
+    "id": 148,
+    "title": "Lose Control",
+    "artist": "Teddy Swims",
+    "difficulty": "Easy",
+    "audio": "148.mp3",
+    "aliases": ["lose control"]
+  },
+  {
+    "id": 149,
+    "title": "Too Sweet",
+    "artist": "Hozier",
+    "difficulty": "Easy",
+    "audio": "149.mp3",
+    "aliases": ["too sweet"]
+  },
+  {
+    "id": 150,
+    "title": "Birds of a Feather",
+    "artist": "Billie Eilish",
+    "difficulty": "Easy",
+    "audio": "150.mp3",
+    "aliases": ["birds of a feather"]
+  },
+  {
+    "id": 151,
+    "title": "Fortnight",
+    "artist": "Taylor Swift feat. Post Malone",
+    "difficulty": "Easy",
+    "audio": "151.mp3",
+    "aliases": ["fortnight"]
+  },
+  {
+    "id": 152,
+    "title": "APT.",
+    "artist": "ROSÉ & Bruno Mars",
+    "difficulty": "Easy",
+    "audio": "152.mp3",
+    "aliases": ["apt", "apt."]
+  },
+  {
+    "id": 153,
+    "title": "Die With A Smile",
+    "artist": "Lady Gaga & Bruno Mars",
+    "difficulty": "Easy",
+    "audio": "153.mp3",
+    "aliases": ["die with a smile"]
+  },
+  {
+    "id": 154,
+    "title": "Good Luck, Babe!",
+    "artist": "Chappell Roan",
+    "difficulty": "Easy",
+    "audio": "154.mp3",
+    "aliases": ["good luck babe", "good luck, babe!"]
+  },
+  {
+    "id": 155,
+    "title": "Flowers",
+    "artist": "Miley Cyrus",
+    "difficulty": "Easy",
+    "audio": "155.mp3",
+    "aliases": ["flowers"]
+  },
+  {
+    "id": 156,
+    "title": "Vampire",
+    "artist": "Olivia Rodrigo",
+    "difficulty": "Easy",
+    "audio": "156.mp3",
+    "aliases": ["vampire"]
+  },
+  {
+    "id": 157,
+    "title": "Greedy",
+    "artist": "Tate McRae",
+    "difficulty": "Easy",
+    "audio": "157.mp3",
+    "aliases": ["greedy"]
+  },
+  {
+    "id": 158,
+    "title": "Paint The Town Red",
+    "artist": "Doja Cat",
+    "difficulty": "Easy",
+    "audio": "158.mp3",
+    "aliases": ["paint the town red"]
+  },
+  {
+    "id": 159,
+    "title": "Starboy",
+    "artist": "The Weeknd feat. Daft Punk",
+    "difficulty": "Easy",
+    "audio": "159.mp3",
+    "aliases": ["starboy"]
+  },
+  {
+    "id": 160,
+    "title": "Can't Feel My Face",
+    "artist": "The Weeknd",
+    "difficulty": "Easy",
+    "audio": "160.mp3",
+    "aliases": ["can't feel my face", "cant feel my face"]
+  },
+  {
+    "id": 161,
+    "title": "Save Your Tears",
+    "artist": "The Weeknd",
+    "difficulty": "Easy",
+    "audio": "161.mp3",
+    "aliases": ["save your tears"]
+  },
+  {
+    "id": 162,
+    "title": "The Hills",
+    "artist": "The Weeknd",
+    "difficulty": "Medium",
+    "audio": "162.mp3",
+    "aliases": ["the hills"]
+  },
+  {
+    "id": 163,
+    "title": "See You Again",
+    "artist": "Wiz Khalifa feat. Charlie Puth",
+    "difficulty": "Easy",
+    "audio": "163.mp3",
+    "aliases": ["see you again"]
+  },
+  {
+    "id": 164,
+    "title": "Attention",
+    "artist": "Charlie Puth",
+    "difficulty": "Easy",
+    "audio": "164.mp3",
+    "aliases": ["attention"]
+  },
+  {
+    "id": 165,
+    "title": "We Don't Talk Anymore",
+    "artist": "Charlie Puth feat. Selena Gomez",
+    "difficulty": "Easy",
+    "audio": "165.mp3",
+    "aliases": ["we don't talk anymore", "we dont talk anymore"]
+  },
+  {
+    "id": 166,
+    "title": "Senorita",
+    "artist": "Shawn Mendes & Camila Cabello",
+    "difficulty": "Easy",
+    "audio": "166.mp3",
+    "aliases": ["senorita", "señorita"]
+  },
+  {
+    "id": 167,
+    "title": "Stitches",
+    "artist": "Shawn Mendes",
+    "difficulty": "Easy",
+    "audio": "167.mp3",
+    "aliases": ["stitches"]
+  },
+  {
+    "id": 168,
+    "title": "Havana",
+    "artist": "Camila Cabello feat. Young Thug",
+    "difficulty": "Easy",
+    "audio": "168.mp3",
+    "aliases": ["havana"]
+  },
+  {
+    "id": 169,
+    "title": "Never Be the Same",
+    "artist": "Camila Cabello",
+    "difficulty": "Medium",
+    "audio": "169.mp3",
+    "aliases": ["never be the same"]
+  },
+  {
+    "id": 170,
+    "title": "Shivers",
+    "artist": "Ed Sheeran",
+    "difficulty": "Easy",
+    "audio": "170.mp3",
+    "aliases": ["shivers"]
+  },
+  {
+    "id": 171,
+    "title": "Perfect",
+    "artist": "Ed Sheeran",
+    "difficulty": "Easy",
+    "audio": "171.mp3",
+    "aliases": ["perfect"]
+  },
+  {
+    "id": 172,
+    "title": "Photograph",
+    "artist": "Ed Sheeran",
+    "difficulty": "Easy",
+    "audio": "172.mp3",
+    "aliases": ["photograph"]
+  },
+  {
+    "id": 173,
+    "title": "Thinking Out Loud",
+    "artist": "Ed Sheeran",
+    "difficulty": "Easy",
+    "audio": "173.mp3",
+    "aliases": ["thinking out loud"]
+  },
+  {
+    "id": 174,
+    "title": "drivers license",
+    "artist": "Olivia Rodrigo",
+    "difficulty": "Easy",
+    "audio": "174.mp3",
+    "aliases": ["drivers license"]
+  },
+  {
+    "id": 175,
+    "title": "good 4 u",
+    "artist": "Olivia Rodrigo",
+    "difficulty": "Easy",
+    "audio": "175.mp3",
+    "aliases": ["good 4 u", "good4u"]
+  },
+ {
+  "id": 176,
+  "title": "New Rules",
+  "artist": "Dua Lipa",
+  "difficulty": "Easy",
+  "audio": "176.mp3",
+  "aliases": ["new rules"]
+},
+  {
+    "id": 177,
+    "title": "Physical",
+    "artist": "Dua Lipa",
+    "difficulty": "Medium",
+    "audio": "177.mp3",
+    "aliases": ["physical"]
+  },
+  {
+    "id": 178,
+    "title": "Break My Heart",
+    "artist": "Dua Lipa",
+    "difficulty": "Medium",
+    "audio": "178.mp3",
+    "aliases": ["break my heart"]
+  },
+  {
+    "id": 179,
+    "title": "Water",
+    "artist": "Tyla",
+    "difficulty": "Easy",
+    "audio": "179.mp3",
+    "aliases": ["water"]
+  },
+  {
+    "id": 180,
+    "title": "Escapism.",
+    "artist": "RAYE feat. 070 Shake",
+    "difficulty": "Medium",
+    "audio": "180.mp3",
+    "aliases": ["escapism"]
+  },
+  {
+    "id": 181,
+    "title": "abcdefu",
+    "artist": "GAYLE",
+    "difficulty": "Easy",
+    "audio": "181.mp3",
+    "aliases": ["abcdefu"]
+  },
+  {
+    "id": 182,
+    "title": "Montero (Call Me By Your Name)",
+    "artist": "Lil Nas X",
+    "difficulty": "Easy",
+    "audio": "182.mp3",
+    "aliases": ["montero", "call me by your name"]
+  },
+  {
+    "id": 183,
+    "title": "Stay",
+    "artist": "The Kid LAROI & Justin Bieber",
+    "difficulty": "Easy",
+    "audio": "183.mp3",
+    "aliases": ["stay"]
+  },
+  {
+    "id": 184,
+    "title": "Peaches",
+    "artist": "Justin Bieber feat. Daniel Caesar & Giveon",
+    "difficulty": "Easy",
+    "audio": "184.mp3",
+    "aliases": ["peaches"]
+  },
+  {
+    "id": 185,
+    "title": "Sorry",
+    "artist": "Justin Bieber",
+    "difficulty": "Easy",
+    "audio": "185.mp3",
+    "aliases": ["sorry"]
+  },
+  {
+    "id": 186,
+    "title": "Love Yourself",
+    "artist": "Justin Bieber",
+    "difficulty": "Easy",
+    "audio": "186.mp3",
+    "aliases": ["love yourself"]
+  },
+  {
+    "id": 187,
+    "title": "What Do You Mean?",
+    "artist": "Justin Bieber",
+    "difficulty": "Easy",
+    "audio": "187.mp3",
+    "aliases": ["what do you mean"]
+  },
+  {
+    "id": 188,
+    "title": "Ghost",
+    "artist": "Justin Bieber",
+    "difficulty": "Easy",
+    "audio": "188.mp3",
+    "aliases": ["ghost"]
+  },
+  {
+    "id": 189,
+    "title": "Easy On Me",
+    "artist": "Adele",
+    "difficulty": "Easy",
+    "audio": "189.mp3",
+    "aliases": ["easy on me"]
+  },
+  {
+    "id": 190,
+    "title": "Rolling Stone",
+    "artist": "The Weeknd",
+    "difficulty": "Hard",
+    "audio": "190.mp3",
+    "aliases": ["rolling stone"]
+  },
+  {
+    "id": 191,
+    "title": "Earned It",
+    "artist": "The Weeknd",
+    "difficulty": "Medium",
+    "audio": "191.mp3",
+    "aliases": ["earned it"]
+  },
+  {
+    "id": 192,
+    "title": "Die For You",
+    "artist": "The Weeknd",
+    "difficulty": "Easy",
+    "audio": "192.mp3",
+    "aliases": ["die for you"]
+  },
+ {
+  "id": 193,
+  "title": "Moonlight",
+  "artist": "XXXTENTACION",
+  "difficulty": "Medium",
+  "audio": "193.mp3",
+  "aliases": ["moonlight"]
+},
+  {
+    "id": 194,
+    "title": "Take My Breath",
+    "artist": "The Weeknd",
+    "difficulty": "Medium",
+    "audio": "194.mp3",
+    "aliases": ["take my breath"]
+  },
+  {
+    "id": 195,
+    "title": "Sacrifice",
+    "artist": "The Weeknd",
+    "difficulty": "Medium",
+    "audio": "195.mp3",
+    "aliases": ["sacrifice"]
+  },
+  {
+    "id": 196,
+    "title": "Out of Time",
+    "artist": "The Weeknd",
+    "difficulty": "Medium",
+    "audio": "196.mp3",
+    "aliases": ["out of time"]
+  },
+  {
+    "id": 197,
+    "title": "Less Than Zero",
+    "artist": "The Weeknd",
+    "difficulty": "Hard",
+    "audio": "197.mp3",
+    "aliases": ["less than zero"]
+  },
+  {
+    "id": 198,
+    "title": "Popular",
+    "artist": "The Weeknd, Playboi Carti & Madonna",
+    "difficulty": "Easy",
+    "audio": "198.mp3",
+    "aliases": ["popular"]
+  },
+  {
+    "id": 199,
+    "title": "One Right Now",
+    "artist": "Post Malone & The Weeknd",
+    "difficulty": "Medium",
+    "audio": "199.mp3",
+    "aliases": ["one right now"]
+  },
+  {
+    "id": 200,
+    "title": "Save Me",
+    "artist": "XXXTENTACION",
+    "difficulty": "Hard",
+    "audio": "200.mp3",
+    "aliases": ["save me"]
+  },
