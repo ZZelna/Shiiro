@@ -592,137 +592,173 @@ const WHITELIST_IDS = ["1400111418358894646"];
 // ─── roleCreate / roleDelete ──────────────────────────────────────────────────
 
 client.on("roleCreate", async (role) => {
+    try {
 
-    const logGuild = client.guilds.cache.get("1519364880677867550");
-    if (!logGuild) return;
+        const logGuild = client.guilds.cache.get("1519364880677867550");
+        if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1519374244063084644");
-    if (!logChannel) return;
+        const logChannel = logGuild.channels.cache.get("1519374244063084644");
+        if (!logChannel) return;
 
-    const logs = await role.guild.fetchAuditLogs({
-        type: AuditLogEvent.RoleCreate,
-        limit: 5
-    });
+        const logs = await role.guild.fetchAuditLogs({
+            type: AuditLogEvent.RoleCreate,
+            limit: 5
+        });
 
-    const entry = logs.entries.find(e =>
-        e.target?.id === role.id &&
-        Date.now() - e.createdTimestamp < 5000
-    );
+        const entry = logs.entries.find(e =>
+            e.target?.id === role.id &&
+            Date.now() - e.createdTimestamp < 5000
+        );
 
-    if (!entry) return;
+        if (!entry) return;
 
-    const executor = entry.executor;
+        const executor = entry.executor;
 
-    if (executor?.bot) {
+        if (executor?.bot) {
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "+ Rôle créé.\n" +
+                    `Rôle: ${role.name} (ID: ${role.id})\n` +
+                    `Modérateur: ${executor.tag} (BOT)\n` +
+                    "Action: Création de rôle. 🤖\n" +
+                    "```"
+            });
+            return;
+        }
+
+        const member = await role.guild.members.fetch(executor.id).catch(() => null);
+
+        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
+
+            try {
+                await role.guild.members.ban(executor.id, {
+                    reason: "Création de rôle non autorisée"
+                });
+
+                await logChannel.send({
+                    content:
+                        "```diff\n" +
+                        "- Bannissement automatique.\n" +
+                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                        "Action: Création de rôle sans permission. ⛔\n" +
+                        "```"
+                });
+            } catch (banErr) {
+                console.error("❌ Échec du ban (roleCreate) :", banErr.message);
+
+                await logChannel.send({
+                    content:
+                        "```diff\n" +
+                        "! Échec du bannissement automatique.\n" +
+                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                        `Raison: ${banErr.message}\n` +
+                        "Action: Vérifiez les permissions du bot et la hiérarchie des rôles. ⚠️\n" +
+                        "```"
+                }).catch(() => {});
+            }
+
+            return;
+        }
+
         await logChannel.send({
             content:
                 "```diff\n" +
                 "+ Rôle créé.\n" +
                 `Rôle: ${role.name} (ID: ${role.id})\n` +
-                `Modérateur: ${executor.tag} (BOT)\n` +
-                "Action: Création de rôle. 🤖\n" +
-                "```"
-        });
-        return;
-    }
-
-    const member = await role.guild.members.fetch(executor.id).catch(() => null);
-
-    if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
-
-        await role.guild.members.ban(executor.id, {
-            reason: "Création de rôle non autorisée"
-        });
-
-        await logChannel.send({
-            content:
-                "```diff\n" +
-                "- Bannissement automatique.\n" +
-                `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
-                "Action: Création de rôle sans permission. ⛔\n" +
+                `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
+                "Action: Création de rôle. ✅\n" +
                 "```"
         });
 
-        return;
+    } catch (err) {
+        console.error("❌ Erreur roleCreate :", err);
     }
-
-    await logChannel.send({
-        content:
-            "```diff\n" +
-            "+ Rôle créé.\n" +
-            `Rôle: ${role.name} (ID: ${role.id})\n` +
-            `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
-            "Action: Création de rôle. ✅\n" +
-            "```"
-    });
-
 });
 
 client.on("roleDelete", async (role) => {
+    try {
 
-    const logGuild = client.guilds.cache.get("1519364880677867550");
-    if (!logGuild) return;
+        const logGuild = client.guilds.cache.get("1519364880677867550");
+        if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1519374244063084644");
-    if (!logChannel) return;
+        const logChannel = logGuild.channels.cache.get("1519374244063084644");
+        if (!logChannel) return;
 
-    const logs = await role.guild.fetchAuditLogs({
-        type: AuditLogEvent.RoleDelete,
-        limit: 5
-    });
+        const logs = await role.guild.fetchAuditLogs({
+            type: AuditLogEvent.RoleDelete,
+            limit: 5
+        });
 
-    const entry = logs.entries.find(e =>
-        e.target?.id === role.id &&
-        Date.now() - e.createdTimestamp < 5000
-    );
+        const entry = logs.entries.find(e =>
+            e.target?.id === role.id &&
+            Date.now() - e.createdTimestamp < 5000
+        );
 
-    if (!entry) return;
+        if (!entry) return;
 
-    const executor = entry.executor;
+        const executor = entry.executor;
 
-    if (executor?.bot) {
+        if (executor?.bot) {
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "- Rôle supprimé.\n" +
+                    `Rôle: ${role.name} (ID: ${role.id})\n` +
+                    `Modérateur: ${executor.tag} (BOT)\n` +
+                    "Action: Suppression de rôle. 🤖\n" +
+                    "```"
+            });
+            return;
+        }
+
+        const member = await role.guild.members.fetch(executor.id).catch(() => null);
+
+        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
+
+            try {
+                await role.guild.members.ban(executor.id, {
+                    reason: "Suppression de rôle non autorisée"
+                });
+
+                await logChannel.send({
+                    content:
+                        "```diff\n" +
+                        "- Bannissement automatique.\n" +
+                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                        "Action: Suppression de rôle sans permission. ⛔\n" +
+                        "```"
+                });
+            } catch (banErr) {
+                console.error("❌ Échec du ban (roleDelete) :", banErr.message);
+
+                await logChannel.send({
+                    content:
+                        "```diff\n" +
+                        "! Échec du bannissement automatique.\n" +
+                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                        `Raison: ${banErr.message}\n` +
+                        "Action: Vérifiez les permissions du bot et la hiérarchie des rôles. ⚠️\n" +
+                        "```"
+                }).catch(() => {});
+            }
+
+            return;
+        }
+
         await logChannel.send({
             content:
                 "```diff\n" +
                 "- Rôle supprimé.\n" +
                 `Rôle: ${role.name} (ID: ${role.id})\n` +
-                `Modérateur: ${executor.tag} (BOT)\n` +
-                "Action: Suppression de rôle. 🤖\n" +
-                "```"
-        });
-        return;
-    }
-
-    const member = await role.guild.members.fetch(executor.id).catch(() => null);
-
-    if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
-
-        await role.guild.members.ban(executor.id, {
-            reason: "Suppression de rôle non autorisée"
-        });
-
-        await logChannel.send({
-            content:
-                "```diff\n" +
-                "- Bannissement automatique.\n" +
-                `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
-                "Action: Suppression de rôle sans permission. ⛔\n" +
+                `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
+                "Action: Suppression de rôle. ❌\n" +
                 "```"
         });
 
-        return;
+    } catch (err) {
+        console.error("❌ Erreur roleDelete :", err);
     }
-
-    await logChannel.send({
-        content:
-            "```diff\n" +
-            "- Rôle supprimé.\n" +
-            `Rôle: ${role.name} (ID: ${role.id})\n` +
-            `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
-            "Action: Suppression de rôle. ❌\n" +
-            "```"
-    });
-
 });
 
 // ─── channelCreate / channelDelete ───────────────────────────────────────────
