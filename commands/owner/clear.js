@@ -3,7 +3,10 @@ module.exports = {
 
     async run(message, args) {
 
-        const allowedRole = "1506674274826584284";
+        const allowedRoles = [
+  "1506674274826584284",
+  "1521596407968960613"
+];
 
         if (!message.member.roles.cache.has(allowedRole)) {
             return message.reply(
