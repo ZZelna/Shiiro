@@ -1055,7 +1055,7 @@ const antiGhostPing = require("./events/antiGhostPing");
 client.on("messageCreate", antiGhostPing.messageCreate);
 client.on("messageDelete", antiGhostPing.messageDelete);
 // ─── GuildmemberAdd ────────────────────────────────────────────────────────────
-const AutoRole = require("../models/AutoRole");
+const AutoRole = require("./models/AutoRole");
 
 client.on("guildMemberAdd", async member => {
 
