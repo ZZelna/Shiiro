@@ -1200,15 +1200,22 @@ if (
         topic: interaction.user.id,
         permissionOverwrites: permissions
     });
+const channel = await interaction.guild.channels.create({
+    name: `ticket-${interaction.user.username}`,
+    type: ChannelType.GuildText,
+    parent: category.categoryId,
+    topic: interaction.user.id,
+    permissionOverwrites: permissions
+});
 
-    const embed = new EmbedBuilder()
-        .setColor("Blue")
-        .setTitle("🎫 Ticket créé")
-        .setDescription(
-            `Bienvenue ${interaction.user}.\n\nUn membre du staff prendra en charge votre demande.\n\n**Catégorie :** ${category.name}`
-        );
+const embed = new EmbedBuilder()
+    .setColor("Blue")
+    .setTitle("🎫 Ticket créé")
+    .setDescription(
+        `Bienvenue ${interaction.user}.\n\nUn membre du staff prendra en charge votre demande.\n\n**Catégorie :** ${category.name}`
+    );
 
-   const row = new ActionRowBuilder().addComponents(
+const row = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
         .setCustomId("ticket_claim")
         .setLabel("📌 Claim")
@@ -1219,7 +1226,16 @@ if (
         .setLabel("🔒 Fermer")
         .setStyle(ButtonStyle.Danger)
 );
-    await channel.send({
+
+// Mention des rôles staff de la catégorie
+const staffMentions = category.staffRoles.map(id => `<@&${id}>`).join(" ");
+
+const pingMsg = await channel.send({
+    content: `${interaction.user} ${staffMentions}`,
+    embeds: [embed],
+    components: [row]
+});
+ await channel.send({
         content: `${interaction.user}`,
         embeds: [embed],
         components: [row]
