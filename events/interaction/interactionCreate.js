@@ -1,3 +1,4 @@
+const discordTranscripts = require("discord-html-transcripts");
 const {
     ModalBuilder,
     TextInputBuilder,
@@ -13,6 +14,7 @@ const {
 
 const fs = require("fs");
 const path = require("path");
+const transcripts = [];
 const CasinoProfile =
     require("../../models/CasinoProfile");
 const Clan =
@@ -1228,7 +1230,7 @@ if (
         ephemeral: true
     });
 }
-    // =========================
+// =========================
 // REVENDIQUER LE TICKET
 // =========================
 if (
@@ -1236,30 +1238,142 @@ if (
     interaction.customId === "ticket_claim"
 ) {
 
+    const claimButton = interaction.message.components[0].components.find(
+        b => b.data.custom_id === "ticket_claim"
+    );
+
+    if (claimButton?.data?.disabled) {
+        return interaction.reply({
+            content: "❌ Ce ticket est déjà pris en charge.",
+            ephemeral: true
+        });
+    }
+
+    // On récupère l'embed actuel
+    const embed = EmbedBuilder.from(interaction.message.embeds[0]);
+
+    embed.addFields({
+        name: "📌 Pris en charge par",
+        value: `${interaction.user}`,
+        inline: false
+    });
+
+    // Nouveau bouton Claim
     const row = new ActionRowBuilder().addComponents(
 
         new ButtonBuilder()
             .setCustomId("ticket_claim")
-            .setLabel(`Pris par ${interaction.user.username}`)
+            .setLabel(`📌 ${interaction.user.username}`)
             .setStyle(ButtonStyle.Success)
             .setDisabled(true),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_add")
+            .setLabel("➕ Ajouter")
+            .setStyle(ButtonStyle.Primary),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_remove")
+            .setLabel("➖ Retirer")
+            .setStyle(ButtonStyle.Secondary),
 
         new ButtonBuilder()
             .setCustomId("ticket_close")
             .setLabel("🔒 Fermer")
             .setStyle(ButtonStyle.Danger)
-
     );
 
-    await interaction.message.edit({
+    await interaction.update({
+        embeds: [embed],
         components: [row]
     });
 
-    return interaction.reply({
-        content: `📌 ${interaction.user} prend ce ticket en charge.`,
-        ephemeral: false
+    await interaction.channel.permissionOverwrites.edit(interaction.user.id, {
+        ViewChannel: true,
+        SendMessages: true
     });
 
+    await interaction.channel.send({
+        content: `📌 ${interaction.user} prend désormais ce ticket en charge.`
+    });
+
+    return;
+}
+    if (
+    interaction.isButton() &&
+    interaction.customId === "ticket_add"
+) {
+    await interaction.reply({
+        content: "Mentionne le membre à ajouter au ticket.",
+        ephemeral: true
+    });
+
+    const filter = m => m.author.id === interaction.user.id;
+
+    const collected = await interaction.channel.awaitMessages({
+        filter,
+        max: 1,
+        time: 30000
+    }).catch(() => null);
+
+    if (!collected || !collected.first()) return;
+
+    const member = collected.first().mentions.members.first();
+
+    if (!member)
+        return interaction.followUp({
+            content: "❌ Aucun membre mentionné.",
+            ephemeral: true
+        });
+
+    await interaction.channel.permissionOverwrites.edit(member.id, {
+        ViewChannel: true,
+        SendMessages: true,
+        ReadMessageHistory: true
+    });
+
+    collected.first().delete().catch(() => {});
+
+    interaction.followUp({
+        content: `✅ ${member} a été ajouté au ticket.`,
+        ephemeral: false
+    });
+}
+if (
+    interaction.isButton() &&
+    interaction.customId === "ticket_remove"
+) {
+    await interaction.reply({
+        content: "Mentionne le membre à retirer du ticket.",
+        ephemeral: true
+    });
+
+    const filter = m => m.author.id === interaction.user.id;
+
+    const collected = await interaction.channel.awaitMessages({
+        filter,
+        max: 1,
+        time: 30000
+    }).catch(() => null);
+
+    if (!collected || !collected.first()) return;
+
+    const member = collected.first().mentions.members.first();
+
+    if (!member)
+        return interaction.followUp({
+            content: "❌ Aucun membre mentionné.",
+            ephemeral: true
+        });
+
+    await interaction.channel.permissionOverwrites.delete(member.id);
+
+    collected.first().delete().catch(() => {});
+
+    interaction.followUp({
+        content: `✅ ${member} a été retiré du ticket.`,
+        ephemeral: false
+    });
 }
 // =========================
 // FERMER LE TICKET
@@ -1268,6 +1382,7 @@ if (
     interaction.isButton() &&
     interaction.customId === "ticket_close"
 ) {
+const LOG_CHANNEL_ID = "1517116985077665872";
 
     const embed = new EmbedBuilder()
         .setColor("Orange")
@@ -1292,45 +1407,77 @@ if (
             SendMessages: false
         }
     );
+const logChannel = interaction.guild.channels.cache.get(LOG_CHANNEL_ID);
 
+if (logChannel) {
+    const logEmbed = new EmbedBuilder()
+        .setColor("Red")
+        .setTitle("📁 Ticket fermé")
+        .addFields(
+            {
+                name: "🎫 Ticket",
+                value: interaction.channel.name,
+                inline: true
+            },
+            {
+                name: "👤 Fermé par",
+                value: `${interaction.user}`,
+                inline: true
+            }
+        )
+        .setTimestamp();
+
+    await logChannel.send({
+        embeds: [logEmbed]
+    });
+}
     return interaction.reply({
         content: "🔒 Ticket fermé.",
         ephemeral: true
     });
 }
-
 // =========================
 // SUPPRIMER LE TICKET
 // =========================
-const staffRoles = [
-    "1506678694352261301",
-    "1506678765982318743",
-    "1506696551706267688",
-    "1506696757642530982",
-    "1506702398029172796",
-    "1506709088451690708",
-    "1509601528242110525"
-];
+if (
+    interaction.isButton() &&
+    interaction.customId === "ticket_delete"
+) {
 
-const isStaff = interaction.member.roles.cache.some(role =>
-    staffRoles.includes(role.id)
-);
+    const staffRoles = [
+        "1506678694352261301",
+        "1506678765982318743",
+        "1506696551706267688",
+        "1506696757642530982",
+        "1506702398029172796",
+        "1506709088451690708",
+        "1509601528242110525"
+    ];
 
-if (!isStaff) {
-    return interaction.reply({
-        content: "❌ Seul un membre du staff peut supprimer ce ticket.",
-        ephemeral: true
+    const isStaff = interaction.member.roles.cache.some(role =>
+        staffRoles.includes(role.id)
+    );
+
+    if (!isStaff) {
+        return interaction.reply({
+            content: "❌ Seul un membre du staff peut supprimer ce ticket.",
+            ephemeral: true
+        });
+    }
+
+    // Création du transcript HTML
+    const attachment = await discordTranscripts.createTranscript(interaction.channel, {
+        filename: `${interaction.channel.name}.html`
     });
-}
 
-await interaction.reply({
-    content: "🗑️ Suppression du ticket dans 5 secondes...",
-    ephemeral: true
-});
+    const logChannel = interaction.guild.channels.cache.get("1517116985077665872");
 
-setTimeout(async () => {
-    await interaction.channel.delete().catch(() => {});
-}, 5000);
+    if (logChannel) {
+        await logChannel.send({
+            content: `📄 Transcript de ${interaction.channel.name}`,
+            files: [attachment]
+        });
+    }
 
     await interaction.reply({
         content: "🗑️ Suppression du ticket dans 5 secondes...",
