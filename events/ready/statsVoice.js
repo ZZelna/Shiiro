@@ -7,14 +7,20 @@ module.exports = async (client) => {
         const guild = client.guilds.cache.first();
         if (!guild) return;
 
-        await guild.members.fetch();
-
         const total = guild.memberCount;
-        const members = guild.members.cache.filter(m => !m.user.bot).size;
-        const bots = guild.members.cache.filter(m => m.user.bot).size;
+
+        const members = guild.members.cache.filter(
+            m => !m.user.bot
+        ).size;
+
+        const bots = guild.members.cache.filter(
+            m => m.user.bot
+        ).size;
+
         const boosts = guild.premiumSubscriptionCount;
+
         const online = guild.members.cache.filter(
-            m => m.presence && m.presence.status !== "offline"
+            m => m.presence?.status && m.presence.status !== "offline"
         ).size;
 
         let category = guild.channels.cache.find(
@@ -31,28 +37,28 @@ module.exports = async (client) => {
         }
 
         const stats = [
-            { name: "👥 Total", value: total },
-            { name: "💕 Membres", value: members },
-            { name: "🤖 Bots", value: bots },
-            { name: "🔮 Boosts", value: boosts },
-            { name: "🌊 En ligne", value: online }
+            ["👥 Total", total],
+            ["💕 Membres", members],
+            ["🍃 Bots", bots],
+            ["🔮 Boosts", boosts],
+            ["🌊 En ligne", online]
         ];
 
-        for (const stat of stats) {
+        for (const [label, value] of stats) {
 
-            const channelName = `${stat.name} : ${stat.value}`;
+            const name = `${label} : ${value}`;
 
             let channel = guild.channels.cache.find(
                 c =>
                     c.parentId === category.id &&
                     c.type === ChannelType.GuildVoice &&
-                    c.name.startsWith(stat.name)
+                    c.name.startsWith(label)
             );
 
             if (!channel) {
 
                 await guild.channels.create({
-                    name: channelName,
+                    name,
                     type: ChannelType.GuildVoice,
                     parent: category.id,
                     permissionOverwrites: [
@@ -66,9 +72,9 @@ module.exports = async (client) => {
                     ]
                 });
 
-            } else if (channel.name !== channelName) {
+            } else if (channel.name !== name) {
 
-                await channel.setName(channelName).catch(() => {});
+                await channel.setName(name).catch(() => {});
 
             }
 
@@ -76,11 +82,10 @@ module.exports = async (client) => {
 
     }
 
-    await updateStats();
-
-    client.on("guildMemberAdd", member => updateStats(member.guild));
-    client.on("guildMemberRemove", member => updateStats(member.guild));
-    client.on("presenceUpdate", (_, newPresence) => updateStats(newPresence.guild));
+    client.once("ready", updateStats);
+    client.on("guildMemberAdd", updateStats);
+    client.on("guildMemberRemove", updateStats);
+    client.on("presenceUpdate", updateStats);
 
     setInterval(updateStats, 60000);
 
