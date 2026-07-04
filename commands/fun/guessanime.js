@@ -1,6 +1,7 @@
 const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
 const path = require("path");
 const CasinoProfile = require("../../models/CasinoProfile");
+const { distance } = require("fastest-levenshtein");
 
 let lastAnime = null;
 
@@ -12,7 +13,7 @@ module.exports = {
 
         if (!message.member && !options.auto) return;
 
-if (!options.auto && !options.fromGames) {
+        if (!options.auto && !options.fromGames) {
             const roleAllowed = "1506674274826584284";
             if (!message.member.roles.cache.has(roleAllowed)) {
                 return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
@@ -26,6 +27,7 @@ if (!options.auto && !options.fromGames) {
         do {
             anime = animes[Math.floor(Math.random() * animes.length)];
         } while (animes.length > 1 && anime.anime === lastAnime);
+
         lastAnime = anime.anime;
 
         const imagePath = path.join(__dirname, "../../assets/animes", anime.image);
@@ -38,7 +40,10 @@ if (!options.auto && !options.fromGames) {
             .setImage(`attachment://${anime.image}`)
             .setFooter({ text: "Réponds dans le chat" });
 
-        await message.channel.send({ embeds: [embed], files: [attachment] });
+        await message.channel.send({
+            embeds: [embed],
+            files: [attachment]
+        });
 
         const collector = message.channel.createMessageCollector({
             filter: m => !m.author.bot && m.channel.id === message.channel.id,
@@ -46,6 +51,7 @@ if (!options.auto && !options.fromGames) {
         });
 
         let ended = false;
+
         const safeEnd = () => {
             if (ended) return;
             ended = true;
@@ -53,60 +59,82 @@ if (!options.auto && !options.fromGames) {
         };
 
         collector.on("collect", async m => {
-            if (m.content.toLowerCase().trim() === anime.anime.toLowerCase()) {
+
+            const guess = m.content.toLowerCase().trim();
+
+            const answers = [
+                anime.anime.toLowerCase(),
+                ...(anime.aliases || []).map(a => a.toLowerCase())
+            ];
+
+            // Bonne réponse
+            if (answers.includes(guess)) {
+
                 collector.stop("found");
 
                 let rewardText = "🎮 Aucune récompense";
 
-if (options.reward !== false) {
+                if (options.reward !== false) {
 
-    const isGift = Math.random() < 0.10;
+                    const isGift = Math.random() < 0.10;
 
-    if (isGift) {
+                    if (isGift) {
 
-        await CasinoProfile.findOneAndUpdate(
-            { userId: m.author.id },
-            { $inc: { gifts: 1 } },
-            { upsert: true }
-        );
+                        await CasinoProfile.findOneAndUpdate(
+                            { userId: m.author.id },
+                            { $inc: { gifts: 1 } },
+                            { upsert: true }
+                        );
 
-        rewardText = "🎁 1 Gift";
+                        rewardText = "🎁 1 Gift";
 
-    } else {
+                    } else {
 
-        const reward =
-            Math.floor(Math.random() * 901) + 100;
+                        const reward = Math.floor(Math.random() * 901) + 100;
 
-        await CasinoProfile.findOneAndUpdate(
-            { userId: m.author.id },
-            { $inc: { yens: reward } },
-            { upsert: true }
-        );
+                        await CasinoProfile.findOneAndUpdate(
+                            { userId: m.author.id },
+                            { $inc: { yens: reward } },
+                            { upsert: true }
+                        );
 
-        rewardText = `💴 ${reward} Yens`;
+                        rewardText = `💴 ${reward} Yens`;
 
-    }
+                    }
 
-}
+                }
+
                 await m.reply({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#57F287")
                             .setTitle("✅ Bonne réponse")
-                         .setDescription(
-    options.reward === false
-        ? `L'anime était **${anime.anime}**.`
-        : `L'anime était **${anime.anime}**.\n\nRécompense : ${rewardText}`
-)
+                            .setDescription(
+                                options.reward === false
+                                    ? `L'anime était **${anime.anime}**.`
+                                    : `L'anime était **${anime.anime}**.\n\nRécompense : ${rewardText}`
+                            )
                             .setTimestamp()
                     ]
                 });
 
-                safeEnd();
+                return safeEnd();
             }
+
+            // Tu y es presque !
+            const close = answers.some(answer => {
+                const dist = distance(guess, answer);
+                return dist <= Math.max(2, Math.floor(answer.length * 0.25));
+            });
+
+            if (close) {
+                await m.reply("🟡 Tu y es presque !");
+            }
+
         });
 
         collector.on("end", async (_, reason) => {
+
             if (reason !== "found") {
                 await message.channel.send({
                     embeds: [
@@ -118,7 +146,10 @@ if (options.reward !== false) {
                     ]
                 });
             }
+
             safeEnd();
+
         });
+
     }
 };
