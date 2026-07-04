@@ -3,6 +3,7 @@ require("dotenv").config();
 const fs = require("fs");
 const path = require("path"); // ✅ AJOUTÉ (manquait)
 const mongoose = require("mongoose");
+const statsVoice = require("./events/ready/statsVoice");
 const Stats = require("./systems/stats");
 const autoReact = require("./events/autoReact");
 const photoOnly = require("./events/photoOnly");
@@ -71,10 +72,13 @@ for (const folder of commandFolders) {
     }
 }
 
+
 // ─── clientReady ────────────────────────────────────────────────────────────
 
-client.once("clientReady", async () => {
-    console.log(`✅ ${client.user.tag} est connecté !`);
+client.once("ready", async () => {
+    console.log(`${client.user.tag} est connecté !`);
+
+    await statsVoice(client);
 
     client.user.setPresence({
         activities: [
@@ -106,7 +110,7 @@ client.once("clientReady", async () => {
     } catch (err) {
         console.error("❌ Erreur slash commands :", err);
     }
-
+});
     // ==========================
     // CACHE DES MEMBRES
     // ==========================
