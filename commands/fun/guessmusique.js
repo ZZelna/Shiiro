@@ -10,12 +10,12 @@ module.exports = {
 
         if (!message.member && !options.auto) return;
 
-        if (!options.auto) {
-            const roleAllowed = "1506674274826584284";
-            if (!message.member.roles.cache.has(roleAllowed)) {
-                return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
-            }
-        }
+        if (!options.auto && !options.fromGames) {
+    const roleAllowed = "1506674274826584284";
+    if (!message.member.roles.cache.has(roleAllowed)) {
+        return message.reply("❌ Tu n'as pas la permission d'utiliser ce mini-jeu.");
+    }
+}
 
         const question = musiques[Math.floor(Math.random() * musiques.length)];
         const audio = new AttachmentBuilder(
@@ -54,32 +54,48 @@ module.exports = {
             if (validAnswers.includes(guess)) {
                 collector.stop("found");
 
-                const isGift = Math.random() < 0.10;
-                let rewardText;
+              let rewardText = "🎮 Aucune récompense";
 
-                if (isGift) {
-                    await CasinoProfile.findOneAndUpdate(
-                        { userId: m.author.id },
-                        { $inc: { gifts: 1 } },
-                        { upsert: true }
-                    );
-                    rewardText = "🎁 1 Gift";
-                } else {
-                    const reward = Math.floor(Math.random() * 901) + 100;
-                    await CasinoProfile.findOneAndUpdate(
-                        { userId: m.author.id },
-                        { $inc: { yens: reward } },
-                        { upsert: true }
-                    );
-                    rewardText = `💴 ${reward} Yens`;
-                }
+if (options.reward !== false) {
+
+    const isGift = Math.random() < 0.10;
+
+    if (isGift) {
+
+        await CasinoProfile.findOneAndUpdate(
+            { userId: m.author.id },
+            { $inc: { gifts: 1 } },
+            { upsert: true }
+        );
+
+        rewardText = "🎁 1 Gift";
+
+    } else {
+
+        const reward = Math.floor(Math.random() * 901) + 100;
+
+        await CasinoProfile.findOneAndUpdate(
+            { userId: m.author.id },
+            { $inc: { yens: reward } },
+            { upsert: true }
+        );
+
+        rewardText = `💴 ${reward} Yens`;
+
+    }
+
+}
 
                 await m.reply({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("#57F287")
                             .setTitle("✅ Bonne réponse !")
-                            .setDescription(`${m.author} a trouvé !\n\n🎵 Musique : **${question.title}**\n👤 Artiste : **${question.artist}**\n\nRécompense : ${rewardText}`)
+                            .setDescription(
+    options.reward === false
+        ? `${m.author} a trouvé !\n\n🎵 Musique : **${question.title}**\n👤 Artiste : **${question.artist}**`
+        : `${m.author} a trouvé !\n\n🎵 Musique : **${question.title}**\n👤 Artiste : **${question.artist}**\n\nRécompense : ${rewardText}`
+)
                             .setTimestamp()
                     ]
                 });
