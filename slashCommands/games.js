@@ -16,42 +16,62 @@ module.exports = {
 
                 .addChoices(
 
-                    {
-                        name: "🌸 Guess Anime",
-                        value: "guessanime"
-                    },
+    {
+        name: "🌸 Guess Anime",
+        value: "guessanime"
+    },
 
-                    {
-                        name: "🏷️ Guess Brand",
-                        value: "guessbrand"
-                    },
+    {
+        name: "🎬 Guess Film",
+        value: "guessfilms"
+    },
 
-                    {
-                        name: "🎨 Guess Couleur",
-                        value: "guesscouleur"
-                    },
+    {
+        name: "🎵 Guess Musique",
+        value: "guessmusique"
+    },
 
-                    {
-                        name: "🏙️ Guess Citation",
-                        value: "guesscita"
-                    },
+    {
+        name: "💿 Guess Album",
+        value: "guessalbum"
+    },
 
-                    {
-                        name: "🌍 Guess Country",
-                        value: "guesscountry"
-                    },
+    {
+        name: "🎤 Guess Artiste",
+        value: "guessartiste"
+    },
 
-                    {
-                        name: "🏛️ Guess Capitale",
-                        value: "guesscapitale"
-                    },
+    {
+        name: "🏷️ Guess Brand",
+        value: "guessbrand"
+    },
 
-                    {
-                        name: "🚩 Guess Flags",
-                        value: "guessflags"
-                    }
+    {
+        name: "🎨 Guess Couleur",
+        value: "guesscouleur"
+    },
 
-                )
+    {
+        name: "🏙️ Guess Citation",
+        value: "guesscita"
+    },
+
+    {
+        name: "🌍 Guess Country",
+        value: "guesscountry"
+    },
+
+    {
+        name: "🏛️ Guess Capitale",
+        value: "guesscapitale"
+    },
+
+    {
+        name: "🚩 Guess Flags",
+        value: "guessflags"
+    }
+
+)
         ),
 
     async execute(interaction) {
