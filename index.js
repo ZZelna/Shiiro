@@ -72,22 +72,18 @@ for (const folder of commandFolders) {
     }
 }
 
-
-// ─── clientReady ────────────────────────────────────────────────────────────
-
+// ───Ready ───────────────────────────────────────────────────
 client.once("ready", async () => {
     console.log(`${client.user.tag} est connecté !`);
 
     await statsVoice(client);
 
     client.user.setPresence({
-        activities: [
-            {
-                name: ".gg/shiiro",
-                type: ActivityType.Streaming,
-                url: "https://twitch.tv/leox123bs"
-            }
-        ],
+        activities: [{
+            name: ".gg/shiiro",
+            type: ActivityType.Streaming,
+            url: "https://twitch.tv/leox123bs"
+        }],
         status: "online"
     });
 
@@ -110,7 +106,7 @@ client.once("ready", async () => {
     } catch (err) {
         console.error("❌ Erreur slash commands :", err);
     }
-});
+
     // ==========================
     // CACHE DES MEMBRES
     // ==========================
@@ -118,23 +114,15 @@ client.once("ready", async () => {
     console.log("🔄 Chargement du cache des membres...");
 
     for (const guild of client.guilds.cache.values()) {
-
         try {
-
             await guild.members.fetch();
 
             console.log(
                 `✅ ${guild.name} : ${guild.members.cache.size} membres chargés`
             );
-
         } catch (err) {
-
-            console.log(
-                `❌ Impossible de charger ${guild.name}`
-            );
-
+            console.log(`❌ Impossible de charger ${guild.name}`);
         }
-
     }
 
     console.log("✅ Cache des membres prêt.");
