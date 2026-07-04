@@ -6,7 +6,9 @@ const {
     StringSelectMenuBuilder,
     EmbedBuilder,
     ButtonBuilder,
-    ButtonStyle
+    ButtonStyle,
+    ChannelType,
+    PermissionsBitField
 } = require("discord.js");
 
 const fs = require("fs");
@@ -19,6 +21,57 @@ const configPath = path.join(
     __dirname,
     "../../config.json"
 );
+const TICKET_CATEGORIES = {
+    abus: {
+        name: "Gestion abus",
+        categoryId: "1515681660866134046",
+        staffRoles: [
+            "1506678694352261301",
+            "1506678765982318743",
+            "1506696551706267688"
+        ]
+    },
+
+    staff: {
+        name: "Gestion staff",
+        categoryId: "1515681914923515954",
+        staffRoles: [
+            "1506678694352261301",
+            "1506678765982318743",
+            "1506696757642530982"
+        ]
+    },
+
+    partenariat: {
+        name: "Équipe partenariats",
+        categoryId: "1515682696871936152",
+        staffRoles: [
+            "1506678694352261301",
+            "1506678765982318743",
+            "1506702398029172796"
+        ]
+    },
+
+    casino: {
+        name: "Gestion casino",
+        categoryId: "1515682782557245450",
+        staffRoles: [
+            "1506678694352261301",
+            "1506678765982318743",
+            "1506709088451690708"
+        ]
+    },
+
+    admin: {
+        name: "Support admin",
+        categoryId: "1507090226114461879",
+        staffRoles: [
+            "1506678694352261301",
+            "1506678765982318743",
+            "1509601528242110525"
+        ]
+    }
+};
 
 module.exports = async (interaction) => {
 
@@ -1083,7 +1136,209 @@ if (
             });
         }
     }
+// =========================
+// CREATION DES TICKETS
+// =========================
+if (
+    interaction.isStringSelectMenu() &&
+    interaction.customId === "ticket_category"
+) {
+    const type = interaction.values[0];
+    const category = TICKET_CATEGORIES[type];
 
+    if (!category) {
+        return interaction.reply({
+            content: "❌ Catégorie invalide.",
+            ephemeral: true
+        });
+    }
+
+    const already = interaction.guild.channels.cache.find(c =>
+        c.topic === interaction.user.id &&
+        c.parentId === category.categoryId
+    );
+
+    if (already) {
+        return interaction.reply({
+            content: `❌ Tu possèdes déjà un ticket : ${already}`,
+            ephemeral: true
+        });
+    }
+
+    const permissions = [
+        {
+            id: interaction.guild.id,
+            deny: [PermissionsBitField.Flags.ViewChannel]
+        },
+        {
+            id: interaction.user.id,
+            allow: [
+                PermissionsBitField.Flags.ViewChannel,
+                PermissionsBitField.Flags.SendMessages,
+                PermissionsBitField.Flags.ReadMessageHistory
+            ]
+        }
+    ];
+
+    for (const role of category.staffRoles) {
+        permissions.push({
+            id: role,
+            allow: [
+                PermissionsBitField.Flags.ViewChannel,
+                PermissionsBitField.Flags.SendMessages,
+                PermissionsBitField.Flags.ReadMessageHistory
+            ]
+        });
+    }
+
+    const channel = await interaction.guild.channels.create({
+        name: `ticket-${interaction.user.username}`,
+        type: ChannelType.GuildText,
+        parent: category.categoryId,
+        topic: interaction.user.id,
+        permissionOverwrites: permissions
+    });
+
+    const embed = new EmbedBuilder()
+        .setColor("Blue")
+        .setTitle("🎫 Ticket créé")
+        .setDescription(
+            `Bienvenue ${interaction.user}.\n\nUn membre du staff prendra en charge votre demande.\n\n**Catégorie :** ${category.name}`
+        );
+
+    const row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+            .setCustomId("ticket_close")
+            .setLabel("🔒 Fermer")
+            .setStyle(ButtonStyle.Danger)
+    );
+
+    await channel.send({
+        content: `${interaction.user}`,
+        embeds: [embed],
+        components: [row]
+    });
+
+    return interaction.reply({
+        content: `✅ Ton ticket a été créé : ${channel}`,
+        ephemeral: true
+    });
+}
+    // =========================
+// REVENDIQUER LE TICKET
+// =========================
+if (
+    interaction.isButton() &&
+    interaction.customId === "ticket_claim"
+) {
+
+    const row = new ActionRowBuilder().addComponents(
+
+        new ButtonBuilder()
+            .setCustomId("ticket_claim")
+            .setLabel(`Pris par ${interaction.user.username}`)
+            .setStyle(ButtonStyle.Success)
+            .setDisabled(true),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_close")
+            .setLabel("🔒 Fermer")
+            .setStyle(ButtonStyle.Danger)
+
+    );
+
+    await interaction.message.edit({
+        components: [row]
+    });
+
+    return interaction.reply({
+        content: `📌 ${interaction.user} prend ce ticket en charge.`,
+        ephemeral: false
+    });
+
+}
+// =========================
+// FERMER LE TICKET
+// =========================
+if (
+    interaction.isButton() &&
+    interaction.customId === "ticket_close"
+) {
+
+    const embed = new EmbedBuilder()
+        .setColor("Orange")
+        .setTitle("🔒 Ticket fermé")
+        .setDescription("Ce ticket est fermé.\nSeul un modérateur peut désormais le supprimer.");
+
+    const row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+            .setCustomId("ticket_delete")
+            .setLabel("🗑️ Supprimer")
+            .setStyle(ButtonStyle.Danger)
+    );
+
+    await interaction.channel.send({
+        embeds: [embed],
+        components: [row]
+    });
+
+    await interaction.channel.permissionOverwrites.edit(
+        interaction.channel.topic,
+        {
+            SendMessages: false
+        }
+    );
+
+    return interaction.reply({
+        content: "🔒 Ticket fermé.",
+        ephemeral: true
+    });
+}
+
+// =========================
+// SUPPRIMER LE TICKET
+// =========================
+const staffRoles = [
+    "1506678694352261301",
+    "1506678765982318743",
+    "1506696551706267688",
+    "1506696757642530982",
+    "1506702398029172796",
+    "1506709088451690708",
+    "1509601528242110525"
+];
+
+const isStaff = interaction.member.roles.cache.some(role =>
+    staffRoles.includes(role.id)
+);
+
+if (!isStaff) {
+    return interaction.reply({
+        content: "❌ Seul un membre du staff peut supprimer ce ticket.",
+        ephemeral: true
+    });
+}
+
+await interaction.reply({
+    content: "🗑️ Suppression du ticket dans 5 secondes...",
+    ephemeral: true
+});
+
+setTimeout(async () => {
+    await interaction.channel.delete().catch(() => {});
+}, 5000);
+
+    await interaction.reply({
+        content: "🗑️ Suppression du ticket dans 5 secondes...",
+        ephemeral: true
+    });
+
+    setTimeout(async () => {
+        await interaction.channel.delete().catch(() => {});
+    }, 5000);
+
+    return;
+}
     // =========================
     // MENU DE SUPPRESSION
     // =========================
