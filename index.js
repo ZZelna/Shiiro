@@ -490,7 +490,8 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
 const protectedRoles = [
     "1506674274826584284",
     "1507029804568936530",
-    "1506678023473201293"
+    "1506678023473201293",
+    "1514287005981475010"
 ];
 
 // Seul cet utilisateur peut les attribuer
