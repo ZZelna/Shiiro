@@ -1206,13 +1206,17 @@ if (
             `Bienvenue ${interaction.user}.\n\nUn membre du staff prendra en charge votre demande.\n\n**Catégorie :** ${category.name}`
         );
 
-    const row = new ActionRowBuilder().addComponents(
-        new ButtonBuilder()
-            .setCustomId("ticket_close")
-            .setLabel("🔒 Fermer")
-            .setStyle(ButtonStyle.Danger)
-    );
+   const row = new ActionRowBuilder().addComponents(
+    new ButtonBuilder()
+        .setCustomId("ticket_claim")
+        .setLabel("📌 Claim")
+        .setStyle(ButtonStyle.Primary),
 
+    new ButtonBuilder()
+        .setCustomId("ticket_close")
+        .setLabel("🔒 Fermer")
+        .setStyle(ButtonStyle.Danger)
+);
     await channel.send({
         content: `${interaction.user}`,
         embeds: [embed],
