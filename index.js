@@ -486,13 +486,39 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
 
     for (const role of addedRoles.values()) {
 
-        // Protection des rôles supérieurs
-        if (
-            executor &&
-            managerRole &&
-            !executor.roles.cache.has(bypassRoleId) &&
-            role.position > managerRole.position
-        ) {
+       // Rôles interdits
+const protectedRoles = [
+    "1506674274826584284",
+    "1507029804568936530",
+    "1506678023473201293"
+];
+
+// Seul cet utilisateur peut les attribuer
+const allowedUserId = "1418370654251778168";
+
+if (
+    protectedRoles.includes(role.id) &&
+    executor &&
+    executor.id !== allowedUserId
+) {
+    await newMember.roles.remove(role).catch(() => {});
+
+    try {
+        await executor.send(
+            `❌ Vous n'êtes pas autorisé à attribuer le rôle **${role.name}**.`
+        );
+    } catch {}
+
+    continue;
+}
+
+// Protection des rôles supérieurs
+if (
+    executor &&
+    managerRole &&
+    !executor.roles.cache.has(bypassRoleId) &&
+    role.position > managerRole.position
+) {
 
             await newMember.roles.remove(role).catch(() => {});
 
