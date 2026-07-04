@@ -106,6 +106,7 @@ client.once("ready", async () => {
     } catch (err) {
         console.error("❌ Erreur slash commands :", err);
     }
+    });
 // ─── messageDelete (snipe) ───────────────────────────────────────────────────
 
 client.on("messageDelete", async (message) => {
