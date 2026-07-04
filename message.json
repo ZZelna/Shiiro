@@ -1,0 +1,87 @@
+{
+  "logChannelId": "1517116985077665872",
+  "embedColor": 2829617,
+
+  "messages": {
+    "panelTitle": "🎫 Centre de support Shiiro",
+    "panelBody": "Bienvenue sur le centre de support de **Shiiro**.\n\nSélectionnez la catégorie correspondant à votre demande.\n\n⚠️ Merci de ne pas ouvrir plusieurs tickets pour le même problème."
+  },
+
+  "categories": [
+    {
+      "id": "gestion-abus",
+      "label": "🚨 Gestion abus",
+      "description": "Signaler un abus ou un membre",
+      "emoji": "🚨",
+      "parentCategoryId": "1515681660866134046",
+      "roleIds": [
+        "1506678694352261301",
+        "1506678765982318743",
+        "1506696551706267688"
+      ],
+      "channelNamePrefix": "abus",
+      "welcomeTitle": "🚨 Ticket Gestion Abus",
+      "welcomeBody": "Merci d'avoir ouvert un ticket. Un membre de la gestion des abus vous répondra dès que possible."
+    },
+    {
+      "id": "gestion-staff",
+      "label": "👥 Gestion Staff",
+      "description": "Contacter la gestion du staff",
+      "emoji": "👥",
+      "parentCategoryId": "1515681914923515954",
+      "roleIds": [
+        "1506678694352261301",
+        "1506678765982318743",
+        "1506696757642530982"
+      ],
+      "channelNamePrefix": "staff",
+      "welcomeTitle": "👥 Ticket Gestion Staff",
+      "welcomeBody": "Explique votre demande en détail."
+    },
+    {
+      "id": "partenariats",
+      "label": "🤝 Équipe Partenariats",
+      "description": "Faire une demande de partenariat",
+      "emoji": "🤝",
+      "parentCategoryId": "1515682696871936152",
+      "roleIds": [
+        "1506678694352261301",
+        "1506678765982318743",
+        "1506702398029172796"
+      ],
+      "channelNamePrefix": "partenariat",
+      "welcomeTitle": "🤝 Ticket Partenariat",
+      "welcomeBody": "Présente ton serveur ou ton projet."
+    },
+    {
+      "id": "gestion-casino",
+      "label": "🎰 Gestion Casino",
+      "description": "Support concernant le casino",
+      "emoji": "🎰",
+      "parentCategoryId": "1515682782557245450",
+      "roleIds": [
+        "1506678694352261301",
+        "1506678765982318743",
+        "1506709088451690708"
+      ],
+      "channelNamePrefix": "casino",
+      "welcomeTitle": "🎰 Ticket Casino",
+      "welcomeBody": "Décris ton problème concernant le casino."
+    },
+    {
+      "id": "support-admin",
+      "label": "👑 Support Admin",
+      "description": "Contacter l'administration",
+      "emoji": "👑",
+      "parentCategoryId": "1507090226114461879",
+      "roleIds": [
+        "1506678694352261301",
+        "1506678765982318743",
+        "1509601528242110525"
+      ],
+      "channelNamePrefix": "admin",
+      "welcomeTitle": "👑 Ticket Support Admin",
+      "welcomeBody": "Décris précisément ta demande."
+    }
+  ]
+}
