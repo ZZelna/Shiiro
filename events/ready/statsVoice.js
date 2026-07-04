@@ -1,91 +1,49 @@
-const { ChannelType, PermissionFlagsBits } = require("discord.js");
-
 module.exports = async (client) => {
+
+    const GUILD_ID = "1506672014679740546";
+
+    const TOTAL_CHANNEL = "1508892135049658579";
+    const MEMBERS_CHANNEL = "1508891645049966723";
+    const BOTS_CHANNEL = "1508892881841164450";
+    const BOOSTS_CHANNEL = "1522926593021050950";
 
     async function updateStats() {
 
-        const guild = client.guilds.cache.first();
+        const guild = client.guilds.cache.get(GUILD_ID);
         if (!guild) return;
 
         const total = guild.memberCount;
+        const bots = guild.members.cache.filter(m => m.user.bot).size;
+        const members = total - bots;
+        const boosts = guild.premiumSubscriptionCount || 0;
 
-        const members = guild.members.cache.filter(
-            m => !m.user.bot
-        ).size;
+        const totalChannel = guild.channels.cache.get(TOTAL_CHANNEL);
+        const membersChannel = guild.channels.cache.get(MEMBERS_CHANNEL);
+        const botsChannel = guild.channels.cache.get(BOTS_CHANNEL);
+        const boostsChannel = guild.channels.cache.get(BOOSTS_CHANNEL);
 
-        const bots = guild.members.cache.filter(
-            m => m.user.bot
-        ).size;
-
-        const boosts = guild.premiumSubscriptionCount;
-
-        const online = guild.members.cache.filter(
-            m => m.presence?.status && m.presence.status !== "offline"
-        ).size;
-
-        let category = guild.channels.cache.find(
-            c =>
-                c.type === ChannelType.GuildCategory &&
-                c.name === "📊 Statistiques"
-        );
-
-        if (!category) {
-            category = await guild.channels.create({
-                name: "📊 Statistiques",
-                type: ChannelType.GuildCategory
-            });
+        if (totalChannel && totalChannel.name !== `💕・Total : ${total}`) {
+            await totalChannel.setName(`💕・Total : ${total}`).catch(console.error);
         }
 
-        const stats = [
-            ["👥 Total", total],
-            ["💕 Membres", members],
-            ["🍃 Bots", bots],
-            ["🔮 Boosts", boosts],
-            ["🌊 En ligne", online]
-        ];
+        if (membersChannel && membersChannel.name !== `🌊・Membres : ${members}`) {
+            await membersChannel.setName(`🌊・Membres : ${members}`).catch(console.error);
+        }
 
-        for (const [label, value] of stats) {
+        if (botsChannel && botsChannel.name !== `🍃・Bots : ${bots}`) {
+            await botsChannel.setName(`🍃・Bots : ${bots}`).catch(console.error);
+        }
 
-            const name = `${label} : ${value}`;
-
-            let channel = guild.channels.cache.find(
-                c =>
-                    c.parentId === category.id &&
-                    c.type === ChannelType.GuildVoice &&
-                    c.name.startsWith(label)
-            );
-
-            if (!channel) {
-
-                await guild.channels.create({
-                    name,
-                    type: ChannelType.GuildVoice,
-                    parent: category.id,
-                    permissionOverwrites: [
-                        {
-                            id: guild.roles.everyone.id,
-                            deny: [
-                                PermissionFlagsBits.Connect,
-                                PermissionFlagsBits.Speak
-                            ]
-                        }
-                    ]
-                });
-
-            } else if (channel.name !== name) {
-
-                await channel.setName(name).catch(() => {});
-
-            }
-
+        if (boostsChannel && boostsChannel.name !== `🔮・Boosts : ${boosts}`) {
+            await boostsChannel.setName(`🔮・Boosts : ${boosts}`).catch(console.error);
         }
 
     }
 
-    client.once("ready", updateStats);
+    await updateStats();
+
     client.on("guildMemberAdd", updateStats);
     client.on("guildMemberRemove", updateStats);
-    client.on("presenceUpdate", updateStats);
 
     setInterval(updateStats, 60000);
 
