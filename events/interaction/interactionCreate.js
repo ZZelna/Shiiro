@@ -1234,7 +1234,7 @@ if (
         ephemeral: true
     });
 }
-// =========================
+    // =========================
 // REVENDIQUER LE TICKET
 // =========================
 if (
@@ -1262,14 +1262,13 @@ if (
         inline: false
     });
 
-    // Nouveau bouton Claim
+    // Nouveaux boutons : Unclaim remplace Claim
     const row = new ActionRowBuilder().addComponents(
 
         new ButtonBuilder()
-            .setCustomId("ticket_claim")
+            .setCustomId("ticket_unclaim")
             .setLabel(`📌 ${interaction.user.username}`)
-            .setStyle(ButtonStyle.Success)
-            .setDisabled(true),
+            .setStyle(ButtonStyle.Success),
 
         new ButtonBuilder()
             .setCustomId("ticket_add")
@@ -1303,7 +1302,62 @@ if (
 
     return;
 }
-    if (
+// =========================
+// ANNULER LA PRISE EN CHARGE
+// =========================
+if (
+    interaction.isButton() &&
+    interaction.customId === "ticket_unclaim"
+) {
+
+    // Seul celui qui a claim (ou un membre du staff) peut unclaim
+    const claimedField = interaction.message.embeds[0]?.fields?.find(
+        f => f.name === "📌 Pris en charge par"
+    );
+
+    const claimerMatch = claimedField?.value.match(/<@!?(\d+)>/);
+    const claimerId = claimerMatch ? claimerMatch[1] : null;
+
+    if (claimerId && claimerId !== interaction.user.id) {
+        return interaction.reply({
+            content: "❌ Seule la personne ayant pris en charge ce ticket peut l'annuler.",
+            ephemeral: true
+        });
+    }
+
+    // On récupère l'embed actuel et on retire le champ "Pris en charge par"
+    const embed = EmbedBuilder.from(interaction.message.embeds[0]);
+    embed.setFields(
+        (interaction.message.embeds[0].fields || []).filter(
+            f => f.name !== "📌 Pris en charge par"
+        )
+    );
+
+    // On remet les boutons d'origine
+    const row = new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+            .setCustomId("ticket_claim")
+            .setLabel("📌 Claim")
+            .setStyle(ButtonStyle.Primary),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_close")
+            .setLabel("🔒 Fermer")
+            .setStyle(ButtonStyle.Danger)
+    );
+
+    await interaction.update({
+        embeds: [embed],
+        components: [row]
+    });
+
+    await interaction.channel.send({
+        content: `📌 ${interaction.user} a annulé la prise en charge de ce ticket.`
+    });
+
+    return;
+}
+if (
     interaction.isButton() &&
     interaction.customId === "ticket_add"
 ) {
