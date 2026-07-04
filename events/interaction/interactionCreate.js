@@ -1234,7 +1234,7 @@ if (
         ephemeral: true
     });
 }
-    // =========================
+// =========================
 // REVENDIQUER LE TICKET
 // =========================
 if (
@@ -1252,6 +1252,11 @@ if (
             ephemeral: true
         });
     }
+
+    // Retrouver la catégorie du ticket via le parentId du salon
+    const category = Object.values(TICKET_CATEGORIES).find(
+        c => c.categoryId === interaction.channel.parentId
+    );
 
     // On récupère l'embed actuel
     const embed = EmbedBuilder.from(interaction.message.embeds[0]);
@@ -1291,10 +1296,20 @@ if (
         components: [row]
     });
 
+    // La personne qui claim garde l'accès (overwrite individuel prioritaire sur le rôle)
     await interaction.channel.permissionOverwrites.edit(interaction.user.id, {
         ViewChannel: true,
         SendMessages: true
     });
+
+    // On masque le ticket aux autres rôles staff de la catégorie
+    if (category) {
+        for (const roleId of category.staffRoles) {
+            await interaction.channel.permissionOverwrites.edit(roleId, {
+                ViewChannel: false
+            });
+        }
+    }
 
     await interaction.channel.send({
         content: `📌 ${interaction.user} prend désormais ce ticket en charge.`
@@ -1325,6 +1340,11 @@ if (
         });
     }
 
+    // Retrouver la catégorie du ticket
+    const category = Object.values(TICKET_CATEGORIES).find(
+        c => c.categoryId === interaction.channel.parentId
+    );
+
     // On récupère l'embed actuel et on retire le champ "Pris en charge par"
     const embed = EmbedBuilder.from(interaction.message.embeds[0]);
     embed.setFields(
@@ -1350,6 +1370,17 @@ if (
         embeds: [embed],
         components: [row]
     });
+
+    // On redonne l'accès à tous les rôles staff de la catégorie
+    if (category) {
+        for (const roleId of category.staffRoles) {
+            await interaction.channel.permissionOverwrites.edit(roleId, {
+                ViewChannel: true,
+                SendMessages: true,
+                ReadMessageHistory: true
+            });
+        }
+    }
 
     await interaction.channel.send({
         content: `📌 ${interaction.user} a annulé la prise en charge de ce ticket.`
