@@ -3,6 +3,12 @@ module.exports = {
 
     async run(message) {
 
+        const ALLOWED_ROLE_ID = "1519633537156907088";
+
+        if (!message.member.roles.cache.has(ALLOWED_ROLE_ID)) {
+            return message.reply("❌ Vous n'avez pas la permission d'utiliser cette commande.");
+        }
+
         const comments = [
             "🖼️ Voici l'icône du serveur.",
             "✨ Une belle image pour représenter cette communauté.",
