@@ -758,8 +758,28 @@ if (
     const index = Number(
         interaction.customId.replace("survey_vote_", "")
     );
+    if (!survey.choices[index]) {
+    return interaction.reply({
+        content: "❌ Choix invalide.",
+        ephemeral: true
+    });
+}
+// Vérifie si l'utilisateur vote déjà pour cette option
 
-    // retire l'ancien vote
+const alreadyVoted = survey.choices[index].votes.includes(interaction.user.id);
+
+if (alreadyVoted) {
+
+    return interaction.reply({
+
+        content: "❌ Tu votes déjà pour cette option.",
+
+        ephemeral: true
+
+    });
+
+}
+  // retire l'ancien vote
     survey.choices.forEach(choice => {
         choice.votes = choice.votes.filter(
             id => id !== interaction.user.id
@@ -810,11 +830,16 @@ if (
             "█".repeat(Math.round(percent / 10)) +
             "░".repeat(10 - Math.round(percent / 10));
 
-        embed.addFields({
-            name: `${i + 1}. ${choice.label}`,
-            value: `${bars} **${percent}%** (${votes})`
-        });
+        let value = `${bars} **${percent}%** (${votes})`;
 
+if (!survey.anonymous && choice.votes.length) {
+    value += `\n${choice.votes.map(id => `<@${id}>`).join(", ")}`;
+}
+
+embed.addFields({
+    name: `${i + 1}. ${choice.label}`,
+    value
+});
     });
 
     embed.addFields({
