@@ -227,61 +227,63 @@ const Survey = require("../models/Survey");
 
 if (sub === "end") {
 
-    const messageId = interaction.options.getString("message");
+    const messageId = interaction.options.getString("messageid");
 
     const survey = await Survey.findOne({
-        messageId,
-        ended: false
+        messageId
     });
 
-    if (!survey)
+    if (!survey || survey.ended) {
         return interaction.reply({
             content: "❌ Sondage introuvable.",
             ephemeral: true
         });
+    }
 
     survey.ended = true;
     await survey.save();
 
-    const channel = await interaction.guild.channels.fetch(
-        survey.channelId
-    );
+    const channel = await interaction.guild.channels.fetch(survey.channelId);
+    const msg = await channel.messages.fetch(survey.messageId);
 
-    const msg = await channel.messages.fetch(
-        survey.messageId
-    );
+    let total = 0;
 
-    let result = "";
-    let winner = "";
-    let max = -1;
+    survey.choices.forEach(c => {
+        total += c.votes.length;
+    });
 
-    for (const option of survey.options) {
-
-        const votes =
-            survey.votes.get(option)?.length || 0;
-
-        result += `• ${option} : **${votes}** vote(s)\n`;
-
-        if (votes > max) {
-
-            max = votes;
-            winner = option;
-
-        }
-
-    }
-
-    const embed = EmbedBuilder
-        .from(msg.embeds[0])
+    const embed = new EmbedBuilder()
         .setColor("Red")
         .setTitle("📊 Sondage terminé")
-        .setDescription(
-`${survey.question}
+        .setDescription(survey.question);
 
-${result}
+    let winner = null;
 
-🏆 Gagnant : **${winner}**`
-        );
+    survey.choices.forEach(choice => {
+
+        if (!winner || choice.votes.length > winner.votes.length)
+            winner = choice;
+
+        const percent =
+            total === 0
+                ? 0
+                : Math.round(choice.votes.length / total * 100);
+
+        const bar =
+            "█".repeat(Math.round(percent / 10)) +
+            "░".repeat(10 - Math.round(percent / 10));
+
+        embed.addFields({
+            name: choice.label,
+            value: `${bar} ${percent}% (${choice.votes.length})`
+        });
+
+    });
+
+    embed.addFields({
+        name: "🏆 Gagnant",
+        value: winner ? winner.label : "Aucun"
+    });
 
     await msg.edit({
         embeds: [embed],
@@ -296,47 +298,47 @@ ${result}
 }
 if (sub === "results") {
 
-    const messageId = interaction.options.getString("message");
+    const messageId = interaction.options.getString("messageid");
 
     const survey = await Survey.findOne({
         messageId
     });
 
-    if (!survey)
+    if (!survey) {
         return interaction.reply({
             content: "❌ Sondage introuvable.",
             ephemeral: true
         });
+    }
 
     let total = 0;
 
-    for (const option of survey.options)
-        total += survey.votes.get(option)?.length || 0;
+    survey.choices.forEach(c => {
+        total += c.votes.length;
+    });
 
     const embed = new EmbedBuilder()
         .setColor("#5865F2")
-        .setTitle("📊 Résultats du sondage")
+        .setTitle("📊 Résultats")
         .setDescription(survey.question);
 
-    for (const option of survey.options) {
-
-        const votes =
-            survey.votes.get(option)?.length || 0;
+    survey.choices.forEach(choice => {
 
         const percent =
             total === 0
                 ? 0
-                : Math.round(votes / total * 100);
+                : Math.round(choice.votes.length / total * 100);
+
+        const bar =
+            "█".repeat(Math.round(percent / 10)) +
+            "░".repeat(10 - Math.round(percent / 10));
 
         embed.addFields({
-            name: option,
-            value:
-`🗳️ ${votes} vote(s)
-📈 ${percent}%`,
-            inline: false
+            name: choice.label,
+            value: `${bar} ${percent}% (${choice.votes.length})`
         });
 
-    }
+    });
 
     embed.setFooter({
         text: `${total} vote(s)`
@@ -350,7 +352,7 @@ if (sub === "results") {
 }
 if (sub === "delete") {
 
-    const messageId = interaction.options.getString("message");
+const messageId = interaction.options.getString("messageid");
 
     const survey = await Survey.findOne({
         messageId
