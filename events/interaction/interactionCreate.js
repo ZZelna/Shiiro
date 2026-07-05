@@ -19,8 +19,7 @@ const CasinoProfile =
     require("../../models/CasinoProfile");
 const Clan =
 require("../../models/Clan");
-const ConfessionConfig = require("../../models/ConfessionConfig");
-const Confession = require("../../models/Confession");
+const confessionHandler = require("../confession");
 const configPath = path.join(
     __dirname,
     "../../config.json"
@@ -78,6 +77,13 @@ const TICKET_CATEGORIES = {
 };
 
 module.exports = async (interaction) => {
+    // =========================
+// CONFESSIONS
+// =========================
+await confessionHandler(interaction);// =========================
+// CONFESSIONS
+// =========================
+await confessionHandler(interaction);
 
     // =========================
     // BOUTONS
