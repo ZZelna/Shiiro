@@ -736,6 +736,9 @@ if (
     interaction.isButton() &&
     interaction.customId.startsWith("shop_buy_")
 ) {
+      console.log("Bouton shop cliqué :", interaction.customId);
+
+    try {
     const { SHOP_ITEMS } = require("../slashCommands/shop");
     const LOGS_CASINO = "1520766436388245585";
 
@@ -769,11 +772,12 @@ if (
         ephemeral: true
     });
 
-    try {
+        try {
         const logsGuild = interaction.client.guilds.cache.find(g =>
             g.channels.cache.has(LOGS_CASINO)
         );
         const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
+
         if (logsChannel) {
             await logsChannel.send({
                 content:
@@ -792,6 +796,22 @@ if (
     }
 
     return;
+
+} catch (err) {
+
+    console.error("Erreur boutique :", err);
+
+    if (interaction.replied || interaction.deferred) {
+        await interaction.editReply({
+            content: "❌ Une erreur est survenue."
+        }).catch(() => {});
+    } else {
+        await interaction.reply({
+            content: "❌ Une erreur est survenue.",
+            ephemeral: true
+        }).catch(() => {});
+    }
+
 }
     // =========================
 // BOUNTY
