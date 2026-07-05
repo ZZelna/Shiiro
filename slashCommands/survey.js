@@ -16,68 +16,68 @@ module.exports = {
         .setDescription("Gestion des sondages")
 
         // CREATE
-        .addSubcommand(sub =>
-            sub
-                .setName("create")
-                .setDescription("Créer un sondage")
+.addSubcommand(sub =>
+    sub
+        .setName("create")
+        .setDescription("Créer un sondage")
 
-                .addStringOption(option =>
-                    option
-                        .setName("question")
-                        .setDescription("Question")
-                        .setRequired(true)
-                )
-
-                .addStringOption(option =>
-                    option
-                        .setName("choix1")
-                        .setDescription("Premier choix")
-                        .setRequired(true)
-                )
-
-                .addStringOption(option =>
-                    option
-                        .setName("choix2")
-                        .setDescription("Deuxième choix")
-                        .setRequired(true)
-                )
-
-                .addStringOption(option =>
-                    option
-                        .setName("choix3")
-                        .setDescription("Troisième choix")
-                        .setRequired(false)
-                )
-
-                .addStringOption(option =>
-                    option
-                        .setName("choix4")
-                        .setDescription("Quatrième choix")
-                        .setRequired(false)
-                )
-
-                .addStringOption(option =>
-                    option
-                        .setName("choix5")
-                        .setDescription("Cinquième choix")
-                        .setRequired(false)
-                )
-
-                .addStringOption(option =>
-                    option
-                        .setName("duree")
-                        .setDescription("Ex: 10m, 1h, 2d")
-                        .setRequired(true)
-                )
-
-                .addBooleanOption(option =>
-                    option
-                        .setName("anonyme")
-                        .setDescription("Sondage anonyme ?")
-                        .setRequired(false)
-                )
+        .addStringOption(option =>
+            option
+                .setName("question")
+                .setDescription("Question")
+                .setRequired(true)
         )
 
+        .addStringOption(option =>
+            option
+                .setName("choix1")
+                .setDescription("Premier choix")
+                .setRequired(true)
+        )
+
+        .addStringOption(option =>
+            option
+                .setName("choix2")
+                .setDescription("Deuxième choix")
+                .setRequired(true)
+        )
+
+        // ⚠️ Obligatoire avant les options facultatives
+        .addStringOption(option =>
+            option
+                .setName("duree")
+                .setDescription("Ex: 10m, 1h, 2d")
+                .setRequired(true)
+        )
+
+        .addStringOption(option =>
+            option
+                .setName("choix3")
+                .setDescription("Troisième choix")
+                .setRequired(false)
+        )
+
+        .addStringOption(option =>
+            option
+                .setName("choix4")
+                .setDescription("Quatrième choix")
+                .setRequired(false)
+        )
+
+        .addStringOption(option =>
+            option
+                .setName("choix5")
+                .setDescription("Cinquième choix")
+                .setRequired(false)
+        )
+
+        .addBooleanOption(option =>
+            option
+                .setName("anonyme")
+                .setDescription("Sondage anonyme ?")
+                .setRequired(false)
+        )
+)
         // END
         .addSubcommand(sub =>
             sub
