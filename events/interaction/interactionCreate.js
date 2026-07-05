@@ -809,8 +809,7 @@ if (
         await interaction.reply({
             content: "❌ Une erreur est survenue.",
             ephemeral: true
-        }).catch(() => {});
- });
+       });
 
     }
 
