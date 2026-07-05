@@ -810,11 +810,18 @@ if (
             content: "❌ Une erreur est survenue.",
             ephemeral: true
         }).catch(() => {});
+ });
+
     }
 
 }
-    // =========================
+
+}
+
+// =========================
+
 // BOUNTY
+
 // =========================
 if (
     interaction.isButton() &&
