@@ -1,6 +1,7 @@
-const { EmbedBuilder } = require("discord.js");
+const { EmbedBuilder, AttachmentBuilder } = require("discord.js");
+const path = require("path");
 const CasinoProfile = require("../../models/CasinoProfile");
-const series = require("../data/series.json");
+const series = require("../../data/series.json");
 
 module.exports = {
     name: "serieguess",
@@ -17,8 +18,13 @@ module.exports = {
             }
         }
 
-        const question =
-            series[Math.floor(Math.random() * series.length)];
+        const question = series[Math.floor(Math.random() * series.length)];
+
+        // Image
+        const image = new AttachmentBuilder(
+            path.join(__dirname, "../../assets", question.image),
+            { name: "serie.jpg" }
+        );
 
         const embed = new EmbedBuilder()
             .setColor("#5865F2")
@@ -26,27 +32,26 @@ module.exports = {
             .setDescription(
                 "Trouve le nom de cette série !\n\n⏱️ Tu as **30 secondes** pour répondre."
             )
-            .setImage(question.image)
+            .setImage("attachment://serie.jpg")
             .setFooter({ text: "Réponds dans le chat" });
 
         await message.channel.send({
-            embeds: [embed]
+            embeds: [embed],
+            files: [image]
         });
 
+        // Réponses valides
         const validAnswers = [
-            question.name.toLowerCase().trim(),
-            ...(question.aliases || []).map(a =>
-                a.toLowerCase().trim()
-            )
+            question.title.toLowerCase().trim(),
+            ...(question.aliases || []).map(a => a.toLowerCase().trim())
         ];
 
-        const collector =
-            message.channel.createMessageCollector({
-                filter: m =>
-                    !m.author.bot &&
-                    m.channel.id === message.channel.id,
-                time: 30000
-            });
+        const collector = message.channel.createMessageCollector({
+            filter: m =>
+                !m.author.bot &&
+                m.channel.id === message.channel.id,
+            time: 30000
+        });
 
         let ended = false;
 
@@ -54,26 +59,22 @@ module.exports = {
             if (ended) return;
             ended = true;
 
-            if (options?.onEnd)
-                options.onEnd();
+            if (options?.onEnd) options.onEnd();
         };
 
         collector.on("collect", async m => {
 
-            const guess =
-                m.content.toLowerCase().trim();
+            const guess = m.content.toLowerCase().trim();
 
             if (validAnswers.includes(guess)) {
 
                 collector.stop("found");
 
-                let rewardText =
-                    "🎮 Aucune récompense";
+                let rewardText = "🎮 Aucune récompense";
 
                 if (options.reward !== false) {
 
-                    const isGift =
-                        Math.random() < 0.10;
+                    const isGift = Math.random() < 0.10;
 
                     if (isGift) {
 
@@ -87,8 +88,7 @@ module.exports = {
 
                     } else {
 
-                        const reward =
-                            Math.floor(Math.random() * 901) + 100;
+                        const reward = Math.floor(Math.random() * 901) + 100;
 
                         await CasinoProfile.findOneAndUpdate(
                             { userId: m.author.id },
@@ -96,8 +96,7 @@ module.exports = {
                             { upsert: true }
                         );
 
-                        rewardText =
-                            `💴 ${reward} Yens`;
+                        rewardText = `💴 ${reward} Yens`;
 
                     }
 
@@ -110,8 +109,8 @@ module.exports = {
                             .setTitle("✅ Bonne réponse !")
                             .setDescription(
                                 options.reward === false
-                                    ? `${m.author} a trouvé !\n\n📺 Série : **${question.name}**`
-                                    : `${m.author} a trouvé !\n\n📺 Série : **${question.name}**\n\nRécompense : ${rewardText}`
+                                    ? `${m.author} a trouvé !\n\n📺 Série : **${question.title}**`
+                                    : `${m.author} a trouvé !\n\n📺 Série : **${question.title}**\n\nRécompense : ${rewardText}`
                             )
                             .setTimestamp()
                     ]
@@ -132,7 +131,7 @@ module.exports = {
                             .setColor("#ED4245")
                             .setTitle("⏰ Temps écoulé")
                             .setDescription(
-                                `Personne n'a trouvé.\n\n📺 Série : **${question.name}**`
+                                `Personne n'a trouvé.\n\n📺 Série : **${question.title}**`
                             )
                             .setTimestamp()
                     ]
