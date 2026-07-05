@@ -739,7 +739,7 @@ if (
       console.log("Bouton shop cliqué :", interaction.customId);
 
     try {
-    const { SHOP_ITEMS } = require("../slashCommands/shop");
+    const { SHOP_ITEMS } = require("../../slashCommands/shop");
     const LOGS_CASINO = "1520766436388245585";
 
     const itemId = interaction.customId.replace("shop_buy_", "");
