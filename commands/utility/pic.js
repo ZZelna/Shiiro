@@ -1,49 +1,55 @@
 module.exports = {
     name: "pic",
-async run(message) {
+    async run(message) {
 
-    const user = message.mentions.users.first() || message.author;
+        const ALLOWED_ROLE_ID = "1519633537156907088";
 
-    const comments = [
+        if (!message.member.roles.cache.has(ALLOWED_ROLE_ID)) {
+            return message.reply("❌ Vous n'avez pas la permission d'utiliser cette commande.");
+        }
 
-        `📸 ${user.username} est plutôt photogénique aujourd'hui.`,
+        const user = message.mentions.users.first() || message.author;
 
-        `✨ Cet avatar représente parfaitement ${user.username}.`,
+        const comments = [
 
-        `🎭 Voici le visage numérique de ${user.username}.`,
+            `📸 ${user.username} est plutôt photogénique aujourd'hui.`,
 
-        `🌟 Un avatar digne d'une légende.`
+            `✨ Cet avatar représente parfaitement ${user.username}.`,
 
-    ];
+            `🎭 Voici le visage numérique de ${user.username}.`,
 
-    const comment = comments[Math.floor(Math.random() * comments.length)];
+            `🌟 Un avatar digne d'une légende.`
 
-    const embed = {
+        ];
 
-        color: 0x5865F2,
+        const comment = comments[Math.floor(Math.random() * comments.length)];
 
-        title: `🖼️ Avatar de ${user.username}`,
+        const embed = {
 
-        description: comment,
+            color: 0x5865F2,
 
-        image: {
+            title: `🖼️ Avatar de ${user.username}`,
 
-            url: user.displayAvatarURL({
+            description: comment,
 
-                size: 1024,
+            image: {
 
-                forceStatic: false
+                url: user.displayAvatarURL({
 
-            })
+                    size: 1024,
 
-        },
- footer: {
-    text: `Demandé par ${message.author.username}`
-},
-timestamp: new Date()
-    };
+                    forceStatic: false
 
-    message.reply({ embeds: [embed] });
+                })
 
-}
+            },
+            footer: {
+                text: `Demandé par ${message.author.username}`
+            },
+            timestamp: new Date()
+        };
+
+        message.reply({ embeds: [embed] });
+
+    }
 };
