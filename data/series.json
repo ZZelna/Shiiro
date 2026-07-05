@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 201,
+    "type": "serie",
+    "title": "Breaking Bad",
+    "image": "series/1.jpg",
+    "aliases": ["breaking bad"]
+  },
+  {
+    "id": 202,
+    "type": "serie",
+    "title": "Better Call Saul",
+    "image": "series/2.jpg",
+    "aliases": ["better call saul"]
+  },
+  {
+    "id": 203,
+    "type": "serie",
+    "title": "Game of Thrones",
+    "image": "series/3.jpg",
+    "aliases": ["game of thrones", "got"]
+  },
+  {
+    "id": 204,
+    "type": "serie",
+    "title": "House of the Dragon",
+    "image": "series/4.jpg",
+    "aliases": ["house of the dragon"]
+  },
+  {
+    "id": 205,
+    "type": "serie",
+    "title": "The Walking Dead",
+    "image": "series/5.jpg",
+    "aliases": ["the walking dead", "twd"]
+  },
+  {
+    "id": 206,
+    "type": "serie",
+    "title": "Fear the Walking Dead",
+    "image": "series/6.jpg",
+    "aliases": ["fear the walking dead"]
+  },
+  {
+    "id": 207,
+    "type": "serie",
+    "title": "The Last of Us",
+    "image": "series/7.jpg",
+    "aliases": ["the last of us"]
+  },
+  {
+    "id": 208,
+    "type": "serie",
+    "title": "Stranger Things",
+    "image": "series/8.jpg",
+    "aliases": ["stranger things"]
+  },
+  {
+    "id": 209,
+    "type": "serie",
+    "title": "Wednesday",
+    "image": "series/9.jpg",
+    "aliases": ["wednesday"]
+  },
+  {
+    "id": 210,
+    "type": "serie",
+    "title": "Dark",
+    "image": "series/10.jpg",
+    "aliases": ["dark"]
+  },
+  {
+    "id": 211,
+    "type": "serie",
+    "title": "Peaky Blinders",
+    "image": "series/11.jpg",
+    "aliases": ["peaky blinders"]
+  },
+  {
+    "id": 212,
+    "type": "serie",
+    "title": "Vikings",
+    "image": "series/12.jpg",
+    "aliases": ["vikings"]
+  },
+  {
+    "id": 213,
+    "type": "serie",
+    "title": "Vikings: Valhalla",
+    "image": "series/13.jpg",
+    "aliases": ["vikings valhalla"]
+  },
+  {
+    "id": 214,
+    "type": "serie",
+    "title": "The Witcher",
+    "image": "series/14.jpg",
+    "aliases": ["the witcher"]
+  },
+  {
+    "id": 215,
+    "type": "serie",
+    "title": "The Boys",
+    "image": "series/15.jpg",
+    "aliases": ["the boys"]
+  },
+  {
+    "id": 216,
+    "type": "serie",
+    "title": "Gen V",
+    "image": "series/16.jpg",
+    "aliases": ["gen v"]
+  },
+  {
+    "id": 217,
+    "type": "serie",
+    "title": "Invincible",
+    "image": "series/17.jpg",
+    "aliases": ["invincible"]
+  },
+  {
+    "id": 218,
+    "type": "serie",
+    "title": "Arcane",
+    "image": "series/18.jpg",
+    "aliases": ["arcane"]
+  },
+  {
+    "id": 219,
+    "type": "serie",
+    "title": "Squid Game",
+    "image": "series/19.jpg",
+    "aliases": ["squid game"]
+  },
+  {
+    "id": 220,
+    "type": "serie",
+    "title": "Alice in Borderland",
+    "image": "series/20.jpg",
+    "aliases": ["alice in borderland"]
+  },
+  {
+    "id": 221,
+    "type": "serie",
+    "title": "La Casa de Papel",
+    "image": "series/21.jpg",
+    "aliases": ["la casa de papel", "money heist"]
+  },
+  {
+    "id": 222,
+    "type": "serie",
+    "title": "Berlin",
+    "image": "series/22.jpg",
+    "aliases": ["berlin"]
+  },
+  {
+    "id": 223,
+    "type": "serie",
+    "title": "Prison Break",
+    "image": "series/23.jpg",
+    "aliases": ["prison break"]
+  },
+  {
+    "id": 224,
+    "type": "serie",
+    "title": "Lost",
+    "image": "series/24.jpg",
+    "aliases": ["lost"]
+  },
+  {
+    "id": 225,
+    "type": "serie",
+    "title": "Dexter",
+    "image": "series/25.jpg",
+    "aliases": ["dexter"]
+  },
+  {
+    "id": 226,
+    "type": "serie",
+    "title": "Lucifer",
+    "image": "series/26.jpg",
+    "aliases": ["lucifer"]
+  },
+  {
+    "id": 227,
+    "type": "serie",
+    "title": "Supernatural",
+    "image": "series/27.jpg",
+    "aliases": ["supernatural"]
+  },
+  {
+    "id": 228,
+    "type": "serie",
+    "title": "Sherlock",
+    "image": "series/28.jpg",
+    "aliases": ["sherlock"]
+  },
+  {
+    "id": 229,
+    "type": "serie",
+    "title": "True Detective",
+    "image": "series/29.jpg",
+    "aliases": ["true detective"]
+  },
+  {
+    "id": 230,
+    "type": "serie",
+    "title": "Black Mirror",
+    "image": "series/30.jpg",
+    "aliases": ["black mirror"]
+  },
+  {
+    "id": 231,
+    "type": "serie",
+    "title": "Mr. Robot",
+    "image": "series/31.jpg",
+    "aliases": ["mr robot", "mr. robot"]
+  },
+  {
+    "id": 232,
+    "type": "serie",
+    "title": "Narcos",
+    "image": "series/32.jpg",
+    "aliases": ["narcos"]
+  },
+  {
+    "id": 233,
+    "type": "serie",
+    "title": "Narcos: Mexico",
+    "image": "series/33.jpg",
+    "aliases": ["narcos mexico"]
+  },
+  {
+    "id": 234,
+    "type": "serie",
+    "title": "Ozark",
+    "image": "series/34.jpg",
+    "aliases": ["ozark"]
+  },
+  {
+    "id": 235,
+    "type": "serie",
+    "title": "Suits",
+    "image": "series/35.jpg",
+    "aliases": ["suits"]
+  },
+  {
+    "id": 236,
+    "type": "serie",
+    "title": "House",
+    "image": "series/36.jpg",
+    "aliases": ["house", "dr house"]
+  },
+  {
+    "id": 237,
+    "type": "serie",
+    "title": "Grey's Anatomy",
+    "image": "series/37.jpg",
+    "aliases": ["grey's anatomy", "greys anatomy"]
+  },
+  {
+    "id": 238,
+    "type": "serie",
+    "title": "The Good Doctor",
+    "image": "series/38.jpg",
+    "aliases": ["the good doctor"]
+  },
+  {
+    "id": 239,
+    "type": "serie",
+    "title": "How I Met Your Mother",
+    "image": "series/39.jpg",
+    "aliases": ["how i met your mother", "himym"]
+  },
+  {
+    "id": 240,
+    "type": "serie",
+    "title": "Friends",
+    "image": "series/40.jpg",
+    "aliases": ["friends"]
+  },
+  {
+    "id": 241,
+    "type": "serie",
+    "title": "The Big Bang Theory",
+    "image": "series/41.jpg",
+    "aliases": ["the big bang theory", "big bang theory"]
+  },
+  {
+    "id": 242,
+    "type": "serie",
+    "title": "Brooklyn Nine-Nine",
+    "image": "series/42.jpg",
+    "aliases": ["brooklyn nine-nine", "brooklyn 99"]
+  },
+  {
+    "id": 243,
+    "type": "serie",
+    "title": "The Office",
+    "image": "series/43.jpg",
+    "aliases": ["the office"]
+  },
+  {
+    "id": 244,
+    "type": "serie",
+    "title": "Modern Family",
+    "image": "series/44.jpg",
+    "aliases": ["modern family"]
+  },
+  {
+    "id": 245,
+    "type": "serie",
+    "title": "The Mandalorian",
+    "image": "series/45.jpg",
+    "aliases": ["the mandalorian", "mandalorian"]
+  },
+  {
+    "id": 246,
+    "type": "serie",
+    "title": "Obi-Wan Kenobi",
+    "image": "series/46.jpg",
+    "aliases": ["obi-wan kenobi"]
+  },
+  {
+    "id": 247,
+    "type": "serie",
+    "title": "Andor",
+    "image": "series/47.jpg",
+    "aliases": ["andor"]
+  },
+  {
+    "id": 248,
+    "type": "serie",
+    "title": "Loki",
+    "image": "series/48.jpg",
+    "aliases": ["loki"]
+  },
+  {
+    "id": 249,
+    "type": "serie",
+    "title": "WandaVision",
+    "image": "series/49.jpg",
+    "aliases": ["wandavision"]
+  },
+  {
+    "id": 250,
+    "type": "serie",
+    "title": "Moon Knight",
+    "image": "series/50.jpg",
+    "aliases": ["moon knight"]
+  },
+  {
+    "id": 251,
+    "type": "serie",
+    "title": "Daredevil",
+    "image": "series/51.jpg",
+    "aliases": ["daredevil"]
+  },
+  {
+    "id": 252,
+    "type": "serie",
+    "title": "Jessica Jones",
+    "image": "series/52.jpg",
+    "aliases": ["jessica jones"]
+  },
+  {
+    "id": 253,
+    "type": "serie",
+    "title": "The Punisher",
+    "image": "series/53.jpg",
+    "aliases": ["the punisher", "punisher"]
+  },
+  {
+    "id": 254,
+    "type": "serie",
+    "title": "Iron Fist",
+    "image": "series/54.jpg",
+    "aliases": ["iron fist"]
+  },
+  {
+    "id": 255,
+    "type": "serie",
+    "title": "Luke Cage",
+    "image": "series/55.jpg",
+    "aliases": ["luke cage"]
+  },
+  {
+    "id": 256,
+    "type": "serie",
+    "title": "The Defenders",
+    "image": "series/56.jpg",
+    "aliases": ["the defenders"]
+  },
+  {
+    "id": 257,
+    "type": "serie",
+    "title": "Arrow",
+    "image": "series/57.jpg",
+    "aliases": ["arrow"]
+  },
+  {
+    "id": 258,
+    "type": "serie",
+    "title": "The Flash",
+    "image": "series/58.jpg",
+    "aliases": ["the flash", "flash"]
+  },
+  {
+    "id": 259,
+    "type": "serie",
+    "title": "Supergirl",
+    "image": "series/59.jpg",
+    "aliases": ["supergirl"]
+  },
+  {
+    "id": 260,
+    "type": "serie",
+    "title": "Legends of Tomorrow",
+    "image": "series/60.jpg",
+    "aliases": ["legends of tomorrow", "dc legends of tomorrow"]
+  },
+  {
+    "id": 261,
+    "type": "serie",
+    "title": "Smallville",
+    "image": "series/61.jpg",
+    "aliases": ["smallville"]
+  },
+  {
+    "id": 262,
+    "type": "serie",
+    "title": "Gotham",
+    "image": "series/62.jpg",
+    "aliases": ["gotham"]
+  },
+  {
+    "id": 263,
+    "type": "serie",
+    "title": "Titans",
+    "image": "series/63.jpg",
+    "aliases": ["titans"]
+  },
+  {
+    "id": 264,
+    "type": "serie",
+    "title": "Doom Patrol",
+    "image": "series/64.jpg",
+    "aliases": ["doom patrol"]
+  },
+  {
+    "id": 265,
+    "type": "serie",
+    "title": "The Penguin",
+    "image": "series/65.jpg",
+    "aliases": ["the penguin", "penguin"]
+  },
+  {
+    "id": 266,
+    "type": "serie",
+    "title": "Fallout",
+    "image": "series/66.jpg",
+    "aliases": ["fallout"]
+  },
+  {
+    "id": 267,
+    "type": "serie",
+    "title": "Severance",
+    "image": "series/67.jpg",
+    "aliases": ["severance"]
+  },
+  {
+    "id": 268,
+    "type": "serie",
+    "title": "The Bear",
+    "image": "series/68.jpg",
+    "aliases": ["the bear"]
+  },
+  {
+    "id": 269,
+    "type": "serie",
+    "title": "Reacher",
+    "image": "series/69.jpg",
+    "aliases": ["reacher"]
+  },
+  {
+    "id": 270,
+    "type": "serie",
+    "title": "Jack Ryan",
+    "image": "series/70.jpg",
+    "aliases": ["jack ryan", "tom clancy's jack ryan"]
+  },
+  {
+    "id": 271,
+    "type": "serie",
+    "title": "You",
+    "image": "series/71.jpg",
+    "aliases": ["you"]
+  },
+  {
+    "id": 272,
+    "type": "serie",
+    "title": "Outer Banks",
+    "image": "series/72.jpg",
+    "aliases": ["outer banks"]
+  },
+  {
+    "id": 273,
+    "type": "serie",
+    "title": "Elite",
+    "image": "series/73.jpg",
+    "aliases": ["elite", "élite"]
+  },
+  {
+    "id": 274,
+    "type": "serie",
+    "title": "Sex Education",
+    "image": "series/74.jpg",
+    "aliases": ["sex education"]
+  },
+  {
+    "id": 275,
+    "type": "serie",
+    "title": "Heartstopper",
+    "image": "series/75.jpg",
+    "aliases": ["heartstopper"]
+  },
+  {
+    "id": 276,
+    "type": "serie",
+    "title": "Ginny & Georgia",
+    "image": "series/76.jpg",
+    "aliases": ["ginny and georgia", "ginny & georgia"]
+  },
+  {
+    "id": 277,
+    "type": "serie",
+    "title": "Emily in Paris",
+    "image": "series/77.jpg",
+    "aliases": ["emily in paris"]
+  },
+  {
+    "id": 278,
+    "type": "serie",
+    "title": "The Queen's Gambit",
+    "image": "series/78.jpg",
+    "aliases": ["the queen's gambit", "le jeu de la dame"]
+  },
+  {
+    "id": 279,
+    "type": "serie",
+    "title": "Manifest",
+    "image": "series/79.jpg",
+    "aliases": ["manifest"]
+  },
+  {
+    "id": 280,
+    "type": "serie",
+    "title": "The 100",
+    "image": "series/80.jpg",
+    "aliases": ["the 100", "100"]
+  },
+  {
+    "id": 281,
+    "type": "serie",
+    "title": "Teen Wolf",
+    "image": "series/81.jpg",
+    "aliases": ["teen wolf"]
+  },
+  {
+    "id": 282,
+    "type": "serie",
+    "title": "Riverdale",
+    "image": "series/82.jpg",
+    "aliases": ["riverdale"]
+  },
+  {
+    "id": 283,
+    "type": "serie",
+    "title": "Cobra Kai",
+    "image": "series/83.jpg",
+    "aliases": ["cobra kai"]
+  },
+  {
+    "id": 284,
+    "type": "serie",
+    "title": "The Umbrella Academy",
+    "image": "series/84.jpg",
+    "aliases": ["the umbrella academy"]
+  },
+  {
+    "id": 285,
+    "type": "serie",
+    "title": "Locke & Key",
+    "image": "series/85.jpg",
+    "aliases": ["locke and key", "locke & key"]
+  },
+  {
+    "id": 286,
+    "type": "serie",
+    "title": "Sweet Tooth",
+    "image": "series/86.jpg",
+    "aliases": ["sweet tooth"]
+  },
+  {
+    "id": 287,
+    "type": "serie",
+    "title": "Shadow and Bone",
+    "image": "series/87.jpg",
+    "aliases": ["shadow and bone"]
+  },
+  {
+    "id": 288,
+    "type": "serie",
+    "title": "The Sandman",
+    "image": "series/88.jpg",
+    "aliases": ["the sandman", "sandman"]
+  },
+  {
+    "id": 289,
+    "type": "serie",
+    "title": "His Dark Materials",
+    "image": "series/89.jpg",
+    "aliases": ["his dark materials"]
+  },
+  {
+    "id": 290,
+    "type": "serie",
+    "title": "Sons of Anarchy",
+    "image": "series/90.jpg",
+    "aliases": ["sons of anarchy"]
+  },
+  {
+    "id": 291,
+    "type": "serie",
+    "title": "Mayans M.C.",
+    "image": "series/91.jpg",
+    "aliases": ["mayans mc", "mayans m.c."]
+  },
+  {
+    "id": 292,
+    "type": "serie",
+    "title": "Banshee",
+    "image": "series/92.jpg",
+    "aliases": ["banshee"]
+  },
+  {
+    "id": 293,
+    "type": "serie",
+    "title": "Power",
+    "image": "series/93.jpg",
+    "aliases": ["power"]
+  },
+  {
+    "id": 294,
+    "type": "serie",
+    "title": "Power Book II: Ghost",
+    "image": "series/94.jpg",
+    "aliases": ["power book ii ghost", "ghost"]
+  },
+  {
+    "id": 295,
+    "type": "serie",
+    "title": "Snowfall",
+    "image": "series/95.jpg",
+    "aliases": ["snowfall"]
+  },
+  {
+    "id": 296,
+    "type": "serie",
+    "title": "Top Boy",
+    "image": "series/96.jpg",
+    "aliases": ["top boy"]
+  },
+  {
+    "id": 297,
+    "type": "serie",
+    "title": "ZeroZeroZero",
+    "image": "series/97.jpg",
+    "aliases": ["zerozerozero"]
+  },
+  {
+    "id": 298,
+    "type": "serie",
+    "title": "Gomorra",
+    "image": "series/98.jpg",
+    "aliases": ["gomorra"]
+  },
+  {
+    "id": 299,
+    "type": "serie",
+    "title": "Boardwalk Empire",
+    "image": "series/99.jpg",
+    "aliases": ["boardwalk empire"]
+  },
+  {
+    "id": 300,
+    "type": "serie",
+    "title": "The Sopranos",
+    "image": "series/100.jpg",
+    "aliases": ["the sopranos", "sopranos"]
+  },
+  {
+    "id": 301,
+    "type": "serie",
+    "title": "The Wire",
+    "image": "series/101.jpg",
+    "aliases": ["the wire"]
+  },
+  {
+    "id": 302,
+    "type": "serie",
+    "title": "Band of Brothers",
+    "image": "series/102.jpg",
+    "aliases": ["band of brothers"]
+  },
+  {
+    "id": 303,
+    "type": "serie",
+    "title": "Chernobyl",
+    "image": "series/103.jpg",
+    "aliases": ["chernobyl"]
+  },
+  {
+    "id": 304,
+    "type": "serie",
+    "title": "Westworld",
+    "image": "series/104.jpg",
+    "aliases": ["westworld"]
+  },
+  {
+    "id": 305,
+    "type": "serie",
+    "title": "The Leftovers",
+    "image": "series/105.jpg",
+    "aliases": ["the leftovers"]
+  },
+  {
+    "id": 306,
+    "type": "serie",
+    "title": "The Handmaid's Tale",
+    "image": "series/106.jpg",
+    "aliases": ["the handmaid's tale", "la servante écarlate"]
+  },
+  {
+    "id": 307,
+    "type": "serie",
+    "title": "Euphoria",
+    "image": "series/107.jpg",
+    "aliases": ["euphoria"]
+  },
+  {
+    "id": 308,
+    "type": "serie",
+    "title": "The White Lotus",
+    "image": "series/108.jpg",
+    "aliases": ["the white lotus"]
+  },
+  {
+    "id": 309,
+    "type": "serie",
+    "title": "Succession",
+    "image": "series/109.jpg",
+    "aliases": ["succession"]
+  },
+  {
+    "id": 310,
+    "type": "serie",
+    "title": "Billions",
+    "image": "series/110.jpg",
+    "aliases": ["billions"]
+  },
+  {
+    "id": 311,
+    "type": "serie",
+    "title": "The Rookie",
+    "image": "series/111.jpg",
+    "aliases": ["the rookie"]
+  },
+  {
+    "id": 312,
+    "type": "serie",
+    "title": "9-1-1",
+    "image": "series/112.jpg",
+    "aliases": ["911", "9-1-1"]
+  },
+  {
+    "id": 313,
+    "type": "serie",
+    "title": "Chicago Fire",
+    "image": "series/113.jpg",
+    "aliases": ["chicago fire"]
+  },
+  {
+    "id": 314,
+    "type": "serie",
+    "title": "Chicago P.D.",
+    "image": "series/114.jpg",
+    "aliases": ["chicago pd", "chicago p.d."]
+  },
+  {
+    "id": 315,
+    "type": "serie",
+    "title": "NCIS",
+    "image": "series/115.jpg",
+    "aliases": ["ncis"]
+  },
+  {
+    "id": 316,
+    "type": "serie",
+    "title": "FBI",
+    "image": "series/116.jpg",
+    "aliases": ["fbi"]
+  },
+  {
+    "id": 317,
+    "type": "serie",
+    "title": "The Blacklist",
+    "image": "series/117.jpg",
+    "aliases": ["the blacklist", "blacklist"]
+  },
+  {
+    "id": 318,
+    "type": "serie",
+    "title": "Castle",
+    "image": "series/118.jpg",
+    "aliases": ["castle"]
+  },
+  {
+    "id": 319,
+    "type": "serie",
+    "title": "Bones",
+    "image": "series/119.jpg",
+    "aliases": ["bones"]
+  },
+  {
+    "id": 320,
+    "type": "serie",
+    "title": "Mentalist",
+    "image": "series/120.jpg",
+    "aliases": ["mentalist", "the mentalist"]
+  },
+  {
+    "id": 321,
+    "type": "serie",
+    "title": "Criminal Minds",
+    "image": "series/121.jpg",
+    "aliases": ["criminal minds", "esprits criminels"]
+  },
+  {
+    "id": 322,
+    "type": "serie",
+    "title": "Lie to Me",
+    "image": "series/122.jpg",
+    "aliases": ["lie to me"]
+  },
+  {
+    "id": 323,
+    "type": "serie",
+    "title": "Fringe",
+    "image": "series/123.jpg",
+    "aliases": ["fringe"]
+  },
+  {
+    "id": 324,
+    "type": "serie",
+    "title": "Person of Interest",
+    "image": "series/124.jpg",
+    "aliases": ["person of interest"]
+  },
+  {
+    "id": 325,
+    "type": "serie",
+    "title": "24 Heures Chrono",
+    "image": "series/125.jpg",
+    "aliases": ["24", "24 heures chrono"]
+  },
+  {
+    "id": 326,
+    "type": "serie",
+    "title": "Homeland",
+    "image": "series/126.jpg",
+    "aliases": ["homeland"]
+  },
+  {
+    "id": 327,
+    "type": "serie",
+    "title": "Designated Survivor",
+    "image": "series/127.jpg",
+    "aliases": ["designated survivor"]
+  },
+  {
+    "id": 328,
+    "type": "serie",
+    "title": "The Night Agent",
+    "image": "series/128.jpg",
+    "aliases": ["the night agent"]
+  },
+  {
+    "id": 329,
+    "type": "serie",
+    "title": "Jack Reacher",
+    "image": "series/129.jpg",
+    "aliases": ["jack reacher", "reacher"]
+  },
+  {
+    "id": 330,
+    "type": "serie",
+    "title": "The Terminal List",
+    "image": "series/130.jpg",
+    "aliases": ["the terminal list"]
+  },
+  {
+    "id": 331,
+    "type": "serie",
+    "title": "The Pacific",
+    "image": "series/131.jpg",
+    "aliases": ["the pacific"]
+  },
+  {
+    "id": 332,
+    "type": "serie",
+    "title": "Masters of the Air",
+    "image": "series/132.jpg",
+    "aliases": ["masters of the air"]
+  },
+  {
+    "id": 333,
+    "type": "serie",
+    "title": "Halo",
+    "image": "series/133.jpg",
+    "aliases": ["halo"]
+  },
+  {
+    "id": 334,
+    "type": "serie",
+    "title": "Foundation",
+    "image": "series/134.jpg",
+    "aliases": ["foundation"]
+  },
+  {
+    "id": 335,
+    "type": "serie",
+    "title": "Silo",
+    "image": "series/135.jpg",
+    "aliases": ["silo"]
+  },
+  {
+    "id": 336,
+    "type": "serie",
+    "title": "From",
+    "image": "series/136.jpg",
+    "aliases": ["from"]
+  },
+  {
+    "id": 337,
+    "type": "serie",
+    "title": "See",
+    "image": "series/137.jpg",
+    "aliases": ["see"]
+  },
+  {
+    "id": 338,
+    "type": "serie",
+    "title": "Monarch: Legacy of Monsters",
+    "image": "series/138.jpg",
+    "aliases": ["monarch legacy of monsters", "monarch"]
+  },
+  {
+    "id": 339,
+    "type": "serie",
+    "title": "Percy Jackson and the Olympians",
+    "image": "series/139.jpg",
+    "aliases": ["percy jackson", "percy jackson and the olympians"]
+  },
+  {
+    "id": 340,
+    "type": "serie",
+    "title": "One Piece",
+    "image": "series/140.jpg",
+    "aliases": ["one piece", "one piece live action"]
+  },
+  {
+    "id": 341,
+    "type": "serie",
+    "title": "Ahsoka",
+    "image": "series/141.jpg",
+    "aliases": ["ahsoka"]
+  },
+  {
+    "id": 342,
+    "type": "serie",
+    "title": "The Book of Boba Fett",
+    "image": "series/142.jpg",
+    "aliases": ["the book of boba fett", "boba fett"]
+  },
+  {
+    "id": 343,
+    "type": "serie",
+    "title": "Skeleton Crew",
+    "image": "series/143.jpg",
+    "aliases": ["skeleton crew"]
+  },
+  {
+    "id": 344,
+    "type": "serie",
+    "title": "Secret Invasion",
+    "image": "series/144.jpg",
+    "aliases": ["secret invasion"]
+  },
+  {
+    "id": 345,
+    "type": "serie",
+    "title": "Agatha All Along",
+    "image": "series/145.jpg",
+    "aliases": ["agatha all along"]
+  },
+  {
+    "id": 346,
+    "type": "serie",
+    "title": "Echo",
+    "image": "series/146.jpg",
+    "aliases": ["echo"]
+  },
+  {
+    "id": 347,
+    "type": "serie",
+    "title": "Hawkeye",
+    "image": "series/147.jpg",
+    "aliases": ["hawkeye"]
+  },
+  {
+    "id": 348,
+    "type": "serie",
+    "title": "Ms. Marvel",
+    "image": "series/148.jpg",
+    "aliases": ["ms marvel", "ms. marvel"]
+  },
+  {
+    "id": 349,
+    "type": "serie",
+    "title": "She-Hulk",
+    "image": "series/149.jpg",
+    "aliases": ["she hulk", "she-hulk"]
+  },
+  {
+    "id": 350,
+    "type": "serie",
+    "title": "Agents of S.H.I.E.L.D.",
+    "image": "series/150.jpg",
+    "aliases": ["agents of shield", "agents of s.h.i.e.l.d."]
+  },
+  {
+    "id": 351,
+    "type": "serie",
+    "title": "Merlin",
+    "image": "series/151.jpg",
+    "aliases": ["merlin"]
+  },
+  {
+    "id": 352,
+    "type": "serie",
+    "title": "The Originals",
+    "image": "series/152.jpg",
+    "aliases": ["the originals", "originals"]
+  },
+  {
+    "id": 353,
+    "type": "serie",
+    "title": "The Vampire Diaries",
+    "image": "series/153.jpg",
+    "aliases": ["the vampire diaries", "vampire diaries", "tvd"]
+  },
+  {
+    "id": 354,
+    "type": "serie",
+    "title": "Legacies",
+    "image": "series/154.jpg",
+    "aliases": ["legacies"]
+  },
+  {
+    "id": 355,
+    "type": "serie",
+    "title": "The OA",
+    "image": "series/155.jpg",
+    "aliases": ["the oa"]
+  },
+  {
+    "id": 356,
+    "type": "serie",
+    "title": "Sense8",
+    "image": "series/156.jpg",
+    "aliases": ["sense8"]
+  },
+  {
+    "id": 357,
+    "type": "serie",
+    "title": "Altered Carbon",
+    "image": "series/157.jpg",
+    "aliases": ["altered carbon"]
+  },
+  {
+    "id": 358,
+    "type": "serie",
+    "title": "Travelers",
+    "image": "series/158.jpg",
+    "aliases": ["travelers"]
+  },
+  {
+    "id": 359,
+    "type": "serie",
+    "title": "Lost in Space",
+    "image": "series/159.jpg",
+    "aliases": ["lost in space"]
+  },
+  {
+    "id": 360,
+    "type": "serie",
+    "title": "Raised by Wolves",
+    "image": "series/160.jpg",
+    "aliases": ["raised by wolves"]
+  },
+  {
+    "id": 361,
+    "type": "serie",
+    "title": "The Expanse",
+    "image": "series/161.jpg",
+    "aliases": ["the expanse"]
+  },
+  {
+    "id": 362,
+    "type": "serie",
+    "title": "Orphan Black",
+    "image": "series/162.jpg",
+    "aliases": ["orphan black"]
+  },
+  {
+    "id": 363,
+    "type": "serie",
+    "title": "Continuum",
+    "image": "series/163.jpg",
+    "aliases": ["continuum"]
+  },
+  {
+    "id": 364,
+    "type": "serie",
+    "title": "The Rain",
+    "image": "series/164.jpg",
+    "aliases": ["the rain"]
+  },
+  {
+    "id": 365,
+    "type": "serie",
+    "title": "Into the Night",
+    "image": "series/165.jpg",
+    "aliases": ["into the night"]
+  },
+  {
+    "id": 366,
+    "type": "serie",
+    "title": "Black Summer",
+    "image": "series/166.jpg",
+    "aliases": ["black summer"]
+  },
+  {
+    "id": 367,
+    "type": "serie",
+    "title": "Kingdom",
+    "image": "series/167.jpg",
+    "aliases": ["kingdom"]
+  },
+  {
+    "id": 368,
+    "type": "serie",
+    "title": "All of Us Are Dead",
+    "image": "series/168.jpg",
+    "aliases": ["all of us are dead"]
+  },
+  {
+    "id": 369,
+    "type": "serie",
+    "title": "Sweet Home",
+    "image": "series/169.jpg",
+    "aliases": ["sweet home"]
+  },
+  {
+    "id": 370,
+    "type": "serie",
+    "title": "Hellbound",
+    "image": "series/170.jpg",
+    "aliases": ["hellbound"]
+  },
+  {
+    "id": 371,
+    "type": "serie",
+    "title": "Kingdom (Corée)",
+    "image": "series/171.jpg",
+    "aliases": ["kingdom korea", "kingdom corée"]
+  },
+  {
+    "id": 372,
+    "type": "serie",
+    "title": "Money Heist: Korea",
+    "image": "series/172.jpg",
+    "aliases": ["money heist korea", "la casa de papel corée"]
+  },
+  {
+    "id": 373,
+    "type": "serie",
+    "title": "Blue Eye Samurai",
+    "image": "series/173.jpg",
+    "aliases": ["blue eye samurai"]
+  },
+  {
+    "id": 374,
+    "type": "serie",
+    "title": "Cyberpunk: Edgerunners",
+    "image": "series/174.jpg",
+    "aliases": ["cyberpunk edgerunners", "edgerunners"]
+  },
+  {
+    "id": 375,
+    "type": "serie",
+    "title": "Castlevania",
+    "image": "series/175.jpg",
+    "aliases": ["castlevania"]
+  },
+  {
+    "id": 376,
+    "type": "serie",
+    "title": "Castlevania: Nocturne",
+    "image": "series/176.jpg",
+    "aliases": ["castlevania nocturne"]
+  },
+  {
+    "id": 377,
+    "type": "serie",
+    "title": "Blue Lock",
+    "image": "series/177.jpg",
+    "aliases": ["blue lock"]
+  },
+  {
+    "id": 378,
+    "type": "serie",
+    "title": "Attack on Titan",
+    "image": "series/178.jpg",
+    "aliases": ["attack on titan", "snk", "shingeki no kyojin"]
+  },
+  {
+    "id": 379,
+    "type": "serie",
+    "title": "Demon Slayer",
+    "image": "series/179.jpg",
+    "aliases": ["demon slayer", "kimetsu no yaiba"]
+  },
+  {
+    "id": 380,
+    "type": "serie",
+    "title": "Jujutsu Kaisen",
+    "image": "series/180.jpg",
+    "aliases": ["jujutsu kaisen", "jjk"]
+  },
+  {
+    "id": 381,
+    "type": "serie",
+    "title": "One Punch Man",
+    "image": "series/181.jpg",
+    "aliases": ["one punch man", "opm"]
+  },
+  {
+    "id": 382,
+    "type": "serie",
+    "title": "Chainsaw Man",
+    "image": "series/182.jpg",
+    "aliases": ["chainsaw man"]
+  },
+  {
+    "id": 383,
+    "type": "serie",
+    "title": "Death Note",
+    "image": "series/183.jpg",
+    "aliases": ["death note"]
+  },
+  {
+    "id": 384,
+    "type": "serie",
+    "title": "Tokyo Ghoul",
+    "image": "series/184.jpg",
+    "aliases": ["tokyo ghoul"]
+  },
+  {
+    "id": 385,
+    "type": "serie",
+    "title": "Tokyo Revengers",
+    "image": "series/185.jpg",
+    "aliases": ["tokyo revengers"]
+  },
+  {
+    "id": 386,
+    "type": "serie",
+    "title": "Hunter × Hunter",
+    "image": "series/186.jpg",
+    "aliases": ["hunter x hunter", "hxh"]
+  },
+  {
+    "id": 387,
+    "type": "serie",
+    "title": "Naruto",
+    "image": "series/187.jpg",
+    "aliases": ["naruto"]
+  },
+  {
+    "id": 388,
+    "type": "serie",
+    "title": "Naruto Shippuden",
+    "image": "series/188.jpg",
+    "aliases": ["naruto shippuden"]
+  },
+  {
+    "id": 389,
+    "type": "serie",
+    "title": "Boruto",
+    "image": "series/189.jpg",
+    "aliases": ["boruto"]
+  },
+  {
+    "id": 390,
+    "type": "serie",
+    "title": "Bleach",
+    "image": "series/190.jpg",
+    "aliases": ["bleach"]
+  },
+  {
+    "id": 391,
+    "type": "serie",
+    "title": "One Piece",
+    "image": "series/191.jpg",
+    "aliases": ["one piece"]
+  },
+  {
+    "id": 392,
+    "type": "serie",
+    "title": "Dragon Ball Z",
+    "image": "series/192.jpg",
+    "aliases": ["dragon ball z", "dbz"]
+  },
+  {
+    "id": 393,
+    "type": "serie",
+    "title": "Dragon Ball Super",
+    "image": "series/193.jpg",
+    "aliases": ["dragon ball super", "dbs"]
+  },
+  {
+    "id": 394,
+    "type": "serie",
+    "title": "My Hero Academia",
+    "image": "series/194.jpg",
+    "aliases": ["my hero academia", "mha"]
+  },
+  {
+    "id": 395,
+    "type": "serie",
+    "title": "Black Clover",
+    "image": "series/195.jpg",
+    "aliases": ["black clover"]
+  },
+  {
+    "id": 396,
+    "type": "serie",
+    "title": "Spy × Family",
+    "image": "series/196.jpg",
+    "aliases": ["spy x family", "spy family"]
+  },
+  {
+    "id": 397,
+    "type": "serie",
+    "title": "Haikyu!!",
+    "image": "series/197.jpg",
+    "aliases": ["haikyu"]
+  },
+  {
+    "id": 398,
+    "type": "serie",
+    "title": "Solo Leveling",
+    "image": "series/198.jpg",
+    "aliases": ["solo leveling"]
+  },
+  {
+    "id": 399,
+    "type": "serie",
+    "title": "Frieren",
+    "image": "series/199.jpg",
+    "aliases": ["frieren"]
+  },
+  {
+    "id": 400,
+    "type": "serie",
+    "title": "Dan Da Dan",
+    "image": "series/200.jpg",
+    "aliases": ["dan da dan", "dandadan"]
+  }
+]
