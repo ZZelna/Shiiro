@@ -96,7 +96,7 @@ client.once("ready", async () => {
     });
 
     const rest = new REST({ version: "10" }).setToken(process.env.DISCORD_TOKEN);
-
+console.log(`Nombre de slash commands : ${commands.length}`);
     try {
         await rest.put(
             Routes.applicationCommands(client.user.id),
