@@ -118,15 +118,7 @@ module.exports = async (interaction) => {
             ephemeral: true
         });
     }
-
-    const embed = new EmbedBuilder()
-        .setColor("#2B2D31")
-        .setTitle(`🤫 Confession #${confession.number}`)
-        .setDescription(confession.content)
-        .setFooter({
-            text: "Confession anonyme"
-        });
-            const embed = new EmbedBuilder()
+ const embed = new EmbedBuilder()
             .setColor("#2B2D31")
             .setTitle(`🤫 Confession #${config.counter}`)
             .setDescription(text)
