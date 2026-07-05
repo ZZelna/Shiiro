@@ -456,14 +456,39 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
 
     const managerRole =
         newMember.guild.roles.cache.get(managerRoleId);
-
+ 
     // ───── Rôles retirés ─────
+
+    const NEVER_REMOVABLE_ROLE_ID = "1506676284070170654";
 
     const removedRoles = oldMember.roles.cache.filter(
         role => !newMember.roles.cache.has(role.id)
     );
 
     for (const role of removedRoles.values()) {
+
+        // ───── Protection : ce rôle ne peut jamais être retiré ─────
+        if (role.id === NEVER_REMOVABLE_ROLE_ID) {
+
+            try {
+                await newMember.roles.add(role.id, "Rôle protégé : ré-ajout automatique");
+            } catch (err) {
+                console.log("❌ Impossible de ré-ajouter le rôle protégé :", err);
+            }
+
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "! Tentative de retrait d'un rôle protégé.\n" +
+                    `Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
+                    `Modérateur: ${moderator} (ID: ${moderatorId})\n` +
+                    `Rôle: ${role.name} (ID: ${role.id})\n` +
+                    "Action: Rôle ré-attribué automatiquement, aucune exception autorisée. 🛡️\n" +
+                    "```"
+            });
+
+            continue; // on ne log pas en plus comme "rôle retiré" classique
+        }
 
         await logChannel.send({
             content:
@@ -477,6 +502,7 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
         });
 
     }
+
 
     // ───── Rôles ajoutés ─────
 
