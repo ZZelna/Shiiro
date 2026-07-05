@@ -222,9 +222,6 @@ module.exports = {
     });
 
 }
-
-const Survey = require("../models/Survey");
-
 if (sub === "end") {
 
     const messageId = interaction.options.getString("messageid");
