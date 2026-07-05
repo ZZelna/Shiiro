@@ -2,6 +2,13 @@ module.exports = {
     name: "banner",
 
     async run(message) {
+
+        const ALLOWED_ROLE_ID = "1519633572850438225";
+
+        if (!message.member.roles.cache.has(ALLOWED_ROLE_ID)) {
+            return message.reply("❌ Vous n'avez pas la permission d'utiliser cette commande.");
+        }
+
         const target = message.mentions.users.first() || message.author;
 
         const user = await message.client.users.fetch(target.id, {
