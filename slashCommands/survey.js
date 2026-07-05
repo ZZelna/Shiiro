@@ -223,24 +223,172 @@ module.exports = {
 
 }
 
-        if (sub === "end") {
+const Survey = require("../models/Survey");
 
-            // Fin manuelle
+if (sub === "end") {
 
-        }
+    const messageId = interaction.options.getString("message");
 
-        if (sub === "results") {
+    const survey = await Survey.findOne({
+        messageId,
+        ended: false
+    });
 
-            // Affichage des résultats
+    if (!survey)
+        return interaction.reply({
+            content: "❌ Sondage introuvable.",
+            ephemeral: true
+        });
 
-        }
+    survey.ended = true;
+    await survey.save();
 
-        if (sub === "delete") {
+    const channel = await interaction.guild.channels.fetch(
+        survey.channelId
+    );
 
-            // Suppression
+    const msg = await channel.messages.fetch(
+        survey.messageId
+    );
+
+    let result = "";
+    let winner = "";
+    let max = -1;
+
+    for (const option of survey.options) {
+
+        const votes =
+            survey.votes.get(option)?.length || 0;
+
+        result += `• ${option} : **${votes}** vote(s)\n`;
+
+        if (votes > max) {
+
+            max = votes;
+            winner = option;
 
         }
 
     }
 
+    const embed = EmbedBuilder
+        .from(msg.embeds[0])
+        .setColor("Red")
+        .setTitle("📊 Sondage terminé")
+        .setDescription(
+`${survey.question}
+
+${result}
+
+🏆 Gagnant : **${winner}**`
+        );
+
+    await msg.edit({
+        embeds: [embed],
+        components: []
+    });
+
+    return interaction.reply({
+        content: "✅ Sondage terminé.",
+        ephemeral: true
+    });
+
+}
+if (sub === "results") {
+
+    const messageId = interaction.options.getString("message");
+
+    const survey = await Survey.findOne({
+        messageId
+    });
+
+    if (!survey)
+        return interaction.reply({
+            content: "❌ Sondage introuvable.",
+            ephemeral: true
+        });
+
+    let total = 0;
+
+    for (const option of survey.options)
+        total += survey.votes.get(option)?.length || 0;
+
+    const embed = new EmbedBuilder()
+        .setColor("#5865F2")
+        .setTitle("📊 Résultats du sondage")
+        .setDescription(survey.question);
+
+    for (const option of survey.options) {
+
+        const votes =
+            survey.votes.get(option)?.length || 0;
+
+        const percent =
+            total === 0
+                ? 0
+                : Math.round(votes / total * 100);
+
+        embed.addFields({
+            name: option,
+            value:
+`🗳️ ${votes} vote(s)
+📈 ${percent}%`,
+            inline: false
+        });
+
+    }
+
+    embed.setFooter({
+        text: `${total} vote(s)`
+    });
+
+    return interaction.reply({
+        embeds: [embed],
+        ephemeral: true
+    });
+
+}
+if (sub === "delete") {
+
+    const messageId = interaction.options.getString("message");
+
+    const survey = await Survey.findOne({
+        messageId
+    });
+
+    if (!survey) {
+        return interaction.reply({
+            content: "❌ Sondage introuvable.",
+            ephemeral: true
+        });
+    }
+
+    try {
+
+        const channel = await interaction.guild.channels.fetch(
+            survey.channelId
+        );
+
+        const msg = await channel.messages.fetch(
+            survey.messageId
+        );
+
+        await msg.delete();
+
+    } catch (err) {
+        console.log(err);
+    }
+
+    await Survey.deleteOne({
+        _id: survey._id
+    });
+
+    return interaction.reply({
+        content: "🗑️ Sondage supprimé.",
+        ephemeral: true
+    });
+
+}
+
+}
 };
