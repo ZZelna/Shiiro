@@ -3,6 +3,12 @@ module.exports = {
 
     async run(message) {
 
+        const ALLOWED_ROLE_ID = "1519633572850438225";
+
+        if (!message.member.roles.cache.has(ALLOWED_ROLE_ID)) {
+            return message.reply("❌ Vous n'avez pas la permission d'utiliser cette commande.");
+        }
+
         const guild = await message.client.guilds.fetch(message.guild.id);
 
         if (!guild.banner) {
