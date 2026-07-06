@@ -11,6 +11,117 @@ const {
 const Config = require("../models/ConfessionConfig");
 const Confession = require("../models/Confession");
 
+/*
+==========================================
+    HELPERS (évite la duplication)
+==========================================
+*/
+
+function buildPopularity(confession) {
+    const likes = confession.likes.length;
+    const dislikes = confession.dislikes.length;
+    const total = likes + dislikes;
+    const percent = total === 0 ? 0 : Math.round((likes / total) * 100);
+    const bars = Math.round(percent / 10);
+
+    return "🟩".repeat(bars) + "⬜".repeat(10 - bars);
+}
+
+function buildStyle(confession) {
+    const likes = confession.likes.length;
+
+    let color = "#5865F2";
+    let badge = "🤫";
+
+    if (likes >= 100) {
+        color = "#9B59B6";
+        badge = "👑";
+    } else if (likes >= 50) {
+        color = "#F1C40F";
+        badge = "🔥";
+    } else if (likes >= 25) {
+        color = "#2ECC71";
+        badge = "⭐";
+    }
+
+    return { color, badge };
+}
+
+function buildConfessionEmbed(confession, guild) {
+    const { color, badge } = buildStyle(confession);
+    const popularity = buildPopularity(confession);
+
+    return new EmbedBuilder()
+        .setColor(color)
+        .setAuthor({
+            name: `${badge} CONFESSIONS NOCTURNE`,
+            iconURL: guild.iconURL({ dynamic: true })
+        })
+        .setTitle(`Confession #${confession.number}`)
+        .setDescription(
+`> ${confession.content}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━`
+        )
+        .addFields(
+            {
+                name: "❤️ Popularité",
+                value: popularity
+            },
+            {
+                name: "👍 Likes",
+                value: `${confession.likes.length}`,
+                inline: true
+            },
+            {
+                name: "👎 Dislikes",
+                value: `${confession.dislikes.length}`,
+                inline: true
+            },
+            {
+                name: "💬 Réponses",
+                value: `${confession.replies.length}`,
+                inline: true
+            }
+        )
+        .setThumbnail(guild.iconURL({ dynamic: true }))
+        .setFooter({
+            text: `${guild.name} • Confession totalement anonyme`,
+            iconURL: guild.iconURL({ dynamic: true })
+        })
+        .setTimestamp();
+}
+
+function buildConfessionRow(confession) {
+    return new ActionRowBuilder().addComponents(
+
+        new ButtonBuilder()
+            .setCustomId(`confession_like_${confession._id}`)
+            .setEmoji("👍")
+            .setLabel(`${confession.likes.length}`)
+            .setStyle(ButtonStyle.Success),
+
+        new ButtonBuilder()
+            .setCustomId(`confession_dislike_${confession._id}`)
+            .setEmoji("👎")
+            .setLabel(`${confession.dislikes.length}`)
+            .setStyle(ButtonStyle.Danger),
+
+        new ButtonBuilder()
+            .setCustomId(`confession_reply_${confession._id}`)
+            .setEmoji("💬")
+            .setLabel("Répondre")
+            .setStyle(ButtonStyle.Primary),
+
+        new ButtonBuilder()
+            .setCustomId(`confession_report_${confession._id}`)
+            .setEmoji("🚨")
+            .setLabel("Signaler")
+            .setStyle(ButtonStyle.Secondary)
+
+    );
+}
+
 module.exports = async (interaction) => {
 
     /*
@@ -76,157 +187,72 @@ module.exports = async (interaction) => {
         }
 
         /*
-=========================
-PUBLIER UNE CONFESSION
-=========================
-*/
+        =========================
+        PUBLIER UNE CONFESSION
+        =========================
+        */
 
-if (interaction.customId.startsWith("confession_accept_")) {
+        if (interaction.customId.startsWith("confession_accept_")) {
 
-    const confessionId = interaction.customId.replace(
-        "confession_accept_",
-        ""
-    );
+            const confessionId = interaction.customId.replace(
+                "confession_accept_",
+                ""
+            );
 
-    const confession = await Confession.findById(confessionId);
+            const confession = await Confession.findById(confessionId);
 
-    if (!confession) {
-        return interaction.reply({
-            content: "❌ Confession introuvable.",
-            ephemeral: true
-        });
-    }
-
-    const config = await Config.findOne({
-        guildId: interaction.guild.id
-    });
-
-    const channel = interaction.guild.channels.cache.get(
-        config.confessionChannel
-    );
-
-    if (!channel) {
-        return interaction.reply({
-            content: "❌ Salon de confession introuvable.",
-            ephemeral: true
-        });
-    }
-
-    confession.status = "approved";
-    await confession.save();
-
-    const likes = confession.likes.length;
-    const dislikes = confession.dislikes.length;
-    const replies = confession.replies.length;
-
-    const total = likes + dislikes;
-    const percent = total === 0 ? 0 : Math.round((likes / total) * 100);
-
-    const bars = Math.round(percent / 10);
-
-    const popularity =
-        "🟩".repeat(bars) +
-        "⬜".repeat(10 - bars);
-
-    let color = "#5865F2";
-    let badge = "🤫";
-
-    if (likes >= 100) {
-        color = "#9B59B6";
-        badge = "👑";
-    } else if (likes >= 50) {
-        color = "#F1C40F";
-        badge = "🔥";
-    } else if (likes >= 25) {
-        color = "#2ECC71";
-        badge = "⭐";
-    }
-
-    const embed = new EmbedBuilder()
-        .setColor(color)
-        .setAuthor({
-            name: `${badge} CONFESSIONS NOCTURNE`,
-            iconURL: interaction.guild.iconURL({ dynamic: true })
-        })
-        .setTitle(`Confession #${confession.number}`)
-        .setDescription(
-`> ${confession.content}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━`
-        )
-        .addFields(
-            {
-                name: "❤️ Popularité",
-                value: popularity
-            },
-            {
-                name: "👍 Likes",
-                value: `${likes}`,
-                inline: true
-            },
-            {
-                name: "👎 Dislikes",
-                value: `${dislikes}`,
-                inline: true
-            },
-            {
-                name: "💬 Réponses",
-                value: `${replies}`,
-                inline: true
+            if (!confession) {
+                return interaction.reply({
+                    content: "❌ Confession introuvable.",
+                    ephemeral: true
+                });
             }
-        )
-        .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-        .setFooter({
-            text: `${interaction.guild.name} • Confession totalement anonyme`,
-            iconURL: interaction.guild.iconURL({ dynamic: true })
-        })
-        .setTimestamp();
 
-    const row = new ActionRowBuilder().addComponents(
+            const config = await Config.findOne({
+                guildId: interaction.guild.id
+            });
 
-        new ButtonBuilder()
-            .setCustomId(`confession_like_${confession._id}`)
-            .setEmoji("👍")
-            .setLabel(`${likes}`)
-            .setStyle(ButtonStyle.Success),
+            if (!config) {
+                return interaction.reply({
+                    content: "❌ Le système de confessions n'est pas configuré.",
+                    ephemeral: true
+                });
+            }
 
-        new ButtonBuilder()
-            .setCustomId(`confession_dislike_${confession._id}`)
-            .setEmoji("👎")
-            .setLabel(`${dislikes}`)
-            .setStyle(ButtonStyle.Danger),
+            const channel = interaction.guild.channels.cache.get(
+                config.confessionChannel
+            );
 
-        new ButtonBuilder()
-            .setCustomId(`confession_reply_${confession._id}`)
-            .setEmoji("💬")
-            .setLabel("Répondre")
-            .setStyle(ButtonStyle.Primary),
+            if (!channel) {
+                return interaction.reply({
+                    content: "❌ Salon de confession introuvable.",
+                    ephemeral: true
+                });
+            }
 
-        new ButtonBuilder()
-            .setCustomId(`confession_report_${confession._id}`)
-            .setEmoji("🚨")
-            .setLabel("Signaler")
-            .setStyle(ButtonStyle.Secondary)
+            confession.status = "approved";
+            await confession.save();
 
-    );
+            const embed = buildConfessionEmbed(confession, interaction.guild);
+            const row = buildConfessionRow(confession);
 
-    const message = await channel.send({
-        embeds: [embed],
-        components: [row]
-    });
+            const message = await channel.send({
+                embeds: [embed],
+                components: [row]
+            });
 
-    // Création du thread
-    const thread = await message.startThread({
-        name: `💬 Discussions - Confession #${confession.number}`,
-        autoArchiveDuration: 1440
-    });
+            // Création du thread
+            const thread = await message.startThread({
+                name: `💬 Discussions - Confession #${confession.number}`,
+                autoArchiveDuration: 1440
+            });
 
-    await thread.send({
-        embeds: [
-            new EmbedBuilder()
-                .setColor(color)
-                .setTitle("💬 Bienvenue dans la discussion")
-                .setDescription(
+            await thread.send({
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor(buildStyle(confession).color)
+                        .setTitle("💬 Bienvenue dans la discussion")
+                        .setDescription(
 `Bienvenue dans le thread de cette confession.
 
 📜 **Règles**
@@ -238,23 +264,24 @@ if (interaction.customId.startsWith("confession_accept_")) {
 • Les modérateurs surveillent ce fil.
 
 Bonne discussion ❤️`
-                )
-        ]
-    });
+                        )
+                ]
+            });
 
-    confession.messageId = message.id;
-    confession.channelId = channel.id;
-    confession.threadId = thread.id;
+            confession.messageId = message.id;
+            confession.channelId = channel.id;
+            confession.threadId = thread.id;
 
-    await confession.save();
+            await confession.save();
 
-    return interaction.update({
-        content: "✅ Confession publiée avec succès.",
-        embeds: [],
-        components: []
-    });
+            return interaction.update({
+                content: "✅ Confession publiée avec succès.",
+                embeds: [],
+                components: []
+            });
 
-}
+        }
+
         /*
         =========================
         REFUSER UNE CONFESSION
@@ -307,6 +334,13 @@ Bonne discussion ❤️`
                 guildId: interaction.guild.id
             });
 
+            if (!config) {
+                return interaction.reply({
+                    content: "❌ Le système de confessions n'est pas configuré.",
+                    ephemeral: true
+                });
+            }
+
             if (!config.blacklist.includes(userId)) {
                 config.blacklist.push(userId);
                 await config.save();
@@ -318,7 +352,8 @@ Bonne discussion ❤️`
             });
 
         }
-                /*
+
+        /*
         =========================
         LIKE
         =========================
@@ -355,111 +390,15 @@ Bonne discussion ❤️`
             }
 
             await confession.save();
-            await confession.save();
 
-const likes = confession.likes.length;
-const dislikes = confession.dislikes.length;
-const replies = confession.replies.length;
+            const embed = buildConfessionEmbed(confession, interaction.guild);
+            const row = buildConfessionRow(confession);
 
-const total = likes + dislikes;
-const percent = total === 0 ? 0 : Math.round((likes / total) * 100);
-const bars = Math.round(percent / 10);
+            return interaction.update({
+                embeds: [embed],
+                components: [row]
+            });
 
-const popularity =
-    "🟩".repeat(bars) +
-    "⬜".repeat(10 - bars);
-
-let color = "#5865F2";
-let badge = "🤫";
-
-if (likes >= 100) {
-    color = "#9B59B6";
-    badge = "👑";
-} else if (likes >= 50) {
-    color = "#F1C40F";
-    badge = "🔥";
-} else if (likes >= 25) {
-    color = "#2ECC71";
-    badge = "⭐";
-}
-
-const row = new ActionRowBuilder().addComponents(
-
-    new ButtonBuilder()
-        .setCustomId(`confession_like_${confession._id}`)
-        .setEmoji("👍")
-        .setLabel(`${likes}`)
-        .setStyle(ButtonStyle.Success),
-
-    new ButtonBuilder()
-        .setCustomId(`confession_dislike_${confession._id}`)
-        .setEmoji("👎")
-        .setLabel(`${dislikes}`)
-        .setStyle(ButtonStyle.Danger),
-
-    new ButtonBuilder()
-        .setCustomId(`confession_reply_${confession._id}`)
-        .setEmoji("💬")
-        .setLabel("Répondre")
-        .setStyle(ButtonStyle.Primary),
-
-    new ButtonBuilder()
-        .setCustomId(`confession_report_${confession._id}`)
-        .setEmoji("🚨")
-        .setLabel("Signaler")
-        .setStyle(ButtonStyle.Secondary)
-
-);
-
-const embed = new EmbedBuilder()
-    .setColor(color)
-    .setAuthor({
-        name: `${badge} CONFESSIONS NOCTURNE`,
-        iconURL: interaction.guild.iconURL({ dynamic: true })
-    })
-    .setTitle(`Confession #${confession.number}`)
-    .setDescription(
-`> ${confession.content}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━`
-    )
-    .addFields(
-        {
-            name: "❤️ Popularité",
-            value: popularity
-        },
-        {
-            name: "👍 Likes",
-            value: `${likes}`,
-            inline: true
-        },
-        {
-            name: "👎 Dislikes",
-            value: `${dislikes}`,
-            inline: true
-        },
-        {
-            name: "💬 Réponses",
-            value: `${replies}`,
-            inline: true
-        }
-    )
-    .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-    .setFooter({
-        text: `${interaction.guild.name} • Confession totalement anonyme`,
-        iconURL: interaction.guild.iconURL({ dynamic: true })
-    })
-    .setTimestamp();
-
-return interaction.update({
-    embeds: [embed],
-    components: [row]
-});
-
-return interaction.update({
-    embeds: [embed],
-    components: [row]
-});
         }
 
         /*
@@ -500,80 +439,17 @@ return interaction.update({
 
             await confession.save();
 
-            const row = new ActionRowBuilder().addComponents(
+            const embed = buildConfessionEmbed(confession, interaction.guild);
+            const row = buildConfessionRow(confession);
 
-                new ButtonBuilder()
-                    .setCustomId(`confession_like_${confession._id}`)
-                    .setEmoji("👍")
-                    .setLabel(confession.likes.length.toString())
-                    .setStyle(ButtonStyle.Success),
-
-                new ButtonBuilder()
-                    .setCustomId(`confession_dislike_${confession._id}`)
-                    .setEmoji("👎")
-                    .setLabel(confession.dislikes.length.toString())
-                    .setStyle(ButtonStyle.Danger),
-
-                new ButtonBuilder()
-                    .setCustomId(`confession_reply_${confession._id}`)
-                    .setEmoji("💬")
-                    .setLabel("Répondre")
-                    .setStyle(ButtonStyle.Primary),
-
-                new ButtonBuilder()
-                    .setCustomId(`confession_report_${confession._id}`)
-                    .setEmoji("🚨")
-                    .setLabel("Signaler")
-                    .setStyle(ButtonStyle.Secondary)
-
-            );
-const totalVotes = confession.likes.length + confession.dislikes.length;
-
-let popularity = "😐 Aucune réaction";
-
-if (totalVotes > 0) {
-    const ratio = Math.round((confession.likes.length / totalVotes) * 100);
-
-    if (ratio >= 90) popularity = "💎 Exceptionnelle";
-    else if (ratio >= 75) popularity = "🔥 Très populaire";
-    else if (ratio >= 60) popularity = "😊 Populaire";
-    else if (ratio >= 40) popularity = "😐 Mitigée";
-    else popularity = "💀 Impopulaire";
-}
-const embed = EmbedBuilder.from(interaction.message.embeds[0]);
-
-embed.spliceFields(
-    0,
-    embed.data.fields?.length || 0,
-    
-        name: "❤️ Popularité",
-        value: popularity,
-        inline: false
-    },
-    {
-        name: "👍 Likes",
-        value: confession.likes.length.toString(),
-        inline: true
-    },
-    {
-        name: "👎 Dislikes",
-        value: confession.dislikes.length.toString(),
-        inline: true
-    },
-    {
-        name: "💬 Réponses",
-        value: (confession.replyCount || 0).toString(),
-        inline: true
-    }
-);
-
-return interaction.update({
-    embeds: [embed],
-    components: [row]
-});
+            return interaction.update({
+                embeds: [embed],
+                components: [row]
+            });
 
         }
-                /*
+
+        /*
         =========================
         RÉPONDRE À UNE CONFESSION
         =========================
@@ -643,7 +519,7 @@ return interaction.update({
                 guildId: interaction.guild.id
             });
 
-            if (config.logChannel) {
+            if (config && config.logChannel) {
 
                 const logChannel = interaction.guild.channels.cache.get(
                     config.logChannel
@@ -687,7 +563,8 @@ return interaction.update({
         }
 
     }
-        /*
+
+    /*
     ==========================================
                     MODALS
     ==========================================
@@ -795,7 +672,8 @@ return interaction.update({
         });
 
     }
-        /*
+
+    /*
     =========================
     RÉPONDRE À UNE CONFESSION
     =========================
@@ -826,24 +704,23 @@ return interaction.update({
 
         await confession.save();
 
-        
         const thread = interaction.guild.channels.cache.get(confession.threadId);
 
-if (thread) {
+        if (thread) {
 
-    await thread.send({
-        embeds: [
-            new EmbedBuilder()
-                .setColor("#5865F2")
-                .setDescription(reply)
-                .setFooter({
-                    text: "Réponse anonyme"
-                })
-                .setTimestamp()
-        ]
-    });
+            await thread.send({
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor("#5865F2")
+                        .setDescription(reply)
+                        .setFooter({
+                            text: "Réponse anonyme"
+                        })
+                        .setTimestamp()
+                ]
+            });
 
-}
+        }
 
         return interaction.reply({
             content: "✅ Ta réponse a été publiée anonymement.",
