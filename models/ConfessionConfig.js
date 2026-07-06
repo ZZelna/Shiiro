@@ -23,6 +23,13 @@ const confessionConfigSchema = new mongoose.Schema({
         default: null
     },
 
+    // Salon où est envoyé le panneau
+    panelChannel: {
+        type: String,
+        default: null
+    },
+
+    // Message du panneau
     panelMessage: {
         type: String,
         default: null
