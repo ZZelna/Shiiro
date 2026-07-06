@@ -15,7 +15,7 @@ module.exports = async (member) => {
             `Bienvenue ${member} !\n\nGrâce à toi, nous sommes désormais **${member.guild.memberCount} membres**.`
         )
         .setThumbnail(member.user.displayAvatarURL())
-        .setImage("https://static.klipy.com/ii/e1b92bb53e0c9e442408bc677a56c789/cf/4e/squUjOdmywiQ7oM8Q.gif")
+        .setImage("https://media.gifdb.com/frieren-magical-transformation-7w5lljupzkwld8re.gif")
         .setTimestamp();
 
     await channel.send({
