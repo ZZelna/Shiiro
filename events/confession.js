@@ -14,37 +14,37 @@ const Confession = require("../models/Confession");
 module.exports = async (interaction) => {
 
     /*
-    ============================
-            BOUTONS
-    ============================
+    ==========================================
+                BOUTONS
+    ==========================================
     */
 
     if (interaction.isButton()) {
 
-        // Bouton "Confesse-toi"
+        // Ouvrir le formulaire
         if (interaction.customId === "confession_create") {
 
             const modal = new ModalBuilder()
                 .setCustomId("confession_modal")
                 .setTitle("🤫 Nouvelle confession");
 
-            const confessionInput = new TextInputBuilder()
+            const input = new TextInputBuilder()
                 .setCustomId("confession_text")
                 .setLabel("Écris ta confession")
-                .setPlaceholder("Ta confession restera totalement anonyme...")
+                .setPlaceholder("Cette confession restera anonyme...")
                 .setStyle(TextInputStyle.Paragraph)
                 .setRequired(true)
                 .setMinLength(10)
                 .setMaxLength(1500);
 
             modal.addComponents(
-                new ActionRowBuilder().addComponents(confessionInput)
+                new ActionRowBuilder().addComponents(input)
             );
 
             return interaction.showModal(modal);
         }
 
-        // Bouton Informations
+        // Informations
         if (interaction.customId === "confession_info") {
 
             return interaction.reply({
@@ -54,22 +54,160 @@ module.exports = async (interaction) => {
                         .setColor("#F4B400")
                         .setTitle("ℹ️ Informations")
                         .setDescription(
-`🔒 Les confessions sont totalement anonymes.
+`🔒 Les confessions sont anonymes.
 
-• Ton identité n'est jamais affichée.
-• Chaque confession reçoit un numéro unique.
-• Les abus peuvent être sanctionnés.
-• Respecte les règles du serveur.`
+• Les modérateurs voient l'auteur uniquement lors de la validation.
+• Les autres membres ne verront jamais ton identité.
+• Les abus peuvent entraîner une sanction.`
                         )
                 ]
             });
+
         }
+                // Validation
+        if (interaction.customId.startsWith("confession_accept_")) {
+
+            const confessionId = interaction.customId.replace(
+                "confession_accept_",
+                ""
+            );
+
+            const confession = await Confession.findById(confessionId);
+
+            if (!confession) {
+                return interaction.reply({
+                    content: "❌ Confession introuvable.",
+                    ephemeral: true
+                });
+            }
+
+            const config = await Config.findOne({
+                guildId: interaction.guild.id
+            });
+
+            const channel = interaction.guild.channels.cache.get(
+                config.confessionChannel
+            );
+
+            if (!channel) {
+                return interaction.reply({
+                    content: "❌ Salon introuvable.",
+                    ephemeral: true
+                });
+            }
+
+            const confessionEmbed = new EmbedBuilder()
+                .setColor("#2B2D31")
+                .setTitle(`🤫 Confession #${confession.number}`)
+                .setDescription(confession.content)
+                .setFooter({
+                    text: "Confession anonyme"
+                })
+                .setTimestamp();
+
+            const row = new ActionRowBuilder().addComponents(
+
+                new ButtonBuilder()
+                    .setCustomId(`confession_like_${confession._id}`)
+                    .setEmoji("👍")
+                    .setLabel("0")
+                    .setStyle(ButtonStyle.Success),
+
+                new ButtonBuilder()
+                    .setCustomId(`confession_dislike_${confession._id}`)
+                    .setEmoji("👎")
+                    .setLabel("0")
+                    .setStyle(ButtonStyle.Danger),
+
+                new ButtonBuilder()
+                    .setCustomId(`confession_reply_${confession._id}`)
+                    .setEmoji("💬")
+                    .setLabel("Répondre")
+                    .setStyle(ButtonStyle.Primary),
+
+                new ButtonBuilder()
+                    .setCustomId(`confession_report_${confession._id}`)
+                    .setEmoji("🚨")
+                    .setLabel("Signaler")
+                    .setStyle(ButtonStyle.Secondary)
+
+            );
+
+            const message = await channel.send({
+                embeds: [confessionEmbed],
+                components: [row]
+            });
+
+            confession.messageId = message.id;
+            confession.channelId = channel.id;
+
+            await confession.save();
+
+            return interaction.update({
+                content: "✅ Confession publiée.",
+                embeds: [],
+                components: []
+            });
+
+        }
+                // Refuser une confession
+        if (interaction.customId.startsWith("confession_refuse_")) {
+
+            const confessionId = interaction.customId.replace(
+                "confession_refuse_",
+                ""
+            );
+
+            const confession = await Confession.findById(confessionId);
+
+            if (!confession) {
+                return interaction.reply({
+                    content: "❌ Confession introuvable.",
+                    ephemeral: true
+                });
+            }
+
+            confession.deleted = true;
+            await confession.save();
+
+            return interaction.update({
+                content: "❌ Confession refusée.",
+                embeds: [],
+                components: []
+            });
+
+        }
+
+        // Blacklist d'un utilisateur
+        if (interaction.customId.startsWith("confession_blacklist_")) {
+
+            const userId = interaction.customId.replace(
+                "confession_blacklist_",
+                ""
+            );
+
+            const config = await Config.findOne({
+                guildId: interaction.guild.id
+            });
+
+            if (!config.blacklist.includes(userId)) {
+                config.blacklist.push(userId);
+                await config.save();
+            }
+
+            return interaction.reply({
+                content: `🔨 <@${userId}> a été blacklisté du système de confessions.`,
+                ephemeral: true
+            });
+
+        }
+
     }
 
     /*
-    ============================
-          MODAL CONFESSION
-    ============================
+    ==========================================
+                MODAL
+    ==========================================
     */
 
     if (!interaction.isModalSubmit()) return;
@@ -86,16 +224,17 @@ module.exports = async (interaction) => {
         });
     }
 
-    if (!config.confessionChannel) {
+    // Vérifie la blacklist
+    if (config.blacklist.includes(interaction.user.id)) {
         return interaction.reply({
-            content: "❌ Aucun salon de confessions n'est configuré.",
+            content: "❌ Tu es blacklisté du système de confessions.",
             ephemeral: true
         });
     }
 
     const text = interaction.fields.getTextInputValue("confession_text");
 
-    // Numéro de confession
+    // Numéro automatique
     config.counter++;
     await config.save();
 
@@ -108,66 +247,69 @@ module.exports = async (interaction) => {
         content: text
     });
 
-    const channel = interaction.guild.channels.cache.get(
-        config.confessionChannel
-    );
-
-    if (!channel) {
+    // Si aucun salon de logs n'est configuré
+    if (!config.logChannel) {
         return interaction.reply({
-            content: "❌ Salon de confession introuvable.",
+            content: "❌ Aucun salon de modération configuré.",
             ephemeral: true
         });
     }
- const embed = new EmbedBuilder()
-            .setColor("#2B2D31")
-            .setTitle(`🤫 Confession #${config.counter}`)
-            .setDescription(text)
-            .setFooter({
-                text: "Confession anonyme"
-            })
-            .setTimestamp();
 
-        const message = await channel.send({
-            embeds: [embed]
-        });
+    const logChannel = interaction.guild.channels.cache.get(config.logChannel);
 
-        confession.messageId = message.id;
-        confession.channelId = channel.id;
-        await confession.save();
-
-        if (config.logChannel) {
-            const logChannel = interaction.guild.channels.cache.get(config.logChannel);
-
-            if (logChannel) {
-                const logEmbed = new EmbedBuilder()
-                    .setColor("Orange")
-                    .setTitle("📜 Nouvelle confession")
-                    .addFields(
-                        {
-                            name: "Auteur",
-                            value: `${interaction.user.tag} (${interaction.user.id})`
-                        },
-                        {
-                            name: "Confession",
-                            value: text.length > 1024
-                                ? text.slice(0, 1020) + "..."
-                                : text
-                        },
-                        {
-                            name: "Numéro",
-                            value: `#${config.counter}`
-                        }
-                    )
-                    .setTimestamp();
-
-                await logChannel.send({
-                    embeds: [logEmbed]
-                });
-            }
-        }
-
+    if (!logChannel) {
         return interaction.reply({
-            content: "✅ Ta confession a été envoyée anonymement.",
+            content: "❌ Salon de modération introuvable.",
             ephemeral: true
         });
+    }
+
+    const moderationEmbed = new EmbedBuilder()
+        .setColor("Orange")
+        .setTitle(`📝 Confession #${confession.number}`)
+        .setDescription(confession.content)
+        .addFields(
+            {
+                name: "Auteur",
+                value: `${interaction.user.tag}\n\`${interaction.user.id}\``
+            },
+            {
+                name: "Statut",
+                value: "⏳ En attente de validation"
+            }
+        )
+        .setTimestamp();
+
+    const moderationRow = new ActionRowBuilder().addComponents(
+
+        new ButtonBuilder()
+            .setCustomId(`confession_accept_${confession._id}`)
+            .setLabel("Publier")
+            .setEmoji("✅")
+            .setStyle(ButtonStyle.Success),
+
+        new ButtonBuilder()
+            .setCustomId(`confession_refuse_${confession._id}`)
+            .setLabel("Refuser")
+            .setEmoji("❌")
+            .setStyle(ButtonStyle.Danger),
+
+        new ButtonBuilder()
+            .setCustomId(`confession_blacklist_${confession.authorId}`)
+            .setLabel("Blacklist")
+            .setEmoji("🔨")
+            .setStyle(ButtonStyle.Secondary)
+
+    );
+
+    await logChannel.send({
+        embeds: [moderationEmbed],
+        components: [moderationRow]
+    });
+
+    return interaction.reply({
+        content: "✅ Ta confession a été envoyée aux modérateurs pour validation.",
+        ephemeral: true
+    });
+
 };
