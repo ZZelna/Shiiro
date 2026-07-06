@@ -532,7 +532,12 @@ return interaction.update({
 
 embed.spliceFields(
     0,
-    embed.data.fields?.length || 0,
+    embed.data.fields.length,
+    {
+        name: "❤️ Popularité",
+        value: popularity,
+        inline: false
+    },
     {
         name: "👍 Likes",
         value: confession.likes.length.toString(),
@@ -541,6 +546,11 @@ embed.spliceFields(
     {
         name: "👎 Dislikes",
         value: confession.dislikes.length.toString(),
+        inline: true
+    },
+    {
+        name: "💬 Réponses",
+        value: (confession.replyCount || 0).toString(),
         inline: true
     }
 );
