@@ -281,19 +281,21 @@ client.on("messageCreate", async (message) => {
     await userStats.save();
 });
 
-// ─── presenceUpdate (rôle statut) ────────────────────────────────────────────
+// ─── presenceUpdate (rôle statut + perm images) ──────────────────────────────
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
     if (!newPresence?.member) return;
 
     const roleId = "1514348874427404529";
     const logChannelId = "1514369589310652517";
+    const imageChannelId = "1508491934547574814"; // ✅ salon avec restriction images
 
     const customStatus = newPresence.activities.find(activity => activity.type === 4);
     const hasShiiiro = customStatus?.state?.toLowerCase()?.includes("/shiiro") || false;
 
     const member = newPresence.member;
     const logs = member.guild.channels.cache.get(logChannelId);
+    const imageChannel = member.guild.channels.cache.get(imageChannelId);
 
     if (hasShiiiro) {
         if (!member.roles.cache.has(roleId)) {
@@ -309,6 +311,14 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
                 logs.send({ embeds: [embed] });
             }
         }
+
+        // ✅ Statut actif → on retire l'overwrite restrictif s'il existe (autorise les images)
+        if (imageChannel) {
+            await imageChannel.permissionOverwrites
+                .delete(member.id, "Statut /Shiiro actif : accès images autorisé")
+                .catch(() => {});
+        }
+
     } else {
         if (member.roles.cache.has(roleId)) {
             await member.roles.remove(roleId).catch(() => {});
@@ -323,9 +333,18 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
                 logs.send({ embeds: [embed] });
             }
         }
+
+        // ❌ Pas de statut → on bloque l'envoi d'images/fichiers/embeds dans le salon
+        if (imageChannel) {
+            await imageChannel.permissionOverwrites
+                .edit(member.id, {
+                    AttachFiles: false,
+                    EmbedLinks: false
+                }, { reason: "Pas de statut /Shiiro : accès images retiré" })
+                .catch(() => {});
+        }
     }
 });
-
 // ─── MongoDB ──────────────────────────────────────────────────────────────────
 
 mongoose.connect(process.env.MONGODB_URI)
