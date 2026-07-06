@@ -145,7 +145,7 @@ if (interaction.customId.startsWith("confession_accept_")) {
     const embed = new EmbedBuilder()
         .setColor(color)
         .setAuthor({
-            name: `${badge} Confession Premium`,
+            name: `${badge} Confession Shiiro`,
             iconURL: interaction.guild.iconURL({ dynamic: true })
         })
         .setTitle(`Confession #${confession.number}`)
