@@ -32,6 +32,31 @@ const confessionSchema = new mongoose.Schema({
         required: true
     },
 
+    // pending = en attente
+    // approved = publiée
+    // refused = refusée
+    status: {
+        type: String,
+        default: "pending"
+    },
+
+    likes: [{
+        type: String
+    }],
+
+    dislikes: [{
+        type: String
+    }],
+
+    replies: [{
+        authorId: String,
+        content: String,
+        createdAt: {
+            type: Date,
+            default: Date.now
+        }
+    }],
+
     reports: [{
         type: String
     }],
