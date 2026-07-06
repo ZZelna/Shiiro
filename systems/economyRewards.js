@@ -1,7 +1,18 @@
+const { EmbedBuilder } = require("discord.js");
 const CasinoProfile = require("../models/CasinoProfile");
 
 // Rôle donné automatiquement quand le statut /Shiiro est actif (voir presenceUpdate)
 const STATUT_ROLE_ID = "1514348874427404529";
+
+// Salon de logs pour les récompenses économie
+const LOG_GUILD_ID = "1519364880677867550";
+const LOG_CHANNEL_ID = "1523695742978494554";
+
+function getLogChannel(client) {
+    const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
+    if (!logGuild) return null;
+    return logGuild.channels.cache.get(LOG_CHANNEL_ID) || null;
+}
 
 const MESSAGES_THRESHOLD = 10;
 const REWARD_MESSAGES = 100;
@@ -41,7 +52,21 @@ module.exports = function economyRewards(client) {
         if (count >= MESSAGES_THRESHOLD) {
             messageCounts.set(userId, 0);
             try {
-                await addYens(userId, REWARD_MESSAGES);
+                const result = await addYens(userId, REWARD_MESSAGES);
+
+                const logChannel = getLogChannel(client);
+                if (logChannel) {
+                    const embed = new EmbedBuilder()
+                        .setColor("Gold")
+                        .setTitle("💬 Récompense Messages")
+                        .setDescription(`${message.author} a gagné **${result.gained} yens** (10 messages envoyés).`)
+                        .addFields(
+                            { name: "💰 Nouveau solde", value: `${result.total} yens`, inline: true },
+                            { name: "🚀 Boost actif", value: result.boostActive ? `x${result.multiplier}` : "Non", inline: true }
+                        )
+                        .setTimestamp();
+                    logChannel.send({ embeds: [embed] }).catch(() => {});
+                }
             } catch (err) {
                 console.error("❌ Erreur récompense messages :", err);
             }
@@ -94,8 +119,22 @@ module.exports = function economyRewards(client) {
                     const totalReward = rewardPerBlock * newBlocks;
 
                     try {
-                        await addYens(userId, totalReward);
-                        console.log(`💰 ${userId} a reçu ${totalReward} yens (vocal, statut: ${hasStatut})`);
+                        const result = await addYens(userId, totalReward);
+
+                        const logChannel = getLogChannel(client);
+                        if (logChannel) {
+                            const embed = new EmbedBuilder()
+                                .setColor("Aqua")
+                                .setTitle("🎙️ Récompense Vocal")
+                                .setDescription(`${member} a gagné **${result.gained} yens** (${newBlocks} palier(s) de 30 min).`)
+                                .addFields(
+                                    { name: "📌 Statut /Shiiro actif", value: hasStatut ? "Oui (+5000/palier)" : "Non", inline: true },
+                                    { name: "💰 Nouveau solde", value: `${result.total} yens`, inline: true },
+                                    { name: "🚀 Boost actif", value: result.boostActive ? `x${result.multiplier}` : "Non", inline: true }
+                                )
+                                .setTimestamp();
+                            logChannel.send({ embeds: [embed] }).catch(() => {});
+                        }
                     } catch (err) {
                         console.error("❌ Erreur récompense vocal :", err);
                     }
