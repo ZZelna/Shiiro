@@ -1160,6 +1160,10 @@ client.on("guildMemberAdd", async member => {
 });
 const tiktokNotifier = require("./systems/tiktokNotifier");
 tiktokNotifier(client);
+
+const economyRewards = require("./systems/economyRewards");
+economyRewards(client);
+
 // ─── Login ────────────────────────────────────────────────────────────────────
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
