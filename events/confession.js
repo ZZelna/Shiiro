@@ -170,6 +170,4 @@ module.exports = async (interaction) => {
             content: "✅ Ta confession a été envoyée anonymement.",
             ephemeral: true
         });
-    }
-
 };
