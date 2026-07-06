@@ -16,6 +16,11 @@ const confessionSchema = new mongoose.Schema({
         type: String,
         default: null
     },
+   
+    threadId: {
+    type: String,
+    default: null
+},
 
     authorId: {
         type: String,
