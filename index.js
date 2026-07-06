@@ -138,6 +138,45 @@ client.on("messageCreate", async (message) => {
     antiMassMention(message);
 
     if (message.author.bot) return;
+    // ===============================
+// Compteur des réponses Confession
+// ===============================
+
+const Confession = require("./models/Confession"); // adapte le chemin si besoin
+const { EmbedBuilder } = require("discord.js");
+
+if (message.channel.isThread()) {
+
+    const confession = await Confession.findOne({
+        threadId: message.channel.id
+    });
+
+    if (confession) {
+
+        confession.replyCount = (confession.replyCount || 0) + 1;
+        await confession.save();
+
+        try {
+
+            const confessionChannel = await message.guild.channels.fetch(confession.channelId);
+            const confessionMessage = await confessionChannel.messages.fetch(confession.messageId);
+
+            const embed = EmbedBuilder.from(confessionMessage.embeds[0]);
+
+            // Met à jour uniquement le champ "Réponses"
+            embed.data.fields[3].value = confession.replyCount.toString();
+
+            await confessionMessage.edit({
+                embeds: [embed]
+            });
+
+        } catch (err) {
+            console.error("Erreur mise à jour compteur :", err);
+        }
+
+    }
+
+}
     if (!message.content.startsWith("+")) return;
 
     const args = message.content.slice(1).trim().split(/ +/);
