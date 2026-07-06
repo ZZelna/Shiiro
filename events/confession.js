@@ -164,16 +164,39 @@ module.exports = async (interaction) => {
             );
 
             const message = await channel.send({
-                embeds: [embed],
-                components: [row]
-            });
+    embeds: [embed],
+    components: [row]
+});
 
-            confession.messageId = message.id;
-            confession.channelId = channel.id;
+// Création du thread de discussion
+const thread = await message.startThread({
+    name: `💬 Discussions - Confession #${confession.number}`,
+    autoArchiveDuration: 1440
+});
 
-            await confession.save();
+// Message d'accueil dans le thread
+await thread.send({
+    embeds: [
+        new EmbedBuilder()
+            .setColor("#5865F2")
+            .setTitle("💬 Discussions")
+            .setDescription(
+`Bienvenue dans le fil de discussion de cette confession.
 
-            return interaction.update({
+• Réagissez librement.
+• Respectez les règles du serveur.
+• L'auteur de la confession reste totalement anonyme.`
+            )
+    ]
+});
+
+confession.messageId = message.id;
+confession.channelId = channel.id;
+confession.threadId = thread.id;
+
+await confession.save();
+            
+ return interaction.update({
                 content: "✅ Confession publiée.",
                 embeds: [],
                 components: []
@@ -675,26 +698,24 @@ return interaction.update({
 
         await confession.save();
 
-        const channel = interaction.guild.channels.cache.get(
-            confession.channelId
-        );
+        
+        const thread = interaction.guild.channels.cache.get(confession.threadId);
 
-        if (channel) {
+if (thread) {
 
-            await channel.send({
-                embeds: [
-                    new EmbedBuilder()
-                        .setColor("#5865F2")
-                        .setTitle(`💬 Réponse à la confession #${confession.number}`)
-                        .setDescription(reply)
-                        .setFooter({
-                            text: "Réponse anonyme"
-                        })
-                        .setTimestamp()
-                ]
-            });
+    await thread.send({
+        embeds: [
+            new EmbedBuilder()
+                .setColor("#5865F2")
+                .setDescription(reply)
+                .setFooter({
+                    text: "Réponse anonyme"
+                })
+                .setTimestamp()
+        ]
+    });
 
-        }
+}
 
         return interaction.reply({
             content: "✅ Ta réponse a été publiée anonymement.",
