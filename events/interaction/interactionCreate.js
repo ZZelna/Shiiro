@@ -81,11 +81,7 @@ module.exports = async (interaction) => {
 // CONFESSIONS
 // =========================
 await confessionHandler(interaction);// =========================
-// CONFESSIONS
-// =========================
-await confessionHandler(interaction);
-
-    // =========================
+  // =========================
     // BOUTONS
     // =========================
     if (interaction.isButton()) {
