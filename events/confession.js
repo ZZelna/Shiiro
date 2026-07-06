@@ -527,13 +527,25 @@ return interaction.update({
                     .setStyle(ButtonStyle.Secondary)
 
             );
+const totalVotes = confession.likes.length + confession.dislikes.length;
 
-          const embed = EmbedBuilder.from(interaction.message.embeds[0]);
+let popularity = "😐 Aucune réaction";
+
+if (totalVotes > 0) {
+    const ratio = Math.round((confession.likes.length / totalVotes) * 100);
+
+    if (ratio >= 90) popularity = "💎 Exceptionnelle";
+    else if (ratio >= 75) popularity = "🔥 Très populaire";
+    else if (ratio >= 60) popularity = "😊 Populaire";
+    else if (ratio >= 40) popularity = "😐 Mitigée";
+    else popularity = "💀 Impopulaire";
+}
+const embed = EmbedBuilder.from(interaction.message.embeds[0]);
 
 embed.spliceFields(
     0,
-    embed.data.fields.length,
-    {
+    embed.data.fields?.length || 0,
+    
         name: "❤️ Popularité",
         value: popularity,
         inline: false
