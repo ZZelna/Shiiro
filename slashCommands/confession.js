@@ -91,95 +91,109 @@ module.exports = {
 
         }
 
-        if (sub === "panel") {
+    if (sub === "panel") {
 
-            const config = await Config.findOne({
-                guildId: interaction.guild.id
-            });
+    const config = await Config.findOne({
+        guildId: interaction.guild.id
+    });
 
-            if (!config) {
+    if (!config) {
+        return interaction.reply({
+            content: "❌ Configure d'abord le système avec `/confession config`.",
+            ephemeral: true
+        });
+    }
 
-                return interaction.reply({
-                    content:
-                        "❌ Configure d'abord le système avec `/confession config`.",
-                    ephemeral: true
-                });
+    // Supprime l'ancien panel s'il existe
+    if (config.panelChannel && config.panelMessage) {
+
+        try {
+
+            const oldChannel = interaction.guild.channels.cache.get(config.panelChannel);
+
+            if (oldChannel) {
+
+                const oldMessage = await oldChannel.messages.fetch(config.panelMessage);
+
+                if (oldMessage) await oldMessage.delete();
 
             }
 
-            const embed = new EmbedBuilder()
+        } catch (e) {}
 
-                .setColor("#F4B400")
+    }
 
-                .setTitle("🤫 Système de Confessions Anonymes")
+    const embed = new EmbedBuilder()
+        .setColor("#5865F2")
+        .setAuthor({
+            name: `${interaction.guild.name} • Confessions`,
+            iconURL: interaction.guild.iconURL({ dynamic: true })
+        })
+        .setTitle("🤫 Confessions anonymes")
+        .setDescription(
+`## Bienvenue !
 
-                .setDescription(
-`Partage tes pensées **100% anonymement**.
+Exprime-toi librement grâce au système de confessions anonymes.
 
-🔒 **Confidentialité**
-• Ton identité est cachée
-• Personne ne saura qui tu es
-• Seul le contenu sera publié
+### 🔒 Anonymat garanti
+> • Ton identité reste secrète.
+> • Les membres ne verront jamais ton pseudo.
+> • Les modérateurs voient uniquement l'auteur avant validation.
 
-📜 **Règles**
-• Pas d'insultes
-• Pas de harcèlement
-• Pas de contenu interdit
-• Respecte les autres membres`
-                )
+### 📜 Règles
+> • Respect obligatoire.
+> • Pas de spam.
+> • Pas d'insultes.
+> • Pas de contenu interdit.
 
-                .setFooter({
-                    text: "Confessions anonymes"
-                });
+Clique simplement sur **🤫 Confesse-toi** ci-dessous.`
+        )
+        .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
+        .setFooter({
+            text: "Système de confessions"
+        })
+        .setTimestamp();
 
-            const row = new ActionRowBuilder()
+    const row = new ActionRowBuilder().addComponents(
 
-                .addComponents(
+        new ButtonBuilder()
+            .setCustomId("confession_create")
+            .setEmoji("🤫")
+            .setLabel("Confesse-toi")
+            .setStyle(ButtonStyle.Primary),
 
-                    new ButtonBuilder()
+        new ButtonBuilder()
+            .setCustomId("confession_info")
+            .setEmoji("ℹ️")
+            .setLabel("Informations")
+            .setStyle(ButtonStyle.Secondary)
 
-                        .setCustomId("confession_create")
+    );
 
-                        .setEmoji("🤫")
+    const msg = await interaction.channel.send({
+        embeds: [embed],
+        components: [row]
+    });
 
-                        .setLabel("Confesse-toi")
+    // Épingler automatiquement
+    try {
+        await msg.pin();
+    } catch (e) {
+        console.log("Impossible d'épingler le panel :", e);
+    }
 
-                        .setStyle(ButtonStyle.Primary),
+    // Sauvegarde du nouveau panel
+    config.panelChannel = interaction.channel.id;
+    config.panelMessage = msg.id;
 
-                    new ButtonBuilder()
+    await config.save();
 
-                        .setCustomId("confession_info")
+    return interaction.reply({
+        content: "✅ Nouveau panneau créé et épinglé.",
+        ephemeral: true
+    });
 
-                        .setEmoji("ℹ️")
-
-                        .setLabel("Informations")
-
-                        .setStyle(ButtonStyle.Secondary)
-
-                );
-
-            const msg =
-                await interaction.channel.send({
-
-                    embeds: [embed],
-
-                    components: [row]
-
-                });
-
-            config.panelMessage = msg.id;
-
-            await config.save();
-
-            return interaction.reply({
-
-                content: "✅ Panneau envoyé.",
-
-                ephemeral: true
-
-            });
-
-        }
+}
 
     }
 
