@@ -414,7 +414,7 @@ const row = new ActionRowBuilder().addComponents(
 const embed = new EmbedBuilder()
     .setColor(color)
     .setAuthor({
-        name: `${badge} Confession Premium`,
+        name: `${badge} CONFESSIONS NOCTURNE`,
         iconURL: interaction.guild.iconURL({ dynamic: true })
     })
     .setTitle(`Confession #${confession.number}`)
