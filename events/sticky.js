@@ -1,50 +1,48 @@
 const stickyMessages = {
-
- "1506685260291768532": `__**Stickied Message:**__
-
-**Uniquement des commandes ici !!! Pas de discussions !!!**`,
-
- "1506684777678377001": `__**Stickied Message:**__
+  "1506685260291768532": `__**Stickied Message:**__
 
 **Uniquement des commandes ici !!! Pas de discussions !!!**`,
 
- "1506688699893809152": `__**Stickied Message:**__
+  "1506684777678377001": `__**Stickied Message:**__
+
+**Uniquement des commandes ici !!! Pas de discussions !!!**`,
+
+  "1506688699893809152": `__**Stickied Message:**__
 
 **Uniquement des images ou des vidéos ici !!! Pas de discussions !!!**`,
 
-"1506939756058120202": `__**Stickied Message:**__
+  "1506939756058120202": `__**Stickied Message:**__
 
 un chiffre a la fois merci !!!!`,
 
-"1519036331408494682": `__**Stickied Message:**__
+  "1519036331408494682": `__**Stickied Message:**__
 
 uniquement des suggestions ici 👈
 
 Les owners répondront aux suggestions au plus vite !!!`,
 
- "1510484744767410206": `__**Stickied Message:**__
+  "1510484744767410206": `__**Stickied Message:**__
 
 Vous pouvez bump le serveur toutes les 2h merci à tous ceux qui le font !!!`,
 
-"1509881074417799168": `__**Stickied Message:**__
+  "1509881074417799168": `__**Stickied Message:**__
 
 uniquement des citations ici !!!!`,
 
-"1506944756524253284": `__**Stickied Message:**__
+  "1506944756524253284": `__**Stickied Message:**__
 
-## ✔️ Demande de bannissement
-
-- Envoyez les preuves dans un seul message.
+## <:bans:1509229576667009106>  Demande de bannissement
+-#  Envoyez les preuves dans un seul message.
 
 || <@&1507082580414173234> ||
 
-\`\`👤 Pseudo / ID :
+\` Pseudo / ID :\`
 
-\`\`❓ Raison du bannissement :
+\` Raison du bannissement :\`
 
-\`\`📌 Preuve (screen) :`,
+\` Preuve (screen) :\``,
 
-"1508433969711153203": `__**Stickied Message:**__
+  "1508433969711153203": `__**Stickied Message:**__
 
 **Personne :** …
 
@@ -54,7 +52,7 @@ uniquement des citations ici !!!!`,
 
 **Par :** …`,
 
-"1506942496884785152": `__**Stickied Message:**__
+  "1506942496884785152": `__**Stickied Message:**__
 
 **Bienvenue dans le salon confession de Shiiro**
 
@@ -63,7 +61,7 @@ Ici la règle principale est l’anonymat.
 C’est ici : 👈
 https://ngl.link/jestonoff11941`,
 
-"1519324372329042020": `__**Stickied Message:**__
+  "1519324372329042020": `__**Stickied Message:**__
 
 ## Commande : /mute
 
@@ -75,7 +73,7 @@ https://ngl.link/jestonoff11941`,
 - Leak / Dox / Swatt / Menaces = 60 minutes (ATT BAN)
 - NSFW = 60 minutes (ATT BAN)`,
 
-"1507078497959546983": `__**Stickied Message:**__
+  "1507078497959546983": `__**Stickied Message:**__
 
 # Format :
 
@@ -98,48 +96,46 @@ https://ngl.link/jestonoff11941`,
 
 # Pensez à ajouter le rôle absent aux membres de vos équipes / missions`,
 };
+
+// Durée du cooldown en ms (le temps minimum entre deux repost du sticky dans un même salon)
+const COOLDOWN_MS = 5000;
+
 const lastSticky = new Map();
 const cooldown = new Map();
 
 module.exports = async (message) => {
+  if (message.author.bot) return;
 
-    if (message.author.bot) return;
+  const stickyContent = stickyMessages[message.channel.id];
+  if (!stickyContent) return;
 
-    const stickyContent =
-        stickyMessages[message.channel.id];
+  // --- Cooldown check ---
+  const now = Date.now();
+  const lastTime = cooldown.get(message.channel.id) || 0;
 
-    if (!stickyContent) return;
+  if (now - lastTime < COOLDOWN_MS) {
+    // On est encore dans la fenêtre de cooldown, on ne renvoie pas le sticky
+    return;
+  }
 
-    try {
+  cooldown.set(message.channel.id, now);
 
-const oldSticky =
-    lastSticky.get(message.channel.id);
+  try {
+    const oldSticky = lastSticky.get(message.channel.id);
 
-if (oldSticky) {
-
-    try {
-
-        const oldMessage =
-            await message.channel.messages.fetch(oldSticky);
-
+    if (oldSticky) {
+      try {
+        const oldMessage = await message.channel.messages.fetch(oldSticky);
         await oldMessage.delete().catch(() => {});
-
-    } catch {
-
+      } catch {
         lastSticky.delete(message.channel.id);
-
+      }
     }
-}
 
-        const sticky =
-            await message.channel.send(stickyContent);
+    const sticky = await message.channel.send(stickyContent);
 
-        lastSticky.set(
-            message.channel.id,
-            sticky.id
-        );
-
-    } catch (err) {
-        console.error(err);
-    }
+    lastSticky.set(message.channel.id, sticky.id);
+  } catch (err) {
+    console.error(err);
+  }
 };
