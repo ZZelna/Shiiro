@@ -15,7 +15,7 @@ module.exports = async (member) => {
             `Bienvenue ${member} !\n\nGrâce à toi, nous sommes désormais **${member.guild.memberCount} membres**.`
         )
         .setThumbnail(member.user.displayAvatarURL())
-        .setImage("https://media.gifdb.com/cute-freiren-eating-under-night-sky-4bum4va0sf6v91j8.gif")
+        .setImage("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZoaDJwMm54OHY0ZjN6Mmt3a25vZ2E1emYxNXhsOG80Y2FoZ2ZlbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jtDEDcqMjDVODssiEs/giphy.gif")
         .setTimestamp();
 
     await channel.send({
