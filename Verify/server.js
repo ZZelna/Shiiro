@@ -50,6 +50,9 @@ module.exports = (client) => {
 
     // Routes
     const routes = require("./routes")(client);
+   app.get("/ping", (req, res) => {
+    res.send("OK");
+}); 
     app.use("/", routes);
 
     // Démarrage
