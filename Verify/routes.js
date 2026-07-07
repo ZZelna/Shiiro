@@ -6,9 +6,28 @@ module.exports = (client) => {
 
     const router = express.Router();
 
-    // Accueil
+    // Page principale
     router.get("/", (req, res) => {
         res.sendFile(__dirname + "/public/index.html");
+    });
+
+    // Vérification Cloudflare Turnstile
+    router.post("/verify-captcha", async (req, res) => {
+
+        const valid = await verifyCaptcha(req.body.token);
+
+        if (!valid) {
+            return res.json({
+                success: false
+            });
+        }
+
+        req.session.captcha = true;
+
+        return res.json({
+            success: true
+        });
+
     });
 
     // Connexion Discord
@@ -16,12 +35,17 @@ module.exports = (client) => {
         passport.authenticate("discord")
     );
 
-    // Callback OAuth2
+    // Callback Discord
     router.get("/callback",
         passport.authenticate("discord", {
             failureRedirect: "/"
         }),
         async (req, res) => {
+
+            // L'utilisateur doit avoir réussi le captcha
+            if (!req.session.captcha) {
+                return res.redirect("/");
+            }
 
             try {
 
@@ -30,23 +54,28 @@ module.exports = (client) => {
 
                 const guild = client.guilds.cache.get(GUILD_ID);
 
-                if (!guild)
+                if (!guild) {
                     return res.send("Serveur introuvable.");
+                }
 
                 const member = await guild.members.fetch(req.user.id).catch(() => null);
 
-                if (!member)
+                if (!member) {
                     return res.send("Vous devez rejoindre le serveur avant de vous vérifier.");
+                }
 
                 if (!member.roles.cache.has(VERIFY_ROLE_ID)) {
                     await member.roles.add(VERIFY_ROLE_ID);
                 }
 
+                // On évite de réutiliser le captcha
+                req.session.captcha = false;
+
                 res.redirect("/success");
 
             } catch (err) {
 
-                console.log(err);
+                console.error(err);
 
                 res.send("Erreur pendant la vérification.");
 
@@ -55,51 +84,69 @@ module.exports = (client) => {
         }
     );
 
-    // Vérification réussie
+    // Page succès
     router.get("/success", (req, res) => {
 
         res.send(`
-        <html>
-        <head>
-            <title>Vérifié</title>
-            <style>
-                body{
-                    background:#0d1117;
-                    color:white;
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    height:100vh;
-                    font-family:Arial;
-                }
+<!DOCTYPE html>
+<html lang="fr">
 
-                .card{
-                    background:#161b22;
-                    padding:40px;
-                    border-radius:15px;
-                    text-align:center;
-                }
+<head>
 
-                h1{
-                    color:#57F287;
-                }
-            </style>
-        </head>
+<meta charset="UTF-8">
 
-        <body>
+<title>Vérifié</title>
 
-            <div class="card">
-                <h1>✅ Vérification réussie</h1>
-                <p>Tu peux retourner sur Discord.</p>
-            </div>
+<style>
 
-        </body>
-        </html>
+body{
+background:#0d1117;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial,sans-serif;
+margin:0;
+}
+
+.card{
+background:#161b22;
+padding:40px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 0 30px rgba(0,0,0,.5);
+}
+
+h1{
+color:#57F287;
+margin-bottom:10px;
+}
+
+p{
+color:#d1d5db;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>✅ Vérification réussie</h1>
+
+<p>Tu peux retourner sur Discord.</p>
+
+</div>
+
+</body>
+
+</html>
         `);
 
     });
-
-    module.exports = router;
 
     return router;
 
