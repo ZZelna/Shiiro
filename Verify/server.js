@@ -8,11 +8,14 @@ module.exports = (client) => {
 
     const app = express();
 
+    // Parser JSON
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
 
+    // Fichiers publics
     app.use(express.static(path.join(__dirname, "public")));
 
+    // Session
     app.use(session({
         secret: process.env.SESSION_SECRET,
         resave: false,
@@ -22,11 +25,12 @@ module.exports = (client) => {
         }
     }));
 
+    // Passport
     app.use(passport.initialize());
     app.use(passport.session());
 
     passport.serializeUser((user, done) => done(null, user));
-    passport.deserializeUser((obj, done) => done(null, obj));
+    passport.deserializeUser((user, done) => done(null, user));
 
     passport.use(new DiscordStrategy(
         {
@@ -44,10 +48,11 @@ module.exports = (client) => {
         }
     ));
 
+    // Routes
     const routes = require("./routes")(client);
-
     app.use("/", routes);
 
+    // Démarrage
     const PORT = process.env.PORT || 3000;
 
     app.listen(PORT, () => {
