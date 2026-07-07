@@ -1164,6 +1164,7 @@ tiktokNotifier(client);
 const economyRewards = require("./systems/economyRewards");
 economyRewards(client);
 
+require("./verify/server")(client);
 // ─── Login ────────────────────────────────────────────────────────────────────
 
 console.log("TOKEN =", process.env.DISCORD_TOKEN);
