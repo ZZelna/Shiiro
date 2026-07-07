@@ -2,16 +2,24 @@ const express = require("express");
 const session = require("express-session");
 const passport = require("passport");
 const DiscordStrategy = require("passport-discord").Strategy;
+const path = require("path");
 
 module.exports = (client) => {
+
     const app = express();
 
-    app.use(express.static("./verify/public"));
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+
+    app.use(express.static(path.join(__dirname, "public")));
 
     app.use(session({
         secret: process.env.SESSION_SECRET,
         resave: false,
-        saveUninitialized: false
+        saveUninitialized: false,
+        cookie: {
+            maxAge: 86400000
+        }
     }));
 
     app.use(passport.initialize());
@@ -20,39 +28,30 @@ module.exports = (client) => {
     passport.serializeUser((user, done) => done(null, user));
     passport.deserializeUser((obj, done) => done(null, obj));
 
-    passport.use(new DiscordStrategy({
-        clientID: process.env.CLIENT_ID,
-        clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: process.env.CALLBACK_URL,
-        scope: ["identify", "guilds.join"]
-    }, async (accessToken, refreshToken, profile, done) => {
-        return done(null, profile);
-    }));
+    passport.use(new DiscordStrategy(
+        {
+            clientID: process.env.CLIENT_ID,
+            clientSecret: process.env.CLIENT_SECRET,
+            callbackURL: process.env.CALLBACK_URL,
+            scope: ["identify", "guilds.join"]
+        },
+        async (accessToken, refreshToken, profile, done) => {
 
-    app.get("/", (req, res) => {
-        res.sendFile(__dirname + "/public/index.html");
-    });
+            profile.accessToken = accessToken;
 
-    app.get("/auth/discord",
-        passport.authenticate("discord")
-    );
+            return done(null, profile);
 
-    app.get("/callback",
-        passport.authenticate("discord", {
-            failureRedirect: "/"
-        }),
-        async (req, res) => {
-            // Ici on ajoutera le rôle avec ton bot
-            res.redirect("/success");
         }
-    );
+    ));
 
-    app.get("/success", (req, res) => {
-        res.send("✅ Vérification réussie !");
-    });
+    const routes = require("./routes")(client);
+
+    app.use("/", routes);
 
     const PORT = process.env.PORT || 3000;
+
     app.listen(PORT, () => {
-        console.log(`Serveur lancé sur le port ${PORT}`);
+        console.log(`✅ Verification Web lancée sur le port ${PORT}`);
     });
+
 };
