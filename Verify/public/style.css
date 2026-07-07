@@ -107,6 +107,12 @@ p{
     margin:0 12px;
 }
 
+.cf-turnstile{
+    display:flex;
+    justify-content:center;
+    margin:25px 0;
+}
+
 .discord-btn{
     display:flex;
     justify-content:center;
@@ -114,12 +120,14 @@ p{
     gap:10px;
     width:100%;
     padding:15px;
+    border:none;
     border-radius:12px;
     text-decoration:none;
     color:white;
     background:#5865F2;
     font-size:17px;
     font-weight:bold;
+    cursor:pointer;
     transition:.25s;
 }
 
@@ -129,19 +137,29 @@ p{
     box-shadow:0 0 20px rgba(88,101,242,.5);
 }
 
+.discord-btn:disabled{
+    background:#3b3b3b;
+    cursor:not-allowed;
+    opacity:.6;
+    transform:none;
+    box-shadow:none;
+}
+
+.discord-btn:disabled:hover{
+    background:#3b3b3b;
+    transform:none;
+    box-shadow:none;
+}
+
 @media(max-width:500px){
 
 .card{
-
 width:95%;
 padding:30px;
-
 }
 
 .line{
-
 width:35px;
-
 }
 
 }
