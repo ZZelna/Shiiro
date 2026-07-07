@@ -22,22 +22,14 @@ module.exports = {
 
     async execute(interaction) {
 
-        const allowedRole =
-        "1506674274826584284";
+     const allowedUser = "1418370654251778168";
 
-        if (
-            !interaction.member.roles.cache.has(
-                allowedRole
-            )
-        ) {
-
-            return interaction.reply({
-                content:
-                "❌ Tu n'as pas la permission d'utiliser cette commande.",
-                ephemeral: true
-            });
-
-        }
+if (interaction.user.id !== allowedUser) {
+    return interaction.reply({
+        content: "❌ Tu n'as pas la permission d'utiliser cette commande.",
+        ephemeral: true
+    });
+}
 
         const targetId =
 interaction.options.getString(
