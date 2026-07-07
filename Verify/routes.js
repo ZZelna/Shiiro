@@ -1,5 +1,6 @@
 const express = require("express");
 const passport = require("passport");
+const verifyCaptcha = require("./captcha");
 
 module.exports = (client) => {
 
