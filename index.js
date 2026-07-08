@@ -33,6 +33,7 @@ function getCustomRole(commandName) {
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildModeration,
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMembers,
@@ -439,19 +440,37 @@ setInterval(async () => {
 const GlobalBlacklist = require("./models/GlobalBlacklist");
 
 client.on("guildBanRemove", async (ban) => {
+    console.log(`🔓 Unban détecté : ${ban.user.tag} (${ban.user.id})`);
+
     if (ban.guild.id !== "1506672014679740546") return;
-if (ban.user.bot) return;
-    const blacklisted = await GlobalBlacklist.findOne({ userId: ban.user.id });
-    if (!blacklisted) return;
+    if (ban.user.bot) return;
+
+    const blacklisted = await GlobalBlacklist.findOne({
+        userId: ban.user.id
+    });
+
+    if (!blacklisted) {
+        console.log("❌ L'utilisateur n'est pas dans la blacklist globale.");
+        return;
+    }
+
+    console.log("✅ Utilisateur trouvé dans la blacklist.");
+
+    // Attend que Discord termine complètement le déban
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
     try {
-        await ban.guild.members.ban(ban.user.id, { reason: "Blacklist globale active" });
+        await ban.guild.members.ban(ban.user.id, {
+            reason: `[BL] ${blacklisted.reason}`
+        });
+
+        console.log(`⛔ ${ban.user.tag} a été rebanni automatiquement.`);
 
         const logGuild = client.guilds.cache.get("1519364880677867550");
         const logChannel = logGuild?.channels.cache.get("1519400651745132575");
 
         if (logChannel) {
-            logChannel.send({
+            await logChannel.send({
                 content:
                     "```diff\n" +
                     "! Blacklist Globale détectée.\n" +
@@ -461,11 +480,11 @@ if (ban.user.bot) return;
                     "```"
             });
         }
+
     } catch (err) {
-        console.log(err);
+        console.error("❌ Erreur lors du rebannissement :", err);
     }
 });
-
 // ─── guildMemberUpdate (logs rôles + protection) ─────────────────────────────
 
 client.on("guildMemberUpdate", async (oldMember, newMember) => {
