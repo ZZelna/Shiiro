@@ -1,31 +1,67 @@
-module.exports = {
-    name: "clear",
+const {
+    SlashCommandBuilder,
+    PermissionFlagsBits
+} = require("discord.js");
 
-    async run(message, args) {
+module.exports = {
+    data: new SlashCommandBuilder()
+        .setName("clear")
+        .setDescription("Supprime des messages")
+        .addIntegerOption(option =>
+            option
+                .setName("amount")
+                .setDescription("Nombre de messages à supprimer (1-100)")
+                .setRequired(true)
+                .setMinValue(1)
+                .setMaxValue(100)
+        )
+        .addUserOption(option =>
+            option
+                .setName("user")
+                .setDescription("Supprimer uniquement les messages d'un utilisateur")
+                .setRequired(false)
+        )
+        .addStringOption(option =>
+            option
+                .setName("reason")
+                .setDescription("Raison de la suppression")
+                .setRequired(false)
+        ),
+
+    async execute(interaction) {
 
         const allowedRoles = [
             "1506674274826584284",
             "1521596407968960613"
         ];
 
-        if (!message.member.roles.cache.some(role => allowedRoles.includes(role.id))) {
-            return message.reply("❌ Vous n'avez pas la permission.");
+        if (!interaction.member.roles.cache.some(role => allowedRoles.includes(role.id))) {
+            return interaction.reply({
+                content: "❌ Vous n'avez pas la permission.",
+                ephemeral: true
+            });
         }
 
-        const amount = parseInt(args[0]);
+        const amount = interaction.options.getInteger("amount");
+        const user = interaction.options.getUser("user");
 
-        if (!amount || amount < 1 || amount > 100) {
-            return message.reply("❌ Utilisation : +clear <1-100>");
+        const messages = await interaction.channel.messages.fetch({
+            limit: 100
+        });
+
+        let filtered = messages;
+
+        if (user) {
+            filtered = messages.filter(msg => msg.author.id === user.id);
         }
 
-        await message.channel.bulkDelete(amount, true);
+        filtered = filtered.first(amount);
 
-        const msg = await message.channel.send(
-            `🗑️ ${amount} messages supprimés.`
-        );
+        await interaction.channel.bulkDelete(filtered, true);
 
-        setTimeout(() => {
-            msg.delete().catch(() => {});
-        }, 3000);
+        await interaction.reply({
+            content: `✅ ${filtered.length} messages supprimés${user ? ` de ${user}` : ""}.`,
+            ephemeral: true
+        });
     }
 };
