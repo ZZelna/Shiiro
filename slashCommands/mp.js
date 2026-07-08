@@ -85,16 +85,21 @@ module.exports = {
 
         }
 
-        await interaction.deferReply({ ephemeral: true });
+        await interaction.deferReply({
+            ephemeral: true
+        });
 
-        const members = await interaction.guild.members.fetch();
+        // Récupère tous les membres pour remplir role.members
+        await interaction.guild.members.fetch();
+
+        console.log(`Rôle : ${role.name} (${role.id})`);
+        console.log(`Membres du rôle : ${role.members.size}`);
 
         let success = 0;
         let failed = 0;
 
-        for (const guildMember of members.values()) {
+        for (const guildMember of role.members.values()) {
 
-            if (!guildMember.roles.cache.has(role.id)) continue;
             if (guildMember.user.bot) continue;
 
             try {
