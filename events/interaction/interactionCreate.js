@@ -454,7 +454,7 @@ if (
        { chance: 20, roleId: "1519383713014878279", name: "🔊 Perm VOC Chat" },
        { chance: 15, roleId: "1519633537156907088", name: "🖼️ Perm Pic" },
        { chance: 15, roleId: "1519633572850438225", name: "🎨 Perm Banner" },
-       { chance: 10, roleId: "1514311105588101332", name: "✨ Perm Animation" },
+       { chance: 10, roleId: "1523705733567479909", name: "✨ Perm Animation" },
        { chance: 10, roleId: "1513950039289106502", name: "✏️ Perm Rename" },
        { chance: 15, roleId: "1519383437419610332", name: "💴 50 000 ¥" },
        { chance: 8,  roleId: "1519383482113982474", name: "💴 100 000 ¥" },
