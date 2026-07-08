@@ -1,128 +1,122 @@
 const {
-SlashCommandBuilder,
-EmbedBuilder
+    SlashCommandBuilder
 } = require("discord.js");
 
 const allowedRoles = [
-"1506674274826584284",
-"1507082580414173234",
-"1521595694052409485"
+    "1506674274826584284"
 ];
 
 module.exports = {
-data: new SlashCommandBuilder()
-.setName("ban")
-.setDescription("Bannir un membre")
-.addUserOption(option =>
-option
-.setName("membre")
-.setDescription("Membre à bannir")
-.setRequired(true)
-)
-.addStringOption(option =>
-option
-.setName("raison")
-.setDescription("Raison du bannissement")
-.setRequired(true)
-),
-async execute(interaction) {
+    data: new SlashCommandBuilder()
+        .setName("mp")
+        .setDescription("Envoyer un message privé à un membre ou à un rôle.")
+        .addUserOption(option =>
+            option
+                .setName("membre")
+                .setDescription("Le membre à qui envoyer le message")
+                .setRequired(false)
+        )
+        .addRoleOption(option =>
+            option
+                .setName("role")
+                .setDescription("Le rôle à qui envoyer le message")
+                .setRequired(false)
+        )
+        .addStringOption(option =>
+            option
+                .setName("message")
+                .setDescription("Le message à envoyer")
+                .setRequired(true)
+        ),
 
-    const hasPermission =
-        interaction.member.roles.cache.some(role =>
-            allowedRoles.includes(role.id)
-        );
+    async execute(interaction) {
 
-    if (!hasPermission) {
-        return interaction.reply({
-            content: "❌ Vous n'avez pas la permission d'utiliser cette commande.",
+        const hasPermission =
+            interaction.member.roles.cache.some(role =>
+                allowedRoles.includes(role.id)
+            );
+
+        if (!hasPermission) {
+            return interaction.reply({
+                content: "❌ Vous n'avez pas la permission d'utiliser cette commande.",
+                ephemeral: true
+            });
+        }
+
+        const member = interaction.options.getUser("membre");
+        const role = interaction.options.getRole("role");
+        const message = interaction.options.getString("message");
+
+        if (!member && !role) {
+            return interaction.reply({
+                content: "❌ Tu dois sélectionner un membre ou un rôle.",
+                ephemeral: true
+            });
+        }
+
+        if (member && role) {
+            return interaction.reply({
+                content: "❌ Tu ne peux sélectionner qu'un membre ou un rôle.",
+                ephemeral: true
+            });
+        }
+
+        if (member) {
+
+            try {
+
+                await member.send(message);
+
+                return interaction.reply({
+                    content: `✅ Message envoyé à **${member.tag}**.`,
+                    ephemeral: true
+                });
+
+            } catch {
+
+                return interaction.reply({
+                    content: "❌ Impossible d'envoyer un message privé à ce membre.",
+                    ephemeral: true
+                });
+
+            }
+
+        }
+
+        await interaction.deferReply({
             ephemeral: true
         });
-    }
 
-    const member =
-        interaction.options.getMember("membre");
+        const members = await interaction.guild.members.fetch();
 
-    const reason =
-        interaction.options.getString("raison");
+        let success = 0;
+        let failed = 0;
 
-    if (!member) {
-        return interaction.reply({
-            content: "❌ Membre introuvable.",
-            ephemeral: true
+        for (const guildMember of members.values()) {
+
+            if (!guildMember.roles.cache.has(role.id)) continue;
+            if (guildMember.user.bot) continue;
+
+            try {
+
+                await guildMember.send(message);
+                success++;
+
+            } catch {
+
+                failed++;
+
+            }
+
+        }
+
+        return interaction.editReply({
+            content:
+`✅ Envoi terminé.
+
+📨 Messages envoyés : **${success}**
+❌ Échecs : **${failed}**`
         });
+
     }
-
-    if (member.id === interaction.user.id) {
-        return interaction.reply({
-            content: "❌ Vous ne pouvez pas vous bannir vous-même.",
-            ephemeral: true
-        });
-    }
-
-    if (
-        member.roles.highest.position >=
-        interaction.member.roles.highest.position
-    ) {
-        return interaction.reply({
-            content: "❌ Vous ne pouvez pas bannir un membre ayant un rôle supérieur ou égal au vôtre.",
-            ephemeral: true
-        });
-    }
-
-    try {
-
-        await member.send(
-`🔨 Tu as été banni du serveur **${interaction.guild.name}**
-
-📋 Raison :
-${reason}
-
-🔓 Serveur d'unban :
-https://discord.gg/FZqjCqMmXY
-
-Merci de créer un ticket sur le serveur d'unban afin qu'un juge puisse examiner ta demande.`
-).catch(() => {});
-        
-      await member.ban({
-            reason: `${reason} | Ban par ${interaction.user.tag}`
-        });
-const logChannel = interaction.client.channels.cache.get(
-    "1520116351904120852" // ← logs-ban dans Shiiro logs
-);
-
-
-if (logChannel) {
-
-    await logChannel.send({
-        content:
-`\`\`\`diff
-- Bannissement effectué.
-Utilisateur: ${member.user.tag} (ID: ${member.id})
-Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
-Raison: ${reason}
-Action: Utilisateur banni. 🔨
-\`\`\``
-    });
-
-}
-        await interaction.reply({
-    content:
-`\`\`\`diff
-- Bannissement effectué.
-Utilisateur: ${member.user.tag} (ID: ${member.id})
-Modérateur: ${interaction.user.tag} (ID: ${interaction.user.id})
-Raison: ${reason}
-Action: Utilisateur banni. 🔨
-\`\`\``
-});
-    } catch (err) {
-
-        console.error(err);
-
-        return interaction.reply({
-            content: "❌ Impossible de bannir ce membre.",
-            ephemeral: true
-        });
-    }
-}
-  };
+};
