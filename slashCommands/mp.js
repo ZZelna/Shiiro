@@ -1,9 +1,10 @@
 const {
-    SlashCommandBuilder,
-    PermissionFlagsBits
+    SlashCommandBuilder
 } = require("discord.js");
 
-const config = require("../config.json");
+const allowedRoles = [
+    "1506674274826584284"
+];
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -26,14 +27,18 @@ module.exports = {
                 .setName("message")
                 .setDescription("Le message à envoyer")
                 .setRequired(true)
-        )
-        .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
+        ),
 
     async execute(interaction) {
 
-        if (!config.owner_ids.includes(interaction.user.id)) {
+        const hasPermission =
+            interaction.member.roles.cache.some(role =>
+                allowedRoles.includes(role.id)
+            );
+
+        if (!hasPermission) {
             return interaction.reply({
-                content: "❌ Cette commande est réservée aux owners.",
+                content: "❌ Vous n'avez pas la permission d'utiliser cette commande.",
                 ephemeral: true
             });
         }
@@ -44,7 +49,7 @@ module.exports = {
 
         if (!member && !role) {
             return interaction.reply({
-                content: "❌ Tu dois choisir un membre ou un rôle.",
+                content: "❌ Tu dois sélectionner un membre ou un rôle.",
                 ephemeral: true
             });
         }
@@ -59,6 +64,7 @@ module.exports = {
         if (member) {
 
             try {
+
                 await member.send(message);
 
                 return interaction.reply({
@@ -81,10 +87,10 @@ module.exports = {
             ephemeral: true
         });
 
+        const members = await interaction.guild.members.fetch();
+
         let success = 0;
         let failed = 0;
-
-        const members = await interaction.guild.members.fetch();
 
         for (const guildMember of members.values()) {
 
@@ -104,9 +110,13 @@ module.exports = {
 
         }
 
-        return interaction.editReply(
-            `✅ Envoi terminé.\n\n📨 Messages envoyés : **${success}**\n❌ Échecs : **${failed}**`
-        );
+        return interaction.editReply({
+            content:
+`✅ Envoi terminé.
+
+📨 Messages envoyés : **${success}**
+❌ Échecs : **${failed}**`
+        });
 
     }
 };
