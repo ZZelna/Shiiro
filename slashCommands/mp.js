@@ -10,31 +10,33 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName("mp")
         .setDescription("Envoyer un message privé à un membre ou à un rôle.")
+
+        .addStringOption(option =>
+            option
+                .setName("message")
+                .setDescription("Le message à envoyer")
+                .setRequired(true)
+        )
+
         .addUserOption(option =>
             option
                 .setName("membre")
                 .setDescription("Le membre à qui envoyer le message")
                 .setRequired(false)
         )
+
         .addRoleOption(option =>
             option
                 .setName("role")
                 .setDescription("Le rôle à qui envoyer le message")
                 .setRequired(false)
-        )
-        .addStringOption(option =>
-            option
-                .setName("message")
-                .setDescription("Le message à envoyer")
-                .setRequired(true)
         ),
 
     async execute(interaction) {
 
-        const hasPermission =
-            interaction.member.roles.cache.some(role =>
-                allowedRoles.includes(role.id)
-            );
+        const hasPermission = interaction.member.roles.cache.some(role =>
+            allowedRoles.includes(role.id)
+        );
 
         if (!hasPermission) {
             return interaction.reply({
@@ -43,9 +45,9 @@ module.exports = {
             });
         }
 
+        const message = interaction.options.getString("message");
         const member = interaction.options.getUser("membre");
         const role = interaction.options.getRole("role");
-        const message = interaction.options.getString("message");
 
         if (!member && !role) {
             return interaction.reply({
@@ -83,9 +85,7 @@ module.exports = {
 
         }
 
-        await interaction.deferReply({
-            ephemeral: true
-        });
+        await interaction.deferReply({ ephemeral: true });
 
         const members = await interaction.guild.members.fetch();
 
