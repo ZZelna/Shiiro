@@ -8,7 +8,7 @@ const OWNER_ID = "1418370654251778168";
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("botstats")
-        .setDescription("Affiche les statistiques des commandes du bot."),
+        .setDescription("Affiche les informations du bot."),
 
     async execute(interaction) {
 
@@ -19,31 +19,44 @@ module.exports = {
             });
         }
 
-        const slashCommands = interaction.client.slashCommands.size;
-        const prefixCommands = interaction.client.commands.size;
+        const bot = interaction.client.user;
+
+        const slashCount = interaction.client.slashCommands.size;
+        const prefixCount = interaction.client.commands.size;
 
         const embed = new EmbedBuilder()
             .setColor("#5865F2")
-            .setTitle("📊 Statistiques du bot")
+            .setTitle("🤖 Informations de Shiiro")
+            .setThumbnail(bot.displayAvatarURL())
             .addFields(
                 {
+                    name: "📛 Nom",
+                    value: bot.username,
+                    inline: true
+                },
+                {
+                    name: "🆔 ID",
+                    value: bot.id,
+                    inline: true
+                },
+                {
+                    name: "📅 Création",
+                    value: `<t:${Math.floor(bot.createdTimestamp / 1000)}:F>\n(<t:${Math.floor(bot.createdTimestamp / 1000)}:R>)`,
+                    inline: false
+                },
+                {
                     name: "⚡ Commandes Slash",
-                    value: `${slashCommands}`,
+                    value: `${slashCount}`,
                     inline: true
                 },
                 {
-                    name: "💬 Commandes Préfixées",
-                    value: `${prefixCommands}`,
-                    inline: true
-                },
-                {
-                    name: "📦 Total",
-                    value: `${slashCommands + prefixCommands}`,
+                    name: "💬 Commandes Préfixes",
+                    value: `${prefixCount}`,
                     inline: true
                 }
             )
             .setFooter({
-                text: interaction.client.user.username
+                text: "Shiiro • UHQ"
             })
             .setTimestamp();
 
