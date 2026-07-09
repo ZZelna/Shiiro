@@ -1,5 +1,4 @@
 const ghostMentions = new Map();
-const ghostCounts = new Map();
 
 module.exports = {
 
@@ -26,61 +25,30 @@ module.exports = {
 
    async messageDelete(message) {
 
-       if (!ghostMentions.has(message.id))
-           return;
+    if (!ghostMentions.has(message.id))
+        return;
 
-       const data = ghostMentions.get(message.id);
+    const data = ghostMentions.get(message.id);
+    ghostMentions.delete(message.id);
 
-       ghostMentions.delete(message.id);
+    try {
 
-       if (data.mentions.length < 5) return;
+        const guild = message.client.guilds.cache.get(data.guild);
+        const member = await guild.members.fetch(data.author);
+        const channel = guild.channels.cache.get(data.channel);
 
-       const count = (ghostCounts.get(data.author) || 0) + 1;
+        const users = data.mentions
+            .map(id => `<@${id}>`)
+            .join(", ");
 
-       ghostCounts.set(data.author, count);
+        const alert = await channel.send({
+            content: `👻 ${member} a effectué un ghost ping.\nMentions : ${users}`
+        });
 
-       if (count < 5) return;
+        setTimeout(() => {
+            alert.delete().catch(() => {});
+        }, 5000);
 
-       ghostCounts.set(data.author, 0);
-
-       try {
-
-           const guild =
-               message.client.guilds.cache.get(
-                   data.guild
-               );
-
-           const member =
-               await guild.members.fetch(
-                   data.author
-               );
-
-           const channel =
-               guild.channels.cache.get(
-                   data.channel
-               );
-
-           const users =
-               data.mentions
-                   .map(id => `<@${id}>`)
-                   .join(", ");
-
-           const warn =
-               await channel.send({
-
-                   content:
-                       `👻 ${member} Ghost Ping en masse détecté (5 fois).\nMentions : ${users}`
-
-               });
-
-           setTimeout(() => {
-
-               warn.delete().catch(() => {});
-
-           }, 5000);
-
-       } catch {}
-
-   }
-
+    } catch {}
+}
 };
