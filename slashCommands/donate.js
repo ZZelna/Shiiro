@@ -26,9 +26,23 @@ module.exports = {
        ),
 
    async execute(interaction) {
+   const ALLOWED_CHANNEL = "1523677940750225508";
 
-       const target = interaction.options.getUser("joueur");
-       const amount = interaction.options.getInteger("montant");
+    if (interaction.channelId !== ALLOWED_CHANNEL) {
+
+        return interaction.reply({
+
+            content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
+
+            ephemeral: true
+
+        });
+
+    }
+
+    const target = interaction.options.getUser("joueur");
+
+    const amount = interaction.options.getInteger("montant");
 
        if (target.id === interaction.user.id) {
            return interaction.reply({
