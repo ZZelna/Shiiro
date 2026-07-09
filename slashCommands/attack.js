@@ -24,7 +24,7 @@ module.exports = {
 
     async execute(interaction) {
 
-        const ALLOWED_CHANNEL = "1523677940750225508";
+        const ALLOWED_CHANNEL = "1519055718416781412";
 
         if (interaction.channelId !== ALLOWED_CHANNEL) {
             return interaction.reply({
