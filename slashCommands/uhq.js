@@ -42,18 +42,20 @@ module.exports = {
                     text: `Page ${page + 1}/${Math.ceil(guilds.length / pageSize)} • ${guilds.length} serveurs`
                 });
 
-            current.forEach((guild, index) => {
+        current.forEach((guild, index) => {
 
-                embed.addFields({
-                    name: `${start + index + 1}. ${guild.name}`,
-                    value:
+    embed.addFields({
+        name: `🌐 ${guild.name}`,
+        value:
 `🆔 **ID :** ${guild.id}
 👥 **Membres :** ${guild.memberCount}
-🤖 **Bots :** ${guild.members.cache.filter(m => m.user.bot).size}`,
-                    inline: false
-                });
+🤖 **Bots :** ${guild.members.cache.filter(m => m.user.bot).size}
 
-            });
+────────────────────────────────────`,
+        inline: false
+    });
+
+});
 
             return embed;
 
