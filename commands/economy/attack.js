@@ -20,68 +20,61 @@ module.exports = {
     name: "attack",
 
     async run(message) {
-const ALLOWED_CHANNEL = "1519055718416781412";
 
-        if (interaction.channelId !== ALLOWED_CHANNEL) {
-            return interaction.reply({
-                content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
-                ephemeral: true
-            });
+        const ALLOWED_CHANNEL = "1519055718416781412";
+
+        if (message.channel.id !== ALLOWED_CHANNEL) {
+            return message.reply(
+                "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>."
+            );
         }
 
         const user = await CasinoProfile.findOne({
-            userId: interaction.user.id
+            userId: message.author.id
         });
 
         if (!user) {
-            return interaction.reply({
-                content: "❌ Tu n'as pas de profil casino. Utilise `/casino` pour en créer un.",
-                ephemeral: true
-            });
+            return message.reply(
+                "❌ Tu n'as pas de profil casino. Utilise **/casino** pour en créer un."
+            );
         }
 
-        const
-         coffre = await Coffre.findOne();
+        const coffre = await Coffre.findOne();
 
         if (!coffre) {
-            return interaction.reply({
-                content: "❌ Aucun coffre n'est actuellement actif. Utilise `/startcoffre`.",
-                ephemeral: true
-            });
+            return message.reply(
+                "❌ Aucun coffre n'est actuellement actif. Un administrateur doit lancer **/startcoffre**."
+            );
         }
 
         if (coffre.destroyed) {
-            return interaction.reply({
-                content: "❌ Ce coffre a déjà été détruit. Attendez qu'un nouveau coffre soit lancé.",
-                ephemeral: true
-            });
+            return message.reply(
+                "❌ Ce coffre a déjà été détruit. Attendez qu'un nouveau coffre soit lancé."
+            );
         }
-             // Cooldown
+
         const now = Date.now();
 
-        const participant = coffre.participants.get(interaction.user.id) ?? {
+        const participant = coffre.participants.get(message.author.id) ?? {
             hits: 0,
             lastAttack: 0
         };
-
-        if (now - participant.lastAttack < COOLDOWN) {
+                if (now - participant.lastAttack < COOLDOWN) {
 
             const remaining = COOLDOWN - (now - participant.lastAttack);
             const minutes = Math.floor(remaining / 60000);
             const seconds = Math.floor((remaining % 60000) / 1000);
 
-            return interaction.reply({
-                content: `⏳ Tu dois attendre encore **${minutes}m ${seconds}s** avant d'attaquer à nouveau.`,
-                ephemeral: true
-            });
-
+            return message.reply(
+                `⏳ Tu dois attendre encore **${minutes}m ${seconds}s** avant d'attaquer à nouveau.`
+            );
         }
 
         // Attaque
         participant.hits += 1;
         participant.lastAttack = now;
 
-        coffre.participants.set(interaction.user.id, participant);
+        coffre.participants.set(message.author.id, participant);
         coffre.totalHits += 1;
 
         coffre.markModified("participants");
@@ -104,7 +97,7 @@ const ALLOWED_CHANNEL = "1519055718416781412";
             await coffre.save();
 
             const rewards = [];
-                     for (const [userId, data] of coffre.participants) {
+                        for (const [userId, data] of coffre.participants) {
 
                 const share = Math.floor(
                     (data.hits / MAX_HITS) * TOTAL_YENS
@@ -125,7 +118,7 @@ const ALLOWED_CHANNEL = "1519055718416781412";
 
             }
 
-            return interaction.reply({
+            return message.reply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor("Gold")
@@ -141,14 +134,13 @@ const ALLOWED_CHANNEL = "1519055718416781412";
         }
 
         await coffre.save();
-
-        return interaction.reply({
+                return message.reply({
             embeds: [
                 new EmbedBuilder()
                     .setColor("Orange")
                     .setTitle("⚔️ Attaque !")
                     .setDescription(
-                        `${interaction.user} frappe le coffre !\n\n` +
+                        `${message.author} frappe le coffre !\n\n` +
                         `${progressBar}\n` +
                         `**${coffre.totalHits.toLocaleString()} / ${MAX_HITS.toLocaleString()} frappes** (${percent}%)\n\n` +
                         `🥊 Tu as frappé **${participant.hits} fois** au total.`
