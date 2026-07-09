@@ -40,7 +40,7 @@ module.exports = {
 • \`*bountystatus\` : voir les primes
 • \`*bounty\` : poser une prime
 • \`*cancelbounty\` : annuler une prime
-`)
+`),
             new EmbedBuilder()
                 .setColor("Blue")
                 .setTitle("🛠️ Commandes admins casino (2/4)")
