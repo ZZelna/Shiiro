@@ -14,11 +14,27 @@ module.exports = {
         ),
 
     async execute(interaction) {
+  const ALLOWED_CHANNEL = "1523677940750225508";
 
-        const profile =
-            await CasinoProfile.findOne({
-                userId: interaction.user.id
-            });
+    if (interaction.channelId !== ALLOWED_CHANNEL) {
+
+        return interaction.reply({
+
+            content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
+
+            ephemeral: true
+
+        });
+
+    }
+
+    const profile =
+
+        await CasinoProfile.findOne({
+
+            userId: interaction.user.id
+
+        })
 
         if (!profile) {
             return interaction.reply({
