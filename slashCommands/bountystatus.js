@@ -11,16 +11,34 @@ module.exports = {
        .setDescription("Affiche la liste des primes actives."),
 
    async execute(interaction) {
-       const bounties = await Bounty.find();
+     const ALLOWED_CHANNEL = "1519247019246616598";
 
-       if (!bounties.length) {
-           return interaction.reply({
-               content: "✅ Aucune prime active en ce moment.",
-               ephemeral: true
-           });
-       }
+    if (interaction.channelId !== ALLOWED_CHANNEL) {
 
-       const embed = new EmbedBuilder()
+        return interaction.reply({
+
+            content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
+
+            ephemeral: true
+
+        });
+
+    }
+
+    const bounties = await Bounty.find();
+
+    if (!bounties.length) {
+
+        return interaction.reply({
+
+            content: "✅ Aucune prime active en ce moment.",
+
+            ephemeral: true
+
+        });
+
+    }
+ const embed = new EmbedBuilder()
            .setColor("DarkRed")
            .setTitle("🎯 Primes Actives")
            .setDescription(`**${bounties.length}** prime(s) en cours.`)
