@@ -178,9 +178,17 @@ if (message.channel.isThread()) {
     }
 
 }
-    if (!message.content.startsWith("+")) return;
+    const prefixes = ["+", "!", "*", "?"];
 
-    const args = message.content.slice(1).trim().split(/ +/);
+const prefix = prefixes.find(p => message.content.startsWith(p));
+
+if (!prefix) return;
+
+const args = message.content
+    .slice(prefix.length)
+    .trim()
+    .split(/ +/);
+    
     const commandName = args.shift()?.toLowerCase();
 
     const customRole = getCustomRole(commandName);
