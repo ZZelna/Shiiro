@@ -13,7 +13,7 @@ module.exports = {
     data: new SlashCommandBuilder()
     .setName("uhq")
     .setDescription("Affiche tous les serveurs où le bot est présent.")
-    .setDMPermission(true)
+    .setDMPermission(true),
         
     async execute(interaction) {
 
