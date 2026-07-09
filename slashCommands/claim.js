@@ -14,7 +14,14 @@ module.exports = {
        .setDescription("Réclame une récompense toutes les 20 minutes"),
 
    async execute(interaction) {
+const ALLOWED_CHANNEL = "1523677940750225508";
 
+if (interaction.channelId !== ALLOWED_CHANNEL) {
+    return interaction.reply({
+        content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
+        ephemeral: true
+    });
+}
        const profile = await CasinoProfile.findOne({
            userId: interaction.user.id
        });
