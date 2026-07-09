@@ -22,25 +22,34 @@ module.exports = {
    .setDescription("Attaque le coffre pour gagner des yens !"),
 
  async execute(interaction) {
-   const user = await CasinoProfile.findOne({ userId: interaction.user.id });
+     const ALLOWED_CHANNEL = "1523677940750225508";
 
-   if (!user) {
-     return interaction.reply({
-       content: "❌ Tu n'as pas de profil casino. Utilise `/casino` pour en créer un.",
-       ephemeral: true
-     });
-   }
+    if (interaction.channelId !== ALLOWED_CHANNEL) {
 
-   let coffre = await Coffre.findOne();
+        return interaction.reply({
 
-   if (!coffre || coffre.destroyed) {
-     return interaction.reply({
-       content: "❌ Il n'y a pas de coffre actif. Attends qu'un admin en lance un.",
-       ephemeral: true
-     });
-   }
+            content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
 
-   // Cooldown
+            ephemeral: true
+
+        });
+
+    }
+
+    const user = await CasinoProfile.findOne({ userId: interaction.user.id });
+
+    if (!user) {
+
+        return interaction.reply({
+
+            content: "❌ Tu n'as pas de profil casino. Utilise `/casino` pour en créer un.",
+
+            ephemeral: true
+
+        });
+
+    }
+ // Cooldown
    const now = Date.now();
    const lastAttack = coffre.participants.get(interaction.user.id)?.lastAttack ?? 0;
 
