@@ -11,9 +11,10 @@ const OWNER_ID = "1418370654251778168";
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName("uhq")
-        .setDescription("Affiche tous les serveurs où le bot est présent."),
-
+    .setName("uhq")
+    .setDescription("Affiche tous les serveurs où le bot est présent.")
+    .setDMPermission(true)
+        
     async execute(interaction) {
 
         if (interaction.user.id !== OWNER_ID) {
