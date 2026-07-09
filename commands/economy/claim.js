@@ -2,7 +2,7 @@ const {
     EmbedBuilder
 } = require("discord.js");
 
-const CasinoProfile = require("../models/CasinoProfile");
+const CasinoProfile = require("../../models/CasinoProfile");
 const updateClanYens = require("../../systems/updateClanYens");
 
 const LOGS_CASINO = "1520766436388245585";
