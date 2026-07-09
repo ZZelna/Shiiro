@@ -12,6 +12,19 @@ data: new SlashCommandBuilder()
 .setDescription("Affiche l’aide du casino"),
     
 async execute(interaction) {
+ const ALLOWED_CHANNEL = "1523677940750225508";
+
+    if (interaction.channelId !== ALLOWED_CHANNEL) {
+
+        return interaction.reply({
+
+            content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
+
+            ephemeral: true
+
+        });
+
+    }
 
     const pages = [
 new EmbedBuilder()
