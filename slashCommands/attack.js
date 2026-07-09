@@ -1,5 +1,4 @@
 const {
-    SlashCommandBuilder,
     EmbedBuilder
 } = require("discord.js");
 
@@ -18,13 +17,10 @@ function buildProgressBar(current, max, length = 20) {
 }
 
 module.exports = {
-    data: new SlashCommandBuilder()
-        .setName("attack")
-        .setDescription("Attaque le coffre pour gagner des yens !"),
+    name: "attack",
 
-    async execute(interaction) {
-
-        const ALLOWED_CHANNEL = "1519055718416781412";
+    async run(message) {
+const ALLOWED_CHANNEL = "1519055718416781412";
 
         if (interaction.channelId !== ALLOWED_CHANNEL) {
             return interaction.reply({
