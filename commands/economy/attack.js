@@ -2,8 +2,8 @@ const {
     EmbedBuilder
 } = require("discord.js");
 
-const CasinoProfile = require("../models/CasinoProfile");
-const Coffre = require("../models/Coffre");
+const CasinoProfile = require("../../models/CasinoProfile");
+const Coffre = require("../../models/Coffre");
 
 const COOLDOWN = 30 * 60 * 1000;
 const MAX_HITS = 10000;
