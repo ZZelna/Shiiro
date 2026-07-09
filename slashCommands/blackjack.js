@@ -52,7 +52,20 @@ module.exports = {
    ),
 
  async execute(interaction) {
-   const bet = interaction.options.getInteger("mise");
+  const ALLOWED_CHANNEL = "1523677940750225508";
+
+    if (interaction.channelId !== ALLOWED_CHANNEL) {
+
+        return interaction.reply({
+
+            content: `❌ Cette commande casino est uniquement utilisable dans <#1523677940750225508>.`,
+
+            ephemeral: true
+
+        });
+
+    }
+ const bet = interaction.options.getInteger("mise");
 
    const user = await CasinoProfile.findOne({ userId: interaction.user.id });
 
