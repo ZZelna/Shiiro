@@ -100,12 +100,6 @@ ${prompt}`
     }
 
 }
-
-console.log(response);
-
-return response.text;
-}
-
 module.exports = {
     askGemini
 };
