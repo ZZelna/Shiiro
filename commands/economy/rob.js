@@ -6,7 +6,7 @@ const CasinoProfile = require("../../models/CasinoProfile");
 const Bounty = require("../../models/Bounty");
 
 const COOLDOWN = 30 * 60 * 1000;
-const LOGS_CASINO = "1520766436388245585";
+const LOGS_CASINO = "1519055718416781412";
 
 module.exports = {
     name: "rob",
