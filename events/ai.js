@@ -88,7 +88,7 @@ ${data}
 
         await message.channel.sendTyping();
 
-        const response = await askGemini(prompt);
+      const response = await askGroq(prompt);
 
         const parts = [];
 
