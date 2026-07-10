@@ -119,19 +119,27 @@ ${data}
 
         }
 
-    } catch (err) {
+   catch (err) {
 
-        console.error("===== ERREUR GEMINI =====");
-        console.error(err);
+    console.error(err);
 
+    const status = err?.status || err?.error?.code;
+
+    if (status === 503) {
         return message.reply(
-            "```js\n" +
-            (err.stack ||
-                err.message ||
-                JSON.stringify(err, null, 2)) +
-            "\n```"
+            "⚠️ Shiiro IA est actuellement surchargée. Réessaie dans quelques instants."
         );
-
     }
 
+    if (status === 429) {
+        return message.reply(
+            "⚠️ Trop de requêtes envoyées à l'IA. Réessaie dans quelques secondes."
+        );
+    }
+
+    return message.reply(
+        "❌ Une erreur est survenue lors de la génération de la réponse."
+    );
+
+}
 };
