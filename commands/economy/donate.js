@@ -11,7 +11,7 @@ module.exports = {
 
     async run(message, args) {
 
-        const ALLOWED_CHANNEL = "1523677940750225508";
+        const ALLOWED_CHANNEL = "1519055718416781412";
 
         if (message.channel.id !== ALLOWED_CHANNEL) {
             return message.reply(
