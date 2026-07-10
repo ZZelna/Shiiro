@@ -49,7 +49,7 @@ Ne prétends jamais avoir effectué une action réelle sur Discord, un ordinateu
 `;
 
 async function askGemini(prompt) {
- const response = await ai.models.generateContent({
+const response = await ai.models.generateContent({
     model: "gemini-2.5-flash",
     contents: [
         {
@@ -67,7 +67,9 @@ ${prompt}`
     ]
 });
 
-    return response.text;
+console.log(response);
+
+return response.text;
 }
 
 module.exports = {
