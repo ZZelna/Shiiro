@@ -14,7 +14,7 @@ module.exports = {
 
         if (message.channel.id !== ALLOWED_CHANNEL) {
             return message.reply(
-                "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>."
+                "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>."
             );
         }
 
