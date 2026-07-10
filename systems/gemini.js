@@ -3,6 +3,7 @@ const { GoogleGenAI } = require("@google/genai");
 const ai = new GoogleGenAI({
     apiKey: process.env.GEMINI_API_KEY
 });
+console.log("Clé Gemini :", process.env.GEMINI_API_KEY ? "OK" : "ABSENTE");
 
 const SYSTEM_PROMPT = `
 Tu es Shiiro IA.
