@@ -106,7 +106,10 @@ ${data}
 
     } catch (err) {
 
-        console.error(err);
+        console.error("Erreur Gemini :", err);
+console.error("Status :", err?.status);
+console.error("Message :", err?.message);
+console.error("Body :", err?.error);
 
         const status = err?.status || err?.error?.code;
 
