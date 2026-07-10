@@ -4,7 +4,7 @@ module.exports = async (message) => {
 
     if (message.author.bot) return;
 
-    const allowedChannel = "ID_DU_SALON_CHAT_IA";
+    const allowedChannel = "1520976998439063673";
 
     const mentioned = message.mentions.has(message.client.user);
 
@@ -36,37 +36,28 @@ module.exports = async (message) => {
 
     try {
 
-        const response =
-            await askGemini(prompt);
+        const response = await askGemini(prompt);
 
-        const parts = [];
+let thinking = await message.reply("💭 **Shiiro réfléchit...**");
 
-        for (
-            let i = 0;
-            i < response.length;
-            i += 1900
-        ) {
+const parts = [];
 
-            parts.push(
-                response.slice(i, i + 1900)
-            );
+for (let i = 0; i < response.length; i += 1900) {
+    parts.push(response.slice(i, i + 1900));
+}
 
-        }
+await thinking.edit(parts.shift());
 
-        for (const part of parts) {
+for (const part of parts) {
+    await message.reply(part);
+}
 
-            await message.reply(part);
+} catch (err) {
 
-        }
+    console.error(err);
 
-    } catch (err) {
+    return message.reply(
+        "❌ Impossible de contacter Gemini."
+    );
 
-        console.error(err);
-
-        message.reply(
-            "❌ Impossible de contacter Gemini."
-        );
-
-    }
-
-};
+}
