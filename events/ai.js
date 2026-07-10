@@ -146,11 +146,9 @@ if (
     message.author.id === message.guild.ownerId
 ) {
 
-    const audio = await generateVoice(
-        response,
-        OWNER_VOICE
-    );
+   const audio = await generateVoice(response, OWNER_VOICE);
 
+if (audio) {
     await message.reply({
         files: [
             {
@@ -159,9 +157,7 @@ if (
             }
         ]
     });
-
 }
-
     } catch (err) {
 
         console.error("Erreur Gemini :", err);
