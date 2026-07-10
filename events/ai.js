@@ -1,6 +1,7 @@
 const axios = require("axios");
 const { askGroq } = require("../systems/groq");
 const AiLimit = require("../models/AiLimit");
+const { generateVoice } = require("../systems/tts");
 
 const BYPASS_ROLES = [
     "1506674274826584284"
@@ -137,6 +138,35 @@ if (!hasBypass && prompt.length > 5000) {
         for (const part of parts) {
             await message.reply(part);
         }
+        const BOT_OWNER = "1418370654251778168";
+
+const BOT_OWNER_VOICE = "Qrl71rx6Yg8RvyPYRGCQ";
+const SERVER_OWNER_VOICE = "Hy28BjVfgieDVMiyQpQe";
+
+let voiceId = null;
+
+// Owner du bot
+if (message.author.id === BOT_OWNER) {
+    voiceId = BOT_OWNER_VOICE;
+}
+
+// Owner du serveur Discord
+else if (message.author.id === message.guild.ownerId) {
+    voiceId = SERVER_OWNER_VOICE;
+}
+
+if (voiceId) {
+
+    const audio = await generateVoice(response, voiceId);
+
+    await message.reply({
+        files: [{
+            attachment: audio,
+            name: "shiiro.mp3"
+        }]
+    });
+
+}
 
     } catch (err) {
 
