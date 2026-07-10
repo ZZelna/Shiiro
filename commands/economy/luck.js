@@ -17,7 +17,7 @@ module.exports = {
 
         if (interaction.channelId !== ALLOWED_CHANNEL) {
             return interaction.reply({
-                content: "❌ Cette commande est uniquement utilisable dans <#1523677940750225508>.",
+                content: "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>.",
                 ephemeral: true
             });
         }
