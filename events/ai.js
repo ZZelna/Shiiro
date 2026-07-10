@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { askGemini } = require("../systems/gemini");
+const { askGroq } = require("../systems/groq");
 
 module.exports = async (message) => {
 
