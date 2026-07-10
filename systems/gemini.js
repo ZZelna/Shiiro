@@ -57,7 +57,7 @@ async function askGemini(prompt) {
         try {
 
             const response = await ai.models.generateContent({
-               model: "gemini-3.5-flash-lite",
+               model: "gemini-3.5-flash",
                 contents: [
                     {
                         role: "user",
