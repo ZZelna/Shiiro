@@ -13,6 +13,7 @@ const antiInvite = require("./events/antiInvite");
 const antiLink = require("./events/antiLink");
 const antiRaid = require("./events/antiRaid");
 const antiMassMention = require("./events/antiMassMention");
+const ai = require("./events/ai");
 const {
     Client,
     GatewayIntentBits,
@@ -130,6 +131,7 @@ client.on("messageDelete", async (message) => {
 // ✅ CORRIGÉ : un seul listener, le doublon imbriqué a été supprimé
 
 client.on("messageCreate", async (message) => {
+   await ai(message);
     autoReact(message);
     photoOnly(message);
     antiToxic(message);
