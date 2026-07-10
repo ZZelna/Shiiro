@@ -1,3 +1,4 @@
+const axios = require("axios");
 const { askGemini } = require("../systems/gemini");
 
 module.exports = async (message) => {
@@ -20,50 +21,46 @@ module.exports = async (message) => {
         message.channel.id !== allowedChannel
     ) return;
 
-    await message.channel.sendTyping();
-
-    let prompt = message.content;
-
-    prompt = prompt
+    let prompt = message.content
         .replace(`<@${message.client.user.id}>`, "")
         .replace(`<@!${message.client.user.id}>`, "")
         .trim();
-const axios = require("axios");
 
-if (message.attachments.size > 0) {
+    // Lecture des fichiers
+    if (message.attachments.size > 0) {
 
-    const file = message.attachments.first();
+        const file = message.attachments.first();
 
-    const allowed = [
-        ".js",
-        ".ts",
-        ".json",
-        ".py",
-        ".java",
-        ".cpp",
-        ".c",
-        ".cs",
-        ".php",
-        ".go",
-        ".rs",
-        ".lua",
-        ".html",
-        ".css",
-        ".sql",
-        ".txt"
-    ];
+        const allowedExtensions = [
+            ".js",
+            ".ts",
+            ".json",
+            ".py",
+            ".java",
+            ".cpp",
+            ".c",
+            ".cs",
+            ".php",
+            ".go",
+            ".rs",
+            ".lua",
+            ".html",
+            ".css",
+            ".sql",
+            ".txt"
+        ];
 
-    const ok = allowed.some(ext =>
-        file.name.toLowerCase().endsWith(ext)
-    );
+        if (
+            allowedExtensions.some(ext =>
+                file.name.toLowerCase().endsWith(ext)
+            )
+        ) {
 
-    if (ok) {
+            try {
 
-        try {
+                const { data } = await axios.get(file.url);
 
-            const { data } = await axios.get(file.url);
-
-            prompt += `
+                prompt += `
 
 Voici le contenu du fichier "${file.name}" :
 
@@ -72,47 +69,69 @@ ${data}
 \`\`\`
 `;
 
-        } catch (err) {
+            } catch (err) {
 
-            console.error(err);
+                console.error(err);
+
+            }
 
         }
 
     }
 
-}
-    if (!prompt.length)
-        return message.reply(
-            "💬 Pose-moi une question."
-        );
+    if (!prompt.length) {
+
+        return message.reply("💬 Pose-moi une question.");
+
+    }
 
     try {
 
+        const thinking = await message.reply(
+            "💭 **Shiiro réfléchit...**"
+        );
+
+        await message.channel.sendTyping();
+
         const response = await askGemini(prompt);
 
-let thinking = await message.reply("💭 **Shiiro réfléchit...**");
+        const parts = [];
 
-const parts = [];
+        for (
+            let i = 0;
+            i < response.length;
+            i += 1900
+        ) {
 
-for (let i = 0; i < response.length; i += 1900) {
-    parts.push(response.slice(i, i + 1900));
-}
+            parts.push(
+                response.slice(i, i + 1900)
+            );
 
-await thinking.edit(parts.shift());
+        }
 
-for (const part of parts) {
-    await message.reply(part);
-}
+        await thinking.edit(
+            parts.shift() || "Aucune réponse."
+        );
 
-catch (err) {
+        for (const part of parts) {
 
-    console.error("Erreur Gemini :", err);
+            await message.reply(part);
 
-    return message.reply(
-        "```js\n" +
-        (err.stack || err.message || String(err)) +
-        "\n```"
-    );
+        }
 
-}
+    } catch (err) {
+
+        console.error("===== ERREUR GEMINI =====");
+        console.error(err);
+
+        return message.reply(
+            "```js\n" +
+            (err.stack ||
+                err.message ||
+                JSON.stringify(err, null, 2)) +
+            "\n```"
+        );
+
+    }
+
 };
