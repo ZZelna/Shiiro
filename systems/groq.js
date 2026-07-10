@@ -10,7 +10,7 @@ console.log(
 );
 
 const SYSTEM_PROMPT = `
-Tu es Shiiro IA.
+Tu es Léa.
 
 Tu es une intelligence artificielle développée pour le serveur Discord Shiiro.
 
