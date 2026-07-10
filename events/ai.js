@@ -1,62 +1,69 @@
-const {
-    AttachmentBuilder
-} = require("discord.js");
-
 const { askGemini } = require("../systems/gemini");
 
 module.exports = async (message) => {
 
     if (message.author.bot) return;
 
-    if (!message.mentions.has(message.client.user)) return;
+    const allowedChannel = "ID_DU_SALON_CHAT_IA";
+
+    const mentioned = message.mentions.has(message.client.user);
+
+    const replied =
+        message.reference &&
+        (
+            await message.fetchReference().catch(() => null)
+        )?.author.id === message.client.user.id;
+
+    if (
+        !mentioned &&
+        !replied &&
+        message.channel.id !== allowedChannel
+    ) return;
 
     await message.channel.sendTyping();
 
-    const prompt = message.content
+    let prompt = message.content;
+
+    prompt = prompt
         .replace(`<@${message.client.user.id}>`, "")
         .replace(`<@!${message.client.user.id}>`, "")
         .trim();
 
-    if (!prompt.length) {
+    if (!prompt.length)
         return message.reply(
-            "💬 Pose-moi une question après m'avoir mentionné."
+            "💬 Pose-moi une question."
         );
-    }
 
     try {
 
-        const response = await askGemini(prompt);
+        const response =
+            await askGemini(prompt);
 
-        if (!response) {
-            return message.reply(
-                "❌ Aucune réponse."
+        const parts = [];
+
+        for (
+            let i = 0;
+            i < response.length;
+            i += 1900
+        ) {
+
+            parts.push(
+                response.slice(i, i + 1900)
             );
-        }
-
-        if (response.length <= 2000) {
-
-            return message.reply(response);
 
         }
 
-        const file = new AttachmentBuilder(
-            Buffer.from(response, "utf8"),
-            {
-                name: "reponse.txt"
-            }
-        );
+        for (const part of parts) {
 
-        return message.reply({
-            content:
-                "📄 La réponse est trop longue, la voici en fichier.",
-            files: [file]
-        });
+            await message.reply(part);
+
+        }
 
     } catch (err) {
 
         console.error(err);
 
-        return message.reply(
+        message.reply(
             "❌ Impossible de contacter Gemini."
         );
 
