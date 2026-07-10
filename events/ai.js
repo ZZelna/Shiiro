@@ -28,7 +28,59 @@ module.exports = async (message) => {
         .replace(`<@${message.client.user.id}>`, "")
         .replace(`<@!${message.client.user.id}>`, "")
         .trim();
+const axios = require("axios");
 
+if (message.attachments.size > 0) {
+
+    const file = message.attachments.first();
+
+    const allowed = [
+        ".js",
+        ".ts",
+        ".json",
+        ".py",
+        ".java",
+        ".cpp",
+        ".c",
+        ".cs",
+        ".php",
+        ".go",
+        ".rs",
+        ".lua",
+        ".html",
+        ".css",
+        ".sql",
+        ".txt"
+    ];
+
+    const ok = allowed.some(ext =>
+        file.name.toLowerCase().endsWith(ext)
+    );
+
+    if (ok) {
+
+        try {
+
+            const { data } = await axios.get(file.url);
+
+            prompt += `
+
+Voici le contenu du fichier "${file.name}" :
+
+\`\`\`
+${data}
+\`\`\`
+`;
+
+        } catch (err) {
+
+            console.error(err);
+
+        }
+
+    }
+
+}
     if (!prompt.length)
         return message.reply(
             "💬 Pose-moi une question."
