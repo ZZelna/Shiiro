@@ -1,42 +1,25 @@
-const { ElevenLabsClient } = require("elevenlabs");
+const edgeTTS = require("edge-tts");
 
-const client = new ElevenLabsClient({
-    apiKey: process.env.ELEVENLABS_API_KEY
-});
-
-async function generateVoice(text, voiceId) {
-
+async function generateVoice(text) {
     try {
-
-        const audio = await client.textToSpeech.convert(
-            voiceId,
-            {
-                text: text.slice(0, 4000),
-                model_id: "eleven_multilingual_v2",
-                output_format: "mp3_44100_128"
-            }
-        );
+        const { stream } = await edgeTTS.createStream({
+            text: text.slice(0, 4000),
+            voice: "fr-FR-DeniseNeural"
+        });
 
         const chunks = [];
 
-        for await (const chunk of audio) {
+        for await (const chunk of stream) {
             chunks.push(chunk);
         }
 
         return Buffer.concat(chunks);
 
     } catch (err) {
-
-        console.error("===== ELEVENLABS =====");
+        console.error("===== EDGE TTS =====");
         console.error(err);
-        console.log("Status :", err.statusCode);
-        console.log("Message :", err.message);
-        console.log("Body :", err.body);
-
         throw err;
-
     }
-
 }
 
 module.exports = {
