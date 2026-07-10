@@ -77,11 +77,11 @@ module.exports = {
                 .setColor("Green")
                 .setTitle("🏆 Commandes GDC casino (4/4)")
                 .setDescription(`
-• \`*clancreate\` : créer un clan
-• \`*invite\` : inviter quelqu'un
-• \`*leave\` : quitter son clan
-• \`*transfer\` : transférer la propriété
-• \`*deleteclan\` : supprimer son clan
+• \`/clancreate\` : créer un clan
+• \`/invite\` : inviter quelqu'un
+• \`/leave\` : quitter son clan
+• \`/transfer\` : transférer la propriété
+• \`/deleteclan\` : supprimer son clan
 • \`*topclans\` : classement des clans
 • \`*myclan\` : voir son clan
 • \`*statsclan\` : statistiques d'un clan
