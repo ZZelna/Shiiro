@@ -11,9 +11,8 @@ module.exports = async (message) => {
 
     const replied =
         message.reference &&
-        (
-            await message.fetchReference().catch(() => null)
-        )?.author.id === message.client.user.id;
+        (await message.fetchReference().catch(() => null))
+            ?.author.id === message.client.user.id;
 
     if (
         !mentioned &&
@@ -70,9 +69,7 @@ ${data}
 `;
 
             } catch (err) {
-
                 console.error(err);
-
             }
 
         }
@@ -80,9 +77,7 @@ ${data}
     }
 
     if (!prompt.length) {
-
         return message.reply("💬 Pose-moi une question.");
-
     }
 
     try {
@@ -97,16 +92,8 @@ ${data}
 
         const parts = [];
 
-        for (
-            let i = 0;
-            i < response.length;
-            i += 1900
-        ) {
-
-            parts.push(
-                response.slice(i, i + 1900)
-            );
-
+        for (let i = 0; i < response.length; i += 1900) {
+            parts.push(response.slice(i, i + 1900));
         }
 
         await thinking.edit(
@@ -114,32 +101,31 @@ ${data}
         );
 
         for (const part of parts) {
-
             await message.reply(part);
-
         }
 
-   catch (err) {
+    } catch (err) {
 
-    console.error(err);
+        console.error(err);
 
-    const status = err?.status || err?.error?.code;
+        const status = err?.status || err?.error?.code;
 
-    if (status === 503) {
+        if (status === 503) {
+            return message.reply(
+                "⚠️ Shiiro IA est actuellement surchargée. Réessaie dans quelques instants."
+            );
+        }
+
+        if (status === 429) {
+            return message.reply(
+                "⚠️ Trop de requêtes envoyées à l'IA. Réessaie dans quelques secondes."
+            );
+        }
+
         return message.reply(
-            "⚠️ Shiiro IA est actuellement surchargée. Réessaie dans quelques instants."
+            "❌ Une erreur est survenue lors de la génération de la réponse."
         );
+
     }
 
-    if (status === 429) {
-        return message.reply(
-            "⚠️ Trop de requêtes envoyées à l'IA. Réessaie dans quelques secondes."
-        );
-    }
-
-    return message.reply(
-        "❌ Une erreur est survenue lors de la génération de la réponse."
-    );
-
-}
 };
