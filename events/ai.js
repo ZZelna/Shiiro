@@ -139,7 +139,7 @@ if (!hasBypass && prompt.length > 5000) {
             await message.reply(part);
         }
         const BOT_OWNER = "1418370654251778168";
-const OWNER_VOICE = "Qrl71rx6Yg8RvyPYRGCQ";
+const OWNER_VOICE = "21m00Tcm4TlvDq8ikWAM";
 
 if (
     message.author.id === BOT_OWNER ||
