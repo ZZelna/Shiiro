@@ -49,26 +49,57 @@ Ne prétends jamais avoir effectué une action réelle sur Discord, un ordinateu
 `;
 
 async function askGemini(prompt) {
-const models = await ai.models.list();
 
-console.log(models);
-const response = await ai.models.generateContent({
-   model: "gemini-3.5-flash",
-    contents: [
-        {
-            role: "user",
-            parts: [
-                {
-                    text: `${SYSTEM_PROMPT}
+    const MAX_RETRIES = 3;
+
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+
+        try {
+
+            const response = await ai.models.generateContent({
+                model: "gemini-3.5-flash",
+                contents: [
+                    {
+                        role: "user",
+                        parts: [
+                            {
+                                text: `${SYSTEM_PROMPT}
 
 Utilisateur :
 
 ${prompt}`
-                }
-            ]
+                            }
+                        ]
+                    }
+                ]
+            });
+
+            return response.text;
+
+        } catch (err) {
+
+            const status = err?.status || err?.error?.code;
+
+            // Réessaye uniquement si Google est temporairement indisponible
+            if ((status === 503 || status === 429) && attempt < MAX_RETRIES) {
+
+                console.log(
+                    `Gemini indisponible (${status}), tentative ${attempt}/${MAX_RETRIES}...`
+                );
+
+                await new Promise(resolve =>
+                    setTimeout(resolve, attempt * 2000)
+                );
+
+                continue;
+            }
+
+            throw err;
         }
-    ]
-});
+
+    }
+
+}
 
 console.log(response);
 
