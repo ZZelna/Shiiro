@@ -6,22 +6,33 @@ const client = new ElevenLabsClient({
 
 async function generateVoice(text, voiceId) {
 
-    const audio = await client.textToSpeech.convert(
-        voiceId,
-        {
-            text,
-            model_id: "eleven_multilingual_v2",
-            output_format: "mp3_44100_128"
+    try {
+
+        const audio = await client.textToSpeech.convert(
+            voiceId,
+            {
+                text: text.slice(0, 4000),
+                model_id: "eleven_multilingual_v2",
+                output_format: "mp3_44100_128"
+            }
+        );
+
+        const chunks = [];
+
+        for await (const chunk of audio) {
+            chunks.push(chunk);
         }
-    );
 
-    const chunks = [];
+        return Buffer.concat(chunks);
 
-    for await (const chunk of audio) {
-        chunks.push(chunk);
+    } catch (err) {
+
+        console.error("Erreur ElevenLabs :", err);
+
+        return null;
+
     }
 
-    return Buffer.concat(chunks);
 }
 
 module.exports = {
