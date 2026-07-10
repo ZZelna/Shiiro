@@ -49,6 +49,9 @@ Ne prétends jamais avoir effectué une action réelle sur Discord, un ordinateu
 `;
 
 async function askGemini(prompt) {
+const models = await ai.models.list();
+
+console.log(models);
 const response = await ai.models.generateContent({
     model: "gemini-2.5-flash",
     contents: [
