@@ -1,25 +1,27 @@
-const edgeTTS = require("edge-tts");
+const { EdgeTTS } = require("@andresaya/edge-tts");
 
 async function generateVoice(text) {
+
     try {
-        const { stream } = await edgeTTS.createStream({
-            text: text.slice(0, 4000),
-            voice: "fr-FR-DeniseNeural"
-        });
 
-        const chunks = [];
+        const tts = new EdgeTTS();
 
-        for await (const chunk of stream) {
-            chunks.push(chunk);
-        }
+        const audio = await tts.synthesize(
+            text.slice(0, 4000),
+            "fr-FR-DeniseNeural"
+        );
 
-        return Buffer.concat(chunks);
+        return Buffer.from(audio);
 
     } catch (err) {
+
         console.error("===== EDGE TTS =====");
         console.error(err);
-        throw err;
+
+        return null;
+
     }
+
 }
 
 module.exports = {
