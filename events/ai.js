@@ -1,17 +1,20 @@
 const axios = require("axios");
 const { askGroq } = require("../systems/groq");
 const AiLimit = require("../models/AiLimit");
-const { generateVoice } = require("../systems/tts");
+
 
 const BYPASS_ROLES = [
     "1506674274826584284"
 ];
 
-const BOT_OWNER = "1418370654251778168";
-
 module.exports = async (message) => {
 
     if (message.author.bot) return;
+    if (!message.guild) {
+    return message.reply(
+        "❌ Shiiro IA fonctionne uniquement sur un serveur."
+    );
+}
 
     const allowedChannel = "1520976998439063673";
 
@@ -138,9 +141,34 @@ ${data}
             await limit.save();
 
         }
+const members = message.guild.members.cache
+    .filter(m => !m.user.bot)
+    .map(m => m.displayName)
+    .slice(0, 20)
+    .join(", ");
 
-        const response =
-            await askGroq(prompt);
+const finalPrompt = `
+Informations sur le serveur
+
+Nom : ${message.guild.name}
+Nombre de membres : ${message.guild.memberCount}
+
+Utilisateur :
+- Pseudo : ${message.member.displayName}
+- ID : ${message.author.id}
+
+Salons :
+${message.channel.name}
+
+Quelques membres :
+${members}
+
+Question :
+
+${prompt}
+`;
+
+        const response = await askGroq(finalPrompt);
 
         const parts = [];
 
@@ -166,43 +194,6 @@ ${data}
             await message.reply(part);
 
         }
-
-        if (
-            message.author.id === BOT_OWNER ||
-            message.author.id === message.guild.ownerId
-        ) {
-
-            try {
-
-                const audio =
-                    await generateVoice(
-                        response
-                    );
-
-                if (audio) {
-
-                    await message.reply({
-                        files: [
-                            {
-                                attachment: audio,
-                                name: "shiiro.mp3"
-                            }
-                        ]
-                    });
-
-                }
-
-            } catch (err) {
-
-                console.error(
-                    "Erreur Edge TTS :",
-                    err
-                );
-
-            }
-
-        }
-
     } catch (err) {
 
         console.error(err);
