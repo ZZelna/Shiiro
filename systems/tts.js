@@ -9,7 +9,7 @@ async function generateVoice(text) {
             "fr-FR-DeniseNeural"
         );
 
-        console.log(result);
+        console.log("Résultat EdgeTTS :", result);
 
         return null;
     } catch (err) {
