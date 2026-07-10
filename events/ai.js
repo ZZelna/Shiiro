@@ -104,12 +104,14 @@ for (const part of parts) {
     await message.reply(part);
 }
 
-} catch (err) {
+catch (err) {
 
-    console.error(err);
+    console.error("Erreur Gemini :", err);
 
     return message.reply(
-        "❌ Impossible de contacter Gemini."
+        "```js\n" +
+        (err.stack || err.message || String(err)) +
+        "\n```"
     );
 
 }
