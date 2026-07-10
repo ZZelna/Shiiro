@@ -145,8 +145,11 @@ if (
     message.author.id === BOT_OWNER ||
     message.author.id === message.guild.ownerId
 ) {
-
-   const audio = await generateVoice(response, OWNER_VOICE);
+console.log("Génération audio...");
+console.log("Voice ID :", OWNER_VOICE);
+console.log("Réponse :", response.length, "caractères");
+   
+    const audio = await generateVoice(response, OWNER_VOICE);
 
 if (audio) {
     await message.reply({
