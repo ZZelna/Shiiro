@@ -27,9 +27,13 @@ async function generateVoice(text, voiceId) {
 
     } catch (err) {
 
-        console.error("Erreur ElevenLabs :", err);
+        console.error("===== ELEVENLABS =====");
+        console.error(err);
+        console.log("Status :", err.statusCode);
+        console.log("Message :", err.message);
+        console.log("Body :", err.body);
 
-        return null;
+        throw err;
 
     }
 
