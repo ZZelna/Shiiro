@@ -139,31 +139,25 @@ if (!hasBypass && prompt.length > 5000) {
             await message.reply(part);
         }
         const BOT_OWNER = "1418370654251778168";
+const OWNER_VOICE = "Qrl71rx6Yg8RvyPYRGCQ";
 
-const BOT_OWNER_VOICE = "Qrl71rx6Yg8RvyPYRGCQ";
-const SERVER_OWNER_VOICE = "Hy28BjVfgieDVMiyQpQe";
+if (
+    message.author.id === BOT_OWNER ||
+    message.author.id === message.guild.ownerId
+) {
 
-let voiceId = null;
-
-// Owner du bot
-if (message.author.id === BOT_OWNER) {
-    voiceId = BOT_OWNER_VOICE;
-}
-
-// Owner du serveur Discord
-else if (message.author.id === message.guild.ownerId) {
-    voiceId = SERVER_OWNER_VOICE;
-}
-
-if (voiceId) {
-
-    const audio = await generateVoice(response, voiceId);
+    const audio = await generateVoice(
+        response,
+        OWNER_VOICE
+    );
 
     await message.reply({
-        files: [{
-            attachment: audio,
-            name: "shiiro.mp3"
-        }]
+        files: [
+            {
+                attachment: audio,
+                name: "shiiro.mp3"
+            }
+        ]
     });
 
 }
