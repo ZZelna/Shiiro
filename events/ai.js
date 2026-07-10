@@ -158,6 +158,7 @@ if (audio) {
         ]
     });
 }
+}
     } catch (err) {
 
         console.error("Erreur Gemini :", err);
