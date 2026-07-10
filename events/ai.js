@@ -1,5 +1,10 @@
 const axios = require("axios");
 const { askGroq } = require("../systems/groq");
+const AiLimit = require("../models/AiLimit");
+
+const BYPASS_ROLES = [
+    "1506674274826584284"
+];
 
 module.exports = async (message) => {
 
@@ -88,7 +93,36 @@ ${data}
 
         await message.channel.sendTyping();
 
-      const response = await askGroq(prompt);
+      const hasBypass = message.member.roles.cache.some(role =>
+    BYPASS_ROLES.includes(role.id)
+);
+
+if (!hasBypass && prompt.length > 5000) {
+
+    const today = new Date().toISOString().slice(0, 10);
+
+    let limit = await AiLimit.findOne({
+        userId: message.author.id,
+        date: today
+    });
+
+    if (!limit) {
+        limit = await AiLimit.create({
+            userId: message.author.id,
+            date: today
+        });
+    }
+
+    if (limit.bigPrompts >= 5) {
+        return message.reply(
+            "❌ Tu as utilisé tes **5 gros prompts** aujourd'hui.\nRéessaie demain ou contacte un administrateur."
+        );
+    }
+
+    limit.bigPrompts++;
+    await limit.save();
+}
+        const response = await askGroq(prompt);
 
         const parts = [];
 
