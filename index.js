@@ -225,7 +225,7 @@ const args = message.content
 
 // ─── interactionCreate ───────────────────────────────────────────────────────
 
-const interactionCreate = require("./events/interaction/interactionCreate");
+const interactionCreate = require("./events/interactionCreate");
 client.on("interactionCreate", async (interaction) => {
     if (interaction.isChatInputCommand()) {
         const command = client.slashCommands.get(interaction.commandName);
