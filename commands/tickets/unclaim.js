@@ -2,7 +2,19 @@ const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("
 const { TICKET_CATEGORIES } = require("../../handlers/systems/ticketHandler");
 
 async function findPanelMessage(channel) {
-    const messages = await channel.messages.fetch({ limit: 50 });
+    // 1. Priorité : messages épinglés (fiable quel que soit l'historique du salon)
+    const pinned = await channel.messages.fetchPinned().catch(() => null);
+    const pinnedPanel = pinned?.find(m =>
+        m.author.id === channel.client.user.id &&
+        m.components.length &&
+        m.components[0].components.some(c =>
+            ["ticket_claim", "ticket_unclaim"].includes(c.customId)
+        )
+    );
+    if (pinnedPanel) return pinnedPanel;
+
+    // 2. Fallback : scan des 100 derniers messages
+    const messages = await channel.messages.fetch({ limit: 100 });
     return messages.find(m =>
         m.author.id === channel.client.user.id &&
         m.components.length &&
