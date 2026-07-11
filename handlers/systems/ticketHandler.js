@@ -111,11 +111,15 @@ module.exports = async function handleTicketInteraction(interaction) {
         });
 
         const embed = new EmbedBuilder()
-            .setColor("Blue")
-            .setTitle("🎫 Ticket créé")
-            .setDescription(
-                `Bienvenue ${interaction.user}.\n\nUn membre du staff prendra en charge votre demande.\n\n**Catégorie :** ${category.name}`
-            );
+            .setColor("#FFD700")
+            .setTitle(`🎫 Ticket ${category.name}`)
+            .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
+            .setDescription(`Un membre de la ${category.name.toLowerCase()} te répondra au plus vite.`)
+            .addFields(
+                { name: "Catégorie", value: category.name, inline: true },
+                { name: "Créé par", value: `${interaction.user}`, inline: true }
+            )
+            .setFooter({ text: `Ticket ouvert le ${new Date().toLocaleDateString("fr-FR")}` });
 
         const row = new ActionRowBuilder().addComponents(
             new ButtonBuilder()
@@ -615,3 +619,6 @@ module.exports = async function handleTicketInteraction(interaction) {
 };
 
 module.exports.TICKET_CATEGORIES = TICKET_CATEGORIES;
+module.exports.renameCooldowns = renameCooldowns;
+module.exports.RENAME_COOLDOWN_MS = RENAME_COOLDOWN_MS;
+module.exports.LOG_CHANNEL_ID = LOG_CHANNEL_ID;
