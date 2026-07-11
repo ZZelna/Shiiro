@@ -1,4 +1,5 @@
-const confessionHandler = require("../../confession");
+require("../../models/Confession")
+
 
 const handleTicketInteraction = require("./ticketHandler");
 const handleCasinoInteraction = require("./casinoHandler");
