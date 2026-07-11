@@ -1,5 +1,4 @@
-require("../../models/Confession")
-
+const confessionHandler = require("../../events/confession");
 
 const handleTicketInteraction = require("./ticketHandler");
 const handleCasinoInteraction = require("./casinoHandler");
@@ -8,6 +7,7 @@ const handleCustomRoleInteraction = require("./customRoleHandler");
 const handleCasinoHelpInteraction = require("./casinoHelpHandler");
 const handleSurveyInteraction = require("./surveyHandler");
 const handleGiveawayInteraction = require("./giveawayHandler");
+
 
 module.exports = async (interaction) => {
 
