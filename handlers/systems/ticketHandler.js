@@ -140,11 +140,13 @@ module.exports = async function handleTicketInteraction(interaction) {
 
         const staffMentions = category.staffRoles.map(id => `<@&${id}>`).join(" ");
 
-        await channel.send({
+        const panelMessage = await channel.send({
             content: `${interaction.user} ${staffMentions}`,
             embeds: [embed],
             components: [row]
         });
+
+        await panelMessage.pin().catch(() => {});
 
         return interaction.reply({
             content: `✅ Ton ticket a été créé : ${channel}`,
