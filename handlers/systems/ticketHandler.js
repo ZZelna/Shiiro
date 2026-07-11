@@ -5,7 +5,10 @@ const {
     ButtonBuilder,
     ButtonStyle,
     ChannelType,
-    PermissionsBitField
+    PermissionsBitField,
+    ModalBuilder,
+    TextInputBuilder,
+    TextInputStyle
 } = require("discord.js");
 
 const TICKET_CATEGORIES = {
@@ -37,6 +40,10 @@ const TICKET_CATEGORIES = {
 };
 
 const LOG_CHANNEL_ID = "1517116985077665872";
+
+// ─── Cooldown de renommage (5 min entre chaque renommage, par salon) ────────
+const renameCooldowns = new Map();
+const RENAME_COOLDOWN_MS = 5 * 60 * 1000;
 
 module.exports = async function handleTicketInteraction(interaction) {
 
@@ -117,6 +124,11 @@ module.exports = async function handleTicketInteraction(interaction) {
                 .setStyle(ButtonStyle.Primary),
 
             new ButtonBuilder()
+                .setCustomId("ticket_rename")
+                .setLabel("✏️ Renommer")
+                .setStyle(ButtonStyle.Secondary),
+
+            new ButtonBuilder()
                 .setCustomId("ticket_close")
                 .setLabel("🔒 Fermer")
                 .setStyle(ButtonStyle.Danger)
@@ -178,6 +190,11 @@ module.exports = async function handleTicketInteraction(interaction) {
             new ButtonBuilder()
                 .setCustomId("ticket_remove")
                 .setLabel("➖ Retirer")
+                .setStyle(ButtonStyle.Secondary),
+
+            new ButtonBuilder()
+                .setCustomId("ticket_rename")
+                .setLabel("✏️ Renommer")
                 .setStyle(ButtonStyle.Secondary),
 
             new ButtonBuilder()
@@ -248,6 +265,11 @@ module.exports = async function handleTicketInteraction(interaction) {
                 .setStyle(ButtonStyle.Primary),
 
             new ButtonBuilder()
+                .setCustomId("ticket_rename")
+                .setLabel("✏️ Renommer")
+                .setStyle(ButtonStyle.Secondary),
+
+            new ButtonBuilder()
                 .setCustomId("ticket_close")
                 .setLabel("🔒 Fermer")
                 .setStyle(ButtonStyle.Danger)
@@ -271,6 +293,102 @@ module.exports = async function handleTicketInteraction(interaction) {
         await interaction.channel.send({
             content: `📌 ${interaction.user} a annulé la prise en charge de ce ticket.`
         });
+
+        return;
+    }
+
+    // =========================
+    // RENOMMER LE TICKET (ouverture du modal)
+    // =========================
+    if (interaction.isButton() && interaction.customId === "ticket_rename") {
+
+        const lastRename = renameCooldowns.get(interaction.channel.id);
+
+        if (lastRename && Date.now() - lastRename < RENAME_COOLDOWN_MS) {
+            const remaining = Math.ceil(
+                (RENAME_COOLDOWN_MS - (Date.now() - lastRename)) / 1000 / 60
+            );
+            return interaction.reply({
+                content: `❌ Ce ticket a déjà été renommé récemment. Réessaie dans ~${remaining} min.`,
+                ephemeral: true
+            });
+        }
+
+        const modal = new ModalBuilder()
+            .setCustomId("ticket_rename_modal")
+            .setTitle("✏️ Renommer le ticket");
+
+        const input = new TextInputBuilder()
+            .setCustomId("new_ticket_name")
+            .setLabel("Nouveau nom du ticket")
+            .setStyle(TextInputStyle.Short)
+            .setPlaceholder("ex: ticket-urgence")
+            .setMinLength(2)
+            .setMaxLength(90)
+            .setRequired(true);
+
+        modal.addComponents(
+            new ActionRowBuilder().addComponents(input)
+        );
+
+        return interaction.showModal(modal);
+    }
+
+    // =========================
+    // RENOMMER LE TICKET (traitement du modal)
+    // =========================
+    if (interaction.isModalSubmit() && interaction.customId === "ticket_rename_modal") {
+
+        const lastRename = renameCooldowns.get(interaction.channel.id);
+
+        if (lastRename && Date.now() - lastRename < RENAME_COOLDOWN_MS) {
+            const remaining = Math.ceil(
+                (RENAME_COOLDOWN_MS - (Date.now() - lastRename)) / 1000 / 60
+            );
+            return interaction.reply({
+                content: `❌ Ce ticket a déjà été renommé récemment. Réessaie dans ~${remaining} min.`,
+                ephemeral: true
+            });
+        }
+
+        const rawName = interaction.fields.getTextInputValue("new_ticket_name");
+
+        const sanitized = rawName
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "")
+            .slice(0, 90);
+
+        if (!sanitized) {
+            return interaction.reply({
+                content: "❌ Nom invalide.",
+                ephemeral: true
+            });
+        }
+
+        try {
+            await interaction.channel.setName(sanitized);
+
+            renameCooldowns.set(interaction.channel.id, Date.now());
+
+            await interaction.reply({
+                content: `✅ Ticket renommé en \`${sanitized}\`.`,
+                ephemeral: true
+            });
+
+            const logChannel = interaction.guild.channels.cache.get(LOG_CHANNEL_ID);
+            if (logChannel) {
+                await logChannel.send({
+                    content: `✏️ Ticket renommé en **${sanitized}** par ${interaction.user}.`
+                });
+            }
+        } catch (err) {
+            console.error("❌ Erreur rename ticket :", err);
+            return interaction.reply({
+                content: "❌ Impossible de renommer ce salon (limite Discord atteinte : max 2 renommages toutes les 10 min).",
+                ephemeral: true
+            });
+        }
 
         return;
     }
