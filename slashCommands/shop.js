@@ -1,9 +1,12 @@
 const {
     SlashCommandBuilder,
-    EmbedBuilder,
-    ActionRowBuilder,
-    ButtonBuilder,
-    ButtonStyle
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SectionBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    ButtonStyle,
+    MessageFlags
 } = require("discord.js");
 
 const CasinoProfile = require("../models/CasinoProfile");
@@ -23,7 +26,7 @@ const SHOP_ITEMS = [
         label: "🌆 Perm Photo",
         roleId: "1519633537156907088",
         price: 50000,
-        desc: "voir la photo de profil de quelqu’un."
+        desc: "voir la photo de profil de quelqu'un."
     },
     {
         id: "perm_banner",
@@ -84,47 +87,57 @@ module.exports = {
             });
         }
 
-        const embed = new EmbedBuilder()
-            .setColor("#0064c8")
-            .setTitle("🏪 Boutique Shiiro")
-            .setDescription(
-                `💴 **Ton solde :** \`${profile.yens.toLocaleString()} ¥\`\n\nClique sur un bouton pour acheter un article.`
+        const container = new ContainerBuilder()
+            .setAccentColor(0x0064c8)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 🏪 Boutique Shiiro")
             )
-            .addFields(
-                SHOP_ITEMS.map(item => ({
-                    name: item.label,
-                    value:
-                        `${item.desc}\n**Prix :** \`${item.price.toLocaleString()} ¥\``,
-                    inline: true
-                }))
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `💴 **Ton solde :** \`${profile.yens.toLocaleString()} ¥\``
+                )
             )
-            .setFooter({
-                text: "Shiiro Casino • Boutique",
-                iconURL: interaction.guild.iconURL()
-            })
-            .setTimestamp();
+            .addSeparatorComponents(
+                new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+            );
 
-        const row1 = new ActionRowBuilder().addComponents(
-            SHOP_ITEMS.slice(0, 3).map(item =>
-                new ButtonBuilder()
-                    .setCustomId(`shop_buy_${item.id}`)
-                    .setLabel(item.label)
-                    .setStyle(ButtonStyle.Primary)
-            )
+        SHOP_ITEMS.forEach((item, index) => {
+
+            container.addSectionComponents(
+                new SectionBuilder()
+                    .addTextDisplayComponents(
+                        new TextDisplayBuilder().setContent(`**${item.label}**`),
+                        new TextDisplayBuilder().setContent(
+                            `${item.desc}\n**Prix :** \`${item.price.toLocaleString()} ¥\``
+                        )
+                    )
+                    .setButtonAccessory(
+                        button => button
+                            .setCustomId(`shop_buy_${item.id}`)
+                            .setLabel("Acheter")
+                            .setStyle(ButtonStyle.Primary)
+                    )
+            );
+
+            // Séparateur entre chaque article (sauf après le dernier)
+            if (index < SHOP_ITEMS.length - 1) {
+                container.addSeparatorComponents(
+                    new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(false)
+                );
+            }
+        });
+
+        container.addSeparatorComponents(
+            new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
         );
 
-        const row2 = new ActionRowBuilder().addComponents(
-            SHOP_ITEMS.slice(3, 6).map(item =>
-                new ButtonBuilder()
-                    .setCustomId(`shop_buy_${item.id}`)
-                    .setLabel(item.label)
-                    .setStyle(ButtonStyle.Primary)
-            )
+        container.addTextDisplayComponents(
+            new TextDisplayBuilder().setContent("-# Shiiro Casino • Boutique")
         );
 
         return interaction.reply({
-            embeds: [embed],
-            components: [row1, row2]
+            components: [container],
+            flags: MessageFlags.IsComponentsV2
         });
     }
 };
