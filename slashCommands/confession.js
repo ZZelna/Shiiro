@@ -1,10 +1,15 @@
 const {
     SlashCommandBuilder,
     PermissionFlagsBits,
-    EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
-    ButtonStyle
+    ButtonStyle,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SectionBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MessageFlags
 } = require("discord.js");
 
 const Config = require("../models/ConfessionConfig");
@@ -123,56 +128,92 @@ module.exports = {
 
     }
 
-    const embed = new EmbedBuilder()
-        .setColor("#5865F2")
-        .setAuthor({
-            name: `${interaction.guild.name} • Confessions`,
-            iconURL: interaction.guild.iconURL({ dynamic: true })
-        })
-        .setTitle("🤫 Confessions anonymes")
-        .setDescription(
-`## Bienvenue !
+    const guildIcon = interaction.guild.iconURL({ dynamic: true });
 
-Exprime-toi librement grâce au système de confessions anonymes.
+    const container = new ContainerBuilder()
+        .setAccentColor(0x5865F2);
 
-### 🔒 Anonymat garanti
-> • Ton identité reste secrète.
-> • Les membres ne verront jamais ton pseudo.
-> • Les modérateurs voient uniquement l'auteur avant validation.
+    // ─── En-tête avec miniature (icône serveur) ──────────────────────────
+    if (guildIcon) {
+        container.addSectionComponents(
+            new SectionBuilder()
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(
+                        `${interaction.guild.name} • Confessions`
+                    ),
+                    new TextDisplayBuilder().setContent("## 🤫 Confessions anonymes")
+                )
+                .setThumbnailAccessory(
+                    thumbnail => thumbnail.setURL(guildIcon)
+                )
+        );
+    } else {
+        container.addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(`${interaction.guild.name} • Confessions`),
+            new TextDisplayBuilder().setContent("## 🤫 Confessions anonymes")
+        );
+    }
 
-### 📜 Règles
-> • Respect obligatoire.
-> • Pas de spam.
-> • Pas d'insultes.
-> • Pas de contenu interdit.
+    container.addSeparatorComponents(
+        new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+    );
 
-Clique simplement sur **🤫 Confesse-toi** ci-dessous.`
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(
+            `## Bienvenue !\n\n` +
+            `Exprime-toi librement grâce au système de confessions anonymes.`
         )
-        .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-        .setFooter({
-            text: "Système de confessions"
-        })
-        .setTimestamp();
+    );
 
-    const row = new ActionRowBuilder().addComponents(
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(
+            `### 🔒 Anonymat garanti\n` +
+            `> • Ton identité reste secrète.\n` +
+            `> • Les membres ne verront jamais ton pseudo.\n` +
+            `> • Les modérateurs voient uniquement l'auteur avant validation.`
+        )
+    );
 
-        new ButtonBuilder()
-            .setCustomId("confession_create")
-            .setEmoji("🤫")
-            .setLabel("Confesse-toi")
-            .setStyle(ButtonStyle.Primary),
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(
+            `### 📜 Règles\n` +
+            `> • Respect obligatoire.\n` +
+            `> • Pas de spam.\n` +
+            `> • Pas d'insultes.\n` +
+            `> • Pas de contenu interdit.\n\n` +
+            `Clique simplement sur **🤫 Confesse-toi** ci-dessous.`
+        )
+    );
 
-        new ButtonBuilder()
-            .setCustomId("confession_info")
-            .setEmoji("ℹ️")
-            .setLabel("Informations")
-            .setStyle(ButtonStyle.Secondary)
+    container.addSeparatorComponents(
+        new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+    );
 
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent("-# Système de confessions")
+    );
+
+    container.addActionRowComponents(
+        new ActionRowBuilder().addComponents(
+
+            new ButtonBuilder()
+                .setCustomId("confession_create")
+                .setEmoji("🤫")
+                .setLabel("Confesse-toi")
+                .setStyle(ButtonStyle.Primary),
+
+            new ButtonBuilder()
+                .setCustomId("confession_info")
+                .setEmoji("ℹ️")
+                .setLabel("Informations")
+                .setStyle(ButtonStyle.Secondary)
+
+        )
     );
 
     const msg = await interaction.channel.send({
-        embeds: [embed],
-        components: [row]
+        components: [container],
+        flags: MessageFlags.IsComponentsV2
     });
 
     // Épingler automatiquement
