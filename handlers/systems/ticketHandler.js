@@ -8,7 +8,12 @@ const {
     PermissionsBitField,
     ModalBuilder,
     TextInputBuilder,
-    TextInputStyle
+    TextInputStyle,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MessageFlags
 } = require("discord.js");
 
 const TICKET_CATEGORIES = {
@@ -44,6 +49,112 @@ const LOG_CHANNEL_ID = "1517116985077665872";
 // ─── Cooldown de renommage (5 min entre chaque renommage, par salon) ────────
 const renameCooldowns = new Map();
 const RENAME_COOLDOWN_MS = 5 * 60 * 1000;
+
+// ─── Suivi du claim par salon (channelId -> userId) ──────────────────────────
+// Remplace le champ d'embed "Pris en charge par" : en V2 il n'y a plus
+// d'embed avec des fields, donc l'état est gardé ici plutôt que parsé
+// depuis le contenu du message.
+const ticketClaims = new Map();
+
+/*
+==========================================
+    HELPERS V2
+==========================================
+*/
+
+function getStaffMentionLine(category, creatorId) {
+    const staffMentions = category.staffRoles.map(id => `<@&${id}>`).join(" ");
+    return `<@${creatorId}> ${staffMentions}`;
+}
+
+function buildTicketButtonsRow(claimerId) {
+    if (!claimerId) {
+        return new ActionRowBuilder().addComponents(
+            new ButtonBuilder()
+                .setCustomId("ticket_claim")
+                .setLabel("Claim")
+                .setEmoji("📌")
+                .setStyle(ButtonStyle.Primary),
+
+            new ButtonBuilder()
+                .setCustomId("ticket_rename")
+                .setLabel("Renommer")
+                .setEmoji("✏️")
+                .setStyle(ButtonStyle.Secondary),
+
+            new ButtonBuilder()
+                .setCustomId("ticket_close")
+                .setLabel("Fermer")
+                .setEmoji("🔒")
+                .setStyle(ButtonStyle.Danger)
+        );
+    }
+
+    return new ActionRowBuilder().addComponents(
+        new ButtonBuilder()
+            .setCustomId("ticket_unclaim")
+            .setLabel("Pris en charge")
+            .setEmoji("📌")
+            .setStyle(ButtonStyle.Success),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_add")
+            .setLabel("Ajouter")
+            .setEmoji("➕")
+            .setStyle(ButtonStyle.Primary),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_remove")
+            .setLabel("Retirer")
+            .setEmoji("➖")
+            .setStyle(ButtonStyle.Secondary),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_rename")
+            .setLabel("Renommer")
+            .setEmoji("✏️")
+            .setStyle(ButtonStyle.Secondary),
+
+        new ButtonBuilder()
+            .setCustomId("ticket_close")
+            .setLabel("Fermer")
+            .setEmoji("🔒")
+            .setStyle(ButtonStyle.Danger)
+    );
+}
+
+function buildTicketContainer(category, creatorId, claimerId) {
+    let infoText = `**Catégorie :** ${category.name}\n**Créé par :** <@${creatorId}>`;
+
+    if (claimerId) {
+        infoText += `\n**Pris en charge par :** <@${claimerId}>`;
+    }
+
+    const container = new ContainerBuilder()
+        .setAccentColor(0xFFD700)
+        .addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(`## 🎫 Ticket ${category.name}`)
+        )
+        .addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(
+                `Un membre de la ${category.name.toLowerCase()} te répondra au plus vite.`
+            )
+        )
+        .addSeparatorComponents(
+            new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+        )
+        .addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(infoText)
+        )
+        .addSeparatorComponents(
+            new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+        )
+        .addActionRowComponents(
+            buildTicketButtonsRow(claimerId)
+        );
+
+    return container;
+}
 
 module.exports = async function handleTicketInteraction(interaction) {
 
@@ -110,40 +221,15 @@ module.exports = async function handleTicketInteraction(interaction) {
             permissionOverwrites: permissions
         });
 
-        const embed = new EmbedBuilder()
-            .setColor("#FFD700")
-            .setTitle(`🎫 Ticket ${category.name}`)
-            .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-            .setDescription(`Un membre de la ${category.name.toLowerCase()} te répondra au plus vite.`)
-            .addFields(
-                { name: "Catégorie", value: category.name, inline: true },
-                { name: "Créé par", value: `${interaction.user}`, inline: true }
-            )
-            .setFooter({ text: `Ticket ouvert le ${new Date().toLocaleDateString("fr-FR")}` });
-
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("ticket_claim")
-                .setLabel("📌 Claim")
-                .setStyle(ButtonStyle.Primary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_rename")
-                .setLabel("✏️ Renommer")
-                .setStyle(ButtonStyle.Secondary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_close")
-                .setLabel("🔒 Fermer")
-                .setStyle(ButtonStyle.Danger)
+        const mentionLine = new TextDisplayBuilder().setContent(
+            getStaffMentionLine(category, interaction.user.id)
         );
 
-        const staffMentions = category.staffRoles.map(id => `<@&${id}>`).join(" ");
+        const container = buildTicketContainer(category, interaction.user.id, null);
 
         const panelMessage = await channel.send({
-            content: `${interaction.user} ${staffMentions}`,
-            embeds: [embed],
-            components: [row]
+            components: [mentionLine, container],
+            flags: MessageFlags.IsComponentsV2
         });
 
         await panelMessage.pin().catch(() => {});
@@ -159,11 +245,7 @@ module.exports = async function handleTicketInteraction(interaction) {
     // =========================
     if (interaction.isButton() && interaction.customId === "ticket_claim") {
 
-        const claimButton = interaction.message.components[0].components.find(
-            b => b.data.custom_id === "ticket_claim"
-        );
-
-        if (claimButton?.data?.disabled) {
+        if (ticketClaims.get(interaction.channel.id)) {
             return interaction.reply({
                 content: "❌ Ce ticket est déjà pris en charge.",
                 ephemeral: true
@@ -174,44 +256,24 @@ module.exports = async function handleTicketInteraction(interaction) {
             c => c.categoryId === interaction.channel.parentId
         );
 
-        const embed = EmbedBuilder.from(interaction.message.embeds[0]);
+        if (!category) {
+            return interaction.reply({
+                content: "❌ Catégorie de ticket introuvable.",
+                ephemeral: true
+            });
+        }
 
-        embed.addFields({
-            name: "📌 Pris en charge par",
-            value: `${interaction.user}`,
-            inline: false
-        });
+        ticketClaims.set(interaction.channel.id, interaction.user.id);
 
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("ticket_unclaim")
-                .setLabel(`📌 ${interaction.user.username}`)
-                .setStyle(ButtonStyle.Success),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_add")
-                .setLabel("➕ Ajouter")
-                .setStyle(ButtonStyle.Primary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_remove")
-                .setLabel("➖ Retirer")
-                .setStyle(ButtonStyle.Secondary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_rename")
-                .setLabel("✏️ Renommer")
-                .setStyle(ButtonStyle.Secondary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_close")
-                .setLabel("🔒 Fermer")
-                .setStyle(ButtonStyle.Danger)
+        const creatorId = interaction.channel.topic;
+        const mentionLine = new TextDisplayBuilder().setContent(
+            getStaffMentionLine(category, creatorId)
         );
+        const container = buildTicketContainer(category, creatorId, interaction.user.id);
 
         await interaction.update({
-            embeds: [embed],
-            components: [row]
+            components: [mentionLine, container],
+            flags: MessageFlags.IsComponentsV2
         });
 
         await interaction.channel.permissionOverwrites.edit(interaction.user.id, {
@@ -219,12 +281,10 @@ module.exports = async function handleTicketInteraction(interaction) {
             SendMessages: true
         });
 
-        if (category) {
-            for (const roleId of category.staffRoles) {
-                await interaction.channel.permissionOverwrites.edit(roleId, {
-                    ViewChannel: false
-                });
-            }
+        for (const roleId of category.staffRoles) {
+            await interaction.channel.permissionOverwrites.edit(roleId, {
+                ViewChannel: false
+            });
         }
 
         await interaction.channel.send({
@@ -239,14 +299,16 @@ module.exports = async function handleTicketInteraction(interaction) {
     // =========================
     if (interaction.isButton() && interaction.customId === "ticket_unclaim") {
 
-        const claimedField = interaction.message.embeds[0]?.fields?.find(
-            f => f.name === "📌 Pris en charge par"
-        );
+        const claimerId = ticketClaims.get(interaction.channel.id);
 
-        const claimerMatch = claimedField?.value.match(/<@!?(\d+)>/);
-        const claimerId = claimerMatch ? claimerMatch[1] : null;
+        if (!claimerId) {
+            return interaction.reply({
+                content: "❌ Ce ticket n'est pas pris en charge.",
+                ephemeral: true
+            });
+        }
 
-        if (claimerId && claimerId !== interaction.user.id) {
+        if (claimerId !== interaction.user.id) {
             return interaction.reply({
                 content: "❌ Seule la personne ayant pris en charge ce ticket peut l'annuler.",
                 ephemeral: true
@@ -257,33 +319,17 @@ module.exports = async function handleTicketInteraction(interaction) {
             c => c.categoryId === interaction.channel.parentId
         );
 
-        const embed = EmbedBuilder.from(interaction.message.embeds[0]);
-        embed.setFields(
-            (interaction.message.embeds[0].fields || []).filter(
-                f => f.name !== "📌 Pris en charge par"
-            )
+        ticketClaims.delete(interaction.channel.id);
+
+        const creatorId = interaction.channel.topic;
+        const mentionLine = new TextDisplayBuilder().setContent(
+            getStaffMentionLine(category, creatorId)
         );
-
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("ticket_claim")
-                .setLabel("📌 Claim")
-                .setStyle(ButtonStyle.Primary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_rename")
-                .setLabel("✏️ Renommer")
-                .setStyle(ButtonStyle.Secondary),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_close")
-                .setLabel("🔒 Fermer")
-                .setStyle(ButtonStyle.Danger)
-        );
+        const container = buildTicketContainer(category, creatorId, null);
 
         await interaction.update({
-            embeds: [embed],
-            components: [row]
+            components: [mentionLine, container],
+            flags: MessageFlags.IsComponentsV2
         });
 
         if (category) {
@@ -483,65 +529,79 @@ module.exports = async function handleTicketInteraction(interaction) {
     // Étape 1 : demande de confirmation
     if (interaction.isButton() && interaction.customId === "ticket_close") {
 
-        const confirmEmbed = new EmbedBuilder()
-            .setColor("Orange")
-            .setTitle("⚠️ Confirmer la fermeture")
-            .setDescription("Es-tu sûr de vouloir fermer ce ticket ?\nCette action peut être annulée ci-dessous.");
+        const confirmContainer = new ContainerBuilder()
+            .setAccentColor(0xFFA500)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## ⚠️ Confirmer la fermeture")
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    "Es-tu sûr de vouloir fermer ce ticket ?\nCette action peut être annulée ci-dessous."
+                )
+            )
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+                    new ButtonBuilder()
+                        .setCustomId("ticket_close_confirm")
+                        .setLabel("Confirmer")
+                        .setEmoji("✅")
+                        .setStyle(ButtonStyle.Danger),
 
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("ticket_close_confirm")
-                .setLabel("✅ Confirmer")
-                .setStyle(ButtonStyle.Danger),
-
-            new ButtonBuilder()
-                .setCustomId("ticket_close_cancel")
-                .setLabel("❌ Annuler")
-                .setStyle(ButtonStyle.Secondary)
-        );
+                    new ButtonBuilder()
+                        .setCustomId("ticket_close_cancel")
+                        .setLabel("Annuler")
+                        .setEmoji("❌")
+                        .setStyle(ButtonStyle.Secondary)
+                )
+            );
 
         return interaction.reply({
-            embeds: [confirmEmbed],
-            components: [row],
-            ephemeral: true
+            components: [confirmContainer],
+            flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
         });
     }
 
     // Étape 2a : annulation
     if (interaction.isButton() && interaction.customId === "ticket_close_cancel") {
         return interaction.update({
-            content: "❌ Fermeture annulée.",
-            embeds: [],
-            components: []
+            components: [new TextDisplayBuilder().setContent("❌ Fermeture annulée.")],
+            flags: MessageFlags.IsComponentsV2
         });
     }
 
     // Étape 2b : confirmation -> fermeture effective
     if (interaction.isButton() && interaction.customId === "ticket_close_confirm") {
 
-        const closeEmbed = new EmbedBuilder()
-            .setColor("Orange")
-            .setTitle("🔒 Ticket fermé")
-            .setDescription("Ce ticket est fermé.\nSeul un modérateur peut désormais le supprimer.");
-
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("ticket_delete")
-                .setLabel("🗑️ Supprimer")
-                .setStyle(ButtonStyle.Danger)
-        );
+        const closeContainer = new ContainerBuilder()
+            .setAccentColor(0xFFA500)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 🔒 Ticket fermé")
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    "Ce ticket est fermé.\nSeul un modérateur peut désormais le supprimer."
+                )
+            )
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+                    new ButtonBuilder()
+                        .setCustomId("ticket_delete")
+                        .setLabel("Supprimer")
+                        .setEmoji("🗑️")
+                        .setStyle(ButtonStyle.Danger)
+                )
+            );
 
         // Met à jour le message de confirmation éphémère
         await interaction.update({
-            content: "🔒 Ticket fermé avec succès.",
-            embeds: [],
-            components: []
+            components: [new TextDisplayBuilder().setContent("🔒 Ticket fermé avec succès.")],
+            flags: MessageFlags.IsComponentsV2
         });
 
-        // Poste l'embed de fermeture dans le salon
+        // Poste le panel de fermeture dans le salon
         await interaction.channel.send({
-            embeds: [closeEmbed],
-            components: [row]
+            components: [closeContainer],
+            flags: MessageFlags.IsComponentsV2
         });
 
         // Coupe l'écriture pour l'auteur du ticket
@@ -552,6 +612,7 @@ module.exports = async function handleTicketInteraction(interaction) {
             ).catch(() => {});
         }
 
+        // Log (reste en embed classique, non user-facing)
         const logChannel = interaction.guild.channels.cache.get(LOG_CHANNEL_ID);
 
         if (logChannel) {
@@ -612,6 +673,9 @@ module.exports = async function handleTicketInteraction(interaction) {
             ephemeral: true
         });
 
+        ticketClaims.delete(interaction.channel.id);
+        renameCooldowns.delete(interaction.channel.id);
+
         setTimeout(async () => {
             await interaction.channel.delete().catch(() => {});
         }, 5000);
@@ -624,3 +688,6 @@ module.exports.TICKET_CATEGORIES = TICKET_CATEGORIES;
 module.exports.renameCooldowns = renameCooldowns;
 module.exports.RENAME_COOLDOWN_MS = RENAME_COOLDOWN_MS;
 module.exports.LOG_CHANNEL_ID = LOG_CHANNEL_ID;
+module.exports.ticketClaims = ticketClaims;
+module.exports.buildTicketContainer = buildTicketContainer;
+module.exports.getStaffMentionLine = getStaffMentionLine;
