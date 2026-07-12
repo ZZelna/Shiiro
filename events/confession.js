@@ -5,7 +5,14 @@ const {
     ActionRowBuilder,
     ButtonBuilder,
     ButtonStyle,
-    EmbedBuilder
+    EmbedBuilder,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SectionBuilder,
+    ThumbnailBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MessageFlags
 } = require("discord.js");
 
 const Config = require("../models/ConfessionConfig");
@@ -30,69 +37,89 @@ function buildPopularity(confession) {
 function buildStyle(confession) {
     const likes = confession.likes.length;
 
-    let color = "#5865F2";
+    let color = 0x5865F2;
     let badge = "🤫";
 
     if (likes >= 100) {
-        color = "#9B59B6";
+        color = 0x9B59B6;
         badge = "👑";
     } else if (likes >= 50) {
-        color = "#F1C40F";
+        color = 0xF1C40F;
         badge = "🔥";
     } else if (likes >= 25) {
-        color = "#2ECC71";
+        color = 0x2ECC71;
         badge = "⭐";
     }
 
     return { color, badge };
 }
 
-function buildConfessionEmbed(confession, guild) {
+// ─── Construction du container V2 (remplace buildConfessionEmbed) ───────────
+function buildConfessionContainer(confession, guild) {
     const { color, badge } = buildStyle(confession);
     const popularity = buildPopularity(confession);
+    const iconURL = guild.iconURL({ dynamic: true });
 
-    return new EmbedBuilder()
-        .setColor(color)
-        .setAuthor({
-            name: `${badge} CONFESSIONS NOCTURNE`,
-            iconURL: guild.iconURL({ dynamic: true })
-        })
-        .setTitle(`Confession #${confession.number}`)
-        .setDescription(
-`> ${confession.content}
+    const container = new ContainerBuilder().setAccentColor(color);
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━`
+    // ─── En-tête (avec miniature si le serveur a une icône) ─────────────────
+    if (iconURL) {
+        container.addSectionComponents(
+            new SectionBuilder()
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(`${badge} **CONFESSIONS NOCTURNE**`),
+                    new TextDisplayBuilder().setContent(`## Confession #${confession.number}`)
+                )
+                .setThumbnailAccessory(
+                    thumbnail => thumbnail.setURL(iconURL)
+                )
+        );
+    } else {
+        container.addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(`${badge} **CONFESSIONS NOCTURNE**`),
+            new TextDisplayBuilder().setContent(`## Confession #${confession.number}`)
+        );
+    }
+
+    container.addSeparatorComponents(
+        new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+    );
+
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(`> ${confession.content}`)
+    );
+
+    container.addSeparatorComponents(
+        new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+    );
+
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(
+            `❤️ **Popularité**\n${popularity}\n\n` +
+            `👍 **${confession.likes.length}** likes　` +
+            `👎 **${confession.dislikes.length}** dislikes　` +
+            `💬 **${confession.replies.length}** réponses`
         )
-        .addFields(
-            {
-                name: "❤️ Popularité",
-                value: popularity
-            },
-            {
-                name: "👍 Likes",
-                value: `${confession.likes.length}`,
-                inline: true
-            },
-            {
-                name: "👎 Dislikes",
-                value: `${confession.dislikes.length}`,
-                inline: true
-            },
-            {
-                name: "💬 Réponses",
-                value: `${confession.replies.length}`,
-                inline: true
-            }
+    );
+
+    container.addSeparatorComponents(
+        new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+    );
+
+    container.addTextDisplayComponents(
+        new TextDisplayBuilder().setContent(
+            `-# ${guild.name} • Confession totalement anonyme`
         )
-        .setThumbnail(guild.iconURL({ dynamic: true }))
-        .setFooter({
-            text: `${guild.name} • Confession totalement anonyme`,
-            iconURL: guild.iconURL({ dynamic: true })
-        })
-        .setTimestamp();
+    );
+
+    container.addActionRowComponents(
+        buildConfessionButtonsRow(confession)
+    );
+
+    return container;
 }
 
-function buildConfessionRow(confession) {
+function buildConfessionButtonsRow(confession) {
     return new ActionRowBuilder().addComponents(
 
         new ButtonBuilder()
@@ -168,21 +195,24 @@ module.exports = async (interaction) => {
 
         if (interaction.customId === "confession_info") {
 
-            const embed = new EmbedBuilder()
-                .setColor("#F4B400")
-                .setTitle("ℹ️ Informations")
-                .setDescription(
-`🔒 Les confessions sont totalement anonymes.
-
-• Les modérateurs voient uniquement l'auteur pendant la validation.
-• Les autres membres ne verront jamais ton identité.
-• Tu peux liker, répondre ou signaler une confession.
-• Les abus peuvent entraîner une sanction.`
+            const infoContainer = new ContainerBuilder()
+                .setAccentColor(0xF4B400)
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent("## ℹ️ Informations")
+                )
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(
+                        `🔒 Les confessions sont totalement anonymes.\n\n` +
+                        `• Les modérateurs voient uniquement l'auteur pendant la validation.\n` +
+                        `• Les autres membres ne verront jamais ton identité.\n` +
+                        `• Tu peux liker, répondre ou signaler une confession.\n` +
+                        `• Les abus peuvent entraîner une sanction.`
+                    )
                 );
 
             return interaction.reply({
-                embeds: [embed],
-                ephemeral: true
+                components: [infoContainer],
+                flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
             });
         }
 
@@ -233,12 +263,11 @@ module.exports = async (interaction) => {
             confession.status = "approved";
             await confession.save();
 
-            const embed = buildConfessionEmbed(confession, interaction.guild);
-            const row = buildConfessionRow(confession);
+            const container = buildConfessionContainer(confession, interaction.guild);
 
             const message = await channel.send({
-                embeds: [embed],
-                components: [row]
+                components: [container],
+                flags: MessageFlags.IsComponentsV2
             });
 
             // Création du thread
@@ -247,25 +276,27 @@ module.exports = async (interaction) => {
                 autoArchiveDuration: 1440
             });
 
+            const welcomeContainer = new ContainerBuilder()
+                .setAccentColor(buildStyle(confession).color)
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent("## 💬 Bienvenue dans la discussion")
+                )
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(
+                        `Bienvenue dans le thread de cette confession.\n\n` +
+                        `📜 **Règles**\n\n` +
+                        `• Respectez tous les membres.\n` +
+                        `• Pas d'insultes.\n` +
+                        `• Pas de spam.\n` +
+                        `• Les réponses restent anonymes.\n` +
+                        `• Les modérateurs surveillent ce fil.\n\n` +
+                        `Bonne discussion ❤️`
+                    )
+                );
+
             await thread.send({
-                embeds: [
-                    new EmbedBuilder()
-                        .setColor(buildStyle(confession).color)
-                        .setTitle("💬 Bienvenue dans la discussion")
-                        .setDescription(
-`Bienvenue dans le thread de cette confession.
-
-📜 **Règles**
-
-• Respectez tous les membres.
-• Pas d'insultes.
-• Pas de spam.
-• Les réponses restent anonymes.
-• Les modérateurs surveillent ce fil.
-
-Bonne discussion ❤️`
-                        )
-                ]
+                components: [welcomeContainer],
+                flags: MessageFlags.IsComponentsV2
             });
 
             confession.messageId = message.id;
@@ -391,12 +422,11 @@ Bonne discussion ❤️`
 
             await confession.save();
 
-            const embed = buildConfessionEmbed(confession, interaction.guild);
-            const row = buildConfessionRow(confession);
+            const container = buildConfessionContainer(confession, interaction.guild);
 
             return interaction.update({
-                embeds: [embed],
-                components: [row]
+                components: [container],
+                flags: MessageFlags.IsComponentsV2
             });
 
         }
@@ -439,12 +469,11 @@ Bonne discussion ❤️`
 
             await confession.save();
 
-            const embed = buildConfessionEmbed(confession, interaction.guild);
-            const row = buildConfessionRow(confession);
+            const container = buildConfessionContainer(confession, interaction.guild);
 
             return interaction.update({
-                embeds: [embed],
-                components: [row]
+                components: [container],
+                flags: MessageFlags.IsComponentsV2
             });
 
         }
@@ -519,6 +548,7 @@ Bonne discussion ❤️`
                 guildId: interaction.guild.id
             });
 
+            // Log de modération : reste en embed classique (staff-facing)
             if (config && config.logChannel) {
 
                 const logChannel = interaction.guild.channels.cache.get(
@@ -623,6 +653,7 @@ Bonne discussion ❤️`
             });
         }
 
+        // Panel de modération : reste en embed classique (staff-facing)
         const moderationEmbed = new EmbedBuilder()
             .setColor("Orange")
             .setTitle(`📝 Confession #${confession.number}`)
@@ -708,16 +739,18 @@ Bonne discussion ❤️`
 
         if (thread) {
 
+            const replyContainer = new ContainerBuilder()
+                .setAccentColor(0x5865F2)
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(reply)
+                )
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent("-# Réponse anonyme")
+                );
+
             await thread.send({
-                embeds: [
-                    new EmbedBuilder()
-                        .setColor("#5865F2")
-                        .setDescription(reply)
-                        .setFooter({
-                            text: "Réponse anonyme"
-                        })
-                        .setTimestamp()
-                ]
+                components: [replyContainer],
+                flags: MessageFlags.IsComponentsV2
             });
 
         }
