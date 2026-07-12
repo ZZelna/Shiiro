@@ -1,9 +1,11 @@
 const {
     SlashCommandBuilder,
-    EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
-    ButtonStyle
+    ButtonStyle,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const Giveaway = require("../models/Giveaway");
@@ -80,61 +82,61 @@ module.exports = {
         const endAt =
             Date.now() +
             duration * 60 * 1000;
-const emoji =
 
-    type === "casino"
-
-        ? `<:casino:${CASINO_EMOJI}>`
-
-        : `<:nitro:${NITRO_EMOJI}>`;
-
-const embed = new EmbedBuilder()
-    .setColor("#0000FF")
-    .setDescription(
-`# Giveaway: ${prize}
-
-Cliquez sur le bouton ${emoji} pour participer
-*Nombre de gagnants:* ${winnersCount}
-
-## Fin du giveaway
-<t:${Math.floor(endAt / 1000)}:R>`
-);
-const giveaway =
-    await Giveaway.create({
-        guildId: interaction.guild.id,
-        channelId: interaction.channel.id,
-        prize,
-        type,
-        winnersCount,
-        endAt,
-        participants: []
-    });
-
-const row = new ActionRowBuilder()
-.addComponents(
-    new ButtonBuilder()
-        .setCustomId(`gw_${giveaway._id}`)
-        .setStyle(ButtonStyle.Secondary)
-        .setEmoji(
+        const emoji =
             type === "casino"
-                ? CASINO_EMOJI
-                : NITRO_EMOJI
-        )
-        .setLabel("0")
-);
+                ? `<:casino:${CASINO_EMOJI}>`
+                : `<:nitro:${NITRO_EMOJI}>`;
 
-const message =
-    await interaction.channel.send({
-        embeds: [embed],
-        components: [row]
-    });
+        const container = new ContainerBuilder()
+            .setAccentColor(0x0000FF)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `# Giveaway: ${prize}\n\n` +
+                    `Cliquez sur le bouton ${emoji} pour participer\n` +
+                    `*Nombre de gagnants:* ${winnersCount}\n\n` +
+                    `## Fin du giveaway\n` +
+                    `<t:${Math.floor(endAt / 1000)}:R>`
+                )
+            );
 
-giveaway.messageId = message.id;
-await giveaway.save();
+        const giveaway =
+            await Giveaway.create({
+                guildId: interaction.guild.id,
+                channelId: interaction.channel.id,
+                prize,
+                type,
+                winnersCount,
+                endAt,
+                participants: []
+            });
 
-await interaction.reply({
-    content: "✅ Giveaway créé.",
-    ephemeral: true
-});
+        container.addActionRowComponents(
+            new ActionRowBuilder().addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`gw_${giveaway._id}`)
+                    .setStyle(ButtonStyle.Secondary)
+                    .setEmoji(
+                        type === "casino"
+                            ? CASINO_EMOJI
+                            : NITRO_EMOJI
+                    )
+                    .setLabel("0")
+            )
+        );
+
+        const message =
+            await interaction.channel.send({
+                components: [container],
+                flags: MessageFlags.IsComponentsV2
+            });
+
+        giveaway.messageId = message.id;
+        await giveaway.save();
+
+        await interaction.reply({
+            content: "✅ Giveaway créé.",
+            ephemeral: true
+        });
     }
 };
