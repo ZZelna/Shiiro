@@ -1,5 +1,13 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
-const { TICKET_CATEGORIES, LOG_CHANNEL_ID } = require("../../handlers/systems/ticketHandler");
+const {
+    ContainerBuilder,
+    TextDisplayBuilder,
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle,
+    EmbedBuilder,
+    MessageFlags
+} = require("discord.js");
+const { TICKET_CATEGORIES, LOG_CHANNEL_ID, ticketClaims, renameCooldowns } = require("../../handlers/systems/ticketHandler");
 
 module.exports = {
     name: "close",
@@ -13,7 +21,6 @@ module.exports = {
             return message.reply("❌ Cette commande ne fonctionne que dans un salon ticket.");
         }
 
-        // Si "+close confirm" est directement utilisé, on ferme sans redemander
         const skipConfirm = args[0]?.toLowerCase() === "confirm";
 
         if (!skipConfirm) {
@@ -36,21 +43,29 @@ module.exports = {
             }
         }
 
-        const closeEmbed = new EmbedBuilder()
-            .setColor("Orange")
-            .setTitle("🔒 Ticket fermé")
-            .setDescription("Ce ticket est fermé.\nSeul un modérateur peut désormais le supprimer.");
-
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("ticket_delete")
-                .setLabel("🗑️ Supprimer")
-                .setStyle(ButtonStyle.Danger)
-        );
+        const closeContainer = new ContainerBuilder()
+            .setAccentColor(0xFFA500)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 🔒 Ticket fermé")
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    "Ce ticket est fermé.\nSeul un modérateur peut désormais le supprimer."
+                )
+            )
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+                    new ButtonBuilder()
+                        .setCustomId("ticket_delete")
+                        .setLabel("Supprimer")
+                        .setEmoji("🗑️")
+                        .setStyle(ButtonStyle.Danger)
+                )
+            );
 
         await message.channel.send({
-            embeds: [closeEmbed],
-            components: [row]
+            components: [closeContainer],
+            flags: MessageFlags.IsComponentsV2
         });
 
         if (message.channel.topic) {
@@ -59,6 +74,9 @@ module.exports = {
                 { SendMessages: false }
             ).catch(() => {});
         }
+
+        ticketClaims.delete(message.channel.id);
+        renameCooldowns.delete(message.channel.id);
 
         const logChannel = message.guild.channels.cache.get(LOG_CHANNEL_ID);
 
