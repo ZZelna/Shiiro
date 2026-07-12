@@ -3,7 +3,11 @@ const {
     PermissionFlagsBits,
     ActionRowBuilder,
     StringSelectMenuBuilder,
-    EmbedBuilder
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MessageFlags
 } = require("discord.js");
 
 const CATEGORIES = [
@@ -46,26 +50,37 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
       async execute(interaction) {
 
-        const embed = new EmbedBuilder()
-            .setColor("#5865F2")
-            .setTitle("🎫 Centre de support")
-            .setDescription(
-                [
-                    "Bienvenue sur le centre de support.",
-                    "",
-                    "Choisissez la catégorie correspondant à votre demande à l'aide du menu ci-dessous.",
-                    "",
-                    "• 🚨 Gestion abus",
-                    "• 👮 Gestion staff",
-                    "• 🤝 Équipe partenariats",
-                    "• 🎰 Gestion casino",
-                    "• 🛠️ Support admin"
-                ].join("\n")
+        const container = new ContainerBuilder()
+            .setAccentColor(0x5865F2)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 🎫 Centre de support")
             )
-            .setFooter({
-                text: `${interaction.guild.name} • Système de tickets`
-            })
-            .setTimestamp();
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    "Bienvenue sur le centre de support.\n\n" +
+                    "Choisissez la catégorie correspondant à votre demande à l'aide du menu ci-dessous."
+                )
+            )
+            .addSeparatorComponents(
+                new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    "🚨 Gestion abus\n" +
+                    "👮 Gestion staff\n" +
+                    "🤝 Équipe partenariats\n" +
+                    "🎰 Gestion casino\n" +
+                    "🛠️ Support admin"
+                )
+            )
+            .addSeparatorComponents(
+                new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `-# ${interaction.guild.name} • Système de tickets`
+                )
+            );
 
         const menu = new StringSelectMenuBuilder()
             .setCustomId("ticket_category")
@@ -79,10 +94,13 @@ module.exports = {
                 }))
             );
 
-        const row = new ActionRowBuilder().addComponents(menu);
-                await interaction.channel.send({
-            embeds: [embed],
-            components: [row]
+        container.addActionRowComponents(
+            new ActionRowBuilder().addComponents(menu)
+        );
+
+        await interaction.channel.send({
+            components: [container],
+            flags: MessageFlags.IsComponentsV2
         });
 
         await interaction.reply({
@@ -91,4 +109,3 @@ module.exports = {
         });
     }
 };
-        
