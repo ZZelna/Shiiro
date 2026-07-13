@@ -1,5 +1,7 @@
 const {
-    EmbedBuilder
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const CasinoProfile = require("../../models/CasinoProfile");
@@ -8,7 +10,7 @@ const updateClanYens = require("../../systems/updateClanYens");
 const LOGS_CASINO = "1520766436388245585";
 
 module.exports = {
-    name: "claim",
+    name: "work",
 
     async run(message) {
 
@@ -65,21 +67,26 @@ module.exports = {
             console.error("[CLAN ERROR]", err);
         }
 
-        const embed = new EmbedBuilder()
-            .setColor("Gold")
-            .setTitle("💰 Claim Casino")
-            .setDescription(
-                `Tu as gagné **${reward} ¥** !`
+        const container = new ContainerBuilder()
+            .setAccentColor(0xFFD700)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 💰 Claim Casino")
             )
-            .addFields({
-                name: "💴 Solde actuel",
-                value: `${profile.yens.toLocaleString()} ¥`
-            });
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(`Tu as gagné **${reward} ¥** !`)
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `💴 **Solde actuel**\n${profile.yens.toLocaleString()} ¥`
+                )
+            );
 
         await message.reply({
-            embeds: [embed]
+            components: [container],
+            flags: MessageFlags.IsComponentsV2
         });
 
+        // Log : reste en texte brut (staff-facing, inchangé)
         try {
 
             const logsGuild =
