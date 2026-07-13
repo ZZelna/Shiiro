@@ -1,4 +1,3 @@
-const discordTranscripts = require("discord-html-transcripts");
 const {
     EmbedBuilder,
     ActionRowBuilder,
@@ -706,16 +705,9 @@ module.exports = async function handleTicketInteraction(interaction) {
 
         let attachment = null;
         try {
-            attachment = await discordTranscripts.createTranscript(interaction.channel, {
-                filename: `${interaction.channel.name}.html`,
-                // ⚠️ Contournement : bug de rendu React dans discord-html-transcripts
-                // sur certains messages avec composants (V2 ou classiques).
-                // On exclut tout message avec des composants du transcript
-                // pour éviter le crash, en gardant tout le texte de la conversation.
-                filter: (message) => !message.components || message.components.length === 0
-            });
+            attachment = await buildTextTranscript(interaction.channel);
         } catch (err) {
-            console.error("❌ Erreur génération transcript (non bloquant) :", err);
+            console.error("❌ Erreur génération transcript texte (non bloquant) :", err);
         }
 
         const logChannel = interaction.guild.channels.cache.get(LOG_CHANNEL_ID);
