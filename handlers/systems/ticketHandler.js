@@ -655,17 +655,32 @@ module.exports = async function handleTicketInteraction(interaction) {
             });
         }
 
-        const attachment = await discordTranscripts.createTranscript(interaction.channel, {
-            filename: `${interaction.channel.name}.html`
-        });
+        let attachment = null;
+        try {
+            attachment = await discordTranscripts.createTranscript(interaction.channel, {
+                filename: `${interaction.channel.name}.html`,
+                // ⚠️ Contournement : la lib a un bug de rendu sur certains messages
+                // Components V2 (crash du process). On les exclut du transcript
+                // en attendant que ce soit corrigé en amont.
+                filter: (message) => !message.flags?.has(MessageFlags.IsComponentsV2)
+            });
+        } catch (err) {
+            console.error("❌ Erreur génération transcript (non bloquant) :", err);
+        }
 
         const logChannel = interaction.guild.channels.cache.get(LOG_CHANNEL_ID);
 
         if (logChannel) {
-            await logChannel.send({
-                content: `📄 Transcript de ${interaction.channel.name}`,
-                files: [attachment]
-            });
+            if (attachment) {
+                await logChannel.send({
+                    content: `📄 Transcript de ${interaction.channel.name}`,
+                    files: [attachment]
+                });
+            } else {
+                await logChannel.send({
+                    content: `⚠️ Transcript de ${interaction.channel.name} indisponible (erreur de génération).`
+                });
+            }
         }
 
         await interaction.reply({
