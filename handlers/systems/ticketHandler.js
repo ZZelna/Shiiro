@@ -659,10 +659,11 @@ module.exports = async function handleTicketInteraction(interaction) {
         try {
             attachment = await discordTranscripts.createTranscript(interaction.channel, {
                 filename: `${interaction.channel.name}.html`,
-                // ⚠️ Contournement : la lib a un bug de rendu sur certains messages
-                // Components V2 (crash du process). On les exclut du transcript
-                // en attendant que ce soit corrigé en amont.
-                filter: (message) => !message.flags?.has(MessageFlags.IsComponentsV2)
+                // ⚠️ Contournement : bug de rendu React dans discord-html-transcripts
+                // sur certains messages avec composants (V2 ou classiques).
+                // On exclut tout message avec des composants du transcript
+                // pour éviter le crash, en gardant tout le texte de la conversation.
+                filter: (message) => !message.components || message.components.length === 0
             });
         } catch (err) {
             console.error("❌ Erreur génération transcript (non bloquant) :", err);
