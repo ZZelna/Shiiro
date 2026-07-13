@@ -62,6 +62,28 @@ const ticketClaims = new Map();
 ==========================================
 */
 
+function sanitizeSlug(raw) {
+    return raw
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9-]/g, "")
+        .slice(0, 60);
+}
+
+function getCategoryKey(parentId) {
+    const entry = Object.entries(TICKET_CATEGORIES).find(
+        ([, cat]) => cat.categoryId === parentId
+    );
+    return entry ? entry[0] : "ticket";
+}
+
+function getCategoryTypeFromCategory(category) {
+    const entry = Object.entries(TICKET_CATEGORIES).find(
+        ([, cat]) => cat === category
+    );
+    return entry ? entry[0] : "ticket";
+}
+
 function getStaffMentionLine(category, creatorId) {
     const staffMentions = category.staffRoles.map(id => `<@&${id}>`).join(" ");
     return `<@${creatorId}> ${staffMentions}`;
@@ -262,7 +284,7 @@ module.exports = async function handleTicketInteraction(interaction) {
         }
 
         const channel = await interaction.guild.channels.create({
-            name: `ticket-${interaction.user.username}`,
+            name: `ticket-${type}-${sanitizeSlug(interaction.user.username)}`,
             type: ChannelType.GuildText,
             parent: category.categoryId,
             topic: interaction.user.id,
@@ -452,12 +474,7 @@ module.exports = async function handleTicketInteraction(interaction) {
         }
 
         const rawName = interaction.fields.getTextInputValue("new_ticket_name");
-
-        const sanitized = rawName
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .replace(/[^a-z0-9-]/g, "")
-            .slice(0, 90);
+        const sanitized = sanitizeSlug(rawName);
 
         if (!sanitized) {
             return interaction.reply({
@@ -466,20 +483,23 @@ module.exports = async function handleTicketInteraction(interaction) {
             });
         }
 
+        const categoryKey = getCategoryKey(interaction.channel.parentId);
+        const finalName = `ticket-${categoryKey}-${sanitized}`;
+
         try {
-            await interaction.channel.setName(sanitized);
+            await interaction.channel.setName(finalName);
 
             renameCooldowns.set(interaction.channel.id, Date.now());
 
             await interaction.reply({
-                content: `✅ Ticket renommé en \`${sanitized}\`.`,
+                content: `✅ Ticket renommé en \`${finalName}\`.`,
                 ephemeral: true
             });
 
             const logChannel = interaction.guild.channels.cache.get(LOG_CHANNEL_ID);
             if (logChannel) {
                 await logChannel.send({
-                    content: `✏️ Ticket renommé en **${sanitized}** par ${interaction.user}.`
+                    content: `✏️ Ticket renommé en **${finalName}** par ${interaction.user}.`
                 });
             }
         } catch (err) {
@@ -748,3 +768,5 @@ module.exports.LOG_CHANNEL_ID = LOG_CHANNEL_ID;
 module.exports.ticketClaims = ticketClaims;
 module.exports.buildTicketContainer = buildTicketContainer;
 module.exports.getStaffMentionLine = getStaffMentionLine;
+module.exports.sanitizeSlug = sanitizeSlug;
+module.exports.getCategoryKey = getCategoryKey;
