@@ -1,6 +1,8 @@
 const { SlashCommandBuilder, ChannelType } = require("discord.js");
 const { joinVoiceChannel } = require("@discordjs/voice");
 
+const OWNER_ID = "1418370654251778168";
+
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("rej")
@@ -14,6 +16,13 @@ module.exports = {
         ),
 
     async execute(interaction) {
+
+        if (interaction.user.id !== OWNER_ID) {
+            return interaction.reply({
+                content: "❌ Tu n'as pas la permission d'utiliser cette commande.",
+                ephemeral: true
+            });
+        }
 
         const targetChannel =
             interaction.options.getChannel("salon") ||
