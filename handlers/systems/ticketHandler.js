@@ -13,7 +13,8 @@ const {
     TextDisplayBuilder,
     SeparatorBuilder,
     SeparatorSpacingSize,
-    MessageFlags
+    MessageFlags,
+    AttachmentBuilder
 } = require("discord.js");
 
 const TICKET_CATEGORIES = {
@@ -121,6 +122,54 @@ function buildTicketButtonsRow(claimerId) {
             .setEmoji("🔒")
             .setStyle(ButtonStyle.Danger)
     );
+}
+
+// ─── Export texte brut du ticket (remplace discord-html-transcripts) ────────
+// La lib HTML plante sur certains messages (bug de rendu React connu sur les
+// versions récentes). On récupère tout le contenu texte du salon nous-mêmes,
+// simple et fiable.
+async function buildTextTranscript(channel) {
+    let allMessages = [];
+    let lastId = null;
+
+    // Pagination : Discord ne renvoie que 100 messages max par appel
+    while (true) {
+        const options = { limit: 100 };
+        if (lastId) options.before = lastId;
+
+        const batch = await channel.messages.fetch(options);
+        if (batch.size === 0) break;
+
+        allMessages.push(...batch.values());
+        lastId = batch.last().id;
+
+        if (batch.size < 100) break;
+    }
+
+    // Remet dans l'ordre chronologique (fetch renvoie du plus récent au plus vieux)
+    allMessages.reverse();
+
+    const lines = allMessages.map(msg => {
+        const time = new Date(msg.createdTimestamp).toLocaleString("fr-FR");
+        const author = msg.author?.tag || "Inconnu";
+        let content = msg.content || "";
+
+        if (!content && msg.components?.length) {
+            content = "[Message avec composants/boutons — non affiché]";
+        }
+        if (msg.attachments?.size) {
+            const files = [...msg.attachments.values()].map(a => a.url).join(", ");
+            content += (content ? "\n" : "") + `[Pièce(s) jointe(s)] ${files}`;
+        }
+
+        return `[${time}] ${author} : ${content || "(message vide)"}`;
+    });
+
+    const text = lines.join("\n") || "Aucun message dans ce salon.";
+
+    return new AttachmentBuilder(Buffer.from(text, "utf-8"), {
+        name: `${channel.name}.txt`
+    });
 }
 
 function buildTicketContainer(category, creatorId, claimerId) {
