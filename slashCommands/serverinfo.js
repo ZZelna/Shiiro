@@ -123,9 +123,30 @@ module.exports = {
             new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
         );
 
+        // ─── Aperçu des émojis (échantillon, pas la liste complète) ──────
+        // La liste complète dépasserait largement la limite de caractères
+        // d'un message V2 (~4000 caractères au total), donc on affiche un
+        // échantillon avec le compte total.
+        const allEmojis = [...guild.emojis.cache.values()];
+        const EMOJI_PREVIEW_BUDGET = 800; // caractères max pour l'aperçu
+
+        let previewText = "";
+        let shownCount = 0;
+
+        for (const emoji of allEmojis) {
+            const mention = emoji.toString();
+            if (previewText.length + mention.length + 1 > EMOJI_PREVIEW_BUDGET) break;
+            previewText += mention + " ";
+            shownCount++;
+        }
+
+        const remaining = allEmojis.length - shownCount;
+
         container.addTextDisplayComponents(
             new TextDisplayBuilder().setContent(
-                `**Émojis**\n${guild.emojis.cache.size} émoji(s) au total`
+                `**Émojis [${allEmojis.length}]**\n` +
+                (previewText || "Aucun émoji") +
+                (remaining > 0 ? `\n*+ ${remaining} de plus*` : "")
             )
         );
 
