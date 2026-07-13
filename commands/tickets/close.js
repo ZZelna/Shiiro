@@ -21,26 +21,25 @@ module.exports = {
             return message.reply("❌ Cette commande ne fonctionne que dans un salon ticket.");
         }
 
-        const skipConfirm = args[0]?.toLowerCase() === "confirm";
+        // ⚠️ IMPORTANT : le mot de confirmation ne doit JAMAIS commencer par un
+        // préfixe de commande (+, !, *, ?), sinon il serait interprété comme
+        // une nouvelle invocation de +close et provoquerait une double exécution.
+        await message.reply(
+            "⚠️ Es-tu sûr de vouloir fermer ce ticket ?\n" +
+            "Tape simplement `confirm` (sans préfixe) dans les 15 secondes pour confirmer."
+        );
 
-        if (!skipConfirm) {
-            await message.reply(
-                "⚠️ Es-tu sûr de vouloir fermer ce ticket ?\n" +
-                "Tape `+close confirm` dans les 15 secondes pour confirmer."
-            );
+        const filter = m => m.author.id === message.author.id &&
+            m.content.toLowerCase() === "confirm";
 
-            const filter = m => m.author.id === message.author.id &&
-                m.content.toLowerCase() === "+close confirm";
+        const collected = await message.channel.awaitMessages({
+            filter,
+            max: 1,
+            time: 15000
+        }).catch(() => null);
 
-            const collected = await message.channel.awaitMessages({
-                filter,
-                max: 1,
-                time: 15000
-            }).catch(() => null);
-
-            if (!collected || !collected.first()) {
-                return message.channel.send("❌ Fermeture annulée (délai dépassé).");
-            }
+        if (!collected || !collected.first()) {
+            return message.channel.send("❌ Fermeture annulée (délai dépassé).");
         }
 
         const closeContainer = new ContainerBuilder()
