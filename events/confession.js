@@ -763,3 +763,6 @@ module.exports = async (interaction) => {
     }
 
 };
+
+module.exports.buildConfessionContainer = buildConfessionContainer;
+module.exports.buildStyle = buildStyle;
