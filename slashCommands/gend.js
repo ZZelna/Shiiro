@@ -1,6 +1,8 @@
 const {
     SlashCommandBuilder,
-    EmbedBuilder
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const Giveaway = require("../models/Giveaway");
@@ -95,66 +97,52 @@ module.exports = {
                     giveaway.messageId
                 );
 
-            const embed =
-                EmbedBuilder.from(
-                    msg.embeds[0]
+            const emoji = giveaway.type === "casino"
+                ? "<:casino:1507449727266979922>"
+                : "<:nitro:1508097922489647234>";
+
+            const endedContainer = new ContainerBuilder()
+                .setAccentColor(0xED4245)
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent("# 🎉 GIVEAWAY TERMINÉ")
+                )
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(
+                        `**Lot :** ${giveaway.prize}\n` +
+                        `${emoji} **${giveaway.participants.length}** participant(s)\n\n` +
+                        (winners.length > 0
+                            ? `🏆 **Gagnants**\n${winners.map(id => `<@${id}>`).join("\n")}`
+                            : "🏆 **Gagnants**\nAucun participant")
+                    )
                 );
 
-            embed
-                .setColor("Red")
-                .setTitle("🎉 GIVEAWAY TERMINÉ");
-
-            if (winners.length > 0) {
-
-                embed.addFields({
-                    name: "🏆 Gagnants",
-                    value:
-                        winners
-                            .map(id => `<@${id}>`)
-                            .join("\n")
-                });
-
-            } else {
-
-                embed.addFields({
-                    name: "🏆 Gagnants",
-                    value: "Aucun participant"
-                });
-
-            }
-
             await msg.edit({
-                embeds: [embed],
-                components: []
+                components: [endedContainer],
+                flags: MessageFlags.IsComponentsV2
             });
 
         } catch (err) {
             console.log(err);
         }
 
-        const resultEmbed =
-            new EmbedBuilder()
-                .setColor("Green")
-                .setTitle("✅ Giveaway terminé")
-                .addFields(
-                    {
-                        name: "🎁 Lot",
-                        value: giveaway.prize
-                    },
-                    {
-                        name: "🏆 Gagnants",
-                        value:
-                            winners.length > 0
-                                ? winners
-                                      .map(id => `<@${id}>`)
-                                      .join("\n")
-                                : "Aucun participant"
-                    }
+        const resultContainer = new ContainerBuilder()
+            .setAccentColor(0x2ECC71)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## ✅ Giveaway terminé")
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `🎁 **Lot**\n${giveaway.prize}\n\n` +
+                    `🏆 **Gagnants**\n` +
+                    (winners.length > 0
+                        ? winners.map(id => `<@${id}>`).join("\n")
+                        : "Aucun participant")
                 )
-                .setTimestamp();
+            );
 
         await interaction.reply({
-            embeds: [resultEmbed]
+            components: [resultContainer],
+            flags: MessageFlags.IsComponentsV2
         });
 
         if (winners.length > 0) {
