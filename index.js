@@ -21,7 +21,10 @@ const {
     EmbedBuilder,
     REST,
     Routes,
-    AuditLogEvent
+    AuditLogEvent,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 const autoQuiz = require("./systems/autoQuiz");
 const config = require("./config.json");
@@ -146,7 +149,10 @@ client.on("messageCreate", async (message) => {
 // ===============================
 
 const Confession = require("./models/Confession"); // adapte le chemin si besoin
-const { EmbedBuilder } = require("discord.js");
+// ✅ CORRIGÉ : les confessions sont en Components V2 depuis la migration,
+// donc plus d'embeds à éditer. On reconstruit le container à jour via
+// buildConfessionContainer, exporté par events/confession.js.
+const { buildConfessionContainer } = require("./events/confession");
 
 if (message.channel.isThread()) {
 
@@ -164,13 +170,11 @@ if (message.channel.isThread()) {
             const confessionChannel = await message.guild.channels.fetch(confession.channelId);
             const confessionMessage = await confessionChannel.messages.fetch(confession.messageId);
 
-            const embed = EmbedBuilder.from(confessionMessage.embeds[0]);
-
-            // Met à jour uniquement le champ "Réponses"
-            embed.data.fields[3].value = confession.replyCount.toString();
+            const container = buildConfessionContainer(confession, message.guild);
 
             await confessionMessage.edit({
-                embeds: [embed]
+                components: [container],
+                flags: MessageFlags.IsComponentsV2
             });
 
         } catch (err) {
@@ -409,9 +413,6 @@ setInterval(async () => {
 }, 10000);
 
 // ─── Giveaway automatique ─────────────────────────────────────────────────────
-// ⚠️ REMPLACE le bloc setInterval existant pour "Giveaway automatique" dans index.js
-// par celui-ci. Nécessite d'ajouter ContainerBuilder, TextDisplayBuilder, MessageFlags
-// à ton import discord.js en haut du fichier (voir note en bas).
 
 const Giveaway = require("./models/Giveaway");
 
