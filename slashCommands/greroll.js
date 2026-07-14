@@ -1,6 +1,8 @@
 const {
     SlashCommandBuilder,
-    EmbedBuilder
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const Giveaway = require("../models/Giveaway");
@@ -75,27 +77,21 @@ module.exports = {
 
         await giveaway.save();
 
-        const embed =
-            new EmbedBuilder()
-                .setColor("Green")
-                .setTitle("🎉 Giveaway reroll")
-                .addFields(
-                    {
-                        name: "🎁 Lot",
-                        value: giveaway.prize
-                    },
-                    {
-                        name: "🏆 Nouveaux gagnants",
-                        value:
-                            winners
-                                .map(id => `<@${id}>`)
-                                .join("\n")
-                    }
+        const container = new ContainerBuilder()
+            .setAccentColor(0x2ECC71)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 🎉 Giveaway reroll")
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `🎁 **Lot**\n${giveaway.prize}\n\n` +
+                    `🏆 **Nouveaux gagnants**\n${winners.map(id => `<@${id}>`).join("\n")}`
                 )
-                .setTimestamp();
+            );
 
         await interaction.reply({
-            embeds: [embed]
+            components: [container],
+            flags: MessageFlags.IsComponentsV2
         });
 
         await interaction.channel.send({
