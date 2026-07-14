@@ -1,6 +1,8 @@
 const {
-SlashCommandBuilder,
-EmbedBuilder
+    SlashCommandBuilder,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const WARN1_ROLE = "1518890473727463485";
@@ -11,42 +13,42 @@ const BAN_ROLE = "1518890629310971944";
 const JUDGE_ROLE = "1507082580414173234";
 
 const STAFF_ROLES = [
-"1506674274826584284",
-"1506678694352261301",
-"1506678765982318743",
-"1506696551706267688",
-"1507082580414173234",
-"1506696757642530982",
-"1509601528242110525",
-"1506709088451690708"
+    "1506674274826584284",
+    "1506678694352261301",
+    "1506678765982318743",
+    "1506696551706267688",
+    "1507082580414173234",
+    "1506696757642530982",
+    "1509601528242110525",
+    "1506709088451690708"
 ];
 
 module.exports = {
-data: new SlashCommandBuilder()
-.setName("warn")
-.setDescription("Warn un membre")
-.addUserOption(option =>
-option
-.setName("membre")
-.setDescription("Membre à warn")
-.setRequired(true)
-)
-.addStringOption(option =>
-option
-.setName("motif")
-.setDescription("Motif du warn")
-.setRequired(true)
-.addChoices(
-{ name: "Spam", value: "spam" },
-{ name: "Insultes", value: "insultes" },
-{ name: "Messages offensants", value: "offensants" },
-{ name: "Leak", value: "leak" },
-{ name: "Dox", value: "dox" },
-{ name: "Swatt", value: "swatt" },
-{ name: "Menaces", value: "menaces" },
-{ name: "NSFW", value: "nsfw" }
-)
-),
+    data: new SlashCommandBuilder()
+        .setName("warn")
+        .setDescription("Warn un membre")
+        .addUserOption(option =>
+            option
+                .setName("membre")
+                .setDescription("Membre à warn")
+                .setRequired(true)
+        )
+        .addStringOption(option =>
+            option
+                .setName("motif")
+                .setDescription("Motif du warn")
+                .setRequired(true)
+                .addChoices(
+                    { name: "Spam", value: "spam" },
+                    { name: "Insultes", value: "insultes" },
+                    { name: "Messages offensants", value: "offensants" },
+                    { name: "Leak", value: "leak" },
+                    { name: "Dox", value: "dox" },
+                    { name: "Swatt", value: "swatt" },
+                    { name: "Menaces", value: "menaces" },
+                    { name: "NSFW", value: "nsfw" }
+                )
+        ),
   async execute(interaction) {
 
     const member =
@@ -81,20 +83,24 @@ option
         await member.roles.remove(WARN3_ROLE);
         await member.roles.add(BAN_ROLE);
 
-        const embed =
-            new EmbedBuilder()
-                .setColor("DarkRed")
-                .setTitle("🚨 4ème Warn")
-                .setDescription(`${member} a atteint 4 warns.`)
-                .addFields({
-                    name: "Motif",
-                    value: motif
-                })
-                .setTimestamp();
+        const mentionLine = new TextDisplayBuilder().setContent(
+            `<@&${JUDGE_ROLE}> ${member} doit être banni.`
+        );
+
+        const container = new ContainerBuilder()
+            .setAccentColor(0x8B0000)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## 🚨 4ème Warn")
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `${member} a atteint 4 warns.\n\n**Motif**\n${motif}`
+                )
+            );
 
         return interaction.reply({
-            content: `<@&${JUDGE_ROLE}> ${member} doit être banni.`,
-            embeds: [embed]
+            components: [mentionLine, container],
+            flags: MessageFlags.IsComponentsV2
         });
 
     } else if (member.roles.cache.has(WARN2_ROLE)) {
@@ -118,25 +124,22 @@ option
         level = 1;
     }
 
-    const embed =
-        new EmbedBuilder()
-            .setColor("Orange")
-            .setTitle(`⚠️ Warn ${level}`)
-            .setDescription(`${member} a reçu un avertissement.`)
-            .addFields(
-                {
-                    name: "Motif",
-                    value: motif
-                },
-                {
-                    name: "Modérateur",
-                    value: `${interaction.user}`
-                }
+    const container = new ContainerBuilder()
+        .setAccentColor(0xFFA500)
+        .addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(`## ⚠️ Warn ${level}`)
+        )
+        .addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(
+                `${member} a reçu un avertissement.\n\n` +
+                `**Motif**\n${motif}\n\n` +
+                `**Modérateur**\n${interaction.user}`
             )
-            .setTimestamp();
+        );
 
     await interaction.reply({
-        embeds: [embed]
+        components: [container],
+        flags: MessageFlags.IsComponentsV2
     });
 }
   };
