@@ -5,6 +5,8 @@ const {
     MessageFlags
 } = require("discord.js");
 
+const Warn = require("../models/Warn");
+
 const WARN1_ROLE = "1518890473727463485";
 const WARN2_ROLE = "1518890512172453898";
 const WARN3_ROLE = "1518890554652496013";
@@ -83,6 +85,14 @@ module.exports = {
         await member.roles.remove(WARN3_ROLE);
         await member.roles.add(BAN_ROLE);
 
+        await Warn.create({
+            guildId: interaction.guild.id,
+            userId: member.id,
+            level: 4,
+            motif,
+            moderatorId: interaction.user.id
+        });
+
         const mentionLine = new TextDisplayBuilder().setContent(
             `<@&${JUDGE_ROLE}> ${member} doit être banni.`
         );
@@ -123,6 +133,14 @@ module.exports = {
 
         level = 1;
     }
+
+    await Warn.create({
+        guildId: interaction.guild.id,
+        userId: member.id,
+        level,
+        motif,
+        moderatorId: interaction.user.id
+    });
 
     const container = new ContainerBuilder()
         .setAccentColor(0xFFA500)
