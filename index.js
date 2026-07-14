@@ -409,6 +409,9 @@ setInterval(async () => {
 }, 10000);
 
 // ─── Giveaway automatique ─────────────────────────────────────────────────────
+// ⚠️ REMPLACE le bloc setInterval existant pour "Giveaway automatique" dans index.js
+// par celui-ci. Nécessite d'ajouter ContainerBuilder, TextDisplayBuilder, MessageFlags
+// à ton import discord.js en haut du fichier (voir note en bas).
 
 const Giveaway = require("./models/Giveaway");
 
@@ -430,9 +433,30 @@ setInterval(async () => {
         try {
             const channel = await client.channels.fetch(giveaway.channelId);
             const msg = await channel.messages.fetch(giveaway.messageId);
-            const embed = EmbedBuilder.from(msg.embeds[0]).setColor("Red").setTitle("🎉 GIVEAWAY TERMINÉ");
 
-            await msg.edit({ embeds: [embed], components: [] });
+            const emoji = giveaway.type === "casino"
+                ? "<:casino:1507449727266979922>"
+                : "<:nitro:1508097922489647234>";
+
+            const endedContainer = new ContainerBuilder()
+                .setAccentColor(0xED4245)
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent("# 🎉 GIVEAWAY TERMINÉ")
+                )
+                .addTextDisplayComponents(
+                    new TextDisplayBuilder().setContent(
+                        `**Lot :** ${giveaway.prize}\n` +
+                        `${emoji} **${giveaway.participants.length}** participant(s)\n\n` +
+                        (winners.length > 0
+                            ? `🏆 **Gagnant(s) :** ${winners.map(id => `<@${id}>`).join(", ")}`
+                            : "😔 Aucun gagnant (aucun participant).")
+                    )
+                );
+
+            await msg.edit({
+                components: [endedContainer],
+                flags: MessageFlags.IsComponentsV2
+            });
 
             if (winners.length > 0) {
                 await channel.send({
@@ -444,6 +468,7 @@ setInterval(async () => {
         }
     }
 }, 10000);
+
 
 // ─── Blacklist globale (guildBanRemove) ──────────────────────────────────────
 
