@@ -1,4 +1,11 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
+const {
+    ButtonBuilder,
+    ButtonStyle,
+    ActionRowBuilder,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
+} = require("discord.js");
 const Giveaway = require("../../models/Giveaway");
 
 module.exports = async function handleGiveawayInteraction(interaction) {
@@ -25,33 +32,37 @@ module.exports = async function handleGiveawayInteraction(interaction) {
 
     await giveaway.save();
 
-    const msg = await interaction.channel.messages.fetch(giveaway.messageId);
-
-    const embed = EmbedBuilder.from(msg.embeds[0]);
-
     const emoji = giveaway.type === "casino"
         ? "<:casino:1507449727266979922>"
         : "<:nitro:1508097922489647234>";
 
-    embed.setDescription(
-`# Giveaway: ${giveaway.prize}
+    const container = new ContainerBuilder()
+        .setAccentColor(0x0000FF)
+        .addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(
+                `# Giveaway: ${giveaway.prize}\n\n` +
+                `Cliquez sur le bouton ${emoji} pour participer\n` +
+                `*Nombre de gagnants:* ${giveaway.winnersCount}\n\n` +
+                `## Fin du giveaway\n` +
+                `<t:${Math.floor(giveaway.endAt / 1000)}:R>`
+            )
+        )
+        .addActionRowComponents(
+            new ActionRowBuilder().addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`gw_${giveaway._id}`)
+                    .setStyle(ButtonStyle.Secondary)
+                    .setEmoji(giveaway.type === "casino" ? "1507449727266979922" : "1508097922489647234")
+                    .setLabel(String(giveaway.participants.length))
+            )
+        );
 
-Cliquez sur le bouton ${emoji} pour participer
-*Nombre de gagnants:* ${giveaway.winnersCount}
+    const msg = await interaction.channel.messages.fetch(giveaway.messageId);
 
-## Fin du giveaway
-<t:${Math.floor(giveaway.endAt / 1000)}:R>`
-    );
-
-    const row = new ActionRowBuilder().addComponents(
-        new ButtonBuilder()
-            .setCustomId(`gw_${giveaway._id}`)
-            .setStyle(ButtonStyle.Secondary)
-            .setEmoji(giveaway.type === "casino" ? "1507449727266979922" : "1508097922489647234")
-            .setLabel(String(giveaway.participants.length))
-    );
-
-    await msg.edit({ embeds: [embed], components: [row] });
+    await msg.edit({
+        components: [container],
+        flags: MessageFlags.IsComponentsV2
+    });
 
     return interaction.reply({
         content: giveaway.participants.includes(interaction.user.id)
