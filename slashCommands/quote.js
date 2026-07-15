@@ -81,11 +81,11 @@ module.exports = {
                 username:
                     author.username,
 
-                avatar:
-                    author.displayAvatarURL({
-                        extension: "png",
-                        size: 1024
-                    }),
+                avatar: author.displayAvatarURL({
+    extension: "png",
+    size: 1024
+}),
+
 
                 theme:
                     interaction.options.getString("theme")
