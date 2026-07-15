@@ -144,35 +144,44 @@ module.exports = {
         const textX = AVATAR_WIDTH + 40;
         const textMaxWidth = WIDTH - textX - 40;
 
-        let fontSize = 40;
+        let fontSize = 42;
         let lines = [];
 
         do {
-            ctx.font = `bold ${fontSize}px sans-serif`;
-            lines = wrapText(ctx, `“${text}”`, textMaxWidth);
+            ctx.font = `${fontSize}px sans-serif`;
+            lines = wrapText(ctx, text, textMaxWidth);
             fontSize -= 2;
-        } while (lines.length * (fontSize + 12) > HEIGHT - 140 && fontSize > 16);
-
-        ctx.fillStyle = theme.text;
-        ctx.textBaseline = "middle";
+        } while (lines.length * (fontSize + 12) > HEIGHT - 160 && fontSize > 16);
 
         const lineHeight = fontSize + 14;
-        const totalTextHeight = lines.length * lineHeight;
-        let startY = (HEIGHT - totalTextHeight) / 2 - 20;
+        const quoteHeight = lines.length * lineHeight;
+        const nameGap = 30;
+        const nameHeight = 26;
+        const handleGap = 6;
+        const handleHeight = 20;
 
+        const totalContentHeight = quoteHeight + nameGap + nameHeight + handleGap + handleHeight;
+        let cursorY = (HEIGHT - totalContentHeight) / 2;
+
+        // Citation
+        ctx.fillStyle = theme.text;
+        ctx.textBaseline = "top";
         for (const line of lines) {
-            ctx.fillText(line, textX, startY + lineHeight / 2);
-            startY += lineHeight;
+            ctx.fillText(line, textX, cursorY);
+            cursorY += lineHeight;
         }
 
-        // ─── Nom de l'auteur + pseudo ─────────────────────────────────────────
-        ctx.font = "italic 22px sans-serif";
+        // Nom d'affichage (pseudo/surnom du serveur)
+        cursorY += nameGap;
+        ctx.font = "20px sans-serif";
         ctx.fillStyle = theme.text;
-        ctx.fillText(`- ${displayName}`, textX, startY + 30);
+        ctx.fillText(displayName, textX, cursorY);
+        cursorY += nameHeight + handleGap;
 
+        // Nom d'utilisateur Discord (@handle)
         ctx.font = "16px sans-serif";
         ctx.fillStyle = theme.sub;
-        ctx.fillText(`@${author.username}`, textX, startY + 58);
+        ctx.fillText(`@${author.username}`, textX, cursorY);
 
         // ─── Filigrane discret en bas à droite ────────────────────────────────
         ctx.font = "13px sans-serif";
