@@ -156,7 +156,157 @@ async drawBackground(ctx, theme) {
 
 }
 
-    async drawAvatar(ctx, avatar) {}
+async drawAvatar(ctx, avatar) {
+
+    if (!avatar) {
+
+        ctx.fillStyle = "#1A1A1A";
+
+        ctx.fillRect(
+            0,
+            0,
+            this.avatarWidth,
+            this.height
+        );
+
+        return;
+
+    }
+
+    try {
+
+        const image = await loadImage(avatar);
+
+        // Effet "cover" comme CSS background-size: cover
+        const scale = Math.max(
+            this.avatarWidth / image.width,
+            this.height / image.height
+        );
+
+        const width = image.width * scale;
+        const height = image.height * scale;
+
+        const x = (this.avatarWidth - width) / 2;
+        const y = (this.height - height) / 2;
+
+        // Coins arrondis
+        const radius = 22;
+
+        ctx.save();
+
+        ctx.beginPath();
+
+        ctx.moveTo(radius, 0);
+        ctx.lineTo(this.avatarWidth - radius, 0);
+        ctx.quadraticCurveTo(
+            this.avatarWidth,
+            0,
+            this.avatarWidth,
+            radius
+        );
+
+        ctx.lineTo(
+            this.avatarWidth,
+            this.height - radius
+        );
+
+        ctx.quadraticCurveTo(
+            this.avatarWidth,
+            this.height,
+            this.avatarWidth - radius,
+            this.height
+        );
+
+        ctx.lineTo(radius, this.height);
+
+        ctx.quadraticCurveTo(
+            0,
+            this.height,
+            0,
+            this.height - radius
+        );
+
+        ctx.lineTo(0, radius);
+
+        ctx.quadraticCurveTo(
+            0,
+            0,
+            radius,
+            0
+        );
+
+        ctx.closePath();
+
+        ctx.clip();
+
+        // Image
+        ctx.drawImage(
+            image,
+            x,
+            y,
+            width,
+            height
+        );
+
+        ctx.restore();
+
+        // Dégradé noir vers la droite
+        const fade = ctx.createLinearGradient(
+            this.avatarWidth - 120,
+            0,
+            this.avatarWidth + 40,
+            0
+        );
+
+        fade.addColorStop(
+            0,
+            "rgba(0,0,0,0)"
+        );
+
+        fade.addColorStop(
+            1,
+            "rgba(0,0,0,1)"
+        );
+
+        ctx.fillStyle = fade;
+
+        ctx.fillRect(
+            this.avatarWidth - 120,
+            0,
+            160,
+            this.height
+        );
+
+        // Ombre douce
+        ctx.fillStyle = "rgba(0,0,0,0.15)";
+
+        ctx.fillRect(
+            0,
+            0,
+            this.avatarWidth,
+            this.height
+        );
+
+    } catch (err) {
+
+        console.error(
+            "Erreur avatar quote :",
+            err
+        );
+
+        ctx.fillStyle = "#1A1A1A";
+
+        ctx.fillRect(
+            0,
+            0,
+            this.avatarWidth,
+            this.height
+        );
+
+    }
+
+}
+
 
     async drawQuote(ctx, text, theme) {}
 
