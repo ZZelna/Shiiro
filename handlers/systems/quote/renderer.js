@@ -317,7 +317,7 @@ async drawQuote(ctx, text, theme) {
 
     do {
 
-        ctx.font = `600 ${fontSize}px sans-serif`;
+ctx.font = `${fontSize}px sans-serif`;
 
         lines = wrapText(
             ctx,
@@ -335,7 +335,7 @@ async drawQuote(ctx, text, theme) {
 
     );
 
-    ctx.font = `600 ${fontSize}px sans-serif`;
+ctx.font = `${fontSize}px sans-serif`;
 
     ctx.fillStyle = theme.text;
 
@@ -384,7 +384,7 @@ async drawQuote(ctx, text, theme) {
     ctx.textAlign = "left";
     ctx.textBaseline = "top";
 
-    ctx.font = "bold 28px sans-serif";
+ctx.font = "28px sans-serif";
     ctx.fillStyle = theme.text;
 
     ctx.fillText(
