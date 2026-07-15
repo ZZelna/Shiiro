@@ -308,16 +308,119 @@ async drawAvatar(ctx, avatar) {
 }
 
 
-    async drawQuote(ctx, text, theme) {}
+async drawQuote(ctx, text, theme) {
 
-    async drawAuthor(
-        ctx,
-        author,
-        username,
-        theme
-    ) {}
+    if (!text) return;
 
-    async drawWatermark(ctx) {}
+    let fontSize = 54;
+    let lines = [];
+
+    do {
+
+        ctx.font = `600 ${fontSize}px sans-serif`;
+
+        lines = wrapText(
+            ctx,
+            text,
+            this.textWidth
+        );
+
+        fontSize--;
+
+    } while (
+
+        lines.length * (fontSize + 18) >
+        this.height - 220 &&
+        fontSize > 24
+
+    );
+
+    ctx.font = `600 ${fontSize}px sans-serif`;
+
+    ctx.fillStyle = theme.text;
+
+    ctx.textBaseline = "middle";
+
+    ctx.textAlign = "left";
+
+    const lineHeight = fontSize + 18;
+
+    const totalHeight =
+        lines.length * lineHeight;
+
+    let y =
+        (this.height - totalHeight) / 2;
+
+    // Ombre
+    ctx.shadowColor = "rgba(0,0,0,.45)";
+    ctx.shadowBlur = 14;
+    ctx.shadowOffsetY = 2;
+
+    for (const line of lines) {
+
+        ctx.fillText(
+            line,
+            this.textX,
+            y
+        );
+
+        y += lineHeight;
+
+    }
+
+    // On retire l'ombre pour le reste
+    ctx.shadowBlur = 0;
+    ctx.shadowOffsetY = 0;
+
+}
+
+
+    async drawAuthor(ctx, author, username, theme) {
+
+    const x = this.textX;
+
+    const y = this.height - 110;
+
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+
+    ctx.font = "bold 28px sans-serif";
+    ctx.fillStyle = theme.text;
+
+    ctx.fillText(
+        author || "Utilisateur",
+        x,
+        y
+    );
+
+    ctx.font = "20px sans-serif";
+    ctx.fillStyle = theme.sub;
+
+    ctx.fillText(
+        `@${username || "discord"}`,
+        x,
+        y + 38
+    );
+
+}
+
+async drawWatermark(ctx) {
+
+    ctx.font = "16px sans-serif";
+
+    ctx.fillStyle = "rgba(255,255,255,.30)";
+
+    ctx.textAlign = "right";
+
+    ctx.fillText(
+
+        "Shiiro Quote",
+
+        this.width - 20,
+
+        this.height - 20
+
+    );
 
 }
 
