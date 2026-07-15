@@ -423,5 +423,6 @@ async drawWatermark(ctx) {
     );
 
 }
+}
 
 module.exports = QuoteRenderer;
