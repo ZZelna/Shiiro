@@ -1,6 +1,10 @@
 const {
     SlashCommandBuilder,
-    EmbedBuilder
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MessageFlags
 } = require("discord.js");
 
 const GlobalBlacklist =
@@ -48,7 +52,21 @@ module.exports = {
 
         }
 
-        let description = "";
+        await interaction.deferReply({ ephemeral: true });
+
+        const container = new ContainerBuilder()
+            .setAccentColor(0xED4245)
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent("## ⛔ Blacklist Globale")
+            )
+            .addSeparatorComponents(
+                new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+            );
+
+        // ─── Budget de caractères pour éviter de dépasser la limite V2 (~4000) ─
+        const CHAR_BUDGET = 3600;
+        let usedChars = 0;
+        let shownCount = 0;
 
         for (const entry of users) {
 
@@ -62,7 +80,7 @@ module.exports = {
             .fetch(entry.moderatorId)
             .catch(() => null);
 
-            description +=
+            const block =
             "```diff\n" +
             `- Blacklist Globale\n` +
             `Utilisateur: ${
@@ -77,27 +95,34 @@ module.exports = {
                     : "Inconnu"
             } (ID: ${entry.moderatorId})\n` +
             `Date: ${entry.createdAt.toLocaleDateString("fr-FR")}\n` +
-            "```\n";
+            "```";
+
+            if (usedChars + block.length > CHAR_BUDGET) break;
+
+            container.addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(block)
+            );
+
+            usedChars += block.length;
+            shownCount++;
         }
 
-        const embed =
-        new EmbedBuilder()
-            .setColor("Red")
-            .setTitle(
-                "⛔ Blacklist Globale"
-            )
-            .setDescription(
-                description
-            )
-            .setFooter({
-                text:
-                `${users.length} utilisateur(s) blacklisté(s)`
-            })
-            .setTimestamp();
+        container.addSeparatorComponents(
+            new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true)
+        );
 
-        return interaction.reply({
-            embeds: [embed],
-            ephemeral: true
+        const remaining = users.length - shownCount;
+
+        container.addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(
+                `-# ${users.length} utilisateur(s) blacklisté(s) au total` +
+                (remaining > 0 ? ` • ${remaining} non affiché(s) (limite de taille atteinte)` : "")
+            )
+        );
+
+        return interaction.editReply({
+            components: [container],
+            flags: MessageFlags.IsComponentsV2
         });
 
     }
