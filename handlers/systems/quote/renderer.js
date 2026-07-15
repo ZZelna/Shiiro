@@ -1,4 +1,8 @@
-const { createCanvas, loadImage } = require("@napi-rs/canvas");
+const {
+    createCanvas,
+    loadImage
+} = require("@napi-rs/canvas");
+
 const Themes = require("./themes");
 const wrapText = require("./wrapText");
 
@@ -9,34 +13,73 @@ class QuoteRenderer {
         this.width = options.width || 1200;
         this.height = options.height || 630;
 
+        // Partie réservée à l'image
         this.avatarWidth = 420;
-        this.padding = 50;
+
+        // Marges
+        this.padding = 55;
+
+        // Zone de texte
+        this.textX = this.avatarWidth + this.padding;
+        this.textWidth = this.width - this.textX - this.padding;
 
     }
 
     async render(data) {
 
-        const canvas = createCanvas(this.width, this.height);
+        const canvas = createCanvas(
+            this.width,
+            this.height
+        );
+
         const ctx = canvas.getContext("2d");
 
-        await this.drawBackground(ctx, data);
+        // Thème
+        const theme =
+            Themes[data.theme] ||
+            Themes.shiiro;
 
-        await this.drawAvatar(ctx, data);
+        // Fond
+        await this.drawBackground(
+            ctx,
+            theme
+        );
 
-        await this.drawQuote(ctx, data);
+        // Avatar
+        await this.drawAvatar(
+            ctx,
+            data.avatar
+        );
 
-        await this.drawAuthor(ctx, data);
+        // Citation
+        await this.drawQuote(
+            ctx,
+            data.text,
+            theme
+        );
 
-        await this.drawWatermark(ctx);
+        // Auteur
+        await this.drawAuthor(
+            ctx,
+            data.author,
+            data.username,
+            theme
+        );
+
+        // Watermark
+        await this.drawWatermark(
+            ctx
+        );
 
         return canvas.toBuffer("image/png");
 
     }
 
-async drawBackground(ctx, data) {
+    /*────────────────────────────────────*/
 
-    const theme = Themes[data.theme] || Themes.noir;
+async drawBackground(ctx, theme) {
 
+    // Dégradé principal
     const gradient = ctx.createLinearGradient(
         this.avatarWidth,
         0,
@@ -48,189 +91,83 @@ async drawBackground(ctx, data) {
     gradient.addColorStop(1, theme.colors[1]);
 
     ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, this.width, this.height);
-
-}
-
-async drawAvatar(ctx, data) {
-
-    if (!data.avatar) return;
-
-    try {
-
-        const image = await loadImage(data.avatar);
-
-        const scale = Math.max(
-            this.avatarWidth / image.width,
-            this.height / image.height
-        );
-
-        const width = image.width * scale;
-        const height = image.height * scale;
-
-        const x = (this.avatarWidth - width) / 2;
-        const y = (this.height - height) / 2;
-
-        ctx.save();
-
-        ctx.beginPath();
-        ctx.rect(0, 0, this.avatarWidth, this.height);
-        ctx.clip();
-
-        ctx.drawImage(image, x, y, width, height);
-
-        ctx.restore();
-
-        // Dégradé entre l'image et le fond
-        const fade = ctx.createLinearGradient(
-            this.avatarWidth - 120,
-            0,
-            this.avatarWidth + 20,
-            0
-        );
-
-        fade.addColorStop(0, "rgba(0,0,0,0)");
-        fade.addColorStop(1, "rgba(0,0,0,1)");
-
-        ctx.fillStyle = fade;
-        ctx.fillRect(
-            this.avatarWidth - 120,
-            0,
-            140,
-            this.height
-        );
-
-    } catch (err) {
-
-        console.error(err);
-
-        ctx.fillStyle = "#222";
-        ctx.fillRect(
-            0,
-            0,
-            this.avatarWidth,
-            this.height
-        );
-
-    }
-
-}
-
-    async drawQuote(ctx, data) {
-
-    const theme =
-        Themes[data.theme] || Themes.noir;
-
-    const text = data.text || "";
-
-    const x = this.avatarWidth + 55;
-
-    const maxWidth =
-        this.width - x - 60;
-
-    let size = 48;
-
-    let lines;
-
-    do {
-
-        ctx.font = `${size}px sans-serif`;
-
-        lines = wrapText(
-            ctx,
-            text,
-            maxWidth
-        );
-
-        size--;
-
-    } while (
-
-        lines.length * (size + 12)
-            > this.height - 180
-
-        && size > 22
-
+    ctx.fillRect(
+        0,
+        0,
+        this.width,
+        this.height
     );
 
-    // IMPORTANT
+    // Dégradé sombre à gauche
+    const shadow = ctx.createLinearGradient(
+        this.avatarWidth - 140,
+        0,
+        this.avatarWidth + 20,
+        0
+    );
 
-    ctx.font = `${size}px sans-serif`;
+    shadow.addColorStop(
+        0,
+        "rgba(0,0,0,0)"
+    );
 
-    ctx.fillStyle = theme.text;
+    shadow.addColorStop(
+        1,
+        "rgba(0,0,0,0.85)"
+    );
 
-    ctx.textBaseline = "middle";
+    ctx.fillStyle = shadow;
 
-    const lineHeight = size + 12;
+    ctx.fillRect(
+        this.avatarWidth - 140,
+        0,
+        160,
+        this.height
+    );
 
-    const totalHeight =
-        lines.length * lineHeight;
+    // Lumière douce en haut
+    const glow = ctx.createRadialGradient(
+        this.width,
+        0,
+        20,
+        this.width,
+        0,
+        600
+    );
 
-    let y =
-        (this.height - totalHeight) / 2;
+    glow.addColorStop(
+        0,
+        "rgba(255,255,255,0.08)"
+    );
 
-    for (const line of lines) {
+    glow.addColorStop(
+        1,
+        "rgba(255,255,255,0)"
+    );
 
-        ctx.fillText(
+    ctx.fillStyle = glow;
 
-            line,
-
-            x,
-
-            y
-
-        );
-
-        y += lineHeight;
-
-    }
-
-}
-async drawAuthor(ctx, data) {
-
-    const theme = Themes[data.theme] || Themes.noir;
-
-    const x = this.avatarWidth + 55;
-
-    const nameY = this.height - 95;
-
-    // Nom affiché
-    ctx.font = "bold 26px sans-serif";
-    ctx.fillStyle = theme.text;
-    ctx.textBaseline = "top";
-    ctx.fillText(data.author || "Utilisateur", x, nameY);
-
-    // Pseudo Discord
-    ctx.font = "18px sans-serif";
-    ctx.fillStyle = theme.sub;
-    ctx.fillText(
-        `@${data.username || "utilisateur"}`,
-        x,
-        nameY + 35
+    ctx.fillRect(
+        0,
+        0,
+        this.width,
+        this.height
     );
 
 }
-async drawWatermark(ctx) {
 
-    ctx.font = "16px sans-serif";
+    async drawAvatar(ctx, avatar) {}
 
-    ctx.fillStyle = "rgba(255,255,255,0.35)";
+    async drawQuote(ctx, text, theme) {}
 
-    ctx.textAlign = "right";
+    async drawAuthor(
+        ctx,
+        author,
+        username,
+        theme
+    ) {}
 
-    ctx.fillText(
-
-        "Generated with Shiiro",
-
-        this.width - 25,
-
-        this.height - 25
-
-    );
-
-    ctx.textAlign = "left";
-
-}
+    async drawWatermark(ctx) {}
 
 }
 
