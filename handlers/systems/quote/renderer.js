@@ -307,73 +307,20 @@ async drawAvatar(ctx, avatar) {
 
 }
 
+async drawQuote(ctx) {
 
-async drawQuote(ctx, text, theme) {
+    ctx.fillStyle = "#FF0000";
+    ctx.font = "60px Arial";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
 
-    if (!text) return;
-
-    let fontSize = 54;
-    let lines = [];
-
-    do {
-
-ctx.font = `${fontSize}px Arial`;
-
-        lines = wrapText(
-            ctx,
-            text,
-            this.textWidth
-        );
-
-        fontSize--;
-
-    } while (
-
-        lines.length * (fontSize + 18) >
-        this.height - 220 &&
-        fontSize > 24
-
+    ctx.fillText(
+        "TEST",
+        500,
+        200
     );
 
-ctx.font = "28px Arial";
-
-    ctx.fillStyle = theme.text;
-
-    ctx.textBaseline = "middle";
-
-    ctx.textAlign = "left";
-
-    const lineHeight = fontSize + 18;
-
-    const totalHeight =
-        lines.length * lineHeight;
-
-    let y =
-        (this.height - totalHeight) / 2;
-
-    // Ombre
-    ctx.shadowColor = "rgba(0,0,0,.45)";
-    ctx.shadowBlur = 14;
-    ctx.shadowOffsetY = 2;
-
-    for (const line of lines) {
-
-        ctx.fillText(
-            line,
-            this.textX,
-            y
-        );
-
-        y += lineHeight;
-
-    }
-
-    // On retire l'ombre pour le reste
-    ctx.shadowBlur = 0;
-    ctx.shadowOffsetY = 0;
-
 }
-
 
     async drawAuthor(ctx, author, username, theme) {
 
