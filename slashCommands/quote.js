@@ -67,6 +67,11 @@ module.exports = {
                 .fetch(author.id)
                 .catch(() => null);
 
+        console.log({
+    text: interaction.options.getString("texte"),
+    author: member?.displayName,
+    username: author.username
+});
         const buffer =
             await renderer.render({
 
