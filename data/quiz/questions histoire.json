@@ -1,0 +1,6502 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle civilisation a inventé l'écriture cunéiforme ?",
+    "choices": [
+      "Égyptiens",
+      "Sumériens",
+      "Phéniciens",
+      "Perses"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 2,
+    "question": "Quel fleuve a permis l'essor de la civilisation égyptienne ?",
+    "choices": [
+      "Le Tigre",
+      "L'Euphrate",
+      "Le Nil",
+      "Le Jourdain"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 3,
+    "question": "Quel roi babylonien est célèbre pour son code de lois ?",
+    "choices": [
+      "Nabuchodonosor",
+      "Hammurabi",
+      "Sargon",
+      "Assurbanipal"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 4,
+    "question": "Quelle est la capitale de l'Empire perse fondée par Darius Ier ?",
+    "choices": [
+      "Babylone",
+      "Persépolis",
+      "Suse",
+      "Ninive"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 5,
+    "question": "Quel peuple a inventé l'alphabet à l'origine de nombreux alphabets modernes ?",
+    "choices": [
+      "Les Grecs",
+      "Les Phéniciens",
+      "Les Romains",
+      "Les Étrusques"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 6,
+    "question": "Quelle bataille opposa les Grecs aux Perses en 490 av. J.-C. ?",
+    "choices": [
+      "Salamine",
+      "Marathon",
+      "Thermopyles",
+      "Platées"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 7,
+    "question": "Quel philosophe grec fut le maître d'Alexandre le Grand ?",
+    "choices": [
+      "Socrate",
+      "Platon",
+      "Aristote",
+      "Pythagore"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 8,
+    "question": "Quel roi macédonien a créé un immense empire jusqu'en Inde ?",
+    "choices": [
+      "Philippe II",
+      "Alexandre le Grand",
+      "Antigone",
+      "Séleucos"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 9,
+    "question": "Quelle cité-État grecque était réputée pour son régime militaire strict ?",
+    "choices": [
+      "Athènes",
+      "Corinthe",
+      "Sparte",
+      "Thèbes"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 10,
+    "question": "Quel était le nom de l'assemblée démocratique athénienne ?",
+    "choices": [
+      "Le Sénat",
+      "L'Ecclésia",
+      "Le Forum",
+      "Le Conseil des Anciens"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 11,
+    "question": "Quel général carthaginois traversa les Alpes avec des éléphants ?",
+    "choices": [
+      "Hamilcar",
+      "Hannibal",
+      "Hasdrubal",
+      "Magon"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 12,
+    "question": "Quelle guerre opposa Rome et Carthage à trois reprises ?",
+    "choices": [
+      "Guerres médiques",
+      "Guerres puniques",
+      "Guerres samnites",
+      "Guerres civiles"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 13,
+    "question": "Qui a fondé Rome selon la légende ?",
+    "choices": [
+      "Romulus et Rémus",
+      "Énée et Ascagne",
+      "Jules et Auguste",
+      "Tarquin et Numa"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 14,
+    "question": "Quel empereur romain a légalisé le christianisme par l'édit de Milan ?",
+    "choices": [
+      "Constantin",
+      "Néron",
+      "Auguste",
+      "Dioclétien"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 15,
+    "question": "En quelle année Rome fut-elle fondée selon la tradition ?",
+    "choices": [
+      "753 av. J.-C.",
+      "509 av. J.-C.",
+      "27 av. J.-C.",
+      "146 av. J.-C."
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 16,
+    "question": "Quel empereur a divisé l'Empire romain en deux parties ?",
+    "choices": [
+      "Constantin",
+      "Théodose",
+      "Dioclétien",
+      "Trajan"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 17,
+    "question": "Quelle bataille marque l'assassinat de Jules César ?",
+    "choices": [
+      "Aucune, il fut poignardé au Sénat",
+      "Actium",
+      "Pharsale",
+      "Zama"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 18,
+    "question": "Qui succéda à Jules César à la tête de Rome ?",
+    "choices": [
+      "Marc Antoine",
+      "Octave (Auguste)",
+      "Pompée",
+      "Crassus"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 19,
+    "question": "Quelle bataille navale opposa Octave à Marc Antoine et Cléopâtre ?",
+    "choices": [
+      "Salamine",
+      "Actium",
+      "Lépante",
+      "Trafalgar"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 20,
+    "question": "Quel peuple a envahi Rome en 410 apr. J.-C. ?",
+    "choices": [
+      "Les Huns",
+      "Les Vandales",
+      "Les Wisigoths",
+      "Les Ostrogoths"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 21,
+    "question": "En quelle année l'Empire romain d'Occident s'effondre-t-il ?",
+    "choices": [
+      "395",
+      "410",
+      "455",
+      "476"
+    ],
+    "answer": 3,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 22,
+    "question": "Quelle dynastie chinoise a fait construire les premières sections de la Grande Muraille ?",
+    "choices": [
+      "Han",
+      "Qin",
+      "Tang",
+      "Ming"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 23,
+    "question": "Quel empereur chinois unifia la Chine pour la première fois ?",
+    "choices": [
+      "Qin Shi Huang",
+      "Han Wudi",
+      "Kangxi",
+      "Qianlong"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 24,
+    "question": "Quelle route commerciale reliait la Chine à l'Europe dans l'Antiquité ?",
+    "choices": [
+      "La route des épices",
+      "La route de la soie",
+      "La route de l'ambre",
+      "La route de l'encens"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 25,
+    "question": "Quel roi a unifié les royaumes d'Égypte haute et basse ?",
+    "choices": [
+      "Ramsès II",
+      "Narmer",
+      "Toutânkhamon",
+      "Akhenaton"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 26,
+    "question": "Quelle reine égyptienne s'est alliée à Marc Antoine ?",
+    "choices": [
+      "Néfertiti",
+      "Hatchepsout",
+      "Cléopâtre",
+      "Néfertari"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 27,
+    "question": "Quel pharaon est connu pour sa tombe découverte quasi intacte en 1922 ?",
+    "choices": [
+      "Ramsès II",
+      "Toutânkhamon",
+      "Khéops",
+      "Akhenaton"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 28,
+    "question": "Quel empire a dominé le sous-continent indien sous Ashoka ?",
+    "choices": [
+      "Empire moghol",
+      "Empire maurya",
+      "Empire gupta",
+      "Empire kouchan"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 29,
+    "question": "Quel philosophe est le fondateur du confucianisme ?",
+    "choices": [
+      "Lao Tseu",
+      "Confucius",
+      "Mencius",
+      "Sun Tzu"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 30,
+    "question": "Quelle cité mésopotamienne est associée aux jardins suspendus légendaires ?",
+    "choices": [
+      "Ur",
+      "Ninive",
+      "Babylone",
+      "Uruk"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 31,
+    "question": "Quel peuple a créé le premier empire connu, en Mésopotamie ?",
+    "choices": [
+      "Les Sumériens",
+      "Les Akkadiens",
+      "Les Babyloniens",
+      "Les Assyriens"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 32,
+    "question": "Quel général romain a conquis la Gaule ?",
+    "choices": [
+      "Pompée",
+      "Jules César",
+      "Scipion",
+      "Marius"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 33,
+    "question": "Quel peuple gaulois résista à César à Alésia ?",
+    "choices": [
+      "Les Éduens",
+      "Les Arvernes",
+      "Les Helvètes",
+      "Les Bituriges"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 34,
+    "question": "Quel philosophe stoïcien fut aussi empereur romain ?",
+    "choices": [
+      "Sénèque",
+      "Marc Aurèle",
+      "Néron",
+      "Trajan"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 35,
+    "question": "Quelle catastrophe naturelle détruisit Pompéi en 79 apr. J.-C. ?",
+    "choices": [
+      "Un tremblement de terre",
+      "Une éruption du Vésuve",
+      "Un tsunami",
+      "Une inondation"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 36,
+    "question": "Quel roi juif fit reconstruire le Second Temple de Jérusalem ?",
+    "choices": [
+      "David",
+      "Salomon",
+      "Hérode",
+      "Josias"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 37,
+    "question": "Quelle civilisation précolombienne a développé un calendrier très précis en Mésoamérique ?",
+    "choices": [
+      "Les Aztèques",
+      "Les Mayas",
+      "Les Incas",
+      "Les Olmèques"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 38,
+    "question": "Quel peuple a construit la cité de Teotihuacan ?",
+    "choices": [
+      "Les Aztèques",
+      "Une civilisation antérieure non identifiée avec certitude",
+      "Les Mayas",
+      "Les Toltèques"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 39,
+    "question": "Quel était le nom de la capitale de l'Empire aztèque ?",
+    "choices": [
+      "Cuzco",
+      "Tenochtitlan",
+      "Chichen Itza",
+      "Palenque"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 40,
+    "question": "Quelle capitale inca fut le centre de leur empire ?",
+    "choices": [
+      "Cuzco",
+      "Machu Picchu",
+      "Quito",
+      "Lima"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 41,
+    "question": "Quel roi de Macédoine unifia les cités grecques avant Alexandre ?",
+    "choices": [
+      "Philippe II",
+      "Antipater",
+      "Cassandre",
+      "Ptolémée"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 42,
+    "question": "Quel port phénicien a donné naissance à Carthage ?",
+    "choices": [
+      "Tyr",
+      "Sidon",
+      "Byblos",
+      "Ougarit"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 43,
+    "question": "Quel poète grec est l'auteur de l'Iliade et de l'Odyssée ?",
+    "choices": [
+      "Sophocle",
+      "Homère",
+      "Hésiode",
+      "Euripide"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 44,
+    "question": "Quel médecin grec est considéré comme le père de la médecine ?",
+    "choices": [
+      "Hippocrate",
+      "Galien",
+      "Pythagore",
+      "Archimède"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 45,
+    "question": "Quelle bataille a mis fin à l'indépendance de la Grèce face à Rome ?",
+    "choices": [
+      "Cynoscéphales",
+      "Corinthe (146 av. J.-C.)",
+      "Chéronée",
+      "Pydna"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 46,
+    "question": "Quel roi hébreu est réputé pour sa sagesse selon la Bible ?",
+    "choices": [
+      "David",
+      "Salomon",
+      "Saül",
+      "Ézéchias"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 47,
+    "question": "Quelle civilisation a inventé la roue de potier et le sceau-cylindre ?",
+    "choices": [
+      "Les Égyptiens",
+      "Les Sumériens",
+      "Les Hittites",
+      "Les Assyriens"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 48,
+    "question": "Quel empereur romain fit construire un mur défensif en Bretagne (Angleterre) ?",
+    "choices": [
+      "Trajan",
+      "Hadrien",
+      "Marc Aurèle",
+      "Claude"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 49,
+    "question": "Quelle dynastie égyptienne a régné pendant le Nouvel Empire, période d'Akhenaton ?",
+    "choices": [
+      "XVIIIe dynastie",
+      "XIIe dynastie",
+      "XXVIe dynastie",
+      "IVe dynastie"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 50,
+    "question": "Quel roi franc fut sacré empereur d'Occident en 800 ?",
+    "choices": [
+      "Clovis",
+      "Charlemagne",
+      "Charles Martel",
+      "Pépin le Bref"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 51,
+    "question": "Quelle bataille a stoppé l'avancée musulmane en 732 ?",
+    "choices": [
+      "Poitiers",
+      "Roncevaux",
+      "Hastings",
+      "Bouvines"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 52,
+    "question": "Quel roi franc s'est converti au christianisme en 496 ?",
+    "choices": [
+      "Clovis",
+      "Charlemagne",
+      "Childéric",
+      "Thierry"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 53,
+    "question": "Quel traité a partagé l'empire de Charlemagne en 843 ?",
+    "choices": [
+      "Traité de Verdun",
+      "Traité de Westphalie",
+      "Traité de Meersen",
+      "Traité de Troyes"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 54,
+    "question": "Quel peuple scandinave a mené des raids en Europe au haut Moyen Âge ?",
+    "choices": [
+      "Les Francs",
+      "Les Vikings",
+      "Les Saxons",
+      "Les Lombards"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 55,
+    "question": "Quel duc normand a conquis l'Angleterre en 1066 ?",
+    "choices": [
+      "Guillaume le Conquérant",
+      "Robert le Diable",
+      "Rollon",
+      "Richard Cœur de Lion"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 56,
+    "question": "Quelle bataille marque la conquête normande de l'Angleterre ?",
+    "choices": [
+      "Hastings",
+      "Azincourt",
+      "Crécy",
+      "Bouvines"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 57,
+    "question": "Quel pape a lancé un appel à la première croisade en 1095 ?",
+    "choices": [
+      "Urbain II",
+      "Grégoire VII",
+      "Innocent III",
+      "Boniface VIII"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 58,
+    "question": "Quelle ville sainte fut l'objectif principal des croisades ?",
+    "choices": [
+      "La Mecque",
+      "Jérusalem",
+      "Constantinople",
+      "Antioche"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 59,
+    "question": "Quel sultan a repris Jérusalem aux croisés en 1187 ?",
+    "choices": [
+      "Saladin",
+      "Saladin II",
+      "Baybars",
+      "Nur ad-Din"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 60,
+    "question": "Quel roi anglais participa à la troisième croisade, surnommé Cœur de Lion ?",
+    "choices": [
+      "Jean sans Terre",
+      "Richard Ier",
+      "Henri II",
+      "Édouard Ier"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 61,
+    "question": "Quel document limite les pouvoirs du roi d'Angleterre en 1215 ?",
+    "choices": [
+      "La Grande Charte (Magna Carta)",
+      "La Pétition des droits",
+      "Le Bill of Rights",
+      "L'Habeas Corpus"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 62,
+    "question": "Quel conflit opposa la France et l'Angleterre de 1337 à 1453 ?",
+    "choices": [
+      "Guerre de Cent Ans",
+      "Guerre de Succession d'Espagne",
+      "Guerre des Deux-Roses",
+      "Guerre de Trente Ans"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 63,
+    "question": "Quelle héroïne française a libéré Orléans en 1429 ?",
+    "choices": [
+      "Aliénor d'Aquitaine",
+      "Jeanne d'Arc",
+      "Isabeau de Bavière",
+      "Blanche de Castille"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 64,
+    "question": "Quelle bataille de 1415 fut une lourde défaite française pendant la guerre de Cent Ans ?",
+    "choices": [
+      "Crécy",
+      "Azincourt",
+      "Poitiers (1356)",
+      "Formigny"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 65,
+    "question": "Quel empire byzantin tomba face aux Ottomans en 1453 ?",
+    "choices": [
+      "Constantinople",
+      "Alexandrie",
+      "Antioche",
+      "Trébizonde"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 66,
+    "question": "Quel sultan ottoman a conquis Constantinople en 1453 ?",
+    "choices": [
+      "Mehmed II",
+      "Soliman le Magnifique",
+      "Bayezid Ier",
+      "Selim Ier"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 67,
+    "question": "Quelle épidémie a décimé l'Europe au milieu du XIVe siècle ?",
+    "choices": [
+      "Le choléra",
+      "La peste noire",
+      "La variole",
+      "La grippe espagnole"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 68,
+    "question": "Quel empire arabe a régné sur une grande partie du Moyen-Orient et de l'Afrique du Nord ?",
+    "choices": [
+      "Empire abbasside",
+      "Empire omeyyade",
+      "Empire fatimide",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 69,
+    "question": "Quelle ville fut la capitale du califat abbasside ?",
+    "choices": [
+      "Damas",
+      "Bagdad",
+      "Le Caire",
+      "Cordoue"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 70,
+    "question": "Quel royaume musulman prospéra en Espagne médiévale ?",
+    "choices": [
+      "Al-Andalus",
+      "Le Maghreb",
+      "L'émirat de Grenade uniquement",
+      "Le califat de Bagdad"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 71,
+    "question": "En quelle année s'achève la Reconquista espagnole avec la prise de Grenade ?",
+    "choices": [
+      "1469",
+      "1492",
+      "1512",
+      "1400"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 72,
+    "question": "Quel empereur du Saint Empire romain germanique fut excommunié lors de la Querelle des Investitures ?",
+    "choices": [
+      "Henri IV",
+      "Frédéric Barberousse",
+      "Otton Ier",
+      "Charles Quint"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 73,
+    "question": "Quelle dynastie chinoise a vu l'invention de l'imprimerie à caractères mobiles ?",
+    "choices": [
+      "Tang",
+      "Song",
+      "Yuan",
+      "Ming"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 74,
+    "question": "Quel empire mongol fut fondé par Gengis Khan ?",
+    "choices": [
+      "Empire mongol",
+      "Empire timouride",
+      "Khanat d'or",
+      "Empire moghol"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 75,
+    "question": "Quel petit-fils de Gengis Khan fonda la dynastie Yuan en Chine ?",
+    "choices": [
+      "Ögödei",
+      "Kubilai Khan",
+      "Tolui",
+      "Batu Khan"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 76,
+    "question": "Quel explorateur vénitien a voyagé jusqu'en Chine au XIIIe siècle ?",
+    "choices": [
+      "Marco Polo",
+      "Christophe Colomb",
+      "Vasco de Gama",
+      "Jean de Plan Carpin"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 77,
+    "question": "Quelle famille florentine a dominé la Renaissance italienne naissante ?",
+    "choices": [
+      "Les Borgia",
+      "Les Médicis",
+      "Les Sforza",
+      "Les Visconti"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 78,
+    "question": "Quel empire ouest-africain était réputé pour sa richesse en or au Moyen Âge ?",
+    "choices": [
+      "Empire du Ghana",
+      "Empire du Mali",
+      "Empire Songhaï",
+      "Toutes ces réponses"
+    ],
+    "answer": 3,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 79,
+    "question": "Quel souverain malien est célèbre pour son pèlerinage fastueux à La Mecque ?",
+    "choices": [
+      "Soundiata Keïta",
+      "Mansa Moussa",
+      "Askia Mohammed",
+      "Sonni Ali"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 80,
+    "question": "Quelle bataille de 1214 renforça le pouvoir royal français face aux coalitions ?",
+    "choices": [
+      "Bouvines",
+      "Muret",
+      "Taillebourg",
+      "Courtrai"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 81,
+    "question": "Quel roi de France a fondé la Sorbonne ?",
+    "choices": [
+      "Philippe Auguste",
+      "Saint Louis",
+      "Louis VII",
+      "Philippe le Bel"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 82,
+    "question": "Quel roi de France a supprimé l'ordre des Templiers ?",
+    "choices": [
+      "Saint Louis",
+      "Philippe le Bel",
+      "Charles IV",
+      "Jean II"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 83,
+    "question": "Quel événement religieux a divisé l'Église catholique de 1378 à 1417 ?",
+    "choices": [
+      "Le Grand Schisme d'Occident",
+      "La Réforme protestante",
+      "Le concile de Trente",
+      "Le schisme de 1054"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 84,
+    "question": "Quel schisme de 1054 sépara les Églises catholique et orthodoxe ?",
+    "choices": [
+      "Grand Schisme d'Orient",
+      "Réforme protestante",
+      "Schisme d'Occident",
+      "Concile de Nicée"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 85,
+    "question": "Quel royaume africain médiéval bâtit les églises rupestres de Lalibela ?",
+    "choices": [
+      "Le royaume d'Éthiopie (Zagwé)",
+      "Le royaume du Kongo",
+      "Le Grand Zimbabwe",
+      "Le royaume de Koush"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 86,
+    "question": "Quelle cité italienne dominait le commerce méditerranéen, rivale de Gênes ?",
+    "choices": [
+      "Venise",
+      "Milan",
+      "Naples",
+      "Florence"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 87,
+    "question": "Quel ordre religieux et militaire s'est illustré pendant les croisades, dissous en 1312 ?",
+    "choices": [
+      "Les Hospitaliers",
+      "Les Templiers",
+      "L'ordre Teutonique",
+      "Les Chevaliers de Malte"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 88,
+    "question": "Quel roi anglais fut déposé par sa femme et Roger Mortimer en 1327 ?",
+    "choices": [
+      "Édouard II",
+      "Richard II",
+      "Henri VI",
+      "Édouard V"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 89,
+    "question": "Quelle guerre civile anglaise opposa les maisons de Lancastre et d'York ?",
+    "choices": [
+      "Guerre des Deux-Roses",
+      "Guerre civile anglaise",
+      "Guerre des Barons",
+      "Révolution anglaise"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 90,
+    "question": "Quel roi met fin à la guerre des Deux-Roses en fondant la dynastie Tudor ?",
+    "choices": [
+      "Henri VII",
+      "Édouard IV",
+      "Richard III",
+      "Henri VIII"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 91,
+    "question": "Quel voyageur marocain a parcouru l'essentiel du monde musulman au XIVe siècle ?",
+    "choices": [
+      "Ibn Battuta",
+      "Ibn Khaldoun",
+      "Al-Idrissi",
+      "Ibn Sina"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 92,
+    "question": "Quel empire d'Afrique australe est associé aux ruines du Grand Zimbabwe ?",
+    "choices": [
+      "Royaume du Monomotapa",
+      "Empire du Mali",
+      "Royaume du Kongo",
+      "Empire Songhaï"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 93,
+    "question": "Quelle bataille de 1302 vit des milices flamandes vaincre la chevalerie française ?",
+    "choices": [
+      "Bataille des Éperons d'or",
+      "Bataille de Bouvines",
+      "Bataille de Courtrai (identique)",
+      "Bataille de Cassel"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 94,
+    "question": "Quel roi de France est surnommé 'le Bel' ?",
+    "choices": [
+      "Philippe IV",
+      "Louis IX",
+      "Charles V",
+      "Jean II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 95,
+    "question": "Quel souverain fit ériger la cathédrale de Chartres reconstruite après 1194 ?",
+    "choices": [
+      "Financée collectivement, sous Philippe Auguste",
+      "Louis IX",
+      "Philippe III",
+      "Charles V"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 96,
+    "question": "Quel État féodal japonais était dirigé par un shogun au Moyen Âge ?",
+    "choices": [
+      "Le shogunat Kamakura",
+      "L'Empire Yamato",
+      "Le shogunat Tokugawa",
+      "L'ère Meiji"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 97,
+    "question": "Quelle classe guerrière japonaise est associée au code du bushido ?",
+    "choices": [
+      "Les ninjas",
+      "Les samouraïs",
+      "Les ashigaru",
+      "Les ronin uniquement"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 98,
+    "question": "Quel roi wisigoth fut vaincu par les Francs à Vouillé en 507 ?",
+    "choices": [
+      "Alaric II",
+      "Alaric Ier",
+      "Théodoric",
+      "Wamba"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 99,
+    "question": "Quel califat s'installa à Cordoue en Espagne musulmane ?",
+    "choices": [
+      "Califat de Cordoue",
+      "Califat abbasside",
+      "Califat fatimide",
+      "Califat almohade"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 100,
+    "question": "Quel navigateur portugais atteignit l'Inde par la mer en 1498 ?",
+    "choices": [
+      "Vasco de Gama",
+      "Christophe Colomb",
+      "Magellan",
+      "Bartolomeu Dias"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 101,
+    "question": "Quel navigateur portugais franchit le premier le cap de Bonne-Espérance ?",
+    "choices": [
+      "Vasco de Gama",
+      "Bartolomeu Dias",
+      "Henri le Navigateur",
+      "Pedro Cabral"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 102,
+    "question": "Quel conquistador espagnol a renversé l'Empire aztèque ?",
+    "choices": [
+      "Francisco Pizarro",
+      "Hernán Cortés",
+      "Hernando de Soto",
+      "Vasco Núñez de Balboa"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 103,
+    "question": "Quel conquistador espagnol a renversé l'Empire inca ?",
+    "choices": [
+      "Hernán Cortés",
+      "Francisco Pizarro",
+      "Diego de Almagro",
+      "Pedro de Alvarado"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 104,
+    "question": "Quel traité de 1494 a partagé les terres découvertes entre l'Espagne et le Portugal ?",
+    "choices": [
+      "Traité de Tordesillas",
+      "Traité de Zaragoza",
+      "Traité de Madrid",
+      "Traité de Lisbonne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 105,
+    "question": "Quel moine allemand a lancé la Réforme protestante en 1517 ?",
+    "choices": [
+      "Jean Calvin",
+      "Martin Luther",
+      "Ulrich Zwingli",
+      "Philippe Melanchthon"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 106,
+    "question": "Quel réformateur français a fondé le calvinisme, actif à Genève ?",
+    "choices": [
+      "Martin Luther",
+      "Jean Calvin",
+      "Guillaume Farel",
+      "Théodore de Bèze"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 107,
+    "question": "Quel concile catholique a répondu à la Réforme protestante ?",
+    "choices": [
+      "Concile de Trente",
+      "Concile de Nicée",
+      "Concile de Vatican I",
+      "Concile de Constance"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 108,
+    "question": "Quel roi anglais rompit avec Rome pour fonder l'Église anglicane ?",
+    "choices": [
+      "Henri VII",
+      "Henri VIII",
+      "Édouard VI",
+      "Jacques Ier"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 109,
+    "question": "Quel artiste italien a peint la Joconde ?",
+    "choices": [
+      "Michel-Ange",
+      "Raphaël",
+      "Léonard de Vinci",
+      "Botticelli"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 110,
+    "question": "Quel artiste a peint le plafond de la chapelle Sixtine ?",
+    "choices": [
+      "Léonard de Vinci",
+      "Michel-Ange",
+      "Raphaël",
+      "Le Titien"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 111,
+    "question": "Quel astronome a proposé le modèle héliocentrique au XVIe siècle ?",
+    "choices": [
+      "Galilée",
+      "Copernic",
+      "Kepler",
+      "Newton"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 112,
+    "question": "Quel savant italien fut condamné par l'Inquisition pour avoir soutenu l'héliocentrisme ?",
+    "choices": [
+      "Copernic",
+      "Galilée",
+      "Giordano Bruno (exécuté)",
+      "Kepler"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 113,
+    "question": "Quelle famille de banquiers et de mécènes domina Florence à la Renaissance ?",
+    "choices": [
+      "Les Médicis",
+      "Les Borgia",
+      "Les Sforza",
+      "Les Este"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 114,
+    "question": "Quel inventeur allemand a mis au point l'imprimerie à caractères mobiles en Europe ?",
+    "choices": [
+      "Johannes Gutenberg",
+      "Aldus Manutius",
+      "William Caxton",
+      "Nicolas Jenson"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 115,
+    "question": "Quel explorateur a dirigé la première expédition à faire le tour du monde ?",
+    "choices": [
+      "Christophe Colomb",
+      "Fernand de Magellan",
+      "James Cook",
+      "Vasco de Gama"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 116,
+    "question": "En quelle année Christophe Colomb atteint-il les Antilles ?",
+    "choices": [
+      "1488",
+      "1492",
+      "1498",
+      "1500"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 117,
+    "question": "Pour le compte de quel royaume Christophe Colomb navigua-t-il en 1492 ?",
+    "choices": [
+      "Le Portugal",
+      "L'Espagne",
+      "La France",
+      "L'Angleterre"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 118,
+    "question": "Quel explorateur français a exploré le Saint-Laurent au XVIe siècle ?",
+    "choices": [
+      "Samuel de Champlain",
+      "Jacques Cartier",
+      "René de La Salle",
+      "Louis Jolliet"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 119,
+    "question": "Quel fondateur de Québec est surnommé le 'père de la Nouvelle-France' ?",
+    "choices": [
+      "Jacques Cartier",
+      "Samuel de Champlain",
+      "Louis Hébert",
+      "Pierre de Monts"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 120,
+    "question": "Quel massacre de 1572 vit périr de nombreux protestants français ?",
+    "choices": [
+      "Massacre de la Saint-Barthélemy",
+      "Massacre de Wassy",
+      "Sac de Rome",
+      "Nuit des Longs Couteaux"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 121,
+    "question": "Quel roi de France a mis fin aux guerres de religion par l'Édit de Nantes en 1598 ?",
+    "choices": [
+      "Henri III",
+      "Henri IV",
+      "Charles IX",
+      "Louis XIII"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 122,
+    "question": "Quelle guerre européenne dévastatrice dura de 1618 à 1648 ?",
+    "choices": [
+      "Guerre de Trente Ans",
+      "Guerre de Cent Ans",
+      "Guerre de Succession d'Autriche",
+      "Guerre de Sept Ans"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 123,
+    "question": "Quel traité a mis fin à la guerre de Trente Ans en 1648 ?",
+    "choices": [
+      "Traité de Westphalie",
+      "Traité d'Utrecht",
+      "Traité de Nimègue",
+      "Traité des Pyrénées"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 124,
+    "question": "Quel empire ottoman atteignit son apogée sous Soliman le Magnifique ?",
+    "choices": [
+      "XVIe siècle",
+      "XIVe siècle",
+      "XVIIe siècle",
+      "XVIIIe siècle"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 125,
+    "question": "Quel empereur moghol a fait construire le Taj Mahal ?",
+    "choices": [
+      "Akbar",
+      "Shah Jahan",
+      "Aurangzeb",
+      "Babur"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 126,
+    "question": "Quel fondateur de l'Empire moghol descendait de Gengis Khan et Tamerlan ?",
+    "choices": [
+      "Akbar",
+      "Babur",
+      "Humayun",
+      "Jahangir"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 127,
+    "question": "Quel philosophe italien a écrit 'Le Prince', traité sur le pouvoir ?",
+    "choices": [
+      "Machiavel",
+      "Erasme",
+      "Thomas More",
+      "Montaigne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 128,
+    "question": "Quel humaniste néerlandais est l'auteur de l'Éloge de la folie ?",
+    "choices": [
+      "Erasme",
+      "Thomas More",
+      "Machiavel",
+      "Rabelais"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 129,
+    "question": "Quel roi de France a fait construire le château de Versailles tel qu'on le connaît ?",
+    "choices": [
+      "Louis XIII",
+      "Louis XIV",
+      "Louis XV",
+      "François Ier"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 130,
+    "question": "Quel surnom porte Louis XIV ?",
+    "choices": [
+      "Le Roi Soleil",
+      "Le Roi Sage",
+      "Le Bien-Aimé",
+      "Le Grand Monarque uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 131,
+    "question": "Quel cardinal fut le principal ministre de Louis XIII ?",
+    "choices": [
+      "Mazarin",
+      "Richelieu",
+      "Fleury",
+      "De Retz"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 132,
+    "question": "Quel cardinal a gouverné pendant la minorité de Louis XIV ?",
+    "choices": [
+      "Richelieu",
+      "Mazarin",
+      "Dubois",
+      "Rohan"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 133,
+    "question": "Quelle révolte nobiliaire a agité la France durant la régence d'Anne d'Autriche ?",
+    "choices": [
+      "La Fronde",
+      "La Jacquerie",
+      "Les Camisards",
+      "La Ligue"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 134,
+    "question": "Quel roi de France est appelé 'le Bien-Aimé' ?",
+    "choices": [
+      "Louis XIV",
+      "Louis XV",
+      "Louis XVI",
+      "Louis XIII"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 135,
+    "question": "Quel ministre des finances de Louis XIV a développé le mercantilisme ?",
+    "choices": [
+      "Colbert",
+      "Sully",
+      "Necker",
+      "Turgot"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 136,
+    "question": "Quel édit royal de 1685 révoqua la liberté de culte protestante en France ?",
+    "choices": [
+      "Édit de Fontainebleau (révocation de l'édit de Nantes)",
+      "Édit de Nantes",
+      "Édit de Beaulieu",
+      "Édit d'Union"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 137,
+    "question": "Quel roi de France est le premier de la dynastie des Bourbons ?",
+    "choices": [
+      "François Ier",
+      "Henri IV",
+      "Henri III",
+      "Louis XII"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 138,
+    "question": "Quel roi de France a fait bâtir Versailles pour affaiblir la noblesse féodale ?",
+    "choices": [
+      "Louis XIII",
+      "Louis XIV",
+      "Henri IV",
+      "François Ier"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 139,
+    "question": "Quelle guerre opposa la France à une large coalition sous Louis XIV, terminée en 1714 ?",
+    "choices": [
+      "Guerre de Succession d'Espagne",
+      "Guerre de Hollande",
+      "Guerre de Dévolution",
+      "Guerre de la Ligue d'Augsbourg"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 140,
+    "question": "Quel philosophe des Lumières a écrit 'De l'esprit des lois' ?",
+    "choices": [
+      "Voltaire",
+      "Montesquieu",
+      "Rousseau",
+      "Diderot"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 141,
+    "question": "Quel philosophe des Lumières a écrit 'Du contrat social' ?",
+    "choices": [
+      "Voltaire",
+      "Rousseau",
+      "Montesquieu",
+      "d'Alembert"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 142,
+    "question": "Quels philosophes ont dirigé la publication de l'Encyclopédie ?",
+    "choices": [
+      "Voltaire et Rousseau",
+      "Diderot et d'Alembert",
+      "Montesquieu et Voltaire",
+      "Buffon et Condorcet"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 143,
+    "question": "Quelle favorite de Louis XV a soutenu les arts et les philosophes ?",
+    "choices": [
+      "Madame de Pompadour",
+      "Madame du Barry",
+      "Diane de Poitiers",
+      "Madame de Montespan"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 144,
+    "question": "Quel roi de France a envoyé des troupes soutenir l'indépendance américaine ?",
+    "choices": [
+      "Louis XV",
+      "Louis XVI",
+      "Louis XIV",
+      "Louis XVIII"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 145,
+    "question": "En quelle année la prise de la Bastille a-t-elle eu lieu ?",
+    "choices": [
+      "1788",
+      "1789",
+      "1790",
+      "1792"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 146,
+    "question": "Quel texte fondamental fut adopté en août 1789 en France ?",
+    "choices": [
+      "Déclaration des droits de l'homme et du citoyen",
+      "La Constitution de 1791",
+      "Le Code civil",
+      "La Charte de 1814"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 147,
+    "question": "Quel roi de France a été guillotiné en 1793 ?",
+    "choices": [
+      "Louis XV",
+      "Louis XVI",
+      "Louis XVII",
+      "Charles X"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 148,
+    "question": "Quelle reine de France, épouse de Louis XVI, fut également guillotinée ?",
+    "choices": [
+      "Marie Leszczynska",
+      "Marie-Antoinette",
+      "Marie de Médicis",
+      "Anne d'Autriche"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 149,
+    "question": "Quelle période de la Révolution française est marquée par de nombreuses exécutions en 1793-1794 ?",
+    "choices": [
+      "La Terreur",
+      "Le Directoire",
+      "Le Consulat",
+      "La Convention girondine"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 150,
+    "question": "Quel avocat révolutionnaire fut la figure centrale de la Terreur ?",
+    "choices": [
+      "Danton",
+      "Robespierre",
+      "Marat",
+      "Saint-Just"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 151,
+    "question": "Quel régime politique a suivi la chute de Robespierre en 1794 ?",
+    "choices": [
+      "Le Directoire",
+      "Le Consulat",
+      "L'Empire",
+      "La Restauration"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 152,
+    "question": "Quel général a pris le pouvoir lors du coup d'État du 18 Brumaire ?",
+    "choices": [
+      "Napoléon Bonaparte",
+      "Lazare Hoche",
+      "Jean-Baptiste Bernadotte",
+      "Jean Moreau"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 153,
+    "question": "En quelle année Napoléon Bonaparte est-il sacré empereur ?",
+    "choices": [
+      "1799",
+      "1802",
+      "1804",
+      "1808"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 154,
+    "question": "Quelle bataille de 1805 est considérée comme le chef-d'œuvre militaire de Napoléon ?",
+    "choices": [
+      "Austerlitz",
+      "Wagram",
+      "Iéna",
+      "Marengo"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 155,
+    "question": "Quelle campagne militaire de 1812 marqua un tournant désastreux pour Napoléon ?",
+    "choices": [
+      "Campagne de Russie",
+      "Campagne d'Égypte",
+      "Campagne d'Espagne",
+      "Campagne d'Italie"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 156,
+    "question": "Quelle bataille de 1815 marque la défaite finale de Napoléon ?",
+    "choices": [
+      "Waterloo",
+      "Leipzig",
+      "Trafalgar",
+      "Wagram"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 157,
+    "question": "Sur quelle île Napoléon fut-il exilé après sa première abdication ?",
+    "choices": [
+      "Sainte-Hélène",
+      "Elbe",
+      "Corse",
+      "Malte"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 158,
+    "question": "Sur quelle île Napoléon est-il mort en exil ?",
+    "choices": [
+      "Elbe",
+      "Corse",
+      "Sainte-Hélène",
+      "Malte"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 159,
+    "question": "Quel code juridique napoléonien influença de nombreux systèmes juridiques ?",
+    "choices": [
+      "Le Code civil (Code Napoléon)",
+      "Le Code pénal",
+      "Le Code de commerce",
+      "Le Code militaire"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 160,
+    "question": "Quel congrès a redessiné la carte de l'Europe après la chute de Napoléon ?",
+    "choices": [
+      "Congrès de Vienne",
+      "Congrès de Berlin",
+      "Congrès de Paris",
+      "Congrès d'Aix-la-Chapelle"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 161,
+    "question": "Quelle bataille navale de 1805 vit la flotte franco-espagnole vaincue par les Britanniques ?",
+    "choices": [
+      "Trafalgar",
+      "Aboukir",
+      "Copenhague",
+      "Jutland"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 162,
+    "question": "Quel général français mena la campagne d'Égypte en 1798 ?",
+    "choices": [
+      "Napoléon Bonaparte",
+      "Jean-Baptiste Kléber",
+      "Louis Desaix",
+      "Jean Lannes"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 163,
+    "question": "Quelle assemblée a proclamé la Première République française en 1792 ?",
+    "choices": [
+      "La Convention nationale",
+      "L'Assemblée constituante",
+      "L'Assemblée législative",
+      "Le Directoire"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 164,
+    "question": "Quel événement du 14 juillet 1790 célébra l'unité nationale un an après la Révolution ?",
+    "choices": [
+      "La Fête de la Fédération",
+      "La Fête de l'Être suprême",
+      "Le serment du Jeu de paume",
+      "La nuit du 4 août"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 165,
+    "question": "Quelle nuit de 1789 vit l'abolition des privilèges féodaux ?",
+    "choices": [
+      "La nuit du 4 août",
+      "La nuit du 10 août",
+      "La nuit du 14 juillet",
+      "La nuit du 21 septembre"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 166,
+    "question": "Quel roi de France est restauré sur le trône en 1814-1815 puis en 1815 ?",
+    "choices": [
+      "Louis XVIII",
+      "Charles X",
+      "Louis-Philippe",
+      "Louis XVII"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 167,
+    "question": "Quelle révolution de juillet 1830 renversa Charles X ?",
+    "choices": [
+      "Les Trois Glorieuses",
+      "La révolution de février",
+      "La Commune",
+      "Le coup d'État de 1851"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 168,
+    "question": "Quel roi 'des Français' régna de 1830 à 1848 ?",
+    "choices": [
+      "Louis XVIII",
+      "Charles X",
+      "Louis-Philippe",
+      "Napoléon III"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 169,
+    "question": "Quelle révolution de 1848 instaura la Deuxième République en France ?",
+    "choices": [
+      "La révolution de février 1848",
+      "Les Trois Glorieuses",
+      "La Commune de Paris",
+      "La révolution de 1870"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 170,
+    "question": "Quel neveu de Napoléon Ier devint empereur des Français en 1852 ?",
+    "choices": [
+      "Napoléon II",
+      "Napoléon III",
+      "Louis-Napoléon Ier",
+      "Jérôme Bonaparte"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 171,
+    "question": "Quelle défaite de 1870 précipita la chute du Second Empire français ?",
+    "choices": [
+      "Bataille de Sedan",
+      "Bataille de Wissembourg",
+      "Bataille de Gravelotte",
+      "Siège de Metz"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 172,
+    "question": "Quel soulèvement populaire parisien de 1871 fut réprimé dans le sang ?",
+    "choices": [
+      "La Commune de Paris",
+      "Les Trois Glorieuses",
+      "La révolution de 1848",
+      "L'insurrection de juin 1848"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 173,
+    "question": "Quelle guerre a unifié l'Allemagne en 1871 sous la Prusse ?",
+    "choices": [
+      "Guerre franco-prussienne",
+      "Guerre de Sept Ans",
+      "Guerre austro-prussienne",
+      "Guerre des Duchés"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 174,
+    "question": "Quel chancelier prussien a orchestré l'unification allemande ?",
+    "choices": [
+      "Otto von Bismarck",
+      "Guillaume Ier",
+      "Helmuth von Moltke",
+      "Guillaume II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 175,
+    "question": "Quel royaume a mené l'unification de l'Italie au XIXe siècle ?",
+    "choices": [
+      "Royaume de Naples",
+      "Royaume de Sardaigne (Piémont)",
+      "Royaume de Sicile",
+      "États pontificaux"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 176,
+    "question": "Quel général italien est célèbre pour l'expédition des Mille en 1860 ?",
+    "choices": [
+      "Cavour",
+      "Garibaldi",
+      "Mazzini",
+      "Victor-Emmanuel II"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 177,
+    "question": "Quel homme d'État a été le premier roi d'une Italie unifiée ?",
+    "choices": [
+      "Victor-Emmanuel II",
+      "Umberto Ier",
+      "Cavour",
+      "Garibaldi"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 178,
+    "question": "Quelle guerre opposa le Nord et le Sud des États-Unis de 1861 à 1865 ?",
+    "choices": [
+      "Guerre de Sécession",
+      "Guerre d'Indépendance",
+      "Guerre hispano-américaine",
+      "Guerre de 1812"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 179,
+    "question": "Quel président américain a aboli l'esclavage pendant la guerre de Sécession ?",
+    "choices": [
+      "George Washington",
+      "Abraham Lincoln",
+      "Ulysses Grant",
+      "Andrew Jackson"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 180,
+    "question": "Quel document de 1863 proclama la liberté des esclaves dans les États confédérés ?",
+    "choices": [
+      "La Proclamation d'émancipation",
+      "Le 13e amendement",
+      "La Déclaration d'indépendance",
+      "Le compromis du Missouri"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 181,
+    "question": "Quel général confédéré s'est rendu à Appomattox en 1865 ?",
+    "choices": [
+      "Robert E. Lee",
+      "Stonewall Jackson",
+      "Jefferson Davis",
+      "P.G.T. Beauregard"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 182,
+    "question": "Quel pays a aboli l'esclavage dans ses colonies en 1848 ?",
+    "choices": [
+      "La France",
+      "Le Royaume-Uni",
+      "Les Pays-Bas",
+      "L'Espagne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 183,
+    "question": "Quel homme politique français a œuvré pour l'abolition de l'esclavage en 1848 ?",
+    "choices": [
+      "Victor Schœlcher",
+      "Jules Ferry",
+      "Léon Gambetta",
+      "Jean Jaurès"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 184,
+    "question": "Quelle conférence de 1884-1885 organisa le partage colonial de l'Afrique ?",
+    "choices": [
+      "Conférence de Berlin",
+      "Conférence de Vienne",
+      "Conférence de Londres",
+      "Conférence de Bruxelles"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 185,
+    "question": "Quel événement scientifique et industriel majeur eut lieu en Angleterre en 1851 ?",
+    "choices": [
+      "La Grande Exposition (Exposition universelle de Londres)",
+      "L'invention de la machine à vapeur",
+      "L'invention du télégraphe",
+      "L'invention de l'électricité"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 186,
+    "question": "Quel ingénieur écossais a perfectionné la machine à vapeur au XVIIIe siècle ?",
+    "choices": [
+      "James Watt",
+      "George Stephenson",
+      "Isambard Brunel",
+      "Richard Trevithick"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 187,
+    "question": "Quelle invention de George Stephenson révolutionna les transports au XIXe siècle ?",
+    "choices": [
+      "La locomotive à vapeur",
+      "L'automobile",
+      "Le télégraphe",
+      "Le moteur à explosion"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 188,
+    "question": "Quelle dynastie chinoise a été affaiblie par les guerres de l'Opium au XIXe siècle ?",
+    "choices": [
+      "Ming",
+      "Qing",
+      "Yuan",
+      "Song"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 189,
+    "question": "Quel pays a forcé l'ouverture du Japon au commerce en 1853-1854 ?",
+    "choices": [
+      "La France",
+      "Les États-Unis (expédition Perry)",
+      "Le Royaume-Uni",
+      "La Russie"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 190,
+    "question": "Quelle ère marque la modernisation rapide du Japon à partir de 1868 ?",
+    "choices": [
+      "Ère Meiji",
+      "Ère Edo",
+      "Ère Showa",
+      "Ère Taisho"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 191,
+    "question": "Quel tsar russe a émancipé les serfs en 1861 ?",
+    "choices": [
+      "Nicolas Ier",
+      "Alexandre II",
+      "Alexandre III",
+      "Nicolas II"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 192,
+    "question": "Quelle guerre opposa la Russie à une coalition franco-britannique-ottomane de 1853 à 1856 ?",
+    "choices": [
+      "Guerre de Crimée",
+      "Guerre russo-turque",
+      "Guerre du Caucase",
+      "Guerre russo-japonaise"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 193,
+    "question": "Quelle infirmière britannique est célèbre pour son action pendant la guerre de Crimée ?",
+    "choices": [
+      "Florence Nightingale",
+      "Clara Barton",
+      "Edith Cavell",
+      "Marie Curie"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 194,
+    "question": "Quel empire colonial était surnommé 'l'empire sur lequel le soleil ne se couche jamais' ?",
+    "choices": [
+      "Empire français",
+      "Empire britannique",
+      "Empire espagnol",
+      "Empire ottoman"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 195,
+    "question": "Quelle reine britannique a régné pendant la majeure partie du XIXe siècle ?",
+    "choices": [
+      "Victoria",
+      "Elizabeth Ire",
+      "Anne",
+      "Mary II"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 196,
+    "question": "Quel canal a été inauguré en 1869, reliant Méditerranée et mer Rouge ?",
+    "choices": [
+      "Canal de Suez",
+      "Canal de Panama",
+      "Canal de Corinthe",
+      "Canal du Rhône"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 197,
+    "question": "Quel ingénieur français est associé au percement du canal de Suez ?",
+    "choices": [
+      "Gustave Eiffel",
+      "Ferdinand de Lesseps",
+      "Alexandre-Gustave Eiffel",
+      "Sadi Carnot"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 198,
+    "question": "Quel archiduc autrichien fut assassiné à Sarajevo en 1914 ?",
+    "choices": [
+      "François-Ferdinand",
+      "François-Joseph",
+      "Charles Ier",
+      "Otto de Habsbourg"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 199,
+    "question": "Quel groupe nationaliste serbe est associé à l'attentat de Sarajevo ?",
+    "choices": [
+      "La Main noire",
+      "Les Jeunes-Turcs",
+      "L'Action française",
+      "Les Carbonari"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 200,
+    "question": "Quelle bataille de 1916 fut l'une des plus meurtrières de la Première Guerre mondiale, sur la Meuse ?",
+    "choices": [
+      "Verdun",
+      "La Somme",
+      "Ypres",
+      "Marne"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 201,
+    "question": "Quelle bataille de 1914 stoppa l'avancée allemande vers Paris ?",
+    "choices": [
+      "Première bataille de la Marne",
+      "Bataille de Verdun",
+      "Bataille de la Somme",
+      "Bataille des Flandres"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 202,
+    "question": "Quel type de guerre a caractérisé le front occidental après 1914 ?",
+    "choices": [
+      "Guerre de tranchées",
+      "Guerre de mouvement",
+      "Guerre éclair",
+      "Guerre navale"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 203,
+    "question": "Quel pays a rejoint la guerre aux côtés des Alliés en 1917, changeant le rapport de force ?",
+    "choices": [
+      "Le Japon",
+      "Les États-Unis",
+      "La Chine",
+      "Le Brésil"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 204,
+    "question": "Quel traité a mis fin à la Première Guerre mondiale en 1919 ?",
+    "choices": [
+      "Traité de Versailles",
+      "Traité de Sèvres",
+      "Traité de Trianon",
+      "Traité de Saint-Germain"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 205,
+    "question": "Quelle organisation internationale fut créée après la Première Guerre mondiale pour préserver la paix ?",
+    "choices": [
+      "La Société des Nations",
+      "L'ONU",
+      "L'OTAN",
+      "Le Comité international de la Croix-Rouge"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 206,
+    "question": "Quel empire multinational disparut à l'issue de la Première Guerre mondiale ?",
+    "choices": [
+      "Empire austro-hongrois",
+      "Empire britannique",
+      "Empire français",
+      "Empire italien"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 207,
+    "question": "Quelle révolution a renversé le tsar russe en 1917 ?",
+    "choices": [
+      "Révolution de février 1917",
+      "Révolution d'octobre 1917",
+      "Révolution de 1905",
+      "Révolution des Décembristes"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 208,
+    "question": "Quel dirigeant bolchevique a pris le pouvoir en Russie en octobre 1917 ?",
+    "choices": [
+      "Staline",
+      "Lénine",
+      "Trotski",
+      "Kerensky"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 209,
+    "question": "Quel traité a permis à la Russie bolchevique de sortir de la guerre en 1918 ?",
+    "choices": [
+      "Traité de Brest-Litovsk",
+      "Traité de Versailles",
+      "Traité de Riga",
+      "Traité de Rapallo"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 210,
+    "question": "Quel maréchal français commandait les forces alliées à la fin de la guerre ?",
+    "choices": [
+      "Joffre",
+      "Foch",
+      "Pétain",
+      "Nivelle"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 211,
+    "question": "Quelle bataille navale de 1916 opposa les flottes britannique et allemande ?",
+    "choices": [
+      "Bataille du Jutland",
+      "Bataille de Tsushima",
+      "Bataille de Trafalgar",
+      "Bataille de Lépante"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 212,
+    "question": "Quel génocide fut perpétré par l'Empire ottoman pendant la Première Guerre mondiale ?",
+    "choices": [
+      "Génocide arménien",
+      "Génocide assyrien uniquement",
+      "Génocide grec pontique uniquement",
+      "Aucun de ces génocides"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 213,
+    "question": "Quelle arme chimique fut utilisée massivement pour la première fois en 1915 à Ypres ?",
+    "choices": [
+      "Le gaz moutarde",
+      "Le chlore",
+      "Le phosgène",
+      "Le napalm"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 214,
+    "question": "Quel pays a signé l'armistice mettant fin aux combats le 11 novembre 1918 ?",
+    "choices": [
+      "L'Autriche-Hongrie",
+      "L'Allemagne",
+      "L'Empire ottoman",
+      "La Bulgarie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 215,
+    "question": "Quelle bataille de 1916 sur la Somme vit l'utilisation des premiers chars de combat ?",
+    "choices": [
+      "Bataille de la Somme",
+      "Bataille de Verdun",
+      "Bataille de Cambrai",
+      "Bataille d'Arras"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 216,
+    "question": "Quel pays est resté neutre pendant la Première Guerre mondiale en Europe de l'Ouest ?",
+    "choices": [
+      "La Belgique",
+      "L'Espagne",
+      "Le Portugal",
+      "L'Italie"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 217,
+    "question": "Quelle crise économique mondiale débuta en 1929 aux États-Unis ?",
+    "choices": [
+      "Le krach de 1929",
+      "La crise de 1907",
+      "La récession de 1937",
+      "La panique de 1893"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 218,
+    "question": "Quel dirigeant italien fonda le mouvement fasciste et prit le pouvoir en 1922 ?",
+    "choices": [
+      "Benito Mussolini",
+      "Victor-Emmanuel III",
+      "Italo Balbo",
+      "Pietro Badoglio"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 219,
+    "question": "Quel dirigeant allemand est arrivé au pouvoir en 1933 ?",
+    "choices": [
+      "Adolf Hitler",
+      "Paul von Hindenburg",
+      "Hermann Göring",
+      "Heinrich Himmler"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 220,
+    "question": "Quel parti politique dirigeait l'Allemagne nazie ?",
+    "choices": [
+      "Le NSDAP",
+      "Le SPD",
+      "Le KPD",
+      "Le Zentrum"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 221,
+    "question": "Quelle loi de 1935 a institutionnalisé la persécution des Juifs en Allemagne ?",
+    "choices": [
+      "Les lois de Nuremberg",
+      "La Nuit de cristal",
+      "Les lois d'aryanisation",
+      "Le décret sur le Reichstag"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 222,
+    "question": "Quelle nuit de novembre 1938 vit des pogroms anti-juifs en Allemagne ?",
+    "choices": [
+      "La Nuit de cristal",
+      "La Nuit des longs couteaux",
+      "La Nuit de Varennes",
+      "La Nuit du 4 août"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 223,
+    "question": "En quelle année l'Allemagne nazie envahit-elle la Pologne, déclenchant la Seconde Guerre mondiale ?",
+    "choices": [
+      "1938",
+      "1939",
+      "1940",
+      "1941"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 224,
+    "question": "Quelle stratégie militaire allemande basée sur la rapidité fut utilisée en 1939-1940 ?",
+    "choices": [
+      "La Blitzkrieg",
+      "La guerre de tranchées",
+      "La guerre d'attrition",
+      "La guerre asymétrique"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 225,
+    "question": "Quel général français a appelé à la résistance depuis Londres en juin 1940 ?",
+    "choices": [
+      "Philippe Pétain",
+      "Charles de Gaulle",
+      "Maxime Weygand",
+      "Henri Giraud"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 226,
+    "question": "Quel régime français a collaboré avec l'Allemagne nazie de 1940 à 1944 ?",
+    "choices": [
+      "Le régime de Vichy",
+      "La Troisième République",
+      "Le gouvernement provisoire",
+      "La France libre"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 227,
+    "question": "Quelle bataille aérienne de 1940 opposa la RAF britannique à la Luftwaffe allemande ?",
+    "choices": [
+      "Bataille d'Angleterre",
+      "Bataille de Normandie",
+      "Bataille de Dunkerque",
+      "Bataille de Crète"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 228,
+    "question": "Quel événement du 7 décembre 1941 a précipité l'entrée en guerre des États-Unis ?",
+    "choices": [
+      "L'attaque de Pearl Harbor",
+      "L'invasion des Philippines",
+      "La chute de Singapour",
+      "La bataille de Midway"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 229,
+    "question": "Quelle bataille de 1942-1943 marqua un tournant sur le front de l'Est ?",
+    "choices": [
+      "Bataille de Stalingrad",
+      "Bataille de Koursk",
+      "Bataille de Moscou",
+      "Bataille de Berlin"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 230,
+    "question": "Quel débarquement allié eut lieu en Normandie le 6 juin 1944 ?",
+    "choices": [
+      "Le Débarquement (D-Day)",
+      "L'opération Torch",
+      "L'opération Dragoon",
+      "L'opération Market Garden"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 231,
+    "question": "Quel camp d'extermination nazi est le plus connu, situé en Pologne ?",
+    "choices": [
+      "Auschwitz-Birkenau",
+      "Dachau",
+      "Buchenwald",
+      "Treblinka uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 232,
+    "question": "Comment appelle-t-on l'extermination systématique des Juifs par les nazis ?",
+    "choices": [
+      "La Shoah",
+      "L'Holodomor",
+      "Le génocide arménien",
+      "La Nakba"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 233,
+    "question": "Quel dirigeant soviétique a mené l'URSS pendant la Seconde Guerre mondiale ?",
+    "choices": [
+      "Lénine",
+      "Staline",
+      "Khrouchtchev",
+      "Trotski"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 234,
+    "question": "Quel Premier ministre britannique a dirigé le pays pendant la Seconde Guerre mondiale ?",
+    "choices": [
+      "Neville Chamberlain",
+      "Winston Churchill",
+      "Clement Attlee",
+      "Anthony Eden"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 235,
+    "question": "Quelle conférence de 1945 réunit Churchill, Roosevelt et Staline pour organiser l'après-guerre ?",
+    "choices": [
+      "Conférence de Yalta",
+      "Conférence de Postdam uniquement",
+      "Conférence de Téhéran uniquement",
+      "Conférence de Munich"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 236,
+    "question": "Quelle ville allemande fut prise par les Soviétiques en mai 1945 ?",
+    "choices": [
+      "Munich",
+      "Berlin",
+      "Hambourg",
+      "Francfort"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 237,
+    "question": "Quel jour est célébré comme la fin de la guerre en Europe en 1945 ?",
+    "choices": [
+      "Le 8 mai (V-E Day)",
+      "Le 6 juin",
+      "Le 2 septembre",
+      "Le 11 novembre"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 238,
+    "question": "Quelles villes japonaises furent frappées par la bombe atomique en août 1945 ?",
+    "choices": [
+      "Tokyo et Osaka",
+      "Hiroshima et Nagasaki",
+      "Kyoto et Kobe",
+      "Yokohama et Nagoya"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 239,
+    "question": "Quel processus judiciaire a jugé les criminels de guerre nazis après 1945 ?",
+    "choices": [
+      "Le procès de Nuremberg",
+      "Le procès de Tokyo uniquement",
+      "Le procès d'Eichmann uniquement",
+      "La Commission Vérité"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 240,
+    "question": "Quel officier allemand fut jugé à Jérusalem en 1961 pour son rôle dans la Shoah ?",
+    "choices": [
+      "Adolf Eichmann",
+      "Rudolf Höss",
+      "Klaus Barbie",
+      "Josef Mengele"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 241,
+    "question": "Quel réseau de résistance française fut dirigé depuis Londres par de Gaulle ?",
+    "choices": [
+      "La France libre",
+      "Le Conseil national de la Résistance uniquement",
+      "Les FFI uniquement",
+      "Le maquis uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 242,
+    "question": "Quel résistant a présidé le Conseil national de la Résistance en France ?",
+    "choices": [
+      "Jean Moulin",
+      "Henri Frenay",
+      "Pierre Brossolette",
+      "Georges Bidault"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 243,
+    "question": "Quelle opération alliée a permis la libération du sud de la France en août 1944 ?",
+    "choices": [
+      "Opération Dragoon",
+      "Opération Overlord",
+      "Opération Market Garden",
+      "Opération Cobra"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 244,
+    "question": "Quel maréchal japonais dirigeait la marine impériale à Pearl Harbor ?",
+    "choices": [
+      "Isoroku Yamamoto",
+      "Hideki Tojo",
+      "Hirohito",
+      "Tomoyuki Yamashita"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 245,
+    "question": "Quel empereur japonais a annoncé la capitulation du Japon en 1945 ?",
+    "choices": [
+      "Hirohito",
+      "Meiji",
+      "Taisho",
+      "Akihito"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 246,
+    "question": "Quel discours de Churchill en 1946 évoque un 'rideau de fer' en Europe ?",
+    "choices": [
+      "Discours de Fulton",
+      "Discours de Zurich",
+      "Discours de Yalta",
+      "Discours de Postdam"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 247,
+    "question": "Quelle organisation militaire occidentale fut créée en 1949 pendant la guerre froide ?",
+    "choices": [
+      "L'OTAN",
+      "Le pacte de Varsovie",
+      "L'ONU",
+      "L'UE"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 248,
+    "question": "Quelle alliance militaire soviétique répondit à l'OTAN en 1955 ?",
+    "choices": [
+      "Le pacte de Varsovie",
+      "Le Kominform",
+      "Le Comecon",
+      "Le pacte de Berlin"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 249,
+    "question": "Quel mur a divisé Berlin de 1961 à 1989 ?",
+    "choices": [
+      "Le mur de Berlin",
+      "La ligne Maginot",
+      "Le mur d'Hadrien",
+      "La ligne Siegfried"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 250,
+    "question": "En quelle année le mur de Berlin est-il tombé ?",
+    "choices": [
+      "1987",
+      "1989",
+      "1991",
+      "1993"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 251,
+    "question": "Quelle crise de 1962 a failli déclencher une guerre nucléaire entre USA et URSS ?",
+    "choices": [
+      "Crise des missiles de Cuba",
+      "Crise de Berlin",
+      "Crise de Suez",
+      "Crise du canal de Panama"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 252,
+    "question": "Quel président américain a géré la crise des missiles de Cuba ?",
+    "choices": [
+      "Dwight Eisenhower",
+      "John F. Kennedy",
+      "Lyndon Johnson",
+      "Richard Nixon"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 253,
+    "question": "Quel dirigeant cubain a pris le pouvoir en 1959 ?",
+    "choices": [
+      "Fulgencio Batista",
+      "Fidel Castro",
+      "Che Guevara",
+      "Raúl Castro"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 254,
+    "question": "Quelle guerre a opposé la Corée du Nord et la Corée du Sud de 1950 à 1953 ?",
+    "choices": [
+      "Guerre de Corée",
+      "Guerre du Vietnam",
+      "Guerre sino-japonaise",
+      "Guerre du Golfe"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 255,
+    "question": "Quelle guerre américaine s'est achevée par le retrait des troupes en 1973 puis la chute de Saïgon en 1975 ?",
+    "choices": [
+      "Guerre du Vietnam",
+      "Guerre de Corée",
+      "Guerre du Golfe",
+      "Guerre d'Afghanistan"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 256,
+    "question": "Quel dirigeant vietnamien communiste a mené la lutte pour l'indépendance ?",
+    "choices": [
+      "Ho Chi Minh",
+      "Ngo Dinh Diem",
+      "Vo Nguyen Giap uniquement",
+      "Pol Pot"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 257,
+    "question": "Quelle bataille de 1954 marqua la défaite française en Indochine ?",
+    "choices": [
+      "Diên Biên Phu",
+      "Bataille de Hanoï",
+      "Bataille de Saïgon",
+      "Bataille de Da Nang"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 258,
+    "question": "Quelle guerre d'indépendance a opposé la France à l'Algérie de 1954 à 1962 ?",
+    "choices": [
+      "Guerre d'Algérie",
+      "Guerre du Rif",
+      "Guerre du Maroc",
+      "Guerre de Tunisie"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 259,
+    "question": "Quels accords de 1962 ont mis fin à la guerre d'Algérie ?",
+    "choices": [
+      "Les accords d'Évian",
+      "Les accords de Genève",
+      "Les accords de Paris",
+      "Les accords de Rome"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 260,
+    "question": "Quel président français a proclamé l'indépendance de nombreuses colonies africaines vers 1960 ?",
+    "choices": [
+      "Charles de Gaulle",
+      "Vincent Auriol",
+      "René Coty",
+      "Georges Pompidou"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 261,
+    "question": "Quel leader indien a mené la lutte non-violente pour l'indépendance face aux Britanniques ?",
+    "choices": [
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "Muhammad Ali Jinnah",
+      "Subhas Chandra Bose"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 262,
+    "question": "En quelle année l'Inde a-t-elle obtenu son indépendance et a été partitionnée ?",
+    "choices": [
+      "1945",
+      "1947",
+      "1950",
+      "1952"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 263,
+    "question": "Quel pays fut créé en 1947 lors de la partition de l'Inde à majorité musulmane ?",
+    "choices": [
+      "Le Bangladesh",
+      "Le Pakistan",
+      "Le Sri Lanka",
+      "Le Népal"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 264,
+    "question": "Quel État a été fondé en 1948 après la fin du mandat britannique en Palestine ?",
+    "choices": [
+      "L'État d'Israël",
+      "L'État de Palestine",
+      "La Jordanie",
+      "Le Liban"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 265,
+    "question": "Quel dirigeant sud-africain a lutté contre l'apartheid et est devenu président en 1994 ?",
+    "choices": [
+      "Nelson Mandela",
+      "Desmond Tutu",
+      "Frederik de Klerk",
+      "Steve Biko"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 266,
+    "question": "Quel système de ségrégation raciale institutionnalisée a existé en Afrique du Sud jusqu'en 1991 ?",
+    "choices": [
+      "L'apartheid",
+      "La ségrégation",
+      "Le Jim Crow",
+      "Le colonialisme"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 267,
+    "question": "Quel mouvement des droits civiques américain fut mené par Martin Luther King ?",
+    "choices": [
+      "Le mouvement des droits civiques",
+      "Le mouvement des suffragettes",
+      "Le mouvement abolitionniste",
+      "Le mouvement syndicaliste"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 268,
+    "question": "En quelle année Martin Luther King a-t-il prononcé son discours 'I Have a Dream' ?",
+    "choices": [
+      "1955",
+      "1963",
+      "1968",
+      "1970"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 269,
+    "question": "Quel événement de 1969 a marqué la conquête spatiale, premier homme sur la Lune ?",
+    "choices": [
+      "Le premier vol spatial habité",
+      "Le premier alunissage (Apollo 11)",
+      "Le lancement de Spoutnik",
+      "Le premier vol de la navette"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 270,
+    "question": "Quel astronaute a été le premier homme à marcher sur la Lune ?",
+    "choices": [
+      "Buzz Aldrin",
+      "Neil Armstrong",
+      "Yuri Gagarine",
+      "John Glenn"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 271,
+    "question": "Quel cosmonaute soviétique fut le premier homme dans l'espace en 1961 ?",
+    "choices": [
+      "Youri Gagarine",
+      "Valentina Terechkova",
+      "Alexeï Leonov",
+      "Guerman Titov"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 272,
+    "question": "Quel dirigeant soviétique a lancé la politique de glasnost et de perestroïka ?",
+    "choices": [
+      "Léonid Brejnev",
+      "Mikhaïl Gorbatchev",
+      "Youri Andropov",
+      "Konstantin Tchernenko"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 273,
+    "question": "En quelle année l'URSS s'est-elle officiellement dissoute ?",
+    "choices": [
+      "1989",
+      "1991",
+      "1993",
+      "1995"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 274,
+    "question": "Quel président américain a mis fin à la guerre froide symboliquement avec Gorbatchev ?",
+    "choices": [
+      "Ronald Reagan",
+      "George H. W. Bush",
+      "Jimmy Carter",
+      "Bill Clinton"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 275,
+    "question": "Quel mouvement syndical polonais a contribué à la chute du communisme dans son pays ?",
+    "choices": [
+      "Solidarność",
+      "Le Printemps de Prague",
+      "Charte 77",
+      "Le Printemps de Budapest"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 276,
+    "question": "Quel dirigeant a mené la Révolution culturelle en Chine à partir de 1966 ?",
+    "choices": [
+      "Mao Zedong",
+      "Deng Xiaoping",
+      "Zhou Enlai",
+      "Liu Shaoqi"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 277,
+    "question": "Quel dirigeant chinois a proclamé la République populaire de Chine en 1949 ?",
+    "choices": [
+      "Mao Zedong",
+      "Tchang Kaï-chek",
+      "Deng Xiaoping",
+      "Sun Yat-sen"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 278,
+    "question": "Quelle politique agricole et industrielle de Mao (1958-1962) causa une famine massive ?",
+    "choices": [
+      "Le Grand Bond en avant",
+      "La Révolution culturelle",
+      "La Longue Marche",
+      "Le Plan quinquennal"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 279,
+    "question": "Quel régime khmer rouge a causé un génocide au Cambodge dans les années 1970 ?",
+    "choices": [
+      "Le régime de Pol Pot",
+      "Le régime de Lon Nol",
+      "Le régime de Sihanouk",
+      "Le régime de Hun Sen"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 280,
+    "question": "Quel événement de la place Tiananmen en 1989 réprima des manifestations pro-démocratie en Chine ?",
+    "choices": [
+      "Le massacre de la place Tiananmen",
+      "La Révolution culturelle",
+      "Le Grand Bond en avant",
+      "L'incident de Xi'an"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 281,
+    "question": "Quel traité de 1957 a fondé la Communauté économique européenne ?",
+    "choices": [
+      "Traité de Rome",
+      "Traité de Maastricht",
+      "Traité de Lisbonne",
+      "Traité de Paris"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 282,
+    "question": "Quel traité de 1992 a créé l'Union européenne ?",
+    "choices": [
+      "Traité de Rome",
+      "Traité de Maastricht",
+      "Traité d'Amsterdam",
+      "Traité de Nice"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 283,
+    "question": "Quelle monnaie unique européenne est entrée en circulation en 2002 ?",
+    "choices": [
+      "L'euro",
+      "L'écu",
+      "Le franc européen",
+      "Le mark européen"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 284,
+    "question": "Quel événement du 11 septembre 2001 a marqué le début de la guerre contre le terrorisme ?",
+    "choices": [
+      "Les attentats du 11 septembre",
+      "La guerre du Golfe",
+      "L'invasion de l'Irak",
+      "L'attentat de Madrid"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 285,
+    "question": "Quel pays a été envahi par une coalition menée par les États-Unis en 2003 ?",
+    "choices": [
+      "L'Afghanistan",
+      "L'Irak",
+      "L'Iran",
+      "La Syrie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 286,
+    "question": "Quel dirigeant irakien a été renversé en 2003 ?",
+    "choices": [
+      "Saddam Hussein",
+      "Hafez el-Assad",
+      "Mouammar Kadhafi",
+      "Bachar el-Assad"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 287,
+    "question": "Quel mouvement de révoltes populaires a touché le monde arabe à partir de 2010-2011 ?",
+    "choices": [
+      "Le Printemps arabe",
+      "La Révolution de velours",
+      "Le Printemps de Prague",
+      "La Révolution des œillets"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 288,
+    "question": "Quel pays a vu la chute de son président Ben Ali en 2011, point de départ du Printemps arabe ?",
+    "choices": [
+      "L'Égypte",
+      "La Tunisie",
+      "La Libye",
+      "La Syrie"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 289,
+    "question": "Quelle révolution pacifique de 1989 a mis fin au régime communiste en Tchécoslovaquie ?",
+    "choices": [
+      "La Révolution de velours",
+      "Le Printemps de Prague",
+      "La Révolution des œillets",
+      "La Révolution orange"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 290,
+    "question": "Quel événement de 1974 a instauré la démocratie au Portugal ?",
+    "choices": [
+      "La Révolution des œillets",
+      "La Révolution de velours",
+      "Le Printemps de Prague",
+      "La transition espagnole"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 291,
+    "question": "Quel dictateur espagnol a dirigé le pays de 1939 à 1975 ?",
+    "choices": [
+      "Francisco Franco",
+      "Primo de Rivera",
+      "Juan Carlos Ier",
+      "José Antonio"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 292,
+    "question": "Quel dictateur portugais a dirigé le pays de 1932 à 1968 ?",
+    "choices": [
+      "António de Oliveira Salazar",
+      "Marcelo Caetano",
+      "Óscar Carmona",
+      "Humberto Delgado"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 293,
+    "question": "Quelle guerre a opposé l'Irak et l'Iran de 1980 à 1988 ?",
+    "choices": [
+      "Guerre Iran-Irak",
+      "Guerre du Golfe",
+      "Guerre des Six Jours",
+      "Guerre du Kippour"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 294,
+    "question": "Quelle guerre de 1991 a vu une coalition internationale libérer le Koweït envahi par l'Irak ?",
+    "choices": [
+      "Guerre du Golfe",
+      "Guerre d'Irak (2003)",
+      "Guerre du Kippour",
+      "Guerre des Six Jours"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 295,
+    "question": "Quelle guerre israélo-arabe de 1967 dura six jours ?",
+    "choices": [
+      "Guerre des Six Jours",
+      "Guerre du Kippour",
+      "Guerre de 1948",
+      "Guerre du Liban"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 296,
+    "question": "Quelle guerre israélo-arabe de 1973 eut lieu pendant une fête juive ?",
+    "choices": [
+      "Guerre du Kippour",
+      "Guerre des Six Jours",
+      "Guerre de 1948",
+      "Guerre du Sinaï"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 297,
+    "question": "Quel conflit des années 1990 a vu l'éclatement violent de la Yougoslavie ?",
+    "choices": [
+      "Les guerres de Yougoslavie",
+      "La guerre froide",
+      "Le Printemps de Prague",
+      "La guerre d'Albanie"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 298,
+    "question": "Quel génocide a eu lieu au Rwanda en 1994 ?",
+    "choices": [
+      "Génocide des Tutsis",
+      "Génocide arménien",
+      "Génocide cambodgien",
+      "Génocide bosniaque"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 299,
+    "question": "Quel accord de paix de 1998 a mis fin au conflit en Irlande du Nord ?",
+    "choices": [
+      "Accord du Vendredi saint",
+      "Accord de Camp David",
+      "Accord d'Oslo",
+      "Accord de Dayton"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 300,
+    "question": "Quel accord de 1995 a mis fin à la guerre de Bosnie ?",
+    "choices": [
+      "Accord de Dayton",
+      "Accord du Vendredi saint",
+      "Accord d'Oslo",
+      "Accord de Rambouillet"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 301,
+    "question": "Quel navigateur portugais est le premier Européen à atteindre l'Inde par voie maritime ?",
+    "choices": [
+      "Vasco de Gama",
+      "Bartolomeu Dias",
+      "Fernand de Magellan",
+      "Pedro Álvares Cabral"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 302,
+    "question": "Quel roi anglais a eu six épouses au XVIe siècle ?",
+    "choices": [
+      "Henri VII",
+      "Henri VIII",
+      "Édouard VI",
+      "Jacques Ier"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 303,
+    "question": "Quelle reine anglaise a régné pendant l'ère élisabéthaine ?",
+    "choices": [
+      "Marie Ire",
+      "Élisabeth Ire",
+      "Victoria",
+      "Anne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 304,
+    "question": "Quelle armada espagnole fut vaincue par l'Angleterre en 1588 ?",
+    "choices": [
+      "L'Invincible Armada",
+      "L'Armada de la Manche",
+      "La flotte de Lépante",
+      "La flotte des Indes"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 305,
+    "question": "Quel roi de France est mort à la bataille de Pavie en captivité, non tué mais capturé en 1525 ?",
+    "choices": [
+      "François Ier (capturé)",
+      "Henri II",
+      "Charles VIII",
+      "Louis XII"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 306,
+    "question": "Quel roi de France est mort accidentellement lors d'un tournoi en 1559 ?",
+    "choices": [
+      "Henri II",
+      "François II",
+      "Charles IX",
+      "Henri III"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 307,
+    "question": "Quel empereur du Saint Empire romain germanique régna sur un immense territoire incluant l'Espagne au XVIe siècle ?",
+    "choices": [
+      "Charles Quint",
+      "Philippe II",
+      "Ferdinand Ier",
+      "Maximilien Ier"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 308,
+    "question": "Quel philosophe anglais a théorisé le contrat social et l'état de nature, auteur du Léviathan ?",
+    "choices": [
+      "John Locke",
+      "Thomas Hobbes",
+      "David Hume",
+      "Adam Smith"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 309,
+    "question": "Quel économiste écossais est l'auteur de 'La Richesse des nations' ?",
+    "choices": [
+      "David Ricardo",
+      "Adam Smith",
+      "John Stuart Mill",
+      "Karl Marx"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 310,
+    "question": "Quel philosophe allemand est l'auteur du 'Manifeste du parti communiste' avec Engels ?",
+    "choices": [
+      "Karl Marx",
+      "Friedrich Engels seul",
+      "Hegel",
+      "Feuerbach"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 311,
+    "question": "Quelle révolution industrielle a débuté en Angleterre au XVIIIe siècle ?",
+    "choices": [
+      "La révolution industrielle",
+      "La révolution agricole seule",
+      "La révolution numérique",
+      "La révolution verte"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 312,
+    "question": "Quel inventeur est associé à l'ampoule électrique moderne ?",
+    "choices": [
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Alexander Graham Bell",
+      "Benjamin Franklin"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 313,
+    "question": "Quel scientifique a développé la théorie de la relativité au début du XXe siècle ?",
+    "choices": [
+      "Albert Einstein",
+      "Niels Bohr",
+      "Max Planck",
+      "Werner Heisenberg"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 314,
+    "question": "Quelle épidémie de grippe a fait des dizaines de millions de morts en 1918-1919 ?",
+    "choices": [
+      "La grippe espagnole",
+      "La peste noire",
+      "Le choléra",
+      "La variole"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 315,
+    "question": "Quel physicien polonais-français a reçu deux prix Nobel pour ses travaux sur la radioactivité ?",
+    "choices": [
+      "Pierre Curie",
+      "Marie Curie",
+      "Henri Becquerel",
+      "Irène Joliot-Curie"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 316,
+    "question": "Quel roi de France est le dernier de la lignée capétienne directe ?",
+    "choices": [
+      "Charles IV",
+      "Philippe le Bel",
+      "Louis X",
+      "Jean Ier"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 317,
+    "question": "Quelle dynastie succède aux Capétiens directs en France en 1328 ?",
+    "choices": [
+      "Les Valois",
+      "Les Bourbons",
+      "Les Plantagenêts",
+      "Les Orléans"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 318,
+    "question": "Quel roi anglais revendiqua le trône de France, déclenchant la guerre de Cent Ans ?",
+    "choices": [
+      "Édouard III",
+      "Henri V",
+      "Richard II",
+      "Édouard le Prince Noir"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 319,
+    "question": "Quelle bataille de 1356 vit le roi de France Jean II fait prisonnier ?",
+    "choices": [
+      "Bataille de Poitiers",
+      "Bataille de Crécy",
+      "Bataille d'Azincourt",
+      "Bataille de Formigny"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 320,
+    "question": "Quel traité de 1420 a déshérité le dauphin Charles au profit du roi d'Angleterre ?",
+    "choices": [
+      "Traité de Troyes",
+      "Traité de Brétigny",
+      "Traité de Picquigny",
+      "Traité d'Arras"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 321,
+    "question": "Quelle ville normande fut le théâtre du procès et du bûcher de Jeanne d'Arc en 1431 ?",
+    "choices": [
+      "Rouen",
+      "Reims",
+      "Orléans",
+      "Compiègne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 322,
+    "question": "Quel roi de France fut sacré à Reims grâce à Jeanne d'Arc en 1429 ?",
+    "choices": [
+      "Charles VI",
+      "Charles VII",
+      "Louis XI",
+      "Charles VIII"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 323,
+    "question": "Quel roi de France, dit 'l'universelle araignée', a renforcé le pouvoir royal au XVe siècle ?",
+    "choices": [
+      "Louis XI",
+      "Charles VII",
+      "Charles VIII",
+      "Louis XII"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 324,
+    "question": "Quelle bataille de 1477 vit la mort de Charles le Téméraire ?",
+    "choices": [
+      "Bataille de Nancy",
+      "Bataille de Morat",
+      "Bataille de Grandson",
+      "Bataille de Guinegatte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 325,
+    "question": "Quel duché puissant rivalisait avec le royaume de France au XVe siècle ?",
+    "choices": [
+      "Le duché de Bourgogne",
+      "Le duché de Bretagne",
+      "Le duché de Normandie",
+      "Le duché d'Aquitaine"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 326,
+    "question": "Quelle bataille de 1214 fut remportée par Philippe Auguste contre une coalition ?",
+    "choices": [
+      "Bataille de Bouvines",
+      "Bataille de Muret",
+      "Bataille de Taillebourg",
+      "Bataille de Crécy"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 327,
+    "question": "Quel royaume médiéval anglo-français fut créé par le mariage d'Aliénor d'Aquitaine et Henri II ?",
+    "choices": [
+      "L'Empire angevin (Plantagenêt)",
+      "Le royaume normand",
+      "Le duché d'Aquitaine seul",
+      "Le comté d'Anjou seul"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 328,
+    "question": "Quelle reine, d'abord épouse de Louis VII puis d'Henri II Plantagenêt, marqua le XIIe siècle ?",
+    "choices": [
+      "Aliénor d'Aquitaine",
+      "Blanche de Castille",
+      "Isabeau de Bavière",
+      "Anne de Bretagne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 329,
+    "question": "Quel roi de France a mené la septième et huitième croisades, mort à Tunis ?",
+    "choices": [
+      "Louis IX (Saint Louis)",
+      "Philippe Auguste",
+      "Philippe III",
+      "Charles d'Anjou"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 330,
+    "question": "Quelle dynastie régnait sur la France pendant la Révolution de 1789 ?",
+    "choices": [
+      "Les Bourbons",
+      "Les Valois",
+      "Les Orléans",
+      "Les Capétiens directs"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 331,
+    "question": "Quel roi de France a été renversé par la révolution de 1830 ?",
+    "choices": [
+      "Louis XVIII",
+      "Charles X",
+      "Louis-Philippe",
+      "Napoléon III"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 332,
+    "question": "Quel empereur français a été fait prisonnier à Sedan en 1870 ?",
+    "choices": [
+      "Napoléon Ier",
+      "Napoléon III",
+      "Louis-Napoléon uniquement",
+      "Napoléon II"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 333,
+    "question": "Quelle République française a suivi la chute du Second Empire en 1870 ?",
+    "choices": [
+      "La Troisième République",
+      "La Deuxième République",
+      "La Quatrième République",
+      "La Première République"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 334,
+    "question": "Quel événement judiciaire a divisé la France de 1894 à 1906 autour d'un officier juif accusé à tort ?",
+    "choices": [
+      "L'affaire Dreyfus",
+      "L'affaire des poisons",
+      "L'affaire du collier de la reine",
+      "L'affaire Stavisky"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 335,
+    "question": "Quel écrivain français a publié 'J'accuse' pour défendre Dreyfus en 1898 ?",
+    "choices": [
+      "Victor Hugo",
+      "Émile Zola",
+      "Anatole France",
+      "Marcel Proust"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 336,
+    "question": "Quelle loi française de 1905 instaure la séparation des Églises et de l'État ?",
+    "choices": [
+      "La loi de 1905",
+      "Les lois Ferry",
+      "La loi Falloux",
+      "Le Concordat"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 337,
+    "question": "Quel homme politique français a rendu l'école gratuite, laïque et obligatoire dans les années 1880 ?",
+    "choices": [
+      "Jules Ferry",
+      "Léon Gambetta",
+      "Georges Clemenceau",
+      "Jean Jaurès"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 338,
+    "question": "Quel homme politique français, surnommé 'le Tigre', a dirigé la France à la fin de la Première Guerre mondiale ?",
+    "choices": [
+      "Raymond Poincaré",
+      "Georges Clemenceau",
+      "Aristide Briand",
+      "Paul Painlevé"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 339,
+    "question": "Quel homme d'État français a fondé la Cinquième République en 1958 ?",
+    "choices": [
+      "Charles de Gaulle",
+      "René Coty",
+      "Guy Mollet",
+      "Pierre Mendès France"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 340,
+    "question": "Quel événement de mai 1968 a profondément marqué la société française ?",
+    "choices": [
+      "Les mouvements sociaux et étudiants de Mai 68",
+      "La libération de Paris",
+      "L'affaire Dreyfus",
+      "La Commune de Paris"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 341,
+    "question": "Quel président français a démissionné en 1969 après un référendum perdu ?",
+    "choices": [
+      "Charles de Gaulle",
+      "Georges Pompidou",
+      "Valéry Giscard d'Estaing",
+      "René Coty"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 342,
+    "question": "Quel président français a aboli la peine de mort en 1981 ?",
+    "choices": [
+      "Valéry Giscard d'Estaing",
+      "François Mitterrand",
+      "Jacques Chirac",
+      "Georges Pompidou"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 343,
+    "question": "Quelle explosion nucléaire japonaise fut la première utilisée contre une cible militaire, à Hiroshima ?",
+    "choices": [
+      "La bombe 'Little Boy'",
+      "La bombe 'Fat Man'",
+      "La bombe H",
+      "La bombe A soviétique"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 344,
+    "question": "Quel traité de 1919 imposa de lourdes réparations à l'Allemagne ?",
+    "choices": [
+      "Traité de Versailles",
+      "Traité de Trianon",
+      "Traité de Sèvres",
+      "Traité de Neuilly"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 345,
+    "question": "Quel traité démantela l'Empire ottoman après la Première Guerre mondiale ?",
+    "choices": [
+      "Traité de Sèvres",
+      "Traité de Lausanne uniquement",
+      "Traité de Versailles",
+      "Traité de Trianon"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 346,
+    "question": "Quel fondateur de la Turquie moderne a proclamé la République en 1923 ?",
+    "choices": [
+      "Mustafa Kemal Atatürk",
+      "Enver Pacha",
+      "Ismet Inönü",
+      "Abdülhamid II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 347,
+    "question": "Quel dernier sultan ottoman fut déposé en 1922 ?",
+    "choices": [
+      "Mehmed VI",
+      "Abdülhamid II",
+      "Mehmed V",
+      "Abdülmecid II"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 348,
+    "question": "Quelle famine soviétique des années 1930 a touché durement l'Ukraine ?",
+    "choices": [
+      "L'Holodomor",
+      "La grande famine russe de 1921",
+      "La famine chinoise",
+      "La famine du Bengale"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 349,
+    "question": "Quel homme d'État britannique a signé les accords de Munich en 1938 ?",
+    "choices": [
+      "Winston Churchill",
+      "Neville Chamberlain",
+      "Stanley Baldwin",
+      "Anthony Eden"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 350,
+    "question": "Quel pays fut annexé par l'Allemagne nazie lors de l'Anschluss en 1938 ?",
+    "choices": [
+      "L'Autriche",
+      "La Tchécoslovaquie",
+      "La Pologne",
+      "La Hongrie"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 351,
+    "question": "Quelle région tchécoslovaque fut cédée à l'Allemagne par les accords de Munich ?",
+    "choices": [
+      "Les Sudètes",
+      "La Bohême",
+      "La Moravie",
+      "La Slovaquie"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 352,
+    "question": "Quel pacte de non-agression de 1939 surprit le monde en unissant Hitler et Staline temporairement ?",
+    "choices": [
+      "Le pacte germano-soviétique (Molotov-Ribbentrop)",
+      "Le pacte anti-Komintern",
+      "Le pacte d'acier",
+      "Le pacte à quatre"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 353,
+    "question": "Quelle alliance militaire unissait l'Allemagne, l'Italie et le Japon pendant la Seconde Guerre mondiale ?",
+    "choices": [
+      "L'Axe",
+      "Les Alliés",
+      "L'Entente",
+      "Le Kominform"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 354,
+    "question": "Quel maréchal français a signé l'armistice avec l'Allemagne en juin 1940 ?",
+    "choices": [
+      "Philippe Pétain",
+      "Maxime Weygand",
+      "Charles de Gaulle",
+      "Alphonse Juin"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 355,
+    "question": "Quelle opération allemande visait l'invasion de l'URSS en 1941 ?",
+    "choices": [
+      "Opération Barbarossa",
+      "Opération Citadelle",
+      "Opération Typhon uniquement",
+      "Opération Zeppelin"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 356,
+    "question": "Quel siège de la Seconde Guerre mondiale dura environ 900 jours en URSS ?",
+    "choices": [
+      "Siège de Leningrad",
+      "Siège de Stalingrad",
+      "Siège de Moscou",
+      "Siège de Sébastopol"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 357,
+    "question": "Quel général américain a commandé les forces alliées en Europe pendant la Seconde Guerre mondiale ?",
+    "choices": [
+      "Dwight Eisenhower",
+      "George Patton",
+      "Douglas MacArthur",
+      "Omar Bradley"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 358,
+    "question": "Quel général américain a mené la campagne du Pacifique contre le Japon ?",
+    "choices": [
+      "Douglas MacArthur",
+      "Dwight Eisenhower",
+      "Chester Nimitz uniquement",
+      "George Marshall"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 359,
+    "question": "Quelle bataille navale de 1942 marqua un tournant dans la guerre du Pacifique ?",
+    "choices": [
+      "Bataille de Midway",
+      "Bataille de la mer de Corail",
+      "Bataille de Guadalcanal",
+      "Bataille de Leyte"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 360,
+    "question": "Quel plan américain a permis la reconstruction économique de l'Europe après 1945 ?",
+    "choices": [
+      "Le plan Marshall",
+      "Le plan Dawes",
+      "Le plan Young",
+      "Le plan Schuman"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 361,
+    "question": "Quel homme d'État français a proposé la création de la CECA en 1950 ?",
+    "choices": [
+      "Robert Schuman",
+      "Jean Monnet uniquement",
+      "Charles de Gaulle",
+      "Konrad Adenauer"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 362,
+    "question": "Quelle communauté de 1951 réunit six pays autour du charbon et de l'acier ?",
+    "choices": [
+      "La CECA",
+      "La CEE",
+      "L'UE",
+      "L'OTAN"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 363,
+    "question": "Quel chancelier a dirigé la République fédérale d'Allemagne après-guerre et favorisé la réconciliation franco-allemande ?",
+    "choices": [
+      "Konrad Adenauer",
+      "Willy Brandt",
+      "Helmut Kohl",
+      "Ludwig Erhard"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 364,
+    "question": "Quel chancelier allemand a œuvré à la réunification allemande en 1990 ?",
+    "choices": [
+      "Helmut Kohl",
+      "Willy Brandt",
+      "Helmut Schmidt",
+      "Gerhard Schröder"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 365,
+    "question": "En quelle année l'Allemagne a-t-elle été réunifiée ?",
+    "choices": [
+      "1989",
+      "1990",
+      "1991",
+      "1992"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 366,
+    "question": "Quel président américain a instauré le New Deal après la crise de 1929 ?",
+    "choices": [
+      "Herbert Hoover",
+      "Franklin D. Roosevelt",
+      "Woodrow Wilson",
+      "Calvin Coolidge"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 367,
+    "question": "Quel président américain a été assassiné à Dallas en 1963 ?",
+    "choices": [
+      "John F. Kennedy",
+      "Lyndon Johnson",
+      "Richard Nixon",
+      "Robert Kennedy"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 368,
+    "question": "Quel pasteur américain a été assassiné en 1968, figure des droits civiques ?",
+    "choices": [
+      "Malcolm X",
+      "Martin Luther King",
+      "Medgar Evers",
+      "Jesse Jackson"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 369,
+    "question": "Quel scandale politique a conduit à la démission du président Nixon en 1974 ?",
+    "choices": [
+      "Le Watergate",
+      "L'Irangate",
+      "Le Whitewater",
+      "Le Lewinsky-gate"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 370,
+    "question": "Quel président sud-africain a instauré officiellement l'apartheid en 1948 ?",
+    "choices": [
+      "Daniel François Malan",
+      "Hendrik Verwoerd",
+      "Jan Smuts",
+      "P.W. Botha"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 371,
+    "question": "Quel prix Nobel de la paix a été décerné conjointement à Mandela et de Klerk en 1993 ?",
+    "choices": [
+      "Le prix Nobel de la paix",
+      "Le prix Nobel de littérature",
+      "Le prix Nobel d'économie",
+      "Aucun prix"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 372,
+    "question": "Quel pays a lancé le premier satellite artificiel, Spoutnik, en 1957 ?",
+    "choices": [
+      "Les États-Unis",
+      "L'URSS",
+      "La France",
+      "Le Royaume-Uni"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 373,
+    "question": "Quelle agence spatiale américaine a été créée en 1958 en réponse à Spoutnik ?",
+    "choices": [
+      "La NASA",
+      "Le Pentagone",
+      "Le JPL uniquement",
+      "La DARPA"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 374,
+    "question": "Quel dirigeant chinois a lancé les réformes économiques d'ouverture à partir de 1978 ?",
+    "choices": [
+      "Deng Xiaoping",
+      "Mao Zedong",
+      "Hu Yaobang",
+      "Jiang Zemin"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 375,
+    "question": "Quel territoire asiatique est rétrocédé par le Royaume-Uni à la Chine en 1997 ?",
+    "choices": [
+      "Hong Kong",
+      "Macao",
+      "Taïwan",
+      "Singapour"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 376,
+    "question": "Quel territoire asiatique fut rétrocédé par le Portugal à la Chine en 1999 ?",
+    "choices": [
+      "Macao",
+      "Hong Kong",
+      "Taïwan",
+      "Goa"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 377,
+    "question": "Quel pays a colonisé le Vietnam, le Laos et le Cambodge sous le nom d'Indochine ?",
+    "choices": [
+      "Le Royaume-Uni",
+      "La France",
+      "Les Pays-Bas",
+      "Le Portugal"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 378,
+    "question": "Quel pays a colonisé l'Indonésie jusqu'en 1949 ?",
+    "choices": [
+      "La France",
+      "Le Royaume-Uni",
+      "Les Pays-Bas",
+      "L'Espagne"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 379,
+    "question": "Quel royaume a résisté à la colonisation européenne en Afrique et vaincu l'Italie à Adoua en 1896 ?",
+    "choices": [
+      "L'Éthiopie",
+      "Le Maroc",
+      "Le Liberia",
+      "L'Égypte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 380,
+    "question": "Quel pays africain n'a jamais été formellement colonisé, fondé par des esclaves affranchis ?",
+    "choices": [
+      "Le Liberia",
+      "L'Éthiopie",
+      "Le Ghana",
+      "Le Sénégal"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 381,
+    "question": "Quel explorateur belge a exploré le Congo pour le compte du roi Léopold II ?",
+    "choices": [
+      "Henry Morton Stanley",
+      "David Livingstone",
+      "Pierre Savorgnan de Brazza",
+      "René Caillié"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 382,
+    "question": "Quel explorateur français a donné son nom à Brazzaville ?",
+    "choices": [
+      "Pierre Savorgnan de Brazza",
+      "René Caillié",
+      "Louis Faidherbe",
+      "Jean-Baptiste Marchand"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 383,
+    "question": "Quel roi belge est associé à une exploitation brutale de l'État libre du Congo ?",
+    "choices": [
+      "Léopold Ier",
+      "Léopold II",
+      "Albert Ier",
+      "Baudouin"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 384,
+    "question": "Quelle expédition franco-britannique de 1898 opposa les puissances coloniales au Soudan ?",
+    "choices": [
+      "L'incident de Fachoda",
+      "La bataille d'Omdurman uniquement",
+      "La conférence de Berlin",
+      "L'affaire de Tanger"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 385,
+    "question": "Quel royaume nord-africain est devenu protectorat français en 1912 ?",
+    "choices": [
+      "Le Maroc",
+      "La Tunisie",
+      "L'Algérie",
+      "La Libye"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 386,
+    "question": "Quel pays nord-africain est devenu protectorat français en 1881 ?",
+    "choices": [
+      "Le Maroc",
+      "La Tunisie",
+      "L'Algérie",
+      "L'Égypte"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 387,
+    "question": "Quel pays a colonisé l'Algérie à partir de 1830 ?",
+    "choices": [
+      "Le Royaume-Uni",
+      "La France",
+      "L'Espagne",
+      "L'Italie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 388,
+    "question": "Quel roi a régné sur la France lors de la conquête de l'Algérie en 1830 ?",
+    "choices": [
+      "Charles X",
+      "Louis-Philippe",
+      "Louis XVIII",
+      "Napoléon III"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 389,
+    "question": "Quel royaume italien a colonisé la Libye au début du XXe siècle ?",
+    "choices": [
+      "Le royaume d'Italie",
+      "L'Empire ottoman uniquement",
+      "La France",
+      "L'Espagne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 390,
+    "question": "Quelle guerre de 1911-1912 opposa l'Italie à l'Empire ottoman pour la Libye ?",
+    "choices": [
+      "Guerre italo-turque",
+      "Guerre des Balkans",
+      "Guerre italo-éthiopienne",
+      "Guerre de Crimée"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 391,
+    "question": "Quelles guerres balkaniques de 1912-1913 ont précédé la Première Guerre mondiale ?",
+    "choices": [
+      "Les guerres balkaniques",
+      "Les guerres napoléoniennes",
+      "Les guerres de Crimée",
+      "Les guerres russo-turques"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 392,
+    "question": "Quel royaume slave a émergé comme puissance régionale après les guerres balkaniques ?",
+    "choices": [
+      "La Serbie",
+      "La Bulgarie",
+      "La Roumanie",
+      "La Grèce"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 393,
+    "question": "Quel traité de 1878 a redessiné les frontières balkaniques après une guerre russo-turque ?",
+    "choices": [
+      "Traité de Berlin (1878)",
+      "Traité de San Stefano uniquement",
+      "Traité de Paris (1856)",
+      "Traité de Bucarest"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 394,
+    "question": "Quel roi viking a régné sur l'Angleterre, le Danemark et la Norvège au XIe siècle ?",
+    "choices": [
+      "Knut le Grand",
+      "Harald Ier",
+      "Sven à la Barbe fourchue",
+      "Harold Godwinson"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 395,
+    "question": "Quel roi anglo-saxon fut vaincu à la bataille de Hastings en 1066 ?",
+    "choices": [
+      "Harold Godwinson",
+      "Édouard le Confesseur",
+      "Harald Hardrada",
+      "Édouard Ier"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 396,
+    "question": "Quel document médiéval anglais recense les terres et biens après la conquête normande ?",
+    "choices": [
+      "Le Domesday Book",
+      "La Magna Carta",
+      "Le Bill of Rights",
+      "L'Habeas Corpus"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 397,
+    "question": "Quel roi anglais fut forcé de signer la Magna Carta en 1215 ?",
+    "choices": [
+      "Jean sans Terre",
+      "Richard Cœur de Lion",
+      "Henri III",
+      "Édouard Ier"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 398,
+    "question": "Quel philosophe grec a fondé l'Académie d'Athènes ?",
+    "choices": [
+      "Aristote",
+      "Platon",
+      "Socrate",
+      "Zénon"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 399,
+    "question": "Quel philosophe grec est mort en buvant la ciguë, condamné par Athènes ?",
+    "choices": [
+      "Platon",
+      "Socrate",
+      "Aristote",
+      "Diogène"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 400,
+    "question": "Quel mathématicien grec a établi les fondements de la géométrie ?",
+    "choices": [
+      "Pythagore",
+      "Euclide",
+      "Archimède",
+      "Thalès"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 401,
+    "question": "Quel savant grec s'est écrié 'Eurêka' selon la légende ?",
+    "choices": [
+      "Archimède",
+      "Pythagore",
+      "Euclide",
+      "Aristarque"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 402,
+    "question": "Quel roi hellénistique d'Égypte a fondé la dynastie ptolémaïque ?",
+    "choices": [
+      "Ptolémée Ier",
+      "Ptolémée II",
+      "Alexandre le Grand",
+      "Séleucos Ier"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 403,
+    "question": "Quel phare antique comptait parmi les sept merveilles du monde, situé à Alexandrie ?",
+    "choices": [
+      "Le phare d'Alexandrie",
+      "Le colosse de Rhodes",
+      "Les jardins de Babylone",
+      "Le temple d'Artémis"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 404,
+    "question": "Quelle statue géante comptait parmi les sept merveilles du monde antique, à Rhodes ?",
+    "choices": [
+      "Le colosse de Rhodes",
+      "Le phare d'Alexandrie",
+      "La statue de Zeus à Olympie",
+      "La pyramide de Khéops"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 405,
+    "question": "Quelle seule merveille antique du monde subsiste encore aujourd'hui ?",
+    "choices": [
+      "La grande pyramide de Gizeh",
+      "Le phare d'Alexandrie",
+      "Les jardins suspendus de Babylone",
+      "Le mausolée d'Halicarnasse"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 406,
+    "question": "Quel roi de Macédoine, père d'Alexandre, a unifié la Grèce par la force ?",
+    "choices": [
+      "Philippe II",
+      "Perdiccas",
+      "Antipater",
+      "Amyntas III"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 407,
+    "question": "Quelle bataille de 331 av. J.-C. vit Alexandre vaincre définitivement les Perses ?",
+    "choices": [
+      "Bataille de Gaugamèles",
+      "Bataille d'Issos",
+      "Bataille du Granique",
+      "Bataille de Chéronée"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 408,
+    "question": "Quel général romain a vaincu Hannibal à la bataille de Zama en 202 av. J.-C. ?",
+    "choices": [
+      "Scipion l'Africain",
+      "Fabius Maximus",
+      "Paul-Émile",
+      "Marius"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 409,
+    "question": "Quelle réforme militaire romaine du IIe siècle av. J.-C. porte le nom de son instigateur, Marius ?",
+    "choices": [
+      "La réforme marianique",
+      "La réforme sullanienne",
+      "La réforme augustéenne",
+      "La réforme gracchienne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 410,
+    "question": "Quels frères romains ont tenté des réformes agraires au IIe siècle av. J.-C. ?",
+    "choices": [
+      "Les Gracques",
+      "Les Scipions",
+      "Les Catons",
+      "Les Antonins"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 411,
+    "question": "Quel triumvirat a uni César, Pompée et Crassus à Rome ?",
+    "choices": [
+      "Le premier triumvirat",
+      "Le second triumvirat",
+      "Le triumvirat d'Auguste",
+      "Aucun triumvirat"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 412,
+    "question": "Quel second triumvirat a uni Octave, Marc Antoine et Lépide après la mort de César ?",
+    "choices": [
+      "Le second triumvirat",
+      "Le premier triumvirat",
+      "Le triumvirat de Sylla",
+      "Le consulat"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 413,
+    "question": "Quelle dynastie a succédé aux Julio-Claudiens à Rome après Néron ?",
+    "choices": [
+      "La dynastie flavienne",
+      "La dynastie antonine",
+      "La dynastie sévère",
+      "La dynastie julio-claudienne (suite)"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 414,
+    "question": "Quel empereur romain a fait construire le Colisée ?",
+    "choices": [
+      "Vespasien",
+      "Néron",
+      "Trajan",
+      "Hadrien"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 415,
+    "question": "Quel empereur romain, dit 'le meilleur des princes', a étendu l'Empire à son maximum ?",
+    "choices": [
+      "Trajan",
+      "Hadrien",
+      "Marc Aurèle",
+      "Antonin le Pieux"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 416,
+    "question": "Quel empereur romain a écrit les 'Pensées pour moi-même', œuvre stoïcienne ?",
+    "choices": [
+      "Marc Aurèle",
+      "Sénèque",
+      "Épictète",
+      "Trajan"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 417,
+    "question": "Quel général romain a réprimé la révolte de Judée en 70 apr. J.-C., détruisant le Temple ?",
+    "choices": [
+      "Titus",
+      "Vespasien",
+      "Pompée",
+      "Hadrien"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 418,
+    "question": "Quel empereur romain a persécuté les chrétiens après l'incendie de Rome en 64 ?",
+    "choices": [
+      "Néron",
+      "Caligula",
+      "Claude",
+      "Tibère"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 419,
+    "question": "Quel roi de Numidie s'est allié puis opposé à Rome, capturé par Marius ?",
+    "choices": [
+      "Jugurtha",
+      "Massinissa",
+      "Micipsa",
+      "Juba Ier"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 420,
+    "question": "Quelle reine de Palmyre s'est révoltée contre Rome au IIIe siècle ?",
+    "choices": [
+      "Zénobie",
+      "Boadicée",
+      "Cléopâtre",
+      "Didon"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 421,
+    "question": "Quelle reine celte de Bretagne s'est soulevée contre l'occupation romaine ?",
+    "choices": [
+      "Boadicée",
+      "Zénobie",
+      "Cartimandua uniquement",
+      "Médb"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 422,
+    "question": "Quel roi franc a réunifié le royaume mérovingien après des divisions ?",
+    "choices": [
+      "Clotaire Ier",
+      "Clovis",
+      "Dagobert Ier",
+      "Childéric Ier"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 423,
+    "question": "Quel maire du palais franc a arrêté l'avancée musulmane à Poitiers en 732 ?",
+    "choices": [
+      "Charles Martel",
+      "Pépin le Bref",
+      "Charlemagne",
+      "Pépin de Herstal"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 424,
+    "question": "Quel fils de Charles Martel devint le premier roi carolingien ?",
+    "choices": [
+      "Pépin le Bref",
+      "Charlemagne",
+      "Carloman",
+      "Louis le Pieux"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 425,
+    "question": "Quel fils de Charlemagne lui succéda comme empereur ?",
+    "choices": [
+      "Louis le Pieux",
+      "Pépin",
+      "Charles le Chauve",
+      "Lothaire Ier"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 426,
+    "question": "Quel roi de France fonda la dynastie capétienne en 987 ?",
+    "choices": [
+      "Hugues Capet",
+      "Robert le Pieux",
+      "Eudes",
+      "Charles le Simple"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 427,
+    "question": "Quel duc de Normandie devint aussi roi d'Angleterre en 1066 ?",
+    "choices": [
+      "Guillaume le Conquérant",
+      "Robert Courteheuse",
+      "Guillaume le Roux",
+      "Henri Beauclerc"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 428,
+    "question": "Quel royaume a émergé de la fusion progressive des couronnes d'Aragon et de Castille ?",
+    "choices": [
+      "L'Espagne",
+      "Le Portugal",
+      "La Navarre",
+      "La Catalogne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 429,
+    "question": "Quels souverains catholiques ont unifié l'Espagne à la fin du XVe siècle ?",
+    "choices": [
+      "Isabelle de Castille et Ferdinand d'Aragon",
+      "Charles Quint et Isabelle",
+      "Philippe II et Marie Tudor",
+      "Jeanne la Folle et Philippe le Beau"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 430,
+    "question": "Quelle institution religieuse espagnole traquait les hérétiques à partir de 1478 ?",
+    "choices": [
+      "L'Inquisition espagnole",
+      "Le Saint-Office romain",
+      "L'Inquisition portugaise",
+      "Le tribunal de Tolède uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 431,
+    "question": "Quel empereur a régné sur l'Espagne et le Saint Empire, abdiquant en 1556 ?",
+    "choices": [
+      "Charles Quint",
+      "Philippe II",
+      "Ferdinand Ier",
+      "Charles II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 432,
+    "question": "Quel roi d'Espagne a envoyé l'Invincible Armada contre l'Angleterre en 1588 ?",
+    "choices": [
+      "Philippe II",
+      "Charles Quint",
+      "Philippe III",
+      "Ferdinand II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 433,
+    "question": "Quelle révolte des Pays-Bas espagnols mena à l'indépendance des Provinces-Unies ?",
+    "choices": [
+      "La guerre de Quatre-Vingts Ans",
+      "La révolte des Gueux uniquement",
+      "La guerre de Trente Ans",
+      "La guerre de Succession d'Espagne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 434,
+    "question": "Quel stathouder néerlandais est aussi devenu roi d'Angleterre en 1689 ?",
+    "choices": [
+      "Guillaume d'Orange",
+      "Maurice de Nassau",
+      "Frédéric-Henri",
+      "Guillaume le Taciturne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 435,
+    "question": "Quelle révolution anglaise de 1688 renversa Jacques II sans effusion de sang ?",
+    "choices": [
+      "La Glorieuse Révolution",
+      "La révolution puritaine",
+      "La guerre civile anglaise",
+      "La Restauration"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 436,
+    "question": "Quel roi anglais fut exécuté en 1649 pendant la guerre civile anglaise ?",
+    "choices": [
+      "Charles Ier",
+      "Charles II",
+      "Jacques Ier",
+      "Jacques II"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 437,
+    "question": "Quel dirigeant a instauré le Commonwealth d'Angleterre après l'exécution de Charles Ier ?",
+    "choices": [
+      "Oliver Cromwell",
+      "Richard Cromwell",
+      "Thomas Fairfax",
+      "John Pym"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 438,
+    "question": "Quel document de 1689 limite le pouvoir royal après la Glorieuse Révolution anglaise ?",
+    "choices": [
+      "Le Bill of Rights",
+      "La Magna Carta",
+      "L'Habeas Corpus Act",
+      "Le Petition of Right"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 439,
+    "question": "Quelle guerre de succession du début du XVIIIe siècle impliqua les grandes puissances européennes autour du trône espagnol ?",
+    "choices": [
+      "Guerre de Succession d'Espagne",
+      "Guerre de Succession d'Autriche",
+      "Guerre de Sept Ans",
+      "Guerre de la Ligue d'Augsbourg"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 440,
+    "question": "Quel traité de 1713 mit fin à la guerre de Succession d'Espagne ?",
+    "choices": [
+      "Traité d'Utrecht",
+      "Traité de Rastatt uniquement",
+      "Traité de Westphalie",
+      "Traité de Nimègue"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 441,
+    "question": "Quelle guerre du milieu du XVIIIe siècle est considérée comme un premier conflit mondial ?",
+    "choices": [
+      "Guerre de Sept Ans",
+      "Guerre de Succession d'Autriche",
+      "Guerre de Succession d'Espagne",
+      "Guerre de Trente Ans"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 442,
+    "question": "Quelle impératrice autrichienne a régné au XVIIIe siècle, mère de Marie-Antoinette ?",
+    "choices": [
+      "Marie-Thérèse",
+      "Marie-Louise",
+      "Élisabeth d'Autriche",
+      "Anne d'Autriche"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 443,
+    "question": "Quelle impératrice russe a modernisé et agrandi la Russie au XVIIIe siècle ?",
+    "choices": [
+      "Catherine II",
+      "Élisabeth de Russie",
+      "Anna Ivanovna",
+      "Catherine Ire"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 444,
+    "question": "Quel tsar a fondé Saint-Pétersbourg et modernisé la Russie au début du XVIIIe siècle ?",
+    "choices": [
+      "Pierre le Grand",
+      "Ivan le Terrible",
+      "Alexis Ier",
+      "Boris Godounov"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 445,
+    "question": "Quel tsar russe est célèbre pour sa cruauté et son titre 'le Terrible' ?",
+    "choices": [
+      "Ivan IV",
+      "Ivan III",
+      "Pierre le Grand",
+      "Boris Godounov"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 446,
+    "question": "Quelle dynastie a régné sur la Russie de 1613 à 1917 ?",
+    "choices": [
+      "Les Romanov",
+      "Les Riourikides",
+      "Les Godounov",
+      "Les Chouiski"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 447,
+    "question": "Quel dernier tsar de Russie fut abdiqué puis exécuté en 1918 ?",
+    "choices": [
+      "Nicolas II",
+      "Alexandre III",
+      "Alexandre II",
+      "Nicolas Ier"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 448,
+    "question": "Quel groupe révolutionnaire russe a exécuté la famille impériale en 1918 ?",
+    "choices": [
+      "Les bolcheviks",
+      "Les mencheviks",
+      "Les socialistes-révolutionnaires",
+      "Les cadets"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 449,
+    "question": "Quelle guerre civile a suivi la révolution russe de 1917 jusqu'en 1922 ?",
+    "choices": [
+      "La guerre civile russe",
+      "La guerre russo-polonaise uniquement",
+      "La guerre russo-japonaise",
+      "La guerre de Crimée"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 450,
+    "question": "Quel dirigeant a succédé à Lénine à la tête de l'URSS ?",
+    "choices": [
+      "Staline",
+      "Trotski",
+      "Kamenev",
+      "Zinoviev"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 451,
+    "question": "Quelles purges soviétiques des années 1930 ont éliminé de nombreux opposants réels ou supposés ?",
+    "choices": [
+      "Les Grandes Purges",
+      "La déstalinisation",
+      "La collectivisation",
+      "Le Goulag uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 452,
+    "question": "Quel congrès de 1956 a marqué le début de la déstalinisation par Khrouchtchev ?",
+    "choices": [
+      "Le XXe congrès du PCUS",
+      "Le XXIIe congrès",
+      "Le XIXe congrès",
+      "Le congrès de Tachkent"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 453,
+    "question": "Quelle révolte de 1956 en Hongrie fut réprimée par l'URSS ?",
+    "choices": [
+      "Insurrection de Budapest",
+      "Printemps de Prague",
+      "Révolte de Poznań",
+      "Grève de Solidarność"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 454,
+    "question": "Quel mouvement réformiste tchécoslovaque de 1968 fut écrasé par les chars soviétiques ?",
+    "choices": [
+      "Le Printemps de Prague",
+      "L'insurrection de Budapest",
+      "La révolte de Poznań",
+      "La révolution de velours"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 455,
+    "question": "Quel roi de Prusse est connu comme 'le Roi-sergent' pour sa rigueur militaire ?",
+    "choices": [
+      "Frédéric-Guillaume Ier",
+      "Frédéric II",
+      "Guillaume Ier",
+      "Frédéric III"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 456,
+    "question": "Quel roi de Prusse, dit 'le Grand', fut un souverain éclairé et conquérant au XVIIIe siècle ?",
+    "choices": [
+      "Frédéric II",
+      "Frédéric-Guillaume Ier",
+      "Guillaume Ier",
+      "Frédéric-Guillaume III"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 457,
+    "question": "Quel royaume a orchestré l'unification allemande autour de lui au XIXe siècle ?",
+    "choices": [
+      "La Prusse",
+      "La Bavière",
+      "La Saxe",
+      "L'Autriche"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 458,
+    "question": "Quel empereur allemand a démis Bismarck de ses fonctions en 1890 ?",
+    "choices": [
+      "Guillaume Ier",
+      "Guillaume II",
+      "Frédéric III",
+      "Frédéric-Guillaume IV"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 459,
+    "question": "Quel empereur allemand a abdiqué à la fin de la Première Guerre mondiale en 1918 ?",
+    "choices": [
+      "Guillaume II",
+      "Guillaume Ier",
+      "Frédéric III",
+      "Otto von Bismarck"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 460,
+    "question": "Quelle république allemande fragile exista entre 1919 et 1933 ?",
+    "choices": [
+      "La République de Weimar",
+      "Le Reich allemand",
+      "La République fédérale",
+      "La Confédération germanique"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 461,
+    "question": "Quel traité de 1938 a cédé les Sudètes à l'Allemagne pour éviter la guerre ?",
+    "choices": [
+      "Les accords de Munich",
+      "Le pacte de Locarno",
+      "Le traité de Versailles",
+      "L'Anschluss"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 462,
+    "question": "Quel événement de 1936 a vu la remilitarisation de la Rhénanie par Hitler ?",
+    "choices": [
+      "Remilitarisation de la Rhénanie",
+      "L'Anschluss",
+      "La crise des Sudètes",
+      "L'invasion de la Pologne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 463,
+    "question": "Quelle guerre civile espagnole de 1936-1939 opposa républicains et nationalistes ?",
+    "choices": [
+      "La guerre civile espagnole",
+      "La guerre carliste",
+      "La guerre d'indépendance espagnole",
+      "La guerre hispano-américaine"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 464,
+    "question": "Quel général a pris le pouvoir en Espagne après la guerre civile de 1936-1939 ?",
+    "choices": [
+      "Francisco Franco",
+      "José Sanjurjo",
+      "Emilio Mola",
+      "Manuel Azaña"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 465,
+    "question": "Quel bombardement de 1937 pendant la guerre civile espagnole inspira un célèbre tableau de Picasso ?",
+    "choices": [
+      "Le bombardement de Guernica",
+      "Le bombardement de Madrid",
+      "Le bombardement de Barcelone",
+      "Le siège de l'Alcázar"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 466,
+    "question": "Quelle organisation a précédé l'ONU après la Première Guerre mondiale, dissoute en 1946 ?",
+    "choices": [
+      "La Société des Nations",
+      "L'OTAN",
+      "Le Comecon",
+      "L'Internationale socialiste"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 467,
+    "question": "En quelle année l'Organisation des Nations unies a-t-elle été fondée ?",
+    "choices": [
+      "1944",
+      "1945",
+      "1946",
+      "1948"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 468,
+    "question": "Quels pays sont membres permanents du Conseil de sécurité de l'ONU depuis 1945 ?",
+    "choices": [
+      "USA, URSS/Russie, Chine, France, Royaume-Uni",
+      "USA, Allemagne, Japon, France, Royaume-Uni",
+      "USA, Chine, Inde, France, Royaume-Uni",
+      "USA, Russie, Chine, Allemagne, Japon"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 469,
+    "question": "Quelle déclaration de 1948 a énoncé les droits fondamentaux de l'être humain ?",
+    "choices": [
+      "La Déclaration universelle des droits de l'homme",
+      "La Déclaration des droits de l'homme de 1789",
+      "La Charte de l'Atlantique",
+      "Le Bill of Rights"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 470,
+    "question": "Quelle charte de 1941 a posé les bases des relations internationales d'après-guerre entre Churchill et Roosevelt ?",
+    "choices": [
+      "La Charte de l'Atlantique",
+      "La Charte des Nations unies",
+      "La Déclaration de Yalta",
+      "Le traité de l'Atlantique Nord"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 471,
+    "question": "Quel siège naval japonais fut assiégé et pris par les Alliés en 1945, l'une des batailles les plus meurtrières du Pacifique ?",
+    "choices": [
+      "Bataille d'Iwo Jima",
+      "Bataille d'Okinawa",
+      "Bataille de Guadalcanal",
+      "Les deux (Iwo Jima et Okinawa)"
+    ],
+    "answer": 3,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 472,
+    "question": "Quel accord de 1944 a créé le système monétaire international d'après-guerre ?",
+    "choices": [
+      "Les accords de Bretton Woods",
+      "Le plan Marshall",
+      "Les accords du GATT",
+      "Le traité de Rome"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 473,
+    "question": "Quelles institutions financières internationales sont nées des accords de Bretton Woods ?",
+    "choices": [
+      "Le FMI et la Banque mondiale",
+      "L'OMC et l'ONU",
+      "L'OTAN et l'UE",
+      "Le GATT et l'OCDE"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 474,
+    "question": "Quel pays a testé sa première bombe atomique en 1949, rompant le monopole américain ?",
+    "choices": [
+      "L'URSS",
+      "La Chine",
+      "Le Royaume-Uni",
+      "La France"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 475,
+    "question": "Quel pays a testé sa première bombe atomique en 1964 ?",
+    "choices": [
+      "La Chine",
+      "La France",
+      "L'Inde",
+      "Israël"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 476,
+    "question": "Quel président français a doté la France de l'arme nucléaire dans les années 1960 ?",
+    "choices": [
+      "Charles de Gaulle",
+      "René Coty",
+      "Georges Pompidou",
+      "Vincent Auriol"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 477,
+    "question": "Quelle organisation de coopération économique européenne a précédé l'Union européenne actuelle ?",
+    "choices": [
+      "La CEE",
+      "L'AELE uniquement",
+      "Le Benelux uniquement",
+      "L'OECE uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 478,
+    "question": "Quel élargissement de 2004 a intégré dix nouveaux pays, majoritairement d'Europe de l'Est, dans l'UE ?",
+    "choices": [
+      "L'élargissement de 2004",
+      "L'élargissement de 1995",
+      "L'élargissement de 2007",
+      "L'élargissement de 2013"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 479,
+    "question": "Quel référendum de 2016 a initié la sortie du Royaume-Uni de l'Union européenne ?",
+    "choices": [
+      "Le Brexit",
+      "Le Grexit",
+      "Le référendum écossais",
+      "Le référendum irlandais"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 480,
+    "question": "En quelle année le Royaume-Uni a-t-il officiellement quitté l'Union européenne ?",
+    "choices": [
+      "2016",
+      "2020",
+      "2018",
+      "2022"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 481,
+    "question": "Quel attentat de 2015 a visé un magazine satirique français ?",
+    "choices": [
+      "L'attentat contre Charlie Hebdo",
+      "Les attentats du Bataclan",
+      "L'attentat de Nice",
+      "L'attentat de Toulouse"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 482,
+    "question": "Quels attentats ont frappé Paris en novembre 2015, dont le Bataclan ?",
+    "choices": [
+      "Les attentats du 13 novembre 2015",
+      "Les attentats de janvier 2015",
+      "L'attentat de Nice 2016",
+      "Les attentats de Bruxelles"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 483,
+    "question": "Quelle pandémie mondiale a débuté fin 2019 et s'est propagée en 2020 ?",
+    "choices": [
+      "La pandémie de Covid-19",
+      "La grippe H1N1",
+      "Le SRAS",
+      "Ebola"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 484,
+    "question": "Quel pays a envahi l'Ukraine en février 2022 ?",
+    "choices": [
+      "La Russie",
+      "La Biélorussie",
+      "La Pologne",
+      "La Moldavie"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 485,
+    "question": "Quelle péninsule ukrainienne a été annexée par la Russie en 2014 ?",
+    "choices": [
+      "La Crimée",
+      "Le Donbass",
+      "La Galicie",
+      "La Bucovine"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 486,
+    "question": "Quel mur symbolique séparait Berlin-Est et Berlin-Ouest pendant la guerre froide ?",
+    "choices": [
+      "Le mur de Berlin",
+      "Le rideau de fer (concept général)",
+      "La ligne Oder-Neisse",
+      "Le checkpoint Charlie uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Histoire"
+  },
+  {
+    "id": 487,
+    "question": "Quel point de passage célèbre séparait les secteurs américain et soviétique à Berlin ?",
+    "choices": [
+      "Checkpoint Charlie",
+      "Checkpoint Alpha",
+      "La porte de Brandebourg uniquement",
+      "Le pont Glienicke uniquement"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 488,
+    "question": "Quel pont berlinois était surnommé 'le pont des espions' pendant la guerre froide ?",
+    "choices": [
+      "Le pont Glienicke",
+      "Le pont Oberbaum",
+      "Le pont Molecule Man",
+      "Le pont de la Liberté"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 489,
+    "question": "Quelle crise de 1948-1949 vit Berlin-Ouest ravitaillé par un pont aérien ?",
+    "choices": [
+      "Le blocus de Berlin",
+      "La crise des missiles de Cuba",
+      "La crise de Suez",
+      "La crise de Berlin de 1961"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 490,
+    "question": "Quelle crise de 1956 vit la France et le Royaume-Uni intervenir en Égypte après la nationalisation d'un canal ?",
+    "choices": [
+      "La crise de Suez",
+      "La guerre des Six Jours",
+      "La guerre du Kippour",
+      "La crise de Berlin"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 491,
+    "question": "Quel président égyptien a nationalisé le canal de Suez en 1956 ?",
+    "choices": [
+      "Gamal Abdel Nasser",
+      "Anouar el-Sadate",
+      "Hosni Moubarak",
+      "Farouk Ier"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 492,
+    "question": "Quel président égyptien a signé les accords de paix de Camp David avec Israël en 1978 ?",
+    "choices": [
+      "Anouar el-Sadate",
+      "Gamal Abdel Nasser",
+      "Hosni Moubarak",
+      "Mohamed Naguib"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 493,
+    "question": "Quel Premier ministre israélien a signé les accords de Camp David avec l'Égypte ?",
+    "choices": [
+      "Menahem Begin",
+      "David Ben Gourion",
+      "Golda Meir",
+      "Yitzhak Rabin"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 494,
+    "question": "Quel Premier ministre israélien a signé les accords d'Oslo puis a été assassiné en 1995 ?",
+    "choices": [
+      "Yitzhak Rabin",
+      "Shimon Peres",
+      "Ehud Barak",
+      "Ariel Sharon"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 495,
+    "question": "Quel dirigeant palestinien a signé les accords d'Oslo avec Israël en 1993 ?",
+    "choices": [
+      "Yasser Arafat",
+      "Mahmoud Abbas",
+      "Ahmed Choukeiri",
+      "Khaled Mechaal"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 496,
+    "question": "Quel premier président de l'État d'Israël a proclamé son indépendance en 1948 ?",
+    "choices": [
+      "David Ben Gourion",
+      "Chaim Weizmann uniquement premier président",
+      "Golda Meir",
+      "Moshe Dayan"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 497,
+    "question": "Quelle guerre de 1948 a suivi immédiatement la création de l'État d'Israël ?",
+    "choices": [
+      "La guerre israélo-arabe de 1948",
+      "La guerre des Six Jours",
+      "La guerre du Kippour",
+      "La guerre du Liban"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 498,
+    "question": "Quel pays a envahi le Liban en 1982, provoquant une guerre prolongée ?",
+    "choices": [
+      "Israël",
+      "La Syrie",
+      "La Jordanie",
+      "L'Égypte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Histoire"
+  },
+  {
+    "id": 499,
+    "question": "Quelle guerre civile a ravagé le Liban de 1975 à 1990 ?",
+    "choices": [
+      "La guerre civile libanaise",
+      "La guerre du Liban de 1982 uniquement",
+      "La guerre des Six Jours",
+      "La guerre du Golfe"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  },
+  {
+    "id": 500,
+    "question": "Quel dirigeant libyen a été renversé et tué en 2011 lors du Printemps arabe ?",
+    "choices": [
+      "Mouammar Kadhafi",
+      "Idris Ier",
+      "Mahmoud Jibril",
+      "Abdel Fattah al-Sissi"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Histoire"
+  }
+]
