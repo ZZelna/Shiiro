@@ -1,0 +1,7502 @@
+[
+  {
+    "id": 1,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film a remporté l'Oscar du meilleur film en 1998 ?",
+    "choices": [
+      "Titanic",
+      "Avatar",
+      "Forrest Gump",
+      "Gladiator"
+    ],
+    "answer": 0,
+    "explanation": "Titanic a remporté 11 Oscars, dont celui du meilleur film."
+  },
+  {
+    "id": 2,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui a réalisé le film Titanic ?",
+    "choices": [
+      "James Cameron",
+      "Steven Spielberg",
+      "Christopher Nolan",
+      "Martin Scorsese"
+    ],
+    "answer": 0,
+    "explanation": "James Cameron a réalisé Titanic, sorti en 1997."
+  },
+  {
+    "id": 3,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Jack Dawson dans Titanic ?",
+    "choices": [
+      "Leonardo DiCaprio",
+      "Brad Pitt",
+      "Matt Damon",
+      "Tom Cruise"
+    ],
+    "answer": 0,
+    "explanation": "Leonardo DiCaprio interprète Jack Dawson."
+  },
+  {
+    "id": 4,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle actrice joue Rose dans Titanic ?",
+    "choices": [
+      "Kate Winslet",
+      "Nicole Kidman",
+      "Sandra Bullock",
+      "Julia Roberts"
+    ],
+    "answer": 0,
+    "explanation": "Kate Winslet interprète Rose DeWitt Bukater."
+  },
+  {
+    "id": 5,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quelle saga retrouve-t-on le personnage de Harry Potter ?",
+    "choices": [
+      "Harry Potter",
+      "Le Seigneur des Anneaux",
+      "Star Wars",
+      "Twilight"
+    ],
+    "answer": 0,
+    "explanation": "Harry Potter est le héros de la saga adaptée des romans de J. K. Rowling."
+  },
+  {
+    "id": 6,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui joue le rôle de Harry Potter au cinéma ?",
+    "choices": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Elijah Wood",
+      "Tom Holland"
+    ],
+    "answer": 0,
+    "explanation": "Daniel Radcliffe incarne Harry Potter dans les huit films."
+  },
+  {
+    "id": 7,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du sorcier ennemi de Harry Potter ?",
+    "choices": [
+      "Lord Voldemort",
+      "Severus Rogue",
+      "Sirius Black",
+      "Lucius Malefoy"
+    ],
+    "answer": 0,
+    "explanation": "Lord Voldemort est le principal antagoniste de la saga."
+  },
+  {
+    "id": 8,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quelle saga apparaît Dark Vador ?",
+    "choices": [
+      "Star Wars",
+      "Star Trek",
+      "Avatar",
+      "Dune"
+    ],
+    "answer": 0,
+    "explanation": "Dark Vador est l'un des personnages emblématiques de Star Wars."
+  },
+  {
+    "id": 9,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui est le créateur de la saga Star Wars ?",
+    "choices": [
+      "George Lucas",
+      "Steven Spielberg",
+      "James Cameron",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "George Lucas a créé Star Wars en 1977."
+  },
+  {
+    "id": 10,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation met en scène un lion nommé Simba ?",
+    "choices": [
+      "Le Roi Lion",
+      "Madagascar",
+      "Shrek",
+      "L'Âge de glace"
+    ],
+    "answer": 0,
+    "explanation": "Simba est le héros du film d'animation Le Roi Lion."
+  },
+  {
+    "id": 11,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Iron Man dans l'univers cinématographique Marvel ?",
+    "choices": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "answer": 0,
+    "explanation": "Robert Downey Jr. interprète Tony Stark, alias Iron Man."
+  },
+  {
+    "id": 12,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel super-héros est aussi connu sous le nom de Bruce Wayne ?",
+    "choices": [
+      "Batman",
+      "Superman",
+      "Spider-Man",
+      "Flash"
+    ],
+    "answer": 0,
+    "explanation": "Bruce Wayne est l'identité secrète de Batman."
+  },
+  {
+    "id": 13,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Captain America dans les films Marvel ?",
+    "choices": [
+      "Chris Evans",
+      "Chris Pratt",
+      "Tom Holland",
+      "Ryan Reynolds"
+    ],
+    "answer": 0,
+    "explanation": "Chris Evans joue Steve Rogers, alias Captain America."
+  },
+  {
+    "id": 14,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Spider-Man dans le MCU depuis 2016 ?",
+    "choices": [
+      "Tom Holland",
+      "Tobey Maguire",
+      "Andrew Garfield",
+      "Timothée Chalamet"
+    ],
+    "answer": 0,
+    "explanation": "Tom Holland interprète Spider-Man dans l'univers cinématographique Marvel."
+  },
+  {
+    "id": 15,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film raconte l'histoire d'un parc rempli de dinosaures clonés ?",
+    "choices": [
+      "Jurassic Park",
+      "King Kong",
+      "Godzilla",
+      "Avatar"
+    ],
+    "answer": 0,
+    "explanation": "Jurassic Park est réalisé par Steven Spielberg et sorti en 1993."
+  },
+  {
+    "id": 16,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui a réalisé le premier film Jurassic Park ?",
+    "choices": [
+      "Steven Spielberg",
+      "James Cameron",
+      "Peter Jackson",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "Steven Spielberg a réalisé Jurassic Park."
+  },
+  {
+    "id": 17,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation met en scène une reine nommée Elsa ?",
+    "choices": [
+      "La Reine des Neiges",
+      "Raiponce",
+      "Vaiana",
+      "Encanto"
+    ],
+    "answer": 0,
+    "explanation": "Elsa est l'un des personnages principaux de La Reine des Neiges."
+  },
+  {
+    "id": 18,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage accompagne souvent Elsa dans La Reine des Neiges ?",
+    "choices": [
+      "Anna",
+      "Ariel",
+      "Belle",
+      "Jasmine"
+    ],
+    "answer": 0,
+    "explanation": "Anna est la sœur d'Elsa."
+  },
+  {
+    "id": 19,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quel film retrouve-t-on le personnage de Buzz l'Éclair ?",
+    "choices": [
+      "Toy Story",
+      "Cars",
+      "Monstres & Cie",
+      "Le Monde de Nemo"
+    ],
+    "answer": 0,
+    "explanation": "Buzz l'Éclair est l'un des héros de Toy Story."
+  },
+  {
+    "id": 20,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel studio a produit la saga Toy Story ?",
+    "choices": [
+      "Pixar",
+      "DreamWorks",
+      "Illumination",
+      "Sony Pictures Animation"
+    ],
+    "answer": 0,
+    "explanation": "Toy Story est le premier long métrage d'animation réalisé par Pixar."
+  },
+  {
+    "id": 21,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel poisson-clown est le héros du film Le Monde de Nemo ?",
+    "choices": [
+      "Nemo",
+      "Dory",
+      "Marlin",
+      "Bruce"
+    ],
+    "answer": 0,
+    "explanation": "Nemo est le jeune poisson-clown recherché par son père Marlin."
+  },
+  {
+    "id": 22,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage souffre de pertes de mémoire dans Le Monde de Nemo ?",
+    "choices": [
+      "Dory",
+      "Nemo",
+      "Marlin",
+      "Gill"
+    ],
+    "answer": 0,
+    "explanation": "Dory est connue pour ses pertes de mémoire à court terme."
+  },
+  {
+    "id": 23,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel ogre est le héros de la saga Shrek ?",
+    "choices": [
+      "Shrek",
+      "Fiona",
+      "L'Âne",
+      "Lord Farquaad"
+    ],
+    "answer": 0,
+    "explanation": "Shrek est le personnage principal des films du même nom."
+  },
+  {
+    "id": 24,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel studio est à l'origine de la saga Shrek ?",
+    "choices": [
+      "DreamWorks Animation",
+      "Pixar",
+      "Disney",
+      "Illumination"
+    ],
+    "answer": 0,
+    "explanation": "Shrek est une production de DreamWorks Animation."
+  },
+  {
+    "id": 25,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel panda devient expert en kung-fu dans une célèbre saga d'animation ?",
+    "choices": [
+      "Po",
+      "Tigresse",
+      "Shifu",
+      "Tai Lung"
+    ],
+    "answer": 0,
+    "explanation": "Po est le héros de la saga Kung Fu Panda."
+  },
+  {
+    "id": 26,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quel film d'animation trouve-t-on Flash, le paresseux ?",
+    "choices": [
+      "Zootopie",
+      "Les Indestructibles",
+      "Moi, moche et méchant",
+      "Rio"
+    ],
+    "answer": 0,
+    "explanation": "Flash est le célèbre paresseux de Zootopie."
+  },
+  {
+    "id": 27,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage jaune accompagne Gru dans Moi, moche et méchant ?",
+    "choices": [
+      "Les Minions",
+      "Les Schtroumpfs",
+      "Les Lapins Crétins",
+      "Les Pingouins"
+    ],
+    "answer": 0,
+    "explanation": "Les Minions sont les fidèles assistants de Gru."
+  },
+  {
+    "id": 28,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Jack Sparrow dans Pirates des Caraïbes ?",
+    "choices": [
+      "Johnny Depp",
+      "Orlando Bloom",
+      "Brad Pitt",
+      "Tom Cruise"
+    ],
+    "answer": 0,
+    "explanation": "Johnny Depp est mondialement connu pour son rôle de Jack Sparrow."
+  },
+  {
+    "id": 29,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quelle saga retrouve-t-on le capitaine Jack Sparrow ?",
+    "choices": [
+      "Pirates des Caraïbes",
+      "Indiana Jones",
+      "Le Seigneur des Anneaux",
+      "Mission Impossible"
+    ],
+    "answer": 0,
+    "explanation": "Jack Sparrow est le personnage principal de Pirates des Caraïbes."
+  },
+  {
+    "id": 30,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Indiana Jones ?",
+    "choices": [
+      "Harrison Ford",
+      "Tom Hanks",
+      "Mel Gibson",
+      "Russell Crowe"
+    ],
+    "answer": 0,
+    "explanation": "Harrison Ford incarne Indiana Jones dans la célèbre saga d'aventure."
+  },
+  {
+    "id": 31,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui a réalisé la saga Le Seigneur des Anneaux ?",
+    "choices": [
+      "Peter Jackson",
+      "James Cameron",
+      "Steven Spielberg",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "Peter Jackson a réalisé la trilogie Le Seigneur des Anneaux."
+  },
+  {
+    "id": 32,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Frodon Sacquet dans Le Seigneur des Anneaux ?",
+    "choices": [
+      "Elijah Wood",
+      "Orlando Bloom",
+      "Ian McKellen",
+      "Sean Astin"
+    ],
+    "answer": 0,
+    "explanation": "Elijah Wood incarne Frodon Sacquet dans la trilogie."
+  },
+  {
+    "id": 33,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage prononce la célèbre phrase « Mon précieux » ?",
+    "choices": [
+      "Gollum",
+      "Frodon",
+      "Gandalf",
+      "Aragorn"
+    ],
+    "answer": 0,
+    "explanation": "Gollum appelle l'Anneau unique « mon précieux »."
+  },
+  {
+    "id": 34,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel magicien guide la Communauté de l'Anneau ?",
+    "choices": [
+      "Gandalf",
+      "Saroumane",
+      "Radagast",
+      "Elrond"
+    ],
+    "answer": 0,
+    "explanation": "Gandalf est le principal magicien allié des héros."
+  },
+  {
+    "id": 35,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Neo dans Matrix ?",
+    "choices": [
+      "Keanu Reeves",
+      "Tom Cruise",
+      "Matt Damon",
+      "Brad Pitt"
+    ],
+    "answer": 0,
+    "explanation": "Keanu Reeves joue Neo dans la saga Matrix."
+  },
+  {
+    "id": 36,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle pilule Neo choisit-il pour découvrir la vérité ?",
+    "choices": [
+      "La pilule rouge",
+      "La pilule bleue",
+      "La pilule verte",
+      "La pilule jaune"
+    ],
+    "answer": 0,
+    "explanation": "Neo choisit la pilule rouge pour découvrir la réalité."
+  },
+  {
+    "id": 37,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Forrest Gump ?",
+    "choices": [
+      "Tom Hanks",
+      "Robin Williams",
+      "Tom Cruise",
+      "Mel Gibson"
+    ],
+    "answer": 0,
+    "explanation": "Tom Hanks a remporté l'Oscar du meilleur acteur pour Forrest Gump."
+  },
+  {
+    "id": 38,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel boxeur est entraîné par Mickey dans la saga Rocky ?",
+    "choices": [
+      "Rocky Balboa",
+      "Apollo Creed",
+      "Ivan Drago",
+      "Clubber Lang"
+    ],
+    "answer": 0,
+    "explanation": "Mickey Goldmill est le premier entraîneur de Rocky Balboa."
+  },
+  {
+    "id": 39,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Rocky Balboa ?",
+    "choices": [
+      "Sylvester Stallone",
+      "Arnold Schwarzenegger",
+      "Bruce Willis",
+      "Jean-Claude Van Damme"
+    ],
+    "answer": 0,
+    "explanation": "Sylvester Stallone est le créateur et l'interprète de Rocky."
+  },
+  {
+    "id": 40,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne le Terminator T-800 dans la célèbre saga ?",
+    "choices": [
+      "Arnold Schwarzenegger",
+      "Sylvester Stallone",
+      "Bruce Willis",
+      "Keanu Reeves"
+    ],
+    "answer": 0,
+    "explanation": "Arnold Schwarzenegger est mondialement connu pour son rôle du T-800 dans Terminator."
+  },
+  {
+    "id": 41,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète John McClane dans la saga Die Hard ?",
+    "choices": [
+      "Bruce Willis",
+      "Mel Gibson",
+      "Arnold Schwarzenegger",
+      "Sylvester Stallone"
+    ],
+    "answer": 0,
+    "explanation": "Bruce Willis est devenu célèbre grâce à son rôle de John McClane."
+  },
+  {
+    "id": 42,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Ethan Hunt dans la saga Mission: Impossible ?",
+    "choices": [
+      "Tom Cruise",
+      "Matt Damon",
+      "Brad Pitt",
+      "George Clooney"
+    ],
+    "answer": 0,
+    "explanation": "Tom Cruise interprète Ethan Hunt depuis 1996."
+  },
+  {
+    "id": 43,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur joue Jason Bourne dans les trois premiers films de la saga ?",
+    "choices": [
+      "Matt Damon",
+      "Jeremy Renner",
+      "Ben Affleck",
+      "Mark Wahlberg"
+    ],
+    "answer": 0,
+    "explanation": "Matt Damon incarne Jason Bourne dans la majorité des films de la saga."
+  },
+  {
+    "id": 44,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète le Joker dans The Dark Knight (2008) ?",
+    "choices": [
+      "Heath Ledger",
+      "Joaquin Phoenix",
+      "Jared Leto",
+      "Jack Nicholson"
+    ],
+    "answer": 0,
+    "explanation": "Heath Ledger a remporté un Oscar posthume pour son interprétation du Joker."
+  },
+  {
+    "id": 45,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel réalisateur est à l'origine de la trilogie The Dark Knight ?",
+    "choices": [
+      "Christopher Nolan",
+      "Tim Burton",
+      "Zack Snyder",
+      "James Wan"
+    ],
+    "answer": 0,
+    "explanation": "Christopher Nolan a réalisé Batman Begins, The Dark Knight et The Dark Knight Rises."
+  },
+  {
+    "id": 46,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film raconte l'histoire d'un clown nommé Arthur Fleck ?",
+    "choices": [
+      "Joker",
+      "The Batman",
+      "Suicide Squad",
+      "Shazam!"
+    ],
+    "answer": 0,
+    "explanation": "Arthur Fleck est le personnage principal du film Joker (2019)."
+  },
+  {
+    "id": 47,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Arthur Fleck dans Joker (2019) ?",
+    "choices": [
+      "Joaquin Phoenix",
+      "Heath Ledger",
+      "Jared Leto",
+      "Christian Bale"
+    ],
+    "answer": 0,
+    "explanation": "Joaquin Phoenix a remporté l'Oscar du meilleur acteur pour ce rôle."
+  },
+  {
+    "id": 48,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur incarne Thor dans les films Marvel ?",
+    "choices": [
+      "Chris Hemsworth",
+      "Chris Evans",
+      "Chris Pratt",
+      "Tom Hiddleston"
+    ],
+    "answer": 0,
+    "explanation": "Chris Hemsworth interprète Thor depuis 2011."
+  },
+  {
+    "id": 49,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur joue Hulk dans la majorité des films du MCU à partir de 2012 ?",
+    "choices": [
+      "Mark Ruffalo",
+      "Edward Norton",
+      "Eric Bana",
+      "Chris Evans"
+    ],
+    "answer": 0,
+    "explanation": "Mark Ruffalo reprend le rôle de Bruce Banner/Hulk depuis Avengers."
+  },
+  {
+    "id": 50,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le véritable nom de Black Widow dans les films Marvel ?",
+    "choices": [
+      "Natasha Romanoff",
+      "Wanda Maximoff",
+      "Carol Danvers",
+      "Peggy Carter"
+    ],
+    "answer": 0,
+    "explanation": "Natasha Romanoff est l'identité de Black Widow, interprétée par Scarlett Johansson."
+  },
+  {
+    "id": 51,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Doctor Strange dans le MCU ?",
+    "choices": [
+      "Benedict Cumberbatch",
+      "Tom Hiddleston",
+      "Benedict Wong",
+      "Chris Pratt"
+    ],
+    "answer": 0,
+    "explanation": "Benedict Cumberbatch incarne Stephen Strange depuis 2016."
+  },
+  {
+    "id": 52,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Loki dans les films Marvel ?",
+    "choices": [
+      "Tom Hiddleston",
+      "Chris Hemsworth",
+      "Tom Holland",
+      "Sebastian Stan"
+    ],
+    "answer": 0,
+    "explanation": "Tom Hiddleston joue Loki depuis le film Thor (2011)."
+  },
+  {
+    "id": 53,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel héros Marvel utilise un bouclier en vibranium ?",
+    "choices": [
+      "Captain America",
+      "Iron Man",
+      "Thor",
+      "Black Panther"
+    ],
+    "answer": 0,
+    "explanation": "Le bouclier de Captain America est fabriqué en vibranium."
+  },
+  {
+    "id": 54,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du royaume de Black Panther ?",
+    "choices": [
+      "Wakanda",
+      "Asgard",
+      "Sokovie",
+      "Latverie"
+    ],
+    "answer": 0,
+    "explanation": "Black Panther est le roi du Wakanda."
+  },
+  {
+    "id": 55,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Marvel réunit pour la première fois les principaux Avengers ?",
+    "choices": [
+      "Avengers",
+      "Iron Man 2",
+      "Captain America : First Avenger",
+      "Thor"
+    ],
+    "answer": 0,
+    "explanation": "Avengers (2012) est le premier film réunissant les héros du MCU."
+  },
+  {
+    "id": 56,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le principal antagoniste dans Avengers: Infinity War ?",
+    "choices": [
+      "Thanos",
+      "Ultron",
+      "Loki",
+      "Crâne Rouge"
+    ],
+    "answer": 0,
+    "explanation": "Thanos cherche à réunir les six Pierres d'Infinité."
+  },
+  {
+    "id": 57,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de Pierres d'Infinité existe-t-il dans le MCU ?",
+    "choices": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "answer": 0,
+    "explanation": "Les six Pierres d'Infinité sont : Espace, Temps, Réalité, Pouvoir, Esprit et Âme."
+  },
+  {
+    "id": 58,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage prononce la phrase « Je suis Iron Man » à la fin d'Avengers: Endgame ?",
+    "choices": [
+      "Tony Stark",
+      "Steve Rogers",
+      "Thor",
+      "Bruce Banner"
+    ],
+    "answer": 0,
+    "explanation": "Tony Stark prononce cette phrase avant d'utiliser les Pierres d'Infinité."
+  },
+  {
+    "id": 59,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Black Panther dans le MCU ?",
+    "choices": [
+      "Chadwick Boseman",
+      "Michael B. Jordan",
+      "Anthony Mackie",
+      "Idris Elba"
+    ],
+    "answer": 0,
+    "explanation": "Chadwick Boseman a incarné Black Panther de 2016 à 2020."
+  },
+  {
+    "id": 60,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney met en scène une jeune Polynésienne nommée Vaiana ?",
+    "choices": [
+      "Vaiana : La Légende du bout du monde",
+      "Raiponce",
+      "Encanto",
+      "La Petite Sirène"
+    ],
+    "answer": 0,
+    "explanation": "Vaiana est l'héroïne du film d'animation Disney sorti en 2016."
+  },
+  {
+    "id": 61,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage accompagne Vaiana durant son aventure ?",
+    "choices": [
+      "Maui",
+      "Olaf",
+      "Stitch",
+      "Tarzan"
+    ],
+    "answer": 0,
+    "explanation": "Maui, un demi-dieu, accompagne Vaiana tout au long de son voyage."
+  },
+  {
+    "id": 62,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est surnommé « l'expérience 626 » ?",
+    "choices": [
+      "Stitch",
+      "Baymax",
+      "Wall-E",
+      "Bambi"
+    ],
+    "answer": 0,
+    "explanation": "Stitch est l'expérience génétique 626 dans le film Lilo & Stitch."
+  },
+  {
+    "id": 63,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel robot est le héros du film WALL-E ?",
+    "choices": [
+      "WALL-E",
+      "EVE",
+      "Baymax",
+      "R2-D2"
+    ],
+    "answer": 0,
+    "explanation": "WALL-E est un robot chargé de nettoyer la Terre."
+  },
+  {
+    "id": 64,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel robot blanc gonflable apparaît dans Les Nouveaux Héros ?",
+    "choices": [
+      "Baymax",
+      "WALL-E",
+      "Optimus Prime",
+      "Bender"
+    ],
+    "answer": 0,
+    "explanation": "Baymax est un robot infirmier créé par Tadashi."
+  },
+  {
+    "id": 65,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire de Raiponce ?",
+    "choices": [
+      "Raiponce",
+      "La Belle et la Bête",
+      "Cendrillon",
+      "Blanche-Neige"
+    ],
+    "answer": 0,
+    "explanation": "Raiponce est adapté du célèbre conte des frères Grimm."
+  },
+  {
+    "id": 66,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du caméléon de Raiponce ?",
+    "choices": [
+      "Pascal",
+      "Maximus",
+      "Bruno",
+      "Figaro"
+    ],
+    "answer": 0,
+    "explanation": "Pascal est le fidèle caméléon de Raiponce."
+  },
+  {
+    "id": 67,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel cheval aide Flynn Rider dans Raiponce ?",
+    "choices": [
+      "Maximus",
+      "Spirit",
+      "Philippe",
+      "Pégase"
+    ],
+    "answer": 0,
+    "explanation": "Maximus est le cheval de la garde royale."
+  },
+  {
+    "id": 68,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney met en scène une famille aux pouvoirs extraordinaires vivant en Colombie ?",
+    "choices": [
+      "Encanto",
+      "Coco",
+      "Luca",
+      "Vice-Versa"
+    ],
+    "answer": 0,
+    "explanation": "Encanto raconte l'histoire de la famille Madrigal."
+  },
+  {
+    "id": 69,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est la seule membre de la famille Madrigal à ne pas avoir de pouvoir magique au début du film Encanto ?",
+    "choices": [
+      "Mirabel",
+      "Isabela",
+      "Luisa",
+      "Dolores"
+    ],
+    "answer": 0,
+    "explanation": "Mirabel est la seule à ne pas recevoir de don magique."
+  },
+  {
+    "id": 70,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation se déroule pendant la fête mexicaine du Día de los Muertos ?",
+    "choices": [
+      "Coco",
+      "Soul",
+      "Luca",
+      "Rio"
+    ],
+    "answer": 0,
+    "explanation": "Coco suit Miguel dans le monde des morts durant le Día de los Muertos." 
+  },
+  {
+    "id": 71,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom du jeune héros du film Coco ?",
+    "choices": [
+      "Miguel",
+      "Hector",
+      "Ernesto",
+      "Diego"
+    ],
+    "answer": 0,
+    "explanation": "Miguel rêve de devenir musicien malgré l'interdiction de sa famille."
+  },
+  {
+    "id": 72,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar suit les émotions vivant dans l'esprit d'une jeune fille ?",
+    "choices": [
+      "Vice-Versa",
+      "Soul",
+      "Luca",
+      "Alerte Rouge"
+    ],
+    "answer": 0,
+    "explanation": "Vice-Versa met en scène Joie, Tristesse, Colère, Peur et Dégoût."
+  },
+  {
+    "id": 73,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle émotion est représentée par un personnage jaune dans Vice-Versa ?",
+    "choices": [
+      "Joie",
+      "Tristesse",
+      "Peur",
+      "Dégoût"
+    ],
+    "answer": 0,
+    "explanation": "Joie est représentée en jaune et cherche à rendre Riley heureuse."
+  },
+  {
+    "id": 74,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un rat passionné de cuisine ?",
+    "choices": [
+      "Ratatouille",
+      "Cars",
+      "Le Monde de Nemo",
+      "Toy Story"
+    ],
+    "answer": 0,
+    "explanation": "Rémy est un rat qui rêve de devenir un grand chef cuisinier."
+  },
+  {
+    "id": 75,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quelle ville se déroule principalement Ratatouille ?",
+    "choices": [
+      "Paris",
+      "Londres",
+      "Rome",
+      "New York"
+    ],
+    "answer": 0,
+    "explanation": "L'action de Ratatouille se déroule à Paris."
+  },
+  {
+    "id": 76,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar met en scène des voitures vivantes ?",
+    "choices": [
+      "Cars",
+      "Planes",
+      "Turbo",
+      "Robots"
+    ],
+    "answer": 0,
+    "explanation": "Cars suit les aventures de Flash McQueen."
+  },
+  {
+    "id": 77,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la voiture rouge héroïne de Cars ?",
+    "choices": [
+      "Flash McQueen",
+      "Martin",
+      "Doc Hudson",
+      "Francesco Bernoulli"
+    ],
+    "answer": 0,
+    "explanation": "Flash McQueen est le personnage principal de la saga Cars."
+  },
+  {
+    "id": 78,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est la dépanneuse de Cars ?",
+    "choices": [
+      "Martin",
+      "Doc Hudson",
+      "Ramone",
+      "Luigi"
+    ],
+    "answer": 0,
+    "explanation": "Martin est la dépanneuse rouillée et le meilleur ami de Flash McQueen."
+  },
+  {
+    "id": 79,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un vieil homme qui s'envole grâce à des milliers de ballons ?",
+    "choices": [
+      "Là-haut",
+      "Soul",
+      "En Avant",
+      "Le Voyage d'Arlo"
+    ],
+    "answer": 0,
+    "explanation": "Là-haut (Up) raconte le voyage de Carl Fredricksen."
+  },
+  {
+    "id": 80,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom du jeune scout qui accompagne Carl dans Là-haut ?",
+    "choices": [
+      "Russell",
+      "Kevin",
+      "Dug",
+      "Andy"
+    ],
+    "answer": 0,
+    "explanation": "Russell accompagne Carl dans son incroyable aventure vers les chutes du Paradis."
+  },
+  {
+    "id": 81,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de l'oiseau géant multicolore dans Là-haut ?",
+    "choices": [
+      "Kevin",
+      "Dug",
+      "Russell",
+      "Alpha"
+    ],
+    "answer": 0,
+    "explanation": "Kevin est un oiseau rare découvert par Carl et Russell."
+  },
+  {
+    "id": 82,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du chien capable de parler grâce à un collier dans Là-haut ?",
+    "choices": [
+      "Dug",
+      "Bolt",
+      "Max",
+      "Pluto"
+    ],
+    "answer": 0,
+    "explanation": "Dug communique grâce à un collier qui traduit ses pensées."
+  },
+  {
+    "id": 83,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar suit un garçon nommé Luca vivant sur la côte italienne ?",
+    "choices": [
+      "Luca",
+      "Coco",
+      "Soul",
+      "En Avant"
+    ],
+    "answer": 0,
+    "explanation": "Luca est un jeune monstre marin découvrant le monde des humains."
+  },
+  {
+    "id": 84,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le meilleur ami de Luca dans le film du même nom ?",
+    "choices": [
+      "Alberto",
+      "Giulia",
+      "Massimo",
+      "Ercole"
+    ],
+    "answer": 0,
+    "explanation": "Alberto est le premier ami de Luca à la surface."
+  },
+  {
+    "id": 85,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un professeur de musique nommé Joe Gardner ?",
+    "choices": [
+      "Soul",
+      "Vice-Versa",
+      "Coco",
+      "Là-haut"
+    ],
+    "answer": 0,
+    "explanation": "Soul suit Joe Gardner dans une aventure entre la Terre et l'au-delà."
+  },
+  {
+    "id": 86,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'un éléphanteau capable de voler ?",
+    "choices": [
+      "Dumbo",
+      "Bambi",
+      "Tarzan",
+      "Pinocchio"
+    ],
+    "answer": 0,
+    "explanation": "Dumbo vole grâce à ses immenses oreilles."
+  },
+  {
+    "id": 87,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est un pantin de bois qui rêve de devenir un vrai petit garçon ?",
+    "choices": [
+      "Pinocchio",
+      "Peter Pan",
+      "Bambi",
+      "Robin des Bois"
+    ],
+    "answer": 0,
+    "explanation": "Pinocchio est créé par Geppetto."
+  },
+  {
+    "id": 88,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel garçon refuse de grandir dans un célèbre film Disney ?",
+    "choices": [
+      "Peter Pan",
+      "Pinocchio",
+      "Mowgli",
+      "Aladdin"
+    ],
+    "answer": 0,
+    "explanation": "Peter Pan vit au Pays Imaginaire."
+  },
+  {
+    "id": 89,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la fée qui accompagne Peter Pan ?",
+    "choices": [
+      "Clochette",
+      "Flora",
+      "Merryweather",
+      "Blue"
+    ],
+    "answer": 0,
+    "explanation": "La fée Clochette est l'amie fidèle de Peter Pan."
+  },
+  {
+    "id": 90,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel capitaine est le principal ennemi de Peter Pan ?",
+    "choices": [
+      "Capitaine Crochet",
+      "Barbe Noire",
+      "Jack Sparrow",
+      "Long John Silver"
+    ],
+    "answer": 0,
+    "explanation": "Le Capitaine Crochet est l'antagoniste principal de Peter Pan."
+  },
+  {
+    "id": 91,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel jeune garçon est élevé par des loups dans Le Livre de la Jungle ?",
+    "choices": [
+      "Mowgli",
+      "Tarzan",
+      "Peter Pan",
+      "Aladdin"
+    ],
+    "answer": 0,
+    "explanation": "Mowgli est le personnage principal du Livre de la Jungle."
+  },
+  {
+    "id": 92,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel tigre est le principal ennemi de Mowgli ?",
+    "choices": [
+      "Shere Khan",
+      "Bagheera",
+      "Baloo",
+      "Kaa"
+    ],
+    "answer": 0,
+    "explanation": "Shere Khan est le tigre qui souhaite éliminer Mowgli."
+  },
+  {
+    "id": 93,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel ours devient le meilleur ami de Mowgli ?",
+    "choices": [
+      "Baloo",
+      "Bagheera",
+      "Akela",
+      "Louis"
+    ],
+    "answer": 0,
+    "explanation": "Baloo apprend à Mowgli à profiter de la vie."
+  },
+  {
+    "id": 94,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est surnommé le Roi de la jungle dans Le Livre de la Jungle ?",
+    "choices": [
+      "Le roi Louie",
+      "Shere Khan",
+      "Baloo",
+      "Bagheera"
+    ],
+    "answer": 0,
+    "explanation": "Le roi Louie est un orang-outan qui rêve de devenir humain."
+  },
+  {
+    "id": 95,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel héros Disney possède une lampe magique ?",
+    "choices": [
+      "Aladdin",
+      "Hercule",
+      "Tarzan",
+      "Simba"
+    ],
+    "answer": 0,
+    "explanation": "Aladdin découvre une lampe contenant un Génie."
+  },
+  {
+    "id": 96,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le Génie qui aide Aladdin ?",
+    "choices": [
+      "Le Génie",
+      "Jafar",
+      "Abu",
+      "Iago"
+    ],
+    "answer": 0,
+    "explanation": "Le Génie exauce trois vœux au propriétaire de la lampe."
+  },
+  {
+    "id": 97,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du perroquet de Jafar dans Aladdin ?",
+    "choices": [
+      "Iago",
+      "Abu",
+      "Rajah",
+      "Zazu"
+    ],
+    "answer": 0,
+    "explanation": "Iago est le perroquet sarcastique de Jafar."
+  },
+  {
+    "id": 98,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel lion est le père de Simba dans Le Roi Lion ?",
+    "choices": [
+      "Mufasa",
+      "Scar",
+      "Kovu",
+      "Zazu"
+    ],
+    "answer": 0,
+    "explanation": "Mufasa est le roi de la Terre des Lions et le père de Simba."
+  },
+  {
+    "id": 99,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel lion est l'oncle de Simba et le principal méchant du Roi Lion ?",
+    "choices": [
+      "Scar",
+      "Mufasa",
+      "Kion",
+      "Rafiki"
+    ],
+    "answer": 0,
+    "explanation": "Scar trahit son frère Mufasa afin de prendre le pouvoir."
+  },
+  {
+    "id": 100,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quels sont les deux meilleurs amis de Simba dans Le Roi Lion ?",
+    "choices": [
+      "Timon et Pumbaa",
+      "Baloo et Bagheera",
+      "Shrek et L'Âne",
+      "Buzz et Woody"
+    ],
+    "answer": 0,
+    "explanation": "Timon le suricate et Pumbaa le phacochère recueillent Simba après son exil."
+  },
+  {
+    "id": 101,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel singe accompagne Aladdin dans ses aventures ?",
+    "choices": [
+      "Abu",
+      "Iago",
+      "Rajah",
+      "Milo"
+    ],
+    "answer": 0,
+    "explanation": "Abu est le fidèle singe d'Aladdin."
+  },
+  {
+    "id": 102,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel tigre est l'animal de compagnie de la princesse Jasmine ?",
+    "choices": [
+      "Rajah",
+      "Shere Khan",
+      "Bagheera",
+      "Kovu"
+    ],
+    "answer": 0,
+    "explanation": "Rajah est le tigre protecteur de la princesse Jasmine."
+  },
+  {
+    "id": 103,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel héros Disney vit dans la jungle avec des gorilles ?",
+    "choices": [
+      "Tarzan",
+      "Mowgli",
+      "Hercule",
+      "Peter Pan"
+    ],
+    "answer": 0,
+    "explanation": "Tarzan est élevé par une famille de gorilles."
+  },
+  {
+    "id": 104,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom de la jeune femme rencontrée par Tarzan ?",
+    "choices": [
+      "Jane",
+      "Anna",
+      "Alice",
+      "Esmeralda"
+    ],
+    "answer": 0,
+    "explanation": "Jane Porter tombe amoureuse de Tarzan."
+  },
+  {
+    "id": 105,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel héros Disney possède une force extraordinaire grâce aux dieux grecs ?",
+    "choices": [
+      "Hercule",
+      "Aladdin",
+      "Tarzan",
+      "Robin des Bois"
+    ],
+    "answer": 0,
+    "explanation": "Hercule est inspiré du héros de la mythologie grecque."
+  },
+  {
+    "id": 106,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui est le principal méchant dans le film Hercule de Disney ?",
+    "choices": [
+      "Hadès",
+      "Zeus",
+      "Poséidon",
+      "Arès"
+    ],
+    "answer": 0,
+    "explanation": "Hadès tente de renverser Zeus et de vaincre Hercule."
+  },
+  {
+    "id": 107,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage Disney possède un long nez lorsqu'il ment ?",
+    "choices": [
+      "Pinocchio",
+      "Peter Pan",
+      "Bambi",
+      "Geppetto"
+    ],
+    "answer": 0,
+    "explanation": "Le nez de Pinocchio s'allonge à chaque mensonge."
+  },
+  {
+    "id": 108,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artisan fabrique Pinocchio ?",
+    "choices": [
+      "Geppetto",
+      "Merlin",
+      "Gepard",
+      "Jiminy"
+    ],
+    "answer": 0,
+    "explanation": "Geppetto est le menuisier qui crée Pinocchio."
+  },
+  {
+    "id": 109,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel insecte sert de conscience à Pinocchio ?",
+    "choices": [
+      "Jiminy Cricket",
+      "Cri-Kee",
+      "Pascal",
+      "Sebastian"
+    ],
+    "answer": 0,
+    "explanation": "Jiminy Cricket est chargé de guider Pinocchio."
+  },
+  {
+    "id": 110,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney met en scène une jeune fille vivant avec sept nains ?",
+    "choices": [
+      "Blanche-Neige et les Sept Nains",
+      "Cendrillon",
+      "La Belle au bois dormant",
+      "Raiponce"
+    ],
+    "answer": 0,
+    "explanation": "Blanche-Neige et les Sept Nains est le premier long métrage d'animation de Disney, sorti en 1937."
+  },
+  {
+    "id": 111,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle princesse Disney perd une chaussure de verre ?",
+    "choices": [
+      "Cendrillon",
+      "Blanche-Neige",
+      "Aurore",
+      "Belle"
+    ],
+    "answer": 0,
+    "explanation": "Cendrillon laisse tomber sa pantoufle de verre en quittant le bal."
+  },
+  {
+    "id": 112,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage retrouve Cendrillon grâce à sa pantoufle de verre ?",
+    "choices": [
+      "Le Prince",
+      "Le Grand-Duc",
+      "Le Roi",
+      "Le Marquis"
+    ],
+    "answer": 0,
+    "explanation": "Le Prince parcourt le royaume afin de retrouver la jeune femme dont le pied correspond à la pantoufle."
+  },
+  {
+    "id": 113,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom de la princesse de La Belle au bois dormant ?",
+    "choices": [
+      "Aurore",
+      "Ariel",
+      "Anna",
+      "Elsa"
+    ],
+    "answer": 0,
+    "explanation": "La princesse Aurore est victime du sort lancé par Maléfique."
+  },
+  {
+    "id": 114,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la méchante dans La Belle au bois dormant ?",
+    "choices": [
+      "Maléfique",
+      "Cruella",
+      "Ursula",
+      "Gothel"
+    ],
+    "answer": 0,
+    "explanation": "Maléfique jette un sort à la princesse Aurore."
+  },
+  {
+    "id": 115,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle princesse Disney tombe amoureuse d'une Bête ?",
+    "choices": [
+      "Belle",
+      "Ariel",
+      "Raiponce",
+      "Mulan"
+    ],
+    "answer": 0,
+    "explanation": "Belle est l'héroïne de La Belle et la Bête."
+  },
+  {
+    "id": 116,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le père de Belle dans La Belle et la Bête ?",
+    "choices": [
+      "Maurice",
+      "Philippe",
+      "Gaston",
+      "Henri"
+    ],
+    "answer": 0,
+    "explanation": "Maurice est un inventeur et le père de Belle."
+  },
+  {
+    "id": 117,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est le principal antagoniste de La Belle et la Bête ?",
+    "choices": [
+      "Gaston",
+      "Lumière",
+      "Big Ben",
+      "Zip"
+    ],
+    "answer": 0,
+    "explanation": "Gaston est le chasseur arrogant qui veut épouser Belle."
+  },
+  {
+    "id": 118,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle princesse Disney est une sirène ?",
+    "choices": [
+      "Ariel",
+      "Belle",
+      "Aurore",
+      "Jasmine"
+    ],
+    "answer": 0,
+    "explanation": "Ariel est l'héroïne de La Petite Sirène."
+  },
+  {
+    "id": 119,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la sorcière des mers dans La Petite Sirène ?",
+    "choices": [
+      "Ursula",
+      "Maléfique",
+      "Cruella",
+      "Mère Gothel"
+    ],
+    "answer": 0,
+    "explanation": "Ursula vole la voix d'Ariel en échange de jambes humaines."
+  },
+  {
+    "id": 120,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du crabe conseiller du roi Triton dans La Petite Sirène ?",
+    "choices": [
+      "Sébastien",
+      "Polochon",
+      "Eurêka",
+      "Max"
+    ],
+    "answer": 0,
+    "explanation": "Sébastien est le chef d'orchestre et le fidèle conseiller du roi Triton."
+  },
+  {
+    "id": 121,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le poisson meilleur ami d'Ariel ?",
+    "choices": [
+      "Polochon",
+      "Sébastien",
+      "Eurêka",
+      "Nemo"
+    ],
+    "answer": 0,
+    "explanation": "Polochon est le meilleur ami d'Ariel dans La Petite Sirène."
+  },
+  {
+    "id": 122,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle princesse Disney se fait passer pour un homme afin de protéger son père ?",
+    "choices": [
+      "Mulan",
+      "Jasmine",
+      "Belle",
+      "Aurore"
+    ],
+    "answer": 0,
+    "explanation": "Mulan prend la place de son père dans l'armée impériale."
+  },
+  {
+    "id": 123,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel petit dragon accompagne Mulan ?",
+    "choices": [
+      "Mushu",
+      "Pascal",
+      "Stitch",
+      "Dug"
+    ],
+    "answer": 0,
+    "explanation": "Mushu est le dragon protecteur de Mulan."
+  },
+  {
+    "id": 124,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le principal ennemi de Mulan ?",
+    "choices": [
+      "Shan Yu",
+      "Jafar",
+      "Scar",
+      "Hadès"
+    ],
+    "answer": 0,
+    "explanation": "Shan Yu est le chef des Huns dans Mulan."
+  },
+  {
+    "id": 125,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du lion de pierre qui prend vie dans le film Les Chroniques de Narnia ?",
+    "choices": [
+      "Aslan",
+      "Simba",
+      "Scar",
+      "Mufasa"
+    ],
+    "answer": 0,
+    "explanation": "Aslan est le puissant lion protecteur de Narnia."
+  },
+  {
+    "id": 126,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel objet permet d'accéder au monde de Narnia ?",
+    "choices": [
+      "Une armoire",
+      "Une porte magique",
+      "Un miroir",
+      "Un livre"
+    ],
+    "answer": 0,
+    "explanation": "Les enfants Pevensie découvrent Narnia en passant par une armoire."
+  },
+  {
+    "id": 127,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de l'école de magie fréquentée par Harry Potter ?",
+    "choices": [
+      "Poudlard",
+      "Beauxbâtons",
+      "Durmstrang",
+      "Ilvermorny"
+    ],
+    "answer": 0,
+    "explanation": "Harry Potter étudie à l'école de sorcellerie de Poudlard."
+  },
+  {
+    "id": 128,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom de l'amie la plus brillante de Harry Potter ?",
+    "choices": [
+      "Hermione",
+      "Ginny",
+      "Luna",
+      "Cho"
+    ],
+    "answer": 0,
+    "explanation": "Hermione Granger est l'une des meilleures élèves de Poudlard."
+  },
+  {
+    "id": 129,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom du meilleur ami de Harry Potter ?",
+    "choices": [
+      "Ron",
+      "Neville",
+      "Drago",
+      "Cedric"
+    ],
+    "answer": 0,
+    "explanation": "Ron Weasley accompagne Harry dans toutes ses aventures."
+  },
+  {
+    "id": 130,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans quelle maison de Poudlard Harry Potter est-il réparti ?",
+    "choices": [
+      "Gryffondor",
+      "Serpentard",
+      "Serdaigle",
+      "Poufsouffle"
+    ],
+    "answer": 0,
+    "explanation": "Le Choixpeau magique répartit Harry dans la maison Gryffondor."
+  },
+  {
+    "id": 131,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel professeur est le directeur de la maison Gryffondor dans Harry Potter ?",
+    "choices": [
+      "Minerva McGonagall",
+      "Severus Rogue",
+      "Filius Flitwick",
+      "Pomona Chourave"
+    ],
+    "answer": 0,
+    "explanation": "Minerva McGonagall dirige la maison Gryffondor et enseigne la métamorphose."
+  },
+  {
+    "id": 132,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel professeur enseigne les potions au début de la saga Harry Potter ?",
+    "choices": [
+      "Severus Rogue",
+      "Albus Dumbledore",
+      "Rubeus Hagrid",
+      "Remus Lupin"
+    ],
+    "answer": 0,
+    "explanation": "Severus Rogue enseigne les potions durant les premières années de Harry."
+  },
+  {
+    "id": 133,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le directeur de Poudlard pendant la majeure partie de la saga Harry Potter ?",
+    "choices": [
+      "Albus Dumbledore",
+      "Severus Rogue",
+      "Argus Rusard",
+      "Horace Slughorn"
+    ],
+    "answer": 0,
+    "explanation": "Albus Dumbledore est le directeur de Poudlard jusqu'au sixième film."
+  },
+  {
+    "id": 134,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du garde-chasse de Poudlard ?",
+    "choices": [
+      "Rubeus Hagrid",
+      "Sirius Black",
+      "Remus Lupin",
+      "Alastor Maugrey"
+    ],
+    "answer": 0,
+    "explanation": "Hagrid est le garde-chasse et un fidèle ami de Harry."
+  },
+  {
+    "id": 135,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel animal accompagne souvent Harry Potter ?",
+    "choices": [
+      "Une chouette",
+      "Un corbeau",
+      "Un faucon",
+      "Un hibou grand-duc"
+    ],
+    "answer": 0,
+    "explanation": "Hedwige est la chouette blanche de Harry Potter."
+  },
+  {
+    "id": 136,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la chouette de Harry Potter ?",
+    "choices": [
+      "Hedwige",
+      "Errol",
+      "Coquecigrue",
+      "Fumseck"
+    ],
+    "answer": 0,
+    "explanation": "Hedwige accompagne Harry depuis son entrée à Poudlard."
+  },
+  {
+    "id": 137,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel sport est le plus populaire chez les sorciers dans Harry Potter ?",
+    "choices": [
+      "Le Quidditch",
+      "Le Polo magique",
+      "Le Duel",
+      "Le Gobstones"
+    ],
+    "answer": 0,
+    "explanation": "Le Quidditch est le sport emblématique du monde des sorciers."
+  },
+  {
+    "id": 138,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel poste occupe Harry Potter dans l'équipe de Quidditch de Gryffondor ?",
+    "choices": [
+      "Attrapeur",
+      "Gardien",
+      "Poursuiveur",
+      "Batteur"
+    ],
+    "answer": 0,
+    "explanation": "Harry est l'attrapeur de Gryffondor et doit capturer le Vif d'or."
+  },
+  {
+    "id": 139,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel objet Harry doit-il attraper pour mettre fin à un match de Quidditch ?",
+    "choices": [
+      "Le Vif d'or",
+      "Le Cognard",
+      "Le Souafle",
+      "La Coupe"
+    ],
+    "answer": 0,
+    "explanation": "L'attrapeur doit capturer le Vif d'or pour terminer le match."
+  },
+  {
+    "id": 140,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de l'elfe de maison fidèle à Harry Potter ?",
+    "choices": [
+      "Dobby",
+      "Kreattur",
+      "Winky",
+      "Gripsec"
+    ],
+    "answer": 0,
+    "explanation": "Dobby est un elfe de maison qui aide Harry à plusieurs reprises."
+  },
+  {
+    "id": 141,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la banque des sorciers dans Harry Potter ?",
+    "choices": [
+      "Gringotts",
+      "Grimmauld",
+      "Godric",
+      "Azkaban"
+    ],
+    "answer": 0,
+    "explanation": "Gringotts est la banque dirigée par les gobelins."
+  },
+  {
+    "id": 142,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la prison des sorciers dans Harry Potter ?",
+    "choices": [
+      "Azkaban",
+      "Poudlard",
+      "Pré-au-Lard",
+      "Le Terrier"
+    ],
+    "answer": 0,
+    "explanation": "Azkaban est la prison gardée par les Détraqueurs."
+  },
+  {
+    "id": 143,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle créature garde la Chambre des Secrets ?",
+    "choices": [
+      "Le Basilic",
+      "Un Dragon",
+      "Un Hippogriffe",
+      "Un Troll"
+    ],
+    "answer": 0,
+    "explanation": "Le Basilic est contrôlé par Tom Jedusor dans La Chambre des Secrets."
+  },
+  {
+    "id": 144,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du phénix d'Albus Dumbledore ?",
+    "choices": [
+      "Fumseck",
+      "Buck",
+      "Norbert",
+      "Aragog"
+    ],
+    "answer": 0,
+    "explanation": "Fumseck est le phénix fidèle à Albus Dumbledore."
+  },
+  {
+    "id": 145,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de l'hippogriffe sauvé par Harry et Hermione ?",
+    "choices": [
+      "Buck",
+      "Touffu",
+      "Aragog",
+      "Crockdur"
+    ],
+    "answer": 0,
+    "explanation": "Buck est l'hippogriffe de Hagrid dans Le Prisonnier d'Azkaban."
+  },
+  {
+    "id": 146,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du chien à trois têtes gardant la Pierre Philosophale ?",
+    "choices": [
+      "Touffu",
+      "Buck",
+      "Crockdur",
+      "Fang"
+    ],
+    "answer": 0,
+    "explanation": "Touffu protège l'accès à la Pierre Philosophale."
+  },
+  {
+    "id": 147,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui est le parrain de Harry Potter ?",
+    "choices": [
+      "Sirius Black",
+      "Remus Lupin",
+      "Albus Dumbledore",
+      "Severus Rogue"
+    ],
+    "answer": 0,
+    "explanation": "Sirius Black est le meilleur ami des parents de Harry et son parrain."
+  },
+  {
+    "id": 148,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel professeur est un loup-garou dans Harry Potter ?",
+    "choices": [
+      "Remus Lupin",
+      "Severus Rogue",
+      "Horace Slughorn",
+      "Gilderoy Lockhart"
+    ],
+    "answer": 0,
+    "explanation": "Remus Lupin est atteint de lycanthropie."
+  },
+  {
+    "id": 149,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le vrai nom de Voldemort ?",
+    "choices": [
+      "Tom Jedusor",
+      "Tom Riddle Jr.",
+      "Marvolo Gaunt",
+      "Salazar Serpentard"
+    ],
+    "answer": 0,
+    "explanation": "Le véritable nom de Voldemort est Tom Elvis Jedusor (Tom Marvolo Riddle en anglais)."
+  },
+  {
+    "id": 150,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel tournoi réunit trois écoles de magie dans Harry Potter et la Coupe de Feu ?",
+    "choices": [
+      "Le Tournoi des Trois Sorciers",
+      "Le Tournoi des Champions",
+      "Le Défi des Fondateurs",
+      "La Coupe des Quatre Maisons"
+    ],
+    "answer": 0,
+    "explanation": "Le Tournoi des Trois Sorciers oppose Poudlard, Beauxbâtons et Durmstrang."
+  },
+  {
+    "id": 151,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel élève de Poufsouffle est choisi comme champion de Poudlard dans le Tournoi des Trois Sorciers ?",
+    "choices": [
+      "Cedric Diggory",
+      "Neville Londubat",
+      "Drago Malefoy",
+      "Dean Thomas"
+    ],
+    "answer": 0,
+    "explanation": "Cedric Diggory est le champion officiel de Poudlard."
+  },
+  {
+    "id": 152,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage est surnommé « Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom » ?",
+    "choices": [
+      "Voldemort",
+      "Drago Malefoy",
+      "Lucius Malefoy",
+      "Bellatrix Lestrange"
+    ],
+    "answer": 0,
+    "explanation": "Les sorciers craignent tellement Voldemort qu'ils évitent de prononcer son nom."
+  },
+  {
+    "id": 153,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Harry Potter au cinéma ?",
+    "choices": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Tom Felton",
+      "Elijah Wood"
+    ],
+    "answer": 0,
+    "explanation": "Daniel Radcliffe incarne Harry Potter dans les huit films."
+  },
+  {
+    "id": 154,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur joue Ron Weasley dans les films Harry Potter ?",
+    "choices": [
+      "Rupert Grint",
+      "Daniel Radcliffe",
+      "Tom Felton",
+      "Matthew Lewis"
+    ],
+    "answer": 0,
+    "explanation": "Rupert Grint interprète Ron Weasley."
+  },
+  {
+    "id": 155,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle actrice interprète Hermione Granger ?",
+    "choices": [
+      "Emma Watson",
+      "Emma Stone",
+      "Keira Knightley",
+      "Millie Bobby Brown"
+    ],
+    "answer": 0,
+    "explanation": "Emma Watson est mondialement connue pour son rôle d'Hermione."
+  },
+  {
+    "id": 156,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Drago Malefoy ?",
+    "choices": [
+      "Tom Felton",
+      "Rupert Grint",
+      "Daniel Radcliffe",
+      "Robert Pattinson"
+    ],
+    "answer": 0,
+    "explanation": "Tom Felton joue Drago Malefoy dans toute la saga."
+  },
+  {
+    "id": 157,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film met en scène des robots géants capables de se transformer en véhicules ?",
+    "choices": [
+      "Transformers",
+      "Pacific Rim",
+      "Real Steel",
+      "Robots"
+    ],
+    "answer": 0,
+    "explanation": "Les Autobots et les Decepticons sont les héros de Transformers."
+  },
+  {
+    "id": 158,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le chef des Autobots dans Transformers ?",
+    "choices": [
+      "Optimus Prime",
+      "Bumblebee",
+      "Megatron",
+      "Ironhide"
+    ],
+    "answer": 0,
+    "explanation": "Optimus Prime est le leader des Autobots."
+  },
+  {
+    "id": 159,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le principal ennemi d'Optimus Prime ?",
+    "choices": [
+      "Megatron",
+      "Starscream",
+      "Sentinel Prime",
+      "Galvatron"
+    ],
+    "answer": 0,
+    "explanation": "Megatron est le chef des Decepticons."
+  },
+  {
+    "id": 160,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel Autobot jaune est l'un des personnages les plus populaires de Transformers ?",
+    "choices": [
+      "Bumblebee",
+      "Ironhide",
+      "Ratchet",
+      "Jazz"
+    ],
+    "answer": 0,
+    "explanation": "Bumblebee est le fidèle éclaireur des Autobots."
+  },
+  {
+    "id": 161,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Jack Dawson dans Titanic ?",
+    "choices": [
+      "Leonardo DiCaprio",
+      "Brad Pitt",
+      "Matt Damon",
+      "Johnny Depp"
+    ],
+    "answer": 0,
+    "explanation": "Leonardo DiCaprio incarne Jack Dawson dans Titanic."
+  },
+  {
+    "id": 162,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle actrice interprète Rose dans Titanic ?",
+    "choices": [
+      "Kate Winslet",
+      "Nicole Kidman",
+      "Sandra Bullock",
+      "Julia Roberts"
+    ],
+    "answer": 0,
+    "explanation": "Kate Winslet joue Rose DeWitt Bukater."
+  },
+  {
+    "id": 163,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel réalisateur a réalisé Titanic ?",
+    "choices": [
+      "James Cameron",
+      "Steven Spielberg",
+      "Christopher Nolan",
+      "Peter Jackson"
+    ],
+    "answer": 0,
+    "explanation": "James Cameron a réalisé Titanic en 1997."
+  },
+  {
+    "id": 164,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du paquebot dans Titanic ?",
+    "choices": [
+      "RMS Titanic",
+      "Queen Mary",
+      "Britannic",
+      "Lusitania"
+    ],
+    "answer": 0,
+    "explanation": "L'histoire se déroule à bord du RMS Titanic."
+  },
+  {
+    "id": 165,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film raconte l'histoire d'un parc rempli de dinosaures clonés ?",
+    "choices": [
+      "Jurassic Park",
+      "King Kong",
+      "Godzilla",
+      "Le Monde perdu"
+    ],
+    "answer": 0,
+    "explanation": "Jurassic Park est adapté du roman de Michael Crichton."
+  },
+  {
+    "id": 166,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel réalisateur a créé Jurassic Park ?",
+    "choices": [
+      "Steven Spielberg",
+      "James Cameron",
+      "George Lucas",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "Steven Spielberg a réalisé Jurassic Park en 1993."
+  },
+  {
+    "id": 167,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel dinosaure est le principal prédateur dans Jurassic Park ?",
+    "choices": [
+      "Tyrannosaurus rex",
+      "Tricératops",
+      "Brachiosaure",
+      "Stégosaure"
+    ],
+    "answer": 0,
+    "explanation": "Le Tyrannosaurus rex est l'un des dinosaures les plus emblématiques de la saga."
+  },
+  {
+    "id": 168,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel dinosaure intelligent chasse souvent en groupe dans Jurassic Park ?",
+    "choices": [
+      "Vélociraptor",
+      "Ptéranodon",
+      "Ankylosaure",
+      "Diplodocus"
+    ],
+    "answer": 0,
+    "explanation": "Les vélociraptors sont connus pour leur intelligence et leur chasse en meute."
+  },
+  {
+    "id": 169,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Ian Malcolm dans plusieurs films Jurassic Park ?",
+    "choices": [
+      "Jeff Goldblum",
+      "Sam Neill",
+      "Chris Pratt",
+      "Bryce Dallas Howard"
+    ],
+    "answer": 0,
+    "explanation": "Jeff Goldblum incarne le mathématicien Ian Malcolm."
+  },
+  {
+    "id": 170,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel acteur interprète Owen Grady dans Jurassic World ?",
+    "choices": [
+      "Chris Pratt",
+      "Chris Evans",
+      "Chris Hemsworth",
+      "Ryan Reynolds"
+    ],
+    "answer": 0,
+    "explanation": "Chris Pratt joue Owen Grady dans la trilogie Jurassic World."
+  },
+  {
+    "id": 171,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom du personnage principal féminin dans Jurassic World ?",
+    "choices": [
+      "Claire",
+      "Sarah",
+      "Ellie",
+      "Amanda"
+    ],
+    "answer": 0,
+    "explanation": "Claire Dearing dirige le parc Jurassic World."
+  },
+  {
+    "id": 172,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel dinosaure génétiquement modifié est le principal antagoniste de Jurassic World ?",
+    "choices": [
+      "Indominus Rex",
+      "Indoraptor",
+      "Spinosaurus",
+      "Carnotaurus"
+    ],
+    "answer": 0,
+    "explanation": "L'Indominus Rex est un hybride créé en laboratoire."
+  },
+  {
+    "id": 173,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du vélociraptor dressé par Owen Grady qui devient le chef de sa meute ?",
+    "choices": [
+      "Blue",
+      "Echo",
+      "Charlie",
+      "Delta"
+    ],
+    "answer": 0,
+    "explanation": "Blue est la plus célèbre des vélociraptors de Jurassic World."
+  },
+  {
+    "id": 174,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film raconte l'histoire d'un gorille géant vivant sur une île mystérieuse ?",
+    "choices": [
+      "King Kong",
+      "Godzilla",
+      "Rampage",
+      "Jurassic Park"
+    ],
+    "answer": 0,
+    "explanation": "King Kong est l'un des monstres les plus célèbres du cinéma."
+  },
+  {
+    "id": 175,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel monstre géant japonais est surnommé le Roi des Monstres ?",
+    "choices": [
+      "Godzilla",
+      "King Kong",
+      "Gamera",
+      "Mothra"
+    ],
+    "answer": 0,
+    "explanation": "Godzilla est apparu pour la première fois en 1954."
+  },
+  {
+    "id": 176,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film oppose Godzilla à King Kong ?",
+    "choices": [
+      "Godzilla vs. Kong",
+      "Kong: Skull Island",
+      "Godzilla II",
+      "Pacific Rim"
+    ],
+    "answer": 0,
+    "explanation": "Godzilla vs. Kong est sorti en 2021."
+  },
+  {
+    "id": 177,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film raconte l'histoire d'un ogre vert vivant dans un marais ?",
+    "choices": [
+      "Shrek",
+      "Monstres & Cie",
+      "L'Âge de glace",
+      "Dragons"
+    ],
+    "answer": 0,
+    "explanation": "Shrek est le héros de la célèbre saga de DreamWorks."
+  },
+  {
+    "id": 178,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le meilleur ami de Shrek ?",
+    "choices": [
+      "L'Âne",
+      "Le Chat Potté",
+      "Pinocchio",
+      "Fiona"
+    ],
+    "answer": 0,
+    "explanation": "L'Âne accompagne Shrek dans toutes ses aventures."
+  },
+  {
+    "id": 179,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage manie une épée et porte de grandes bottes dans l'univers de Shrek ?",
+    "choices": [
+      "Le Chat Potté",
+      "Robin des Bois",
+      "Prince Charmant",
+      "Rumpelstiltskin"
+    ],
+    "answer": 0,
+    "explanation": "Le Chat Potté est devenu si populaire qu'il a eu ses propres films."
+  },
+  {
+    "id": 180,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom de la princesse dans Shrek ?",
+    "choices": [
+      "Fiona",
+      "Aurore",
+      "Blanche-Neige",
+      "Raiponce"
+    ],
+    "answer": 0,
+    "explanation": "La princesse Fiona devient une ogresse à la tombée de la nuit."
+  },
+  {
+    "id": 181,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du royaume gouverné par Lord Farquaad dans Shrek ?",
+    "choices": [
+      "Duloc",
+      "Far Far Away",
+      "Arendelle",
+      "Camelot"
+    ],
+    "answer": 0,
+    "explanation": "Lord Farquaad règne sur le royaume de Duloc."
+  },
+  {
+    "id": 182,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation raconte l'histoire d'un panda devenu maître de kung-fu ?",
+    "choices": [
+      "Kung Fu Panda",
+      "Dragons",
+      "Les Croods",
+      "Madagascar"
+    ],
+    "answer": 0,
+    "explanation": "Po est le héros de la saga Kung Fu Panda."
+  },
+  {
+    "id": 183,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le panda héros de Kung Fu Panda ?",
+    "choices": [
+      "Po",
+      "Tigresse",
+      "Shifu",
+      "Tai Lung"
+    ],
+    "answer": 0,
+    "explanation": "Po est choisi pour devenir le Guerrier Dragon."
+  },
+  {
+    "id": 184,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel maître entraîne Po dans Kung Fu Panda ?",
+    "choices": [
+      "Shifu",
+      "Oogway",
+      "Tai Lung",
+      "Kai"
+    ],
+    "answer": 0,
+    "explanation": "Le maître Shifu entraîne Po malgré ses doutes."
+  },
+  {
+    "id": 185,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle tortue est considérée comme le plus grand maître de kung-fu dans Kung Fu Panda ?",
+    "choices": [
+      "Oogway",
+      "Shifu",
+      "Kai",
+      "Po"
+    ],
+    "answer": 0,
+    "explanation": "Le maître Oogway choisit Po comme Guerrier Dragon."
+  },
+  {
+    "id": 186,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel léopard des neiges est le principal méchant du premier Kung Fu Panda ?",
+    "choices": [
+      "Tai Lung",
+      "Kai",
+      "Shen",
+      "Zhen"
+    ],
+    "answer": 0,
+    "explanation": "Tai Lung est l'ancien élève de Shifu."
+  },
+  {
+    "id": 187,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation met en scène Harold et un dragon nommé Krokmou ?",
+    "choices": [
+      "Dragons",
+      "Le Dragon-Génie",
+      "Raya et le Dernier Dragon",
+      "Shrek"
+    ],
+    "answer": 0,
+    "explanation": "Dragons (How to Train Your Dragon) raconte l'amitié entre Harold et Krokmou."
+  },
+  {
+    "id": 188,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le dragon de Harold ?",
+    "choices": [
+      "Krokmou",
+      "Tempête",
+      "Crocmort",
+      "Drago"
+    ],
+    "answer": 0,
+    "explanation": "Krokmou est un Furie Nocturne, une espèce très rare."
+  },
+  {
+    "id": 189,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom du jeune Viking héros de Dragons ?",
+    "choices": [
+      "Harold",
+      "Stoïk",
+      "Rustik",
+      "Eret"
+    ],
+    "answer": 0,
+    "explanation": "Harold est le fils du chef Stoïk."
+  },
+  {
+    "id": 190,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation raconte les aventures d'un mammouth, d'un paresseux et d'un tigre à dents de sabre ?",
+    "choices": [
+      "L'Âge de glace",
+      "Les Croods",
+      "Rio",
+      "Madagascar"
+    ],
+    "answer": 0,
+    "explanation": "Manny, Sid et Diego sont les héros de la saga L'Âge de glace."
+  },
+  {
+    "id": 191,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le mammouth dans L'Âge de glace ?",
+    "choices": [
+      "Manny",
+      "Sid",
+      "Diego",
+      "Crash"
+    ],
+    "answer": 0,
+    "explanation": "Manny est le mammouth laineux, chef du groupe."
+  },
+  {
+    "id": 192,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du paresseux dans L'Âge de glace ?",
+    "choices": [
+      "Sid",
+      "Manny",
+      "Diego",
+      "Buck"
+    ],
+    "answer": 0,
+    "explanation": "Sid est un paresseux très bavard et drôle."
+  },
+  {
+    "id": 193,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel animal est Diego dans L'Âge de glace ?",
+    "choices": [
+      "Un tigre à dents de sabre",
+      "Un lion",
+      "Un loup",
+      "Un léopard"
+    ],
+    "answer": 0,
+    "explanation": "Diego est un tigre à dents de sabre."
+  },
+  {
+    "id": 194,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel petit écureuil poursuit sans cesse un gland dans L'Âge de glace ?",
+    "choices": [
+      "Scrat",
+      "Buck",
+      "Crash",
+      "Eddie"
+    ],
+    "answer": 0,
+    "explanation": "Scrat est devenu l'un des personnages les plus emblématiques de la saga."
+  },
+  {
+    "id": 195,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation suit quatre animaux du zoo de New York à Madagascar ?",
+    "choices": [
+      "Madagascar",
+      "Rio",
+      "Les Croods",
+      "Zootopie"
+    ],
+    "answer": 0,
+    "explanation": "Madagascar est une célèbre saga produite par DreamWorks."
+  },
+  {
+    "id": 196,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le lion dans Madagascar ?",
+    "choices": [
+      "Alex",
+      "Marty",
+      "Melman",
+      "Gloria"
+    ],
+    "answer": 0,
+    "explanation": "Alex est la vedette du zoo de Central Park."
+  },
+  {
+    "id": 197,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel animal est Marty dans Madagascar ?",
+    "choices": [
+      "Un zèbre",
+      "Une girafe",
+      "Un hippopotame",
+      "Un lion"
+    ],
+    "answer": 0,
+    "explanation": "Marty est le zèbre rêveur du groupe."
+  },
+  {
+    "id": 198,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel animal est Melman dans Madagascar ?",
+    "choices": [
+      "Une girafe",
+      "Un zèbre",
+      "Un hippopotame",
+      "Un éléphant"
+    ],
+    "answer": 0,
+    "explanation": "Melman est une girafe hypocondriaque."
+  },
+  {
+    "id": 199,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle l'hippopotame du groupe dans Madagascar ?",
+    "choices": [
+      "Gloria",
+      "Skipper",
+      "Rico",
+      "Kowalski"
+    ],
+    "answer": 0,
+    "explanation": "Gloria est l'hippopotame du quatuor principal."
+  },
+  {
+    "id": 200,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du chef des pingouins dans Madagascar ?",
+    "choices": [
+      "Skipper",
+      "Kowalski",
+      "Rico",
+      "Private"
+    ],
+    "answer": 0,
+    "explanation": "Skipper dirige les célèbres pingouins de Madagascar."
+  },
+  {
+    "id": 201,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation met en scène un escargot qui rêve de devenir le plus rapide du monde ?",
+    "choices": [
+      "Turbo",
+      "Cars",
+      "Planes",
+      "Rio"
+    ],
+    "answer": 0,
+    "explanation": "Turbo est un escargot qui obtient une vitesse extraordinaire."
+  },
+  {
+    "id": 202,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film raconte l'histoire d'un perroquet bleu nommé Blu ?",
+    "choices": [
+      "Rio",
+      "Les Croods",
+      "Ferdinand",
+      "Madagascar"
+    ],
+    "answer": 0,
+    "explanation": "Rio suit les aventures de Blu à Rio de Janeiro."
+  },
+  {
+    "id": 203,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le perroquet bleu héros du film Rio ?",
+    "choices": [
+      "Blu",
+      "Pedro",
+      "Nico",
+      "Rafael"
+    ],
+    "answer": 0,
+    "explanation": "Blu est un ara bleu élevé en captivité."
+  },
+  {
+    "id": 204,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation raconte l'histoire d'une famille préhistorique ?",
+    "choices": [
+      "Les Croods",
+      "L'Âge de glace",
+      "Dragons",
+      "Encanto"
+    ],
+    "answer": 0,
+    "explanation": "Les Croods est centré sur une famille vivant à la préhistoire."
+  },
+  {
+    "id": 205,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation met en scène un taureau nommé Ferdinand ?",
+    "choices": [
+      "Ferdinand",
+      "Spirit",
+      "Rio",
+      "Zootopie"
+    ],
+    "answer": 0,
+    "explanation": "Ferdinand préfère sentir les fleurs plutôt que se battre."
+  },
+  {
+    "id": 206,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film d'animation raconte l'histoire d'un cheval sauvage ?",
+    "choices": [
+      "Spirit, l'étalon des plaines",
+      "Ferdinand",
+      "Dragons",
+      "Bolt"
+    ],
+    "answer": 0,
+    "explanation": "Spirit est un classique de DreamWorks sorti en 2002."
+  },
+  {
+    "id": 207,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney met en scène un chien célèbre à la télévision ?",
+    "choices": [
+      "Bolt",
+      "Volt",
+      "101 Dalmatiens",
+      "La Belle et le Clochard"
+    ],
+    "answer": 0,
+    "explanation": "Bolt croit réellement posséder des super-pouvoirs."
+  },
+  {
+    "id": 208,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire de deux chiens partageant un plat de pâtes ?",
+    "choices": [
+      "La Belle et le Clochard",
+      "Les 101 Dalmatiens",
+      "Bolt",
+      "Oliver et Compagnie"
+    ],
+    "answer": 0,
+    "explanation": "La scène des spaghettis est devenue l'une des plus célèbres de Disney."
+  },
+  {
+    "id": 209,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney met en scène une méchante voulant voler des chiots dalmatiens ?",
+    "choices": [
+      "Les 101 Dalmatiens",
+      "Bolt",
+      "La Belle et le Clochard",
+      "Oliver et Compagnie"
+    ],
+    "answer": 0,
+    "explanation": "Cruella d'Enfer souhaite fabriquer un manteau avec les chiots."
+  },
+  {
+    "id": 210,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la célèbre méchante des 101 Dalmatiens ?",
+    "choices": [
+      "Cruella d'Enfer",
+      "Maléfique",
+      "Ursula",
+      "Lady Tremaine"
+    ],
+    "answer": 0,
+    "explanation": "Cruella d'Enfer est l'une des antagonistes les plus emblématiques de Disney."
+  },
+  {
+    "id": 211,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney met en scène une famille possédant des pouvoirs extraordinaires ?",
+    "choices": [
+      "Les Indestructibles",
+      "Big Hero 6",
+      "Encanto",
+      "Les Nouveaux Héros"
+    ],
+    "answer": 0,
+    "explanation": "Les Indestructibles raconte les aventures d'une famille de super-héros."
+  },
+  {
+    "id": 212,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le père dans Les Indestructibles ?",
+    "choices": [
+      "Monsieur Indestructible",
+      "Frozone",
+      "Flash",
+      "Syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Bob Parr est connu sous le nom de Monsieur Indestructible."
+  },
+  {
+    "id": 213,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de l'héroïne principale dans Les Indestructibles ?",
+    "choices": [
+      "Elastigirl",
+      "Violette",
+      "Mirage",
+      "Edna"
+    ],
+    "answer": 0,
+    "explanation": "Helen Parr est la super-héroïne Elastigirl."
+  },
+  {
+    "id": 214,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel super-héros peut courir à une vitesse exceptionnelle dans Les Indestructibles ?",
+    "choices": [
+      "Flèche",
+      "Jack-Jack",
+      "Frozone",
+      "Syndrome"
+    ],
+    "answer": 0,
+    "explanation": "Flèche Parr possède une vitesse incroyable."
+  },
+  {
+    "id": 215,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel bébé possède de nombreux pouvoirs dans Les Indestructibles ?",
+    "choices": [
+      "Jack-Jack",
+      "Flèche",
+      "Violette",
+      "Tony"
+    ],
+    "answer": 0,
+    "explanation": "Jack-Jack révèle une multitude de pouvoirs à la fin du premier film."
+  },
+  {
+    "id": 216,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage peut créer de la glace dans Les Indestructibles ?",
+    "choices": [
+      "Frozone",
+      "Syndrome",
+      "Flash",
+      "Voyd"
+    ],
+    "answer": 0,
+    "explanation": "Frozone maîtrise parfaitement la glace."
+  },
+  {
+    "id": 217,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le principal méchant du premier film Les Indestructibles ?",
+    "choices": [
+      "Syndrome",
+      "Le Démolisseur",
+      "L'Underminer",
+      "Screenslaver"
+    ],
+    "answer": 0,
+    "explanation": "Syndrome est un ancien admirateur devenu ennemi de Monsieur Indestructible."
+  },
+  {
+    "id": 218,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'un jeune inventeur nommé Hiro ?",
+    "choices": [
+      "Les Nouveaux Héros",
+      "Les Indestructibles",
+      "Wall-E",
+      "Robots"
+    ],
+    "answer": 0,
+    "explanation": "Les Nouveaux Héros (Big Hero 6) suit Hiro Hamada et Baymax."
+  },
+  {
+    "id": 219,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le robot infirmier dans Les Nouveaux Héros ?",
+    "choices": [
+      "Baymax",
+      "Wall-E",
+      "EVE",
+      "Bender"
+    ],
+    "answer": 0,
+    "explanation": "Baymax est un robot conçu pour prendre soin des personnes."
+  },
+  {
+    "id": 220,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar met en scène un petit robot chargé de nettoyer la Terre ?",
+    "choices": [
+      "Wall-E",
+      "Robots",
+      "Les Nouveaux Héros",
+      "Cars"
+    ],
+    "answer": 0,
+    "explanation": "Wall-E est le dernier robot de nettoyage encore en activité sur Terre."
+  },
+  {
+    "id": 221,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le robot blanc rencontré par Wall-E ?",
+    "choices": [
+      "EVE",
+      "AUTO",
+      "Baymax",
+      "MO"
+    ],
+    "answer": 0,
+    "explanation": "EVE est envoyée sur Terre pour rechercher des signes de vie végétale."
+  },
+  {
+    "id": 222,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'une voiture de course nommée Flash McQueen ?",
+    "choices": [
+      "Cars",
+      "Turbo",
+      "Planes",
+      "Speed Racer"
+    ],
+    "answer": 0,
+    "explanation": "Cars est une saga emblématique de Pixar."
+  },
+  {
+    "id": 223,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la voiture rouge héroïne de Cars ?",
+    "choices": [
+      "Flash McQueen",
+      "Martin",
+      "Doc Hudson",
+      "Chick Hicks"
+    ],
+    "answer": 0,
+    "explanation": "Flash McQueen est le personnage principal de Cars."
+  },
+  {
+    "id": 224,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la dépanneuse meilleure amie de Flash McQueen ?",
+    "choices": [
+      "Martin",
+      "Doc Hudson",
+      "Luigi",
+      "Fillmore"
+    ],
+    "answer": 0,
+    "explanation": "Martin (Mater en version originale) est le fidèle ami de Flash."
+  },
+  {
+    "id": 225,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel ancien champion devient le mentor de Flash McQueen ?",
+    "choices": [
+      "Doc Hudson",
+      "Finn McMissile",
+      "Chick Hicks",
+      "Jackson Storm"
+    ],
+    "answer": 0,
+    "explanation": "Doc Hudson entraîne Flash dans le premier Cars."
+  },
+  {
+    "id": 226,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le principal rival de Flash McQueen dans Cars 3 ?",
+    "choices": [
+      "Jackson Storm",
+      "Chick Hicks",
+      "Francesco Bernoulli",
+      "Martin"
+    ],
+    "answer": 0,
+    "explanation": "Jackson Storm représente la nouvelle génération de voitures de course."
+  },
+  {
+    "id": 227,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film dérivé de Cars met en scène des avions ?",
+    "choices": [
+      "Planes",
+      "Turbo",
+      "Rio",
+      "Robots"
+    ],
+    "answer": 0,
+    "explanation": "Planes se déroule dans le même univers que Cars."
+  },
+  {
+    "id": 228,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte les émotions vivant dans la tête d'une jeune fille ?",
+    "choices": [
+      "Vice-Versa",
+      "Soul",
+      "Luca",
+      "Alerte Rouge"
+    ],
+    "answer": 0,
+    "explanation": "Vice-Versa suit les émotions de Riley."
+  },
+  {
+    "id": 229,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle émotion est représentée par un personnage jaune dans Vice-Versa ?",
+    "choices": [
+      "Joie",
+      "Tristesse",
+      "Colère",
+      "Dégoût"
+    ],
+    "answer": 0,
+    "explanation": "Joie est l'émotion principale au début du film."
+  },
+  {
+    "id": 230,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle émotion est représentée par un personnage bleu dans Vice-Versa ?",
+    "choices": [
+      "Tristesse",
+      "Joie",
+      "Peur",
+      "Dégoût"
+    ],
+    "answer": 0,
+    "explanation": "Tristesse joue un rôle essentiel dans l'équilibre émotionnel de Riley."
+  },
+  {
+    "id": 231,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle émotion est représentée par un personnage rouge dans Vice-Versa ?",
+    "choices": [
+      "Colère",
+      "Joie",
+      "Peur",
+      "Dégoût"
+    ],
+    "answer": 0,
+    "explanation": "Colère est représenté par un petit personnage rouge qui s'enflamme lorsqu'il s'énerve."
+  },
+  {
+    "id": 232,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle émotion est représentée par un personnage vert dans Vice-Versa ?",
+    "choices": [
+      "Dégoût",
+      "Joie",
+      "Tristesse",
+      "Anxiété"
+    ],
+    "answer": 0,
+    "explanation": "Dégoût protège Riley des situations ou aliments qu'elle juge répugnants."
+  },
+  {
+    "id": 233,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle émotion est représentée par un personnage violet dans Vice-Versa ?",
+    "choices": [
+      "Peur",
+      "Dégoût",
+      "Envie",
+      "Embarras"
+    ],
+    "answer": 0,
+    "explanation": "Peur aide Riley à éviter les situations dangereuses."
+  },
+  {
+    "id": 234,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom de la jeune fille au centre de Vice-Versa ?",
+    "choices": [
+      "Riley",
+      "Molly",
+      "Emily",
+      "Lucy"
+    ],
+    "answer": 0,
+    "explanation": "Toutes les émotions vivent dans l'esprit de Riley."
+  },
+  {
+    "id": 235,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un musicien passionné de jazz ?",
+    "choices": [
+      "Soul",
+      "Coco",
+      "Luca",
+      "En Avant"
+    ],
+    "answer": 0,
+    "explanation": "Soul suit Joe Gardner, un professeur de musique rêvant de devenir musicien de jazz."
+  },
+  {
+    "id": 236,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le personnage principal de Soul ?",
+    "choices": [
+      "Joe Gardner",
+      "Miguel",
+      "Luca",
+      "Alberto"
+    ],
+    "answer": 0,
+    "explanation": "Joe Gardner est un pianiste passionné de jazz."
+  },
+  {
+    "id": 237,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un jeune garçon nommé Miguel ?",
+    "choices": [
+      "Coco",
+      "Soul",
+      "Luca",
+      "Encanto"
+    ],
+    "answer": 0,
+    "explanation": "Coco célèbre la musique et la fête des Morts au Mexique."
+  },
+  {
+    "id": 238,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel instrument Miguel rêve-t-il de jouer dans Coco ?",
+    "choices": [
+      "La guitare",
+      "Le piano",
+      "Le violon",
+      "La batterie"
+    ],
+    "answer": 0,
+    "explanation": "Miguel est passionné de guitare malgré l'interdiction de sa famille."
+  },
+  {
+    "id": 239,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire de deux monstres travaillant dans une usine de cris ?",
+    "choices": [
+      "Monstres & Cie",
+      "Vice-Versa",
+      "Cars",
+      "Wall-E"
+    ],
+    "answer": 0,
+    "explanation": "Monstres & Cie met en scène Sulli et Bob Razowski."
+  },
+  {
+    "id": 240,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le grand monstre bleu dans Monstres & Cie ?",
+    "choices": [
+      "Sulli",
+      "Bob Razowski",
+      "Randall",
+      "Henry"
+    ],
+    "answer": 0,
+    "explanation": "James P. Sullivan, surnommé Sulli, est le meilleur récolteur de cris de Monstres & Cie."
+  },
+  {
+    "id": 241,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le petit monstre vert à un seul œil dans Monstres & Cie ?",
+    "choices": [
+      "Bob Razowski",
+      "Sulli",
+      "Randall",
+      "Germaine"
+    ],
+    "answer": 0,
+    "explanation": "Bob Razowski est le meilleur ami et collègue de Sulli."
+  },
+  {
+    "id": 242,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la petite fille humaine dans Monstres & Cie ?",
+    "choices": [
+      "Boo",
+      "Bonnie",
+      "Molly",
+      "Jessie"
+    ],
+    "answer": 0,
+    "explanation": "Boo se lie d'amitié avec Sulli durant le film."
+  },
+  {
+    "id": 243,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel monstre caméléon est le principal méchant de Monstres & Cie ?",
+    "choices": [
+      "Randall",
+      "Sulli",
+      "Bob Razowski",
+      "Henry"
+    ],
+    "answer": 0,
+    "explanation": "Randall Boggs peut devenir presque invisible."
+  },
+  {
+    "id": 244,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un rat passionné de cuisine ?",
+    "choices": [
+      "Ratatouille",
+      "Le Monde de Nemo",
+      "Luca",
+      "Coco"
+    ],
+    "answer": 0,
+    "explanation": "Rémy rêve de devenir un grand chef cuisinier."
+  },
+  {
+    "id": 245,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le rat héros de Ratatouille ?",
+    "choices": [
+      "Rémy",
+      "Émile",
+      "Alfredo",
+      "Anton"
+    ],
+    "answer": 0,
+    "explanation": "Rémy possède un odorat et un goût exceptionnels."
+  },
+  {
+    "id": 246,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel jeune cuisinier est aidé par Rémy dans Ratatouille ?",
+    "choices": [
+      "Linguini",
+      "Skinner",
+      "Gusteau",
+      "Anton"
+    ],
+    "answer": 0,
+    "explanation": "Alfredo Linguini devient cuisinier grâce à Rémy."
+  },
+  {
+    "id": 247,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel célèbre chef inspire Rémy dans Ratatouille ?",
+    "choices": [
+      "Auguste Gusteau",
+      "Anton Ego",
+      "Skinner",
+      "Colette"
+    ],
+    "answer": 0,
+    "explanation": "Le slogan de Gusteau est : « Tout le monde peut cuisiner. »"
+  },
+  {
+    "id": 248,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel critique gastronomique redécouvre son enfance grâce à la ratatouille ?",
+    "choices": [
+      "Anton Ego",
+      "Skinner",
+      "Linguini",
+      "Horst"
+    ],
+    "answer": 0,
+    "explanation": "Anton Ego change complètement d'avis après avoir goûté la ratatouille."
+  },
+  {
+    "id": 249,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte les aventures d'un poisson-clown à la recherche de son fils ?",
+    "choices": [
+      "Le Monde de Nemo",
+      "Le Monde de Dory",
+      "Luca",
+      "Vaiana"
+    ],
+    "answer": 0,
+    "explanation": "Marin traverse l'océan pour retrouver Nemo."
+  },
+  {
+    "id": 250,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le père de Nemo ?",
+    "choices": [
+      "Marin",
+      "Gill",
+      "Bruce",
+      "Crush"
+    ],
+    "answer": 0,
+    "explanation": "Marin est un poisson-clown très protecteur envers son fils Nemo."
+  },
+  {
+    "id": 251,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le petit poisson-clown recherché par son père ?",
+    "choices": [
+      "Nemo",
+      "Dory",
+      "Gill",
+      "Bubbles"
+    ],
+    "answer": 0,
+    "explanation": "Nemo est capturé par un plongeur au début du film."
+  },
+  {
+    "id": 252,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel poisson souffre de pertes de mémoire dans Le Monde de Nemo ?",
+    "choices": [
+      "Dory",
+      "Deb",
+      "Corail",
+      "Peach"
+    ],
+    "answer": 0,
+    "explanation": "Dory accompagne Marin malgré ses problèmes de mémoire."
+  },
+  {
+    "id": 253,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel requin affirme que « les poissons sont des amis » ?",
+    "choices": [
+      "Bruce",
+      "Anchor",
+      "Chum",
+      "Nigel"
+    ],
+    "answer": 0,
+    "explanation": "Bruce tente de suivre un régime sans manger de poissons."
+  },
+  {
+    "id": 254,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar est centré sur Dory ?",
+    "choices": [
+      "Le Monde de Dory",
+      "Le Monde de Nemo 2",
+      "Océan Bleu",
+      "Finding Fish"
+    ],
+    "answer": 0,
+    "explanation": "Le Monde de Dory suit la quête de Dory pour retrouver sa famille."
+  },
+  {
+    "id": 255,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire d'un garçon pouvant se transformer en monstre marin ?",
+    "choices": [
+      "Luca",
+      "Coco",
+      "Soul",
+      "En Avant"
+    ],
+    "answer": 0,
+    "explanation": "Luca se déroule sur la côte italienne."
+  },
+  {
+    "id": 256,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le meilleur ami de Luca ?",
+    "choices": [
+      "Alberto",
+      "Giulia",
+      "Massimo",
+      "Ercole"
+    ],
+    "answer": 0,
+    "explanation": "Alberto entraîne Luca à découvrir le monde des humains."
+  },
+  {
+    "id": 257,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar raconte l'histoire de deux frères elfes ?",
+    "choices": [
+      "En Avant",
+      "Soul",
+      "Luca",
+      "Rebelle"
+    ],
+    "answer": 0,
+    "explanation": "En Avant suit Ian et Barley dans une quête magique."
+  },
+  {
+    "id": 258,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Pixar met en scène une jeune fille se transformant en panda roux géant ?",
+    "choices": [
+      "Alerte Rouge",
+      "Vice-Versa",
+      "Luca",
+      "Soul"
+    ],
+    "answer": 0,
+    "explanation": "Alerte Rouge raconte l'histoire de Mei Lee."
+  },
+  {
+    "id": 259,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le prénom de l'héroïne d'Alerte Rouge ?",
+    "choices": [
+      "Mei",
+      "Riley",
+      "Mirabel",
+      "Moana"
+    ],
+    "answer": 0,
+    "explanation": "Mei Lee se transforme en panda roux lorsqu'elle ressent de fortes émotions."
+  },
+  {
+    "id": 260,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une famille colombienne dotée de pouvoirs magiques ?",
+    "choices": [
+      "Encanto",
+      "Coco",
+      "Vaiana",
+      "Wish"
+    ],
+    "answer": 0,
+    "explanation": "Encanto suit la famille Madrigal et l'héroïne Mirabel."
+  },
+  {
+    "id": 261,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle l'héroïne principale d'Encanto ?",
+    "choices": [
+      "Mirabel",
+      "Isabela",
+      "Luisa",
+      "Dolores"
+    ],
+    "answer": 0,
+    "explanation": "Mirabel est le seul membre de sa famille à ne pas avoir reçu de pouvoir magique."
+  },
+  {
+    "id": 262,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel membre de la famille Madrigal possède une force exceptionnelle ?",
+    "choices": [
+      "Luisa",
+      "Mirabel",
+      "Isabela",
+      "Julieta"
+    ],
+    "answer": 0,
+    "explanation": "Luisa est connue pour sa force surhumaine."
+  },
+  {
+    "id": 263,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage d'Encanto est capable de faire pousser des fleurs ?",
+    "choices": [
+      "Isabela",
+      "Mirabel",
+      "Dolores",
+      "Pepa"
+    ],
+    "answer": 0,
+    "explanation": "Isabela crée des fleurs et des plantes par magie."
+  },
+  {
+    "id": 264,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage d'Encanto entend tout grâce à son ouïe exceptionnelle ?",
+    "choices": [
+      "Dolores",
+      "Luisa",
+      "Camilo",
+      "Antonio"
+    ],
+    "answer": 0,
+    "explanation": "Dolores possède une ouïe incroyablement développée."
+  },
+  {
+    "id": 265,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage d'Encanto peut changer d'apparence ?",
+    "choices": [
+      "Camilo",
+      "Antonio",
+      "Bruno",
+      "Félix"
+    ],
+    "answer": 0,
+    "explanation": "Camilo peut se transformer en n'importe quelle personne."
+  },
+  {
+    "id": 266,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage d'Encanto peut voir l'avenir ?",
+    "choices": [
+      "Bruno",
+      "Camilo",
+      "Antonio",
+      "Agustín"
+    ],
+    "answer": 0,
+    "explanation": "Bruno Madrigal possède le don de voir des visions du futur."
+  },
+  {
+    "id": 267,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une jeune navigatrice vivant sur une île du Pacifique ?",
+    "choices": [
+      "Vaiana",
+      "Wish",
+      "Raiponce",
+      "Encanto"
+    ],
+    "answer": 0,
+    "explanation": "Vaiana part en mer pour sauver son peuple."
+  },
+  {
+    "id": 268,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le demi-dieu qui accompagne Vaiana ?",
+    "choices": [
+      "Maui",
+      "Teka",
+      "Tamatoa",
+      "Heihei"
+    ],
+    "answer": 0,
+    "explanation": "Maui est un demi-dieu doté d'un hameçon magique."
+  },
+  {
+    "id": 269,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le coq un peu maladroit qui accompagne Vaiana ?",
+    "choices": [
+      "Heihei",
+      "Pua",
+      "Tamatoa",
+      "Kakamora"
+    ],
+    "answer": 0,
+    "explanation": "Heihei est le coq qui accompagne Vaiana pendant son voyage."
+  },
+  {
+    "id": 270,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le petit cochon de Vaiana ?",
+    "choices": [
+      "Pua",
+      "Heihei",
+      "Maui",
+      "Tamatoa"
+    ],
+    "answer": 0,
+    "explanation": "Pua est le fidèle petit cochon de Vaiana."
+  },
+  {
+    "id": 271,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom de la déesse de l'île que Vaiana doit sauver ?",
+    "choices": [
+      "Te Fiti",
+      "Te Kā",
+      "Moana",
+      "Tala"
+    ],
+    "answer": 0,
+    "explanation": "Te Fiti est la déesse créatrice dont le cœur a été volé."
+  },
+  {
+    "id": 272,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du démon de lave dans Vaiana ?",
+    "choices": [
+      "Te Kā",
+      "Te Fiti",
+      "Tamatoa",
+      "Maui"
+    ],
+    "answer": 0,
+    "explanation": "Te Kā est la forme corrompue de Te Fiti."
+  },
+  {
+    "id": 273,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel crabe géant adore les objets brillants dans Vaiana ?",
+    "choices": [
+      "Tamatoa",
+      "Maui",
+      "Te Kā",
+      "Heihei"
+    ],
+    "answer": 0,
+    "explanation": "Tamatoa est un énorme crabe vivant dans le royaume des monstres."
+  },
+  {
+    "id": 274,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une princesse aux très longs cheveux magiques ?",
+    "choices": [
+      "Raiponce",
+      "La Reine des Neiges",
+      "Blanche-Neige",
+      "Cendrillon"
+    ],
+    "answer": 0,
+    "explanation": "Raiponce est enfermée dans une tour pendant de nombreuses années."
+  },
+  {
+    "id": 275,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le voleur qui accompagne Raiponce ?",
+    "choices": [
+      "Flynn Rider",
+      "Hans",
+      "Kristoff",
+      "Naveen"
+    ],
+    "answer": 0,
+    "explanation": "Flynn Rider, de son vrai nom Eugene Fitzherbert, accompagne Raiponce."
+  },
+  {
+    "id": 276,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la méchante qui élève Raiponce ?",
+    "choices": [
+      "Mère Gothel",
+      "Maléfique",
+      "Ursula",
+      "Lady Tremaine"
+    ],
+    "answer": 0,
+    "explanation": "Mère Gothel utilise les cheveux magiques de Raiponce pour rester jeune."
+  },
+  {
+    "id": 277,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du caméléon de Raiponce ?",
+    "choices": [
+      "Pascal",
+      "Maximus",
+      "Bruno",
+      "Figaro"
+    ],
+    "answer": 0,
+    "explanation": "Pascal est le fidèle compagnon de Raiponce."
+  },
+  {
+    "id": 278,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le cheval de la garde royale dans Raiponce ?",
+    "choices": [
+      "Maximus",
+      "Pascal",
+      "Sven",
+      "Philippe"
+    ],
+    "answer": 0,
+    "explanation": "Maximus poursuit Flynn Rider avant de devenir son allié."
+  },
+  {
+    "id": 279,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire de deux sœurs vivant dans le royaume d'Arendelle ?",
+    "choices": [
+      "La Reine des Neiges",
+      "Raiponce",
+      "Wish",
+      "Vaiana"
+    ],
+    "answer": 0,
+    "explanation": "La Reine des Neiges est inspirée du conte d'Andersen."
+  },
+  {
+    "id": 280,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la reine qui possède le pouvoir de contrôler la glace ?",
+    "choices": [
+      "Elsa",
+      "Anna",
+      "Aurore",
+      "Belle"
+    ],
+    "answer": 0,
+    "explanation": "Elsa est la reine d'Arendelle et maîtrise la glace et la neige."
+  },
+  {
+    "id": 281,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la sœur d'Elsa dans La Reine des Neiges ?",
+    "choices": [
+      "Anna",
+      "Aurore",
+      "Raiponce",
+      "Merida"
+    ],
+    "answer": 0,
+    "explanation": "Anna est la sœur cadette d'Elsa."
+  },
+  {
+    "id": 282,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le bonhomme de neige créé par Elsa ?",
+    "choices": [
+      "Olaf",
+      "Sven",
+      "Kristoff",
+      "Marshmallow"
+    ],
+    "answer": 0,
+    "explanation": "Olaf adore les câlins chaleureux malgré sa nature de neige."
+  },
+  {
+    "id": 283,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le renne de Kristoff ?",
+    "choices": [
+      "Sven",
+      "Olaf",
+      "Bruni",
+      "Maximus"
+    ],
+    "answer": 0,
+    "explanation": "Sven est le fidèle compagnon de Kristoff."
+  },
+  {
+    "id": 284,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le montagnard qui aide Anna ?",
+    "choices": [
+      "Kristoff",
+      "Hans",
+      "Olaf",
+      "Kai"
+    ],
+    "answer": 0,
+    "explanation": "Kristoff accompagne Anna dans sa quête pour retrouver Elsa."
+  },
+  {
+    "id": 285,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel prince se révèle être le principal méchant de La Reine des Neiges ?",
+    "choices": [
+      "Hans",
+      "Kristoff",
+      "Eric",
+      "Philippe"
+    ],
+    "answer": 0,
+    "explanation": "Hans manipule Anna afin de prendre le contrôle d'Arendelle."
+  },
+  {
+    "id": 286,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une jeune Polynésienne naviguant sur l'océan ?",
+    "choices": [
+      "Vaiana",
+      "Wish",
+      "La Petite Sirène",
+      "Lilo & Stitch"
+    ],
+    "answer": 0,
+    "explanation": "Vaiana est l'héroïne du film Disney sorti en 2016."
+  },
+  {
+    "id": 287,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une sirène nommée Ariel ?",
+    "choices": [
+      "La Petite Sirène",
+      "Raiponce",
+      "Cendrillon",
+      "Wish"
+    ],
+    "answer": 0,
+    "explanation": "Ariel rêve de découvrir le monde des humains."
+  },
+  {
+    "id": 288,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le père d'Ariel ?",
+    "choices": [
+      "Le roi Triton",
+      "Poséidon",
+      "Neptune",
+      "Eric"
+    ],
+    "answer": 0,
+    "explanation": "Le roi Triton règne sur les océans."
+  },
+  {
+    "id": 289,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la sorcière des mers dans La Petite Sirène ?",
+    "choices": [
+      "Ursula",
+      "Maléfique",
+      "Cruella",
+      "Gothel"
+    ],
+    "answer": 0,
+    "explanation": "Ursula vole la voix d'Ariel pour réaliser son plan."
+  },
+  {
+    "id": 290,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le prince dont Ariel tombe amoureuse ?",
+    "choices": [
+      "Éric",
+      "Hans",
+      "Adam",
+      "Philippe"
+    ],
+    "answer": 0,
+    "explanation": "Le prince Éric est le personnage dont Ariel tombe amoureuse."
+  },
+  {
+    "id": 291,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le poisson jaune et bleu ami d'Ariel ?",
+    "choices": [
+      "Polochon",
+      "Sébastien",
+      "Eurêka",
+      "Triton"
+    ],
+    "answer": 0,
+    "explanation": "Polochon est le meilleur ami d'Ariel."
+  },
+  {
+    "id": 292,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le crabe conseiller du roi Triton ?",
+    "choices": [
+      "Sébastien",
+      "Polochon",
+      "Eurêka",
+      "Max"
+    ],
+    "answer": 0,
+    "explanation": "Sébastien est chargé de surveiller Ariel."
+  },
+  {
+    "id": 293,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une jeune fille vivant avec sept nains ?",
+    "choices": [
+      "Blanche-Neige et les Sept Nains",
+      "Cendrillon",
+      "Raiponce",
+      "La Belle au bois dormant"
+    ],
+    "answer": 0,
+    "explanation": "Blanche-Neige est le premier long-métrage d'animation de Disney."
+  },
+  {
+    "id": 294,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de nains vivent avec Blanche-Neige ?",
+    "choices": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "answer": 0,
+    "explanation": "Ils sont au nombre de sept."
+  },
+  {
+    "id": 295,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel objet empoisonné fait tomber Blanche-Neige dans un profond sommeil ?",
+    "choices": [
+      "Une pomme",
+      "Une poire",
+      "Une rose",
+      "Une bague"
+    ],
+    "answer": 0,
+    "explanation": "La Méchante Reine lui offre une pomme empoisonnée."
+  },
+  {
+    "id": 296,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une jeune servante perdant une chaussure de verre ?",
+    "choices": [
+      "Cendrillon",
+      "Blanche-Neige",
+      "Raiponce",
+      "La Belle et la Bête"
+    ],
+    "answer": 0,
+    "explanation": "Cendrillon est aidée par sa marraine la bonne fée."
+  },
+  {
+    "id": 297,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel objet Cendrillon perd-elle en quittant le bal ?",
+    "choices": [
+      "Une chaussure de verre",
+      "Une couronne",
+      "Un collier",
+      "Un gant"
+    ],
+    "answer": 0,
+    "explanation": "Le prince utilise la chaussure pour retrouver Cendrillon."
+  },
+  {
+    "id": 298,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une princesse endormie par un sort ?",
+    "choices": [
+      "La Belle au bois dormant",
+      "Raiponce",
+      "La Reine des Neiges",
+      "Wish"
+    ],
+    "answer": 0,
+    "explanation": "La princesse Aurore est victime du sort de Maléfique."
+  },
+  {
+    "id": 299,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la méchante fée dans La Belle au bois dormant ?",
+    "choices": [
+      "Maléfique",
+      "Ursula",
+      "Gothel",
+      "Cruella"
+    ],
+    "answer": 0,
+    "explanation": "Maléfique jette un sort à la princesse Aurore."
+  },
+  {
+    "id": 300,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la princesse de La Belle au bois dormant ?",
+    "choices": [
+      "Aurore",
+      "Belle",
+      "Ariel",
+      "Anna"
+    ],
+    "answer": 0,
+    "explanation": "La princesse Aurore est également connue sous le nom de Rose."
+  },
+  {
+    "id": 301,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel prince réveille Aurore avec un baiser ?",
+    "choices": [
+      "Philippe",
+      "Éric",
+      "Hans",
+      "Adam"
+    ],
+    "answer": 0,
+    "explanation": "Le prince Philippe affronte Maléfique avant de réveiller Aurore."
+  },
+  {
+    "id": 302,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une jeune femme vivant dans un village français ?",
+    "choices": [
+      "La Belle et la Bête",
+      "Cendrillon",
+      "Raiponce",
+      "Blanche-Neige"
+    ],
+    "answer": 0,
+    "explanation": "Belle est l'héroïne de La Belle et la Bête."
+  },
+  {
+    "id": 303,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle l'héroïne de La Belle et la Bête ?",
+    "choices": [
+      "Belle",
+      "Aurore",
+      "Ariel",
+      "Jasmine"
+    ],
+    "answer": 0,
+    "explanation": "Belle est passionnée par la lecture."
+  },
+  {
+    "id": 304,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le père de Belle ?",
+    "choices": [
+      "Maurice",
+      "Philippe",
+      "Gaston",
+      "Adam"
+    ],
+    "answer": 0,
+    "explanation": "Maurice est un inventeur."
+  },
+  {
+    "id": 305,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage souhaite épouser Belle mais devient le principal méchant du film ?",
+    "choices": [
+      "Gaston",
+      "Lumière",
+      "Big Ben",
+      "Le Fou"
+    ],
+    "answer": 0,
+    "explanation": "Gaston est l'antagoniste principal."
+  },
+  {
+    "id": 306,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le chandelier vivant dans La Belle et la Bête ?",
+    "choices": [
+      "Lumière",
+      "Big Ben",
+      "Zip",
+      "Plumette"
+    ],
+    "answer": 0,
+    "explanation": "Lumière est le maître d'hôtel transformé en chandelier."
+  },
+  {
+    "id": 307,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle l'horloge vivante dans La Belle et la Bête ?",
+    "choices": [
+      "Big Ben",
+      "Lumière",
+      "Zip",
+      "Maurice"
+    ],
+    "answer": 0,
+    "explanation": "Big Ben (Cogsworth en VO) est le majordome du château."
+  },
+  {
+    "id": 308,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel objet vivant est le fils de Madame Samovar ?",
+    "choices": [
+      "Zip",
+      "Lumière",
+      "Big Ben",
+      "Maurice"
+    ],
+    "answer": 0,
+    "explanation": "Zip est une petite tasse à thé."
+  },
+  {
+    "id": 309,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une princesse vivant à Agrabah ?",
+    "choices": [
+      "Aladdin",
+      "Mulan",
+      "Pocahontas",
+      "Hercule"
+    ],
+    "answer": 0,
+    "explanation": "Aladdin est inspiré des Mille et Une Nuits."
+  },
+  {
+    "id": 310,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le héros principal d'Aladdin ?",
+    "choices": [
+      "Aladdin",
+      "Jafar",
+      "Sultan",
+      "Abu"
+    ],
+    "answer": 0,
+    "explanation": "Aladdin est un jeune homme vivant dans les rues d'Agrabah."
+  },
+  {
+    "id": 311,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle la princesse d'Aladdin ?",
+    "choices": [
+      "Jasmine",
+      "Aurore",
+      "Belle",
+      "Ariel"
+    ],
+    "answer": 0,
+    "explanation": "Jasmine est la princesse d'Agrabah."
+  },
+  {
+    "id": 312,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel personnage magique vit dans une lampe ?",
+    "choices": [
+      "Le Génie",
+      "Jafar",
+      "Abu",
+      "Iago"
+    ],
+    "answer": 0,
+    "explanation": "Le Génie accorde trois vœux au propriétaire de la lampe."
+  },
+  {
+    "id": 313,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le singe d'Aladdin ?",
+    "choices": [
+      "Abu",
+      "Iago",
+      "Rajah",
+      "Sultan"
+    ],
+    "answer": 0,
+    "explanation": "Abu accompagne Aladdin dans toutes ses aventures."
+  },
+  {
+    "id": 314,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le perroquet de Jafar ?",
+    "choices": [
+      "Iago",
+      "Abu",
+      "Rajah",
+      "Zazu"
+    ],
+    "answer": 0,
+    "explanation": "Iago est le fidèle perroquet de Jafar."
+  },
+  {
+    "id": 315,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le tigre de Jasmine ?",
+    "choices": [
+      "Rajah",
+      "Abu",
+      "Iago",
+      "Sultan"
+    ],
+    "answer": 0,
+    "explanation": "Rajah est le tigre de compagnie de Jasmine."
+  },
+  {
+    "id": 316,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le nom du principal méchant d'Aladdin ?",
+    "choices": [
+      "Jafar",
+      "Sultan",
+      "Razoul",
+      "Hakim"
+    ],
+    "answer": 0,
+    "explanation": "Jafar est le grand vizir d'Agrabah."
+  },
+  {
+    "id": 317,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel film Disney raconte l'histoire d'une jeune guerrière chinoise ?",
+    "choices": [
+      "Mulan",
+      "Pocahontas",
+      "Raya et le Dernier Dragon",
+      "Rebelle"
+    ],
+    "answer": 0,
+    "explanation": "Mulan prend la place de son père dans l'armée."
+  },
+  {
+    "id": 318,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le petit dragon protecteur de Mulan ?",
+    "choices": [
+      "Mushu",
+      "Pascal",
+      "Krokmou",
+      "Draco"
+    ],
+    "answer": 0,
+    "explanation": "Mushu accompagne Mulan durant toute sa mission."
+  },
+  {
+    "id": 319,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel peuple Mulan affronte-t-elle principalement ?",
+    "choices": [
+      "Les Huns",
+      "Les Mongols",
+      "Les Vikings",
+      "Les Romains"
+    ],
+    "answer": 0,
+    "explanation": "Le chef des Huns est Shan Yu."
+  },
+  {
+    "id": 320,
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment s'appelle le chef des Huns dans Mulan ?",
+    "choices": [
+      "Shan Yu",
+      "Li Shang",
+      "Chi-Fu",
+      "Yao"
+    ],
+    "answer": 0,
+    "explanation": "Shan Yu est le principal antagoniste de Mulan."
+  },
+  {
+    "id": 321,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le capitaine de l'armée chinoise dont Mulan tombe amoureuse ?",
+    "choices": [
+      "Li Shang",
+      "Shan Yu",
+      "Chi-Fu",
+      "Yao"
+    ],
+    "answer": 0,
+    "explanation": "Li Shang est le capitaine qui entraîne les nouvelles recrues."
+  },
+  {
+    "id": 322,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'une jeune Amérindienne rencontrant John Smith ?",
+    "choices": [
+      "Pocahontas",
+      "Mulan",
+      "Vaiana",
+      "Rebelle"
+    ],
+    "answer": 0,
+    "explanation": "Pocahontas est inspiré de la figure historique du même nom."
+  },
+  {
+    "id": 323,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le raton laveur ami de Pocahontas ?",
+    "choices": [
+      "Meeko",
+      "Percy",
+      "Flit",
+      "Nala"
+    ],
+    "answer": 0,
+    "explanation": "Meeko est le gourmand compagnon de Pocahontas."
+  },
+  {
+    "id": 324,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le colibri accompagnant Pocahontas ?",
+    "choices": [
+      "Flit",
+      "Meeko",
+      "Percy",
+      "Archimède"
+    ],
+    "answer": 0,
+    "explanation": "Flit est un petit colibri très protecteur."
+  },
+  {
+    "id": 325,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel gouverneur est le principal antagoniste de Pocahontas ?",
+    "choices": [
+      "Ratcliffe",
+      "John Smith",
+      "Powhatan",
+      "Kocoum"
+    ],
+    "answer": 0,
+    "explanation": "Le gouverneur Ratcliffe cherche avant tout à trouver de l'or."
+  },
+  {
+    "id": 326,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'une princesse écossaise excellente au tir à l'arc ?",
+    "choices": [
+      "Rebelle",
+      "Mulan",
+      "Raiponce",
+      "Encanto"
+    ],
+    "answer": 0,
+    "explanation": "Rebelle (Brave) met en scène Mérida."
+  },
+  {
+    "id": 327,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle l'héroïne du film Rebelle ?",
+    "choices": [
+      "Mérida",
+      "Anna",
+      "Elsa",
+      "Belle"
+    ],
+    "answer": 0,
+    "explanation": "Mérida est une princesse indépendante et excellente archère."
+  },
+  {
+    "id": 328,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En quel animal la mère de Mérida est-elle transformée ?",
+    "choices": [
+      "Un ours",
+      "Un loup",
+      "Un cerf",
+      "Un aigle"
+    ],
+    "answer": 0,
+    "explanation": "La reine Elinor est changée en ourse après avoir mangé un gâteau ensorcelé."
+  },
+  {
+    "id": 329,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un jeune homme élevé par des gorilles ?",
+    "choices": [
+      "Tarzan",
+      "Le Livre de la Jungle",
+      "Frère des Ours",
+      "George de la Jungle"
+    ],
+    "answer": 0,
+    "explanation": "Tarzan est adapté du roman d'Edgar Rice Burroughs."
+  },
+  {
+    "id": 330,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la jeune exploratrice rencontrée par Tarzan ?",
+    "choices": [
+      "Jane",
+      "Alice",
+      "Wendy",
+      "Emily"
+    ],
+    "answer": 0,
+    "explanation": "Jane Porter tombe amoureuse de Tarzan lors de son expédition."
+  },
+  {
+    "id": 331,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la gorille qui élève Tarzan ?",
+    "choices": [
+      "Kala",
+      "Kerchak",
+      "Jane",
+      "Terk"
+    ],
+    "answer": 0,
+    "explanation": "Kala adopte Tarzan après la mort de ses parents."
+  },
+  {
+    "id": 332,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le chef des gorilles dans Tarzan ?",
+    "choices": [
+      "Kerchak",
+      "Kala",
+      "Terk",
+      "Clayton"
+    ],
+    "answer": 0,
+    "explanation": "Kerchak est le chef de la famille de gorilles."
+  },
+  {
+    "id": 333,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le nom du principal antagoniste dans Tarzan ?",
+    "choices": [
+      "Clayton",
+      "Porter",
+      "Kerchak",
+      "Sabor"
+    ],
+    "answer": 0,
+    "explanation": "Clayton est un chasseur qui veut capturer les gorilles."
+  },
+  {
+    "id": 334,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un garçon élevé par des loups ?",
+    "choices": [
+      "Le Livre de la Jungle",
+      "Tarzan",
+      "Frère des Ours",
+      "Bambi"
+    ],
+    "answer": 0,
+    "explanation": "Le Livre de la Jungle est adapté de l'œuvre de Rudyard Kipling."
+  },
+  {
+    "id": 335,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le jeune héros du Livre de la Jungle ?",
+    "choices": [
+      "Mowgli",
+      "Baloo",
+      "Bagheera",
+      "Shere Khan"
+    ],
+    "answer": 0,
+    "explanation": "Mowgli est un enfant élevé par une meute de loups."
+  },
+  {
+    "id": 336,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la panthère qui protège Mowgli ?",
+    "choices": [
+      "Bagheera",
+      "Baloo",
+      "Kaa",
+      "Akela"
+    ],
+    "answer": 0,
+    "explanation": "Bagheera veille constamment sur Mowgli."
+  },
+  {
+    "id": 337,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle l'ours ami de Mowgli ?",
+    "choices": [
+      "Baloo",
+      "Bagheera",
+      "Kaa",
+      "Hathi"
+    ],
+    "answer": 0,
+    "explanation": "Baloo apprend à Mowgli à profiter de la vie."
+  },
+  {
+    "id": 338,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel tigre est le principal ennemi de Mowgli ?",
+    "choices": [
+      "Shere Khan",
+      "Kaa",
+      "Baloo",
+      "Akela"
+    ],
+    "answer": 0,
+    "explanation": "Shere Khan est un tigre redouté dans toute la jungle."
+  },
+  {
+    "id": 339,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel serpent tente d'hypnotiser Mowgli ?",
+    "choices": [
+      "Kaa",
+      "Shere Khan",
+      "Bagheera",
+      "Hathi"
+    ],
+    "answer": 0,
+    "explanation": "Kaa utilise son regard hypnotique pour piéger Mowgli."
+  },
+  {
+    "id": 340,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le roi des singes dans Le Livre de la Jungle ?",
+    "choices": [
+      "Le Roi Louie",
+      "Akela",
+      "Hathi",
+      "Baloo"
+    ],
+    "answer": 0,
+    "explanation": "Le Roi Louie rêve de découvrir le secret du feu des hommes."
+  },
+  {
+    "id": 341,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire de deux frères transformés en ours ?",
+    "choices": [
+      "Frère des Ours",
+      "Le Livre de la Jungle",
+      "Tarzan",
+      "Rebelle"
+    ],
+    "answer": 0,
+    "explanation": "Frère des Ours suit Kenai après sa transformation en ours."
+  },
+  {
+    "id": 342,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le héros transformé en ours dans Frère des Ours ?",
+    "choices": [
+      "Kenai",
+      "Koda",
+      "Denahi",
+      "Sitka"
+    ],
+    "answer": 0,
+    "explanation": "Kenai est transformé en ours pour apprendre le respect de la nature."
+  },
+  {
+    "id": 343,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le jeune ourson qui accompagne Kenai ?",
+    "choices": [
+      "Koda",
+      "Denahi",
+      "Sitka",
+      "Tug"
+    ],
+    "answer": 0,
+    "explanation": "Koda devient le meilleur ami de Kenai."
+  },
+  {
+    "id": 344,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un lionceau destiné à devenir roi ?",
+    "choices": [
+      "Le Roi Lion",
+      "Bambi",
+      "Madagascar",
+      "Spirit"
+    ],
+    "answer": 0,
+    "explanation": "Le Roi Lion est l'un des plus grands classiques de Disney."
+  },
+  {
+    "id": 345,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le père de Simba ?",
+    "choices": [
+      "Mufasa",
+      "Scar",
+      "Rafiki",
+      "Zazu"
+    ],
+    "answer": 0,
+    "explanation": "Mufasa est le roi de la Terre des Lions."
+  },
+  {
+    "id": 346,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel lion est le principal antagoniste du Roi Lion ?",
+    "choices": [
+      "Scar",
+      "Mufasa",
+      "Simba",
+      "Kovu"
+    ],
+    "answer": 0,
+    "explanation": "Scar est le frère de Mufasa et l'oncle de Simba."
+  },
+  {
+    "id": 347,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le phacochère ami de Simba ?",
+    "choices": [
+      "Pumbaa",
+      "Timon",
+      "Zazu",
+      "Rafiki"
+    ],
+    "answer": 0,
+    "explanation": "Pumbaa forme un duo inséparable avec Timon."
+  },
+  {
+    "id": 348,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le suricate compagnon de Pumbaa ?",
+    "choices": [
+      "Timon",
+      "Rafiki",
+      "Zazu",
+      "Banzai"
+    ],
+    "answer": 0,
+    "explanation": "Timon est le meilleur ami de Pumbaa."
+  },
+  {
+    "id": 349,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mandrill sert de conseiller au royaume dans Le Roi Lion ?",
+    "choices": [
+      "Rafiki",
+      "Zazu",
+      "Scar",
+      "Mufasa"
+    ],
+    "answer": 0,
+    "explanation": "Rafiki est le sage du royaume et guide Simba."
+  },
+  {
+    "id": 350,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le calao qui sert de majordome à Mufasa ?",
+    "choices": [
+      "Zazu",
+      "Rafiki",
+      "Pumbaa",
+      "Timon"
+    ],
+    "answer": 0,
+    "explanation": "Zazu est un calao loyal au roi Mufasa puis à Simba."
+  },
+  {
+    "id": 351,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la lionne dont Simba tombe amoureux ?",
+    "choices": [
+      "Nala",
+      "Kiara",
+      "Sarabi",
+      "Shenzi"
+    ],
+    "answer": 0,
+    "explanation": "Nala est l'amie d'enfance puis la compagne de Simba."
+  },
+  {
+    "id": 352,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle expression signifie « sans souci » dans Le Roi Lion ?",
+    "choices": [
+      "Hakuna Matata",
+      "Carpe Diem",
+      "Aloha",
+      "Banzai"
+    ],
+    "answer": 0,
+    "explanation": "Hakuna Matata est la philosophie de vie de Timon et Pumbaa."
+  },
+  {
+    "id": 353,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un jeune faon ?",
+    "choices": [
+      "Bambi",
+      "Le Roi Lion",
+      "Frère des Ours",
+      "Dumbo"
+    ],
+    "answer": 0,
+    "explanation": "Bambi est l'un des grands classiques de Disney."
+  },
+  {
+    "id": 354,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le lapin meilleur ami de Bambi ?",
+    "choices": [
+      "Panpan",
+      "Fleur",
+      "Bourriquet",
+      "Rox"
+    ],
+    "answer": 0,
+    "explanation": "Panpan apprend à Bambi à parler et à marcher."
+  },
+  {
+    "id": 355,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la moufette amie de Bambi ?",
+    "choices": [
+      "Fleur",
+      "Panpan",
+      "Faline",
+      "Rox"
+    ],
+    "answer": 0,
+    "explanation": "Fleur est une moufette très timide."
+  },
+  {
+    "id": 356,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la biche dont Bambi tombe amoureux ?",
+    "choices": [
+      "Faline",
+      "Nala",
+      "Kiara",
+      "Lady"
+    ],
+    "answer": 0,
+    "explanation": "Faline est l'amie d'enfance puis la compagne de Bambi."
+  },
+  {
+    "id": 357,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney met en scène un éléphanteau capable de voler grâce à ses grandes oreilles ?",
+    "choices": [
+      "Dumbo",
+      "Bambi",
+      "Bolt",
+      "Tarzan"
+    ],
+    "answer": 0,
+    "explanation": "Dumbo vole en utilisant ses immenses oreilles."
+  },
+  {
+    "id": 358,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel animal est Timothée dans Dumbo ?",
+    "choices": [
+      "Une souris",
+      "Un lapin",
+      "Un perroquet",
+      "Un singe"
+    ],
+    "answer": 0,
+    "explanation": "Timothée est la souris qui encourage Dumbo."
+  },
+  {
+    "id": 359,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un renard et d'un chien devenant amis ?",
+    "choices": [
+      "Rox et Rouky",
+      "Bolt",
+      "Oliver et Compagnie",
+      "Volt"
+    ],
+    "answer": 0,
+    "explanation": "Rox et Rouky montre une amitié mise à l'épreuve par leurs instincts."
+  },
+  {
+    "id": 360,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le renard dans Rox et Rouky ?",
+    "choices": [
+      "Rox",
+      "Rouky",
+      "Chef",
+      "Dixie"
+    ],
+    "answer": 0,
+    "explanation": "Rox est un jeune renard recueilli par une vieille dame."
+  },
+  {
+    "id": 361,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le chien dans Rox et Rouky ?",
+    "choices": [
+      "Rouky",
+      "Rox",
+      "Chef",
+      "Copper"
+    ],
+    "answer": 0,
+    "explanation": "Rouky est le jeune chien de chasse et le meilleur ami de Rox."
+  },
+  {
+    "id": 362,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un chaton orphelin vivant à New York ?",
+    "choices": [
+      "Oliver et Compagnie",
+      "Les Aristochats",
+      "Bolt",
+      "Rox et Rouky"
+    ],
+    "answer": 0,
+    "explanation": "Oliver et Compagnie est une adaptation moderne d'Oliver Twist."
+  },
+  {
+    "id": 363,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le chaton héros d'Oliver et Compagnie ?",
+    "choices": [
+      "Oliver",
+      "Toulouse",
+      "Figaro",
+      "Thomas O'Malley"
+    ],
+    "answer": 0,
+    "explanation": "Oliver est recueilli par une bande de chiens vivant dans les rues."
+  },
+  {
+    "id": 364,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'une famille de chats vivant à Paris ?",
+    "choices": [
+      "Les Aristochats",
+      "Oliver et Compagnie",
+      "Rox et Rouky",
+      "Bolt"
+    ],
+    "answer": 0,
+    "explanation": "Les Aristochats est sorti en 1970."
+  },
+  {
+    "id": 365,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le chat de gouttière qui aide Duchesse et ses chatons ?",
+    "choices": [
+      "Thomas O'Malley",
+      "Toulouse",
+      "Berlioz",
+      "Scat Cat"
+    ],
+    "answer": 0,
+    "explanation": "Thomas O'Malley tombe amoureux de Duchesse."
+  },
+  {
+    "id": 366,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la chatte mère des Aristochats ?",
+    "choices": [
+      "Duchesse",
+      "Marie",
+      "Minette",
+      "Perla"
+    ],
+    "answer": 0,
+    "explanation": "Duchesse est la mère de Marie, Toulouse et Berlioz."
+  },
+  {
+    "id": 367,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le nom du majordome méchant dans Les Aristochats ?",
+    "choices": [
+      "Edgar",
+      "Gaston",
+      "Horace",
+      "Percival"
+    ],
+    "answer": 0,
+    "explanation": "Edgar tente de se débarrasser des chats pour toucher un héritage."
+  },
+  {
+    "id": 368,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un jeune cerf élevé parmi des humains ?",
+    "choices": [
+      "Bambi",
+      "Frère des Ours",
+      "Tarzan",
+      "Le Livre de la Jungle"
+    ],
+    "answer": 0,
+    "explanation": "Bambi grandit dans la forêt et apprend à devenir le Grand Prince."
+  },
+  {
+    "id": 369,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'une famille suisse survivant sur une île déserte ?",
+    "choices": [
+      "Les Robinsons des mers du Sud",
+      "Treasure Planet",
+      "Atlantide",
+      "Dinosaure"
+    ],
+    "answer": 0,
+    "explanation": "Les Robinsons des mers du Sud est adapté du roman Le Robinson suisse."
+  },
+  {
+    "id": 370,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'une civilisation perdue sous l'océan ?",
+    "choices": [
+      "Atlantide, l'empire perdu",
+      "Treasure Planet",
+      "Dinosaure",
+      "Wish"
+    ],
+    "answer": 0,
+    "explanation": "Atlantide, l'empire perdu suit Milo Thatch à la recherche de la cité légendaire."
+  },
+  {
+    "id": 371,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le héros principal d'Atlantide, l'empire perdu ?",
+    "choices": [
+      "Milo Thatch",
+      "Jim Hawkins",
+      "Lewis",
+      "John Silver"
+    ],
+    "answer": 0,
+    "explanation": "Milo Thatch est un jeune linguiste passionné par la légende de l'Atlantide."
+  },
+  {
+    "id": 372,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la princesse d'Atlantide ?",
+    "choices": [
+      "Kida",
+      "Neytiri",
+      "Kiara",
+      "Nala"
+    ],
+    "answer": 0,
+    "explanation": "Kida Nedakh est la princesse de la cité d'Atlantide."
+  },
+  {
+    "id": 373,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney adapte le roman L'Île au trésor dans un univers spatial ?",
+    "choices": [
+      "La Planète au Trésor",
+      "Atlantide",
+      "Buzz l'Éclair",
+      "Wall-E"
+    ],
+    "answer": 0,
+    "explanation": "La Planète au Trésor transpose le roman de Stevenson dans un univers de science-fiction."
+  },
+  {
+    "id": 374,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le héros de La Planète au Trésor ?",
+    "choices": [
+      "Jim Hawkins",
+      "Milo Thatch",
+      "Peter Pan",
+      "Aladdin"
+    ],
+    "answer": 0,
+    "explanation": "Jim Hawkins découvre une carte menant à la mythique Planète au Trésor."
+  },
+  {
+    "id": 375,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel pirate cyborg devient le mentor de Jim Hawkins ?",
+    "choices": [
+      "John Silver",
+      "Capitaine Crochet",
+      "Barbe Noire",
+      "Flint"
+    ],
+    "answer": 0,
+    "explanation": "John Silver développe une véritable relation père-fils avec Jim."
+  },
+  {
+    "id": 376,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un inventeur nommé Lewis voyageant dans le futur ?",
+    "choices": [
+      "Bienvenue chez les Robinson",
+      "Les Robinsons des mers du Sud",
+      "Big Hero 6",
+      "Les Nouveaux Héros"
+    ],
+    "answer": 0,
+    "explanation": "Lewis est emmené dans le futur par Wilbur Robinson."
+  },
+  {
+    "id": 377,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le garçon venu du futur dans Bienvenue chez les Robinson ?",
+    "choices": [
+      "Wilbur Robinson",
+      "Lewis",
+      "Cornelius",
+      "Goob"
+    ],
+    "answer": 0,
+    "explanation": "Wilbur Robinson voyage dans le temps pour aider Lewis."
+  },
+  {
+    "id": 378,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le surnom du principal méchant dans Bienvenue chez les Robinson ?",
+    "choices": [
+      "L'Homme au Chapeau Melon",
+      "Le Savant Fou",
+      "Docteur Noir",
+      "Le Baron"
+    ],
+    "answer": 0,
+    "explanation": "L'Homme au Chapeau Melon est manipulé par un chapeau robotique nommé Doris."
+  },
+  {
+    "id": 379,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film Disney raconte l'histoire d'un petit robot chargé de protéger une planète lointaine ?",
+    "choices": [
+      "Buzz l'Éclair",
+      "Wall-E",
+      "Les Nouveaux Héros",
+      "Robots"
+    ],
+    "answer": 0,
+    "explanation": "Buzz l'Éclair (Lightyear) raconte une aventure du célèbre ranger de l'espace."
+  },
+  {
+    "id": 380,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans Toy Story, quel est le nom du propriétaire des jouets au début de la saga ?",
+    "choices": [
+      "Andy",
+      "Bonnie",
+      "Sid",
+      "Molly"
+    ],
+    "answer": 0,
+    "explanation": "Andy est le propriétaire de Woody et Buzz pendant les trois premiers films."
+  },
+  {
+    "id": 381,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel jouet est le chef naturel du groupe dans Toy Story ?",
+    "choices": [
+      "Woody",
+      "Buzz l'Éclair",
+      "Rex",
+      "Patate"
+    ],
+    "answer": 0,
+    "explanation": "Woody est le cowboy préféré d'Andy et le leader des jouets."
+  },
+  {
+    "id": 382,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le nom complet de Buzz l'Éclair en version originale ?",
+    "choices": [
+      "Buzz Lightyear",
+      "Buzz Ranger",
+      "Captain Buzz",
+      "Buzz Galaxy"
+    ],
+    "answer": 0,
+    "explanation": "Son nom original est Buzz Lightyear."
+  },
+  {
+    "id": 383,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le voisin d'Andy qui maltraite les jouets ?",
+    "choices": [
+      "Sid",
+      "Bonnie",
+      "Al",
+      "Lotso"
+    ],
+    "answer": 0,
+    "explanation": "Sid est le principal antagoniste du premier Toy Story."
+  },
+  {
+    "id": 384,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel dinosaure vert fait partie des jouets d'Andy ?",
+    "choices": [
+      "Rex",
+      "Slinky",
+      "Bullseye",
+      "Hamm"
+    ],
+    "answer": 0,
+    "explanation": "Rex est un tyrannosaure très gentil mais extrêmement anxieux."
+  },
+  {
+    "id": 385,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le cochon-tirelire dans Toy Story ?",
+    "choices": [
+      "Hamm",
+      "Rex",
+      "Patate",
+      "Bayonne"
+    ],
+    "answer": 0,
+    "explanation": "Hamm est un cochon-tirelire sarcastique."
+  },
+  {
+    "id": 386,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel personnage est un chien en forme de ressort dans Toy Story ?",
+    "choices": [
+      "Slinky",
+      "Rex",
+      "Zigzag",
+      "Bullseye"
+    ],
+    "answer": 0,
+    "explanation": "Slinky est un chien-jouet à ressort très fidèle à Woody."
+  },
+  {
+    "id": 387,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle l'ours rose parfumé à la fraise dans Toy Story 3 ?",
+    "choices": [
+      "Lotso",
+      "Big Baby",
+      "Ken",
+      "Zurg"
+    ],
+    "answer": 0,
+    "explanation": "Lotso est le principal antagoniste de Toy Story 3."
+  },
+  {
+    "id": 388,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le cheval de Woody ?",
+    "choices": [
+      "Bullseye",
+      "Spirit",
+      "Maximus",
+      "Pégase"
+    ],
+    "answer": 0,
+    "explanation": "Bullseye apparaît à partir de Toy Story 2."
+  },
+  {
+    "id": 389,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel empereur maléfique est l'ennemi juré de Buzz l'Éclair ?",
+    "choices": [
+      "Zurg",
+      "Dark Vador",
+      "Megatron",
+      "Ultron"
+    ],
+    "answer": 0,
+    "explanation": "L'Empereur Zurg est le grand ennemi de Buzz."
+  },
+  {
+    "id": 390,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la cow-girl rencontrée dans Toy Story 2 ?",
+    "choices": [
+      "Jessie",
+      "Bo Peep",
+      "Dolly",
+      "Bonnie"
+    ],
+    "answer": 0,
+    "explanation": "Jessie rejoint Woody et ses amis à partir de Toy Story 2."
+  },
+  {
+    "id": 391,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la bergère amie de Woody ?",
+    "choices": [
+      "Bo Peep",
+      "Jessie",
+      "Dolly",
+      "Bonnie"
+    ],
+    "answer": 0,
+    "explanation": "Bo Peep revient au premier plan dans Toy Story 4."
+  },
+  {
+    "id": 392,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la fillette qui reçoit les jouets d'Andy à la fin de Toy Story 3 ?",
+    "choices": [
+      "Bonnie",
+      "Molly",
+      "Emily",
+      "Daisy"
+    ],
+    "answer": 0,
+    "explanation": "Andy confie ses jouets à Bonnie avant de partir à l'université."
+  },
+  {
+    "id": 393,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel personnage est un jouet fabriqué à partir d'une fourchette dans Toy Story 4 ?",
+    "choices": [
+      "Fourchette",
+      "Ducky",
+      "Bunny",
+      "Gabby"
+    ],
+    "answer": 0,
+    "explanation": "Fourchette (Forky en VO) est créé par Bonnie."
+  },
+  {
+    "id": 394,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle la poupée ancienne antagoniste de Toy Story 4 ?",
+    "choices": [
+      "Gabby Gabby",
+      "Jessie",
+      "Dolly",
+      "Harmony"
+    ],
+    "answer": 0,
+    "explanation": "Gabby Gabby souhaite obtenir la boîte vocale de Woody."
+  },
+  {
+    "id": 395,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel film d'animation met en scène un ogre vivant dans un marais ?",
+    "choices": [
+      "Shrek",
+      "Monstres & Cie",
+      "Dragons",
+      "Les Croods"
+    ],
+    "answer": 0,
+    "explanation": "Shrek est l'un des plus grands succès de DreamWorks."
+  },
+  {
+    "id": 396,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle l'âne bavard qui accompagne Shrek ?",
+    "choices": [
+      "L'Âne",
+      "Potté",
+      "Fiona",
+      "Harold"
+    ],
+    "answer": 0,
+    "explanation": "L'Âne est le fidèle compagnon de Shrek."
+  },
+  {
+    "id": 397,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le nom de la princesse dans Shrek ?",
+    "choices": [
+      "Fiona",
+      "Raiponce",
+      "Aurore",
+      "Blanche-Neige"
+    ],
+    "answer": 0,
+    "explanation": "Fiona cache un secret : elle devient une ogresse la nuit."
+  },
+  {
+    "id": 398,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment s'appelle le Chat Botté dans la version française de Shrek ?",
+    "choices": [
+      "Le Chat Potté",
+      "Le Chat Botté",
+      "Puss",
+      "Moustache"
+    ],
+    "answer": 0,
+    "explanation": "Dans les films Shrek en français, le personnage est appelé « Le Chat Potté »."
+  },
+  {
+    "id": 399,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel souverain ordonne à Shrek de sauver Fiona dans le premier film ?",
+    "choices": [
+      "Lord Farquaad",
+      "Le roi Harold",
+      "Le Prince Charmant",
+      "Rumpelstiltskin"
+    ],
+    "answer": 0,
+    "explanation": "Lord Farquaad promet de rendre son marais à Shrek en échange de cette mission."
+  },
+  {
+    "id": 400,
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel dragon garde la tour où est enfermée Fiona ?",
+    "choices": [
+      "Une dragonne",
+      "Furie Nocturne",
+      "Draco",
+      "Smaug"
+    ],
+    "answer": 0,
+    "explanation": "La gardienne de la tour est une dragonne qui tombera amoureuse de l'Âne."
+  },
+  {
+    "id": 401,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En quelle année est sorti le premier long-métrage Toy Story ?",
+    "choices": [
+      "1995",
+      "1993",
+      "1997",
+      "1999"
+    ],
+    "answer": 0,
+    "explanation": "Toy Story est sorti en 1995 et fut le premier long-métrage entièrement réalisé en images de synthèse."
+  },
+  {
+    "id": 402,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom complet du héros de Ratatouille ?",
+    "choices": [
+      "Alfredo Linguini",
+      "Linguini Gusteau",
+      "Anton Ego",
+      "Rémy Linguini"
+    ],
+    "answer": 0,
+    "explanation": "Le véritable nom du personnage est Alfredo Linguini."
+  },
+  {
+    "id": 403,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le critique gastronomique dans Ratatouille ?",
+    "choices": [
+      "Anton Ego",
+      "Auguste Gusteau",
+      "Skinner",
+      "Horst"
+    ],
+    "answer": 0,
+    "explanation": "Anton Ego est le critique le plus redouté de Paris."
+  },
+  {
+    "id": 404,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du chef dont le restaurant est au cœur de Ratatouille ?",
+    "choices": [
+      "Auguste Gusteau",
+      "Anton Ego",
+      "Skinner",
+      "Linguini"
+    ],
+    "answer": 0,
+    "explanation": "Auguste Gusteau est le célèbre chef dont Rémy admire la philosophie."
+  },
+  {
+    "id": 405,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel personnage devient le chef du restaurant à la fin de Ratatouille ?",
+    "choices": [
+      "Alfredo Linguini",
+      "Rémy",
+      "Skinner",
+      "Anton Ego"
+    ],
+    "answer": 0,
+    "explanation": "Linguini dirige officiellement le restaurant avec l'aide de Rémy."
+  },
+  {
+    "id": 406,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du père de Rémy dans Ratatouille ?",
+    "choices": [
+      "Django",
+      "Emile",
+      "Gusteau",
+      "Anton"
+    ],
+    "answer": 0,
+    "explanation": "Django est le chef de la colonie de rats."
+  },
+  {
+    "id": 407,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le frère de Rémy ?",
+    "choices": [
+      "Émile",
+      "Django",
+      "Linguini",
+      "Colette"
+    ],
+    "answer": 0,
+    "explanation": "Émile est le frère gourmand de Rémy."
+  },
+  {
+    "id": 408,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du chef cuisinier qui tente de conserver le contrôle du restaurant Gusteau ?",
+    "choices": [
+      "Skinner",
+      "Horst",
+      "Pompidou",
+      "Anton Ego"
+    ],
+    "answer": 0,
+    "explanation": "Le chef Skinner cache le lien entre Linguini et Gusteau."
+  },
+  {
+    "id": 409,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film Pixar a remporté l'Oscar du meilleur film d'animation en 2008 ?",
+    "choices": [
+      "Ratatouille",
+      "Cars",
+      "Wall-E",
+      "Là-haut"
+    ],
+    "answer": 0,
+    "explanation": "Ratatouille a remporté l'Oscar du meilleur film d'animation lors de la cérémonie de 2008."
+  },
+  {
+    "id": 410,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du restaurant ouvert par Rémy, Linguini et Colette à la fin de Ratatouille ?",
+    "choices": [
+      "La Ratatouille",
+      "Le Petit Chef",
+      "La Bonne Table",
+      "Chez Rémy"
+    ],
+    "answer": 3,
+    "explanation": "Après la fermeture de Gusteau, ils ouvrent un nouveau restaurant nommé « Chez Rémy »."
+  },
+  {
+    "id": 411,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le premier film du Marvel Cinematic Universe (MCU) ?",
+    "choices": [
+      "Iron Man",
+      "L'Incroyable Hulk",
+      "Captain America: First Avenger",
+      "Thor"
+    ],
+    "answer": 0,
+    "explanation": "Iron Man (2008) marque le début officiel du MCU."
+  },
+  {
+    "id": 412,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur incarne Tony Stark dans le MCU ?",
+    "choices": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "answer": 0,
+    "explanation": "Robert Downey Jr. est devenu emblématique dans le rôle d'Iron Man."
+  },
+  {
+    "id": 413,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le vrai nom de Black Panther ?",
+    "choices": [
+      "T'Challa",
+      "M'Baku",
+      "Killmonger",
+      "T'Khan"
+    ],
+    "answer": 0,
+    "explanation": "T'Challa est le roi du Wakanda."
+  },
+  {
+    "id": 414,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle la pierre que Vision possède sur son front ?",
+    "choices": [
+      "La Pierre de l'Esprit",
+      "La Pierre du Temps",
+      "La Pierre de l'Espace",
+      "La Pierre du Pouvoir"
+    ],
+    "answer": 0,
+    "explanation": "Vision est créé autour de la Pierre de l'Esprit."
+  },
+  {
+    "id": 415,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel Avenger utilise principalement un arc ?",
+    "choices": [
+      "Hawkeye",
+      "Falcon",
+      "Winter Soldier",
+      "Star-Lord"
+    ],
+    "answer": 0,
+    "explanation": "Clint Barton, alias Hawkeye, est un archer d'exception."
+  },
+  {
+    "id": 416,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Dans Avengers: Endgame, quel héros prononce « I am Iron Man » avant de vaincre Thanos ?",
+    "choices": [
+      "Tony Stark",
+      "Steve Rogers",
+      "Thor",
+      "Doctor Strange"
+    ],
+    "answer": 0,
+    "explanation": "Tony Stark utilise les Pierres d'Infinité pour éliminer Thanos et son armée."
+  },
+  {
+    "id": 417,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du marteau de Thor ?",
+    "choices": [
+      "Mjölnir",
+      "Stormbreaker",
+      "Gungnir",
+      "Gram"
+    ],
+    "answer": 0,
+    "explanation": "Mjölnir est le marteau enchanté forgé pour Thor."
+  },
+  {
+    "id": 418,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom de la hache créée pour Thor dans Avengers: Infinity War ?",
+    "choices": [
+      "Stormbreaker",
+      "Mjölnir",
+      "Jarnbjorn",
+      "Excalibur"
+    ],
+    "answer": 0,
+    "explanation": "Stormbreaker est forgée à Nidavellir par Eitri."
+  },
+  {
+    "id": 419,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel personnage est le père adoptif de Loki ?",
+    "choices": [
+      "Odin",
+      "Thor",
+      "Heimdall",
+      "Bor"
+    ],
+    "answer": 0,
+    "explanation": "Odin recueille Loki lorsqu'il est bébé."
+  },
+  {
+    "id": 420,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du royaume gouverné par Odin ?",
+    "choices": [
+      "Asgard",
+      "Midgard",
+      "Vanaheim",
+      "Jotunheim"
+    ],
+    "answer": 0,
+    "explanation": "Asgard est le royaume des Asgardiens dans les films Marvel."
+  },
+  {
+    "id": 421,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel scientifique crée Ultron dans Avengers : L'Ère d'Ultron ?",
+    "choices": [
+      "Tony Stark et Bruce Banner",
+      "Bruce Banner seul",
+      "Nick Fury",
+      "Hank Pym"
+    ],
+    "answer": 0,
+    "explanation": "Tony Stark et Bruce Banner utilisent une intelligence artificielle pour créer Ultron."
+  },
+  {
+    "id": 422,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle la sœur de T'Challa dans Black Panther ?",
+    "choices": [
+      "Shuri",
+      "Nakia",
+      "Ramonda",
+      "Okoye"
+    ],
+    "answer": 0,
+    "explanation": "Shuri est la brillante scientifique du Wakanda."
+  },
+  {
+    "id": 423,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le véritable nom de Star-Lord ?",
+    "choices": [
+      "Peter Quill",
+      "Peter Parker",
+      "Richard Rider",
+      "Adam Warlock"
+    ],
+    "answer": 0,
+    "explanation": "Peter Quill est le chef des Gardiens de la Galaxie."
+  },
+  {
+    "id": 424,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle race est Ronan dans Les Gardiens de la Galaxie ?",
+    "choices": [
+      "Kree",
+      "Skrull",
+      "Asgardienne",
+      "Éternelle"
+    ],
+    "answer": 0,
+    "explanation": "Ronan l'Accusateur appartient au peuple Kree."
+  },
+  {
+    "id": 425,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel personnage dit la phrase « We are Groot » ?",
+    "choices": [
+      "Groot",
+      "Rocket",
+      "Drax",
+      "Peter Quill"
+    ],
+    "answer": 0,
+    "explanation": "Groot prononce cette phrase avant de se sacrifier."
+  },
+  {
+    "id": 426,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle planète est la planète natale de Peter Quill ?",
+    "choices": [
+      "La Terre",
+      "Xandar",
+      "Titan",
+      "Knowhere"
+    ],
+    "answer": 0,
+    "explanation": "Peter Quill est né sur Terre avant d'être enlevé par les Ravageurs."
+  },
+  {
+    "id": 427,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel Avenger est le premier à rencontrer les Gardiens de la Galaxie dans Infinity War ?",
+    "choices": [
+      "Thor",
+      "Iron Man",
+      "Spider-Man",
+      "Doctor Strange"
+    ],
+    "answer": 0,
+    "explanation": "Thor est retrouvé dans l'espace par les Gardiens après l'attaque de Thanos."
+  },
+  {
+    "id": 428,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du père de Gamora et Nebula ?",
+    "choices": [
+      "Thanos",
+      "Ego",
+      "Odin",
+      "Ronan"
+    ],
+    "answer": 0,
+    "explanation": "Thanos adopte Gamora et Nebula après avoir conquis leurs mondes."
+  },
+  {
+    "id": 429,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Sur quelle planète Thanos récupère-t-il la Pierre de l'Âme ?",
+    "choices": [
+      "Vormir",
+      "Titan",
+      "Xandar",
+      "Nidavellir"
+    ],
+    "answer": 0,
+    "explanation": "La Pierre de l'Âme est gardée sur Vormir par Crâne Rouge."
+  },
+  {
+    "id": 430,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel sacrifice Thanos doit-il accomplir pour obtenir la Pierre de l'Âme ?",
+    "choices": [
+      "Sacrifier Gamora",
+      "Sacrifier Nebula",
+      "Sacrifier Ebony Maw",
+      "Sacrifier Proxima Midnight"
+    ],
+    "answer": 0,
+    "explanation": "Thanos jette Gamora du haut de la falaise de Vormir afin d'obtenir la Pierre de l'Âme."
+  },
+  {
+    "id": 431,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel personnage garde la Pierre de l'Âme sur Vormir dans Avengers: Infinity War ?",
+    "choices": [
+      "Crâne Rouge",
+      "Loki",
+      "Odin",
+      "Heimdall"
+    ],
+    "answer": 0,
+    "explanation": "Après les événements de Captain America: First Avenger, Crâne Rouge devient le gardien de la Pierre de l'Âme."
+  },
+  {
+    "id": 432,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel Avenger manie à la fois Mjolnir et Stormbreaker dans Avengers: Endgame ?",
+    "choices": [
+      "Thor",
+      "Captain America",
+      "Iron Man",
+      "Hulk"
+    ],
+    "answer": 0,
+    "explanation": "Thor utilise simultanément Mjolnir et Stormbreaker durant la bataille finale."
+  },
+  {
+    "id": 433,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel Avenger est jugé digne de soulever Mjolnir dans Avengers: Endgame ?",
+    "choices": [
+      "Captain America",
+      "Iron Man",
+      "Hawkeye",
+      "Black Panther"
+    ],
+    "answer": 0,
+    "explanation": "Steve Rogers surprend tout le monde en soulevant le marteau de Thor."
+  },
+  {
+    "id": 434,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le véritable nom du Soldat de l'Hiver ?",
+    "choices": [
+      "Bucky Barnes",
+      "Sam Wilson",
+      "James Rhodes",
+      "Clint Barton"
+    ],
+    "answer": 0,
+    "explanation": "James Buchanan « Bucky » Barnes est le meilleur ami de Steve Rogers."
+  },
+  {
+    "id": 435,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le véritable nom de Falcon ?",
+    "choices": [
+      "Sam Wilson",
+      "Scott Lang",
+      "James Rhodes",
+      "Matt Murdock"
+    ],
+    "answer": 0,
+    "explanation": "Sam Wilson devient le nouveau Captain America à la fin d'Avengers: Endgame."
+  },
+  {
+    "id": 436,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel personnage remet le bouclier de Captain America à Sam Wilson ?",
+    "choices": [
+      "Steve Rogers",
+      "Bucky Barnes",
+      "Nick Fury",
+      "Bruce Banner"
+    ],
+    "answer": 0,
+    "explanation": "À la fin d'Endgame, Steve Rogers âgé transmet son héritage à Sam Wilson."
+  },
+  {
+    "id": 437,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom de l'organisation dirigée par Nick Fury ?",
+    "choices": [
+      "S.H.I.E.L.D.",
+      "HYDRA",
+      "A.I.M.",
+      "S.W.O.R.D."
+    ],
+    "answer": 0,
+    "explanation": "Le S.H.I.E.L.D. est l'organisation chargée de protéger la Terre contre les menaces majeures."
+  },
+  {
+    "id": 438,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle organisation infiltre secrètement le S.H.I.E.L.D. ?",
+    "choices": [
+      "HYDRA",
+      "Les Dix Anneaux",
+      "TVA",
+      "A.I.M."
+    ],
+    "answer": 0,
+    "explanation": "HYDRA infiltre le S.H.I.E.L.D. pendant plusieurs décennies."
+  },
+  {
+    "id": 439,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le père de Tony Stark ?",
+    "choices": [
+      "Howard Stark",
+      "Edwin Stark",
+      "Anthony Stark",
+      "Richard Stark"
+    ],
+    "answer": 0,
+    "explanation": "Howard Stark est l'un des fondateurs du S.H.I.E.L.D. avec Peggy Carter."
+  },
+  {
+    "id": 440,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel métal fictif compose principalement le bouclier de Captain America ?",
+    "choices": [
+      "Vibranium",
+      "Adamantium",
+      "Uru",
+      "Titanium"
+    ],
+    "answer": 0,
+    "explanation": "Le bouclier de Captain America est fabriqué en vibranium, un métal extrêmement rare provenant du Wakanda."
+  },
+  {
+    "id": 441,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur a réalisé le film Titanic (1997) ?",
+    "choices": [
+      "James Cameron",
+      "Steven Spielberg",
+      "Christopher Nolan",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "James Cameron est le réalisateur, scénariste et coproducteur de Titanic."
+  },
+  {
+    "id": 442,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Jack Dawson dans Titanic ?",
+    "choices": [
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Brad Pitt",
+      "Tom Cruise"
+    ],
+    "answer": 0,
+    "explanation": "Leonardo DiCaprio joue Jack Dawson aux côtés de Kate Winslet."
+  },
+  {
+    "id": 443,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le personnage joué par Kate Winslet dans Titanic ?",
+    "choices": [
+      "Rose DeWitt Bukater",
+      "Molly Brown",
+      "Ruth DeWitt Bukater",
+      "Rose Dawson"
+    ],
+    "answer": 0,
+    "explanation": "Le nom complet de Rose est Rose DeWitt Bukater."
+  },
+  {
+    "id": 444,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En quelle année le Titanic a-t-il coulé ?",
+    "choices": [
+      "1912",
+      "1910",
+      "1914",
+      "1908"
+    ],
+    "answer": 0,
+    "explanation": "Le RMS Titanic a sombré dans la nuit du 14 au 15 avril 1912."
+  },
+  {
+    "id": 445,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film est devenu le premier de l'histoire à dépasser 2 milliards de dollars de recettes mondiales ?",
+    "choices": [
+      "Avatar",
+      "Titanic",
+      "Avengers: Endgame",
+      "Star Wars : Le Réveil de la Force"
+    ],
+    "answer": 0,
+    "explanation": "Avatar (2009) est le premier film à franchir la barre des 2 milliards de dollars au box-office mondial."
+  },
+  {
+    "id": 446,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est à l'origine de la trilogie The Dark Knight ?",
+    "choices": [
+      "Christopher Nolan",
+      "Zack Snyder",
+      "Matt Reeves",
+      "Tim Burton"
+    ],
+    "answer": 0,
+    "explanation": "Christopher Nolan a réalisé Batman Begins, The Dark Knight et The Dark Knight Rises."
+  },
+  {
+    "id": 447,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur incarne le Joker dans The Dark Knight (2008) ?",
+    "choices": [
+      "Heath Ledger",
+      "Joaquin Phoenix",
+      "Jared Leto",
+      "Jack Nicholson"
+    ],
+    "answer": 0,
+    "explanation": "Heath Ledger a remporté un Oscar posthume pour son interprétation du Joker."
+  },
+  {
+    "id": 448,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film a remporté l'Oscar du meilleur film lors de la cérémonie de 2020 ?",
+    "choices": [
+      "Parasite",
+      "1917",
+      "Joker",
+      "Le Mans 66"
+    ],
+    "answer": 0,
+    "explanation": "Parasite est devenu le premier film en langue non anglaise à remporter l'Oscar du meilleur film."
+  },
+  {
+    "id": 449,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur sud-coréen a réalisé Parasite ?",
+    "choices": [
+      "Bong Joon-ho",
+      "Park Chan-wook",
+      "Kim Jee-woon",
+      "Na Hong-jin"
+    ],
+    "answer": 0,
+    "explanation": "Bong Joon-ho a remporté l'Oscar du meilleur réalisateur pour Parasite."
+  },
+  {
+    "id": 450,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film a remporté l'Oscar du meilleur film en 2024 ?",
+    "choices": [
+      "Oppenheimer",
+      "Barbie",
+      "Pauvres Créatures",
+      "Killers of the Flower Moon"
+    ],
+    "answer": 0,
+    "explanation": "Oppenheimer de Christopher Nolan a remporté l'Oscar du meilleur film lors de la cérémonie de 2024."
+  },
+  {
+    "id": 451,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur incarne Oppenheimer dans le film de Christopher Nolan ?",
+    "choices": [
+      "Cillian Murphy",
+      "Matt Damon",
+      "Robert Downey Jr.",
+      "Christian Bale"
+    ],
+    "answer": 0,
+    "explanation": "Cillian Murphy a remporté l'Oscar du meilleur acteur pour ce rôle."
+  },
+  {
+    "id": 452,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est à l'origine de la saga Le Seigneur des Anneaux ?",
+    "choices": [
+      "Peter Jackson",
+      "James Cameron",
+      "Ridley Scott",
+      "George Lucas"
+    ],
+    "answer": 0,
+    "explanation": "Peter Jackson a réalisé les trilogies Le Seigneur des Anneaux et Le Hobbit."
+  },
+  {
+    "id": 453,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle l'épée reforgée d'Aragorn ?",
+    "choices": [
+      "Andúril",
+      "Narsil",
+      "Glamdring",
+      "Orcrist"
+    ],
+    "answer": 0,
+    "explanation": "Andúril est reforgée à partir des fragments de Narsil."
+  },
+  {
+    "id": 454,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom de la montagne où l'Anneau Unique doit être détruit ?",
+    "choices": [
+      "La Montagne du Destin",
+      "Le Mont Solitaire",
+      "Le Mont Gundabad",
+      "Le Caradhras"
+    ],
+    "answer": 0,
+    "explanation": "La Montagne du Destin est située au cœur du Mordor."
+  },
+  {
+    "id": 455,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Gandalf dans les trilogies Le Seigneur des Anneaux et Le Hobbit ?",
+    "choices": [
+      "Ian McKellen",
+      "Christopher Lee",
+      "Sean Bean",
+      "Hugo Weaving"
+    ],
+    "answer": 0,
+    "explanation": "Ian McKellen incarne Gandalf depuis 2001."
+  },
+  {
+    "id": 456,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le vrai nom de Gollum avant sa corruption par l'Anneau ?",
+    "choices": [
+      "Sméagol",
+      "Déagol",
+      "Bilbo",
+      "Frodon"
+    ],
+    "answer": 0,
+    "explanation": "Sméagol devient Gollum après des siècles sous l'influence de l'Anneau."
+  },
+  {
+    "id": 457,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Harry Potter dans les huit films ?",
+    "choices": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Tom Felton",
+      "Elijah Wood"
+    ],
+    "answer": 0,
+    "explanation": "Daniel Radcliffe a joué Harry Potter de 2001 à 2011."
+  },
+  {
+    "id": 458,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le directeur de Poudlard pendant la majeure partie de la saga Harry Potter ?",
+    "choices": [
+      "Albus Dumbledore",
+      "Severus Rogue",
+      "Minerva McGonagall",
+      "Horace Slughorn"
+    ],
+    "answer": 0,
+    "explanation": "Albus Dumbledore dirige Poudlard jusqu'à sa mort dans le sixième film."
+  },
+  {
+    "id": 459,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom complet du principal antagoniste de la saga Harry Potter ?",
+    "choices": [
+      "Tom Elvis Jedusor",
+      "Tom Marvolo Riddle",
+      "Tom Salazar Jedusor",
+      "Thomas Voldemort"
+    ],
+    "answer": 1,
+    "explanation": "En version originale, son nom est Tom Marvolo Riddle. En français, il devient Tom Elvis Jedusor afin de former l'anagramme « Je suis Voldemort »."
+  },
+  {
+    "id": 460,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel sort est utilisé pour désarmer un adversaire dans Harry Potter ?",
+    "choices": [
+      "Expelliarmus",
+      "Avada Kedavra",
+      "Stupefix",
+      "Protego"
+    ],
+    "answer": 0,
+    "explanation": "Expelliarmus est le sort de désarmement le plus utilisé par Harry Potter."
+  },
+  {
+    "id": 461,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur incarne Neo dans la saga Matrix ?",
+    "choices": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Hugo Weaving",
+      "Tom Cruise"
+    ],
+    "answer": 0,
+    "explanation": "Keanu Reeves interprète Neo dans les films Matrix."
+  },
+  {
+    "id": 462,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le vaisseau commandé par Morpheus dans Matrix ?",
+    "choices": [
+      "Nebuchadnezzar",
+      "Zion",
+      "Logos",
+      "Osiris"
+    ],
+    "answer": 0,
+    "explanation": "Le Nebuchadnezzar est le vaisseau principal du premier Matrix."
+  },
+  {
+    "id": 463,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète le Joker dans le film Joker (2019) ?",
+    "choices": [
+      "Joaquin Phoenix",
+      "Heath Ledger",
+      "Jared Leto",
+      "Jack Nicholson"
+    ],
+    "answer": 0,
+    "explanation": "Joaquin Phoenix a remporté l'Oscar du meilleur acteur pour ce rôle."
+  },
+  {
+    "id": 464,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est à l'origine du film Inception ?",
+    "choices": [
+      "Christopher Nolan",
+      "Denis Villeneuve",
+      "James Cameron",
+      "David Fincher"
+    ],
+    "answer": 0,
+    "explanation": "Christopher Nolan a écrit et réalisé Inception."
+  },
+  {
+    "id": 465,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur tient le rôle principal dans Inception ?",
+    "choices": [
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Christian Bale",
+      "Joseph Gordon-Levitt"
+    ],
+    "answer": 0,
+    "explanation": "Leonardo DiCaprio interprète Dom Cobb."
+  },
+  {
+    "id": 466,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur a réalisé la saga Avatar ?",
+    "choices": [
+      "James Cameron",
+      "Peter Jackson",
+      "Steven Spielberg",
+      "George Lucas"
+    ],
+    "answer": 0,
+    "explanation": "James Cameron est le créateur de l'univers Avatar."
+  },
+  {
+    "id": 467,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle la planète sur laquelle se déroule Avatar ?",
+    "choices": [
+      "Pandora",
+      "Titan",
+      "Arrakis",
+      "Krypton"
+    ],
+    "answer": 0,
+    "explanation": "L'action d'Avatar se déroule sur la lune Pandora."
+  },
+  {
+    "id": 468,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du peuple autochtone de Pandora ?",
+    "choices": [
+      "Na'vi",
+      "Naboo",
+      "Asari",
+      "Kree"
+    ],
+    "answer": 0,
+    "explanation": "Les Na'vi sont les habitants de Pandora."
+  },
+  {
+    "id": 469,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Jake Sully dans Avatar ?",
+    "choices": [
+      "Sam Worthington",
+      "Chris Pratt",
+      "Chris Evans",
+      "Tom Hardy"
+    ],
+    "answer": 0,
+    "explanation": "Sam Worthington joue Jake Sully dans les films Avatar."
+  },
+  {
+    "id": 470,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle l'arbre sacré des Na'vi permettant de communiquer avec Eywa ?",
+    "choices": [
+      "L'Arbre des Âmes",
+      "L'Arbre de Vie",
+      "L'Arbre des Ancêtres",
+      "L'Arbre Sacré"
+    ],
+    "answer": 0,
+    "explanation": "L'Arbre des Âmes est un lieu spirituel majeur pour les Na'vi et leur connexion avec Eywa."
+  },
+  {
+    "id": 471,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est le créateur de Star Wars ?",
+    "choices": [
+      "George Lucas",
+      "J.J. Abrams",
+      "Irvin Kershner",
+      "Richard Marquand"
+    ],
+    "answer": 0,
+    "explanation": "George Lucas est le créateur de l'univers Star Wars."
+  },
+  {
+    "id": 472,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du maître Jedi qui forme Luke Skywalker sur Dagobah ?",
+    "choices": [
+      "Yoda",
+      "Obi-Wan Kenobi",
+      "Mace Windu",
+      "Qui-Gon Jinn"
+    ],
+    "answer": 0,
+    "explanation": "Yoda entraîne Luke Skywalker dans L'Empire contre-attaque."
+  },
+  {
+    "id": 473,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le véritable nom de Dark Vador ?",
+    "choices": [
+      "Anakin Skywalker",
+      "Luke Skywalker",
+      "Ben Solo",
+      "Bail Organa"
+    ],
+    "answer": 0,
+    "explanation": "Dark Vador est l'identité Sith d'Anakin Skywalker."
+  },
+  {
+    "id": 474,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète physiquement Dark Vador dans la trilogie originale ?",
+    "choices": [
+      "David Prowse",
+      "James Earl Jones",
+      "Hayden Christensen",
+      "Mark Hamill"
+    ],
+    "answer": 0,
+    "explanation": "David Prowse porte le costume, tandis que James Earl Jones prête sa voix."
+  },
+  {
+    "id": 475,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Qui prête sa voix à Dark Vador en version originale ?",
+    "choices": [
+      "James Earl Jones",
+      "David Prowse",
+      "Frank Oz",
+      "Liam Neeson"
+    ],
+    "answer": 0,
+    "explanation": "La voix mythique de Dark Vador est celle de James Earl Jones."
+  },
+  {
+    "id": 476,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Sur quelle planète Luke Skywalker grandit-il ?",
+    "choices": [
+      "Tatooine",
+      "Jakku",
+      "Geonosis",
+      "Naboo"
+    ],
+    "answer": 0,
+    "explanation": "Luke est élevé sur Tatooine par Owen et Beru Lars."
+  },
+  {
+    "id": 477,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel chasseur de primes capture Han Solo ?",
+    "choices": [
+      "Boba Fett",
+      "Jango Fett",
+      "Cad Bane",
+      "Bossk"
+    ],
+    "answer": 0,
+    "explanation": "Boba Fett livre Han Solo congelé dans la carbonite à Jabba."
+  },
+  {
+    "id": 478,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Han Solo ?",
+    "choices": [
+      "Harrison Ford",
+      "Mark Hamill",
+      "Alec Guinness",
+      "Ewan McGregor"
+    ],
+    "answer": 0,
+    "explanation": "Harrison Ford incarne Han Solo depuis 1977."
+  },
+  {
+    "id": 479,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment s'appelle le Wookiee compagnon de Han Solo ?",
+    "choices": [
+      "Chewbacca",
+      "Tarfful",
+      "Black Krrsantan",
+      "Zeb"
+    ],
+    "answer": 0,
+    "explanation": "Chewbacca est le fidèle copilote du Faucon Millenium."
+  },
+  {
+    "id": 480,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du célèbre vaisseau de Han Solo ?",
+    "choices": [
+      "Le Faucon Millenium",
+      "Le Tantive IV",
+      "Le Ghost",
+      "Le Razor Crest"
+    ],
+    "answer": 0,
+    "explanation": "Le Faucon Millenium est l'un des vaisseaux les plus célèbres du cinéma."
+  },
+  {
+    "id": 481,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Indiana Jones dans la saga du même nom ?",
+    "choices": [
+      "Harrison Ford",
+      "Tom Selleck",
+      "Mel Gibson",
+      "Kurt Russell"
+    ],
+    "answer": 0,
+    "explanation": "Harrison Ford incarne Indiana Jones dans les cinq films de la saga."
+  },
+  {
+    "id": 482,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est à l'origine de la saga Indiana Jones ?",
+    "choices": [
+      "Steven Spielberg",
+      "George Lucas",
+      "James Cameron",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "Steven Spielberg réalise les premiers films de la saga, créée par George Lucas."
+  },
+  {
+    "id": 483,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artefact Indiana Jones recherche-t-il dans Les Aventuriers de l'Arche perdue ?",
+    "choices": [
+      "L'Arche d'Alliance",
+      "Le Saint Graal",
+      "Les Pierres de Sankara",
+      "Le Crâne de Cristal"
+    ],
+    "answer": 0,
+    "explanation": "Le premier film est centré sur la recherche de l'Arche d'Alliance."
+  },
+  {
+    "id": 484,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le nom du parc dans lequel se déroule Jurassic Park ?",
+    "choices": [
+      "Isla Nublar",
+      "Isla Sorna",
+      "Skull Island",
+      "Isla Muerta"
+    ],
+    "answer": 0,
+    "explanation": "Le parc original Jurassic Park est construit sur Isla Nublar."
+  },
+  {
+    "id": 485,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète le Dr Alan Grant dans Jurassic Park ?",
+    "choices": [
+      "Sam Neill",
+      "Jeff Goldblum",
+      "Richard Attenborough",
+      "Chris Pratt"
+    ],
+    "answer": 0,
+    "explanation": "Sam Neill joue le célèbre paléontologue Alan Grant."
+  },
+  {
+    "id": 486,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel personnage déclare : « La vie trouve toujours un chemin » dans Jurassic Park ?",
+    "choices": [
+      "Ian Malcolm",
+      "Alan Grant",
+      "John Hammond",
+      "Ellie Sattler"
+    ],
+    "answer": 0,
+    "explanation": "Cette phrase emblématique est prononcée par Ian Malcolm."
+  },
+  {
+    "id": 487,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Ian Malcolm dans Jurassic Park ?",
+    "choices": [
+      "Jeff Goldblum",
+      "Sam Neill",
+      "Chris Pratt",
+      "Bryce Dallas Howard"
+    ],
+    "answer": 0,
+    "explanation": "Jeff Goldblum est devenu indissociable du personnage d'Ian Malcolm."
+  },
+  {
+    "id": 488,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur a réalisé Jurassic Park (1993) ?",
+    "choices": [
+      "Steven Spielberg",
+      "James Cameron",
+      "Peter Jackson",
+      "Ridley Scott"
+    ],
+    "answer": 0,
+    "explanation": "Steven Spielberg a révolutionné le cinéma avec Jurassic Park."
+  },
+  {
+    "id": 489,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le prénom du créateur de Jurassic Park, Hammond ?",
+    "choices": [
+      "John",
+      "James",
+      "Joseph",
+      "Jonathan"
+    ],
+    "answer": 0,
+    "explanation": "John Hammond est le fondateur du parc aux dinosaures."
+  },
+  {
+    "id": 490,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel dinosaure est considéré comme le principal prédateur dans le premier Jurassic Park ?",
+    "choices": [
+      "Le Tyrannosaurus rex",
+      "Le Spinosaurus",
+      "L'Indominus rex",
+      "Le Giganotosaurus"
+    ],
+    "answer": 0,
+    "explanation": "Le T-Rex est le dinosaure emblématique du premier film et intervient notamment lors de la scène finale."
+  },
+  {
+    "id": 491,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Dom Cobb dans Inception ?",
+    "choices": [
+      "Leonardo DiCaprio",
+      "Tom Hardy",
+      "Joseph Gordon-Levitt",
+      "Cillian Murphy"
+    ],
+    "answer": 0,
+    "explanation": "Leonardo DiCaprio incarne Dom Cobb, spécialiste de l'extraction d'informations dans les rêves."
+  },
+  {
+    "id": 492,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film de Christopher Nolan se termine sur une toupie dont on ignore si elle tombe ?",
+    "choices": [
+      "Inception",
+      "Interstellar",
+      "Tenet",
+      "Memento"
+    ],
+    "answer": 0,
+    "explanation": "La fin d'Inception est volontairement ambiguë avec la célèbre toupie."
+  },
+  {
+    "id": 493,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est à l'origine du film Interstellar ?",
+    "choices": [
+      "Christopher Nolan",
+      "Denis Villeneuve",
+      "James Cameron",
+      "Steven Spielberg"
+    ],
+    "answer": 0,
+    "explanation": "Interstellar est réalisé par Christopher Nolan et sorti en 2014."
+  },
+  {
+    "id": 494,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Cooper dans Interstellar ?",
+    "choices": [
+      "Matthew McConaughey",
+      "Matt Damon",
+      "Christian Bale",
+      "Jake Gyllenhaal"
+    ],
+    "answer": 0,
+    "explanation": "Matthew McConaughey joue Joseph Cooper, ancien pilote de la NASA."
+  },
+  {
+    "id": 495,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel compositeur a signé la bande originale d'Interstellar ?",
+    "choices": [
+      "Hans Zimmer",
+      "John Williams",
+      "Howard Shore",
+      "Danny Elfman"
+    ],
+    "answer": 0,
+    "explanation": "Hans Zimmer a composé l'une des bandes originales les plus célèbres du cinéma moderne."
+  },
+  {
+    "id": 496,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film a remporté l'Oscar du meilleur film en 1998 ?",
+    "choices": [
+      "Titanic",
+      "Will Hunting",
+      "L.A. Confidential",
+      "Le Cinquième Élément"
+    ],
+    "answer": 0,
+    "explanation": "Titanic a remporté 11 Oscars, dont celui du meilleur film."
+  },
+  {
+    "id": 497,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film est le premier long-métrage d'animation entièrement réalisé en images de synthèse ?",
+    "choices": [
+      "Toy Story",
+      "Fourmiz",
+      "Shrek",
+      "1001 Pattes"
+    ],
+    "answer": 0,
+    "explanation": "Toy Story (1995) est le premier long-métrage entièrement réalisé en images de synthèse."
+  },
+  {
+    "id": 498,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel réalisateur est à l'origine du film Gladiator (2000) ?",
+    "choices": [
+      "Ridley Scott",
+      "Peter Jackson",
+      "Steven Spielberg",
+      "Martin Scorsese"
+    ],
+    "answer": 0,
+    "explanation": "Ridley Scott a réalisé Gladiator, récompensé par l'Oscar du meilleur film."
+  },
+  {
+    "id": 499,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel acteur interprète Maximus dans Gladiator ?",
+    "choices": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Gerard Butler",
+      "Liam Neeson"
+    ],
+    "answer": 0,
+    "explanation": "Russell Crowe a remporté l'Oscar du meilleur acteur pour son rôle de Maximus."
+  },
+  {
+    "id": 500,
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel film a remporté l'Oscar du meilleur film en 2004 après avoir égalé le record de 11 Oscars ?",
+    "choices": [
+      "Le Seigneur des Anneaux : Le Retour du Roi",
+      "Mystic River",
+      "Master and Commander",
+      "Lost in Translation"
+    ],
+    "answer": 0,
+    "explanation": "Le Retour du Roi a remporté les 11 Oscars pour lesquels il était nommé, égalant le record de Ben-Hur et Titanic."
+  }
+]
