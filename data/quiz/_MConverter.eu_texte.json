@@ -1,0 +1,7502 @@
+[
+  {
+    "id": 1,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est surnommé le 'King of Pop' ?",
+    "choices": [
+      "Michael Jackson",
+      "Elvis Presley",
+      "Prince",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "Michael Jackson est mondialement connu comme le 'King of Pop'."
+  },
+  {
+    "id": 2,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété 'Bohemian Rhapsody' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "ABBA",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Bohemian Rhapsody' est l'un des plus grands succès de Queen."
+  },
+  {
+    "id": 3,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur est l'auteur de l'album 'Thriller' ?",
+    "choices": [
+      "Michael Jackson",
+      "Prince",
+      "George Michael",
+      "Stevie Wonder"
+    ],
+    "answer": 0,
+    "explanation": "'Thriller' est l'album le plus vendu de tous les temps."
+  },
+  {
+    "id": 4,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est composé de John Lennon, Paul McCartney, George Harrison et Ringo Starr ?",
+    "choices": [
+      "The Beatles",
+      "Queen",
+      "Pink Floyd",
+      "The Rolling Stones"
+    ],
+    "answer": 0,
+    "explanation": "Les Beatles sont l'un des groupes les plus influents de l'histoire."
+  },
+  {
+    "id": 5,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste a chanté 'Shape of You' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Shawn Mendes",
+      "Justin Bieber",
+      "Harry Styles"
+    ],
+    "answer": 0,
+    "explanation": "'Shape of You' est l'un des plus grands succès d'Ed Sheeran."
+  },
+  {
+    "id": 6,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Blinding Lights' ?",
+    "choices": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "'Blinding Lights' est l'un des titres les plus populaires de The Weeknd."
+  },
+  {
+    "id": 7,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a sorti la chanson 'Viva la Vida' ?",
+    "choices": [
+      "Coldplay",
+      "Imagine Dragons",
+      "OneRepublic",
+      "Maroon 5"
+    ],
+    "answer": 0,
+    "explanation": "'Viva la Vida' est un immense succès de Coldplay."
+  },
+  {
+    "id": 8,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Rolling in the Deep' ?",
+    "choices": [
+      "Adele",
+      "Sia",
+      "Lady Gaga",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Rolling in the Deep' a propulsé Adele au sommet des classements mondiaux."
+  },
+  {
+    "id": 9,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe suédois est célèbre pour 'Dancing Queen' ?",
+    "choices": [
+      "ABBA",
+      "Ace of Base",
+      "Roxette",
+      "A-ha"
+    ],
+    "answer": 0,
+    "explanation": "'Dancing Queen' est le plus grand succès d'ABBA."
+  },
+  {
+    "id": 10,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste canadien a interprété 'Baby' en 2010 ?",
+    "choices": [
+      "Justin Bieber",
+      "Shawn Mendes",
+      "Drake",
+      "The Weeknd"
+    ],
+    "answer": 0,
+    "explanation": "'Baby' est le titre qui a révélé Justin Bieber au grand public."
+  },
+  {
+    "id": 11,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Someone Like You' ?",
+    "choices": [
+      "Adele",
+      "Taylor Swift",
+      "Beyoncé",
+      "Sia"
+    ],
+    "answer": 0,
+    "explanation": "'Someone Like You' est l'un des plus grands succès d'Adele."
+  },
+  {
+    "id": 12,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est à l'origine de la chanson 'Smells Like Teen Spirit' ?",
+    "choices": [
+      "Nirvana",
+      "Metallica",
+      "Green Day",
+      "Pearl Jam"
+    ],
+    "answer": 0,
+    "explanation": "Cette chanson est devenue l'hymne du mouvement grunge."
+  },
+  {
+    "id": 13,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Bad Romance' ?",
+    "choices": [
+      "Lady Gaga",
+      "Katy Perry",
+      "Rihanna",
+      "P!nk"
+    ],
+    "answer": 0,
+    "explanation": "'Bad Romance' est l'un des plus grands succès de Lady Gaga."
+  },
+  {
+    "id": 14,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur est connu pour le titre 'Perfect' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Lewis Capaldi",
+      "James Arthur",
+      "Harry Styles"
+    ],
+    "answer": 0,
+    "explanation": "'Perfect' est l'une des chansons les plus célèbres d'Ed Sheeran."
+  },
+  {
+    "id": 15,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique a chanté 'Yellow' ?",
+    "choices": [
+      "Coldplay",
+      "Muse",
+      "Oasis",
+      "Keane"
+    ],
+    "answer": 0,
+    "explanation": "'Yellow' est l'un des premiers grands succès de Coldplay."
+  },
+  {
+    "id": 16,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est surnommé 'The Boss' ?",
+    "choices": [
+      "Bruce Springsteen",
+      "Billy Joel",
+      "Bon Jovi",
+      "Bob Dylan"
+    ],
+    "answer": 0,
+    "explanation": "Bruce Springsteen est surnommé 'The Boss'."
+  },
+  {
+    "id": 17,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a sorti la chanson 'Numb' ?",
+    "choices": [
+      "Linkin Park",
+      "Evanescence",
+      "Papa Roach",
+      "Three Days Grace"
+    ],
+    "answer": 0,
+    "explanation": "'Numb' est l'un des plus grands succès de Linkin Park."
+  },
+  {
+    "id": 18,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste chante 'Can't Stop the Feeling!' ?",
+    "choices": [
+      "Justin Timberlake",
+      "Bruno Mars",
+      "Pharrell Williams",
+      "Jason Derulo"
+    ],
+    "answer": 0,
+    "explanation": "Cette chanson est issue de la bande originale de Trolls."
+  },
+  {
+    "id": 19,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Hotel California' ?",
+    "choices": [
+      "Eagles",
+      "Fleetwood Mac",
+      "The Doors",
+      "Journey"
+    ],
+    "answer": 0,
+    "explanation": "'Hotel California' est le titre emblématique des Eagles."
+  },
+  {
+    "id": 20,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste français interprète 'Alors on danse' ?",
+    "choices": [
+      "Stromae",
+      "Soprano",
+      "Gims",
+      "Kendji Girac"
+    ],
+    "answer": 0,
+    "explanation": "'Alors on danse' a révélé Stromae au monde entier."
+  },
+  {
+    "id": 21,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur est connu pour la chanson 'Happy' ?",
+    "choices": [
+      "Pharrell Williams",
+      "Bruno Mars",
+      "Justin Timberlake",
+      "Jason Derulo"
+    ],
+    "answer": 0,
+    "explanation": "'Happy' est devenue l'une des chansons les plus vendues de Pharrell Williams."
+  },
+  {
+    "id": 22,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Sweet Child O' Mine' ?",
+    "choices": [
+      "Guns N' Roses",
+      "Bon Jovi",
+      "Aerosmith",
+      "Metallica"
+    ],
+    "answer": 0,
+    "explanation": "'Sweet Child O' Mine' est l'un des plus grands classiques de Guns N' Roses."
+  },
+  {
+    "id": 23,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Firework' ?",
+    "choices": [
+      "Katy Perry",
+      "Lady Gaga",
+      "Taylor Swift",
+      "P!nk"
+    ],
+    "answer": 0,
+    "explanation": "'Firework' est l'un des plus grands succès de Katy Perry."
+  },
+  {
+    "id": 24,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste a sorti la chanson 'Uptown Funk' avec Mark Ronson ?",
+    "choices": [
+      "Bruno Mars",
+      "The Weeknd",
+      "Jason Derulo",
+      "Usher"
+    ],
+    "answer": 0,
+    "explanation": "'Uptown Funk' est interprétée par Mark Ronson en collaboration avec Bruno Mars."
+  },
+  {
+    "id": 25,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est connu pour 'Wonderwall' ?",
+    "choices": [
+      "Oasis",
+      "Blur",
+      "Coldplay",
+      "Radiohead"
+    ],
+    "answer": 0,
+    "explanation": "'Wonderwall' est le plus grand succès d'Oasis."
+  },
+  {
+    "id": 26,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse est à l'origine de la chanson 'Halo' ?",
+    "choices": [
+      "Beyoncé",
+      "Rihanna",
+      "Alicia Keys",
+      "Mariah Carey"
+    ],
+    "answer": 0,
+    "explanation": "'Halo' est l'une des chansons emblématiques de Beyoncé."
+  },
+  {
+    "id": 27,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété 'Radioactive' ?",
+    "choices": [
+      "Imagine Dragons",
+      "OneRepublic",
+      "Maroon 5",
+      "Fall Out Boy"
+    ],
+    "answer": 0,
+    "explanation": "'Radioactive' a propulsé Imagine Dragons au sommet des classements."
+  },
+  {
+    "id": 28,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Lose Yourself' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Snoop Dogg"
+    ],
+    "answer": 0,
+    "explanation": "'Lose Yourself' a remporté l'Oscar de la meilleure chanson originale."
+  },
+  {
+    "id": 29,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a sorti la chanson 'Believer' ?",
+    "choices": [
+      "Imagine Dragons",
+      "Coldplay",
+      "OneRepublic",
+      "Linkin Park"
+    ],
+    "answer": 0,
+    "explanation": "'Believer' est l'un des plus grands succès d'Imagine Dragons."
+  },
+  {
+    "id": 30,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français est célèbre pour la chanson 'Formidable' ?",
+    "choices": [
+      "Stromae",
+      "Vianney",
+      "Soprano",
+      "Calogero"
+    ],
+    "answer": 0,
+    "explanation": "'Formidable' est l'un des titres les plus populaires de Stromae."
+  },
+  {
+    "id": 31,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste a interprété la chanson 'Shake It Off' ?",
+    "choices": [
+      "Taylor Swift",
+      "Selena Gomez",
+      "Ariana Grande",
+      "Olivia Rodrigo"
+    ],
+    "answer": 0,
+    "explanation": "'Shake It Off' est l'un des plus grands succès de Taylor Swift."
+  },
+  {
+    "id": 32,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'Zombie' ?",
+    "choices": [
+      "The Cranberries",
+      "The Corrs",
+      "U2",
+      "Paramore"
+    ],
+    "answer": 0,
+    "explanation": "'Zombie' est un classique du groupe irlandais The Cranberries."
+  },
+  {
+    "id": 33,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Umbrella' en duo avec Jay-Z ?",
+    "choices": [
+      "Rihanna",
+      "Beyoncé",
+      "Nicki Minaj",
+      "Alicia Keys"
+    ],
+    "answer": 0,
+    "explanation": "'Umbrella' est l'un des titres les plus célèbres de Rihanna."
+  },
+  {
+    "id": 34,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Stay' avec Justin Bieber ?",
+    "choices": [
+      "The Kid LAROI",
+      "Post Malone",
+      "Shawn Mendes",
+      "Charlie Puth"
+    ],
+    "answer": 0,
+    "explanation": "'Stay' est une collaboration entre The Kid LAROI et Justin Bieber."
+  },
+  {
+    "id": 35,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a chanté 'Counting Stars' ?",
+    "choices": [
+      "OneRepublic",
+      "Imagine Dragons",
+      "Maroon 5",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Counting Stars' est l'un des plus grands succès de OneRepublic."
+  },
+  {
+    "id": 36,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur est célèbre pour 'Thinking Out Loud' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Sam Smith",
+      "Lewis Capaldi",
+      "James Arthur"
+    ],
+    "answer": 0,
+    "explanation": "'Thinking Out Loud' est l'une des chansons les plus populaires d'Ed Sheeran."
+  },
+  {
+    "id": 37,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe de K-pop est à l'origine de 'Dynamite' ?",
+    "choices": [
+      "BTS",
+      "BLACKPINK",
+      "EXO",
+      "SEVENTEEN"
+    ],
+    "answer": 0,
+    "explanation": "'Dynamite' est le premier single entièrement en anglais de BTS."
+  },
+  {
+    "id": 38,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse a interprété 'Poker Face' ?",
+    "choices": [
+      "Lady Gaga",
+      "Kesha",
+      "Katy Perry",
+      "Britney Spears"
+    ],
+    "answer": 0,
+    "explanation": "'Poker Face' est l'un des plus grands tubes de Lady Gaga."
+  },
+  {
+    "id": 39,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Thunderstruck' ?",
+    "choices": [
+      "AC/DC",
+      "Metallica",
+      "Iron Maiden",
+      "Black Sabbath"
+    ],
+    "answer": 0,
+    "explanation": "'Thunderstruck' est un classique incontournable d'AC/DC."
+  },
+  {
+    "id": 40,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Bella' ?",
+    "choices": [
+      "Gims",
+      "Soprano",
+      "Dadju",
+      "Kendji Girac"
+    ],
+    "answer": 0,
+    "explanation": "'Bella' est l'un des plus grands succès de Gims."
+  },
+  {
+    "id": 41,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Watermelon Sugar' ?",
+    "choices": [
+      "Harry Styles",
+      "Niall Horan",
+      "Shawn Mendes",
+      "Charlie Puth"
+    ],
+    "answer": 0,
+    "explanation": "'Watermelon Sugar' est l'un des plus grands succès solo de Harry Styles."
+  },
+  {
+    "id": 42,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est à l'origine de la chanson 'Boulevard of Broken Dreams' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "Sum 41",
+      "The Offspring"
+    ],
+    "answer": 0,
+    "explanation": "'Boulevard of Broken Dreams' est un titre emblématique de Green Day."
+  },
+  {
+    "id": 43,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Levitating' ?",
+    "choices": [
+      "Dua Lipa",
+      "Ava Max",
+      "Doja Cat",
+      "Bebe Rexha"
+    ],
+    "answer": 0,
+    "explanation": "'Levitating' est l'un des plus grands tubes de Dua Lipa."
+  },
+  {
+    "id": 44,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Sunflower' avec Swae Lee ?",
+    "choices": [
+      "Post Malone",
+      "Drake",
+      "The Weeknd",
+      "Lil Nas X"
+    ],
+    "answer": 0,
+    "explanation": "'Sunflower' figure sur la bande originale de Spider-Man: Into the Spider-Verse."
+  },
+  {
+    "id": 45,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété 'Somebody That I Used to Know' avec Gotye ?",
+    "choices": [
+      "Aucun, c'est un duo avec Kimbra",
+      "Coldplay",
+      "OneRepublic",
+      "The Script"
+    ],
+    "answer": 0,
+    "explanation": "'Somebody That I Used to Know' est interprétée par Gotye en duo avec Kimbra."
+  },
+  {
+    "id": 46,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste français est célèbre pour la chanson 'Sapés comme jamais' ?",
+    "choices": [
+      "Gims",
+      "Dadju",
+      "Soprano",
+      "Nekfeu"
+    ],
+    "answer": 0,
+    "explanation": "'Sapés comme jamais', en collaboration avec Niska, est l'un des plus grands succès de Gims."
+  },
+  {
+    "id": 47,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète 'As It Was' ?",
+    "choices": [
+      "Harry Styles",
+      "Ed Sheeran",
+      "Lewis Capaldi",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'As It Was' est le plus grand succès de l'album Harry's House."
+  },
+  {
+    "id": 48,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Take On Me' ?",
+    "choices": [
+      "A-ha",
+      "ABBA",
+      "Europe",
+      "Duran Duran"
+    ],
+    "answer": 0,
+    "explanation": "'Take On Me' est le plus grand succès du groupe norvégien A-ha."
+  },
+  {
+    "id": 49,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Toxic' ?",
+    "choices": [
+      "Britney Spears",
+      "Christina Aguilera",
+      "Madonna",
+      "P!nk"
+    ],
+    "answer": 0,
+    "explanation": "'Toxic' est l'un des morceaux les plus emblématiques de Britney Spears."
+  },
+  {
+    "id": 50,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Old Town Road' ?",
+    "choices": [
+      "Lil Nas X",
+      "Post Malone",
+      "Jack Harlow",
+      "Travis Scott"
+    ],
+    "answer": 0,
+    "explanation": "'Old Town Road' de Lil Nas X, avec Billy Ray Cyrus, a battu des records de longévité dans les classements."
+  },
+  {
+    "id": 51,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Stay With Me' ?",
+    "choices": [
+      "Sam Smith",
+      "Ed Sheeran",
+      "Lewis Capaldi",
+      "James Arthur"
+    ],
+    "answer": 0,
+    "explanation": "'Stay With Me' est l'un des plus grands succès de Sam Smith."
+  },
+  {
+    "id": 52,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Africa' ?",
+    "choices": [
+      "Toto",
+      "Journey",
+      "Chicago",
+      "Foreigner"
+    ],
+    "answer": 0,
+    "explanation": "'Africa' est le titre le plus célèbre du groupe Toto."
+  },
+  {
+    "id": 53,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Wrecking Ball' ?",
+    "choices": [
+      "Miley Cyrus",
+      "Demi Lovato",
+      "Selena Gomez",
+      "Kesha"
+    ],
+    "answer": 0,
+    "explanation": "'Wrecking Ball' est l'un des plus grands tubes de Miley Cyrus."
+  },
+  {
+    "id": 54,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste a chanté 'God's Plan' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Travis Scott",
+      "J. Cole"
+    ],
+    "answer": 0,
+    "explanation": "'God's Plan' est l'un des plus grands succès de Drake."
+  },
+  {
+    "id": 55,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est connu pour la chanson 'Fix You' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Muse",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'Fix You' est une chanson emblématique de Coldplay."
+  },
+  {
+    "id": 56,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Color Gitano' ?",
+    "choices": [
+      "Kendji Girac",
+      "Slimane",
+      "Vianney",
+      "Claudio Capéo"
+    ],
+    "answer": 0,
+    "explanation": "'Color Gitano' est le premier grand succès de Kendji Girac."
+  },
+  {
+    "id": 57,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'In the End' ?",
+    "choices": [
+      "Linkin Park",
+      "Papa Roach",
+      "Green Day",
+      "System of a Down"
+    ],
+    "answer": 0,
+    "explanation": "'In the End' est l'un des morceaux les plus connus de Linkin Park."
+  },
+  {
+    "id": 58,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Blank Space' ?",
+    "choices": [
+      "Taylor Swift",
+      "Olivia Rodrigo",
+      "Ariana Grande",
+      "Selena Gomez"
+    ],
+    "answer": 0,
+    "explanation": "'Blank Space' est l'un des plus grands succès de Taylor Swift."
+  },
+  {
+    "id": 59,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Montero (Call Me By Your Name)' ?",
+    "choices": [
+      "Lil Nas X",
+      "Jack Harlow",
+      "Post Malone",
+      "Tyga"
+    ],
+    "answer": 0,
+    "explanation": "'Montero' est l'un des plus grands succès de Lil Nas X."
+  },
+  {
+    "id": 60,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Don't Stop Believin'' ?",
+    "choices": [
+      "Journey",
+      "Boston",
+      "Kansas",
+      "Foreigner"
+    ],
+    "answer": 0,
+    "explanation": "'Don't Stop Believin'' est le morceau le plus emblématique de Journey."
+  },
+  {
+    "id": 61,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Can't Feel My Face' ?",
+    "choices": [
+      "The Weeknd",
+      "Bruno Mars",
+      "Justin Timberlake",
+      "Charlie Puth"
+    ],
+    "answer": 0,
+    "explanation": "'Can't Feel My Face' est l'un des premiers succès mondiaux de The Weeknd."
+  },
+  {
+    "id": 62,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Livin' on a Prayer' ?",
+    "choices": [
+      "Bon Jovi",
+      "Europe",
+      "Journey",
+      "Scorpions"
+    ],
+    "answer": 0,
+    "explanation": "'Livin' on a Prayer' est le plus grand classique de Bon Jovi."
+  },
+  {
+    "id": 63,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Hips Don't Lie' avec Wyclef Jean ?",
+    "choices": [
+      "Shakira",
+      "Jennifer Lopez",
+      "Beyoncé",
+      "Rihanna"
+    ],
+    "answer": 0,
+    "explanation": "'Hips Don't Lie' est l'un des plus grands succès internationaux de Shakira."
+  },
+  {
+    "id": 64,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste a sorti la chanson 'Rockstar' avec 21 Savage ?",
+    "choices": [
+      "Post Malone",
+      "Drake",
+      "Travis Scott",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'Rockstar' est un énorme succès de Post Malone en collaboration avec 21 Savage."
+  },
+  {
+    "id": 65,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'Clocks' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Muse",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'Clocks' est l'un des titres les plus emblématiques de Coldplay."
+  },
+  {
+    "id": 66,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Le Coach' avec Soprano ?",
+    "choices": [
+      "Vianney",
+      "Kendji Girac",
+      "Amir",
+      "Claudio Capéo"
+    ],
+    "answer": 0,
+    "explanation": "'Le Coach' est un duo populaire entre Vianney et Soprano."
+  },
+  {
+    "id": 67,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Wake Me Up When September Ends' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "Sum 41",
+      "Simple Plan"
+    ],
+    "answer": 0,
+    "explanation": "Cette chanson est l'un des plus grands succès de Green Day."
+  },
+  {
+    "id": 68,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Flowers' ?",
+    "choices": [
+      "Miley Cyrus",
+      "Dua Lipa",
+      "Taylor Swift",
+      "Ariana Grande"
+    ],
+    "answer": 0,
+    "explanation": "'Flowers' est devenu un immense succès mondial en 2023."
+  },
+  {
+    "id": 69,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Starboy' en collaboration avec Daft Punk ?",
+    "choices": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "'Starboy' est une collaboration entre The Weeknd et Daft Punk."
+  },
+  {
+    "id": 70,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Eye of the Tiger' ?",
+    "choices": [
+      "Survivor",
+      "Europe",
+      "Journey",
+      "Boston"
+    ],
+    "answer": 0,
+    "explanation": "'Eye of the Tiger' est devenue célèbre grâce au film Rocky III."
+  },
+  {
+    "id": 71,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Peaches' avec Daniel Caesar et Giveon ?",
+    "choices": [
+      "Justin Bieber",
+      "The Weeknd",
+      "Shawn Mendes",
+      "Post Malone"
+    ],
+    "answer": 0,
+    "explanation": "'Peaches' est l'un des plus grands succès de Justin Bieber."
+  },
+  {
+    "id": 72,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Nothing Else Matters' ?",
+    "choices": [
+      "Metallica",
+      "Iron Maiden",
+      "Megadeth",
+      "Slayer"
+    ],
+    "answer": 0,
+    "explanation": "'Nothing Else Matters' est l'une des ballades les plus connues de Metallica."
+  },
+  {
+    "id": 73,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Roar' ?",
+    "choices": [
+      "Katy Perry",
+      "Lady Gaga",
+      "Taylor Swift",
+      "P!nk"
+    ],
+    "answer": 0,
+    "explanation": "'Roar' est l'un des plus grands succès de Katy Perry."
+  },
+  {
+    "id": 74,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Lucid Dreams' ?",
+    "choices": [
+      "Juice WRLD",
+      "Lil Uzi Vert",
+      "XXXTentacion",
+      "Trippie Redd"
+    ],
+    "answer": 0,
+    "explanation": "'Lucid Dreams' est le titre qui a révélé Juice WRLD au grand public."
+  },
+  {
+    "id": 75,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique a interprété 'Another One Bites the Dust' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "The Rolling Stones",
+      "The Who"
+    ],
+    "answer": 0,
+    "explanation": "'Another One Bites the Dust' est l'un des plus grands succès de Queen."
+  },
+  {
+    "id": 76,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'La Même' en duo avec Vianney ?",
+    "choices": [
+      "Gims",
+      "Soprano",
+      "Dadju",
+      "Amir"
+    ],
+    "answer": 0,
+    "explanation": "'La Même' est un immense succès de Gims en collaboration avec Vianney."
+  },
+  {
+    "id": 77,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Californication' ?",
+    "choices": [
+      "Red Hot Chili Peppers",
+      "Green Day",
+      "Foo Fighters",
+      "Nirvana"
+    ],
+    "answer": 0,
+    "explanation": "'Californication' est le morceau emblématique des Red Hot Chili Peppers."
+  },
+  {
+    "id": 78,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Drivers License' ?",
+    "choices": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Taylor Swift",
+      "Sabrina Carpenter"
+    ],
+    "answer": 0,
+    "explanation": "'Drivers License' est le premier grand succès d'Olivia Rodrigo."
+  },
+  {
+    "id": 79,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Sicko Mode' ?",
+    "choices": [
+      "Travis Scott",
+      "Drake",
+      "Future",
+      "Lil Baby"
+    ],
+    "answer": 0,
+    "explanation": "'Sicko Mode', avec Drake, est l'un des plus grands succès de Travis Scott."
+  },
+  {
+    "id": 80,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'The Final Countdown' ?",
+    "choices": [
+      "Europe",
+      "Scorpions",
+      "Bon Jovi",
+      "Journey"
+    ],
+    "answer": 0,
+    "explanation": "'The Final Countdown' est le plus grand succès du groupe suédois Europe."
+  },
+  {
+    "id": 81,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Senorita' en duo avec Camila Cabello ?",
+    "choices": [
+      "Shawn Mendes",
+      "Justin Bieber",
+      "Harry Styles",
+      "Charlie Puth"
+    ],
+    "answer": 0,
+    "explanation": "'Senorita' est un duo entre Shawn Mendes et Camila Cabello."
+  },
+  {
+    "id": 82,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Sweet Dreams (Are Made of This)' ?",
+    "choices": [
+      "Eurythmics",
+      "Depeche Mode",
+      "Pet Shop Boys",
+      "A-ha"
+    ],
+    "answer": 0,
+    "explanation": "'Sweet Dreams (Are Made of This)' est le plus grand succès d'Eurythmics."
+  },
+  {
+    "id": 83,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Dance Monkey' ?",
+    "choices": [
+      "Tones and I",
+      "Dua Lipa",
+      "Sia",
+      "Ava Max"
+    ],
+    "answer": 0,
+    "explanation": "'Dance Monkey' est le titre qui a rendu Tones and I célèbre dans le monde entier."
+  },
+  {
+    "id": 84,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste a sorti la chanson 'Goosebumps' avec Kendrick Lamar ?",
+    "choices": [
+      "Travis Scott",
+      "Drake",
+      "Future",
+      "21 Savage"
+    ],
+    "answer": 0,
+    "explanation": "'Goosebumps' est l'un des plus grands succès de Travis Scott."
+  },
+  {
+    "id": 85,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'Starlight' ?",
+    "choices": [
+      "Muse",
+      "Coldplay",
+      "Radiohead",
+      "Keane"
+    ],
+    "answer": 0,
+    "explanation": "'Starlight' est l'un des titres les plus populaires de Muse."
+  },
+  {
+    "id": 86,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Réseaux' ?",
+    "choices": [
+      "Niska",
+      "SCH",
+      "Ninho",
+      "Jul"
+    ],
+    "answer": 0,
+    "explanation": "'Réseaux' est le morceau qui a propulsé Niska au sommet des classements."
+  },
+  {
+    "id": 87,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Seven Nation Army' ?",
+    "choices": [
+      "The White Stripes",
+      "Arctic Monkeys",
+      "The Killers",
+      "Kings of Leon"
+    ],
+    "answer": 0,
+    "explanation": "Le riff de 'Seven Nation Army' est devenu l'un des plus reconnaissables de l'histoire du rock."
+  },
+  {
+    "id": 88,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Ocean Eyes' ?",
+    "choices": [
+      "Billie Eilish",
+      "Lorde",
+      "Olivia Rodrigo",
+      "Lana Del Rey"
+    ],
+    "answer": 0,
+    "explanation": "'Ocean Eyes' est la chanson qui a révélé Billie Eilish."
+  },
+  {
+    "id": 89,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'XO TOUR Llif3' ?",
+    "choices": [
+      "Lil Uzi Vert",
+      "Juice WRLD",
+      "Trippie Redd",
+      "Playboi Carti"
+    ],
+    "answer": 0,
+    "explanation": "'XO TOUR Llif3' est le plus grand succès de Lil Uzi Vert."
+  },
+  {
+    "id": 90,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Every Breath You Take' ?",
+    "choices": [
+      "The Police",
+      "U2",
+      "Dire Straits",
+      "Genesis"
+    ],
+    "answer": 0,
+    "explanation": "'Every Breath You Take' est l'un des plus grands classiques de The Police."
+  },
+  {
+    "id": 91,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Photograph' ?",
+    "choices": [
+      "Ed Sheeran",
+      "James Arthur",
+      "Lewis Capaldi",
+      "Shawn Mendes"
+    ],
+    "answer": 0,
+    "explanation": "'Photograph' est l'un des morceaux les plus populaires d'Ed Sheeran."
+  },
+  {
+    "id": 92,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Take Me Out' ?",
+    "choices": [
+      "Franz Ferdinand",
+      "Arctic Monkeys",
+      "The Killers",
+      "Kasabian"
+    ],
+    "answer": 0,
+    "explanation": "'Take Me Out' est le titre emblématique de Franz Ferdinand."
+  },
+  {
+    "id": 93,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Born This Way' ?",
+    "choices": [
+      "Lady Gaga",
+      "Madonna",
+      "Katy Perry",
+      "P!nk"
+    ],
+    "answer": 0,
+    "explanation": "'Born This Way' est devenu un hymne mondial signé Lady Gaga."
+  },
+  {
+    "id": 94,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Without Me' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Snoop Dogg"
+    ],
+    "answer": 0,
+    "explanation": "'Without Me' est l'un des morceaux les plus célèbres d'Eminem."
+  },
+  {
+    "id": 95,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Mr. Brightside' ?",
+    "choices": [
+      "The Killers",
+      "Muse",
+      "Coldplay",
+      "Arctic Monkeys"
+    ],
+    "answer": 0,
+    "explanation": "'Mr. Brightside' est le plus grand succès de The Killers."
+  },
+  {
+    "id": 96,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'La Kiffance' ?",
+    "choices": [
+      "Naps",
+      "Jul",
+      "Ninho",
+      "Soolking"
+    ],
+    "answer": 0,
+    "explanation": "'La Kiffance' est le plus grand succès de Naps."
+  },
+  {
+    "id": 97,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'American Idiot' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "The Offspring",
+      "Sum 41"
+    ],
+    "answer": 0,
+    "explanation": "'American Idiot' est l'un des albums et morceaux les plus célèbres de Green Day."
+  },
+  {
+    "id": 98,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Bad Guy' ?",
+    "choices": [
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Dua Lipa",
+      "Lorde"
+    ],
+    "answer": 0,
+    "explanation": "'Bad Guy' est le premier immense succès international de Billie Eilish."
+  },
+  {
+    "id": 99,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'HUMBLE.' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'HUMBLE.' est l'un des morceaux les plus récompensés de Kendrick Lamar."
+  },
+  {
+    "id": 100,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Don't Stop Me Now' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "Electric Light Orchestra",
+      "Boston"
+    ],
+    "answer": 0,
+    "explanation": "'Don't Stop Me Now' est l'un des titres les plus emblématiques de Queen."
+  },
+  {
+    "id": 101,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste interprète la chanson 'Memories' ?",
+    "choices": [
+      "Maroon 5",
+      "OneRepublic",
+      "Imagine Dragons",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Memories' est l'un des plus grands succès de Maroon 5."
+  },
+  {
+    "id": 102,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Highway to Hell' ?",
+    "choices": [
+      "AC/DC",
+      "Metallica",
+      "Scorpions",
+      "Bon Jovi"
+    ],
+    "answer": 0,
+    "explanation": "'Highway to Hell' est un classique d'AC/DC."
+  },
+  {
+    "id": 103,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Rolling in the Deep' ?",
+    "choices": [
+      "Adele",
+      "Sia",
+      "Lady Gaga",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Rolling in the Deep' est l'un des plus grands succès d'Adele."
+  },
+  {
+    "id": 104,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel rappeur est connu pour la chanson 'SICKO MODE' avec Drake ?",
+    "choices": [
+      "Travis Scott",
+      "Future",
+      "Lil Baby",
+      "21 Savage"
+    ],
+    "answer": 0,
+    "explanation": "'SICKO MODE' est le morceau emblématique de Travis Scott."
+  },
+  {
+    "id": 105,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Paradise' ?",
+    "choices": [
+      "Coldplay",
+      "Muse",
+      "Oasis",
+      "Keane"
+    ],
+    "answer": 0,
+    "explanation": "'Paradise' est l'un des plus grands succès de Coldplay."
+  },
+  {
+    "id": 106,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Avant toi' avec Vitaa ?",
+    "choices": [
+      "Slimane",
+      "Amir",
+      "Vianney",
+      "Kendji Girac"
+    ],
+    "answer": 0,
+    "explanation": "'Avant toi' est un immense succès du duo Vitaa & Slimane."
+  },
+  {
+    "id": 107,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'Welcome to the Black Parade' ?",
+    "choices": [
+      "My Chemical Romance",
+      "Fall Out Boy",
+      "Panic! At The Disco",
+      "Paramore"
+    ],
+    "answer": 0,
+    "explanation": "'Welcome to the Black Parade' est le morceau emblématique de My Chemical Romance."
+  },
+  {
+    "id": 108,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Espresso' ?",
+    "choices": [
+      "Sabrina Carpenter",
+      "Olivia Rodrigo",
+      "Dua Lipa",
+      "Billie Eilish"
+    ],
+    "answer": 0,
+    "explanation": "'Espresso' est l'un des plus grands succès de Sabrina Carpenter."
+  },
+  {
+    "id": 109,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Rockstar' avec Roddy Ricch ?",
+    "choices": [
+      "DaBaby",
+      "Post Malone",
+      "Lil Baby",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'Rockstar' de DaBaby est devenu un énorme succès mondial."
+  },
+  {
+    "id": 110,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Dream On' ?",
+    "choices": [
+      "Aerosmith",
+      "Bon Jovi",
+      "Guns N' Roses",
+      "Van Halen"
+    ],
+    "answer": 0,
+    "explanation": "'Dream On' est l'un des plus grands classiques d'Aerosmith."
+  },
+  {
+    "id": 111,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Beautiful Things' ?",
+    "choices": [
+      "Benson Boone",
+      "Teddy Swims",
+      "Lewis Capaldi",
+      "Dean Lewis"
+    ],
+    "answer": 0,
+    "explanation": "'Beautiful Things' est le titre qui a propulsé Benson Boone au sommet des classements mondiaux."
+  },
+  {
+    "id": 112,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Another Brick in the Wall (Part 2)' ?",
+    "choices": [
+      "Pink Floyd",
+      "Genesis",
+      "Queen",
+      "Deep Purple"
+    ],
+    "answer": 0,
+    "explanation": "'Another Brick in the Wall (Part 2)' est l'un des plus grands classiques de Pink Floyd."
+  },
+  {
+    "id": 113,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'We Found Love' en collaboration avec Calvin Harris ?",
+    "choices": [
+      "Rihanna",
+      "Dua Lipa",
+      "Beyoncé",
+      "Ariana Grande"
+    ],
+    "answer": 0,
+    "explanation": "'We Found Love' est l'un des plus grands succès de Rihanna."
+  },
+  {
+    "id": 114,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel rappeur est connu pour la chanson 'Industry Baby' avec Jack Harlow ?",
+    "choices": [
+      "Lil Nas X",
+      "Drake",
+      "Post Malone",
+      "Tyga"
+    ],
+    "answer": 0,
+    "explanation": "'Industry Baby' est un immense succès de Lil Nas X."
+  },
+  {
+    "id": 115,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Radio Ga Ga' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "The Who",
+      "Electric Light Orchestra"
+    ],
+    "answer": 0,
+    "explanation": "'Radio Ga Ga' est un classique de Queen."
+  },
+  {
+    "id": 116,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Angela' ?",
+    "choices": [
+      "Hatik",
+      "Nekfeu",
+      "Soprano",
+      "Jul"
+    ],
+    "answer": 0,
+    "explanation": "'Angela' est l'un des titres les plus populaires de Hatik."
+  },
+  {
+    "id": 117,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'I Write Sins Not Tragedies' ?",
+    "choices": [
+      "Panic! At The Disco",
+      "Fall Out Boy",
+      "Paramore",
+      "My Chemical Romance"
+    ],
+    "answer": 0,
+    "explanation": "'I Write Sins Not Tragedies' est le morceau emblématique de Panic! At The Disco."
+  },
+  {
+    "id": 118,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Greedy' ?",
+    "choices": [
+      "Tate McRae",
+      "Olivia Rodrigo",
+      "Dua Lipa",
+      "Ava Max"
+    ],
+    "answer": 0,
+    "explanation": "'Greedy' est l'un des plus grands succès de Tate McRae."
+  },
+  {
+    "id": 119,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Mockingbird' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Logic"
+    ],
+    "answer": 0,
+    "explanation": "'Mockingbird' est l'un des morceaux les plus personnels et célèbres d'Eminem."
+  },
+  {
+    "id": 120,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Smoke on the Water' ?",
+    "choices": [
+      "Deep Purple",
+      "Led Zeppelin",
+      "Black Sabbath",
+      "AC/DC"
+    ],
+    "answer": 0,
+    "explanation": "'Smoke on the Water' est célèbre pour son riff de guitare mythique."
+  },
+  {
+    "id": 121,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Lose You To Love Me' ?",
+    "choices": [
+      "Selena Gomez",
+      "Ariana Grande",
+      "Demi Lovato",
+      "Camila Cabello"
+    ],
+    "answer": 0,
+    "explanation": "'Lose You To Love Me' est le premier numéro un de Selena Gomez au Billboard Hot 100."
+  },
+  {
+    "id": 122,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Thunder' ?",
+    "choices": [
+      "Imagine Dragons",
+      "OneRepublic",
+      "Coldplay",
+      "Maroon 5"
+    ],
+    "answer": 0,
+    "explanation": "'Thunder' est l'un des plus grands succès d'Imagine Dragons."
+  },
+  {
+    "id": 123,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Break My Heart' ?",
+    "choices": [
+      "Dua Lipa",
+      "Ava Max",
+      "Rita Ora",
+      "Bebe Rexha"
+    ],
+    "answer": 0,
+    "explanation": "'Break My Heart' est un single de l'album Future Nostalgia de Dua Lipa."
+  },
+  {
+    "id": 124,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel rappeur est connu pour la chanson 'Godzilla' avec Juice WRLD ?",
+    "choices": [
+      "Eminem",
+      "Logic",
+      "Drake",
+      "NF"
+    ],
+    "answer": 0,
+    "explanation": "'Godzilla' est célèbre pour son dernier couplet extrêmement rapide."
+  },
+  {
+    "id": 125,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Don't Look Back in Anger' ?",
+    "choices": [
+      "Oasis",
+      "Blur",
+      "Coldplay",
+      "Muse"
+    ],
+    "answer": 0,
+    "explanation": "'Don't Look Back in Anger' est l'un des hymnes d'Oasis."
+  },
+  {
+    "id": 126,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Basique' ?",
+    "choices": [
+      "Orelsan",
+      "Nekfeu",
+      "Vald",
+      "SCH"
+    ],
+    "answer": 0,
+    "explanation": "'Basique' est l'un des plus grands succès d'Orelsan."
+  },
+  {
+    "id": 127,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'The Scientist' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Muse",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'The Scientist' est une ballade emblématique de Coldplay."
+  },
+  {
+    "id": 128,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Therefore I Am' ?",
+    "choices": [
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Lorde",
+      "Tate McRae"
+    ],
+    "answer": 0,
+    "explanation": "'Therefore I Am' est l'un des singles de Billie Eilish."
+  },
+  {
+    "id": 129,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'Money Trees' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'Money Trees' est un morceau culte de l'album good kid, m.A.A.d city."
+  },
+  {
+    "id": 130,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Enter Sandman' ?",
+    "choices": [
+      "Metallica",
+      "Megadeth",
+      "Slayer",
+      "Pantera"
+    ],
+    "answer": 0,
+    "explanation": "'Enter Sandman' est l'un des morceaux les plus célèbres de Metallica."
+  },
+  {
+    "id": 131,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Shivers' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Harry Styles",
+      "Shawn Mendes",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'Shivers' est l'un des plus grands succès d'Ed Sheeran."
+  },
+  {
+    "id": 132,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Basket Case' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "Sum 41",
+      "The Offspring"
+    ],
+    "answer": 0,
+    "explanation": "'Basket Case' est l'un des titres les plus emblématiques de Green Day."
+  },
+  {
+    "id": 133,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Into You' ?",
+    "choices": [
+      "Ariana Grande",
+      "Selena Gomez",
+      "Demi Lovato",
+      "Camila Cabello"
+    ],
+    "answer": 0,
+    "explanation": "'Into You' est l'un des plus grands tubes d'Ariana Grande."
+  },
+  {
+    "id": 134,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel rappeur est connu pour la chanson 'Praise The Lord (Da Shine)' avec Skepta ?",
+    "choices": [
+      "A$AP Rocky",
+      "Travis Scott",
+      "Future",
+      "Playboi Carti"
+    ],
+    "answer": 0,
+    "explanation": "'Praise The Lord (Da Shine)' est un immense succès d'A$AP Rocky."
+  },
+  {
+    "id": 135,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Yellow' ?",
+    "choices": [
+      "Coldplay",
+      "Muse",
+      "Keane",
+      "Oasis"
+    ],
+    "answer": 0,
+    "explanation": "'Yellow' est le premier grand succès international de Coldplay."
+  },
+  {
+    "id": 136,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Moulaga' ?",
+    "choices": [
+      "Heuss L'Enfoiré",
+      "Ninho",
+      "SCH",
+      "Jul"
+    ],
+    "answer": 0,
+    "explanation": "'Moulaga' est le morceau qui a fait connaître Heuss L'Enfoiré au grand public."
+  },
+  {
+    "id": 137,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'Numb' ?",
+    "choices": [
+      "Linkin Park",
+      "Papa Roach",
+      "Evanescence",
+      "Breaking Benjamin"
+    ],
+    "answer": 0,
+    "explanation": "'Numb' est l'un des plus grands classiques de Linkin Park."
+  },
+  {
+    "id": 138,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Good 4 U' ?",
+    "choices": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Sabrina Carpenter",
+      "Taylor Swift"
+    ],
+    "answer": 0,
+    "explanation": "'Good 4 U' est l'un des plus grands succès d'Olivia Rodrigo."
+  },
+  {
+    "id": 139,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'The Box' ?",
+    "choices": [
+      "Roddy Ricch",
+      "DaBaby",
+      "Lil Baby",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'The Box' est le morceau qui a propulsé Roddy Ricch au sommet des classements."
+  },
+  {
+    "id": 140,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Karma Police' ?",
+    "choices": [
+      "Radiohead",
+      "Muse",
+      "Coldplay",
+      "Blur"
+    ],
+    "answer": 0,
+    "explanation": "'Karma Police' est l'un des morceaux les plus célèbres de Radiohead."
+  },
+  {
+    "id": 141,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur interprète la chanson 'Shape of You' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Justin Bieber",
+      "Shawn Mendes",
+      "Charlie Puth"
+    ],
+    "answer": 0,
+    "explanation": "'Shape of You' est le plus grand succès commercial d'Ed Sheeran."
+  },
+  {
+    "id": 142,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est célèbre pour la chanson 'Bring Me to Life' ?",
+    "choices": [
+      "Evanescence",
+      "Linkin Park",
+      "Within Temptation",
+      "Nightwish"
+    ],
+    "answer": 0,
+    "explanation": "'Bring Me to Life' a révélé Evanescence au grand public."
+  },
+  {
+    "id": 143,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'Love Story' ?",
+    "choices": [
+      "Taylor Swift",
+      "Olivia Rodrigo",
+      "Selena Gomez",
+      "Kelsea Ballerini"
+    ],
+    "answer": 0,
+    "explanation": "'Love Story' est l'un des morceaux les plus emblématiques de Taylor Swift."
+  },
+  {
+    "id": 144,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel rappeur est connu pour la chanson 'Suge' ?",
+    "choices": [
+      "DaBaby",
+      "Lil Baby",
+      "Roddy Ricch",
+      "Gunna"
+    ],
+    "answer": 0,
+    "explanation": "'Suge' est le titre qui a fait exploser la carrière de DaBaby."
+  },
+  {
+    "id": 145,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Viva la Vida' ?",
+    "choices": [
+      "Coldplay",
+      "Muse",
+      "Keane",
+      "Oasis"
+    ],
+    "answer": 0,
+    "explanation": "'Viva la Vida' est l'un des plus grands succès de Coldplay."
+  },
+  {
+    "id": 146,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel chanteur français interprète 'Macarena' ?",
+    "choices": [
+      "Damso",
+      "Ninho",
+      "PLK",
+      "Gazo"
+    ],
+    "answer": 0,
+    "explanation": "'Macarena' est l'un des morceaux les plus populaires de Damso."
+  },
+  {
+    "id": 147,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe est connu pour la chanson 'Chop Suey!' ?",
+    "choices": [
+      "System of a Down",
+      "Slipknot",
+      "Korn",
+      "Disturbed"
+    ],
+    "answer": 0,
+    "explanation": "'Chop Suey!' est le morceau le plus emblématique de System of a Down."
+  },
+  {
+    "id": 148,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle chanteuse interprète 'No Tears Left to Cry' ?",
+    "choices": [
+      "Ariana Grande",
+      "Dua Lipa",
+      "Selena Gomez",
+      "Camila Cabello"
+    ],
+    "answer": 0,
+    "explanation": "'No Tears Left to Cry' marque le retour d'Ariana Grande en 2018."
+  },
+  {
+    "id": 149,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel artiste est connu pour la chanson 'First Class' ?",
+    "choices": [
+      "Jack Harlow",
+      "Drake",
+      "Lil Baby",
+      "Post Malone"
+    ],
+    "answer": 0,
+    "explanation": "'First Class' est l'un des plus grands succès de Jack Harlow."
+  },
+  {
+    "id": 150,
+    "category": "Musique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel groupe a interprété la chanson 'Losing My Religion' ?",
+    "choices": [
+      "R.E.M.",
+      "U2",
+      "Radiohead",
+      "The Cure"
+    ],
+    "answer": 0,
+    "explanation": "'Losing My Religion' est le morceau le plus célèbre de R.E.M."
+  },
+  {
+    "id": 151,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur interprète la chanson 'Blinding Lights' ?",
+    "choices": [
+      "The Weeknd",
+      "Drake",
+      "Bruno Mars",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'Blinding Lights' est l'un des plus grands succès de The Weeknd."
+  },
+  {
+    "id": 152,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'Hotel California' ?",
+    "choices": [
+      "Eagles",
+      "Fleetwood Mac",
+      "Journey",
+      "The Doors"
+    ],
+    "answer": 0,
+    "explanation": "'Hotel California' est le titre emblématique des Eagles."
+  },
+  {
+    "id": 153,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Someone Like You' ?",
+    "choices": [
+      "Adele",
+      "Sia",
+      "Sam Smith",
+      "Kelly Clarkson"
+    ],
+    "answer": 0,
+    "explanation": "'Someone Like You' est l'un des plus grands succès d'Adele."
+  },
+  {
+    "id": 154,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur est connu pour la chanson 'Lose Yourself' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Kanye West"
+    ],
+    "answer": 0,
+    "explanation": "'Lose Yourself' a remporté l'Oscar de la meilleure chanson originale."
+  },
+  {
+    "id": 155,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Bohemian Rhapsody' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "The Rolling Stones",
+      "Oasis"
+    ],
+    "answer": 0,
+    "explanation": "'Bohemian Rhapsody' est le chef-d'œuvre de Queen."
+  },
+  {
+    "id": 156,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur français interprète 'Sapés comme jamais' ?",
+    "choices": [
+      "Gims",
+      "Dadju",
+      "Niska",
+      "Soprano"
+    ],
+    "answer": 0,
+    "explanation": "'Sapés comme jamais' est un immense succès de Gims."
+  },
+  {
+    "id": 157,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est connu pour la chanson 'Smells Like Teen Spirit' ?",
+    "choices": [
+      "Nirvana",
+      "Pearl Jam",
+      "Foo Fighters",
+      "Soundgarden"
+    ],
+    "answer": 0,
+    "explanation": "'Smells Like Teen Spirit' est l'hymne du mouvement grunge."
+  },
+  {
+    "id": 158,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Havana' avec Young Thug ?",
+    "choices": [
+      "Camila Cabello",
+      "Selena Gomez",
+      "Dua Lipa",
+      "Ariana Grande"
+    ],
+    "answer": 0,
+    "explanation": "'Havana' est le premier grand succès solo de Camila Cabello."
+  },
+  {
+    "id": 159,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel artiste est connu pour la chanson 'Circles' ?",
+    "choices": [
+      "Post Malone",
+      "Drake",
+      "The Weeknd",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'Circles' est l'un des plus grands succès de Post Malone."
+  },
+  {
+    "id": 160,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe a interprété la chanson 'November Rain' ?",
+    "choices": [
+      "Guns N' Roses",
+      "Bon Jovi",
+      "Metallica",
+      "Aerosmith"
+    ],
+    "answer": 0,
+    "explanation": "'November Rain' est l'une des ballades rock les plus célèbres de tous les temps."
+  },
+  {
+    "id": 161,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur interprète la chanson 'Take Me to Church' ?",
+    "choices": [
+      "Hozier",
+      "Sam Smith",
+      "Lewis Capaldi",
+      "George Ezra"
+    ],
+    "answer": 0,
+    "explanation": "'Take Me to Church' est le titre qui a révélé Hozier au monde entier."
+  },
+  {
+    "id": 162,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'Paint It, Black' ?",
+    "choices": [
+      "The Rolling Stones",
+      "The Beatles",
+      "The Who",
+      "The Doors"
+    ],
+    "answer": 0,
+    "explanation": "'Paint It, Black' est l'un des plus grands classiques des Rolling Stones."
+  },
+  {
+    "id": 163,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Chandelier' ?",
+    "choices": [
+      "Sia",
+      "P!nk",
+      "Kesha",
+      "Lady Gaga"
+    ],
+    "answer": 0,
+    "explanation": "'Chandelier' est le titre qui a propulsé Sia sur la scène internationale."
+  },
+  {
+    "id": 164,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur est connu pour la chanson 'Stronger' ?",
+    "choices": [
+      "Kanye West",
+      "Drake",
+      "Eminem",
+      "Kid Cudi"
+    ],
+    "answer": 0,
+    "explanation": "'Stronger' contient un sample du duo français Daft Punk."
+  },
+  {
+    "id": 165,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe britannique est célèbre pour la chanson 'Wonderwall' ?",
+    "choices": [
+      "Oasis",
+      "Blur",
+      "Coldplay",
+      "Radiohead"
+    ],
+    "answer": 0,
+    "explanation": "'Wonderwall' est le plus grand succès d'Oasis."
+  },
+  {
+    "id": 166,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur français interprète 'Casanova' avec Soolking ?",
+    "choices": [
+      "Gazo",
+      "Ninho",
+      "Niska",
+      "PLK"
+    ],
+    "answer": 0,
+    "explanation": "'Casanova' est une collaboration entre Soolking et Gazo."
+  },
+  {
+    "id": 167,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est connu pour la chanson 'Don't Stop Believin'' ?",
+    "choices": [
+      "Journey",
+      "Boston",
+      "Europe",
+      "Kansas"
+    ],
+    "answer": 0,
+    "explanation": "'Don't Stop Believin'' est le morceau le plus emblématique de Journey."
+  },
+  {
+    "id": 168,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Physical' (2020) ?",
+    "choices": [
+      "Dua Lipa",
+      "Ava Max",
+      "Rita Ora",
+      "Bebe Rexha"
+    ],
+    "answer": 0,
+    "explanation": "'Physical' est un single de l'album Future Nostalgia de Dua Lipa."
+  },
+  {
+    "id": 169,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel artiste est connu pour la chanson 'HUMBLE.' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Future",
+      "Lil Baby"
+    ],
+    "answer": 0,
+    "explanation": "'HUMBLE.' a remporté plusieurs Grammy Awards."
+  },
+  {
+    "id": 170,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe a interprété la chanson 'Another One Bites the Dust' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "Electric Light Orchestra",
+      "The Who"
+    ],
+    "answer": 0,
+    "explanation": "'Another One Bites the Dust' est l'un des morceaux les plus vendus de Queen."
+  },
+  {
+    "id": 171,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur interprète la chanson 'Counting Stars' ?",
+    "choices": [
+      "OneRepublic",
+      "Imagine Dragons",
+      "Maroon 5",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Counting Stars' est l'un des plus grands succès de OneRepublic."
+  },
+  {
+    "id": 172,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'Take On Me' ?",
+    "choices": [
+      "A-ha",
+      "ABBA",
+      "Duran Duran",
+      "Depeche Mode"
+    ],
+    "answer": 0,
+    "explanation": "'Take On Me' est le plus grand succès du groupe norvégien A-ha."
+  },
+  {
+    "id": 173,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Poker Face' ?",
+    "choices": [
+      "Lady Gaga",
+      "Katy Perry",
+      "Britney Spears",
+      "Kesha"
+    ],
+    "answer": 0,
+    "explanation": "'Poker Face' a contribué à faire de Lady Gaga une star mondiale."
+  },
+  {
+    "id": 174,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur est connu pour la chanson 'Hotline Bling' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Kanye West",
+      "Travis Scott"
+    ],
+    "answer": 0,
+    "explanation": "'Hotline Bling' est l'un des plus grands succès de Drake."
+  },
+  {
+    "id": 175,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'Radioactive' ?",
+    "choices": [
+      "Imagine Dragons",
+      "Muse",
+      "Coldplay",
+      "Bastille"
+    ],
+    "answer": 0,
+    "explanation": "Imagine Dragons est un groupe américain, auteur de 'Radioactive'."
+  },
+  {
+    "id": 176,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur français interprète 'Bande Organisée' avec le collectif marseillais ?",
+    "choices": [
+      "Jul",
+      "SCH",
+      "Naps",
+      "Soprano"
+    ],
+    "answer": 0,
+    "explanation": "Jul est à l'origine du projet 'Bande Organisée', réunissant plusieurs rappeurs marseillais."
+  },
+  {
+    "id": 177,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est connu pour la chanson 'The Pretender' ?",
+    "choices": [
+      "Foo Fighters",
+      "Nirvana",
+      "Green Day",
+      "Muse"
+    ],
+    "answer": 0,
+    "explanation": "'The Pretender' est l'un des plus grands succès des Foo Fighters."
+  },
+  {
+    "id": 178,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'New Rules' ?",
+    "choices": [
+      "Dua Lipa",
+      "Rita Ora",
+      "Ava Max",
+      "Anne-Marie"
+    ],
+    "answer": 0,
+    "explanation": "'New Rules' a lancé la carrière internationale de Dua Lipa."
+  },
+  {
+    "id": 179,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel artiste est connu pour la chanson 'Lucid Dreams' ?",
+    "choices": [
+      "Juice WRLD",
+      "Lil Uzi Vert",
+      "Trippie Redd",
+      "XXXTentacion"
+    ],
+    "answer": 0,
+    "explanation": "'Lucid Dreams' est le morceau qui a révélé Juice WRLD."
+  },
+  {
+    "id": 180,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe a interprété la chanson 'Back in Black' ?",
+    "choices": [
+      "AC/DC",
+      "Metallica",
+      "Scorpions",
+      "Deep Purple"
+    ],
+    "answer": 0,
+    "explanation": "'Back in Black' est l'un des albums et morceaux les plus vendus de l'histoire du rock."
+  },
+  {
+    "id": 181,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur interprète la chanson 'Too Sweet' ?",
+    "choices": [
+      "Hozier",
+      "Benson Boone",
+      "Dean Lewis",
+      "Lewis Capaldi"
+    ],
+    "answer": 0,
+    "explanation": "'Too Sweet' est devenu l'un des plus grands succès internationaux de Hozier."
+  },
+  {
+    "id": 182,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'Californication' ?",
+    "choices": [
+      "Red Hot Chili Peppers",
+      "Foo Fighters",
+      "Green Day",
+      "Nirvana"
+    ],
+    "answer": 0,
+    "explanation": "'Californication' est l'un des morceaux emblématiques des Red Hot Chili Peppers."
+  },
+  {
+    "id": 183,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Royals' ?",
+    "choices": [
+      "Lorde",
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Lana Del Rey"
+    ],
+    "answer": 0,
+    "explanation": "'Royals' a révélé la chanteuse néo-zélandaise Lorde au monde entier."
+  },
+  {
+    "id": 184,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur est connu pour la chanson 'Power' ?",
+    "choices": [
+      "Kanye West",
+      "Jay-Z",
+      "Drake",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'Power' est l'un des morceaux les plus célèbres de Kanye West."
+  },
+  {
+    "id": 185,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'The Sound of Silence' (version originale) ?",
+    "choices": [
+      "Simon & Garfunkel",
+      "The Byrds",
+      "The Mamas & the Papas",
+      "The Beach Boys"
+    ],
+    "answer": 0,
+    "explanation": "La version originale de 'The Sound of Silence' est interprétée par Simon & Garfunkel."
+  },
+  {
+    "id": 186,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur français interprète 'Jefe' ?",
+    "choices": [
+      "Ninho",
+      "SCH",
+      "Gazo",
+      "Niska"
+    ],
+    "answer": 0,
+    "explanation": "'Jefe' est le troisième album studio de Ninho, porté par le morceau du même nom."
+  },
+  {
+    "id": 187,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est connu pour la chanson 'Everlong' ?",
+    "choices": [
+      "Foo Fighters",
+      "Pearl Jam",
+      "Nirvana",
+      "Soundgarden"
+    ],
+    "answer": 0,
+    "explanation": "'Everlong' est souvent considérée comme la chanson emblématique des Foo Fighters."
+  },
+  {
+    "id": 188,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Vampire' ?",
+    "choices": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Sabrina Carpenter",
+      "Tate McRae"
+    ],
+    "answer": 0,
+    "explanation": "'Vampire' est le premier single de l'album GUTS d'Olivia Rodrigo."
+  },
+  {
+    "id": 189,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel artiste est connu pour la chanson 'All the Stars' en duo avec SZA ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Travis Scott"
+    ],
+    "answer": 0,
+    "explanation": "'All the Stars' est issue de la bande originale du film Black Panther."
+  },
+  {
+    "id": 190,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe a interprété la chanson 'The Trooper' ?",
+    "choices": [
+      "Iron Maiden",
+      "Judas Priest",
+      "Metallica",
+      "Black Sabbath"
+    ],
+    "answer": 0,
+    "explanation": "'The Trooper' est l'un des morceaux les plus emblématiques d'Iron Maiden."
+  },
+  {
+    "id": 191,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel chanteur interprète la chanson 'Lose Control' sortie en 2023 ?",
+    "choices": [
+      "Teddy Swims",
+      "Benson Boone",
+      "Lewis Capaldi",
+      "Dean Lewis"
+    ],
+    "answer": 0,
+    "explanation": "'Lose Control' est le plus grand succès international de Teddy Swims."
+  },
+  {
+    "id": 192,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'The Final Countdown' ?",
+    "choices": [
+      "Europe",
+      "Scorpions",
+      "Bon Jovi",
+      "Journey"
+    ],
+    "answer": 0,
+    "explanation": "'The Final Countdown' est le morceau emblématique du groupe suédois Europe."
+  },
+  {
+    "id": 193,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Elastic Heart' ?",
+    "choices": [
+      "Sia",
+      "P!nk",
+      "Lady Gaga",
+      "Kesha"
+    ],
+    "answer": 0,
+    "explanation": "'Elastic Heart' est l'un des titres les plus populaires de Sia."
+  },
+  {
+    "id": 194,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur est connu pour la chanson 'No Role Modelz' ?",
+    "choices": [
+      "J. Cole",
+      "Kendrick Lamar",
+      "Drake",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'No Role Modelz' est l'un des morceaux les plus célèbres de J. Cole."
+  },
+  {
+    "id": 195,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est célèbre pour la chanson 'Africa' ?",
+    "choices": [
+      "Toto",
+      "Journey",
+      "Chicago",
+      "Foreigner"
+    ],
+    "answer": 0,
+    "explanation": "'Africa' est l'un des morceaux les plus emblématiques de Toto."
+  },
+  {
+    "id": 196,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel rappeur français interprète 'Dolce Camara' avec SDM ?",
+    "choices": [
+      "Booba",
+      "SCH",
+      "Ninho",
+      "Niska"
+    ],
+    "answer": 0,
+    "explanation": "'Dolce Camara' est une collaboration entre Booba et SDM."
+  },
+  {
+    "id": 197,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe est connu pour la chanson 'Paranoid' ?",
+    "choices": [
+      "Black Sabbath",
+      "Iron Maiden",
+      "Metallica",
+      "Deep Purple"
+    ],
+    "answer": 0,
+    "explanation": "'Paranoid' est l'un des morceaux fondateurs du heavy metal."
+  },
+  {
+    "id": 198,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle chanteuse interprète 'Cruel Summer' ?",
+    "choices": [
+      "Taylor Swift",
+      "Olivia Rodrigo",
+      "Sabrina Carpenter",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Cruel Summer' est devenu un immense succès plusieurs années après sa sortie initiale."
+  },
+  {
+    "id": 199,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel artiste est connu pour la chanson 'XO TOUR Llif3' ?",
+    "choices": [
+      "Lil Uzi Vert",
+      "Playboi Carti",
+      "Juice WRLD",
+      "Trippie Redd"
+    ],
+    "answer": 0,
+    "explanation": "'XO TOUR Llif3' est le morceau qui a révélé Lil Uzi Vert au grand public."
+  },
+  {
+    "id": 200,
+    "category": "Musique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel groupe a interprété la chanson 'The Unforgiven' ?",
+    "choices": [
+      "Metallica",
+      "Megadeth",
+      "Slayer",
+      "Pantera"
+    ],
+    "answer": 0,
+    "explanation": "'The Unforgiven' est l'une des ballades les plus célèbres de Metallica."
+  },
+  {
+    "id": 201,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Vienna' sortie en 1981 ?",
+    "choices": [
+      "Ultravox",
+      "Duran Duran",
+      "A-ha",
+      "Simple Minds"
+    ],
+    "answer": 0,
+    "explanation": "'Vienna' est le plus grand succès du groupe britannique Ultravox."
+  },
+  {
+    "id": 202,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Roundabout' ?",
+    "choices": [
+      "Yes",
+      "Genesis",
+      "Rush",
+      "Pink Floyd"
+    ],
+    "answer": 0,
+    "explanation": "'Roundabout' est l'un des morceaux emblématiques du rock progressif."
+  },
+  {
+    "id": 203,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Running Up That Hill' (1985) ?",
+    "choices": [
+      "Kate Bush",
+      "Stevie Nicks",
+      "Annie Lennox",
+      "Cyndi Lauper"
+    ],
+    "answer": 0,
+    "explanation": "Le titre est redevenu mondialement populaire grâce à Stranger Things."
+  },
+  {
+    "id": 204,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'good kid, m.A.A.d city' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Tyler, the Creator"
+    ],
+    "answer": 0,
+    "explanation": "Cet album est considéré comme un classique du rap moderne."
+  },
+  {
+    "id": 205,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Baba O'Riley' ?",
+    "choices": [
+      "The Who",
+      "The Kinks",
+      "Led Zeppelin",
+      "Queen"
+    ],
+    "answer": 0,
+    "explanation": "'Baba O'Riley' est souvent appelée à tort 'Teenage Wasteland'."
+  },
+  {
+    "id": 206,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Mwaka Moon' avec Dosseh ?",
+    "choices": [
+      "Kalash",
+      "Niska",
+      "Booba",
+      "Ninho"
+    ],
+    "answer": 0,
+    "explanation": "'Mwaka Moon' est l'un des plus grands succès de Kalash."
+  },
+  {
+    "id": 207,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Kashmir' ?",
+    "choices": [
+      "Led Zeppelin",
+      "Deep Purple",
+      "Pink Floyd",
+      "Black Sabbath"
+    ],
+    "answer": 0,
+    "explanation": "'Kashmir' est l'un des morceaux les plus emblématiques de Led Zeppelin."
+  },
+  {
+    "id": 208,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Video Games' ?",
+    "choices": [
+      "Lana Del Rey",
+      "Lorde",
+      "Billie Eilish",
+      "Florence Welch"
+    ],
+    "answer": 0,
+    "explanation": "'Video Games' a révélé Lana Del Rey au grand public."
+  },
+  {
+    "id": 209,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Alright' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Nas",
+      "Joey Bada$$"
+    ],
+    "answer": 0,
+    "explanation": "'Alright' est devenu un hymne culturel aux États-Unis."
+  },
+  {
+    "id": 210,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Master of Puppets' ?",
+    "choices": [
+      "Metallica",
+      "Megadeth",
+      "Slayer",
+      "Anthrax"
+    ],
+    "answer": 0,
+    "explanation": "'Master of Puppets' est considéré comme l'un des plus grands morceaux de metal de tous les temps."
+  },
+  {
+    "id": 211,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Space Oddity' ?",
+    "choices": [
+      "David Bowie",
+      "Elton John",
+      "Queen",
+      "Rod Stewart"
+    ],
+    "answer": 0,
+    "explanation": "'Space Oddity' est l'un des morceaux les plus emblématiques de David Bowie."
+  },
+  {
+    "id": 212,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Owner of a Lonely Heart' ?",
+    "choices": [
+      "Yes",
+      "Genesis",
+      "Asia",
+      "Rush"
+    ],
+    "answer": 0,
+    "explanation": "'Owner of a Lonely Heart' est le plus grand succès commercial du groupe Yes."
+  },
+  {
+    "id": 213,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Fast Car' (version originale de 1988) ?",
+    "choices": [
+      "Tracy Chapman",
+      "Joan Baez",
+      "Sheryl Crow",
+      "Bonnie Raitt"
+    ],
+    "answer": 0,
+    "explanation": "'Fast Car' est l'un des morceaux les plus célèbres de Tracy Chapman."
+  },
+  {
+    "id": 214,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Illmatic' ?",
+    "choices": [
+      "Nas",
+      "Jay-Z",
+      "The Notorious B.I.G.",
+      "2Pac"
+    ],
+    "answer": 0,
+    "explanation": "'Illmatic' est considéré comme l'un des meilleurs albums de rap de tous les temps."
+  },
+  {
+    "id": 215,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Sultans of Swing' ?",
+    "choices": [
+      "Dire Straits",
+      "Pink Floyd",
+      "The Police",
+      "Genesis"
+    ],
+    "answer": 0,
+    "explanation": "'Sultans of Swing' est le morceau qui a révélé Dire Straits."
+  },
+  {
+    "id": 216,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Bâtiment' ?",
+    "choices": [
+      "SCH",
+      "Ninho",
+      "Gazo",
+      "Booba"
+    ],
+    "answer": 0,
+    "explanation": "'Bâtiment' est l'un des morceaux les plus populaires de SCH."
+  },
+ {
+  "id": 217,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quel artiste interprète la chanson 'Viva Las Vengeance' ?",
+  "choices": [
+    "Panic! At The Disco",
+    "Fall Out Boy",
+    "Imagine Dragons",
+    "Twenty One Pilots"
+  ],
+  "answer": 0,
+  "explanation": "'Viva Las Vengeance' est le titre phare du dernier album studio de Panic! At The Disco."
+},
+  {
+    "id": 218,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Back to Black' ?",
+    "choices": [
+      "Amy Winehouse",
+      "Adele",
+      "Duffy",
+      "Joss Stone"
+    ],
+    "answer": 0,
+    "explanation": "'Back to Black' est l'album le plus célèbre d'Amy Winehouse."
+  },
+  {
+    "id": 219,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'N.Y. State of Mind' ?",
+    "choices": [
+      "Nas",
+      "Jay-Z",
+      "The Notorious B.I.G.",
+      "Wu-Tang Clan"
+    ],
+    "answer": 0,
+    "explanation": "'N.Y. State of Mind' est l'un des morceaux les plus célèbres de l'album Illmatic."
+  },
+  {
+    "id": 220,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Hallowed Be Thy Name' ?",
+    "choices": [
+      "Iron Maiden",
+      "Judas Priest",
+      "Black Sabbath",
+      "Megadeth"
+    ],
+    "answer": 0,
+    "explanation": "'Hallowed Be Thy Name' est considéré comme l'un des plus grands morceaux de heavy metal."
+  },
+  {
+    "id": 221,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Heroes' ?",
+    "choices": [
+      "David Bowie",
+      "Queen",
+      "Elton John",
+      "Phil Collins"
+    ],
+    "answer": 0,
+    "explanation": "'Heroes' est l'un des morceaux les plus emblématiques de David Bowie."
+  },
+  {
+    "id": 222,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Tom Sawyer' ?",
+    "choices": [
+      "Rush",
+      "Yes",
+      "Genesis",
+      "Kansas"
+    ],
+    "answer": 0,
+    "explanation": "'Tom Sawyer' est le morceau le plus connu du groupe canadien Rush."
+  },
+  {
+    "id": 223,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Babooshka' ?",
+    "choices": [
+      "Kate Bush",
+      "Stevie Nicks",
+      "Annie Lennox",
+      "Madonna"
+    ],
+    "answer": 0,
+    "explanation": "'Babooshka' est l'un des plus grands succès de Kate Bush."
+  },
+  {
+    "id": 224,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'To Pimp a Butterfly' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Kanye West"
+    ],
+    "answer": 0,
+    "explanation": "'To Pimp a Butterfly' est considéré comme l'un des meilleurs albums de rap du XXIe siècle."
+  },
+  {
+    "id": 225,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Carry On Wayward Son' ?",
+    "choices": [
+      "Kansas",
+      "Journey",
+      "Styx",
+      "Boston"
+    ],
+    "answer": 0,
+    "explanation": "'Carry On Wayward Son' est le plus grand classique du groupe Kansas."
+  },
+  {
+    "id": 226,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Θ. C'est la base' ?",
+    "choices": [
+      "Nekfeu",
+      "SCH",
+      "Orelsan",
+      "Damso"
+    ],
+    "answer": 0,
+    "explanation": "'Θ. C'est la base' est un morceau de Nekfeu issu de l'album Cyborg."
+  },
+  {
+    "id": 227,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Money' ?",
+    "choices": [
+      "Pink Floyd",
+      "Queen",
+      "Dire Straits",
+      "The Doors"
+    ],
+    "answer": 0,
+    "explanation": "'Money' est l'un des titres les plus célèbres de l'album The Dark Side of the Moon."
+  },
+  {
+    "id": 228,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Rehab' ?",
+    "choices": [
+      "Amy Winehouse",
+      "Adele",
+      "Duffy",
+      "Lily Allen"
+    ],
+    "answer": 0,
+    "explanation": "'Rehab' est le morceau emblématique d'Amy Winehouse."
+  },
+  {
+    "id": 229,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Ms. Jackson' ?",
+    "choices": [
+      "OutKast",
+      "The Roots",
+      "A Tribe Called Quest",
+      "Wu-Tang Clan"
+    ],
+    "answer": 0,
+    "explanation": "'Ms. Jackson' est l'un des plus grands succès du duo OutKast."
+  },
+  {
+    "id": 230,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Holy Diver' ?",
+    "choices": [
+      "Dio",
+      "Black Sabbath",
+      "Judas Priest",
+      "Iron Maiden"
+    ],
+    "answer": 0,
+    "explanation": "'Holy Diver' est le morceau le plus célèbre du groupe Dio."
+  },
+  {
+    "id": 231,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Purple Rain' ?",
+    "choices": [
+      "Prince",
+      "Michael Jackson",
+      "George Michael",
+      "David Bowie"
+    ],
+    "answer": 0,
+    "explanation": "'Purple Rain' est le morceau le plus emblématique de Prince."
+  },
+  {
+    "id": 232,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Dreams' ?",
+    "choices": [
+      "Fleetwood Mac",
+      "Eagles",
+      "Journey",
+      "Boston"
+    ],
+    "answer": 0,
+    "explanation": "'Dreams' est le seul numéro 1 de Fleetwood Mac aux États-Unis."
+  },
+  {
+    "id": 233,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Dog Days Are Over' ?",
+    "choices": [
+      "Florence + The Machine",
+      "Lorde",
+      "Lana Del Rey",
+      "Birdy"
+    ],
+    "answer": 0,
+    "explanation": "'Dog Days Are Over' est le titre emblématique de Florence + The Machine."
+  },
+  {
+    "id": 234,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The Marshall Mathers LP' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Snoop Dogg"
+    ],
+    "answer": 0,
+    "explanation": "'The Marshall Mathers LP' est l'un des albums de rap les plus vendus de tous les temps."
+  },
+  {
+    "id": 235,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'More Than a Feeling' ?",
+    "choices": [
+      "Boston",
+      "Journey",
+      "Foreigner",
+      "Kansas"
+    ],
+    "answer": 0,
+    "explanation": "'More Than a Feeling' est le morceau emblématique de Boston."
+  },
+  {
+    "id": 236,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Mort jamais' ?",
+    "choices": [
+      "Damso",
+      "SCH",
+      "Nekfeu",
+      "Booba"
+    ],
+    "answer": 0,
+    "explanation": "'Mort jamais' est l'un des morceaux les plus marquants de Damso."
+  },
+  {
+    "id": 237,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Comfortably Numb' ?",
+    "choices": [
+      "Pink Floyd",
+      "Genesis",
+      "Yes",
+      "The Who"
+    ],
+    "answer": 0,
+    "explanation": "'Comfortably Numb' est célèbre pour son solo de guitare de David Gilmour."
+  },
+  {
+    "id": 238,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Dreams' (1993) ?",
+    "choices": [
+      "The Cranberries",
+      "Sinéad O'Connor",
+      "Enya",
+      "Dolores O'Riordan"
+    ],
+    "answer": 0,
+    "explanation": "'Dreams' est le premier grand succès du groupe irlandais The Cranberries."
+  },
+  {
+    "id": 239,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Juicy' ?",
+    "choices": [
+      "The Notorious B.I.G.",
+      "2Pac",
+      "Nas",
+      "Jay-Z"
+    ],
+    "answer": 0,
+    "explanation": "'Juicy' est le morceau le plus emblématique de The Notorious B.I.G."
+  },
+  {
+    "id": 240,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Ace of Spades' ?",
+    "choices": [
+      "Motörhead",
+      "Judas Priest",
+      "Iron Maiden",
+      "Megadeth"
+    ],
+    "answer": 0,
+    "explanation": "'Ace of Spades' est le morceau emblématique de Motörhead."
+  },
+  {
+    "id": 241,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Rocket Man' ?",
+    "choices": [
+      "Elton John",
+      "David Bowie",
+      "Billy Joel",
+      "Phil Collins"
+    ],
+    "answer": 0,
+    "explanation": "'Rocket Man' est l'un des plus grands classiques d'Elton John."
+  },
+  {
+    "id": 242,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Dust in the Wind' ?",
+    "choices": [
+      "Kansas",
+      "Boston",
+      "Journey",
+      "Styx"
+    ],
+    "answer": 0,
+    "explanation": "'Dust in the Wind' est la ballade la plus célèbre de Kansas."
+  },
+  {
+    "id": 243,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Zombie' ?",
+    "choices": [
+      "The Cranberries",
+      "No Doubt",
+      "Garbage",
+      "Paramore"
+    ],
+    "answer": 0,
+    "explanation": "'Zombie' est le morceau le plus célèbre des Cranberries, chanté par Dolores O'Riordan."
+  },
+  {
+    "id": 244,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The Blueprint' ?",
+    "choices": [
+      "Jay-Z",
+      "Nas",
+      "Eminem",
+      "50 Cent"
+    ],
+    "answer": 0,
+    "explanation": "'The Blueprint' est considéré comme l'un des meilleurs albums de Jay-Z."
+  },
+  {
+    "id": 245,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Wish You Were Here' ?",
+    "choices": [
+      "Pink Floyd",
+      "Genesis",
+      "Yes",
+      "Dire Straits"
+    ],
+    "answer": 0,
+    "explanation": "'Wish You Were Here' est l'un des morceaux les plus emblématiques de Pink Floyd."
+  },
+  {
+    "id": 246,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Réseaux' ?",
+    "choices": [
+      "Niska",
+      "Ninho",
+      "SCH",
+      "PLK"
+    ],
+    "answer": 0,
+    "explanation": "'Réseaux' est le morceau qui a propulsé Niska au sommet des classements."
+  },
+  {
+    "id": 247,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Don't Fear the Reaper' ?",
+    "choices": [
+      "Blue Öyster Cult",
+      "Deep Purple",
+      "Black Sabbath",
+      "Rush"
+    ],
+    "answer": 0,
+    "explanation": "'Don't Fear the Reaper' est le plus grand succès de Blue Öyster Cult."
+  },
+  {
+    "id": 248,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Wuthering Heights' ?",
+    "choices": [
+      "Kate Bush",
+      "Stevie Nicks",
+      "Annie Lennox",
+      "Tori Amos"
+    ],
+    "answer": 0,
+    "explanation": "'Wuthering Heights' est le premier grand succès de Kate Bush."
+  },
+  {
+    "id": 249,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'California Love' avec Dr. Dre ?",
+    "choices": [
+      "2Pac",
+      "Snoop Dogg",
+      "Ice Cube",
+      "The Notorious B.I.G."
+    ],
+    "answer": 0,
+    "explanation": "'California Love' est l'un des plus grands classiques de 2Pac."
+  },
+  {
+    "id": 250,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Breaking the Law' ?",
+    "choices": [
+      "Judas Priest",
+      "Iron Maiden",
+      "Motörhead",
+      "Megadeth"
+    ],
+    "answer": 0,
+    "explanation": "'Breaking the Law' est l'un des morceaux les plus célèbres de Judas Priest."
+  },
+  {
+    "id": 251,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Tiny Dancer' ?",
+    "choices": [
+      "Elton John",
+      "Billy Joel",
+      "David Bowie",
+      "Rod Stewart"
+    ],
+    "answer": 0,
+    "explanation": "'Tiny Dancer' est l'un des plus grands classiques d'Elton John."
+  },
+  {
+    "id": 252,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Roxanne' ?",
+    "choices": [
+      "The Police",
+      "U2",
+      "Genesis",
+      "The Clash"
+    ],
+    "answer": 0,
+    "explanation": "'Roxanne' est le morceau qui a révélé The Police."
+  },
+  {
+    "id": 253,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Nothing Compares 2 U' ?",
+    "choices": [
+      "Sinéad O'Connor",
+      "Annie Lennox",
+      "Kate Bush",
+      "Dolores O'Riordan"
+    ],
+    "answer": 0,
+    "explanation": "Cette chanson, écrite par Prince, est devenue un immense succès grâce à Sinéad O'Connor."
+  },
+  {
+    "id": 254,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Ready to Die' ?",
+    "choices": [
+      "The Notorious B.I.G.",
+      "2Pac",
+      "Nas",
+      "Jay-Z"
+    ],
+    "answer": 0,
+    "explanation": "'Ready to Die' est le premier album studio de The Notorious B.I.G."
+  },
+  {
+    "id": 255,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'The Chain' ?",
+    "choices": [
+      "Fleetwood Mac",
+      "Eagles",
+      "Journey",
+      "Boston"
+    ],
+    "answer": 0,
+    "explanation": "'The Chain' est l'un des morceaux les plus célèbres de Fleetwood Mac."
+  },
+  {
+    "id": 256,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Freeze Raël' ?",
+    "choices": [
+      "Freeze Corleone",
+      "Alpha Wann",
+      "Nekfeu",
+      "Damso"
+    ],
+    "answer": 0,
+    "explanation": "'Freeze Raël' est l'un des morceaux emblématiques de Freeze Corleone."
+  },
+  {
+    "id": 257,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Run to the Hills' ?",
+    "choices": [
+      "Iron Maiden",
+      "Judas Priest",
+      "Black Sabbath",
+      "Motörhead"
+    ],
+    "answer": 0,
+    "explanation": "'Run to the Hills' est l'un des plus grands classiques d'Iron Maiden."
+  },
+  {
+    "id": 258,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Like a Prayer' ?",
+    "choices": [
+      "Madonna",
+      "Whitney Houston",
+      "Janet Jackson",
+      "Cyndi Lauper"
+    ],
+    "answer": 0,
+    "explanation": "'Like a Prayer' est l'un des titres les plus emblématiques de Madonna."
+  },
+  {
+    "id": 259,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Shook Ones, Pt. II' ?",
+    "choices": [
+      "Mobb Deep",
+      "Wu-Tang Clan",
+      "Nas",
+      "Cypress Hill"
+    ],
+    "answer": 0,
+    "explanation": "'Shook Ones, Pt. II' est un classique incontournable du rap new-yorkais."
+  },
+  {
+    "id": 260,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'War Pigs' ?",
+    "choices": [
+      "Black Sabbath",
+      "Deep Purple",
+      "Led Zeppelin",
+      "Judas Priest"
+    ],
+    "answer": 0,
+    "explanation": "'War Pigs' est considéré comme l'un des morceaux fondateurs du heavy metal."
+  },
+  {
+    "id": 261,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Imagine' ?",
+    "choices": [
+      "John Lennon",
+      "Paul McCartney",
+      "George Harrison",
+      "Elton John"
+    ],
+    "answer": 0,
+    "explanation": "'Imagine' est le morceau solo le plus célèbre de John Lennon."
+  },
+  {
+    "id": 262,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Walk This Way' ?",
+    "choices": [
+      "Aerosmith",
+      "Van Halen",
+      "Kiss",
+      "Bon Jovi"
+    ],
+    "answer": 0,
+    "explanation": "'Walk This Way' est l'un des plus grands classiques d'Aerosmith."
+  },
+  {
+    "id": 263,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'I Will Always Love You' ?",
+    "choices": [
+      "Whitney Houston",
+      "Mariah Carey",
+      "Céline Dion",
+      "Toni Braxton"
+    ],
+    "answer": 0,
+    "explanation": "La reprise de Whitney Houston est devenue l'une des chansons les plus vendues de tous les temps."
+  },
+  {
+    "id": 264,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The Eminem Show' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Xzibit"
+    ],
+    "answer": 0,
+    "explanation": "'The Eminem Show' est l'un des albums les plus vendus des années 2000."
+  },
+  {
+    "id": 265,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Born to Run' ?",
+    "choices": [
+      "Bruce Springsteen & The E Street Band",
+      "Journey",
+      "Boston",
+      "The Eagles"
+    ],
+    "answer": 0,
+    "explanation": "'Born to Run' est le morceau emblématique de Bruce Springsteen."
+  },
+  {
+    "id": 266,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Médusa' ?",
+    "choices": [
+      "Booba",
+      "Damso",
+      "SCH",
+      "Kaaris"
+    ],
+    "answer": 0,
+    "explanation": "'Médusa' est un morceau marquant de Booba."
+  },
+  {
+    "id": 267,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Sweet Child O' Mine' ?",
+    "choices": [
+      "Guns N' Roses",
+      "Bon Jovi",
+      "Aerosmith",
+      "Def Leppard"
+    ],
+    "answer": 0,
+    "explanation": "'Sweet Child O' Mine' est le plus grand succès de Guns N' Roses."
+  },
+  {
+    "id": 268,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Because the Night' ?",
+    "choices": [
+      "Patti Smith",
+      "Stevie Nicks",
+      "Joan Jett",
+      "Chrissie Hynde"
+    ],
+    "answer": 0,
+    "explanation": "'Because the Night' est le plus grand succès de Patti Smith."
+  },
+  {
+    "id": 269,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'C.R.E.A.M.' ?",
+    "choices": [
+      "Wu-Tang Clan",
+      "Mobb Deep",
+      "Public Enemy",
+      "N.W.A."
+    ],
+    "answer": 0,
+    "explanation": "'C.R.E.A.M.' est l'un des morceaux les plus célèbres du Wu-Tang Clan."
+  },
+  {
+    "id": 270,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Holy Wars... The Punishment Due' ?",
+    "choices": [
+      "Megadeth",
+      "Metallica",
+      "Slayer",
+      "Anthrax"
+    ],
+    "answer": 0,
+    "explanation": "'Holy Wars... The Punishment Due' est considéré comme le chef-d'œuvre de Megadeth."
+  },
+  {
+    "id": 271,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Born in the U.S.A.' ?",
+    "choices": [
+      "Bruce Springsteen",
+      "Tom Petty",
+      "John Mellencamp",
+      "Bob Seger"
+    ],
+    "answer": 0,
+    "explanation": "'Born in the U.S.A.' est l'un des plus grands succès de Bruce Springsteen."
+  },
+  {
+    "id": 272,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Highway Star' ?",
+    "choices": [
+      "Deep Purple",
+      "Led Zeppelin",
+      "Black Sabbath",
+      "Rainbow"
+    ],
+    "answer": 0,
+    "explanation": "'Highway Star' est considéré comme l'un des premiers grands morceaux de hard rock."
+  },
+  {
+    "id": 273,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Piece of My Heart' ?",
+    "choices": [
+      "Janis Joplin",
+      "Grace Slick",
+      "Stevie Nicks",
+      "Tina Turner"
+    ],
+    "answer": 0,
+    "explanation": "'Piece of My Heart' est l'un des titres les plus emblématiques de Janis Joplin."
+  },
+  {
+    "id": 274,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Reasonable Doubt' ?",
+    "choices": [
+      "Jay-Z",
+      "Nas",
+      "The Notorious B.I.G.",
+      "DMX"
+    ],
+    "answer": 0,
+    "explanation": "'Reasonable Doubt' est le premier album studio de Jay-Z."
+  },
+  {
+    "id": 275,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Free Bird' ?",
+    "choices": [
+      "Lynyrd Skynyrd",
+      "The Allman Brothers Band",
+      "ZZ Top",
+      "Kansas"
+    ],
+    "answer": 0,
+    "explanation": "'Free Bird' est célèbre pour son long solo de guitare final."
+  },
+  {
+    "id": 276,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'J'rap encore' ?",
+    "choices": [
+      "Kery James",
+      "Médine",
+      "Youssoupha",
+      "Rohff"
+    ],
+    "answer": 0,
+    "explanation": "'J'rap encore' est l'un des morceaux emblématiques de Kery James."
+  },
+  {
+    "id": 277,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'The Number of the Beast' ?",
+    "choices": [
+      "Iron Maiden",
+      "Judas Priest",
+      "Black Sabbath",
+      "Dio"
+    ],
+    "answer": 0,
+    "explanation": "'The Number of the Beast' est le morceau emblématique d'Iron Maiden."
+  },
+  {
+    "id": 278,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Respect' ?",
+    "choices": [
+      "Aretha Franklin",
+      "Diana Ross",
+      "Whitney Houston",
+      "Tina Turner"
+    ],
+    "answer": 0,
+    "explanation": "'Respect' est devenu l'hymne d'Aretha Franklin."
+  },
+  {
+    "id": 279,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Fight the Power' ?",
+    "choices": [
+      "Public Enemy",
+      "N.W.A.",
+      "Run-D.M.C.",
+      "Beastie Boys"
+    ],
+    "answer": 0,
+    "explanation": "'Fight the Power' est l'un des morceaux les plus influents de Public Enemy."
+  },
+  {
+    "id": 280,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Painkiller' ?",
+    "choices": [
+      "Judas Priest",
+      "Iron Maiden",
+      "Megadeth",
+      "Slayer"
+    ],
+    "answer": 0,
+    "explanation": "'Painkiller' est considéré comme l'un des plus grands morceaux de heavy metal de tous les temps."
+  },
+  {
+    "id": 281,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Hallelujah' (version originale) ?",
+    "choices": [
+      "Leonard Cohen",
+      "Jeff Buckley",
+      "Bob Dylan",
+      "Bruce Springsteen"
+    ],
+    "answer": 0,
+    "explanation": "'Hallelujah' a été écrite et enregistrée pour la première fois par Leonard Cohen en 1984."
+  },
+  {
+    "id": 282,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Barracuda' ?",
+    "choices": [
+      "Heart",
+      "Fleetwood Mac",
+      "Journey",
+      "Foreigner"
+    ],
+    "answer": 0,
+    "explanation": "'Barracuda' est le plus grand succès rock du groupe Heart."
+  },
+  {
+    "id": 283,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Ironic' ?",
+    "choices": [
+      "Alanis Morissette",
+      "Sheryl Crow",
+      "Jewel",
+      "Sarah McLachlan"
+    ],
+    "answer": 0,
+    "explanation": "'Ironic' est l'un des titres les plus connus d'Alanis Morissette."
+  },
+  {
+    "id": 284,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Enter the Wu-Tang (36 Chambers)' ?",
+    "choices": [
+      "Wu-Tang Clan",
+      "Nas",
+      "Mobb Deep",
+      "N.W.A."
+    ],
+    "answer": 0,
+    "explanation": "'Enter the Wu-Tang (36 Chambers)' est le premier album du Wu-Tang Clan."
+  },
+  {
+    "id": 285,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'The Logical Song' ?",
+    "choices": [
+      "Supertramp",
+      "Genesis",
+      "Yes",
+      "Electric Light Orchestra"
+    ],
+    "answer": 0,
+    "explanation": "'The Logical Song' est l'un des plus grands succès de Supertramp."
+  },
+  {
+    "id": 286,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Ténébreux' ?",
+    "choices": [
+      "Vald",
+      "Damso",
+      "SCH",
+      "Nekfeu"
+    ],
+    "answer": 0,
+    "explanation": "'Ténébreux' est l'un des morceaux les plus connus de Vald."
+  },
+  {
+    "id": 287,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Dust in the Wind' ?",
+    "choices": [
+      "Kansas",
+      "Boston",
+      "Journey",
+      "REO Speedwagon"
+    ],
+    "answer": 0,
+    "explanation": "'Dust in the Wind' est la ballade emblématique du groupe Kansas."
+  },
+  {
+    "id": 288,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'What's Love Got to Do with It' ?",
+    "choices": [
+      "Tina Turner",
+      "Whitney Houston",
+      "Diana Ross",
+      "Cher"
+    ],
+    "answer": 0,
+    "explanation": "Cette chanson a relancé la carrière solo de Tina Turner."
+  },
+  {
+    "id": 289,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Dear Mama' ?",
+    "choices": [
+      "2Pac",
+      "Nas",
+      "Jay-Z",
+      "Ice Cube"
+    ],
+    "answer": 0,
+    "explanation": "'Dear Mama' est l'un des morceaux les plus personnels de 2Pac."
+  },
+  {
+    "id": 290,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Rainbow in the Dark' ?",
+    "choices": [
+      "Dio",
+      "Black Sabbath",
+      "Iron Maiden",
+      "Judas Priest"
+    ],
+    "answer": 0,
+    "explanation": "'Rainbow in the Dark' est l'un des plus grands classiques du groupe Dio."
+  },
+  {
+    "id": 291,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Piano Man' ?",
+    "choices": [
+      "Billy Joel",
+      "Elton John",
+      "Bruce Springsteen",
+      "Phil Collins"
+    ],
+    "answer": 0,
+    "explanation": "'Piano Man' est le morceau emblématique de Billy Joel."
+  },
+ {
+  "id": 292,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quel groupe interprète la chanson 'Thunderstruck' ?",
+  "choices": [
+    "AC/DC",
+    "Metallica",
+    "Guns N' Roses",
+    "Iron Maiden"
+  ],
+  "answer": 0,
+  "explanation": "'Thunderstruck' est l'un des morceaux les plus emblématiques d'AC/DC, sorti en 1990."
+},
+  {
+    "id": 293,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Total Eclipse of the Heart' ?",
+    "choices": [
+      "Bonnie Tyler",
+      "Cher",
+      "Tina Turner",
+      "Pat Benatar"
+    ],
+    "answer": 0,
+    "explanation": "'Total Eclipse of the Heart' est le plus grand succès de Bonnie Tyler."
+  },
+  {
+    "id": 294,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Me Against the World' ?",
+    "choices": [
+      "2Pac",
+      "Nas",
+      "The Notorious B.I.G.",
+      "Jay-Z"
+    ],
+    "answer": 0,
+    "explanation": "'Me Against the World' est l'un des albums les plus influents de 2Pac."
+  },
+  {
+    "id": 295,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Carry on My Wayward Son' ?",
+    "choices": [
+      "Kansas",
+      "Boston",
+      "Journey",
+      "Styx"
+    ],
+    "answer": 0,
+    "explanation": "'Carry on My Wayward Son' est devenu un classique du rock et de nombreuses bandes originales."
+  },
+  {
+    "id": 296,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Laisse pas traîner ton fils' avec Arsenik ?",
+    "choices": [
+      "NTM",
+      "IAM",
+      "Rohff",
+      "Kery James"
+    ],
+    "answer": 0,
+    "explanation": "'Laisse pas traîner ton fils' est un classique du rap français de NTM en collaboration avec Arsenik."
+  },
+  {
+    "id": 297,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Aqualung' ?",
+    "choices": [
+      "Jethro Tull",
+      "Genesis",
+      "Yes",
+      "King Crimson"
+    ],
+    "answer": 0,
+    "explanation": "'Aqualung' est l'un des morceaux les plus célèbres de Jethro Tull."
+  },
+  {
+    "id": 298,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'River Deep – Mountain High' ?",
+    "choices": [
+      "Tina Turner",
+      "Diana Ross",
+      "Aretha Franklin",
+      "Gladys Knight"
+    ],
+    "answer": 0,
+    "explanation": "'River Deep – Mountain High' est l'un des plus grands succès d'Ike & Tina Turner."
+  },
+  {
+    "id": 299,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'The Message' ?",
+    "choices": [
+      "Grandmaster Flash and the Furious Five",
+      "Run-D.M.C.",
+      "Public Enemy",
+      "N.W.A."
+    ],
+    "answer": 0,
+    "explanation": "'The Message' est considéré comme l'un des morceaux fondateurs du hip-hop conscient."
+  },
+  {
+    "id": 300,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Cowboys from Hell' ?",
+    "choices": [
+      "Pantera",
+      "Slayer",
+      "Megadeth",
+      "Sepultura"
+    ],
+    "answer": 0,
+    "explanation": "'Cowboys from Hell' est le morceau qui a propulsé Pantera parmi les plus grands groupes de metal."
+  },
+  {
+    "id": 301,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Hotel California' en tant que chanteur principal ?",
+    "choices": [
+      "Don Henley",
+      "Glenn Frey",
+      "Joe Walsh",
+      "Timothy B. Schmit"
+    ],
+    "answer": 0,
+    "explanation": "Don Henley est le chanteur principal sur 'Hotel California' des Eagles."
+  },
+  {
+    "id": 302,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Roundabout' ?",
+    "choices": [
+      "Yes",
+      "Genesis",
+      "King Crimson",
+      "Rush"
+    ],
+    "answer": 0,
+    "explanation": "'Roundabout' est l'un des morceaux les plus connus du groupe Yes."
+  },
+  {
+    "id": 303,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'You Oughta Know' ?",
+    "choices": [
+      "Alanis Morissette",
+      "Sheryl Crow",
+      "Melissa Etheridge",
+      "Jewel"
+    ],
+    "answer": 0,
+    "explanation": "'You Oughta Know' est le morceau qui a révélé Alanis Morissette."
+  },
+  {
+    "id": 304,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The Chronic' ?",
+    "choices": [
+      "Dr. Dre",
+      "Snoop Dogg",
+      "Ice Cube",
+      "Eazy-E"
+    ],
+    "answer": 0,
+    "explanation": "'The Chronic' est un album fondateur du G-funk."
+  },
+  {
+    "id": 305,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Black Hole Sun' ?",
+    "choices": [
+      "Soundgarden",
+      "Pearl Jam",
+      "Alice in Chains",
+      "Stone Temple Pilots"
+    ],
+    "answer": 0,
+    "explanation": "'Black Hole Sun' est le plus grand succès de Soundgarden."
+  },
+  {
+    "id": 306,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Scarface' ?",
+    "choices": [
+      "Booba",
+      "SCH",
+      "Ninho",
+      "Kaaris"
+    ],
+    "answer": 0,
+    "explanation": "'Scarface' est l'un des morceaux emblématiques de Booba."
+  },
+  {
+    "id": 307,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Peace of Mind' ?",
+    "choices": [
+      "Boston",
+      "Journey",
+      "Kansas",
+      "Foreigner"
+    ],
+    "answer": 0,
+    "explanation": "'Peace of Mind' est un classique du groupe Boston."
+  },
+  {
+    "id": 308,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Edge of Seventeen' ?",
+    "choices": [
+      "Stevie Nicks",
+      "Pat Benatar",
+      "Cher",
+      "Bonnie Tyler"
+    ],
+    "answer": 0,
+    "explanation": "'Edge of Seventeen' est l'un des plus grands succès solo de Stevie Nicks."
+  },
+  {
+    "id": 309,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Gin and Juice' ?",
+    "choices": [
+      "Snoop Dogg",
+      "Dr. Dre",
+      "Ice Cube",
+      "2Pac"
+    ],
+    "answer": 0,
+    "explanation": "'Gin and Juice' est l'un des morceaux les plus célèbres de Snoop Dogg."
+  },
+  {
+    "id": 310,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Symphony of Destruction' ?",
+    "choices": [
+      "Megadeth",
+      "Metallica",
+      "Slayer",
+      "Anthrax"
+    ],
+    "answer": 0,
+    "explanation": "'Symphony of Destruction' est le plus grand succès commercial de Megadeth."
+  },
+  {
+    "id": 311,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Life on Mars?' ?",
+    "choices": [
+      "David Bowie",
+      "Elton John",
+      "Queen",
+      "Lou Reed"
+    ],
+    "answer": 0,
+    "explanation": "'Life on Mars?' est l'un des morceaux les plus emblématiques de David Bowie."
+  },
+  {
+    "id": 312,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Smoke on the Water' ?",
+    "choices": [
+      "Deep Purple",
+      "Led Zeppelin",
+      "Black Sabbath",
+      "Rainbow"
+    ],
+    "answer": 0,
+    "explanation": "'Smoke on the Water' possède l'un des riffs de guitare les plus célèbres de l'histoire."
+  },
+  {
+    "id": 313,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Rolling in the Deep' ?",
+    "choices": [
+      "Adele",
+      "Amy Winehouse",
+      "Duffy",
+      "Leona Lewis"
+    ],
+    "answer": 0,
+    "explanation": "'Rolling in the Deep' est le titre phare de l'album 21 d'Adele."
+  },
+  {
+    "id": 314,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The College Dropout' ?",
+    "choices": [
+      "Kanye West",
+      "Common",
+      "Jay-Z",
+      "Lupe Fiasco"
+    ],
+    "answer": 0,
+    "explanation": "'The College Dropout' est le premier album studio de Kanye West."
+  },
+  {
+    "id": 315,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Dream On' ?",
+    "choices": [
+      "Aerosmith",
+      "Bon Jovi",
+      "Journey",
+      "Van Halen"
+    ],
+    "answer": 0,
+    "explanation": "'Dream On' est le premier grand succès d'Aerosmith."
+  },
+  {
+    "id": 316,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Suavemente' ?",
+    "choices": [
+      "Soolking",
+      "Ninho",
+      "SCH",
+      "Gazo"
+    ],
+    "answer": 0,
+    "explanation": "'Suavemente' est l'un des plus grands succès internationaux de Soolking."
+  },
+  {
+    "id": 317,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'School's Out' ?",
+    "choices": [
+      "Alice Cooper",
+      "Kiss",
+      "Twisted Sister",
+      "Mötley Crüe"
+    ],
+    "answer": 0,
+    "explanation": "'School's Out' est le morceau emblématique d'Alice Cooper."
+  },
+  {
+    "id": 318,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Vision of Love' ?",
+    "choices": [
+      "Mariah Carey",
+      "Whitney Houston",
+      "Céline Dion",
+      "Toni Braxton"
+    ],
+    "answer": 0,
+    "explanation": "'Vision of Love' est le premier grand succès de Mariah Carey."
+  },
+  {
+    "id": 319,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'It Was a Good Day' ?",
+    "choices": [
+      "Ice Cube",
+      "Dr. Dre",
+      "Snoop Dogg",
+      "Eazy-E"
+    ],
+    "answer": 0,
+    "explanation": "'It Was a Good Day' est l'un des morceaux les plus célèbres d'Ice Cube."
+  },
+  {
+    "id": 320,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'South of Heaven' ?",
+    "choices": [
+      "Slayer",
+      "Megadeth",
+      "Metallica",
+      "Anthrax"
+    ],
+    "answer": 0,
+    "explanation": "'South of Heaven' est un classique incontournable du thrash metal."
+  },
+  {
+    "id": 321,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Every Breath You Take' ?",
+    "choices": [
+      "The Police",
+      "U2",
+      "Genesis",
+      "Dire Straits"
+    ],
+    "answer": 0,
+    "explanation": "'Every Breath You Take' est le plus grand succès de The Police."
+  },
+  {
+    "id": 322,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Another Brick in the Wall (Part 2)' ?",
+    "choices": [
+      "Pink Floyd",
+      "Yes",
+      "Genesis",
+      "Rush"
+    ],
+    "answer": 0,
+    "explanation": "'Another Brick in the Wall (Part 2)' est l'un des plus grands succès de Pink Floyd."
+  },
+  {
+    "id": 323,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Fallin'' ?",
+    "choices": [
+      "Alicia Keys",
+      "Beyoncé",
+      "Brandy",
+      "Mary J. Blige"
+    ],
+    "answer": 0,
+    "explanation": "'Fallin'' est le premier immense succès d'Alicia Keys."
+  },
+  {
+    "id": 324,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Get Rich or Die Tryin'' ?",
+    "choices": [
+      "50 Cent",
+      "The Game",
+      "Eminem",
+      "Dr. Dre"
+    ],
+    "answer": 0,
+    "explanation": "'Get Rich or Die Tryin'' est le premier album studio de 50 Cent."
+  },
+  {
+    "id": 325,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Layla' ?",
+    "choices": [
+      "Derek and the Dominos",
+      "Cream",
+      "The Yardbirds",
+      "The Allman Brothers Band"
+    ],
+    "answer": 0,
+    "explanation": "'Layla' est le morceau emblématique de Derek and the Dominos avec Eric Clapton."
+  },
+  {
+    "id": 326,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Bande organisée' ?",
+    "choices": [
+      "Jul",
+      "SCH",
+      "Soprano",
+      "Naps"
+    ],
+    "answer": 0,
+    "explanation": "Jul est à l'origine du projet '13'Organisé' dont est issu 'Bande organisée'."
+  },
+  {
+    "id": 327,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Carry On' ?",
+    "choices": [
+      "Fun.",
+      "OneRepublic",
+      "Train",
+      "Imagine Dragons"
+    ],
+    "answer": 0,
+    "explanation": "'Carry On' est l'un des plus grands succès du groupe Fun."
+  },
+  {
+    "id": 328,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Un-break My Heart' ?",
+    "choices": [
+      "Toni Braxton",
+      "Mariah Carey",
+      "Whitney Houston",
+      "Céline Dion"
+    ],
+    "answer": 0,
+    "explanation": "'Un-break My Heart' est le plus grand succès de Toni Braxton."
+  },
+  {
+    "id": 329,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Straight Outta Compton' ?",
+    "choices": [
+      "N.W.A.",
+      "Ice Cube",
+      "Dr. Dre",
+      "Eazy-E"
+    ],
+    "answer": 0,
+    "explanation": "'Straight Outta Compton' est le morceau emblématique du groupe N.W.A."
+  },
+  {
+    "id": 330,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Raining Blood' ?",
+    "choices": [
+      "Slayer",
+      "Megadeth",
+      "Anthrax",
+      "Pantera"
+    ],
+    "answer": 0,
+    "explanation": "'Raining Blood' est l'un des morceaux de thrash metal les plus célèbres de l'histoire."
+  },
+  {
+    "id": 331,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Bohemian Rhapsody' ?",
+    "choices": [
+      "Queen",
+      "The Beatles",
+      "Led Zeppelin",
+      "Pink Floyd"
+    ],
+    "answer": 0,
+    "explanation": "'Bohemian Rhapsody' est le chef-d'œuvre du groupe Queen."
+  },
+  {
+    "id": 332,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Highway to Hell' ?",
+    "choices": [
+      "AC/DC",
+      "Metallica",
+      "Deep Purple",
+      "Guns N' Roses"
+    ],
+    "answer": 0,
+    "explanation": "'Highway to Hell' est l'un des plus grands classiques d'AC/DC."
+  },
+  {
+    "id": 333,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'My Heart Will Go On' ?",
+    "choices": [
+      "Céline Dion",
+      "Whitney Houston",
+      "Mariah Carey",
+      "Leona Lewis"
+    ],
+    "answer": 0,
+    "explanation": "Cette chanson est devenue célèbre grâce au film Titanic."
+  },
+  {
+    "id": 334,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The Slim Shady LP' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Snoop Dogg"
+    ],
+    "answer": 0,
+    "explanation": "'The Slim Shady LP' a lancé la carrière mondiale d'Eminem."
+  },
+  {
+    "id": 335,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Livin' on a Prayer' ?",
+    "choices": [
+      "Bon Jovi",
+      "Journey",
+      "Europe",
+      "Kiss"
+    ],
+    "answer": 0,
+    "explanation": "'Livin' on a Prayer' est le plus grand succès de Bon Jovi."
+  },
+  {
+    "id": 336,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Macarena' ?",
+    "choices": [
+      "Damso",
+      "SCH",
+      "Ninho",
+      "PLK"
+    ],
+    "answer": 0,
+    "explanation": "'Macarena' est l'un des morceaux les plus populaires de Damso."
+  },
+  {
+    "id": 337,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Killing in the Name' ?",
+    "choices": [
+      "Rage Against the Machine",
+      "System of a Down",
+      "Linkin Park",
+      "Korn"
+    ],
+    "answer": 0,
+    "explanation": "'Killing in the Name' est le morceau emblématique de Rage Against the Machine."
+  },
+  {
+    "id": 338,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Someone Like You' ?",
+    "choices": [
+      "Adele",
+      "Amy Winehouse",
+      "Duffy",
+      "Birdy"
+    ],
+    "answer": 0,
+    "explanation": "'Someone Like You' est l'une des plus grandes ballades d'Adele."
+  },
+  {
+    "id": 339,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Lose Yourself' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Nas"
+    ],
+    "answer": 0,
+    "explanation": "'Lose Yourself' a remporté l'Oscar de la meilleure chanson originale."
+  },
+  {
+    "id": 340,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Duality' ?",
+    "choices": [
+      "Slipknot",
+      "Korn",
+      "System of a Down",
+      "Limp Bizkit"
+    ],
+    "answer": 0,
+    "explanation": "'Duality' est l'un des morceaux les plus célèbres de Slipknot."
+  },
+  {
+    "id": 341,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Stairway to Heaven' ?",
+    "choices": [
+      "Led Zeppelin",
+      "Deep Purple",
+      "Pink Floyd",
+      "The Who"
+    ],
+    "answer": 0,
+    "explanation": "'Stairway to Heaven' est considérée comme l'une des plus grandes chansons de rock de tous les temps."
+  },
+  {
+    "id": 342,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Enter Sandman' ?",
+    "choices": [
+      "Metallica",
+      "Megadeth",
+      "Slayer",
+      "Anthrax"
+    ],
+    "answer": 0,
+    "explanation": "'Enter Sandman' est le plus grand succès commercial de Metallica."
+  },
+  {
+    "id": 343,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Chandelier' ?",
+    "choices": [
+      "Sia",
+      "P!nk",
+      "Adele",
+      "Katy Perry"
+    ],
+    "answer": 0,
+    "explanation": "'Chandelier' est l'un des plus grands succès internationaux de Sia."
+  },
+  {
+    "id": 344,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'All Eyez on Me' ?",
+    "choices": [
+      "2Pac",
+      "The Notorious B.I.G.",
+      "Nas",
+      "Jay-Z"
+    ],
+    "answer": 0,
+    "explanation": "'All Eyez on Me' est le quatrième album studio de 2Pac."
+  },
+  {
+    "id": 345,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Sweet Home Alabama' ?",
+    "choices": [
+      "Lynyrd Skynyrd",
+      "ZZ Top",
+      "The Allman Brothers Band",
+      "Kansas"
+    ],
+    "answer": 0,
+    "explanation": "'Sweet Home Alabama' est le morceau emblématique de Lynyrd Skynyrd."
+  },
+  {
+    "id": 346,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Sapés comme jamais' ?",
+    "choices": [
+      "Maître Gims",
+      "Black M",
+      "Ninho",
+      "Booba"
+    ],
+    "answer": 0,
+    "explanation": "'Sapés comme jamais' est l'un des plus grands succès de Maître Gims."
+  },
+  {
+    "id": 347,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Numb' ?",
+    "choices": [
+      "Linkin Park",
+      "Papa Roach",
+      "Evanescence",
+      "Three Days Grace"
+    ],
+    "answer": 0,
+    "explanation": "'Numb' est l'un des morceaux les plus populaires de Linkin Park."
+  },
+  {
+    "id": 348,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Halo' ?",
+    "choices": [
+      "Beyoncé",
+      "Rihanna",
+      "Alicia Keys",
+      "Kelly Rowland"
+    ],
+    "answer": 0,
+    "explanation": "'Halo' est l'une des chansons les plus emblématiques de Beyoncé."
+  },
+  {
+    "id": 349,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Without Me' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Snoop Dogg"
+    ],
+    "answer": 0,
+    "explanation": "'Without Me' est l'un des plus grands succès d'Eminem."
+  },
+  {
+    "id": 350,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Toxicity' ?",
+    "choices": [
+      "System of a Down",
+      "Slipknot",
+      "Korn",
+      "Disturbed"
+    ],
+    "answer": 0,
+    "explanation": "'Toxicity' est le morceau emblématique de System of a Down."
+  },
+  {
+    "id": 351,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'November Rain' ?",
+    "choices": [
+      "Guns N' Roses",
+      "Bon Jovi",
+      "Aerosmith",
+      "Skid Row"
+    ],
+    "answer": 0,
+    "explanation": "'November Rain' est l'une des chansons les plus célèbres de Guns N' Roses."
+  },
+  {
+    "id": 352,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Nothing Else Matters' ?",
+    "choices": [
+      "Metallica",
+      "Megadeth",
+      "Slayer",
+      "Pantera"
+    ],
+    "answer": 0,
+    "explanation": "'Nothing Else Matters' est l'une des ballades les plus connues de Metallica."
+  },
+  {
+    "id": 353,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Poker Face' ?",
+    "choices": [
+      "Lady Gaga",
+      "Katy Perry",
+      "Rihanna",
+      "Britney Spears"
+    ],
+    "answer": 0,
+    "explanation": "'Poker Face' est l'un des plus grands succès de Lady Gaga."
+  },
+  {
+    "id": 354,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Graduation' ?",
+    "choices": [
+      "Kanye West",
+      "Jay-Z",
+      "Drake",
+      "Lil Wayne"
+    ],
+    "answer": 0,
+    "explanation": "'Graduation' est le troisième album studio de Kanye West."
+  },
+  {
+    "id": 355,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Back in Black' ?",
+    "choices": [
+      "AC/DC",
+      "Deep Purple",
+      "Kiss",
+      "Van Halen"
+    ],
+    "answer": 0,
+    "explanation": "'Back in Black' est le morceau emblématique d'AC/DC."
+  },
+{
+  "id": 356,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quel rappeur français interprète la chanson 'Macarena' ?",
+  "choices": [
+    "Damso",
+    "Ninho",
+    "Niska",
+    "SCH"
+  ],
+  "answer": 1,
+  "explanation": "'Macarena' est l'un des plus grands succès de Ninho, sorti en 2019."
+},
+  {
+    "id": 357,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'In the End' ?",
+    "choices": [
+      "Linkin Park",
+      "Papa Roach",
+      "Limp Bizkit",
+      "Evanescence"
+    ],
+    "answer": 0,
+    "explanation": "'In the End' est l'un des plus grands classiques de Linkin Park."
+  },
+  {
+    "id": 358,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Firework' ?",
+    "choices": [
+      "Katy Perry",
+      "Lady Gaga",
+      "P!nk",
+      "Kelly Clarkson"
+    ],
+    "answer": 0,
+    "explanation": "'Firework' est l'un des plus grands succès de Katy Perry."
+  },
+  {
+    "id": 359,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'HUMBLE.' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "Drake",
+      "J. Cole",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'HUMBLE.' est l'un des plus grands succès de Kendrick Lamar."
+  },
+  {
+    "id": 360,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Psychosocial' ?",
+    "choices": [
+      "Slipknot",
+      "Korn",
+      "System of a Down",
+      "Disturbed"
+    ],
+    "answer": 0,
+    "explanation": "'Psychosocial' est l'un des morceaux les plus célèbres de Slipknot."
+  },
+  {
+    "id": 361,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Comfortably Numb' en tant que chanteur principal ?",
+    "choices": [
+      "David Gilmour",
+      "Roger Waters",
+      "Richard Wright",
+      "Nick Mason"
+    ],
+    "answer": 0,
+    "explanation": "David Gilmour chante la majeure partie de 'Comfortably Numb' et y réalise l'un des solos de guitare les plus célèbres de l'histoire."
+  },
+  {
+    "id": 362,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Everlong' ?",
+    "choices": [
+      "Foo Fighters",
+      "Nirvana",
+      "Pearl Jam",
+      "Green Day"
+    ],
+    "answer": 0,
+    "explanation": "'Everlong' est le morceau emblématique des Foo Fighters."
+  },
+  {
+    "id": 363,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Bad Romance' ?",
+    "choices": [
+      "Lady Gaga",
+      "Katy Perry",
+      "Rihanna",
+      "Britney Spears"
+    ],
+    "answer": 0,
+    "explanation": "'Bad Romance' est l'un des plus grands succès internationaux de Lady Gaga."
+  },
+  {
+    "id": 364,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'DAMN.' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "Drake",
+      "J. Cole",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'DAMN.' a remporté le prix Pulitzer de la musique en 2018."
+  },
+  {
+    "id": 365,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Californication' ?",
+    "choices": [
+      "Red Hot Chili Peppers",
+      "Green Day",
+      "Foo Fighters",
+      "Pearl Jam"
+    ],
+    "answer": 0,
+    "explanation": "'Californication' est l'un des morceaux les plus populaires des Red Hot Chili Peppers."
+  },
+  {
+    "id": 366,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Réseaux Reload' ?",
+    "choices": [
+      "Niska",
+      "Ninho",
+      "Gazo",
+      "SCH"
+    ],
+    "answer": 0,
+    "explanation": "'Réseaux Reload' est une nouvelle version du célèbre morceau de Niska."
+  },
+  {
+    "id": 367,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Bring Me to Life' ?",
+    "choices": [
+      "Evanescence",
+      "Within Temptation",
+      "Nightwish",
+      "Lacuna Coil"
+    ],
+    "answer": 0,
+    "explanation": "'Bring Me to Life' est le plus grand succès d'Evanescence."
+  },
+  {
+    "id": 368,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Since U Been Gone' ?",
+    "choices": [
+      "Kelly Clarkson",
+      "Pink",
+      "Avril Lavigne",
+      "Hilary Duff"
+    ],
+    "answer": 0,
+    "explanation": "'Since U Been Gone' est le titre qui a propulsé Kelly Clarkson au rang de star internationale."
+  },
+  {
+    "id": 369,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Empire State of Mind' avec Alicia Keys ?",
+    "choices": [
+      "Jay-Z",
+      "Nas",
+      "50 Cent",
+      "Kanye West"
+    ],
+    "answer": 0,
+    "explanation": "'Empire State of Mind' est devenu un hymne de New York."
+  },
+  {
+    "id": 370,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Chop Suey!' ?",
+    "choices": [
+      "System of a Down",
+      "Slipknot",
+      "Korn",
+      "Disturbed"
+    ],
+    "answer": 0,
+    "explanation": "'Chop Suey!' est le morceau le plus célèbre de System of a Down."
+  },
+  {
+    "id": 371,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Wonderwall' ?",
+    "choices": [
+      "Oasis",
+      "Blur",
+      "Radiohead",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Wonderwall' est le plus grand succès d'Oasis."
+  },
+  {
+    "id": 372,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Mr. Brightside' ?",
+    "choices": [
+      "The Killers",
+      "Arctic Monkeys",
+      "Muse",
+      "Keane"
+    ],
+    "answer": 0,
+    "explanation": "'Mr. Brightside' est le titre emblématique de The Killers."
+  },
+  {
+    "id": 373,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Royals' ?",
+    "choices": [
+      "Lorde",
+      "Billie Eilish",
+      "Lana Del Rey",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Royals' a révélé Lorde au monde entier en 2013."
+  },
+  {
+    "id": 374,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Astroworld' ?",
+    "choices": [
+      "Travis Scott",
+      "Future",
+      "Lil Uzi Vert",
+      "Post Malone"
+    ],
+    "answer": 0,
+    "explanation": "'Astroworld' est l'album qui a propulsé Travis Scott au sommet."
+  },
+  {
+    "id": 375,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Plug In Baby' ?",
+    "choices": [
+      "Muse",
+      "Radiohead",
+      "Placebo",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Plug In Baby' est l'un des morceaux les plus célèbres de Muse."
+  },
+  {
+    "id": 376,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Pochon Bleu' ?",
+    "choices": [
+      "Ninho",
+      "SCH",
+      "PLK",
+      "Gazo"
+    ],
+    "answer": 0,
+    "explanation": "'Pochon Bleu' est l'un des titres populaires de Ninho."
+  },
+  {
+    "id": 377,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Do I Wanna Know?' ?",
+    "choices": [
+      "Arctic Monkeys",
+      "The Strokes",
+      "The Killers",
+      "Franz Ferdinand"
+    ],
+    "answer": 0,
+    "explanation": "'Do I Wanna Know?' est le plus grand succès international des Arctic Monkeys."
+  },
+  {
+    "id": 378,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Born This Way' ?",
+    "choices": [
+      "Lady Gaga",
+      "Katy Perry",
+      "Pink",
+      "Beyoncé"
+    ],
+    "answer": 0,
+    "explanation": "'Born This Way' est devenu un hymne mondial de Lady Gaga."
+  },
+  {
+    "id": 379,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Sicko Mode' ?",
+    "choices": [
+      "Travis Scott",
+      "Drake",
+      "Future",
+      "21 Savage"
+    ],
+    "answer": 0,
+    "explanation": "'Sicko Mode' est le plus grand succès commercial de Travis Scott."
+  },
+  {
+    "id": 380,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Freak on a Leash' ?",
+    "choices": [
+      "Korn",
+      "Slipknot",
+      "Limp Bizkit",
+      "Disturbed"
+    ],
+    "answer": 0,
+    "explanation": "'Freak on a Leash' est le morceau emblématique de Korn."
+  },
+  {
+    "id": 381,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Take Me to Church' ?",
+    "choices": [
+      "Hozier",
+      "George Ezra",
+      "James Bay",
+      "Ed Sheeran"
+    ],
+    "answer": 0,
+    "explanation": "'Take Me to Church' est le morceau qui a révélé Hozier au grand public."
+  },
+  {
+    "id": 382,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Boulevard of Broken Dreams' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "Sum 41",
+      "The Offspring"
+    ],
+    "answer": 0,
+    "explanation": "'Boulevard of Broken Dreams' est l'un des plus grands succès de Green Day."
+  },
+  {
+    "id": 383,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Elastic Heart' ?",
+    "choices": [
+      "Sia",
+      "Lorde",
+      "P!nk",
+      "Demi Lovato"
+    ],
+    "answer": 0,
+    "explanation": "'Elastic Heart' est un titre majeur de Sia."
+  },
+  {
+    "id": 384,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Take Care' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Kendrick Lamar",
+      "J. Cole"
+    ],
+    "answer": 0,
+    "explanation": "'Take Care' est l'un des albums les plus célèbres de Drake."
+  },
+  {
+    "id": 385,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'The Pretender' ?",
+    "choices": [
+      "Foo Fighters",
+      "Muse",
+      "Green Day",
+      "Linkin Park"
+    ],
+    "answer": 0,
+    "explanation": "'The Pretender' est l'un des plus grands succès des Foo Fighters."
+  },
+{
+  "id": 386,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quel rappeur français interprète la chanson 'Médusa' ?",
+  "choices": [
+    "Gazo",
+    "SCH",
+    "Ninho",
+    "PLK"
+  ],
+  "answer": 0,
+  "explanation": "'Médusa' est l'un des titres les plus populaires de Gazo."
+},
+  {
+    "id": 387,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Basket Case' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "The Offspring",
+      "Sum 41"
+    ],
+    "answer": 0,
+    "explanation": "'Basket Case' est le morceau qui a lancé Green Day à l'international."
+  },
+  {
+    "id": 388,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Drivers License' ?",
+    "choices": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Sabrina Carpenter",
+      "Tate McRae"
+    ],
+    "answer": 0,
+    "explanation": "'Drivers License' est le premier immense succès d'Olivia Rodrigo."
+  },
+  {
+    "id": 389,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'God's Plan' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Lil Baby",
+      "Travis Scott"
+    ],
+    "answer": 0,
+    "explanation": "'God's Plan' est l'un des plus grands succès de Drake."
+  },
+  {
+    "id": 390,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'The Emptiness Machine' ?",
+    "choices": [
+      "Linkin Park",
+      "Bring Me the Horizon",
+      "Three Days Grace",
+      "Breaking Benjamin"
+    ],
+    "answer": 0,
+    "explanation": "'The Emptiness Machine' marque le retour de Linkin Park avec une nouvelle chanteuse en 2024."
+  },
+  {
+    "id": 391,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Blinding Lights' ?",
+    "choices": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'Blinding Lights' est le plus grand succès mondial de The Weeknd."
+  },
+  {
+    "id": 392,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Radioactive' ?",
+    "choices": [
+      "Imagine Dragons",
+      "OneRepublic",
+      "Coldplay",
+      "The Killers"
+    ],
+    "answer": 0,
+    "explanation": "'Radioactive' est le morceau qui a révélé Imagine Dragons."
+  },
+  {
+    "id": 393,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Levitating' ?",
+    "choices": [
+      "Dua Lipa",
+      "Ava Max",
+      "Doja Cat",
+      "Bebe Rexha"
+    ],
+    "answer": 0,
+    "explanation": "'Levitating' est l'un des plus grands succès de Dua Lipa."
+  },
+  {
+    "id": 394,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Nothing Was the Same' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "J. Cole",
+      "Kendrick Lamar"
+    ],
+    "answer": 0,
+    "explanation": "'Nothing Was the Same' est le troisième album studio de Drake."
+  },
+  {
+    "id": 395,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Demons' ?",
+    "choices": [
+      "Imagine Dragons",
+      "OneRepublic",
+      "Bastille",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Demons' est l'un des morceaux emblématiques d'Imagine Dragons."
+  },
+  {
+    "id": 396,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Maman ne le sait pas' ?",
+    "choices": [
+      "Ninho",
+      "SCH",
+      "PLK",
+      "Vald"
+    ],
+    "answer": 0,
+    "explanation": "'Maman ne le sait pas' est l'un des morceaux les plus populaires de Ninho."
+  },
+  {
+    "id": 397,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Somebody Told Me' ?",
+    "choices": [
+      "The Killers",
+      "Muse",
+      "Arctic Monkeys",
+      "Franz Ferdinand"
+    ],
+    "answer": 0,
+    "explanation": "'Somebody Told Me' est l'un des premiers grands succès de The Killers."
+  },
+  {
+    "id": 398,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Good 4 U' ?",
+    "choices": [
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Tate McRae",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Good 4 U' est l'un des plus grands succès d'Olivia Rodrigo."
+  },
+  {
+    "id": 399,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Starboy' ?",
+    "choices": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "'Starboy', en collaboration avec Daft Punk, est l'un des plus grands succès de The Weeknd."
+  },
+  {
+    "id": 400,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Believer' ?",
+    "choices": [
+      "Imagine Dragons",
+      "OneRepublic",
+      "Coldplay",
+      "Bastille"
+    ],
+    "answer": 0,
+    "explanation": "'Believer' est l'un des morceaux les plus populaires d'Imagine Dragons."
+  },
+  {
+    "id": 401,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Shape of You' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Shawn Mendes",
+      "Justin Bieber",
+      "Charlie Puth"
+    ],
+    "answer": 0,
+    "explanation": "'Shape of You' est le plus grand succès commercial d'Ed Sheeran."
+  },
+  {
+    "id": 402,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Paradise' ?",
+    "choices": [
+      "Coldplay",
+      "Imagine Dragons",
+      "Keane",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'Paradise' est l'un des plus grands succès de Coldplay."
+  },
+  {
+    "id": 403,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Dance Monkey' ?",
+    "choices": [
+      "Tones and I",
+      "Dua Lipa",
+      "Sia",
+      "Zara Larsson"
+    ],
+    "answer": 0,
+    "explanation": "'Dance Monkey' est devenu un phénomène mondial en 2019."
+  },
+  {
+    "id": 404,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Scorpion' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Kanye West",
+      "J. Cole"
+    ],
+    "answer": 0,
+    "explanation": "'Scorpion' est un double album de Drake sorti en 2018."
+  },
+  {
+    "id": 405,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Yellow' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Travis",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'Yellow' est le morceau qui a lancé la carrière internationale de Coldplay."
+  },
+  {
+    "id": 406,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'La Kiffance' ?",
+    "choices": [
+      "Naps",
+      "Jul",
+      "Ninho",
+      "SCH"
+    ],
+    "answer": 0,
+    "explanation": "'La Kiffance' est le plus grand succès de Naps."
+  },
+  {
+    "id": 407,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Pompeii' ?",
+    "choices": [
+      "Bastille",
+      "Imagine Dragons",
+      "OneRepublic",
+      "The Script"
+    ],
+    "answer": 0,
+    "explanation": "'Pompeii' est le morceau emblématique du groupe Bastille."
+  },
+  {
+    "id": 408,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'New Rules' ?",
+    "choices": [
+      "Dua Lipa",
+      "Ava Max",
+      "Rita Ora",
+      "Anne-Marie"
+    ],
+    "answer": 0,
+    "explanation": "'New Rules' est le morceau qui a propulsé Dua Lipa au rang de star mondiale."
+  },
+  {
+    "id": 409,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Rockstar' avec 21 Savage ?",
+    "choices": [
+      "Post Malone",
+      "Drake",
+      "Future",
+      "Travis Scott"
+    ],
+    "answer": 0,
+    "explanation": "'Rockstar' est l'un des plus grands succès de Post Malone."
+  },
+  {
+    "id": 410,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Uprising' ?",
+    "choices": [
+      "Muse",
+      "Coldplay",
+      "Radiohead",
+      "Placebo"
+    ],
+    "answer": 0,
+    "explanation": "'Uprising' est l'un des morceaux les plus célèbres de Muse."
+  },
+  {
+    "id": 411,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Counting Stars' ?",
+    "choices": [
+      "OneRepublic",
+      "Imagine Dragons",
+      "Maroon 5",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Counting Stars' est le plus grand succès international de OneRepublic."
+  },
+  {
+    "id": 412,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Viva la Vida' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Muse",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'Viva la Vida' est l'un des morceaux les plus récompensés de Coldplay."
+  },
+  {
+    "id": 413,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Titanium' avec David Guetta ?",
+    "choices": [
+      "Sia",
+      "Dua Lipa",
+      "Ellie Goulding",
+      "Adele"
+    ],
+    "answer": 0,
+    "explanation": "'Titanium' est l'une des collaborations les plus célèbres entre David Guetta et Sia."
+  },
+  {
+    "id": 414,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Views' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Kendrick Lamar",
+      "J. Cole"
+    ],
+    "answer": 0,
+    "explanation": "'Views' est l'album contenant le tube 'One Dance'."
+  },
+  {
+    "id": 415,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Time Is Running Out' ?",
+    "choices": [
+      "Muse",
+      "Radiohead",
+      "Coldplay",
+      "Placebo"
+    ],
+    "answer": 0,
+    "explanation": "'Time Is Running Out' est l'un des plus grands succès de Muse."
+  },
+  {
+    "id": 416,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Bénef' ?",
+    "choices": [
+      "Ninho",
+      "Gazo",
+      "SCH",
+      "PLK"
+    ],
+    "answer": 0,
+    "explanation": "'Bénef' est l'un des titres marquants de Ninho."
+  },
+  {
+    "id": 417,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Some Nights' ?",
+    "choices": [
+      "Fun.",
+      "OneRepublic",
+      "The Script",
+      "Imagine Dragons"
+    ],
+    "answer": 0,
+    "explanation": "'Some Nights' est l'un des plus grands succès du groupe Fun."
+  },
+  {
+    "id": 418,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Cheap Thrills' ?",
+    "choices": [
+      "Sia",
+      "Dua Lipa",
+      "Rihanna",
+      "Anne-Marie"
+    ],
+    "answer": 0,
+    "explanation": "'Cheap Thrills' est l'un des plus grands succès de Sia."
+  },
+  {
+    "id": 419,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'One Dance' ?",
+    "choices": [
+      "Drake",
+      "The Weeknd",
+      "Post Malone",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'One Dance' est resté plusieurs semaines numéro un dans de nombreux pays."
+  },
+  {
+    "id": 420,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Knights of Cydonia' ?",
+    "choices": [
+      "Muse",
+      "Radiohead",
+      "Placebo",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Knights of Cydonia' est l'un des morceaux les plus emblématiques de Muse."
+  },
+  {
+    "id": 421,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Stay' avec Justin Bieber ?",
+    "choices": [
+      "The Kid LAROI",
+      "Post Malone",
+      "The Weeknd",
+      "Shawn Mendes"
+    ],
+    "answer": 0,
+    "explanation": "'Stay' est le plus grand succès de The Kid LAROI en collaboration avec Justin Bieber."
+  },
+  {
+    "id": 422,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Clocks' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Snow Patrol",
+      "OneRepublic"
+    ],
+    "answer": 0,
+    "explanation": "'Clocks' est l'un des morceaux les plus emblématiques de Coldplay."
+  },
+  {
+    "id": 423,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Flowers' ?",
+    "choices": [
+      "Miley Cyrus",
+      "Dua Lipa",
+      "Taylor Swift",
+      "Olivia Rodrigo"
+    ],
+    "answer": 0,
+    "explanation": "'Flowers' est devenu l'un des plus grands succès de Miley Cyrus."
+  },
+  {
+    "id": 424,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Her Loss' (avec 21 Savage) ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Lil Baby",
+      "Travis Scott"
+    ],
+    "answer": 0,
+    "explanation": "'Her Loss' est un album collaboratif de Drake et 21 Savage."
+  },
+  {
+    "id": 425,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'The Scientist' ?",
+    "choices": [
+      "Coldplay",
+      "Keane",
+      "Muse",
+      "Snow Patrol"
+    ],
+    "answer": 0,
+    "explanation": "'The Scientist' est l'une des plus célèbres ballades de Coldplay."
+  },
+  {
+    "id": 426,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Drôle de mentalité' ?",
+    "choices": [
+      "Ninho",
+      "PLK",
+      "SCH",
+      "Gazo"
+    ],
+    "answer": 0,
+    "explanation": "'Drôle de mentalité' est un morceau populaire de Ninho."
+  },
+  {
+    "id": 427,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'I Bet You Look Good on the Dancefloor' ?",
+    "choices": [
+      "Arctic Monkeys",
+      "The Strokes",
+      "Franz Ferdinand",
+      "The Killers"
+    ],
+    "answer": 0,
+    "explanation": "Ce titre a lancé la carrière des Arctic Monkeys."
+  },
+  {
+    "id": 428,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Anti-Hero' ?",
+    "choices": [
+      "Taylor Swift",
+      "Olivia Rodrigo",
+      "Billie Eilish",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Anti-Hero' est le plus grand succès de l'album 'Midnights'."
+  },
+  {
+    "id": 429,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Sunflower' avec Swae Lee ?",
+    "choices": [
+      "Post Malone",
+      "Drake",
+      "Travis Scott",
+      "The Weeknd"
+    ],
+    "answer": 0,
+    "explanation": "'Sunflower' fait partie de la bande originale de Spider-Man: Into the Spider-Verse."
+  },
+  {
+    "id": 430,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Hysteria' ?",
+    "choices": [
+      "Muse",
+      "Radiohead",
+      "Coldplay",
+      "Placebo"
+    ],
+    "answer": 0,
+    "explanation": "'Hysteria' est célèbre pour sa ligne de basse iconique."
+  },
+  {
+    "id": 431,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'As It Was' ?",
+    "choices": [
+      "Harry Styles",
+      "Ed Sheeran",
+      "Shawn Mendes",
+      "Lewis Capaldi"
+    ],
+    "answer": 0,
+    "explanation": "'As It Was' est le plus grand succès solo de Harry Styles."
+  },
+  {
+    "id": 432,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Nightswimming' ?",
+    "choices": [
+      "R.E.M.",
+      "Coldplay",
+      "Radiohead",
+      "The Cranberries"
+    ],
+    "answer": 0,
+    "explanation": "'Nightswimming' est l'une des ballades les plus célèbres de R.E.M."
+  },
+  {
+    "id": 433,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Bad Guy' ?",
+    "choices": [
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Dua Lipa",
+      "Lorde"
+    ],
+    "answer": 0,
+    "explanation": "'Bad Guy' est le titre qui a propulsé Billie Eilish au rang de superstar."
+  },
+  {
+    "id": 434,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Certified Lover Boy' ?",
+    "choices": [
+      "Drake",
+      "Future",
+      "Lil Baby",
+      "J. Cole"
+    ],
+    "answer": 0,
+    "explanation": "'Certified Lover Boy' est sorti en 2021 et a battu plusieurs records de streaming."
+  },
+  {
+    "id": 435,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Losing My Religion' ?",
+    "choices": [
+      "R.E.M.",
+      "U2",
+      "Coldplay",
+      "Oasis"
+    ],
+    "answer": 0,
+    "explanation": "'Losing My Religion' est le plus grand succès commercial de R.E.M."
+  },
+  {
+    "id": 436,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Mwaka Moon' ?",
+    "choices": [
+      "Kalash",
+      "Gims",
+      "Ninho",
+      "Dadju"
+    ],
+    "answer": 0,
+    "explanation": "'Mwaka Moon' est un immense succès de Kalash en featuring avec Damso."
+  },
+  {
+    "id": 437,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Zombie' ?",
+    "choices": [
+      "The Cranberries",
+      "Paramore",
+      "Garbage",
+      "No Doubt"
+    ],
+    "answer": 0,
+    "explanation": "'Zombie' est le morceau emblématique des Cranberries."
+  },
+  {
+    "id": 438,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Espresso' ?",
+    "choices": [
+      "Sabrina Carpenter",
+      "Olivia Rodrigo",
+      "Tate McRae",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Espresso' est devenu l'un des plus grands succès pop de 2024."
+  },
+  {
+    "id": 439,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Congratulations' avec Quavo ?",
+    "choices": [
+      "Post Malone",
+      "Travis Scott",
+      "Drake",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'Congratulations' est l'un des premiers grands succès de Post Malone."
+  },
+  {
+    "id": 440,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Paranoid Android' ?",
+    "choices": [
+      "Radiohead",
+      "Muse",
+      "Coldplay",
+      "Blur"
+    ],
+    "answer": 0,
+    "explanation": "'Paranoid Android' est l'un des morceaux les plus emblématiques de Radiohead."
+  },
+  {
+    "id": 441,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Someone You Loved' ?",
+    "choices": [
+      "Lewis Capaldi",
+      "James Arthur",
+      "Tom Walker",
+      "Ed Sheeran"
+    ],
+    "answer": 0,
+    "explanation": "'Someone You Loved' est le plus grand succès de Lewis Capaldi."
+  },
+  {
+    "id": 442,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Feel Good Inc.' ?",
+    "choices": [
+      "Gorillaz",
+      "Blur",
+      "Coldplay",
+      "Muse"
+    ],
+    "answer": 0,
+    "explanation": "'Feel Good Inc.' est le morceau emblématique de Gorillaz."
+  },
+ {
+  "id": 443,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quelle chanteuse interprète la chanson 'Chandelier' ?",
+  "choices": [
+    "Sia",
+    "Adele",
+    "Dua Lipa",
+    "Lorde"
+  ],
+  "answer": 0,
+  "explanation": "'Chandelier' est l'un des plus grands succès internationaux de Sia, sorti en 2014."
+},
+  {
+    "id": 444,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Utopia' ?",
+    "choices": [
+      "Travis Scott",
+      "Drake",
+      "Future",
+      "Lil Baby"
+    ],
+    "answer": 0,
+    "explanation": "'Utopia' est le quatrième album studio de Travis Scott."
+  },
+  {
+    "id": 445,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Take Me Out' ?",
+    "choices": [
+      "Franz Ferdinand",
+      "Arctic Monkeys",
+      "The Killers",
+      "Muse"
+    ],
+    "answer": 0,
+    "explanation": "'Take Me Out' est le plus grand succès de Franz Ferdinand."
+  },
+  {
+    "id": 446,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Django' ?",
+    "choices": [
+      "Dadju",
+      "Ninho",
+      "Gazo",
+      "SCH"
+    ],
+    "answer": 0,
+    "explanation": "'Django' est l'un des morceaux les plus populaires de Dadju."
+  },
+  {
+    "id": 447,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Seven Nation Army' ?",
+    "choices": [
+      "The White Stripes",
+      "The Strokes",
+      "Kings of Leon",
+      "Arctic Monkeys"
+    ],
+    "answer": 0,
+    "explanation": "'Seven Nation Army' est célèbre pour son riff de guitare devenu un hymne sportif."
+  },
+  {
+    "id": 448,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Happier Than Ever' ?",
+    "choices": [
+      "Billie Eilish",
+      "Olivia Rodrigo",
+      "Lorde",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Happier Than Ever' est le titre phare du deuxième album de Billie Eilish."
+  },
+  {
+    "id": 449,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Circles' ?",
+    "choices": [
+      "Post Malone",
+      "The Weeknd",
+      "Drake",
+      "Justin Bieber"
+    ],
+    "answer": 0,
+    "explanation": "'Circles' est l'un des plus grands succès de Post Malone."
+  },
+  {
+    "id": 450,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Holiday' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "Sum 41",
+      "The Offspring"
+    ],
+    "answer": 0,
+    "explanation": "'Holiday' est l'un des titres emblématiques de l'album 'American Idiot' de Green Day."
+  },
+  {
+    "id": 451,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Perfect' ?",
+    "choices": [
+      "Ed Sheeran",
+      "Lewis Capaldi",
+      "James Arthur",
+      "Shawn Mendes"
+    ],
+    "answer": 0,
+    "explanation": "'Perfect' est l'une des chansons les plus populaires d'Ed Sheeran."
+  },
+  {
+    "id": 452,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Use Somebody' ?",
+    "choices": [
+      "Kings of Leon",
+      "The Killers",
+      "Coldplay",
+      "Keane"
+    ],
+    "answer": 0,
+    "explanation": "'Use Somebody' est le plus grand succès de Kings of Leon."
+  },
+  {
+    "id": 453,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Love Story' ?",
+    "choices": [
+      "Taylor Swift",
+      "Olivia Rodrigo",
+      "Dua Lipa",
+      "Katy Perry"
+    ],
+    "answer": 0,
+    "explanation": "'Love Story' est l'un des premiers grands succès de Taylor Swift."
+  },
+  {
+    "id": 454,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Good Kid, M.A.A.D City' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Future"
+    ],
+    "answer": 0,
+    "explanation": "'Good Kid, M.A.A.D City' est un album emblématique de Kendrick Lamar."
+  },
+  {
+    "id": 455,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Sex on Fire' ?",
+    "choices": [
+      "Kings of Leon",
+      "Arctic Monkeys",
+      "The Killers",
+      "Muse"
+    ],
+    "answer": 0,
+    "explanation": "'Sex on Fire' est l'un des plus grands succès de Kings of Leon."
+  },
+  {
+    "id": 456,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Jolie nana' ?",
+    "choices": [
+      "Ninho",
+      "Niska",
+      "SCH",
+      "PLK"
+    ],
+    "answer": 1,
+    "explanation": "'Jolie nana' est un énorme succès de Niska."
+  },
+  {
+    "id": 457,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Best of You' ?",
+    "choices": [
+      "Foo Fighters",
+      "Green Day",
+      "Muse",
+      "Coldplay"
+    ],
+    "answer": 0,
+    "explanation": "'Best of You' est l'un des morceaux les plus célèbres des Foo Fighters."
+  },
+  {
+    "id": 458,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Blank Space' ?",
+    "choices": [
+      "Taylor Swift",
+      "Selena Gomez",
+      "Olivia Rodrigo",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Blank Space' est l'un des plus grands succès de Taylor Swift."
+  },
+  {
+    "id": 459,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Die For You' ?",
+    "choices": [
+      "The Weeknd",
+      "Drake",
+      "Post Malone",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "'Die For You' est l'un des titres les plus populaires de The Weeknd."
+  },
+  {
+    "id": 460,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'American Idiot' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "The Offspring",
+      "Sum 41"
+    ],
+    "answer": 0,
+    "explanation": "'American Idiot' est le morceau phare de l'album du même nom de Green Day."
+  },
+  {
+    "id": 461,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Save Your Tears' ?",
+    "choices": [
+      "The Weeknd",
+      "Post Malone",
+      "Drake",
+      "Bruno Mars"
+    ],
+    "answer": 0,
+    "explanation": "'Save Your Tears' est l'un des plus grands succès de The Weeknd."
+  },
+  {
+    "id": 462,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Somewhere I Belong' ?",
+    "choices": [
+      "Linkin Park",
+      "Three Days Grace",
+      "Breaking Benjamin",
+      "Papa Roach"
+    ],
+    "answer": 0,
+    "explanation": "'Somewhere I Belong' est le premier single de l'album Meteora."
+  },
+  {
+    "id": 463,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Into the Unknown' (La Reine des Neiges 2) ?",
+    "choices": [
+      "Idina Menzel",
+      "Demi Lovato",
+      "Kristen Bell",
+      "Ariana Grande"
+    ],
+    "answer": 0,
+    "explanation": "Idina Menzel prête sa voix à Elsa dans la version originale."
+  },
+  {
+    "id": 464,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'To Pimp a Butterfly' ?",
+    "choices": [
+      "Kendrick Lamar",
+      "J. Cole",
+      "Drake",
+      "Nas"
+    ],
+    "answer": 0,
+    "explanation": "'To Pimp a Butterfly' est considéré comme l'un des meilleurs albums de rap de tous les temps."
+  },
+  {
+    "id": 465,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Bleed It Out' ?",
+    "choices": [
+      "Linkin Park",
+      "Papa Roach",
+      "Green Day",
+      "Sum 41"
+    ],
+    "answer": 0,
+    "explanation": "'Bleed It Out' est l'un des singles de l'album Minutes to Midnight."
+  },
+  {
+    "id": 466,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Bâtiment' ?",
+    "choices": [
+      "Niska",
+      "Gazo",
+      "Ninho",
+      "SCH"
+    ],
+    "answer": 0,
+    "explanation": "'Bâtiment' est l'un des morceaux emblématiques de Niska."
+  },
+  {
+    "id": 467,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'The Reason' ?",
+    "choices": [
+      "Hoobastank",
+      "Nickelback",
+      "Creed",
+      "Lifehouse"
+    ],
+    "answer": 0,
+    "explanation": "'The Reason' est le plus grand succès de Hoobastank."
+  },
+  {
+    "id": 468,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Break My Heart' ?",
+    "choices": [
+      "Dua Lipa",
+      "Ava Max",
+      "Rita Ora",
+      "Jessie J"
+    ],
+    "answer": 0,
+    "explanation": "'Break My Heart' est un single de l'album Future Nostalgia."
+  },
+  {
+    "id": 469,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Industry Baby' avec Jack Harlow ?",
+    "choices": [
+      "Lil Nas X",
+      "Post Malone",
+      "Travis Scott",
+      "Drake"
+    ],
+    "answer": 0,
+    "explanation": "'Industry Baby' est l'un des plus grands succès de Lil Nas X."
+  },
+  {
+    "id": 470,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Breaking the Habit' ?",
+    "choices": [
+      "Linkin Park",
+      "Evanescence",
+      "Three Days Grace",
+      "Papa Roach"
+    ],
+    "answer": 0,
+    "explanation": "'Breaking the Habit' est l'un des morceaux les plus emblématiques de Linkin Park."
+  },
+  {
+    "id": 471,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Can’t Hold Us' ?",
+    "choices": [
+      "Macklemore & Ryan Lewis",
+      "Imagine Dragons",
+      "Flo Rida",
+      "Pitbull"
+    ],
+    "answer": 0,
+    "explanation": "'Can't Hold Us', avec Ray Dalton, est l'un des plus grands succès de Macklemore & Ryan Lewis."
+  },
+ {
+  "id": 472,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quel groupe interprète la chanson 'Holiday' de l'album 'American Idiot' ?",
+  "choices": [
+    "Green Day",
+    "Blink-182",
+    "The Offspring",
+    "Sum 41"
+  ],
+  "answer": 0,
+  "explanation": "'Holiday' est un titre de l'album 'American Idiot', sorti en 2004 par Green Day."
+},
+  {
+    "id": 473,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Set Fire to the Rain' ?",
+    "choices": [
+      "Adele",
+      "Sia",
+      "Dua Lipa",
+      "Kelly Clarkson"
+    ],
+    "answer": 0,
+    "explanation": "'Set Fire to the Rain' est l'un des plus grands succès de l'album 21 d'Adele."
+  },
+{
+  "id": 474,
+  "category": "Musique",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quel rappeur est l'auteur de l'album '2014 Forest Hills Drive' ?",
+  "choices": [
+    "J. Cole",
+    "Kendrick Lamar",
+    "Drake",
+    "Future"
+  ],
+  "answer": 0,
+  "explanation": "'2014 Forest Hills Drive' est le troisième album studio de J. Cole, sorti en 2014 et considéré comme l'un de ses meilleurs projets."
+},
+  {
+    "id": 475,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'The Pretender' ?",
+    "choices": [
+      "Foo Fighters",
+      "Muse",
+      "Green Day",
+      "Linkin Park"
+    ],
+    "answer": 0,
+    "explanation": "'The Pretender' est l'un des morceaux les plus connus des Foo Fighters."
+  },
+  {
+    "id": 476,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Jefe' ?",
+    "choices": [
+      "Ninho",
+      "SCH",
+      "Gazo",
+      "Niska"
+    ],
+    "answer": 0,
+    "explanation": "'Jefe' est le titre phare de l'album du même nom de Ninho."
+  },
+  {
+    "id": 477,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Animal I Have Become' ?",
+    "choices": [
+      "Three Days Grace",
+      "Breaking Benjamin",
+      "Skillet",
+      "Papa Roach"
+    ],
+    "answer": 0,
+    "explanation": "'Animal I Have Become' est l'un des plus grands succès de Three Days Grace."
+  },
+  {
+    "id": 478,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Please Please Please' ?",
+    "choices": [
+      "Sabrina Carpenter",
+      "Olivia Rodrigo",
+      "Taylor Swift",
+      "Dua Lipa"
+    ],
+    "answer": 0,
+    "explanation": "'Please Please Please' est l'un des plus grands succès de Sabrina Carpenter en 2024."
+  },
+  {
+    "id": 479,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Lucid Dreams' ?",
+    "choices": [
+      "Juice WRLD",
+      "Lil Uzi Vert",
+      "XXXTentacion",
+      "Trippie Redd"
+    ],
+    "answer": 0,
+    "explanation": "'Lucid Dreams' est le morceau qui a révélé Juice WRLD."
+  },
+  {
+    "id": 480,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'New Divide' ?",
+    "choices": [
+      "Linkin Park",
+      "Green Day",
+      "Muse",
+      "Three Days Grace"
+    ],
+    "answer": 0,
+    "explanation": "'New Divide' a été composée pour le film Transformers: Revenge of the Fallen."
+  },
+  {
+    "id": 481,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Take On Me' ?",
+    "choices": [
+      "a-ha",
+      "Duran Duran",
+      "Tears for Fears",
+      "Depeche Mode"
+    ],
+    "answer": 0,
+    "explanation": "'Take On Me' est le plus grand succès du groupe norvégien a-ha."
+  },
+  {
+    "id": 482,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Smells Like Teen Spirit' ?",
+    "choices": [
+      "Nirvana",
+      "Pearl Jam",
+      "Soundgarden",
+      "Alice in Chains"
+    ],
+    "answer": 0,
+    "explanation": "'Smells Like Teen Spirit' est l'hymne du mouvement grunge."
+  },
+  {
+    "id": 483,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Because of You' ?",
+    "choices": [
+      "Kelly Clarkson",
+      "P!nk",
+      "Adele",
+      "Leona Lewis"
+    ],
+    "answer": 0,
+    "explanation": "'Because of You' est l'un des plus grands succès de Kelly Clarkson."
+  },
+  {
+    "id": 484,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'The Marshall Mathers LP' ?",
+    "choices": [
+      "Eminem",
+      "50 Cent",
+      "Dr. Dre",
+      "Nas"
+    ],
+    "answer": 0,
+    "explanation": "'The Marshall Mathers LP' est l'un des albums de rap les plus vendus de tous les temps."
+  },
+  {
+    "id": 485,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Boulevard of Broken Dreams' ?",
+    "choices": [
+      "Green Day",
+      "Blink-182",
+      "Sum 41",
+      "Good Charlotte"
+    ],
+    "answer": 0,
+    "explanation": "'Boulevard of Broken Dreams' est l'un des plus grands succès de Green Day."
+  },
+  {
+    "id": 486,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Pyramide' ?",
+    "choices": [
+      "Werenoi",
+      "Ninho",
+      "SCH",
+      "Gazo"
+    ],
+    "answer": 0,
+    "explanation": "'Pyramide' est l'un des morceaux les plus populaires de Werenoi."
+  },
+  {
+    "id": 487,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Sugar, We're Goin Down' ?",
+    "choices": [
+      "Fall Out Boy",
+      "Panic! At The Disco",
+      "My Chemical Romance",
+      "Paramore"
+    ],
+    "answer": 0,
+    "explanation": "'Sugar, We're Goin Down' est le morceau qui a révélé Fall Out Boy."
+  },
+  {
+    "id": 488,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Wrecking Ball' ?",
+    "choices": [
+      "Miley Cyrus",
+      "Katy Perry",
+      "Taylor Swift",
+      "Demi Lovato"
+    ],
+    "answer": 0,
+    "explanation": "'Wrecking Ball' est l'un des plus grands succès de Miley Cyrus."
+  },
+  {
+    "id": 489,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'Rockstar' avec 21 Savage ?",
+    "choices": [
+      "Post Malone",
+      "Future",
+      "Drake",
+      "Lil Baby"
+    ],
+    "answer": 0,
+    "explanation": "'Rockstar' est l'un des morceaux les plus populaires de Post Malone."
+  },
+  {
+    "id": 490,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'My Hero' ?",
+    "choices": [
+      "Foo Fighters",
+      "Nirvana",
+      "Pearl Jam",
+      "Soundgarden"
+    ],
+    "answer": 0,
+    "explanation": "'My Hero' est l'un des classiques des Foo Fighters."
+  },
+  {
+    "id": 491,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste interprète la chanson 'Happy' ?",
+    "choices": [
+      "Pharrell Williams",
+      "Bruno Mars",
+      "Jason Mraz",
+      "John Legend"
+    ],
+    "answer": 0,
+    "explanation": "'Happy' est devenu un immense succès mondial en 2013."
+  },
+  {
+    "id": 492,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'I Write Sins Not Tragedies' ?",
+    "choices": [
+      "Panic! At The Disco",
+      "Fall Out Boy",
+      "Paramore",
+      "My Chemical Romance"
+    ],
+    "answer": 0,
+    "explanation": "Ce morceau a lancé la carrière de Panic! At The Disco."
+  },
+  {
+    "id": 493,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Skyscraper' ?",
+    "choices": [
+      "Demi Lovato",
+      "Selena Gomez",
+      "Miley Cyrus",
+      "Ariana Grande"
+    ],
+    "answer": 0,
+    "explanation": "'Skyscraper' est l'un des morceaux les plus connus de Demi Lovato."
+  },
+  {
+    "id": 494,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur est l'auteur de l'album 'Illmatic' ?",
+    "choices": [
+      "Nas",
+      "2Pac",
+      "The Notorious B.I.G.",
+      "Jay-Z"
+    ],
+    "answer": 0,
+    "explanation": "'Illmatic' est considéré comme l'un des meilleurs albums de rap de tous les temps."
+  },
+  {
+    "id": 495,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est célèbre pour la chanson 'Iris' ?",
+    "choices": [
+      "Goo Goo Dolls",
+      "Lifehouse",
+      "Matchbox Twenty",
+      "Train"
+    ],
+    "answer": 0,
+    "explanation": "'Iris' est le plus grand succès des Goo Goo Dolls."
+  },
+  {
+    "id": 496,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel rappeur français interprète 'Ciao' ?",
+    "choices": [
+      "Werenoi",
+      "Ninho",
+      "Gazo",
+      "SCH"
+    ],
+    "answer": 0,
+    "explanation": "'Ciao' est l'un des morceaux populaires de Werenoi."
+  },
+  {
+    "id": 497,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe est connu pour la chanson 'Misery Business' ?",
+    "choices": [
+      "Paramore",
+      "Evanescence",
+      "Flyleaf",
+      "Panic! At The Disco"
+    ],
+    "answer": 0,
+    "explanation": "'Misery Business' est le morceau emblématique de Paramore."
+  },
+  {
+    "id": 498,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle chanteuse interprète 'Fireflies' ?",
+    "choices": [
+      "Aucune, c'est Owl City",
+      "Taylor Swift",
+      "Ellie Goulding",
+      "Lorde"
+    ],
+    "answer": 0,
+    "explanation": "'Fireflies' est interprétée par Owl City, un projet masculin d'Adam Young."
+  },
+  {
+    "id": 499,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel artiste est connu pour la chanson 'See You Again' avec Charlie Puth ?",
+    "choices": [
+      "Wiz Khalifa",
+      "Post Malone",
+      "Drake",
+      "Ty Dolla $ign"
+    ],
+    "answer": 0,
+    "explanation": "'See You Again' est la chanson hommage de Fast & Furious 7."
+  },
+  {
+    "id": 500,
+    "category": "Musique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel groupe a interprété la chanson 'Welcome to the Black Parade' ?",
+    "choices": [
+      "My Chemical Romance",
+      "Fall Out Boy",
+      "Panic! At The Disco",
+      "Paramore"
+    ],
+    "answer": 0,
+    "explanation": "'Welcome to the Black Parade' est le morceau emblématique de My Chemical Romance."
+  }
+]
