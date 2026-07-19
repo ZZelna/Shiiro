@@ -1,0 +1,6777 @@
+[
+  {
+    "id": 1,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle CPU ?",
+    "choices": [
+      "Central Processing Unit",
+      "Computer Power Unit",
+      "Central Program Utility",
+      "Control Processing Utility"
+    ],
+    "answer": 0,
+    "explanation": "Le CPU (Central Processing Unit) est le processeur de l'ordinateur."
+  },
+  {
+    "id": 2,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant stocke temporairement les données utilisées par les programmes ?",
+    "choices": [
+      "La RAM",
+      "Le SSD",
+      "Le processeur",
+      "La carte graphique"
+    ],
+    "answer": 0,
+    "explanation": "La mémoire RAM conserve temporairement les données en cours d'utilisation."
+  },
+  {
+    "id": 3,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant exécute les instructions d'un programme ?",
+    "choices": [
+      "Le processeur",
+      "Le disque dur",
+      "L'écran",
+      "Le clavier"
+    ],
+    "answer": 0,
+    "explanation": "Le processeur exécute les calculs et les instructions des logiciels."
+  },
+  {
+    "id": 4,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant conserve les données même lorsque l'ordinateur est éteint ?",
+    "choices": [
+      "Le SSD",
+      "La RAM",
+      "Le cache",
+      "Le processeur"
+    ],
+    "answer": 0,
+    "explanation": "Le SSD est une mémoire de stockage permanente."
+  },
+  {
+    "id": 5,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle RAM ?",
+    "choices": [
+      "Random Access Memory",
+      "Rapid Access Module",
+      "Remote Access Memory",
+      "Random Application Module"
+    ],
+    "answer": 0,
+    "explanation": "RAM signifie Random Access Memory."
+  },
+  {
+    "id": 6,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant relie tous les composants d'un ordinateur ?",
+    "choices": [
+      "La carte mère",
+      "Le SSD",
+      "La RAM",
+      "Le ventilateur"
+    ],
+    "answer": 0,
+    "explanation": "La carte mère assure la communication entre tous les composants."
+  },
+  {
+    "id": 7,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant est principalement responsable de l'affichage 3D ?",
+    "choices": [
+      "La carte graphique",
+      "Le processeur",
+      "Le disque dur",
+      "La carte réseau"
+    ],
+    "answer": 0,
+    "explanation": "La carte graphique (GPU) est spécialisée dans les calculs graphiques."
+  },
+  {
+    "id": 8,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique permet de saisir du texte ?",
+    "choices": [
+      "Le clavier",
+      "La souris",
+      "L'écran",
+      "Le scanner"
+    ],
+    "answer": 0,
+    "explanation": "Le clavier est le périphérique principal de saisie."
+  },
+  {
+    "id": 9,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique permet de déplacer le curseur ?",
+    "choices": [
+      "La souris",
+      "Le clavier",
+      "Le micro",
+      "Le haut-parleur"
+    ],
+    "answer": 0,
+    "explanation": "La souris est utilisée pour contrôler le pointeur."
+  },
+  {
+    "id": 10,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique affiche les informations à l'utilisateur ?",
+    "choices": [
+      "L'écran",
+      "L'imprimante",
+      "Le modem",
+      "Le clavier"
+    ],
+    "answer": 0,
+    "explanation": "L'écran permet d'afficher les informations."
+  },
+  {
+    "id": 11,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle SSD ?",
+    "choices": [
+      "Solid State Drive",
+      "Secure Storage Disk",
+      "System Storage Drive",
+      "Super Speed Disk"
+    ],
+    "answer": 0,
+    "explanation": "SSD signifie Solid State Drive."
+  },
+  {
+    "id": 12,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel type de stockage est généralement le plus rapide ?",
+    "choices": [
+      "SSD",
+      "Disque dur (HDD)",
+      "DVD",
+      "CD"
+    ],
+    "answer": 0,
+    "explanation": "Les SSD sont beaucoup plus rapides que les HDD."
+  },
+  {
+    "id": 13,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie HDD ?",
+    "choices": [
+      "Hard Disk Drive",
+      "High Data Drive",
+      "Hard Device Disk",
+      "Host Disk Driver"
+    ],
+    "answer": 0,
+    "explanation": "HDD signifie Hard Disk Drive."
+  },
+  {
+    "id": 14,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant fournit l'électricité aux autres composants ?",
+    "choices": [
+      "L'alimentation",
+      "Le processeur",
+      "Le BIOS",
+      "Le SSD"
+    ],
+    "answer": 0,
+    "explanation": "L'alimentation distribue l'énergie à l'ordinateur."
+  },
+  {
+    "id": 15,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique permet d'imprimer un document ?",
+    "choices": [
+      "L'imprimante",
+      "Le scanner",
+      "Le clavier",
+      "Le micro"
+    ],
+    "answer": 0,
+    "explanation": "Une imprimante produit une copie papier."
+  },
+  {
+    "id": 16,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique permet de numériser un document ?",
+    "choices": [
+      "Le scanner",
+      "L'imprimante",
+      "Le clavier",
+      "L'écran"
+    ],
+    "answer": 0,
+    "explanation": "Le scanner transforme un document papier en fichier numérique."
+  },
+  {
+    "id": 17,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique enregistre la voix ?",
+    "choices": [
+      "Le microphone",
+      "Le haut-parleur",
+      "Le clavier",
+      "Le SSD"
+    ],
+    "answer": 0,
+    "explanation": "Le microphone capture le son."
+  },
+  {
+    "id": 18,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique diffuse le son ?",
+    "choices": [
+      "Le haut-parleur",
+      "Le microphone",
+      "Le scanner",
+      "La webcam"
+    ],
+    "answer": 0,
+    "explanation": "Le haut-parleur restitue le son."
+  },
+  {
+    "id": 19,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système d'exploitation est développé par Microsoft ?",
+    "choices": [
+      "Windows",
+      "Linux",
+      "Android",
+      "macOS"
+    ],
+    "answer": 0,
+    "explanation": "Windows est développé par Microsoft."
+  },
+  {
+    "id": 20,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système d'exploitation est développé par Apple ?",
+    "choices": [
+      "macOS",
+      "Windows",
+      "Ubuntu",
+      "Debian"
+    ],
+    "answer": 0,
+    "explanation": "macOS est le système d'exploitation des ordinateurs Apple."
+  },
+  {
+    "id": 21,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système d'exploitation est open source ?",
+    "choices": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "iOS"
+    ],
+    "answer": 0,
+    "explanation": "Linux est un système d'exploitation libre et open source."
+  },
+  {
+    "id": 22,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système d'exploitation est principalement utilisé sur les iPhone ?",
+    "choices": [
+      "iOS",
+      "Android",
+      "Windows Phone",
+      "HarmonyOS"
+    ],
+    "answer": 0,
+    "explanation": "Les iPhone utilisent iOS."
+  },
+  {
+    "id": 23,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système d'exploitation est principalement utilisé sur les smartphones Samsung ?",
+    "choices": [
+      "Android",
+      "iOS",
+      "Windows",
+      "Ubuntu"
+    ],
+    "answer": 0,
+    "explanation": "La majorité des smartphones Samsung utilisent Android."
+  },
+  {
+    "id": 24,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle GPU ?",
+    "choices": [
+      "Graphics Processing Unit",
+      "Graphic Program Utility",
+      "Global Processor Unit",
+      "Graphics Performance Utility"
+    ],
+    "answer": 0,
+    "explanation": "Le GPU est spécialisé dans les calculs graphiques."
+  },
+  {
+    "id": 25,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant est généralement refroidi par un ventilateur ?",
+    "choices": [
+      "Le processeur",
+      "Le clavier",
+      "Le SSD",
+      "Le câble Ethernet"
+    ],
+    "answer": 0,
+    "explanation": "Le processeur produit beaucoup de chaleur."
+  },
+  {
+    "id": 26,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle unité est généralement utilisée pour mesurer la mémoire vive ?",
+    "choices": [
+      "Go",
+      "Volt",
+      "Hertz",
+      "Pixel"
+    ],
+    "answer": 0,
+    "explanation": "La RAM est généralement exprimée en gigaoctets (Go)."
+  },
+  {
+    "id": 27,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle unité mesure la fréquence d'un processeur ?",
+    "choices": [
+      "Hertz",
+      "Volt",
+      "Octet",
+      "Pixel"
+    ],
+    "answer": 0,
+    "explanation": "La fréquence d'un processeur est exprimée en hertz (GHz)."
+  },
+  {
+    "id": 28,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel composant permet de connecter un ordinateur à un réseau ?",
+    "choices": [
+      "La carte réseau",
+      "La RAM",
+      "Le SSD",
+      "Le BIOS"
+    ],
+    "answer": 0,
+    "explanation": "La carte réseau gère les communications réseau."
+  },
+  {
+    "id": 29,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique est considéré comme un périphérique d'entrée ?",
+    "choices": [
+      "Le clavier",
+      "L'écran",
+      "Le vidéoprojecteur",
+      "Le haut-parleur"
+    ],
+    "answer": 0,
+    "explanation": "Le clavier permet d'envoyer des informations à l'ordinateur."
+  },
+  {
+    "id": 30,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel périphérique est considéré comme un périphérique de sortie ?",
+    "choices": [
+      "L'écran",
+      "Le clavier",
+      "La souris",
+      "Le microphone"
+    ],
+    "answer": 0,
+    "explanation": "L'écran affiche les informations produites par l'ordinateur."
+  },
+  {
+    "id": 31,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle USB ?",
+    "choices": [
+      "Universal Serial Bus",
+      "Universal System Board",
+      "United Storage Bus",
+      "Universal Speed Box"
+    ],
+    "answer": 0,
+    "explanation": "USB signifie Universal Serial Bus."
+  },
+  {
+    "id": 32,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel connecteur est principalement utilisé pour relier un écran à un ordinateur moderne ?",
+    "choices": [
+      "HDMI",
+      "RJ45",
+      "USB-A",
+      "Jack 3,5 mm"
+    ],
+    "answer": 0,
+    "explanation": "HDMI transporte l'image et le son."
+  },
+  {
+    "id": 33,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie HDMI ?",
+    "choices": [
+      "High-Definition Multimedia Interface",
+      "High Digital Media Internet",
+      "Hardware Display Monitor Interface",
+      "High Data Multimedia Interface"
+    ],
+    "answer": 0,
+    "explanation": "HDMI signifie High-Definition Multimedia Interface."
+  },
+  {
+    "id": 34,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel connecteur est principalement utilisé pour un câble Ethernet ?",
+    "choices": [
+      "RJ45",
+      "HDMI",
+      "USB-C",
+      "DisplayPort"
+    ],
+    "answer": 0,
+    "explanation": "Les câbles Ethernet utilisent des connecteurs RJ45."
+  },
+  {
+    "id": 35,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel appareil permet de partager une connexion Internet entre plusieurs appareils ?",
+    "choices": [
+      "Le routeur",
+      "Le disque dur",
+      "Le scanner",
+      "Le clavier"
+    ],
+    "answer": 0,
+    "explanation": "Le routeur distribue la connexion réseau."
+  },
+  {
+    "id": 36,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel appareil relie un réseau local à Internet ?",
+    "choices": [
+      "Le modem",
+      "Le SSD",
+      "Le GPU",
+      "Le BIOS"
+    ],
+    "answer": 0,
+    "explanation": "Le modem assure la liaison avec le fournisseur d'accès Internet."
+  },
+  {
+    "id": 37,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle technologie permet de connecter des appareils sans câble sur une courte distance ?",
+    "choices": [
+      "Bluetooth",
+      "Ethernet",
+      "HDMI",
+      "VGA"
+    ],
+    "answer": 0,
+    "explanation": "Bluetooth est conçu pour les communications à courte portée."
+  },
+  {
+    "id": 38,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel réseau permet de se connecter à Internet sans câble dans une maison ?",
+    "choices": [
+      "Wi-Fi",
+      "Bluetooth",
+      "NFC",
+      "USB"
+    ],
+    "answer": 0,
+    "explanation": "Le Wi-Fi permet un accès sans fil au réseau local et à Internet."
+  },
+  {
+    "id": 39,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle IP ?",
+    "choices": [
+      "Internet Protocol",
+      "Internal Program",
+      "Internet Program",
+      "Integrated Port"
+    ],
+    "answer": 0,
+    "explanation": "IP signifie Internet Protocol."
+  },
+  {
+    "id": 40,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "À quoi sert principalement une adresse IP ?",
+    "choices": [
+      "Identifier un appareil sur un réseau",
+      "Stocker des fichiers",
+      "Créer un mot de passe",
+      "Refroidir le processeur"
+    ],
+    "answer": 0,
+    "explanation": "Une adresse IP identifie chaque appareil connecté à un réseau."
+  },
+  {
+    "id": 41,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le sigle DNS ?",
+    "choices": [
+      "Domain Name System",
+      "Data Network Server",
+      "Digital Name Service",
+      "Domain Network Security"
+    ],
+    "answer": 0,
+    "explanation": "Le DNS traduit les noms de domaine en adresses IP."
+  },
+  {
+    "id": 42,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le rôle du DNS ?",
+    "choices": [
+      "Associer un nom de domaine à une adresse IP",
+      "Créer des sites web",
+      "Crypter les données",
+      "Accélérer le processeur"
+    ],
+    "answer": 0,
+    "explanation": "Le DNS permet de retrouver l'adresse IP d'un site."
+  },
+  {
+    "id": 43,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie HTTP ?",
+    "choices": [
+      "HyperText Transfer Protocol",
+      "High Transfer Text Protocol",
+      "Hyper Transfer Text Program",
+      "Host Transfer Protocol"
+    ],
+    "answer": 0,
+    "explanation": "HTTP est le protocole utilisé pour transférer des pages web."
+  },
+  {
+    "id": 44,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle version sécurisée de HTTP est utilisée aujourd'hui ?",
+    "choices": [
+      "HTTPS",
+      "SHTTP",
+      "FTP",
+      "SSH"
+    ],
+    "answer": 0,
+    "explanation": "HTTPS chiffre les échanges grâce à TLS."
+  },
+  {
+    "id": 45,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le port par défaut de HTTPS ?",
+    "choices": [
+      "443",
+      "80",
+      "21",
+      "22"
+    ],
+    "answer": 0,
+    "explanation": "Le protocole HTTPS utilise généralement le port 443."
+  },
+  {
+    "id": 46,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le port par défaut de HTTP ?",
+    "choices": [
+      "80",
+      "443",
+      "25",
+      "110"
+    ],
+    "answer": 0,
+    "explanation": "HTTP utilise traditionnellement le port 80."
+  },
+  {
+    "id": 47,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel navigateur est développé par Google ?",
+    "choices": [
+      "Google Chrome",
+      "Firefox",
+      "Safari",
+      "Opera"
+    ],
+    "answer": 0,
+    "explanation": "Google développe Chrome."
+  },
+  {
+    "id": 48,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel navigateur est développé par Mozilla ?",
+    "choices": [
+      "Firefox",
+      "Edge",
+      "Safari",
+      "Chrome"
+    ],
+    "answer": 0,
+    "explanation": "Firefox est développé par Mozilla."
+  },
+  {
+    "id": 49,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel navigateur est développé par Apple ?",
+    "choices": [
+      "Safari",
+      "Edge",
+      "Chrome",
+      "Opera"
+    ],
+    "answer": 0,
+    "explanation": "Safari est le navigateur d'Apple."
+  },
+  {
+    "id": 50,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel navigateur est développé par Microsoft ?",
+    "choices": [
+      "Microsoft Edge",
+      "Firefox",
+      "Opera",
+      "Safari"
+    ],
+    "answer": 0,
+    "explanation": "Microsoft Edge remplace Internet Explorer."
+  },
+  {
+    "id": 51,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel moteur de recherche est le plus utilisé au monde ?",
+    "choices": [
+      "Google",
+      "Bing",
+      "Yahoo!",
+      "DuckDuckGo"
+    ],
+    "answer": 0,
+    "explanation": "Google domine largement le marché des moteurs de recherche."
+  },
+  {
+    "id": 52,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel moteur de recherche est développé par Microsoft ?",
+    "choices": [
+      "Bing",
+      "Yahoo!",
+      "Qwant",
+      "Google"
+    ],
+    "answer": 0,
+    "explanation": "Bing est développé par Microsoft."
+  },
+  {
+    "id": 53,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qu'est-ce qu'un navigateur web ?",
+    "choices": [
+      "Un logiciel permettant d'accéder aux sites Internet",
+      "Un antivirus",
+      "Un système d'exploitation",
+      "Un processeur"
+    ],
+    "answer": 0,
+    "explanation": "Un navigateur permet d'afficher les pages web."
+  },
+  {
+    "id": 54,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qu'est-ce qu'un site web ?",
+    "choices": [
+      "Un ensemble de pages accessibles sur Internet",
+      "Un disque dur",
+      "Une base de données",
+      "Un logiciel antivirus"
+    ],
+    "answer": 0,
+    "explanation": "Un site web est constitué de plusieurs pages reliées entre elles."
+  },
+  {
+    "id": 55,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment appelle-t-on l'adresse d'une page web ?",
+    "choices": [
+      "Une URL",
+      "Une IP",
+      "Un DNS",
+      "Un port"
+    ],
+    "answer": 0,
+    "explanation": "Une URL permet d'accéder à une ressource sur Internet."
+  },
+  {
+    "id": 56,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie URL ?",
+    "choices": [
+      "Uniform Resource Locator",
+      "Universal Resource Link",
+      "User Resource Locator",
+      "Universal Route Link"
+    ],
+    "answer": 0,
+    "explanation": "URL signifie Uniform Resource Locator."
+  },
+  {
+    "id": 57,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel symbole sépare généralement le protocole du reste d'une URL ?",
+    "choices": [
+      "://",
+      "::",
+      "//",
+      "=>"
+    ],
+    "answer": 0,
+    "explanation": "Une URL commence souvent par https:// ou http://."
+  },
+  {
+    "id": 58,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que représente le '.fr' dans 'example.fr' ?",
+    "choices": [
+      "Le domaine de premier niveau du pays",
+      "Le protocole",
+      "Le port",
+      "Le navigateur"
+    ],
+    "answer": 0,
+    "explanation": ".fr est le domaine national de la France."
+  },
+  {
+    "id": 59,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que représente le '.com' dans une adresse web ?",
+    "choices": [
+      "Un domaine de premier niveau",
+      "Un protocole",
+      "Une adresse IP",
+      "Un navigateur"
+    ],
+    "answer": 0,
+    "explanation": ".com est l'un des domaines de premier niveau les plus utilisés."
+  },
+  {
+    "id": 60,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment appelle-t-on le réseau mondial reliant des millions d'ordinateurs ?",
+    "choices": [
+      "Internet",
+      "Bluetooth",
+      "Intranet",
+      "Ethernet"
+    ],
+    "answer": 0,
+    "explanation": "Internet est le réseau mondial de communication."
+  },
+  {
+    "id": 61,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie HTML ?",
+    "choices": [
+      "HyperText Markup Language",
+      "HighText Machine Language",
+      "Hyper Transfer Markup Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": 0,
+    "explanation": "HTML est le langage de balisage utilisé pour structurer les pages web."
+  },
+  {
+    "id": 62,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est utilisé pour styliser une page web ?",
+    "choices": [
+      "CSS",
+      "HTML",
+      "Python",
+      "SQL"
+    ],
+    "answer": 0,
+    "explanation": "CSS contrôle l'apparence des pages web."
+  },
+  {
+    "id": 63,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie CSS ?",
+    "choices": [
+      "Cascading Style Sheets",
+      "Computer Style System",
+      "Creative Style Sheet",
+      "Color Sheet System"
+    ],
+    "answer": 0,
+    "explanation": "CSS signifie Cascading Style Sheets."
+  },
+  {
+    "id": 64,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est exécuté directement par les navigateurs web ?",
+    "choices": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C++"
+    ],
+    "answer": 0,
+    "explanation": "JavaScript est le langage de programmation du navigateur."
+  },
+  {
+    "id": 65,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle balise HTML représente un paragraphe ?",
+    "choices": [
+      "<p>",
+      "<text>",
+      "<paragraph>",
+      "<div>"
+    ],
+    "answer": 0,
+    "explanation": "La balise <p> représente un paragraphe."
+  },
+  {
+    "id": 66,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle balise HTML permet d'afficher une image ?",
+    "choices": [
+      "<img>",
+      "<picture>",
+      "<image>",
+      "<src>"
+    ],
+    "answer": 0,
+    "explanation": "La balise <img> affiche une image."
+  },
+  {
+    "id": 67,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel attribut indique l'adresse d'une image en HTML ?",
+    "choices": [
+      "src",
+      "href",
+      "alt",
+      "title"
+    ],
+    "answer": 0,
+    "explanation": "L'attribut src indique le chemin du fichier."
+  },
+  {
+    "id": 68,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle balise HTML crée un lien hypertexte ?",
+    "choices": [
+      "<a>",
+      "<link>",
+      "<url>",
+      "<ref>"
+    ],
+    "answer": 0,
+    "explanation": "La balise <a> est utilisée pour les liens."
+  },
+  {
+    "id": 69,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel attribut définit la destination d'un lien HTML ?",
+    "choices": [
+      "href",
+      "src",
+      "alt",
+      "rel"
+    ],
+    "answer": 0,
+    "explanation": "href contient l'adresse du lien."
+  },
+  {
+    "id": 70,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle balise HTML représente le titre principal d'une page ?",
+    "choices": [
+      "<h1>",
+      "<head>",
+      "<title>",
+      "<header>"
+    ],
+    "answer": 0,
+    "explanation": "<h1> est le titre de niveau le plus élevé."
+  },
+  {
+    "id": 71,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle propriété CSS change la couleur du texte ?",
+    "choices": [
+      "color",
+      "font-color",
+      "text-color",
+      "background"
+    ],
+    "answer": 0,
+    "explanation": "La propriété color modifie la couleur du texte."
+  },
+  {
+    "id": 72,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle propriété CSS modifie la couleur de fond ?",
+    "choices": [
+      "background-color",
+      "color",
+      "fill",
+      "opacity"
+    ],
+    "answer": 0,
+    "explanation": "background-color modifie la couleur de fond."
+  },
+  {
+    "id": 73,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle propriété CSS modifie la taille du texte ?",
+    "choices": [
+      "font-size",
+      "text-size",
+      "font-style",
+      "size"
+    ],
+    "answer": 0,
+    "explanation": "font-size définit la taille de la police."
+  },
+  {
+    "id": 74,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel symbole commence un commentaire JavaScript sur une ligne ?",
+    "choices": [
+      "//",
+      "#",
+      "--",
+      "/*"
+    ],
+    "answer": 0,
+    "explanation": "// est utilisé pour les commentaires d'une ligne."
+  },
+  {
+    "id": 75,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel mot-clé JavaScript permet de déclarer une constante ?",
+    "choices": [
+      "const",
+      "var",
+      "let",
+      "static"
+    ],
+    "answer": 0,
+    "explanation": "const crée une constante."
+  },
+  {
+    "id": 76,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel mot-clé JavaScript est recommandé pour déclarer une variable modifiable ?",
+    "choices": [
+      "let",
+      "const",
+      "define",
+      "new"
+    ],
+    "answer": 0,
+    "explanation": "let est utilisé pour les variables modifiables."
+  },
+  {
+    "id": 77,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fonction affiche un message dans la console du navigateur ?",
+    "choices": [
+      "console.log()",
+      "print()",
+      "echo()",
+      "display()"
+    ],
+    "answer": 0,
+    "explanation": "console.log() affiche des informations dans la console."
+  },
+  {
+    "id": 78,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel opérateur teste une égalité stricte en JavaScript ?",
+    "choices": [
+      "===",
+      "==",
+      "=",
+      "!="
+    ],
+    "answer": 0,
+    "explanation": "=== compare la valeur et le type."
+  },
+  {
+    "id": 79,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle structure répète des instructions tant qu'une condition est vraie ?",
+    "choices": [
+      "while",
+      "switch",
+      "if",
+      "case"
+    ],
+    "answer": 0,
+    "explanation": "La boucle while répète les instructions."
+  },
+  {
+    "id": 80,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel mot-clé permet de créer une fonction en JavaScript ?",
+    "choices": [
+      "function",
+      "func",
+      "method",
+      "create"
+    ],
+    "answer": 0,
+    "explanation": "Le mot-clé function déclare une fonction."
+  },
+  {
+    "id": 81,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est principalement utilisé pour développer des applications Android ?",
+    "choices": [
+      "Kotlin",
+      "HTML",
+      "PHP",
+      "SQL"
+    ],
+    "answer": 0,
+    "explanation": "Kotlin est le langage recommandé par Google."
+  },
+  {
+    "id": 82,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage a été créé par Guido van Rossum ?",
+    "choices": [
+      "Python",
+      "Java",
+      "C",
+      "Go"
+    ],
+    "answer": 0,
+    "explanation": "Python a été créé par Guido van Rossum."
+  },
+  {
+    "id": 83,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est célèbre pour son logo représentant un café ?",
+    "choices": [
+      "Java",
+      "Python",
+      "Ruby",
+      "Swift"
+    ],
+    "answer": 0,
+    "explanation": "Java est associé à une tasse de café."
+  },
+  {
+    "id": 84,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est utilisé avec le framework .NET ?",
+    "choices": [
+      "C#",
+      "PHP",
+      "Lua",
+      "Rust"
+    ],
+    "answer": 0,
+    "explanation": "C# est développé par Microsoft."
+  },
+  {
+    "id": 85,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est historiquement utilisé pour développer les systèmes Linux ?",
+    "choices": [
+      "C",
+      "HTML",
+      "CSS",
+      "PHP"
+    ],
+    "answer": 0,
+    "explanation": "Le noyau Linux est majoritairement écrit en C."
+  },
+  {
+    "id": 86,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est une extension orientée objet du langage C ?",
+    "choices": [
+      "C++",
+      "JavaScript",
+      "Python",
+      "Ruby"
+    ],
+    "answer": 0,
+    "explanation": "C++ est une évolution du langage C."
+  },
+  {
+    "id": 87,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est principalement utilisé pour créer des requêtes de bases de données ?",
+    "choices": [
+      "SQL",
+      "HTML",
+      "CSS",
+      "XML"
+    ],
+    "answer": 0,
+    "explanation": "SQL est utilisé pour manipuler les bases de données."
+  },
+  {
+    "id": 88,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie SQL ?",
+    "choices": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "System Query Language",
+      "Secure Query Language"
+    ],
+    "answer": 0,
+    "explanation": "SQL signifie Structured Query Language."
+  },
+  {
+    "id": 89,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est exécuté côté serveur pour de nombreux sites web ?",
+    "choices": [
+      "PHP",
+      "CSS",
+      "HTML",
+      "Markdown"
+    ],
+    "answer": 0,
+    "explanation": "PHP est un langage côté serveur très populaire."
+  },
+  {
+    "id": 90,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est principalement utilisé avec Node.js ?",
+    "choices": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "C++"
+    ],
+    "answer": 0,
+    "explanation": "Node.js permet d'exécuter JavaScript côté serveur."
+  },
+  {
+    "id": 91,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie JSON ?",
+    "choices": [
+      "JavaScript Object Notation",
+      "Java Source Object Network",
+      "JSON Standard Object Name",
+      "Java Secure Object Network"
+    ],
+    "answer": 0,
+    "explanation": "JSON est un format d'échange de données."
+  },
+  {
+    "id": 92,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel caractère délimite un objet JSON ?",
+    "choices": [
+      "{}",
+      "[]",
+      "()",
+      "<>"
+    ],
+    "answer": 0,
+    "explanation": "Les objets JSON sont entourés d'accolades."
+  },
+  {
+    "id": 93,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel caractère délimite un tableau JSON ?",
+    "choices": [
+      "[]",
+      "{}",
+      "()",
+      "<>"
+    ],
+    "answer": 0,
+    "explanation": "Les tableaux JSON utilisent des crochets."
+  },
+  {
+    "id": 94,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie API ?",
+    "choices": [
+      "Application Programming Interface",
+      "Application Private Internet",
+      "Advanced Program Integration",
+      "Automatic Program Interface"
+    ],
+    "answer": 0,
+    "explanation": "Une API permet à deux logiciels de communiquer."
+  },
+  {
+    "id": 95,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel format est principalement utilisé pour échanger des données entre une API et un client ?",
+    "choices": [
+      "JSON",
+      "DOCX",
+      "PDF",
+      "EXE"
+    ],
+    "answer": 0,
+    "explanation": "Les API REST utilisent très souvent JSON."
+  },
+  {
+    "id": 96,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel logiciel est principalement utilisé pour écrire du code ?",
+    "choices": [
+      "Un éditeur de code",
+      "Un navigateur",
+      "Un antivirus",
+      "Un lecteur vidéo"
+    ],
+    "answer": 0,
+    "explanation": "Un éditeur de code est conçu pour programmer."
+  },
+  {
+    "id": 97,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel éditeur de code est développé par Microsoft ?",
+    "choices": [
+      "Visual Studio Code",
+      "Sublime Text",
+      "Atom",
+      "Notepad++"
+    ],
+    "answer": 0,
+    "explanation": "Visual Studio Code est développé par Microsoft."
+  },
+  {
+    "id": 98,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système de gestion de versions est le plus utilisé ?",
+    "choices": [
+      "Git",
+      "SVN",
+      "Mercurial",
+      "CVS"
+    ],
+    "answer": 0,
+    "explanation": "Git est aujourd'hui le standard."
+  },
+  {
+    "id": 99,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle plateforme est la plus populaire pour héberger des dépôts Git ?",
+    "choices": [
+      "GitHub",
+      "Dropbox",
+      "OneDrive",
+      "Mega"
+    ],
+    "answer": 0,
+    "explanation": "GitHub est la plateforme Git la plus utilisée."
+  },
+  {
+    "id": 100,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le rôle principal de Git ?",
+    "choices": [
+      "Suivre les modifications d'un projet",
+      "Créer des sites web",
+      "Héberger des vidéos",
+      "Crypter les fichiers"
+    ],
+    "answer": 0,
+    "explanation": "Git permet de suivre l'historique des modifications d'un projet."
+  },
+  {
+    "id": 101,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qui est le créateur de Git ?",
+    "choices": ["Linus Torvalds", "Bill Gates", "Guido van Rossum", "James Gosling"],
+    "answer": 0,
+    "explanation": "Git a été créé par Linus Torvalds en 2005."
+  },
+  {
+    "id": 102,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "À quoi sert principalement Git ?",
+    "choices": ["Suivre les modifications d'un projet", "Créer des bases de données", "Compiler du code", "Naviguer sur Internet"],
+    "answer": 0,
+    "explanation": "Git est un système de gestion de versions."
+  },
+  {
+    "id": 103,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande Git initialise un dépôt ?",
+    "choices": ["git init", "git start", "git create", "git new"],
+    "answer": 0,
+    "explanation": "git init crée un nouveau dépôt Git."
+  },
+  {
+    "id": 104,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande affiche l'état actuel du dépôt ?",
+    "choices": ["git status", "git info", "git state", "git show"],
+    "answer": 0,
+    "explanation": "git status affiche les fichiers modifiés et leur état."
+  },
+  {
+    "id": 105,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande ajoute tous les fichiers modifiés à la zone de préparation ?",
+    "choices": ["git add .", "git push", "git commit", "git clone"],
+    "answer": 0,
+    "explanation": "git add . ajoute tous les fichiers modifiés au staging."
+  },
+  {
+    "id": 106,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande enregistre les modifications dans l'historique ?",
+    "choices": ["git commit", "git clone", "git merge", "git fetch"],
+    "answer": 0,
+    "explanation": "Un commit enregistre un instantané du projet."
+  },
+  {
+    "id": 107,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande envoie les commits vers GitHub ?",
+    "choices": ["git push", "git pull", "git add", "git init"],
+    "answer": 0,
+    "explanation": "git push envoie les commits vers le dépôt distant."
+  },
+  {
+    "id": 108,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande récupère les dernières modifications du dépôt distant ?",
+    "choices": ["git pull", "git add", "git commit", "git init"],
+    "answer": 0,
+    "explanation": "git pull télécharge puis fusionne les modifications."
+  },
+  {
+    "id": 109,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande copie un dépôt Git existant ?",
+    "choices": ["git clone", "git copy", "git fork", "git duplicate"],
+    "answer": 0,
+    "explanation": "git clone télécharge un dépôt distant."
+  },
+  {
+    "id": 110,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment appelle-t-on une branche principale dans Git ?",
+    "choices": ["main", "masterfile", "origin", "default"],
+    "answer": 0,
+    "explanation": "Aujourd'hui, la branche principale est généralement nommée 'main'."
+  },
+  {
+    "id": 111,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle plateforme appartient à Microsoft ?",
+    "choices": ["GitHub", "GitLab", "Bitbucket", "SourceForge"],
+    "answer": 0,
+    "explanation": "Microsoft a racheté GitHub en 2018."
+  },
+  {
+    "id": 112,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qu'est-ce qu'un dépôt Git (repository) ?",
+    "choices": ["Un projet suivi par Git", "Un compilateur", "Une base SQL", "Un antivirus"],
+    "answer": 0,
+    "explanation": "Un repository contient les fichiers et l'historique d'un projet."
+  },
+  {
+    "id": 113,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie l'abréviation 'repo' ?",
+    "choices": ["Repository", "Report", "Remote", "Repeat"],
+    "answer": 0,
+    "explanation": "Repo est l'abréviation de repository."
+  },
+  {
+    "id": 114,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel logiciel est le plus populaire pour écrire du code ?",
+    "choices": ["Visual Studio Code", "Word", "Photoshop", "Excel"],
+    "answer": 0,
+    "explanation": "Visual Studio Code est l'un des éditeurs de code les plus utilisés."
+  },
+  {
+    "id": 115,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le raccourci pour enregistrer un fichier dans VS Code sous Windows ?",
+    "choices": ["Ctrl + S", "Ctrl + P", "Ctrl + G", "Ctrl + L"],
+    "answer": 0,
+    "explanation": "Ctrl + S enregistre le fichier."
+  },
+  {
+    "id": 116,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Qu'est-ce qu'une extension dans VS Code ?",
+    "choices": ["Un module qui ajoute des fonctionnalités", "Un virus", "Un compilateur", "Une base de données"],
+    "answer": 0,
+    "explanation": "Les extensions permettent d'ajouter de nouvelles fonctionnalités."
+  },
+  {
+    "id": 117,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel environnement permet d'exécuter JavaScript côté serveur ?",
+    "choices": ["Node.js", "Apache", "Docker", "MongoDB"],
+    "answer": 0,
+    "explanation": "Node.js permet d'exécuter JavaScript hors du navigateur."
+  },
+  {
+    "id": 118,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Sur quel moteur repose Node.js ?",
+    "choices": ["V8", "SpiderMonkey", "Blink", "Gecko"],
+    "answer": 0,
+    "explanation": "Node.js utilise le moteur JavaScript V8 de Google."
+  },
+  {
+    "id": 119,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel gestionnaire de paquets est installé avec Node.js ?",
+    "choices": ["npm", "apt", "pip", "cargo"],
+    "answer": 0,
+    "explanation": "npm est installé automatiquement avec Node.js."
+  },
+  {
+    "id": 120,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie npm ?",
+    "choices": ["Node Package Manager", "New Program Manager", "Node Program Module", "Network Package Manager"],
+    "answer": 0,
+    "explanation": "npm signifie Node Package Manager."
+  },
+  {
+    "id": 121,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande npm installe les dépendances d'un projet ?",
+    "choices": ["npm install", "npm start", "npm init", "npm update"],
+    "answer": 0,
+    "explanation": "npm install télécharge toutes les dépendances définies dans package.json."
+  },
+  {
+    "id": 122,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande crée un fichier package.json de manière interactive ?",
+    "choices": ["npm init", "npm create", "npm start", "npm build"],
+    "answer": 0,
+    "explanation": "npm init permet de créer un nouveau projet Node.js."
+  },
+  {
+    "id": 123,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel fichier décrit les dépendances d'un projet Node.js ?",
+    "choices": ["package.json", "config.js", "index.js", "node.json"],
+    "answer": 0,
+    "explanation": "package.json contient les informations et dépendances du projet."
+  },
+  {
+    "id": 124,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel dossier contient les dépendances téléchargées par npm ?",
+    "choices": ["node_modules", "packages", "modules", "libs"],
+    "answer": 0,
+    "explanation": "Toutes les dépendances sont installées dans le dossier node_modules."
+  },
+  {
+    "id": 125,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel framework Node.js est le plus populaire pour créer une API ?",
+    "choices": ["Express.js", "Electron", "React", "Angular"],
+    "answer": 0,
+    "explanation": "Express.js est le framework web le plus utilisé avec Node.js."
+  },
+  {
+    "id": 126,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel langage est utilisé avec Express.js ?",
+    "choices": ["JavaScript", "Python", "Java", "PHP"],
+    "answer": 0,
+    "explanation": "Express.js est un framework JavaScript pour Node.js."
+  },
+  {
+    "id": 127,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle bibliothèque permet de créer un bot Discord en JavaScript ?",
+    "choices": ["discord.js", "Express.js", "React", "Axios"],
+    "answer": 0,
+    "explanation": "discord.js est la bibliothèque la plus populaire pour créer des bots Discord."
+  },
+  {
+    "id": 128,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel portail permet de créer une application Discord ?",
+    "choices": [
+      "Discord Developer Portal",
+      "Discord Studio",
+      "Discord Console",
+      "Discord Cloud"
+    ],
+    "answer": 0,
+    "explanation": "Les applications Discord sont créées depuis le Discord Developer Portal."
+  },
+  {
+    "id": 129,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel fichier contient généralement le token d'un bot en développement ?",
+    "choices": [".env", "README.md", "LICENSE", "package-lock.json"],
+    "answer": 0,
+    "explanation": "Le fichier .env est utilisé pour stocker les variables d'environnement."
+  },
+  {
+    "id": 130,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle bibliothèque est couramment utilisée pour charger le fichier .env ?",
+    "choices": ["dotenv", "express", "mongoose", "axios"],
+    "answer": 0,
+    "explanation": "dotenv charge automatiquement les variables du fichier .env."
+  },
+  {
+    "id": 131,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel type de base de données est MongoDB ?",
+    "choices": ["NoSQL", "SQL", "Relationnelle", "Hiérarchique"],
+    "answer": 0,
+    "explanation": "MongoDB est une base de données orientée documents (NoSQL)."
+  },
+  {
+    "id": 132,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Sous quel format MongoDB stocke-t-il principalement les données ?",
+    "choices": ["Documents", "Tableaux Excel", "Images", "XML uniquement"],
+    "answer": 0,
+    "explanation": "MongoDB stocke les données sous forme de documents BSON."
+  },
+  {
+    "id": 133,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle bibliothèque facilite l'utilisation de MongoDB avec Node.js ?",
+    "choices": ["Mongoose", "Discord.js", "React", "Electron"],
+    "answer": 0,
+    "explanation": "Mongoose est un ODM pour MongoDB."
+  },
+  {
+    "id": 134,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie ODM dans Mongoose ?",
+    "choices": [
+      "Object Data Modeling",
+      "Object Database Manager",
+      "Online Data Manager",
+      "Open Database Module"
+    ],
+    "answer": 0,
+    "explanation": "Mongoose est un outil d'Object Data Modeling."
+  },
+  {
+    "id": 135,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Dans MongoDB, comment appelle-t-on un ensemble de documents ?",
+    "choices": ["Collection", "Table", "Classe", "Schéma"],
+    "answer": 0,
+    "explanation": "Les documents sont regroupés dans des collections."
+  },
+  {
+    "id": 136,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel identifiant est automatiquement créé pour chaque document MongoDB ?",
+    "choices": ["_id", "id_document", "uid", "key"],
+    "answer": 0,
+    "explanation": "Chaque document possède automatiquement un champ _id."
+  },
+  {
+    "id": 137,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle bibliothèque JavaScript est souvent utilisée pour effectuer des requêtes HTTP ?",
+    "choices": ["Axios", "Mongoose", "Discord.js", "Electron"],
+    "answer": 0,
+    "explanation": "Axios permet d'envoyer des requêtes HTTP."
+  },
+  {
+    "id": 138,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel hébergeur est populaire pour déployer gratuitement un bot Discord ?",
+    "choices": ["Railway", "Paint", "Photoshop", "Steam"],
+    "answer": 0,
+    "explanation": "Railway est une plateforme couramment utilisée pour héberger des bots."
+  },
+  {
+    "id": 139,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel service est principalement utilisé pour héberger le code source d'un projet ?",
+    "choices": ["GitHub", "Netflix", "Spotify", "Steam"],
+    "answer": 0,
+    "explanation": "GitHub est la plateforme la plus populaire pour héberger du code."
+  },
+  {
+    "id": 140,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est l'avantage principal d'utiliser un système de gestion de versions comme Git ?",
+    "choices": [
+      "Conserver l'historique des modifications et collaborer facilement",
+      "Accélérer le processeur",
+      "Réduire la consommation électrique",
+      "Augmenter automatiquement la mémoire RAM"
+    ],
+    "answer": 0,
+    "explanation": "Git permet de suivre les modifications, revenir en arrière et collaborer efficacement."
+  },
+  {
+    "id": 141,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie SQL ?",
+    "choices": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "System Query Language",
+      "Secure Query Language"
+    ],
+    "answer": 0,
+    "explanation": "SQL est le langage standard utilisé pour interagir avec les bases de données relationnelles."
+  },
+  {
+    "id": 142,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel système de gestion de bases de données est développé par Oracle ?",
+    "choices": [
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "Cassandra"
+    ],
+    "answer": 0,
+    "explanation": "MySQL est aujourd'hui développé par Oracle Corporation."
+  },
+  {
+    "id": 143,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande SQL permet de récupérer des données ?",
+    "choices": [
+      "SELECT",
+      "INSERT",
+      "DELETE",
+      "UPDATE"
+    ],
+    "answer": 0,
+    "explanation": "SELECT sert à lire les données d'une table."
+  },
+  {
+    "id": 144,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande SQL ajoute une nouvelle ligne dans une table ?",
+    "choices": [
+      "INSERT",
+      "SELECT",
+      "UPDATE",
+      "DROP"
+    ],
+    "answer": 0,
+    "explanation": "INSERT ajoute un nouvel enregistrement."
+  },
+  {
+    "id": 145,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande SQL modifie des données existantes ?",
+    "choices": [
+      "UPDATE",
+      "INSERT",
+      "CREATE",
+      "SELECT"
+    ],
+    "answer": 0,
+    "explanation": "UPDATE permet de modifier des lignes existantes."
+  },
+  {
+    "id": 146,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande SQL supprime des lignes d'une table ?",
+    "choices": [
+      "DELETE",
+      "DROP",
+      "REMOVE",
+      "CLEAR"
+    ],
+    "answer": 0,
+    "explanation": "DELETE supprime un ou plusieurs enregistrements."
+  },
+  {
+    "id": 147,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande SQL crée une nouvelle table ?",
+    "choices": [
+      "CREATE TABLE",
+      "NEW TABLE",
+      "MAKE TABLE",
+      "ADD TABLE"
+    ],
+    "answer": 0,
+    "explanation": "CREATE TABLE crée une nouvelle table dans une base de données."
+  },
+  {
+    "id": 148,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle commande SQL supprime complètement une table ?",
+    "choices": [
+      "DROP TABLE",
+      "DELETE TABLE",
+      "REMOVE TABLE",
+      "CLEAR TABLE"
+    ],
+    "answer": 0,
+    "explanation": "DROP TABLE supprime définitivement la table et son contenu."
+  },
+  {
+    "id": 149,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel mot-clé SQL permet de filtrer les résultats d'une requête ?",
+    "choices": [
+      "WHERE",
+      "ORDER",
+      "GROUP",
+      "LIMIT"
+    ],
+    "answer": 0,
+    "explanation": "WHERE permet de sélectionner uniquement les lignes correspondant à une condition."
+  },
+  {
+    "id": 150,
+    "category": "Informatique",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est l'objectif principal d'une base de données ?",
+    "choices": [
+      "Stocker et organiser des informations",
+      "Créer des sites web",
+      "Compiler des programmes",
+      "Augmenter la vitesse du processeur"
+    ],
+    "answer": 0,
+    "explanation": "Une base de données permet de stocker, organiser et retrouver efficacement des informations."
+  },
+  {
+    "id": 151,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé Python permet de définir une fonction ?",
+    "choices": ["def", "func", "function", "define"],
+    "answer": 0,
+    "explanation": "Le mot-clé 'def' est utilisé pour déclarer une fonction en Python."
+  },
+  {
+    "id": 152,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de données Python est immuable ?",
+    "choices": ["tuple", "list", "set", "dict"],
+    "answer": 0,
+    "explanation": "Un tuple ne peut pas être modifié après sa création."
+  },
+  {
+    "id": 153,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction Python permet d'afficher du texte dans la console ?",
+    "choices": ["print()", "echo()", "display()", "write()"],
+    "answer": 0,
+    "explanation": "print() affiche une valeur dans la sortie standard."
+  },
+  {
+    "id": 154,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel opérateur est utilisé pour l'exponentiation en Python ?",
+    "choices": ["**", "^", "^^", "*^"],
+    "answer": 0,
+    "explanation": "L'opérateur ** permet de calculer une puissance."
+  },
+  {
+    "id": 155,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé Python permet de créer une boucle conditionnelle ?",
+    "choices": ["while", "repeat", "loop", "foreach"],
+    "answer": 0,
+    "explanation": "while exécute un bloc tant qu'une condition reste vraie."
+  },
+  {
+    "id": 156,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure Python permet de parcourir une collection ?",
+    "choices": ["for", "repeat", "loop", "goto"],
+    "answer": 0,
+    "explanation": "La boucle for parcourt les éléments d'une séquence."
+  },
+  {
+    "id": 157,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle méthode ajoute un élément à la fin d'une liste Python ?",
+    "choices": ["append()", "add()", "push()", "insertEnd()"],
+    "answer": 0,
+    "explanation": "append() ajoute un élément à la fin d'une liste."
+  },
+  {
+    "id": 158,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type Python stocke des paires clé-valeur ?",
+    "choices": ["dict", "list", "tuple", "set"],
+    "answer": 0,
+    "explanation": "Le dictionnaire (dict) associe des clés à des valeurs."
+  },
+  {
+    "id": 159,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle méthode retourne le nombre d'éléments d'une liste Python ?",
+    "choices": ["len()", "count()", "size()", "length()"],
+    "answer": 0,
+    "explanation": "len() retourne la longueur d'une collection."
+  },
+  {
+    "id": 160,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle instruction Python permet de gérer une exception ?",
+    "choices": ["try", "catch", "throw", "exceptonly"],
+    "answer": 0,
+    "explanation": "Le bloc try permet d'intercepter les erreurs avec except."
+  },
+  {
+    "id": 161,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé suit généralement 'try' en Python ?",
+    "choices": ["except", "catch", "finally", "error"],
+    "answer": 0,
+    "explanation": "Le bloc except capture les exceptions levées dans try."
+  },
+  {
+    "id": 162,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction convertit une chaîne en entier en Python ?",
+    "choices": ["int()", "str()", "float()", "integer()"],
+    "answer": 0,
+    "explanation": "int() convertit une chaîne numérique en entier."
+  },
+  {
+    "id": 163,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé permet d'importer un module Python ?",
+    "choices": ["import", "include", "require", "using"],
+    "answer": 0,
+    "explanation": "Le mot-clé import charge un module Python."
+  },
+  {
+    "id": 164,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel module Python permet de générer des nombres aléatoires ?",
+    "choices": ["random", "math", "numbers", "rand"],
+    "answer": 0,
+    "explanation": "Le module random contient plusieurs fonctions pour générer des valeurs aléatoires."
+  },
+  {
+    "id": 165,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur booléenne représentant le faux en Python ?",
+    "choices": ["False", "false", "0", "NULL"],
+    "answer": 0,
+    "explanation": "En Python, les booléens sont True et False avec une majuscule."
+  },
+  {
+    "id": 166,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur booléenne représentant le vrai en Python ?",
+    "choices": ["True", "true", "1", "YES"],
+    "answer": 0,
+    "explanation": "En Python, les booléens sont True et False."
+  },
+  {
+    "id": 167,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle méthode permet de supprimer le dernier élément d'une liste Python ?",
+    "choices": ["pop()", "remove()", "delete()", "clear()"],
+    "answer": 0,
+    "explanation": "pop() retire et retourne le dernier élément par défaut."
+  },
+  {
+    "id": 168,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle méthode supprime un élément précis d'une liste Python par sa valeur ?",
+    "choices": ["remove()", "delete()", "pop()", "erase()"],
+    "answer": 0,
+    "explanation": "remove() supprime la première occurrence de la valeur donnée."
+  },
+  {
+    "id": 169,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction Python retourne le type d'une variable ?",
+    "choices": ["type()", "typeof()", "class()", "kind()"],
+    "answer": 0,
+    "explanation": "type() permet de connaître le type d'un objet."
+  },
+  {
+    "id": 170,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel opérateur Python teste si deux valeurs sont différentes ?",
+    "choices": ["!=", "<>", "!==", "=/="],
+    "answer": 0,
+    "explanation": "L'opérateur != signifie « différent de »."
+  },
+  {
+    "id": 171,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure de données Python ne contient jamais de doublons ?",
+    "choices": ["set", "list", "tuple", "dict"],
+    "answer": 0,
+    "explanation": "Un set ne peut contenir que des éléments uniques."
+  },
+  {
+    "id": 172,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé permet de quitter immédiatement une boucle en Python ?",
+    "choices": ["break", "continue", "exit", "stop"],
+    "answer": 0,
+    "explanation": "break interrompt immédiatement la boucle."
+  },
+  {
+    "id": 173,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé permet de passer directement à l'itération suivante d'une boucle ?",
+    "choices": ["continue", "break", "next", "pass"],
+    "answer": 0,
+    "explanation": "continue saute le reste de l'itération actuelle."
+  },
+  {
+    "id": 174,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé Python définit une classe ?",
+    "choices": ["class", "object", "struct", "new"],
+    "answer": 0,
+    "explanation": "Le mot-clé class permet de créer une classe."
+  },
+  {
+    "id": 175,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel paramètre représente l'instance courante dans une méthode Python ?",
+    "choices": ["self", "this", "me", "current"],
+    "answer": 0,
+    "explanation": "Par convention, self désigne l'instance de la classe."
+  },
+  {
+    "id": 176,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé permet à une fonction Python de renvoyer une valeur ?",
+    "choices": ["return", "send", "yield", "output"],
+    "answer": 0,
+    "explanation": "return termine la fonction et renvoie une valeur."
+  },
+  {
+    "id": 177,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel module Python est principalement utilisé pour les calculs mathématiques ?",
+    "choices": ["math", "calc", "number", "numpy"],
+    "answer": 0,
+    "explanation": "Le module math contient les fonctions mathématiques standards."
+  },
+  {
+    "id": 178,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction du module math calcule une racine carrée ?",
+    "choices": ["sqrt()", "root()", "square()", "pow()"],
+    "answer": 0,
+    "explanation": "math.sqrt() calcule la racine carrée d'un nombre."
+  },
+  {
+    "id": 179,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle bibliothèque Python est principalement utilisée pour l'analyse de données ?",
+    "choices": ["Pandas", "Flask", "Pygame", "Tkinter"],
+    "answer": 0,
+    "explanation": "Pandas est la bibliothèque de référence pour manipuler des données tabulaires."
+  },
+  {
+    "id": 180,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle bibliothèque Python est principalement utilisée pour le calcul scientifique et les tableaux multidimensionnels ?",
+    "choices": ["NumPy", "Requests", "Flask", "BeautifulSoup"],
+    "answer": 0,
+    "explanation": "NumPy est la bibliothèque de base pour le calcul numérique en Python."
+  },
+  {
+    "id": 181,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle bibliothèque Python est principalement utilisée pour créer des graphiques ?",
+    "choices": ["Matplotlib", "Pandas", "NumPy", "Requests"],
+    "answer": 0,
+    "explanation": "Matplotlib est la bibliothèque de référence pour créer des graphiques en Python."
+  },
+  {
+    "id": 182,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle bibliothèque Python est couramment utilisée pour envoyer des requêtes HTTP ?",
+    "choices": ["Requests", "Tkinter", "Pillow", "PyGame"],
+    "answer": 0,
+    "explanation": "Requests simplifie les requêtes HTTP en Python."
+  },
+  {
+    "id": 183,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel framework Python est principalement utilisé pour développer des applications web complètes ?",
+    "choices": ["Django", "NumPy", "Pandas", "PyTorch"],
+    "answer": 0,
+    "explanation": "Django est un framework web complet (« batteries included »)."
+  },
+  {
+    "id": 184,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel framework Python est réputé pour créer rapidement des API REST ?",
+    "choices": ["FastAPI", "Tkinter", "PyGame", "Matplotlib"],
+    "answer": 0,
+    "explanation": "FastAPI est très populaire pour développer des API performantes."
+  },
+  {
+    "id": 185,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel framework Python est plus léger que Django et très utilisé pour les petits projets web ?",
+    "choices": ["Flask", "TensorFlow", "PyTorch", "SciPy"],
+    "answer": 0,
+    "explanation": "Flask est un micro-framework web."
+  },
+  {
+    "id": 186,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel algorithme de tri possède une complexité moyenne en O(n log n) ?",
+    "choices": ["Quicksort", "Tri à bulles", "Tri par sélection", "Tri par insertion"],
+    "answer": 0,
+    "explanation": "Quicksort est très performant en moyenne avec une complexité de O(n log n)."
+  },
+  {
+    "id": 187,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure de données fonctionne selon le principe LIFO ?",
+    "choices": ["Pile", "File", "Arbre", "Graphe"],
+    "answer": 0,
+    "explanation": "Une pile (stack) fonctionne selon le principe Last In, First Out."
+  },
+  {
+    "id": 188,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure de données fonctionne selon le principe FIFO ?",
+    "choices": ["File", "Pile", "Table de hachage", "Arbre binaire"],
+    "answer": 0,
+    "explanation": "Une file (queue) fonctionne selon le principe First In, First Out."
+  },
+  {
+    "id": 189,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la complexité de la recherche binaire sur un tableau trié ?",
+    "choices": ["O(log n)", "O(n)", "O(n²)", "O(1)"],
+    "answer": 0,
+    "explanation": "La recherche binaire divise la zone de recherche par deux à chaque étape."
+  },
+  {
+    "id": 190,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la complexité moyenne d'une recherche linéaire ?",
+    "choices": ["O(n)", "O(log n)", "O(1)", "O(n²)"],
+    "answer": 0,
+    "explanation": "La recherche linéaire parcourt potentiellement tous les éléments."
+  },
+  {
+    "id": 191,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel parcours visite un nœud avant ses enfants dans un arbre ?",
+    "choices": ["Préordre", "Postordre", "Inordre", "Largeur"],
+    "answer": 0,
+    "explanation": "Le parcours préordre visite le nœud, puis ses sous-arbres."
+  },
+  {
+    "id": 192,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure de données est utilisée pour représenter un système de dossiers ?",
+    "choices": ["Arbre", "Pile", "File", "Tableau"],
+    "answer": 0,
+    "explanation": "Les systèmes de fichiers sont organisés sous forme d'arbres."
+  },
+  {
+    "id": 193,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel algorithme est utilisé pour trouver le plus court chemin dans un graphe pondéré avec des poids positifs ?",
+    "choices": ["Dijkstra", "Quicksort", "Prim", "Kruskal"],
+    "answer": 0,
+    "explanation": "L'algorithme de Dijkstra calcule les plus courts chemins."
+  },
+  {
+    "id": 194,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure associe une clé unique à une valeur ?",
+    "choices": ["Table de hachage", "Pile", "File", "Liste chaînée"],
+    "answer": 0,
+    "explanation": "Une table de hachage permet un accès très rapide par clé."
+  },
+  {
+    "id": 195,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie CRUD en développement ?",
+    "choices": [
+      "Create Read Update Delete",
+      "Copy Read Use Delete",
+      "Create Run Update Deploy",
+      "Code Review Update Debug"
+    ],
+    "answer": 0,
+    "explanation": "CRUD représente les quatre opérations fondamentales sur les données."
+  },
+  {
+    "id": 196,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel code HTTP indique qu'une ressource a été trouvée avec succès ?",
+    "choices": ["200", "301", "404", "500"],
+    "answer": 0,
+    "explanation": "Le code HTTP 200 signifie « OK »."
+  },
+  {
+    "id": 197,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel code HTTP correspond à une ressource introuvable ?",
+    "choices": ["404", "200", "201", "302"],
+    "answer": 0,
+    "explanation": "404 signifie « Not Found »."
+  },
+  {
+    "id": 198,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel code HTTP indique une erreur interne du serveur ?",
+    "choices": ["500", "401", "403", "204"],
+    "answer": 0,
+    "explanation": "500 correspond à « Internal Server Error »."
+  },
+  {
+    "id": 199,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel protocole est utilisé par Git pour cloner un dépôt de manière sécurisée sans HTTPS ?",
+    "choices": ["SSH", "FTP", "SMTP", "POP3"],
+    "answer": 0,
+    "explanation": "SSH permet d'authentifier et de chiffrer les échanges avec Git."
+  },
+  {
+    "id": 200,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git permet de créer et de changer immédiatement de branche ?",
+    "choices": [
+      "git checkout -b",
+      "git branch",
+      "git merge",
+      "git switch main"
+    ],
+    "answer": 0,
+    "explanation": "La commande `git checkout -b <nom>` crée une nouvelle branche puis s'y positionne."
+  },
+  {
+    "id": 201,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel langage a été développé par Sun Microsystems en 1995 ?",
+    "choices": ["Java", "C#", "Go", "Swift"],
+    "answer": 0,
+    "explanation": "Java a été créé par Sun Microsystems avant d'être repris par Oracle."
+  },
+  {
+    "id": 202,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le slogan historique de Java ?",
+    "choices": [
+      "Write Once, Run Anywhere",
+      "Code Fast, Run Fast",
+      "Compile Once, Execute Everywhere",
+      "One Language, One Platform"
+    ],
+    "answer": 0,
+    "explanation": "Java est conçu pour être portable entre différents systèmes d'exploitation."
+  },
+  {
+    "id": 203,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fichier source Java possède généralement l'extension ?",
+    "choices": [".java", ".class", ".jar", ".jvm"],
+    "answer": 0,
+    "explanation": "Les fichiers sources Java utilisent l'extension .java."
+  },
+  {
+    "id": 204,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel outil compile un fichier Java en bytecode ?",
+    "choices": ["javac", "java", "jar", "jre"],
+    "answer": 0,
+    "explanation": "javac transforme le code source Java en fichiers .class."
+  },
+  {
+    "id": 205,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel composant exécute le bytecode Java ?",
+    "choices": [
+      "JVM",
+      "Compilateur GCC",
+      "Node.js",
+      "CLR"
+    ],
+    "answer": 0,
+    "explanation": "La JVM (Java Virtual Machine) exécute le bytecode Java."
+  },
+  {
+    "id": 206,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel langage est principalement utilisé avec la plateforme .NET de Microsoft ?",
+    "choices": ["C#", "Java", "Rust", "Ruby"],
+    "answer": 0,
+    "explanation": "C# est le langage principal de l'écosystème .NET."
+  },
+  {
+    "id": 207,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel langage a été créé par Dennis Ritchie dans les années 1970 ?",
+    "choices": ["C", "Pascal", "Java", "Python"],
+    "answer": 0,
+    "explanation": "Dennis Ritchie a développé le langage C aux Bell Labs."
+  },
+  {
+    "id": 208,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel langage est une extension orientée objet du langage C ?",
+    "choices": ["C++", "C#", "Objective-C", "Rust"],
+    "answer": 0,
+    "explanation": "C++ ajoute notamment les classes et l'orienté objet au langage C."
+  },
+  {
+    "id": 209,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel concept de programmation consiste à regrouper données et méthodes dans une même entité ?",
+    "choices": [
+      "L'encapsulation",
+      "La récursion",
+      "Le polymorphisme",
+      "La compilation"
+    ],
+    "answer": 0,
+    "explanation": "L'encapsulation protège les données en les regroupant avec les méthodes qui les manipulent."
+  },
+  {
+    "id": 210,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment appelle-t-on un modèle permettant de créer plusieurs objets possédant les mêmes caractéristiques ?",
+    "choices": [
+      "Une classe",
+      "Une interface réseau",
+      "Une bibliothèque",
+      "Un package"
+    ],
+    "answer": 0,
+    "explanation": "Une classe définit les attributs et les comportements des objets qui en sont issus."
+  },
+  {
+    "id": 211,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel concept permet à une classe de récupérer les attributs et méthodes d'une autre classe ?",
+    "choices": [
+      "L'héritage",
+      "L'encapsulation",
+      "Le polymorphisme",
+      "La récursion"
+    ],
+    "answer": 0,
+    "explanation": "L'héritage permet de réutiliser et d'étendre le comportement d'une classe existante."
+  },
+  {
+    "id": 212,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel concept permet à plusieurs objets de répondre différemment à une même méthode ?",
+    "choices": [
+      "Le polymorphisme",
+      "L'encapsulation",
+      "L'héritage",
+      "La surcharge mémoire"
+    ],
+    "answer": 0,
+    "explanation": "Le polymorphisme permet à une même méthode d'avoir des comportements différents selon l'objet."
+  },
+  {
+    "id": 213,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment appelle-t-on une classe qui ne peut pas être instanciée directement ?",
+    "choices": [
+      "Une classe abstraite",
+      "Une classe privée",
+      "Une classe virtuelle",
+      "Une classe statique"
+    ],
+    "answer": 0,
+    "explanation": "Une classe abstraite sert de modèle pour d'autres classes."
+  },
+  {
+    "id": 214,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé Java permet de créer un objet ?",
+    "choices": [
+      "new",
+      "create",
+      "make",
+      "object"
+    ],
+    "answer": 0,
+    "explanation": "Le mot-clé new instancie un objet."
+  },
+  {
+    "id": 215,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé Java permet à une classe d'hériter d'une autre ?",
+    "choices": [
+      "extends",
+      "implements",
+      "inherits",
+      "super"
+    ],
+    "answer": 0,
+    "explanation": "extends est utilisé pour l'héritage entre classes."
+  },
+  {
+    "id": 216,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé Java permet d'implémenter une interface ?",
+    "choices": [
+      "implements",
+      "extends",
+      "interface",
+      "inherit"
+    ],
+    "answer": 0,
+    "explanation": "Une classe implémente une interface avec le mot-clé implements."
+  },
+  {
+    "id": 217,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment appelle-t-on une fonction qui s'appelle elle-même ?",
+    "choices": [
+      "Une fonction récursive",
+      "Une fonction abstraite",
+      "Une fonction virtuelle",
+      "Une fonction anonyme"
+    ],
+    "answer": 0,
+    "explanation": "La récursion consiste à ce qu'une fonction s'appelle elle-même."
+  },
+  {
+    "id": 218,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage d'une interface en programmation orientée objet ?",
+    "choices": [
+      "Définir un contrat que plusieurs classes peuvent respecter",
+      "Accélérer l'exécution du programme",
+      "Remplacer le compilateur",
+      "Réduire la mémoire RAM utilisée"
+    ],
+    "answer": 0,
+    "explanation": "Une interface définit un ensemble de méthodes que les classes doivent implémenter."
+  },
+  {
+    "id": 219,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle structure de contrôle permet d'exécuter un bloc différent selon plusieurs valeurs possibles ?",
+    "choices": [
+      "switch",
+      "while",
+      "for",
+      "try"
+    ],
+    "answer": 0,
+    "explanation": "switch est utilisé lorsqu'une variable peut prendre plusieurs valeurs distinctes."
+  },
+  {
+    "id": 220,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel principe de la programmation orientée objet consiste à masquer les détails internes d'une classe ?",
+    "choices": [
+      "L'encapsulation",
+      "Le polymorphisme",
+      "L'héritage",
+      "La composition"
+    ],
+    "answer": 0,
+    "explanation": "L'encapsulation protège les données et ne révèle que les éléments nécessaires à l'utilisation de la classe."
+  },
+  {
+    "id": 221,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel système d'exploitation a été créé par Linus Torvalds en 1991 ?",
+    "choices": ["Linux", "Windows", "macOS", "FreeBSD"],
+    "answer": 0,
+    "explanation": "Linus Torvalds a créé le noyau Linux en 1991."
+  },
+  {
+    "id": 222,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel caractère représente le répertoire personnel de l'utilisateur sous Linux ?",
+    "choices": ["~", "/", ".", "*"],
+    "answer": 0,
+    "explanation": "Le symbole ~ représente le dossier personnel (home) de l'utilisateur."
+  },
+  {
+    "id": 223,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Linux affiche le contenu du répertoire courant ?",
+    "choices": ["ls", "dir", "list", "show"],
+    "answer": 0,
+    "explanation": "La commande ls liste les fichiers et dossiers du répertoire actuel."
+  },
+  {
+    "id": 224,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet de changer de répertoire sous Linux ?",
+    "choices": ["cd", "mv", "pwd", "ls"],
+    "answer": 0,
+    "explanation": "La commande cd (change directory) permet de naviguer entre les dossiers."
+  },
+  {
+    "id": 225,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche le chemin complet du répertoire courant ?",
+    "choices": ["pwd", "path", "where", "cwd"],
+    "answer": 0,
+    "explanation": "pwd signifie Print Working Directory."
+  },
+  {
+    "id": 226,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande crée un nouveau dossier sous Linux ?",
+    "choices": ["mkdir", "newdir", "createdir", "makedir"],
+    "answer": 0,
+    "explanation": "mkdir signifie 'make directory'."
+  },
+  {
+    "id": 227,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande supprime un fichier sous Linux ?",
+    "choices": ["rm", "del", "erase", "remove"],
+    "answer": 0,
+    "explanation": "rm est la commande standard pour supprimer un fichier."
+  },
+  {
+    "id": 228,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande copie un fichier ou un dossier sous Linux ?",
+    "choices": ["cp", "copy", "mv", "clone"],
+    "answer": 0,
+    "explanation": "cp signifie copy."
+  },
+  {
+    "id": 229,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande déplace ou renomme un fichier sous Linux ?",
+    "choices": ["mv", "move", "rename", "cp"],
+    "answer": 0,
+    "explanation": "mv sert à déplacer ou renommer un fichier ou un dossier."
+  },
+  {
+    "id": 230,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche le contenu d'un fichier texte dans le terminal ?",
+    "choices": ["cat", "show", "read", "open"],
+    "answer": 0,
+    "explanation": "La commande cat affiche le contenu d'un ou plusieurs fichiers texte."
+  },
+  {
+    "id": 231,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Linux permet de modifier les permissions d'un fichier ?",
+    "choices": ["chmod", "chown", "perm", "grant"],
+    "answer": 0,
+    "explanation": "chmod (change mode) permet de modifier les permissions d'accès d'un fichier ou d'un dossier."
+  },
+  {
+    "id": 232,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet de changer le propriétaire d'un fichier sous Linux ?",
+    "choices": ["chown", "chmod", "owner", "mv"],
+    "answer": 0,
+    "explanation": "chown (change owner) modifie le propriétaire d'un fichier ou d'un dossier."
+  },
+  {
+    "id": 233,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche les processus en cours d'exécution sous Linux ?",
+    "choices": ["ps", "proc", "jobs", "listproc"],
+    "answer": 0,
+    "explanation": "La commande ps affiche les processus actifs."
+  },
+  {
+    "id": 234,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande est souvent utilisée pour surveiller les processus en temps réel ?",
+    "choices": ["top", "ps", "watchproc", "jobs"],
+    "answer": 0,
+    "explanation": "top affiche les processus en temps réel avec leur consommation de ressources."
+  },
+  {
+    "id": 235,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet de terminer un processus grâce à son PID ?",
+    "choices": ["kill", "stop", "terminate", "end"],
+    "answer": 0,
+    "explanation": "kill envoie un signal à un processus, généralement pour l'arrêter."
+  },
+  {
+    "id": 236,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche le manuel d'une commande Linux ?",
+    "choices": ["man", "help", "info", "manual"],
+    "answer": 0,
+    "explanation": "man ouvre la page de manuel d'une commande."
+  },
+  {
+    "id": 237,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel utilisateur possède généralement tous les privilèges sur un système Linux ?",
+    "choices": ["root", "admin", "system", "master"],
+    "answer": 0,
+    "explanation": "L'utilisateur root dispose de tous les droits sur le système."
+  },
+  {
+    "id": 238,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet d'exécuter temporairement une commande avec les privilèges administrateur ?",
+    "choices": ["sudo", "root", "admin", "suadmin"],
+    "answer": 0,
+    "explanation": "sudo permet d'exécuter une commande avec les droits d'un administrateur."
+  },
+  {
+    "id": 239,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche l'utilisation de l'espace disque des systèmes de fichiers ?",
+    "choices": ["df", "du", "disk", "space"],
+    "answer": 0,
+    "explanation": "df (disk free) affiche l'espace utilisé et disponible des partitions."
+  },
+  {
+    "id": 240,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet de rechercher un fichier par son nom sous Linux ?",
+    "choices": ["find", "search", "grep", "locatefile"],
+    "answer": 0,
+    "explanation": "find permet de rechercher des fichiers selon différents critères, notamment leur nom."
+  },
+  {
+    "id": 241,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel protocole traduit un nom de domaine en adresse IP ?",
+    "choices": ["DNS", "DHCP", "FTP", "SMTP"],
+    "answer": 0,
+    "explanation": "Le DNS (Domain Name System) associe les noms de domaine aux adresses IP."
+  },
+  {
+    "id": 242,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel protocole attribue automatiquement une adresse IP à un appareil ?",
+    "choices": ["DHCP", "DNS", "ARP", "ICMP"],
+    "answer": 0,
+    "explanation": "DHCP (Dynamic Host Configuration Protocol) attribue automatiquement les paramètres réseau."
+  },
+  {
+    "id": 243,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet de tester si une machine est joignable sur un réseau ?",
+    "choices": ["ping", "ssh", "ftp", "scp"],
+    "answer": 0,
+    "explanation": "ping envoie des requêtes ICMP pour vérifier la connectivité."
+  },
+  {
+    "id": 244,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet d'afficher le chemin emprunté par les paquets jusqu'à une destination ?",
+    "choices": ["traceroute", "ping", "route", "netstat"],
+    "answer": 0,
+    "explanation": "traceroute (ou tracert sous Windows) affiche les routeurs traversés."
+  },
+  {
+    "id": 245,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme NAT ?",
+    "choices": [
+      "Network Address Translation",
+      "Network Access Terminal",
+      "Node Address Transfer",
+      "Network Authentication Tool"
+    ],
+    "answer": 0,
+    "explanation": "Le NAT permet de traduire des adresses IP privées en adresses publiques."
+  },
+  {
+    "id": 246,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel équipement relie généralement un réseau local à Internet ?",
+    "choices": ["Routeur", "Switch", "Hub", "Carte réseau"],
+    "answer": 0,
+    "explanation": "Le routeur achemine les paquets entre différents réseaux."
+  },
+  {
+    "id": 247,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel équipement fonctionne principalement au niveau 2 du modèle OSI pour connecter plusieurs appareils d'un même réseau local ?",
+    "choices": ["Switch", "Routeur", "Modem", "Pare-feu"],
+    "answer": 0,
+    "explanation": "Un switch commute les trames à l'aide des adresses MAC."
+  },
+  {
+    "id": 248,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le rôle principal d'un pare-feu (firewall) ?",
+    "choices": [
+      "Filtrer les connexions réseau",
+      "Augmenter la vitesse d'Internet",
+      "Créer des sauvegardes",
+      "Compresser les fichiers"
+    ],
+    "answer": 0,
+    "explanation": "Un pare-feu autorise ou bloque le trafic réseau selon des règles définies."
+  },
+  {
+    "id": 249,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel protocole est principalement utilisé pour établir une connexion distante sécurisée à un serveur ?",
+    "choices": ["SSH", "Telnet", "FTP", "HTTP"],
+    "answer": 0,
+    "explanation": "SSH chiffre les communications et permet une administration distante sécurisée."
+  },
+  {
+    "id": 250,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel protocole est l'alternative sécurisée à HTTP pour les sites web ?",
+    "choices": ["HTTPS", "FTP", "SMTP", "POP3"],
+    "answer": 0,
+    "explanation": "HTTPS utilise TLS/SSL pour chiffrer les communications entre le navigateur et le serveur."
+  },
+  {
+    "id": 251,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme VPN ?",
+    "choices": [
+      "Virtual Private Network",
+      "Virtual Public Network",
+      "Verified Private Node",
+      "Virtual Protected Network"
+    ],
+    "answer": 0,
+    "explanation": "Un VPN crée un tunnel chiffré entre un appareil et un réseau."
+  },
+  {
+    "id": 252,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal objectif du chiffrement ?",
+    "choices": [
+      "Rendre les données illisibles sans la clé",
+      "Compresser les fichiers",
+      "Accélérer Internet",
+      "Supprimer les virus"
+    ],
+    "answer": 0,
+    "explanation": "Le chiffrement protège la confidentialité des données."
+  },
+  {
+    "id": 253,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel algorithme est aujourd'hui largement utilisé pour le chiffrement symétrique ?",
+    "choices": ["AES", "MD5", "SHA-1", "CRC32"],
+    "answer": 0,
+    "explanation": "AES est le standard actuel du chiffrement symétrique."
+  },
+  {
+    "id": 254,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel algorithme est principalement utilisé pour le chiffrement asymétrique ?",
+    "choices": ["RSA", "AES", "SHA-256", "CRC32"],
+    "answer": 0,
+    "explanation": "RSA utilise une paire de clés publique et privée."
+  },
+  {
+    "id": 255,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel algorithme est une fonction de hachage cryptographique ?",
+    "choices": ["SHA-256", "RSA", "AES", "DES"],
+    "answer": 0,
+    "explanation": "SHA-256 produit une empreinte cryptographique irréversible."
+  },
+  {
+    "id": 256,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type d'attaque consiste à envoyer un très grand nombre de requêtes pour rendre un service indisponible ?",
+    "choices": [
+      "DDoS",
+      "Phishing",
+      "SQL Injection",
+      "Brute Force"
+    ],
+    "answer": 0,
+    "explanation": "Une attaque DDoS sature les ressources d'un serveur."
+  },
+  {
+    "id": 257,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Le phishing a principalement pour objectif de :",
+    "choices": [
+      "Voler des informations personnelles",
+      "Accélérer une connexion",
+      "Compresser des fichiers",
+      "Installer un système d'exploitation"
+    ],
+    "answer": 0,
+    "explanation": "Le phishing vise à récupérer des identifiants ou informations sensibles."
+  },
+  {
+    "id": 258,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Une attaque par force brute consiste à :",
+    "choices": [
+      "Tester de nombreux mots de passe jusqu'à trouver le bon",
+      "Supprimer une base de données",
+      "Crypter un disque dur",
+      "Créer un virus"
+    ],
+    "answer": 0,
+    "explanation": "Une attaque brute force teste un grand nombre de combinaisons."
+  },
+  {
+    "id": 259,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel logiciel est conçu pour détecter et supprimer des logiciels malveillants ?",
+    "choices": [
+      "Un antivirus",
+      "Un compilateur",
+      "Un navigateur",
+      "Un interpréteur"
+    ],
+    "answer": 0,
+    "explanation": "Un antivirus détecte, bloque et supprime les malwares."
+  },
+  {
+    "id": 260,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie MFA en cybersécurité ?",
+    "choices": [
+      "Multi-Factor Authentication",
+      "Multiple File Access",
+      "Managed Firewall Access",
+      "Main Function Authentication"
+    ],
+    "answer": 0,
+    "explanation": "La MFA ajoute plusieurs facteurs d'authentification pour renforcer la sécurité."
+  },
+  {
+    "id": 261,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de malware chiffre les fichiers d'une victime pour demander une rançon ?",
+    "choices": [
+      "Ransomware",
+      "Spyware",
+      "Adware",
+      "Rootkit"
+    ],
+    "answer": 0,
+    "explanation": "Un ransomware chiffre les données et réclame un paiement."
+  },
+  {
+    "id": 262,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel malware collecte discrètement les informations de l'utilisateur ?",
+    "choices": [
+      "Spyware",
+      "Ransomware",
+      "Bootloader",
+      "Hyperviseur"
+    ],
+    "answer": 0,
+    "explanation": "Un spyware espionne l'activité de l'utilisateur."
+  },
+  {
+    "id": 263,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel malware affiche principalement des publicités non désirées ?",
+    "choices": [
+      "Adware",
+      "Rootkit",
+      "Botnet",
+      "Trojan"
+    ],
+    "answer": 0,
+    "explanation": "Un adware diffuse des publicités intrusives."
+  },
+  {
+    "id": 264,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Qu'est-ce qu'un cheval de Troie (Trojan) ?",
+    "choices": [
+      "Un logiciel malveillant se faisant passer pour un programme légitime",
+      "Un antivirus",
+      "Un protocole réseau",
+      "Un pare-feu"
+    ],
+    "answer": 0,
+    "explanation": "Le Trojan trompe l'utilisateur pour être installé."
+  },
+  {
+    "id": 265,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type d'attaque exploite une faille dans une requête SQL ?",
+    "choices": [
+      "SQL Injection",
+      "Cross-Origin",
+      "Ping Flood",
+      "ARP Cache"
+    ],
+    "answer": 0,
+    "explanation": "La SQL Injection permet de manipuler des requêtes SQL."
+  },
+  {
+    "id": 266,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle attaque consiste à injecter du JavaScript dans une page web ?",
+    "choices": [
+      "Cross-Site Scripting (XSS)",
+      "SQL Injection",
+      "Brute Force",
+      "ARP Spoofing"
+    ],
+    "answer": 0,
+    "explanation": "Le XSS permet d'exécuter du JavaScript malveillant dans le navigateur."
+  },
+  {
+    "id": 267,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie CSRF ?",
+    "choices": [
+      "Cross-Site Request Forgery",
+      "Client Server Response Framework",
+      "Cross Server Request File",
+      "Code Security Response Function"
+    ],
+    "answer": 0,
+    "explanation": "Le CSRF force un utilisateur authentifié à effectuer une action à son insu."
+  },
+  {
+    "id": 268,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel principe consiste à n'accorder que les droits strictement nécessaires ?",
+    "choices": [
+      "Le principe du moindre privilège",
+      "La redondance",
+      "Le chiffrement",
+      "La virtualisation"
+    ],
+    "answer": 0,
+    "explanation": "Ce principe limite les risques en réduisant les permissions."
+  },
+  {
+    "id": 269,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal intérêt d'effectuer régulièrement des sauvegardes ?",
+    "choices": [
+      "Pouvoir restaurer les données après une perte ou une attaque",
+      "Accélérer le processeur",
+      "Réduire la RAM utilisée",
+      "Améliorer le signal Wi-Fi"
+    ],
+    "answer": 0,
+    "explanation": "Les sauvegardes permettent de récupérer les données en cas d'incident."
+  },
+  {
+    "id": 270,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la meilleure pratique concernant les mots de passe ?",
+    "choices": [
+      "Utiliser un mot de passe unique, long et complexe pour chaque service",
+      "Réutiliser le même partout",
+      "Utiliser uniquement sa date de naissance",
+      "Ne jamais changer son mot de passe"
+    ],
+    "answer": 0,
+    "explanation": "Des mots de passe uniques et robustes limitent fortement les risques de compromission."
+  },
+  {
+    "id": 271,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme API ?",
+    "choices": [
+      "Application Programming Interface",
+      "Application Process Integration",
+      "Automated Program Interface",
+      "Advanced Programming Internet"
+    ],
+    "answer": 0,
+    "explanation": "Une API permet à des applications de communiquer entre elles."
+  },
+  {
+    "id": 272,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel format de données est aujourd'hui le plus utilisé par les API REST ?",
+    "choices": ["JSON", "XML", "CSV", "YAML"],
+    "answer": 0,
+    "explanation": "JSON est léger, lisible et largement adopté par les API modernes."
+  },
+  {
+    "id": 273,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel verbe HTTP est généralement utilisé pour récupérer une ressource ?",
+    "choices": ["GET", "POST", "PUT", "DELETE"],
+    "answer": 0,
+    "explanation": "GET sert à lire des données sans les modifier."
+  },
+  {
+    "id": 274,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel verbe HTTP est généralement utilisé pour créer une nouvelle ressource ?",
+    "choices": ["POST", "GET", "PATCH", "HEAD"],
+    "answer": 0,
+    "explanation": "POST est utilisé pour créer une nouvelle ressource."
+  },
+  {
+    "id": 275,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel verbe HTTP est généralement utilisé pour supprimer une ressource ?",
+    "choices": ["DELETE", "GET", "POST", "OPTIONS"],
+    "answer": 0,
+    "explanation": "DELETE sert à supprimer une ressource."
+  },
+  {
+    "id": 276,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel verbe HTTP est principalement utilisé pour remplacer entièrement une ressource ?",
+    "choices": ["PUT", "PATCH", "POST", "TRACE"],
+    "answer": 0,
+    "explanation": "PUT remplace complètement une ressource existante."
+  },
+  {
+    "id": 277,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel verbe HTTP est principalement utilisé pour modifier partiellement une ressource ?",
+    "choices": ["PATCH", "PUT", "POST", "CONNECT"],
+    "answer": 0,
+    "explanation": "PATCH applique une modification partielle."
+  },
+  {
+    "id": 278,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel code HTTP indique qu'une nouvelle ressource a été créée avec succès ?",
+    "choices": ["201", "200", "204", "301"],
+    "answer": 0,
+    "explanation": "201 Created confirme la création d'une ressource."
+  },
+  {
+    "id": 279,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel code HTTP indique qu'une authentification est requise ?",
+    "choices": ["401", "403", "404", "500"],
+    "answer": 0,
+    "explanation": "401 Unauthorized signifie qu'une authentification est nécessaire."
+  },
+  {
+    "id": 280,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel code HTTP indique que l'accès est interdit malgré une éventuelle authentification ?",
+    "choices": ["403", "401", "404", "302"],
+    "answer": 0,
+    "explanation": "403 Forbidden signifie que le serveur refuse l'accès."
+  },
+  {
+    "id": 281,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle architecture sépare généralement le front-end, le back-end et la base de données ?",
+    "choices": [
+      "Architecture trois tiers",
+      "Architecture monolithique",
+      "Architecture peer-to-peer",
+      "Architecture linéaire"
+    ],
+    "answer": 0,
+    "explanation": "L'architecture trois tiers sépare présentation, logique métier et données."
+  },
+  {
+    "id": 282,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel langage est principalement exécuté côté navigateur ?",
+    "choices": ["JavaScript", "PHP", "Python", "Java"],
+    "answer": 0,
+    "explanation": "JavaScript est le langage natif des navigateurs web."
+  },
+  {
+    "id": 283,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel environnement permet d'exécuter JavaScript côté serveur ?",
+    "choices": ["Node.js", "React", "Vue.js", "Angular"],
+    "answer": 0,
+    "explanation": "Node.js permet d'exécuter JavaScript en dehors du navigateur."
+  },
+  {
+    "id": 284,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel gestionnaire de paquets est installé avec Node.js ?",
+    "choices": ["npm", "pip", "cargo", "composer"],
+    "answer": 0,
+    "explanation": "npm (Node Package Manager) est le gestionnaire de paquets officiel de Node.js."
+  },
+  {
+    "id": 285,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fichier décrit les dépendances d'un projet Node.js ?",
+    "choices": [
+      "package.json",
+      "requirements.txt",
+      "pom.xml",
+      "composer.json"
+    ],
+    "answer": 0,
+    "explanation": "package.json contient les métadonnées et les dépendances du projet."
+  },
+  {
+    "id": 286,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel framework Node.js est le plus utilisé pour créer des API REST ?",
+    "choices": ["Express.js", "Electron", "Next.js", "Nest CLI"],
+    "answer": 0,
+    "explanation": "Express.js est un framework minimaliste très populaire pour les API."
+  },
+  {
+    "id": 287,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel système de gestion de versions est le plus utilisé dans le développement logiciel ?",
+    "choices": ["Git", "SVN", "Mercurial", "CVS"],
+    "answer": 0,
+    "explanation": "Git est devenu le standard de facto pour le contrôle de version."
+  },
+  {
+    "id": 288,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git envoie les commits locaux vers le dépôt distant ?",
+    "choices": ["git push", "git pull", "git fetch", "git clone"],
+    "answer": 0,
+    "explanation": "git push publie les commits vers le dépôt distant."
+  },
+  {
+    "id": 289,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git récupère et fusionne les modifications du dépôt distant ?",
+    "choices": ["git pull", "git push", "git commit", "git branch"],
+    "answer": 0,
+    "explanation": "git pull récupère puis fusionne les modifications distantes."
+  },
+  {
+    "id": 290,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git crée un instantané des modifications préparées ?",
+    "choices": [
+      "git commit",
+      "git add",
+      "git merge",
+      "git checkout"
+    ],
+    "answer": 0,
+    "explanation": "git commit enregistre les modifications dans l'historique du dépôt."
+  },
+  {
+    "id": 291,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git prépare un fichier avant un commit ?",
+    "choices": [
+      "git add",
+      "git commit",
+      "git push",
+      "git clone"
+    ],
+    "answer": 0,
+    "explanation": "git add ajoute les modifications à la zone de préparation (staging area)."
+  },
+  {
+    "id": 292,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git permet de télécharger un dépôt distant sur sa machine ?",
+    "choices": [
+      "git clone",
+      "git fork",
+      "git pull",
+      "git fetch"
+    ],
+    "answer": 0,
+    "explanation": "git clone crée une copie locale complète d'un dépôt distant."
+  },
+  {
+    "id": 293,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git affiche la liste des branches d'un dépôt ?",
+    "choices": [
+      "git branch",
+      "git status",
+      "git merge",
+      "git log"
+    ],
+    "answer": 0,
+    "explanation": "git branch affiche les branches locales et indique la branche active."
+  },
+  {
+    "id": 294,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git permet de fusionner une branche dans la branche courante ?",
+    "choices": [
+      "git merge",
+      "git rebase",
+      "git checkout",
+      "git stash"
+    ],
+    "answer": 0,
+    "explanation": "git merge intègre les modifications d'une autre branche dans la branche actuelle."
+  },
+  {
+    "id": 295,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande Git affiche l'historique des commits ?",
+    "choices": [
+      "git log",
+      "git show",
+      "git diff",
+      "git status"
+    ],
+    "answer": 0,
+    "explanation": "git log affiche l'historique des commits du dépôt."
+  },
+  {
+    "id": 296,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel service d'hébergement de dépôts Git est le plus utilisé au monde ?",
+    "choices": [
+      "GitHub",
+      "Docker Hub",
+      "Heroku",
+      "Netlify"
+    ],
+    "answer": 0,
+    "explanation": "GitHub est la plateforme la plus populaire pour héberger des projets Git."
+  },
+  {
+    "id": 297,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fichier est généralement utilisé pour expliquer un projet sur GitHub ?",
+    "choices": [
+      "README.md",
+      "LICENSE.txt",
+      "package.json",
+      ".gitignore"
+    ],
+    "answer": 0,
+    "explanation": "Le fichier README.md présente le projet, son installation et son utilisation."
+  },
+  {
+    "id": 298,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "À quoi sert principalement le fichier .gitignore ?",
+    "choices": [
+      "À exclure certains fichiers du suivi Git",
+      "À chiffrer le dépôt",
+      "À supprimer l'historique Git",
+      "À fusionner automatiquement les branches"
+    ],
+    "answer": 0,
+    "explanation": ".gitignore indique à Git quels fichiers ou dossiers ne doivent pas être suivis."
+  },
+  {
+    "id": 299,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel format est utilisé par les fichiers Markdown ?",
+    "choices": [
+      ".md",
+      ".mk",
+      ".markdownx",
+      ".txt"
+    ],
+    "answer": 0,
+    "explanation": "Les documents Markdown utilisent généralement l'extension .md."
+  },
+  {
+    "id": 300,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage d'utiliser un système de contrôle de versions comme Git ?",
+    "choices": [
+      "Suivre l'historique des modifications et collaborer efficacement",
+      "Augmenter automatiquement les performances du code",
+      "Compiler les programmes plus rapidement",
+      "Remplacer une base de données"
+    ],
+    "answer": 0,
+    "explanation": "Git permet de suivre les modifications, revenir à une version précédente et collaborer facilement sur un projet."
+  },
+  {
+    "id": 301,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme SQL ?",
+    "choices": [
+      "Structured Query Language",
+      "Standard Query Logic",
+      "Simple Question Language",
+      "System Query Level"
+    ],
+    "answer": 0,
+    "explanation": "SQL signifie Structured Query Language."
+  },
+  {
+    "id": 302,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel langage est principalement utilisé pour manipuler une base de données relationnelle ?",
+    "choices": [
+      "SQL",
+      "HTML",
+      "CSS",
+      "JSON"
+    ],
+    "answer": 0,
+    "explanation": "SQL est le langage standard des bases de données relationnelles."
+  },
+  {
+    "id": 303,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande SQL permet de récupérer des données ?",
+    "choices": [
+      "SELECT",
+      "INSERT",
+      "UPDATE",
+      "DELETE"
+    ],
+    "answer": 0,
+    "explanation": "SELECT permet de lire les données d'une ou plusieurs tables."
+  },
+  {
+    "id": 304,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande SQL ajoute une nouvelle ligne dans une table ?",
+    "choices": [
+      "INSERT",
+      "SELECT",
+      "CREATE",
+      "UPDATE"
+    ],
+    "answer": 0,
+    "explanation": "INSERT ajoute un nouvel enregistrement."
+  },
+  {
+    "id": 305,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande SQL modifie des données existantes ?",
+    "choices": [
+      "UPDATE",
+      "INSERT",
+      "ALTER",
+      "SELECT"
+    ],
+    "answer": 0,
+    "explanation": "UPDATE modifie les lignes existantes."
+  },
+  {
+    "id": 306,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande SQL supprime des lignes d'une table ?",
+    "choices": [
+      "DELETE",
+      "DROP",
+      "REMOVE",
+      "ERASE"
+    ],
+    "answer": 0,
+    "explanation": "DELETE supprime des enregistrements selon une condition."
+  },
+  {
+    "id": 307,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande SQL crée une nouvelle table ?",
+    "choices": [
+      "CREATE TABLE",
+      "NEW TABLE",
+      "MAKE TABLE",
+      "ADD TABLE"
+    ],
+    "answer": 0,
+    "explanation": "CREATE TABLE crée une nouvelle table."
+  },
+  {
+    "id": 308,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande SQL supprime complètement une table et ses données ?",
+    "choices": [
+      "DROP TABLE",
+      "DELETE TABLE",
+      "REMOVE TABLE",
+      "CLEAR TABLE"
+    ],
+    "answer": 0,
+    "explanation": "DROP TABLE supprime définitivement une table."
+  },
+  {
+    "id": 309,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle clause SQL permet de filtrer les résultats d'une requête ?",
+    "choices": [
+      "WHERE",
+      "GROUP BY",
+      "ORDER BY",
+      "HAVING"
+    ],
+    "answer": 0,
+    "explanation": "WHERE filtre les lignes avant leur affichage."
+  },
+  {
+    "id": 310,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle clause SQL permet de trier les résultats ?",
+    "choices": [
+      "ORDER BY",
+      "GROUP BY",
+      "SORT",
+      "WHERE"
+    ],
+    "answer": 0,
+    "explanation": "ORDER BY trie les résultats par une ou plusieurs colonnes."
+  },
+  {
+    "id": 311,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle clause SQL permet de regrouper les lignes ayant une valeur commune ?",
+    "choices": [
+      "GROUP BY",
+      "ORDER BY",
+      "WHERE",
+      "HAVING"
+    ],
+    "answer": 0,
+    "explanation": "GROUP BY regroupe les lignes selon une ou plusieurs colonnes."
+  },
+  {
+    "id": 312,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction SQL retourne le nombre de lignes ?",
+    "choices": [
+      "COUNT()",
+      "SUM()",
+      "AVG()",
+      "TOTAL()"
+    ],
+    "answer": 0,
+    "explanation": "COUNT() compte le nombre d'enregistrements."
+  },
+  {
+    "id": 313,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction SQL calcule la moyenne d'une colonne numérique ?",
+    "choices": [
+      "AVG()",
+      "COUNT()",
+      "SUM()",
+      "MEAN()"
+    ],
+    "answer": 0,
+    "explanation": "AVG() retourne la moyenne des valeurs."
+  },
+  {
+    "id": 314,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction SQL calcule la somme d'une colonne ?",
+    "choices": [
+      "SUM()",
+      "AVG()",
+      "COUNT()",
+      "ADD()"
+    ],
+    "answer": 0,
+    "explanation": "SUM() additionne les valeurs numériques."
+  },
+  {
+    "id": 315,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction SQL retourne la plus grande valeur ?",
+    "choices": [
+      "MAX()",
+      "TOP()",
+      "HIGH()",
+      "UPPER()"
+    ],
+    "answer": 0,
+    "explanation": "MAX() retourne la valeur maximale."
+  },
+  {
+    "id": 316,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle fonction SQL retourne la plus petite valeur ?",
+    "choices": [
+      "MIN()",
+      "LOW()",
+      "BOTTOM()",
+      "SMALL()"
+    ],
+    "answer": 0,
+    "explanation": "MIN() retourne la valeur minimale."
+  },
+  {
+    "id": 317,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle contrainte garantit qu'une valeur est unique dans une colonne ?",
+    "choices": [
+      "UNIQUE",
+      "PRIMARY KEY",
+      "INDEX",
+      "CHECK"
+    ],
+    "answer": 0,
+    "explanation": "UNIQUE interdit les doublons tout en autorisant généralement une valeur NULL selon le SGBD."
+  },
+  {
+    "id": 318,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle contrainte identifie de manière unique chaque ligne d'une table ?",
+    "choices": [
+      "PRIMARY KEY",
+      "UNIQUE",
+      "FOREIGN KEY",
+      "INDEX"
+    ],
+    "answer": 0,
+    "explanation": "La clé primaire identifie chaque enregistrement de façon unique."
+  },
+  {
+    "id": 319,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle contrainte permet de relier deux tables entre elles ?",
+    "choices": [
+      "FOREIGN KEY",
+      "PRIMARY KEY",
+      "UNIQUE",
+      "CHECK"
+    ],
+    "answer": 0,
+    "explanation": "Une clé étrangère référence la clé primaire d'une autre table."
+  },
+  {
+    "id": 320,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel SGBD NoSQL est basé sur des documents JSON/BSON ?",
+    "choices": [
+      "MongoDB",
+      "PostgreSQL",
+      "SQLite",
+      "MariaDB"
+    ],
+    "answer": 0,
+    "explanation": "MongoDB est une base de données NoSQL orientée documents utilisant le format BSON."
+  },
+  {
+    "id": 321,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de jointure SQL retourne uniquement les lignes présentes dans les deux tables ?",
+    "choices": [
+      "INNER JOIN",
+      "LEFT JOIN",
+      "RIGHT JOIN",
+      "FULL JOIN"
+    ],
+    "answer": 0,
+    "explanation": "INNER JOIN ne conserve que les correspondances entre les deux tables."
+  },
+  {
+    "id": 322,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de jointure retourne toutes les lignes de la table de gauche, même sans correspondance ?",
+    "choices": [
+      "LEFT JOIN",
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "CROSS JOIN"
+    ],
+    "answer": 0,
+    "explanation": "LEFT JOIN conserve toutes les lignes de la table de gauche."
+  },
+  {
+    "id": 323,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de jointure retourne toutes les lignes de la table de droite, même sans correspondance ?",
+    "choices": [
+      "RIGHT JOIN",
+      "LEFT JOIN",
+      "INNER JOIN",
+      "SELF JOIN"
+    ],
+    "answer": 0,
+    "explanation": "RIGHT JOIN conserve toutes les lignes de la table de droite."
+  },
+  {
+    "id": 324,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle clause SQL filtre les groupes créés avec GROUP BY ?",
+    "choices": [
+      "HAVING",
+      "WHERE",
+      "ORDER BY",
+      "LIMIT"
+    ],
+    "answer": 0,
+    "explanation": "HAVING s'applique après le regroupement des données."
+  },
+  {
+    "id": 325,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel mot-clé SQL limite le nombre de résultats retournés ?",
+    "choices": [
+      "LIMIT",
+      "TOP",
+      "FETCH",
+      "OFFSET"
+    ],
+    "answer": 0,
+    "explanation": "LIMIT est utilisé par MySQL, PostgreSQL et SQLite pour limiter les résultats."
+  },
+  {
+    "id": 326,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le rôle principal d'un index dans une base de données ?",
+    "choices": [
+      "Accélérer les recherches",
+      "Compresser les données",
+      "Sauvegarder automatiquement la base",
+      "Chiffrer les tables"
+    ],
+    "answer": 0,
+    "explanation": "Un index améliore les performances des requêtes de recherche."
+  },
+  {
+    "id": 327,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal inconvénient des index ?",
+    "choices": [
+      "Ils ralentissent les opérations d'insertion et de mise à jour",
+      "Ils empêchent les jointures",
+      "Ils remplacent les clés primaires",
+      "Ils rendent SQL incompatible"
+    ],
+    "answer": 0,
+    "explanation": "Les index accélèrent les lectures mais ont un coût lors des écritures."
+  },
+  {
+    "id": 328,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme ACID en base de données ?",
+    "choices": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Access, Control, Integrity, Data",
+      "Automatic, Consistent, Indexed, Distributed",
+      "Atomic, Centralized, Internal, Database"
+    ],
+    "answer": 0,
+    "explanation": "ACID définit les propriétés fondamentales des transactions fiables."
+  },
+  {
+    "id": 329,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande valide définitivement une transaction SQL ?",
+    "choices": [
+      "COMMIT",
+      "SAVE",
+      "ROLLBACK",
+      "CONFIRM"
+    ],
+    "answer": 0,
+    "explanation": "COMMIT enregistre définitivement les modifications."
+  },
+  {
+    "id": 330,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande annule une transaction SQL non validée ?",
+    "choices": [
+      "ROLLBACK",
+      "UNDO",
+      "RESET",
+      "CANCEL"
+    ],
+    "answer": 0,
+    "explanation": "ROLLBACK restaure la base à son état précédent."
+  },
+  {
+    "id": 331,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de base de données stocke principalement des documents plutôt que des tables ?",
+    "choices": [
+      "NoSQL",
+      "Relationnelle",
+      "Hiérarchique",
+      "Temporelle"
+    ],
+    "answer": 0,
+    "explanation": "Les bases NoSQL orientées documents stockent des documents JSON/BSON."
+  },
+  {
+    "id": 332,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans MongoDB, comment appelle-t-on l'équivalent d'une ligne SQL ?",
+    "choices": [
+      "Document",
+      "Collection",
+      "Champ",
+      "Index"
+    ],
+    "answer": 0,
+    "explanation": "Un document représente un enregistrement dans MongoDB."
+  },
+  {
+    "id": 333,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans MongoDB, quel est l'équivalent d'une table SQL ?",
+    "choices": [
+      "Collection",
+      "Document",
+      "Schéma",
+      "Cluster"
+    ],
+    "answer": 0,
+    "explanation": "Une collection regroupe plusieurs documents."
+  },
+  {
+    "id": 334,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel champ est créé automatiquement dans chaque document MongoDB ?",
+    "choices": [
+      "_id",
+      "id",
+      "uuid",
+      "key"
+    ],
+    "answer": 0,
+    "explanation": "Chaque document possède un champ _id unique."
+  },
+  {
+    "id": 335,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel opérateur MongoDB est utilisé pour effectuer une comparaison 'supérieur à' ?",
+    "choices": [
+      "$gt",
+      "$lt",
+      "$eq",
+      "$gte"
+    ],
+    "answer": 0,
+    "explanation": "$gt signifie 'greater than'."
+  },
+  {
+    "id": 336,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel opérateur MongoDB signifie 'inférieur à' ?",
+    "choices": [
+      "$lt",
+      "$gt",
+      "$eq",
+      "$ne"
+    ],
+    "answer": 0,
+    "explanation": "$lt signifie 'less than'."
+  },
+  {
+    "id": 337,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle méthode MongoDB permet de récupérer plusieurs documents ?",
+    "choices": [
+      "find()",
+      "select()",
+      "search()",
+      "getAll()"
+    ],
+    "answer": 0,
+    "explanation": "find() retourne tous les documents correspondant au filtre."
+  },
+  {
+    "id": 338,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle méthode MongoDB retourne un seul document ?",
+    "choices": [
+      "findOne()",
+      "find()",
+      "get()",
+      "first()"
+    ],
+    "answer": 0,
+    "explanation": "findOne() renvoie uniquement le premier document correspondant."
+  },
+  {
+    "id": 339,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel framework Node.js est le plus utilisé pour interagir avec MongoDB ?",
+    "choices": [
+      "Mongoose",
+      "Sequelize",
+      "Hibernate",
+      "Doctrine"
+    ],
+    "answer": 0,
+    "explanation": "Mongoose est l'ODM le plus populaire pour MongoDB avec Node.js."
+  },
+  {
+    "id": 340,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage d'une base NoSQL comme MongoDB par rapport à une base relationnelle ?",
+    "choices": [
+      "Un schéma flexible qui facilite l'évolution des données",
+      "Des jointures plus rapides",
+      "L'absence totale d'index",
+      "Une compatibilité exclusive avec SQL"
+    ],
+    "answer": 0,
+    "explanation": "MongoDB permet de faire évoluer facilement la structure des documents sans schéma strict."
+  },
+  {
+    "id": 341,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Qu'est-ce qu'un conteneur Docker ?",
+    "choices": [
+      "Un environnement isolé contenant une application et ses dépendances",
+      "Une machine virtuelle complète",
+      "Un serveur physique",
+      "Une base de données"
+    ],
+    "answer": 0,
+    "explanation": "Un conteneur Docker embarque une application avec toutes ses dépendances dans un environnement isolé."
+  },
+  {
+    "id": 342,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fichier est utilisé pour construire une image Docker ?",
+    "choices": [
+      "Dockerfile",
+      "docker.json",
+      "compose.yml",
+      "container.conf"
+    ],
+    "answer": 0,
+    "explanation": "Le Dockerfile contient les instructions permettant de créer une image Docker."
+  },
+  {
+    "id": 343,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande construit une image Docker à partir d'un Dockerfile ?",
+    "choices": [
+      "docker build",
+      "docker create",
+      "docker make",
+      "docker compile"
+    ],
+    "answer": 0,
+    "explanation": "docker build génère une image Docker."
+  },
+  {
+    "id": 344,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche les conteneurs Docker en cours d'exécution ?",
+    "choices": [
+      "docker ps",
+      "docker images",
+      "docker ls",
+      "docker list"
+    ],
+    "answer": 0,
+    "explanation": "docker ps affiche les conteneurs actifs."
+  },
+  {
+    "id": 345,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande affiche les images Docker disponibles localement ?",
+    "choices": [
+      "docker images",
+      "docker ps",
+      "docker list",
+      "docker img"
+    ],
+    "answer": 0,
+    "explanation": "docker images liste les images présentes sur la machine."
+  },
+  {
+    "id": 346,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande lance un nouveau conteneur Docker ?",
+    "choices": [
+      "docker run",
+      "docker start",
+      "docker execute",
+      "docker create"
+    ],
+    "answer": 0,
+    "explanation": "docker run crée et démarre un conteneur."
+  },
+  {
+    "id": 347,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande arrête un conteneur Docker ?",
+    "choices": [
+      "docker stop",
+      "docker killall",
+      "docker end",
+      "docker close"
+    ],
+    "answer": 0,
+    "explanation": "docker stop arrête proprement un conteneur."
+  },
+  {
+    "id": 348,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande supprime un conteneur Docker ?",
+    "choices": [
+      "docker rm",
+      "docker delete",
+      "docker remove",
+      "docker del"
+    ],
+    "answer": 0,
+    "explanation": "docker rm supprime un ou plusieurs conteneurs."
+  },
+  {
+    "id": 349,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande télécharge une image depuis Docker Hub ?",
+    "choices": [
+      "docker pull",
+      "docker fetch",
+      "docker clone",
+      "docker download"
+    ],
+    "answer": 0,
+    "explanation": "docker pull récupère une image depuis un registre."
+  },
+  {
+    "id": 350,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel registre officiel héberge les images Docker publiques ?",
+    "choices": [
+      "Docker Hub",
+      "GitHub",
+      "Docker Cloud",
+      "Hub Registry"
+    ],
+    "answer": 0,
+    "explanation": "Docker Hub est le registre officiel des images Docker."
+  },
+  {
+    "id": 351,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fichier permet de définir plusieurs services Docker ?",
+    "choices": [
+      "docker-compose.yml",
+      "Dockerfile",
+      "docker.json",
+      "services.yml"
+    ],
+    "answer": 0,
+    "explanation": "docker-compose.yml décrit plusieurs services Docker."
+  },
+  {
+    "id": 352,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel outil est utilisé pour orchestrer des conteneurs à grande échelle ?",
+    "choices": [
+      "Kubernetes",
+      "Docker Hub",
+      "Git",
+      "Node.js"
+    ],
+    "answer": 0,
+    "explanation": "Kubernetes automatise le déploiement et la gestion des conteneurs."
+  },
+  {
+    "id": 353,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage d'un conteneur par rapport à une machine virtuelle ?",
+    "choices": [
+      "Il est plus léger et démarre plus rapidement",
+      "Il possède son propre noyau",
+      "Il remplace un système d'exploitation",
+      "Il utilise plus de mémoire"
+    ],
+    "answer": 0,
+    "explanation": "Les conteneurs partagent le noyau du système hôte, ce qui les rend plus légers."
+  },
+  {
+    "id": 354,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel composant est partagé entre les conteneurs Docker et le système hôte ?",
+    "choices": [
+      "Le noyau du système d'exploitation",
+      "La mémoire vive",
+      "Le disque dur",
+      "Le processeur"
+    ],
+    "answer": 0,
+    "explanation": "Les conteneurs utilisent le même noyau que l'hôte."
+  },
+  {
+    "id": 355,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet d'afficher les journaux d'un conteneur ?",
+    "choices": [
+      "docker logs",
+      "docker history",
+      "docker status",
+      "docker output"
+    ],
+    "answer": 0,
+    "explanation": "docker logs affiche la sortie standard d'un conteneur."
+  },
+  {
+    "id": 356,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle commande permet d'ouvrir un terminal dans un conteneur déjà lancé ?",
+    "choices": [
+      "docker exec",
+      "docker shell",
+      "docker terminal",
+      "docker ssh"
+    ],
+    "answer": 0,
+    "explanation": "docker exec permet d'exécuter une commande dans un conteneur actif."
+  },
+  {
+    "id": 357,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle option Docker permet d'exécuter un conteneur en arrière-plan ?",
+    "choices": [
+      "-d",
+      "-a",
+      "-v",
+      "-p"
+    ],
+    "answer": 0,
+    "explanation": "L'option -d (detached) lance le conteneur en arrière-plan."
+  },
+  {
+    "id": 358,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle option Docker permet de publier un port du conteneur vers l'hôte ?",
+    "choices": [
+      "-p",
+      "-v",
+      "-d",
+      "-i"
+    ],
+    "answer": 0,
+    "explanation": "L'option -p associe un port de l'hôte à un port du conteneur."
+  },
+  {
+    "id": 359,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle option Docker permet de monter un volume entre l'hôte et le conteneur ?",
+    "choices": [
+      "-v",
+      "-p",
+      "-d",
+      "-e"
+    ],
+    "answer": 0,
+    "explanation": "L'option -v permet de partager des fichiers entre l'hôte et le conteneur."
+  },
+  {
+    "id": 360,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal intérêt d'utiliser Docker en développement ?",
+    "choices": [
+      "Garantir un environnement identique sur toutes les machines",
+      "Augmenter automatiquement la vitesse du processeur",
+      "Remplacer Git",
+      "Supprimer le besoin d'un système d'exploitation"
+    ],
+    "answer": 0,
+    "explanation": "Docker assure que l'application fonctionne dans le même environnement, quel que soit l'ordinateur."
+  },
+  {
+    "id": 361,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme AWS ?",
+    "choices": [
+      "Amazon Web Services",
+      "Advanced Web System",
+      "Application Web Services",
+      "Amazon Workspace Server"
+    ],
+    "answer": 0,
+    "explanation": "AWS est la plateforme de cloud computing d'Amazon."
+  },
+  {
+    "id": 362,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fournisseur de cloud développe Azure ?",
+    "choices": [
+      "Microsoft",
+      "Google",
+      "Amazon",
+      "Oracle"
+    ],
+    "answer": 0,
+    "explanation": "Microsoft Azure est la plateforme cloud de Microsoft."
+  },
+  {
+    "id": 363,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel fournisseur est à l'origine de Google Cloud Platform (GCP) ?",
+    "choices": [
+      "Google",
+      "IBM",
+      "Oracle",
+      "Meta"
+    ],
+    "answer": 0,
+    "explanation": "Google Cloud Platform est la solution cloud de Google."
+  },
+  {
+    "id": 364,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme IaaS ?",
+    "choices": [
+      "Infrastructure as a Service",
+      "Internet as a Service",
+      "Interface as a Service",
+      "Instance as a Service"
+    ],
+    "answer": 0,
+    "explanation": "L'IaaS fournit une infrastructure informatique à la demande."
+  },
+  {
+    "id": 365,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme PaaS ?",
+    "choices": [
+      "Platform as a Service",
+      "Protocol as a Service",
+      "Program as a Service",
+      "Private as a Service"
+    ],
+    "answer": 0,
+    "explanation": "Le PaaS fournit une plateforme de développement et de déploiement."
+  },
+  {
+    "id": 366,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme SaaS ?",
+    "choices": [
+      "Software as a Service",
+      "Storage as a Service",
+      "Security as a Service",
+      "Server as a Service"
+    ],
+    "answer": 0,
+    "explanation": "Le SaaS permet d'utiliser un logiciel directement via Internet."
+  },
+  {
+    "id": 367,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel service cloud permet principalement de stocker des fichiers ?",
+    "choices": [
+      "Le stockage objet",
+      "Le calcul distribué",
+      "La virtualisation",
+      "Le load balancing"
+    ],
+    "answer": 0,
+    "explanation": "Le stockage objet est utilisé pour conserver des fichiers dans le cloud."
+  },
+  {
+    "id": 368,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est l'avantage principal du cloud computing ?",
+    "choices": [
+      "Adapter rapidement les ressources aux besoins",
+      "Supprimer Internet",
+      "Éliminer tous les risques de panne",
+      "Remplacer les bases de données"
+    ],
+    "answer": 0,
+    "explanation": "Le cloud permet d'augmenter ou réduire les ressources à la demande."
+  },
+  {
+    "id": 369,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment appelle-t-on la capacité d'augmenter automatiquement les ressources d'un service cloud ?",
+    "choices": [
+      "Scalabilité",
+      "Virtualisation",
+      "Compilation",
+      "Fragmentation"
+    ],
+    "answer": 0,
+    "explanation": "La scalabilité permet d'adapter les ressources selon la charge."
+  },
+  {
+    "id": 370,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel composant répartit le trafic entre plusieurs serveurs ?",
+    "choices": [
+      "Load Balancer",
+      "Firewall",
+      "Proxy",
+      "DNS"
+    ],
+    "answer": 0,
+    "explanation": "Un Load Balancer distribue les requêtes entre plusieurs serveurs."
+  },
+  {
+    "id": 371,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel service est spécialisé dans l'hébergement de sites statiques et d'applications front-end ?",
+    "choices": [
+      "Vercel",
+      "MongoDB",
+      "MySQL",
+      "Redis"
+    ],
+    "answer": 0,
+    "explanation": "Vercel est particulièrement populaire pour les projets Next.js et les applications front-end."
+  },
+  {
+    "id": 372,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle plateforme est fréquemment utilisée pour héberger des applications Node.js gratuitement ?",
+    "choices": [
+      "Railway",
+      "WinRAR",
+      "VirtualBox",
+      "Wireshark"
+    ],
+    "answer": 0,
+    "explanation": "Railway permet de déployer facilement des applications Node.js et d'autres services."
+  },
+  {
+    "id": 373,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle plateforme est connue pour le déploiement d'applications web et d'API avec des plans gratuits ?",
+    "choices": [
+      "Render",
+      "Docker Hub",
+      "VMware",
+      "OBS Studio"
+    ],
+    "answer": 0,
+    "explanation": "Render permet d'héberger des applications web, API et bases de données."
+  },
+  {
+    "id": 374,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel service permet de gérer le code source d'un projet ?",
+    "choices": [
+      "GitHub",
+      "MongoDB",
+      "Redis",
+      "Docker"
+    ],
+    "answer": 0,
+    "explanation": "GitHub est une plateforme d'hébergement de dépôts Git."
+  },
+  {
+    "id": 375,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de serveur répond principalement aux requêtes HTTP des utilisateurs ?",
+    "choices": [
+      "Serveur Web",
+      "Serveur DNS",
+      "Serveur DHCP",
+      "Serveur FTP"
+    ],
+    "answer": 0,
+    "explanation": "Un serveur Web héberge des sites et applications accessibles via HTTP/HTTPS."
+  },
+  {
+    "id": 376,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel logiciel est le serveur Web le plus utilisé au monde ?",
+    "choices": [
+      "Nginx",
+      "Discord",
+      "MongoDB",
+      "Redis"
+    ],
+    "answer": 0,
+    "explanation": "Nginx est largement utilisé pour héberger des sites web et servir de proxy inverse."
+  },
+  {
+    "id": 377,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel logiciel est également un serveur Web très populaire et open source ?",
+    "choices": [
+      "Apache HTTP Server",
+      "Visual Studio Code",
+      "Docker Compose",
+      "Express.js"
+    ],
+    "answer": 0,
+    "explanation": "Apache HTTP Server est l'un des serveurs Web les plus répandus."
+  },
+  {
+    "id": 378,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel composant agit comme intermédiaire entre un client et un serveur ?",
+    "choices": [
+      "Proxy",
+      "Switch",
+      "Hub",
+      "RAM"
+    ],
+    "answer": 0,
+    "explanation": "Un proxy relaie les requêtes entre le client et le serveur."
+  },
+  {
+    "id": 379,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel type de proxy est souvent utilisé devant un serveur Web pour améliorer les performances et la sécurité ?",
+    "choices": [
+      "Reverse Proxy",
+      "Forward Proxy",
+      "Transparent Proxy",
+      "SOCKS Proxy"
+    ],
+    "answer": 0,
+    "explanation": "Un reverse proxy reçoit les requêtes avant de les transmettre aux serveurs."
+  },
+  {
+    "id": 380,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage d'un CDN (Content Delivery Network) ?",
+    "choices": [
+      "Distribuer le contenu depuis des serveurs proches des utilisateurs",
+      "Créer automatiquement une base de données",
+      "Compiler le code plus rapidement",
+      "Remplacer un système d'exploitation"
+    ],
+    "answer": 0,
+    "explanation": "Un CDN réduit la latence en servant le contenu depuis le serveur géographiquement le plus proche."
+  },
+  {
+    "id": 381,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'acronyme MVC en architecture logicielle ?",
+    "choices": [
+      "Model - View - Controller",
+      "Main - View - Code",
+      "Model - Version - Controller",
+      "Module - View - Component"
+    ],
+    "answer": 0,
+    "explanation": "MVC sépare une application en Modèle, Vue et Contrôleur."
+  },
+  {
+    "id": 382,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans le modèle MVC, quel composant gère les données et la logique métier ?",
+    "choices": [
+      "Le Model",
+      "La View",
+      "Le Controller",
+      "Le Router"
+    ],
+    "answer": 0,
+    "explanation": "Le Model représente les données et la logique métier."
+  },
+  {
+    "id": 383,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans le modèle MVC, quel composant est chargé de l'affichage ?",
+    "choices": [
+      "La View",
+      "Le Model",
+      "Le Controller",
+      "Le Middleware"
+    ],
+    "answer": 0,
+    "explanation": "La View est responsable de l'interface utilisateur."
+  },
+  {
+    "id": 384,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans le modèle MVC, quel composant reçoit les requêtes utilisateur et coordonne les actions ?",
+    "choices": [
+      "Le Controller",
+      "Le Model",
+      "La View",
+      "Le Serveur"
+    ],
+    "answer": 0,
+    "explanation": "Le Controller reçoit les requêtes et communique avec le Model et la View."
+  },
+  {
+    "id": 385,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Qu'est-ce qu'un middleware dans une application web ?",
+    "choices": [
+      "Une fonction exécutée entre la requête et la réponse",
+      "Une base de données",
+      "Un serveur DNS",
+      "Un compilateur"
+    ],
+    "answer": 0,
+    "explanation": "Les middlewares permettent de traiter les requêtes avant leur arrivée au contrôleur."
+  },
+  {
+    "id": 386,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle architecture découpe une application en plusieurs services indépendants ?",
+    "choices": [
+      "Microservices",
+      "Monolithique",
+      "MVC",
+      "Client léger"
+    ],
+    "answer": 0,
+    "explanation": "Les microservices permettent à chaque service d'être développé et déployé indépendamment."
+  },
+  {
+    "id": 387,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage d'une architecture en microservices ?",
+    "choices": [
+      "Chaque service peut évoluer indépendamment",
+      "Elle ne nécessite aucune base de données",
+      "Elle supprime le besoin d'API",
+      "Elle fonctionne sans réseau"
+    ],
+    "answer": 0,
+    "explanation": "Les microservices facilitent la maintenance et la montée en charge."
+  },
+  {
+    "id": 388,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Comment appelle-t-on une application dont tout le code est regroupé dans un seul projet ?",
+    "choices": [
+      "Monolithe",
+      "Microservice",
+      "Cluster",
+      "Proxy"
+    ],
+    "answer": 0,
+    "explanation": "Une architecture monolithique regroupe tous les composants dans une seule application."
+  },
+  {
+    "id": 389,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel protocole est le plus utilisé pour les API REST ?",
+    "choices": [
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "SSH"
+    ],
+    "answer": 0,
+    "explanation": "REST repose principalement sur le protocole HTTP."
+  },
+  {
+    "id": 390,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle technologie permet au client de demander exactement les données souhaitées via une API ?",
+    "choices": [
+      "GraphQL",
+      "SOAP",
+      "REST",
+      "XML-RPC"
+    ],
+    "answer": 0,
+    "explanation": "GraphQL permet au client de spécifier précisément les données à récupérer."
+  },
+  {
+    "id": 391,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal avantage de GraphQL par rapport à REST ?",
+    "choices": [
+      "Limiter les données inutiles échangées",
+      "Remplacer HTTPS",
+      "Supprimer les bases de données",
+      "Compiler automatiquement le code"
+    ],
+    "answer": 0,
+    "explanation": "GraphQL permet de récupérer uniquement les champs demandés."
+  },
+  {
+    "id": 392,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel composant est responsable du routage des requêtes dans une application web ?",
+    "choices": [
+      "Le routeur",
+      "Le compilateur",
+      "Le cache",
+      "Le scheduler"
+    ],
+    "answer": 0,
+    "explanation": "Le routeur associe une URL à une action de l'application."
+  },
+  {
+    "id": 393,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "À quoi sert principalement un cache ?",
+    "choices": [
+      "Accélérer l'accès aux données fréquemment utilisées",
+      "Compresser les fichiers",
+      "Créer une base de données",
+      "Remplacer le processeur"
+    ],
+    "answer": 0,
+    "explanation": "Le cache réduit le temps d'accès aux données déjà calculées ou récupérées."
+  },
+  {
+    "id": 394,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel système est largement utilisé comme cache en mémoire ?",
+    "choices": [
+      "Redis",
+      "MongoDB",
+      "SQLite",
+      "MariaDB"
+    ],
+    "answer": 0,
+    "explanation": "Redis est une base de données en mémoire très utilisée pour le cache."
+  },
+  {
+    "id": 395,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est l'avantage principal d'utiliser Redis comme cache ?",
+    "choices": [
+      "Des temps de réponse très rapides grâce au stockage en mémoire",
+      "Une capacité de stockage illimitée",
+      "Une exécution sans RAM",
+      "Le remplacement d'un serveur Web"
+    ],
+    "answer": 0,
+    "explanation": "Redis stocke les données en mémoire vive, ce qui le rend extrêmement rapide."
+  },
+  {
+    "id": 396,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel composant répartit automatiquement les requêtes entre plusieurs instances d'une application ?",
+    "choices": [
+      "Load Balancer",
+      "DNS",
+      "Routeur",
+      "Switch"
+    ],
+    "answer": 0,
+    "explanation": "Le Load Balancer répartit la charge entre plusieurs serveurs."
+  },
+  {
+    "id": 397,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie le terme 'scalabilité horizontale' ?",
+    "choices": [
+      "Ajouter davantage de serveurs",
+      "Augmenter la mémoire d'un seul serveur",
+      "Changer de système d'exploitation",
+      "Ajouter un disque dur"
+    ],
+    "answer": 0,
+    "explanation": "La scalabilité horizontale consiste à ajouter des machines supplémentaires."
+  },
+  {
+    "id": 398,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie le terme 'scalabilité verticale' ?",
+    "choices": [
+      "Augmenter les ressources d'un serveur existant",
+      "Ajouter plusieurs serveurs",
+      "Créer un cluster Kubernetes",
+      "Dupliquer une base de données"
+    ],
+    "answer": 0,
+    "explanation": "La scalabilité verticale consiste à renforcer les ressources d'une seule machine."
+  },
+  {
+    "id": 399,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le principal objectif de la haute disponibilité (High Availability) ?",
+    "choices": [
+      "Maintenir un service accessible malgré les pannes",
+      "Réduire la taille des fichiers",
+      "Augmenter la fréquence du processeur",
+      "Supprimer les sauvegardes"
+    ],
+    "answer": 0,
+    "explanation": "La haute disponibilité minimise les interruptions de service."
+  },
+  {
+    "id": 400,
+    "category": "Informatique",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle pratique consiste à automatiser les tests et le déploiement d'une application après chaque modification du code ?",
+    "choices": [
+      "CI/CD",
+      "MVC",
+      "ORM",
+      "DNS"
+    ],
+    "answer": 0,
+    "explanation": "CI/CD (Continuous Integration / Continuous Deployment) automatise l'intégration, les tests et le déploiement des applications."
+  },
+  {
+    "id": 401,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme XSS en cybersécurité ?",
+    "choices": [
+      "Cross-Site Scripting",
+      "Cross Server Security",
+      "Extended Security System",
+      "Cross Site Session"
+    ],
+    "answer": 0,
+    "explanation": "Une attaque XSS consiste à injecter du code JavaScript malveillant dans une page web."
+  },
+  {
+    "id": 402,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle attaque consiste à envoyer des requêtes SQL malveillantes à une application ?",
+    "choices": [
+      "SQL Injection",
+      "Buffer Overflow",
+      "ARP Spoofing",
+      "DNS Poisoning"
+    ],
+    "answer": 0,
+    "explanation": "La SQL Injection exploite une mauvaise validation des entrées utilisateur."
+  },
+  {
+    "id": 403,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel protocole est utilisé pour établir une connexion web chiffrée ?",
+    "choices": [
+      "TLS",
+      "FTP",
+      "SMTP",
+      "SNMP"
+    ],
+    "answer": 0,
+    "explanation": "TLS protège les échanges de données sur HTTPS."
+  },
+  {
+    "id": 404,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type d'attaque consiste à intercepter les communications entre deux parties sans qu'elles le sachent ?",
+    "choices": [
+      "Man-in-the-Middle",
+      "Brute Force",
+      "Phishing",
+      "DDoS"
+    ],
+    "answer": 0,
+    "explanation": "Une attaque Man-in-the-Middle intercepte et peut modifier les communications."
+  },
+  {
+    "id": 405,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle méthode consiste à utiliser plusieurs facteurs pour authentifier un utilisateur ?",
+    "choices": [
+      "MFA",
+      "VPN",
+      "SSH",
+      "SSL"
+    ],
+    "answer": 0,
+    "explanation": "La MFA combine plusieurs facteurs comme un mot de passe et un code temporaire."
+  },
+  {
+    "id": 406,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel algorithme est principalement utilisé pour l'échange sécurisé de clés sur Internet ?",
+    "choices": [
+      "RSA",
+      "AES",
+      "CRC32",
+      "Base64"
+    ],
+    "answer": 0,
+    "explanation": "RSA est largement utilisé pour l'échange de clés et les signatures numériques."
+  },
+  {
+    "id": 407,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel algorithme de chiffrement symétrique est aujourd'hui considéré comme une référence ?",
+    "choices": [
+      "AES",
+      "DES",
+      "MD5",
+      "SHA-1"
+    ],
+    "answer": 0,
+    "explanation": "AES est le standard moderne du chiffrement symétrique."
+  },
+  {
+    "id": 408,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "À quoi sert principalement une fonction de hachage cryptographique ?",
+    "choices": [
+      "Vérifier l'intégrité des données",
+      "Compresser les données",
+      "Crypter les données",
+      "Accélérer le réseau"
+    ],
+    "answer": 0,
+    "explanation": "Une fonction de hachage permet de détecter toute modification des données."
+  },
+  {
+    "id": 409,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel protocole sécurise principalement les connexions distantes à un serveur ?",
+    "choices": [
+      "SSH",
+      "Telnet",
+      "FTP",
+      "HTTP"
+    ],
+    "answer": 0,
+    "explanation": "SSH chiffre les communications entre le client et le serveur."
+  },
+  {
+    "id": 410,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal d'un IDS (Intrusion Detection System) ?",
+    "choices": [
+      "Détecter les activités suspectes",
+      "Bloquer automatiquement tout le trafic",
+      "Créer des sauvegardes",
+      "Héberger des sites web"
+    ],
+    "answer": 0,
+    "explanation": "Un IDS surveille le réseau afin de détecter des comportements anormaux."
+  },
+  {
+    "id": 411,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal d'un IPS (Intrusion Prevention System) ?",
+    "choices": [
+      "Détecter et bloquer les attaques",
+      "Créer des certificats",
+      "Héberger des applications",
+      "Attribuer des adresses IP"
+    ],
+    "answer": 0,
+    "explanation": "Un IPS analyse le trafic et bloque automatiquement les menaces."
+  },
+  {
+    "id": 412,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type d'attaque vise à rediriger un utilisateur vers un faux site en modifiant les réponses DNS ?",
+    "choices": [
+      "DNS Spoofing",
+      "SQL Injection",
+      "Cross-Site Scripting",
+      "ARP Flood"
+    ],
+    "answer": 0,
+    "explanation": "Le DNS Spoofing falsifie les réponses DNS afin de tromper les utilisateurs."
+  },
+  {
+    "id": 413,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel protocole permet d'attribuer automatiquement des adresses IP ?",
+    "choices": [
+      "DHCP",
+      "DNS",
+      "ARP",
+      "ICMP"
+    ],
+    "answer": 0,
+    "explanation": "Le protocole DHCP distribue automatiquement les paramètres réseau."
+  },
+  {
+    "id": 414,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type de malware est conçu pour rester caché tout en donnant un accès privilégié à un attaquant ?",
+    "choices": [
+      "Rootkit",
+      "Adware",
+      "Spyware",
+      "Worm"
+    ],
+    "answer": 0,
+    "explanation": "Un rootkit masque sa présence et permet souvent un contrôle avancé du système."
+  },
+  {
+    "id": 415,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel malware est capable de se propager automatiquement sans intervention de l'utilisateur ?",
+    "choices": [
+      "Worm",
+      "Trojan",
+      "Spyware",
+      "Ransomware"
+    ],
+    "answer": 0,
+    "explanation": "Un ver (worm) se réplique et se diffuse automatiquement sur un réseau."
+  },
+  {
+    "id": 416,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la principale différence entre un virus et un ver informatique ?",
+    "choices": [
+      "Le ver se propage seul, le virus nécessite généralement une action",
+      "Le virus chiffre les fichiers",
+      "Le ver ne peut pas infecter un ordinateur",
+      "Il n'existe aucune différence"
+    ],
+    "answer": 0,
+    "explanation": "Un ver est autonome, tandis qu'un virus a souvent besoin d'un fichier hôte ou d'une action utilisateur."
+  },
+  {
+    "id": 417,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal d'un certificat numérique ?",
+    "choices": [
+      "Authentifier une identité et distribuer une clé publique",
+      "Compresser les données",
+      "Créer une sauvegarde",
+      "Optimiser les performances"
+    ],
+    "answer": 0,
+    "explanation": "Un certificat numérique permet de vérifier l'identité d'un serveur ou d'un utilisateur."
+  },
+  {
+    "id": 418,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle autorité délivre généralement les certificats TLS utilisés sur Internet ?",
+    "choices": [
+      "Une autorité de certification (CA)",
+      "Le fournisseur d'accès Internet",
+      "Le navigateur",
+      "Le système d'exploitation"
+    ],
+    "answer": 0,
+    "explanation": "Les certificats sont délivrés par des autorités de certification (CA)."
+  },
+  {
+    "id": 419,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif d'un audit de sécurité informatique ?",
+    "choices": [
+      "Identifier les vulnérabilités d'un système",
+      "Augmenter la fréquence du processeur",
+      "Réduire la taille des fichiers",
+      "Créer automatiquement des sauvegardes"
+    ],
+    "answer": 0,
+    "explanation": "Un audit de sécurité permet de détecter les failles avant qu'elles ne soient exploitées."
+  },
+  {
+    "id": 420,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principe fondamental de la sécurité appelé 'moindre privilège' ?",
+    "choices": [
+      "N'accorder que les droits strictement nécessaires",
+      "Donner les droits administrateur à tous les utilisateurs",
+      "Supprimer tous les mots de passe",
+      "Utiliser uniquement des connexions locales"
+    ],
+    "answer": 0,
+    "explanation": "Le principe du moindre privilège limite les droits accordés afin de réduire les risques de compromission."
+  },
+  {
+    "id": 421,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme IA ?",
+    "choices": [
+      "Intelligence Artificielle",
+      "Interface Automatique",
+      "Information Analytique",
+      "Internet Assisté"
+    ],
+    "answer": 0,
+    "explanation": "L'IA désigne les techniques permettant à une machine de simuler certaines capacités humaines."
+  },
+  {
+    "id": 422,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle branche de l'IA permet à un ordinateur d'apprendre à partir de données ?",
+    "choices": [
+      "Machine Learning",
+      "Virtualisation",
+      "Cryptographie",
+      "Compilation"
+    ],
+    "answer": 0,
+    "explanation": "Le Machine Learning permet à une machine d'apprendre sans être explicitement programmée pour chaque cas."
+  },
+  {
+    "id": 423,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel sous-domaine du Machine Learning utilise des réseaux de neurones comportant de nombreuses couches ?",
+    "choices": [
+      "Deep Learning",
+      "Data Mining",
+      "Big Data",
+      "Cloud Computing"
+    ],
+    "answer": 0,
+    "explanation": "Le Deep Learning repose sur des réseaux de neurones profonds."
+  },
+  {
+    "id": 424,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel langage est aujourd'hui le plus utilisé en intelligence artificielle ?",
+    "choices": [
+      "Python",
+      "HTML",
+      "CSS",
+      "PHP"
+    ],
+    "answer": 0,
+    "explanation": "Python est devenu le langage de référence grâce à ses nombreuses bibliothèques d'IA."
+  },
+  {
+    "id": 425,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle bibliothèque Python est largement utilisée pour le calcul scientifique et les tableaux multidimensionnels ?",
+    "choices": [
+      "NumPy",
+      "Discord.js",
+      "Laravel",
+      "Bootstrap"
+    ],
+    "answer": 0,
+    "explanation": "NumPy est la base de nombreuses bibliothèques de Machine Learning."
+  },
+  {
+    "id": 426,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle bibliothèque Python est principalement utilisée pour le Machine Learning classique ?",
+    "choices": [
+      "Scikit-learn",
+      "Express",
+      "Electron",
+      "Jest"
+    ],
+    "answer": 0,
+    "explanation": "Scikit-learn fournit de nombreux algorithmes de Machine Learning."
+  },
+  {
+    "id": 427,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle bibliothèque est développée par Google pour le Deep Learning ?",
+    "choices": [
+      "TensorFlow",
+      "Bootstrap",
+      "Pandas",
+      "Flask"
+    ],
+    "answer": 0,
+    "explanation": "TensorFlow est l'une des bibliothèques de Deep Learning les plus utilisées."
+  },
+  {
+    "id": 428,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle bibliothèque de Deep Learning a été développée par Meta ?",
+    "choices": [
+      "PyTorch",
+      "SQLite",
+      "Redis",
+      "OpenCV"
+    ],
+    "answer": 0,
+    "explanation": "PyTorch est un framework de Deep Learning créé par Meta."
+  },
+  {
+    "id": 429,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment appelle-t-on l'ensemble des données utilisées pour entraîner un modèle d'IA ?",
+    "choices": [
+      "Dataset",
+      "Package",
+      "Repository",
+      "Pipeline"
+    ],
+    "answer": 0,
+    "explanation": "Un dataset est un ensemble de données servant à l'entraînement et aux tests."
+  },
+  {
+    "id": 430,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment appelle-t-on les données utilisées pour évaluer un modèle après son entraînement ?",
+    "choices": [
+      "Jeu de test",
+      "Dataset maître",
+      "Buffer",
+      "Cache"
+    ],
+    "answer": 0,
+    "explanation": "Le jeu de test permet de mesurer les performances du modèle sur des données inédites."
+  },
+  {
+    "id": 431,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type d'apprentissage utilise des données déjà étiquetées ?",
+    "choices": [
+      "Apprentissage supervisé",
+      "Apprentissage non supervisé",
+      "Apprentissage par renforcement",
+      "Auto-encodage"
+    ],
+    "answer": 0,
+    "explanation": "L'apprentissage supervisé repose sur des exemples dont la réponse est connue."
+  },
+  {
+    "id": 432,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type d'apprentissage cherche à découvrir des structures dans des données non étiquetées ?",
+    "choices": [
+      "Apprentissage non supervisé",
+      "Apprentissage supervisé",
+      "Apprentissage par renforcement",
+      "Transfer Learning"
+    ],
+    "answer": 0,
+    "explanation": "L'apprentissage non supervisé recherche des regroupements ou des motifs."
+  },
+  {
+    "id": 433,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type d'apprentissage repose sur un système de récompenses et de pénalités ?",
+    "choices": [
+      "Apprentissage par renforcement",
+      "Apprentissage supervisé",
+      "Apprentissage statistique",
+      "Apprentissage fédéré"
+    ],
+    "answer": 0,
+    "explanation": "Le Reinforcement Learning apprend en maximisant une récompense."
+  },
+  {
+    "id": 434,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal d'un réseau de neurones artificiels ?",
+    "choices": [
+      "Apprendre des relations complexes entre les données",
+      "Créer automatiquement une base de données",
+      "Remplacer Internet",
+      "Compresser les fichiers"
+    ],
+    "answer": 0,
+    "explanation": "Les réseaux de neurones sont capables de modéliser des relations très complexes."
+  },
+  {
+    "id": 435,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Dans un réseau de neurones, comment appelle-t-on les paramètres ajustés pendant l'entraînement ?",
+    "choices": [
+      "Les poids",
+      "Les index",
+      "Les ports",
+      "Les paquets"
+    ],
+    "answer": 0,
+    "explanation": "Les poids sont modifiés afin de réduire l'erreur du modèle."
+  },
+  {
+    "id": 436,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel phénomène survient lorsqu'un modèle apprend trop parfaitement les données d'entraînement ?",
+    "choices": [
+      "Overfitting",
+      "Caching",
+      "Hashing",
+      "Sharding"
+    ],
+    "answer": 0,
+    "explanation": "L'overfitting réduit la capacité du modèle à généraliser sur de nouvelles données."
+  },
+  {
+    "id": 437,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel terme désigne la capacité d'un modèle à bien fonctionner sur des données jamais vues ?",
+    "choices": [
+      "Généralisation",
+      "Compilation",
+      "Virtualisation",
+      "Segmentation"
+    ],
+    "answer": 0,
+    "explanation": "Un bon modèle généralise correctement sur des données inédites."
+  },
+  {
+    "id": 438,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel domaine de l'IA permet à un ordinateur de comprendre ou générer du texte humain ?",
+    "choices": [
+      "Traitement automatique du langage naturel (NLP)",
+      "Vision par ordinateur",
+      "Robotique",
+      "Cryptographie"
+    ],
+    "answer": 0,
+    "explanation": "Le NLP (Natural Language Processing) traite le langage humain."
+  },
+  {
+    "id": 439,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel domaine de l'IA consiste à analyser des images ou des vidéos ?",
+    "choices": [
+      "Vision par ordinateur",
+      "Cloud Computing",
+      "Blockchain",
+      "Virtualisation"
+    ],
+    "answer": 0,
+    "explanation": "La vision par ordinateur permet de détecter et reconnaître des objets dans les images."
+  },
+  {
+    "id": 440,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type de modèle est à la base des IA conversationnelles modernes comme ChatGPT ?",
+    "choices": [
+      "Grand modèle de langage (LLM)",
+      "Arbre binaire",
+      "Machine à états finis",
+      "Automate cellulaire"
+    ],
+    "answer": 0,
+    "explanation": "Les IA conversationnelles modernes reposent sur des Large .Language Models (LLM), entraînés sur de très grands volumes de texte."
+  },
+  {
+    "id": 441,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme GPU ?",
+    "choices": [
+      "Graphics Processing Unit",
+      "General Processing Unit",
+      "Graphical Program Utility",
+      "Global Processing Unit"
+    ],
+    "answer": 0,
+    "explanation": "Le GPU est un processeur spécialisé dans les calculs parallèles, notamment pour les graphismes et l'IA."
+  },
+  {
+    "id": 442,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Pourquoi les GPU sont-ils particulièrement adaptés au Deep Learning ?",
+    "choices": [
+      "Ils exécutent de nombreux calculs en parallèle",
+      "Ils remplacent la RAM",
+      "Ils augmentent la vitesse d'Internet",
+      "Ils réduisent la taille des modèles"
+    ],
+    "answer": 0,
+    "explanation": "Les réseaux de neurones nécessitent énormément de calculs matriciels, parfaitement adaptés aux GPU."
+  },
+  {
+    "id": 443,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme TPU développé par Google ?",
+    "choices": [
+      "Tensor Processing Unit",
+      "Thread Processing Unit",
+      "Task Processing Unit",
+      "Tensor Program Utility"
+    ],
+    "answer": 0,
+    "explanation": "Les TPU sont des accélérateurs matériels optimisés pour TensorFlow et l'IA."
+  },
+  {
+    "id": 444,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif de la phase d'entraînement d'un modèle d'IA ?",
+    "choices": [
+      "Ajuster les paramètres du modèle",
+      "Créer une base de données",
+      "Compresser les données",
+      "Crypter les informations"
+    ],
+    "answer": 0,
+    "explanation": "L'entraînement consiste à modifier les paramètres du modèle afin de réduire son erreur."
+  },
+  {
+    "id": 445,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment appelle-t-on l'utilisation d'un modèle déjà entraîné pour effectuer une prédiction ?",
+    "choices": [
+      "Inférence",
+      "Compilation",
+      "Prétraitement",
+      "Virtualisation"
+    ],
+    "answer": 0,
+    "explanation": "L'inférence est la phase où le modèle est utilisé pour produire des résultats."
+  },
+  {
+    "id": 446,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal de la fonction de perte (Loss Function) ?",
+    "choices": [
+      "Mesurer l'erreur du modèle",
+      "Compresser les données",
+      "Créer des réseaux de neurones",
+      "Optimiser le processeur"
+    ],
+    "answer": 0,
+    "explanation": "La fonction de perte indique à quel point les prédictions sont éloignées de la réalité."
+  },
+  {
+    "id": 447,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel algorithme est le plus utilisé pour mettre à jour les poids d'un réseau de neurones ?",
+    "choices": [
+      "Descente de gradient",
+      "Recherche binaire",
+      "Dijkstra",
+      "Kruskal"
+    ],
+    "answer": 0,
+    "explanation": "La descente de gradient minimise progressivement la fonction de perte."
+  },
+  {
+    "id": 448,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel mécanisme calcule comment modifier chaque poids d'un réseau de neurones ?",
+    "choices": [
+      "Backpropagation",
+      "Compilation JIT",
+      "Hashing",
+      "Caching"
+    ],
+    "answer": 0,
+    "explanation": "La rétropropagation propage l'erreur afin de mettre à jour les poids."
+  },
+  {
+    "id": 449,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel terme désigne une unique présentation de toutes les données d'entraînement au modèle ?",
+    "choices": [
+      "Époque (Epoch)",
+      "Thread",
+      "Batch",
+      "Cycle CPU"
+    ],
+    "answer": 0,
+    "explanation": "Une époque correspond à un passage complet sur le jeu de données."
+  },
+  {
+    "id": 450,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Qu'est-ce qu'un batch en Machine Learning ?",
+    "choices": [
+      "Un sous-ensemble de données traité à la fois",
+      "Une sauvegarde",
+      "Un type de réseau",
+      "Une fonction mathématique"
+    ],
+    "answer": 0,
+    "explanation": "Les données sont généralement traitées par petits groupes appelés batchs."
+  },
+  {
+    "id": 451,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme RAG dans le domaine des LLM ?",
+    "choices": [
+      "Retrieval-Augmented Generation",
+      "Random Artificial Generator",
+      "Recursive AI Graph",
+      "Resource Access Gateway"
+    ],
+    "answer": 0,
+    "explanation": "Le RAG combine une recherche documentaire avec un modèle de langage."
+  },
+  {
+    "id": 452,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal avantage du RAG ?",
+    "choices": [
+      "Permettre au modèle d'utiliser des informations externes récentes",
+      "Réduire la mémoire RAM",
+      "Supprimer les hallucinations",
+      "Accélérer Internet"
+    ],
+    "answer": 0,
+    "explanation": "Le RAG permet de compléter les connaissances du modèle avec des documents externes."
+  },
+  {
+    "id": 453,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment appelle-t-on les réponses inventées par un modèle d'IA mais présentées comme vraies ?",
+    "choices": [
+      "Hallucinations",
+      "Exceptions",
+      "Prédictions",
+      "Compilations"
+    ],
+    "answer": 0,
+    "explanation": "Une hallucination est une information fausse générée avec assurance par un modèle."
+  },
+  {
+    "id": 454,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal d'un embedding en IA ?",
+    "choices": [
+      "Représenter des données sous forme de vecteurs numériques",
+      "Crypter les données",
+      "Compresser les images",
+      "Créer des certificats"
+    ],
+    "answer": 0,
+    "explanation": "Les embeddings permettent de mesurer les similarités entre textes ou objets."
+  },
+  {
+    "id": 455,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "À quoi sert principalement une base de données vectorielle ?",
+    "choices": [
+      "Effectuer des recherches par similarité",
+      "Stocker des mots de passe",
+      "Créer des machines virtuelles",
+      "Gérer les adresses IP"
+    ],
+    "answer": 0,
+    "explanation": "Les bases vectorielles permettent de retrouver rapidement les vecteurs les plus proches."
+  },
+  {
+    "id": 456,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel concept est au cœur des modèles Transformer modernes ?",
+    "choices": [
+      "Le mécanisme d'attention (Attention)",
+      "Les pointeurs",
+      "Les arbres AVL",
+      "Les piles"
+    ],
+    "answer": 0,
+    "explanation": "Le mécanisme d'attention permet au modèle de se concentrer sur les parties pertinentes d'une séquence."
+  },
+  {
+    "id": 457,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme LLM ?",
+    "choices": [
+      "Large Language Model",
+      "Long Learning Method",
+      "Large Logic Machine",
+      "Linear Language Model"
+    ],
+    "answer": 0,
+    "explanation": "Les LLM sont des modèles de langage entraînés sur d'immenses quantités de texte."
+  },
+  {
+    "id": 458,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif du fine-tuning d'un modèle d'IA ?",
+    "choices": [
+      "Adapter un modèle pré-entraîné à une tâche spécifique",
+      "Réduire sa taille physique",
+      "Changer son langage de programmation",
+      "Créer un nouveau processeur"
+    ],
+    "answer": 0,
+    "explanation": "Le fine-tuning spécialise un modèle généraliste pour un domaine précis."
+  },
+  {
+    "id": 459,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment appelle-t-on les instructions fournies à une IA générative pour obtenir une réponse ?",
+    "choices": [
+      "Prompt",
+      "Commit",
+      "Token Ring",
+      "Middleware"
+    ],
+    "answer": 0,
+    "explanation": "Le prompt est l'instruction envoyée au modèle de langage."
+  },
+  {
+    "id": 460,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal rôle des tokens dans un modèle de langage ?",
+    "choices": [
+      "Découper le texte en unités manipulables par le modèle",
+      "Crypter les conversations",
+      "Identifier les utilisateurs",
+      "Créer des bases de données"
+    ],
+    "answer": 0,
+    "explanation": "Les modèles de langage traitent le texte sous forme de tokens, qui correspondent à des mots ou des fragments de mots."
+  },
+  {
+    "id": 461,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel système de gestion de versions distribué est aujourd'hui le plus utilisé ?",
+    "choices": ["Git", "SVN", "Mercurial", "CVS"],
+    "answer": 0,
+    "explanation": "Git est le système de gestion de versions distribué le plus utilisé."
+  },
+  {
+    "id": 462,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle commande Git crée une copie locale d'un dépôt distant ?",
+    "choices": ["git clone", "git pull", "git fetch", "git copy"],
+    "answer": 0,
+    "explanation": "git clone télécharge un dépôt complet."
+  },
+  {
+    "id": 463,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle commande Git enregistre les modifications dans l'historique local ?",
+    "choices": ["git commit", "git push", "git clone", "git fetch"],
+    "answer": 0,
+    "explanation": "git commit crée un nouveau point dans l'historique."
+  },
+  {
+    "id": 464,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle commande Git envoie les commits vers un dépôt distant ?",
+    "choices": ["git push", "git pull", "git commit", "git merge"],
+    "answer": 0,
+    "explanation": "git push synchronise les commits locaux avec le dépôt distant."
+  },
+  {
+    "id": 465,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle commande Git récupère puis fusionne les modifications du dépôt distant ?",
+    "choices": ["git pull", "git fetch", "git clone", "git merge"],
+    "answer": 0,
+    "explanation": "git pull équivaut généralement à un fetch suivi d'un merge."
+  },
+  {
+    "id": 466,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle commande Git récupère les modifications distantes sans les fusionner ?",
+    "choices": ["git fetch", "git pull", "git clone", "git reset"],
+    "answer": 0,
+    "explanation": "git fetch télécharge les nouveautés sans modifier la branche courante."
+  },
+  {
+    "id": 467,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal d'une branche Git ?",
+    "choices": [
+      "Développer une fonctionnalité indépendamment",
+      "Compresser le projet",
+      "Héberger le dépôt",
+      "Créer une sauvegarde système"
+    ],
+    "answer": 0,
+    "explanation": "Les branches permettent de développer sans affecter la branche principale."
+  },
+  {
+    "id": 468,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Comment appelle-t-on la fusion de deux branches Git ?",
+    "choices": ["Merge", "Fork", "Clone", "Rebase"],
+    "answer": 0,
+    "explanation": "Un merge rassemble les modifications de deux branches."
+  },
+  {
+    "id": 469,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Qu'est-ce qu'un conflit Git ?",
+    "choices": [
+      "Deux modifications incompatibles sur la même partie d'un fichier",
+      "Une erreur réseau",
+      "Une suppression du dépôt",
+      "Un problème de compilation"
+    ],
+    "answer": 0,
+    "explanation": "Git demande une résolution manuelle lorsqu'il ne peut pas fusionner automatiquement."
+  },
+  {
+    "id": 470,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle d'une Pull Request sur GitHub ?",
+    "choices": [
+      "Proposer la fusion de modifications",
+      "Télécharger un dépôt",
+      "Créer un utilisateur",
+      "Supprimer une branche"
+    ],
+    "answer": 0,
+    "explanation": "Une Pull Request permet la revue de code avant la fusion."
+  },
+  {
+    "id": 471,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal avantage d'une revue de code ?",
+    "choices": [
+      "Détecter les erreurs et améliorer la qualité",
+      "Réduire la taille des fichiers",
+      "Créer automatiquement la documentation",
+      "Augmenter la fréquence CPU"
+    ],
+    "answer": 0,
+    "explanation": "La revue de code améliore la qualité et la maintenabilité."
+  },
+  {
+    "id": 472,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle pratique consiste à écrire des tests avant le code ?",
+    "choices": [
+      "TDD",
+      "BDD",
+      "MVC",
+      "OOP"
+    ],
+    "answer": 0,
+    "explanation": "Le Test-Driven Development commence par les tests."
+  },
+  {
+    "id": 473,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme SOLID en génie logiciel ?",
+    "choices": [
+      "Un ensemble de principes de conception orientée objet",
+      "Un langage de programmation",
+      "Un système d'exploitation",
+      "Un framework JavaScript"
+    ],
+    "answer": 0,
+    "explanation": "SOLID regroupe cinq principes facilitant la conception de logiciels robustes."
+  },
+  {
+    "id": 474,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel principe SOLID recommande qu'une classe n'ait qu'une seule responsabilité ?",
+    "choices": [
+      "Single Responsibility Principle",
+      "Open/Closed Principle",
+      "Dependency Inversion Principle",
+      "Interface Segregation Principle"
+    ],
+    "answer": 0,
+    "explanation": "Chaque classe doit avoir une unique raison de changer."
+  },
+  {
+    "id": 475,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Qu'est-ce que le refactoring ?",
+    "choices": [
+      "Améliorer le code sans modifier son comportement",
+      "Réécrire un projet dans un autre langage",
+      "Compiler plus rapidement",
+      "Créer une documentation"
+    ],
+    "answer": 0,
+    "explanation": "Le refactoring améliore la qualité du code tout en conservant son fonctionnement."
+  },
+  {
+    "id": 476,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif des tests unitaires ?",
+    "choices": [
+      "Vérifier le fonctionnement d'une unité de code isolée",
+      "Tester le réseau",
+      "Mesurer les performances du processeur",
+      "Déployer une application"
+    ],
+    "answer": 0,
+    "explanation": "Les tests unitaires valident le comportement d'une fonction ou d'une classe."
+  },
+  {
+    "id": 477,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type de test vérifie que plusieurs composants fonctionnent correctement ensemble ?",
+    "choices": [
+      "Test d'intégration",
+      "Test unitaire",
+      "Test de charge",
+      "Test visuel"
+    ],
+    "answer": 0,
+    "explanation": "Les tests d'intégration valident les interactions entre plusieurs composants."
+  },
+  {
+    "id": 478,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel type de test mesure les performances d'une application sous un grand nombre d'utilisateurs ?",
+    "choices": [
+      "Test de charge",
+      "Test unitaire",
+      "Test fonctionnel",
+      "Test de régression"
+    ],
+    "answer": 0,
+    "explanation": "Les tests de charge permettent d'évaluer les performances sous forte sollicitation."
+  },
+  {
+    "id": 479,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est l'objectif principal d'une documentation technique ?",
+    "choices": [
+      "Faciliter la compréhension et la maintenance du projet",
+      "Réduire la consommation mémoire",
+      "Accélérer la compilation",
+      "Crypter les données"
+    ],
+    "answer": 0,
+    "explanation": "Une bonne documentation facilite le travail des développeurs."
+  },
+  {
+    "id": 480,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle qualité est la plus importante pour qu'un logiciel reste facilement modifiable au fil du temps ?",
+    "choices": [
+      "La maintenabilité",
+      "La compression",
+      "La fréquence CPU",
+      "La résolution graphique"
+    ],
+    "answer": 0,
+    "explanation": "Un logiciel maintenable est plus simple à corriger, faire évoluer et documenter."
+  },
+  {
+    "id": 481,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme IoT ?",
+    "choices": [
+      "Internet of Things",
+      "Interface of Technology",
+      "Internet of Terminals",
+      "Integrated Object Technology"
+    ],
+    "answer": 0,
+    "explanation": "L'Internet des objets (IoT) désigne les objets connectés capables de communiquer via Internet."
+  },
+  {
+    "id": 482,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel protocole léger est particulièrement utilisé pour la communication entre objets connectés ?",
+    "choices": [
+      "MQTT",
+      "FTP",
+      "SMTP",
+      "Telnet"
+    ],
+    "answer": 0,
+    "explanation": "MQTT est un protocole très léger conçu pour les appareils à faibles ressources."
+  },
+  {
+    "id": 483,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Qu'est-ce qu'une blockchain ?",
+    "choices": [
+      "Un registre distribué et immuable",
+      "Une base de données relationnelle",
+      "Un système d'exploitation",
+      "Un protocole réseau"
+    ],
+    "answer": 0,
+    "explanation": "Une blockchain est un registre partagé dont les données sont extrêmement difficiles à modifier."
+  },
+  {
+    "id": 484,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel mécanisme permet de valider les transactions dans une blockchain ?",
+    "choices": [
+      "Le consensus",
+      "Le cache",
+      "La compilation",
+      "Le routage"
+    ],
+    "answer": 0,
+    "explanation": "Le consensus permet aux participants de s'accorder sur l'état de la blockchain."
+  },
+  {
+    "id": 485,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif d'un smart contract ?",
+    "choices": [
+      "Exécuter automatiquement des règles prédéfinies",
+      "Crypter un disque dur",
+      "Créer un serveur web",
+      "Compresser des fichiers"
+    ],
+    "answer": 0,
+    "explanation": "Un smart contract exécute automatiquement un contrat lorsque les conditions sont réunies."
+  },
+  {
+    "id": 486,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'acronyme VPN ?",
+    "choices": [
+      "Virtual Private Network",
+      "Verified Public Network",
+      "Virtual Program Node",
+      "Visual Private Node"
+    ],
+    "answer": 0,
+    "explanation": "Un VPN crée un tunnel sécurisé entre l'utilisateur et un réseau distant."
+  },
+  {
+    "id": 487,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal avantage d'un VPN ?",
+    "choices": [
+      "Chiffrer les communications sur le réseau",
+      "Accélérer automatiquement Internet",
+      "Supprimer les virus",
+      "Augmenter la mémoire RAM"
+    ],
+    "answer": 0,
+    "explanation": "Le VPN protège les données échangées sur des réseaux publics."
+  },
+  {
+    "id": 488,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel système d'exploitation est le plus utilisé sur les serveurs web ?",
+    "choices": [
+      "Linux",
+      "Windows XP",
+      "macOS",
+      "Android"
+    ],
+    "answer": 0,
+    "explanation": "Linux domine largement le marché des serveurs grâce à sa stabilité et sa flexibilité."
+  },
+  {
+    "id": 489,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le rôle principal du noyau (Kernel) d'un système d'exploitation ?",
+    "choices": [
+      "Gérer les ressources matérielles et les processus",
+      "Afficher les pages web",
+      "Compiler les programmes",
+      "Créer des bases de données"
+    ],
+    "answer": 0,
+    "explanation": "Le noyau fait le lien entre le matériel et les logiciels."
+  },
+  {
+    "id": 490,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel langage est principalement utilisé pour développer le noyau Linux ?",
+    "choices": [
+      "C",
+      "Python",
+      "Java",
+      "PHP"
+    ],
+    "answer": 0,
+    "explanation": "Le noyau Linux est majoritairement écrit en langage C."
+  },
+  {
+    "id": 491,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle entreprise développe principalement le système Android ?",
+    "choices": [
+      "Google",
+      "Apple",
+      "Microsoft",
+      "Samsung"
+    ],
+    "answer": 0,
+    "explanation": "Android est développé par Google via l'Android Open Source Project."
+  },
+  {
+    "id": 492,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal langage utilisé pour développer des applications Android modernes ?",
+    "choices": [
+      "Kotlin",
+      "Swift",
+      "Rust",
+      "Ruby"
+    ],
+    "answer": 0,
+    "explanation": "Kotlin est aujourd'hui le langage officiellement recommandé par Google."
+  },
+  {
+    "id": 493,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel langage est principalement utilisé pour développer des applications iOS ?",
+    "choices": [
+      "Swift",
+      "Kotlin",
+      "Go",
+      "PHP"
+    ],
+    "answer": 0,
+    "explanation": "Swift est le langage moderne recommandé par Apple."
+  },
+  {
+    "id": 494,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif de l'accessibilité numérique ?",
+    "choices": [
+      "Rendre les applications utilisables par tous, y compris les personnes en situation de handicap",
+      "Augmenter la vitesse d'Internet",
+      "Réduire le coût des serveurs",
+      "Crypter automatiquement les données"
+    ],
+    "answer": 0,
+    "explanation": "L'accessibilité garantit que chacun puisse utiliser un service numérique."
+  },
+  {
+    "id": 495,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est l'objectif principal de l'optimisation d'un algorithme ?",
+    "choices": [
+      "Réduire son temps d'exécution ou sa consommation de ressources",
+      "Créer davantage de variables",
+      "Ajouter des commentaires",
+      "Modifier le langage utilisé"
+    ],
+    "answer": 0,
+    "explanation": "L'optimisation améliore l'efficacité d'un programme."
+  },
+  {
+    "id": 496,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle notation permet d'exprimer la complexité asymptotique d'un algorithme ?",
+    "choices": [
+      "Big O",
+      "UTF-8",
+      "JSON",
+      "ASCII"
+    ],
+    "answer": 0,
+    "explanation": "La notation Big O mesure l'évolution du coût d'un algorithme."
+  },
+  {
+    "id": 497,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est généralement le meilleur ordre de complexité parmi les suivants ?",
+    "choices": [
+      "O(log n)",
+      "O(n²)",
+      "O(n³)",
+      "O(2ⁿ)"
+    ],
+    "answer": 0,
+    "explanation": "Une complexité logarithmique est très efficace pour les grands ensembles de données."
+  },
+  {
+    "id": 498,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle structure de données fonctionne selon le principe 'Premier entré, premier sorti' (FIFO) ?",
+    "choices": [
+      "File (Queue)",
+      "Pile (Stack)",
+      "Arbre",
+      "Graphe"
+    ],
+    "answer": 0,
+    "explanation": "Une file traite les éléments dans l'ordre de leur arrivée."
+  },
+  {
+    "id": 499,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle structure de données fonctionne selon le principe 'Dernier entré, premier sorti' (LIFO) ?",
+    "choices": [
+      "Pile (Stack)",
+      "File (Queue)",
+      "Table de hachage",
+      "Liste chaînée"
+    ],
+    "answer": 0,
+    "explanation": "Une pile retire en premier le dernier élément ajouté."
+  },
+  {
+    "id": 500,
+    "category": "Informatique",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quel est le principal objectif de l'informatique ?",
+    "choices": [
+      "Traiter, stocker et transmettre automatiquement l'information",
+      "Créer uniquement des sites web",
+      "Fabriquer des composants électroniques",
+      "Augmenter la vitesse d'Internet"
+    ],
+    "answer": 0,
+    "explanation": "L'informatique est la science du traitement automatique de l'information sous toutes ses formes."
+  }
+]
