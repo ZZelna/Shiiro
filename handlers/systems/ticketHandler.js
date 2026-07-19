@@ -353,7 +353,7 @@ module.exports = async function handleTicketInteraction(interaction) {
 
         for (const roleId of category.staffRoles) {
             await interaction.channel.permissionOverwrites.edit(roleId, {
-                ViewChannel: false
+                ViewChannel: true
             });
         }
 
