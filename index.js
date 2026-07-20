@@ -52,6 +52,21 @@ client.commands = new Map();
 client.slashCommands = new Map();
 client.snipes = new Map();
 
+// ✅ Snapshot en mémoire : roleId -> Set des memberId qui possèdent ce rôle.
+// Sert à retrouver qui avait un rôle même si le cache Discord.js est déjà
+// vidé au moment de l'event roleDelete.
+const roleMemberSnapshot = new Map();
+
+function snapshotAddMember(roleId, memberId) {
+    if (!roleMemberSnapshot.has(roleId)) roleMemberSnapshot.set(roleId, new Set());
+    roleMemberSnapshot.get(roleId).add(memberId);
+}
+
+function snapshotRemoveMember(roleId, memberId) {
+    const set = roleMemberSnapshot.get(roleId);
+    if (set) set.delete(memberId);
+}
+
 const slashCommands = fs
     .readdirSync("./slashCommands")
     .filter(file => file.endsWith(".js"));
@@ -82,6 +97,22 @@ client.once("clientReady", async () => {
     console.log(`${client.user.tag} est connecté !`);
 
     await statsVoice(client);
+
+    // ✅ Construction du snapshot initial roleId -> membres
+    try {
+        const mainGuild = client.guilds.cache.get("1506672014679740546");
+        if (mainGuild) {
+            const allMembers = await mainGuild.members.fetch();
+            allMembers.forEach(m => {
+                m.roles.cache.forEach(role => {
+                    snapshotAddMember(role.id, m.id);
+                });
+            });
+            console.log("✅ Snapshot rôles/membres initialisé");
+        }
+    } catch (err) {
+        console.error("❌ Erreur snapshot rôles/membres :", err);
+    }
 
     client.user.setPresence({
         activities: [{
@@ -261,7 +292,13 @@ const memberLeave = require("./events/logs/memberLeave");
 // ✅ memberJoin importé et utilisé (était importé mais jamais branché)
 const memberJoin = require("./events/logs/memberJoin");
 
-client.on("guildMemberRemove", memberLeave);
+client.on("guildMemberRemove", (member) => {
+    // ✅ On retire ce membre de tous les snapshots rôle -> membres
+    for (const set of roleMemberSnapshot.values()) {
+        set.delete(member.id);
+    }
+    memberLeave(member);
+});
 
 client.on("guildMemberAdd", async (member) => {
     await antiRaid(member);
@@ -580,6 +617,9 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
 
     for (const role of removedRoles.values()) {
 
+        // ✅ Mise à jour du snapshot rôle -> membres
+        snapshotRemoveMember(role.id, newMember.id);
+
         // ───── Protection : ce rôle ne peut jamais être retiré ─────
         if (role.id === NEVER_REMOVABLE_ROLE_ID) {
 
@@ -671,6 +711,9 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     );
 
     for (const role of addedRoles.values()) {
+
+       // ✅ Mise à jour du snapshot rôle -> membres
+       snapshotAddMember(role.id, newMember.id);
 
        // Rôles interdits
 const protectedRoles = [
@@ -926,6 +969,42 @@ client.on("roleDelete", async (role) => {
 
         if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
 
+            // ✅ Annulation : on recrée le rôle supprimé avec ses propriétés d'origine
+            let recreatedRole = null;
+            try {
+                recreatedRole = await role.guild.roles.create({
+                    name: role.name,
+                    color: role.color,
+                    hoist: role.hoist,
+                    permissions: role.permissions,
+                    mentionable: role.mentionable,
+                    position: role.position,
+                    reason: "Annulation d'une suppression de rôle non autorisée"
+                });
+
+                // On ré-attribue le rôle recréé aux membres qui l'avaient avant la suppression.
+                // On privilégie le snapshot (toujours à jour) au cache Discord.js (souvent déjà vidé).
+                const snapshotSet = roleMemberSnapshot.get(role.id);
+                const previousMembers = snapshotSet && snapshotSet.size
+                    ? [...snapshotSet]
+                    : (role.members?.map(m => m.id) || []);
+
+                for (const memberId of previousMembers) {
+                    const targetMember = await role.guild.members.fetch(memberId).catch(() => null);
+                    if (targetMember) {
+                        await targetMember.roles.add(recreatedRole, "Restauration après annulation de suppression").catch(() => {});
+                    }
+                }
+
+                // Le rôle a un nouvel ID : on migre le snapshot vers ce nouvel ID
+                roleMemberSnapshot.delete(role.id);
+                if (previousMembers.length) {
+                    previousMembers.forEach(id => snapshotAddMember(recreatedRole.id, id));
+                }
+            } catch (recreateErr) {
+                console.error("❌ Impossible de recréer le rôle supprimé :", recreateErr.message);
+            }
+
             try {
                 await role.guild.members.ban(executor.id, {
                     reason: "Suppression de rôle non autorisée"
@@ -936,7 +1015,8 @@ client.on("roleDelete", async (role) => {
                         "```diff\n" +
                         "- Bannissement automatique.\n" +
                         `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
-                        "Action: Suppression de rôle sans permission. ⛔\n" +
+                        `Rôle: ${role.name} (ID: ${role.id})\n` +
+                        "Action: Suppression de rôle annulée, responsable banni. ⛔\n" +
                         `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                         "```"
                 });
@@ -1383,6 +1463,7 @@ client.on("guildMemberAdd", async member => {
 
     try {
         await member.roles.add(role);
+        snapshotAddMember(role.id, member.id); // ✅ Mise à jour du snapshot
     } catch (err) {
         console.log(err);
     }
