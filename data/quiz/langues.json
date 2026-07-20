@@ -1,0 +1,7502 @@
+[
+  {
+    "id": 1,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Apple » ?",
+    "choices": [
+      "Orange",
+      "Pomme",
+      "Poire",
+      "Banane"
+    ],
+    "answer": 1,
+    "explanation": "« Apple » signifie « pomme »."
+  },
+  {
+    "id": 2,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en espagnol ?",
+    "choices": [
+      "Hola",
+      "Buenos días",
+      "Gracias",
+      "Adiós"
+    ],
+    "answer": 1,
+    "explanation": "« Buenos días » signifie « Bonjour »."
+  },
+  {
+    "id": 3,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Wasser » ?",
+    "choices": [
+      "Feu",
+      "Air",
+      "Eau",
+      "Terre"
+    ],
+    "answer": 2,
+    "explanation": "« Wasser » signifie « eau »."
+  },
+  {
+    "id": 4,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en italien ?",
+    "choices": [
+      "Prego",
+      "Grazie",
+      "Ciao",
+      "Buongiorno"
+    ],
+    "answer": 1,
+    "explanation": "« Grazie » signifie « Merci »."
+  },
+  {
+    "id": 5,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Casa » ?",
+    "choices": [
+      "Maison",
+      "Voiture",
+      "École",
+      "Route"
+    ],
+    "answer": 0,
+    "explanation": "« Casa » signifie « maison »."
+  },
+  {
+    "id": 6,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en allemand ?",
+    "choices": [
+      "Nein",
+      "Ja",
+      "Bitte",
+      "Danke"
+    ],
+    "answer": 1,
+    "explanation": "« Ja » signifie « Oui »."
+  },
+  {
+    "id": 7,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « School » ?",
+    "choices": [
+      "Livre",
+      "Classe",
+      "École",
+      "Université"
+    ],
+    "answer": 2,
+    "explanation": "« School » signifie « école »."
+  },
+  {
+    "id": 8,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en anglais ?",
+    "choices": [
+      "Please",
+      "Goodbye",
+      "Hello",
+      "Sorry"
+    ],
+    "answer": 1,
+    "explanation": "« Goodbye » signifie « Au revoir »."
+  },
+  {
+    "id": 9,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Pane » ?",
+    "choices": [
+      "Pain",
+      "Pâtes",
+      "Pizza",
+      "Fromage"
+    ],
+    "answer": 0,
+    "explanation": "« Pane » signifie « pain »."
+  },
+  {
+    "id": 10,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en japonais ?",
+    "choices": [
+      "Sayonara",
+      "Arigatō",
+      "Konnichiwa",
+      "Ohayō"
+    ],
+    "answer": 1,
+    "explanation": "« Arigatō » signifie « Merci »."
+  },
+  {
+    "id": 11,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Cat » ?",
+    "choices": [
+      "Chien",
+      "Chat",
+      "Cheval",
+      "Lapin"
+    ],
+    "answer": 1,
+    "explanation": "« Cat » signifie « chat »."
+  },
+  {
+    "id": 12,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonne nuit » en anglais ?",
+    "choices": [
+      "Good evening",
+      "Good afternoon",
+      "Good night",
+      "Good morning"
+    ],
+    "answer": 2,
+    "explanation": "« Good night » signifie « Bonne nuit »."
+  },
+  {
+    "id": 13,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Perro » ?",
+    "choices": [
+      "Chat",
+      "Oiseau",
+      "Chien",
+      "Poisson"
+    ],
+    "answer": 2,
+    "explanation": "« Perro » signifie « chien »."
+  },
+  {
+    "id": 14,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Rouge » en anglais ?",
+    "choices": [
+      "Blue",
+      "Green",
+      "Yellow",
+      "Red"
+    ],
+    "answer": 3,
+    "explanation": "« Red » signifie « rouge »."
+  },
+  {
+    "id": 15,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Acqua » ?",
+    "choices": [
+      "Feu",
+      "Air",
+      "Eau",
+      "Terre"
+    ],
+    "answer": 2,
+    "explanation": "« Acqua » signifie « eau »."
+  },
+  {
+    "id": 16,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci beaucoup » en espagnol ?",
+    "choices": [
+      "Muchas gracias",
+      "Buenos días",
+      "Por favor",
+      "Hasta luego"
+    ],
+    "answer": 0,
+    "explanation": "« Muchas gracias » signifie « Merci beaucoup »."
+  },
+  {
+    "id": 17,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Brot » ?",
+    "choices": [
+      "Lait",
+      "Pain",
+      "Beurre",
+      "Fromage"
+    ],
+    "answer": 1,
+    "explanation": "« Brot » signifie « pain »."
+  },
+  {
+    "id": 18,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Chat » en anglais ?",
+    "choices": [
+      "Dog",
+      "Mouse",
+      "Cat",
+      "Bird"
+    ],
+    "answer": 2,
+    "explanation": "« Cat » signifie « chat »."
+  },
+  {
+    "id": 19,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Livro » ?",
+    "choices": [
+      "Livre",
+      "Stylo",
+      "Cahier",
+      "Sac"
+    ],
+    "answer": 0,
+    "explanation": "« Livro » signifie « livre »."
+  },
+  {
+    "id": 20,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en italien ?",
+    "choices": [
+      "Arrivederci",
+      "Buongiorno",
+      "Grazie",
+      "Prego"
+    ],
+    "answer": 1,
+    "explanation": "« Buongiorno » signifie « Bonjour »."
+  },
+  {
+    "id": 21,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « House » ?",
+    "choices": [
+      "Maison",
+      "Hôpital",
+      "École",
+      "Bureau"
+    ],
+    "answer": 0,
+    "explanation": "« House » signifie « maison »."
+  },
+  {
+    "id": 22,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en allemand ?",
+    "choices": [
+      "Bitte",
+      "Hallo",
+      "Danke",
+      "Tschüss"
+    ],
+    "answer": 2,
+    "explanation": "« Danke » signifie « Merci »."
+  },
+  {
+    "id": 23,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Agua » ?",
+    "choices": [
+      "Pain",
+      "Eau",
+      "Feu",
+      "Air"
+    ],
+    "answer": 1,
+    "explanation": "« Agua » signifie « eau »."
+  },
+  {
+    "id": 24,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « S'il vous plaît » en anglais ?",
+    "choices": [
+      "Sorry",
+      "Please",
+      "Thanks",
+      "Welcome"
+    ],
+    "answer": 1,
+    "explanation": "« Please » signifie « S'il vous plaît »."
+  },
+  {
+    "id": 25,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Sole » ?",
+    "choices": [
+      "Lune",
+      "Étoile",
+      "Soleil",
+      "Ciel"
+    ],
+    "answer": 2,
+    "explanation": "« Sole » signifie « soleil »."
+  },
+  {
+    "id": 26,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en espagnol ?",
+    "choices": [
+      "No",
+      "Sí",
+      "Hola",
+      "Vale"
+    ],
+    "answer": 1,
+    "explanation": "« Sí » signifie « Oui »."
+  },
+  {
+    "id": 27,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Friend » ?",
+    "choices": [
+      "Frère",
+      "Voisin",
+      "Ami",
+      "Professeur"
+    ],
+    "answer": 2,
+    "explanation": "« Friend » signifie « ami »."
+  },
+  {
+    "id": 28,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en espagnol ?",
+    "choices": [
+      "Hola",
+      "Gracias",
+      "Adiós",
+      "Perdón"
+    ],
+    "answer": 2,
+    "explanation": "« Adiós » signifie « Au revoir »."
+  },
+  {
+    "id": 29,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Schule » ?",
+    "choices": [
+      "École",
+      "Maison",
+      "Route",
+      "Église"
+    ],
+    "answer": 0,
+    "explanation": "« Schule » signifie « école »."
+  },
+  {
+    "id": 30,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en portugais ?",
+    "choices": [
+      "Obrigado",
+      "Bom dia",
+      "Adeus",
+      "Boa noite"
+    ],
+    "answer": 1,
+    "explanation": "« Bom dia » signifie « Bonjour »."
+  },
+  {
+    "id": 31,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Water » ?",
+    "choices": [
+      "Feu",
+      "Air",
+      "Eau",
+      "Terre"
+    ],
+    "answer": 2,
+    "explanation": "« Water » signifie « eau »."
+  },
+  {
+    "id": 32,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en portugais ?",
+    "choices": [
+      "Olá",
+      "Obrigado",
+      "Adeus",
+      "Sim"
+    ],
+    "answer": 1,
+    "explanation": "« Obrigado » (ou « Obrigada » selon le genre du locuteur) signifie « Merci »."
+  },
+  {
+    "id": 33,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Latte » ?",
+    "choices": [
+      "Pain",
+      "Lait",
+      "Café",
+      "Beurre"
+    ],
+    "answer": 1,
+    "explanation": "« Latte » signifie « lait »."
+  },
+  {
+    "id": 34,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Non » en allemand ?",
+    "choices": [
+      "Ja",
+      "Bitte",
+      "Nein",
+      "Danke"
+    ],
+    "answer": 2,
+    "explanation": "« Nein » signifie « Non »."
+  },
+  {
+    "id": 35,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Gato » ?",
+    "choices": [
+      "Chat",
+      "Chien",
+      "Cheval",
+      "Oiseau"
+    ],
+    "answer": 0,
+    "explanation": "« Gato » signifie « chat »."
+  },
+  {
+    "id": 36,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonne nuit » en espagnol ?",
+    "choices": [
+      "Buenos días",
+      "Buenas tardes",
+      "Buenas noches",
+      "Hasta luego"
+    ],
+    "answer": 2,
+    "explanation": "« Buenas noches » signifie « Bonne nuit »."
+  },
+  {
+    "id": 37,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Car » ?",
+    "choices": [
+      "Maison",
+      "Voiture",
+      "Train",
+      "Vélo"
+    ],
+    "answer": 1,
+    "explanation": "« Car » signifie « voiture »."
+  },
+  {
+    "id": 38,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en allemand ?",
+    "choices": [
+      "Tschüss",
+      "Danke",
+      "Hallo",
+      "Bitte"
+    ],
+    "answer": 2,
+    "explanation": "« Hallo » est la façon la plus courante de dire « Bonjour »."
+  },
+  {
+    "id": 39,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Escola » ?",
+    "choices": [
+      "École",
+      "Hôpital",
+      "Bibliothèque",
+      "Université"
+    ],
+    "answer": 0,
+    "explanation": "« Escola » signifie « école »."
+  },
+  {
+    "id": 40,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en russe ?",
+    "choices": [
+      "Привет (Privet)",
+      "Пока (Poka)",
+      "Спасибо (Spasibo)",
+      "Да (Da)"
+    ],
+    "answer": 2,
+    "explanation": "« Спасибо » (Spasibo) signifie « Merci » en russe."
+  },
+  {
+    "id": 41,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Sun » ?",
+    "choices": [
+      "Lune",
+      "Étoile",
+      "Soleil",
+      "Ciel"
+    ],
+    "answer": 2,
+    "explanation": "« Sun » signifie « soleil »."
+  },
+  {
+    "id": 42,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonsoir » en italien ?",
+    "choices": [
+      "Buonasera",
+      "Buongiorno",
+      "Ciao",
+      "Arrivederci"
+    ],
+    "answer": 0,
+    "explanation": "« Buonasera » signifie « Bonsoir »."
+  },
+  {
+    "id": 43,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Katze » ?",
+    "choices": [
+      "Chien",
+      "Chat",
+      "Lapin",
+      "Oiseau"
+    ],
+    "answer": 1,
+    "explanation": "« Katze » signifie « chat »."
+  },
+  {
+    "id": 44,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « À bientôt » en anglais ?",
+    "choices": [
+      "See you soon",
+      "Good night",
+      "Please",
+      "Welcome"
+    ],
+    "answer": 0,
+    "explanation": "« See you soon » signifie « À bientôt »."
+  },
+  {
+    "id": 45,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Libro » ?",
+    "choices": [
+      "Stylo",
+      "Livre",
+      "Table",
+      "Chaise"
+    ],
+    "answer": 1,
+    "explanation": "« Libro » signifie « livre »."
+  },
+  {
+    "id": 46,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Chat » en espagnol ?",
+    "choices": [
+      "Perro",
+      "Gato",
+      "Caballo",
+      "Pájaro"
+    ],
+    "answer": 1,
+    "explanation": "« Gato » signifie « chat »."
+  },
+  {
+    "id": 47,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Window » ?",
+    "choices": [
+      "Porte",
+      "Fenêtre",
+      "Toit",
+      "Mur"
+    ],
+    "answer": 1,
+    "explanation": "« Window » signifie « fenêtre »."
+  },
+  {
+    "id": 48,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en japonais ?",
+    "choices": [
+      "Arigatō",
+      "Konnichiwa",
+      "Sayonara",
+      "Konbanwa"
+    ],
+    "answer": 1,
+    "explanation": "« Konnichiwa » signifie « Bonjour »."
+  },
+  {
+    "id": 49,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Cão » ?",
+    "choices": [
+      "Chat",
+      "Cheval",
+      "Chien",
+      "Poisson"
+    ],
+    "answer": 2,
+    "explanation": "« Cão » signifie « chien »."
+  },
+  {
+    "id": 50,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en russe ?",
+    "choices": [
+      "Нет (Net)",
+      "Да (Da)",
+      "Спасибо (Spasibo)",
+      "Пока (Poka)"
+    ],
+    "answer": 1,
+    "explanation": "« Да » (Da) signifie « Oui »."
+  },
+  {
+    "id": 51,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Bird » ?",
+    "choices": [
+      "Poisson",
+      "Oiseau",
+      "Chat",
+      "Lapin"
+    ],
+    "answer": 1,
+    "explanation": "« Bird » signifie « oiseau »."
+  },
+  {
+    "id": 52,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en chinois (mandarin) ?",
+    "choices": [
+      "你好 (Nǐ hǎo)",
+      "谢谢 (Xièxie)",
+      "再见 (Zàijiàn)",
+      "是 (Shì)"
+    ],
+    "answer": 1,
+    "explanation": "« 谢谢 » (Xièxie) signifie « Merci »."
+  },
+  {
+    "id": 53,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Libro » ?",
+    "choices": [
+      "Livre",
+      "Stylo",
+      "Papier",
+      "Sac"
+    ],
+    "answer": 0,
+    "explanation": "« Libro » signifie « livre »."
+  },
+  {
+    "id": 54,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en russe ?",
+    "choices": [
+      "Спасибо",
+      "До свидания",
+      "Привет",
+      "Да"
+    ],
+    "answer": 2,
+    "explanation": "« Привет » (Privet) est une façon courante de dire « Bonjour »."
+  },
+  {
+    "id": 55,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Mesa » ?",
+    "choices": [
+      "Chaise",
+      "Fenêtre",
+      "Table",
+      "Porte"
+    ],
+    "answer": 2,
+    "explanation": "« Mesa » signifie « table »."
+  },
+  {
+    "id": 56,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en japonais ?",
+    "choices": [
+      "Konnichiwa",
+      "Arigatō",
+      "Sayonara",
+      "Ohayō"
+    ],
+    "answer": 2,
+    "explanation": "« Sayonara » signifie « Au revoir »."
+  },
+  {
+    "id": 57,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Baum » ?",
+    "choices": [
+      "Arbre",
+      "Fleur",
+      "Forêt",
+      "Feuille"
+    ],
+    "answer": 0,
+    "explanation": "« Baum » signifie « arbre »."
+  },
+  {
+    "id": 58,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Livre » en anglais ?",
+    "choices": [
+      "Paper",
+      "Notebook",
+      "Book",
+      "Library"
+    ],
+    "answer": 2,
+    "explanation": "« Book » signifie « livre »."
+  },
+  {
+    "id": 59,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Janela » ?",
+    "choices": [
+      "Porte",
+      "Fenêtre",
+      "Toit",
+      "Mur"
+    ],
+    "answer": 1,
+    "explanation": "« Janela » signifie « fenêtre »."
+  },
+  {
+    "id": 60,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Non » en italien ?",
+    "choices": [
+      "Sì",
+      "No",
+      "Ciao",
+      "Prego"
+    ],
+    "answer": 1,
+    "explanation": "« No » signifie « Non »."
+  },
+  {
+    "id": 61,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Family » ?",
+    "choices": [
+      "Famille",
+      "Ami",
+      "Voisin",
+      "École"
+    ],
+    "answer": 0,
+    "explanation": "« Family » signifie « famille »."
+  },
+  {
+    "id": 62,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en chinois (mandarin) ?",
+    "choices": [
+      "谢谢 (Xièxie)",
+      "你好 (Nǐ hǎo)",
+      "再见 (Zàijiàn)",
+      "晚上好 (Wǎnshàng hǎo)"
+    ],
+    "answer": 1,
+    "explanation": "« 你好 » (Nǐ hǎo) signifie « Bonjour »."
+  },
+  {
+    "id": 63,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Auto » ?",
+    "choices": [
+      "Train",
+      "Avion",
+      "Voiture",
+      "Vélo"
+    ],
+    "answer": 2,
+    "explanation": "« Auto » signifie « voiture »."
+  },
+  {
+    "id": 64,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en coréen ?",
+    "choices": [
+      "안녕하세요 (Annyeonghaseyo)",
+      "감사합니다 (Gamsahamnida)",
+      "잘 가요 (Jal gayo)",
+      "네 (Ne)"
+    ],
+    "answer": 1,
+    "explanation": "« 감사합니다 » (Gamsahamnida) signifie « Merci »."
+  },
+  {
+    "id": 65,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Rojo » ?",
+    "choices": [
+      "Bleu",
+      "Rouge",
+      "Vert",
+      "Jaune"
+    ],
+    "answer": 1,
+    "explanation": "« Rojo » signifie « rouge »."
+  },
+  {
+    "id": 66,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonsoir » en espagnol ?",
+    "choices": [
+      "Buenas tardes",
+      "Buenas noches",
+      "Buenos días",
+      "Hola"
+    ],
+    "answer": 1,
+    "explanation": "« Buenas noches » est utilisé pour dire « Bonsoir » ou « Bonne nuit » selon le contexte."
+  },
+  {
+    "id": 67,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Cane » ?",
+    "choices": [
+      "Chat",
+      "Cheval",
+      "Chien",
+      "Poisson"
+    ],
+    "answer": 2,
+    "explanation": "« Cane » signifie « chien »."
+  },
+  {
+    "id": 68,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Eau » en anglais ?",
+    "choices": [
+      "Fire",
+      "Water",
+      "Earth",
+      "Wind"
+    ],
+    "answer": 1,
+    "explanation": "« Water » signifie « eau »."
+  },
+  {
+    "id": 69,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Amigo » ?",
+    "choices": [
+      "Voisin",
+      "Ami",
+      "Frère",
+      "Professeur"
+    ],
+    "answer": 1,
+    "explanation": "« Amigo » signifie « ami »."
+  },
+  {
+    "id": 70,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en japonais ?",
+    "choices": [
+      "いいえ (Iie)",
+      "はい (Hai)",
+      "ありがとう (Arigatō)",
+      "さようなら (Sayonara)"
+    ],
+    "answer": 1,
+    "explanation": "« はい » (Hai) signifie « Oui »."
+  },
+  {
+    "id": 71,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Tree » ?",
+    "choices": [
+      "Fleur",
+      "Arbre",
+      "Feuille",
+      "Forêt"
+    ],
+    "answer": 1,
+    "explanation": "« Tree » signifie « arbre »."
+  },
+  {
+    "id": 72,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Pain » en espagnol ?",
+    "choices": [
+      "Leche",
+      "Queso",
+      "Pan",
+      "Agua"
+    ],
+    "answer": 2,
+    "explanation": "« Pan » signifie « pain »."
+  },
+  {
+    "id": 73,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Milch » ?",
+    "choices": [
+      "Beurre",
+      "Lait",
+      "Pain",
+      "Eau"
+    ],
+    "answer": 1,
+    "explanation": "« Milch » signifie « lait »."
+  },
+  {
+    "id": 74,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Rouge » en italien ?",
+    "choices": [
+      "Verde",
+      "Blu",
+      "Rosso",
+      "Giallo"
+    ],
+    "answer": 2,
+    "explanation": "« Rosso » signifie « rouge »."
+  },
+  {
+    "id": 75,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Door » ?",
+    "choices": [
+      "Fenêtre",
+      "Mur",
+      "Porte",
+      "Plafond"
+    ],
+    "answer": 2,
+    "explanation": "« Door » signifie « porte »."
+  },
+  {
+    "id": 76,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en arabe ?",
+    "choices": [
+      "مرحبا (Marhaban)",
+      "شكراً (Shukran)",
+      "نعم (Na'am)",
+      "مع السلامة (Ma'a salama)"
+    ],
+    "answer": 1,
+    "explanation": "« شكراً » (Shukran) signifie « Merci »."
+  },
+  {
+    "id": 77,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Verde » ?",
+    "choices": [
+      "Rouge",
+      "Jaune",
+      "Vert",
+      "Bleu"
+    ],
+    "answer": 2,
+    "explanation": "« Verde » signifie « vert »."
+  },
+  {
+    "id": 78,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en portugais ?",
+    "choices": [
+      "Olá",
+      "Obrigado",
+      "Adeus",
+      "Bom dia"
+    ],
+    "answer": 2,
+    "explanation": "« Adeus » signifie « Au revoir »."
+  },
+  {
+    "id": 79,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Mare » ?",
+    "choices": [
+      "Montagne",
+      "Mer",
+      "Lac",
+      "Rivière"
+    ],
+    "answer": 1,
+    "explanation": "« Mare » signifie « mer »."
+  },
+  {
+    "id": 80,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en coréen ?",
+    "choices": [
+      "감사합니다 (Gamsahamnida)",
+      "안녕하세요 (Annyeonghaseyo)",
+      "잘 가요 (Jal gayo)",
+      "네 (Ne)"
+    ],
+    "answer": 1,
+    "explanation": "« 안녕하세요 » (Annyeonghaseyo) signifie « Bonjour »."
+  },
+  {
+    "id": 81,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Moon » ?",
+    "choices": [
+      "Étoile",
+      "Lune",
+      "Soleil",
+      "Planète"
+    ],
+    "answer": 1,
+    "explanation": "« Moon » signifie « lune »."
+  },
+  {
+    "id": 82,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Livre » en espagnol ?",
+    "choices": [
+      "Mesa",
+      "Libro",
+      "Pluma",
+      "Escuela"
+    ],
+    "answer": 1,
+    "explanation": "« Libro » signifie « livre »."
+  },
+  {
+    "id": 83,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Rot » ?",
+    "choices": [
+      "Bleu",
+      "Vert",
+      "Rouge",
+      "Jaune"
+    ],
+    "answer": 2,
+    "explanation": "« Rot » signifie « rouge »."
+  },
+  {
+    "id": 84,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Eau » en italien ?",
+    "choices": [
+      "Fuoco",
+      "Acqua",
+      "Terra",
+      "Aria"
+    ],
+    "answer": 1,
+    "explanation": "« Acqua » signifie « eau »."
+  },
+  {
+    "id": 85,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Green » ?",
+    "choices": [
+      "Bleu",
+      "Jaune",
+      "Rouge",
+      "Vert"
+    ],
+    "answer": 3,
+    "explanation": "« Green » signifie « vert »."
+  },
+  {
+    "id": 86,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Maison » en allemand ?",
+    "choices": [
+      "Schule",
+      "Haus",
+      "Fenster",
+      "Auto"
+    ],
+    "answer": 1,
+    "explanation": "« Haus » signifie « maison »."
+  },
+  {
+    "id": 87,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Vermelho » ?",
+    "choices": [
+      "Rouge",
+      "Vert",
+      "Bleu",
+      "Blanc"
+    ],
+    "answer": 0,
+    "explanation": "« Vermelho » signifie « rouge »."
+  },
+  {
+    "id": 88,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en arabe ?",
+    "choices": [
+      "شكراً (Shukran)",
+      "مرحباً (Marhaban)",
+      "وداعاً (Wada'an)",
+      "نعم (Na'am)"
+    ],
+    "answer": 1,
+    "explanation": "« مرحباً » (Marhaban) signifie « Bonjour »."
+  },
+  {
+    "id": 89,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Finestra » ?",
+    "choices": [
+      "Fenêtre",
+      "Porte",
+      "Toit",
+      "Mur"
+    ],
+    "answer": 0,
+    "explanation": "« Finestra » signifie « fenêtre »."
+  },
+  {
+    "id": 90,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en grec ?",
+    "choices": [
+      "Γεια σου (Yia sou)",
+      "Ευχαριστώ (Efcharistó)",
+      "Αντίο (Adío)",
+      "Ναι (Ne)"
+    ],
+    "answer": 1,
+    "explanation": "« Ευχαριστώ » (Efcharistó) signifie « Merci »."
+  },
+  {
+    "id": 91,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Happy » ?",
+    "choices": [
+      "Triste",
+      "Fatigué",
+      "Heureux",
+      "En colère"
+    ],
+    "answer": 2,
+    "explanation": "« Happy » signifie « heureux »."
+  },
+  {
+    "id": 92,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en turc ?",
+    "choices": [
+      "Merhaba",
+      "Lütfen",
+      "Teşekkür ederim",
+      "Güle güle"
+    ],
+    "answer": 2,
+    "explanation": "« Teşekkür ederim » signifie « Merci »."
+  },
+  {
+    "id": 93,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Azul » ?",
+    "choices": [
+      "Vert",
+      "Rouge",
+      "Jaune",
+      "Bleu"
+    ],
+    "answer": 3,
+    "explanation": "« Azul » signifie « bleu »."
+  },
+  {
+    "id": 94,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Chat » en allemand ?",
+    "choices": [
+      "Hund",
+      "Katze",
+      "Vogel",
+      "Pferd"
+    ],
+    "answer": 1,
+    "explanation": "« Katze » signifie « chat »."
+  },
+  {
+    "id": 95,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Verde » ?",
+    "choices": [
+      "Bleu",
+      "Jaune",
+      "Vert",
+      "Rouge"
+    ],
+    "answer": 2,
+    "explanation": "« Verde » signifie « vert »."
+  },
+  {
+    "id": 96,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en latin ?",
+    "choices": [
+      "Salve",
+      "Vale",
+      "Gratias",
+      "Ita"
+    ],
+    "answer": 0,
+    "explanation": "« Salve » est une salutation latine signifiant « Bonjour »."
+  },
+  {
+    "id": 97,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Peixe » ?",
+    "choices": [
+      "Poisson",
+      "Oiseau",
+      "Chat",
+      "Cheval"
+    ],
+    "answer": 0,
+    "explanation": "« Peixe » signifie « poisson »."
+  },
+  {
+    "id": 98,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en néerlandais ?",
+    "choices": [
+      "Hallo",
+      "Dank je",
+      "Tot ziens",
+      "Ja"
+    ],
+    "answer": 1,
+    "explanation": "« Dank je » signifie « Merci »."
+  },
+  {
+    "id": 99,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Black » ?",
+    "choices": [
+      "Blanc",
+      "Rouge",
+      "Noir",
+      "Bleu"
+    ],
+    "answer": 2,
+    "explanation": "« Black » signifie « noir »."
+  },
+  {
+    "id": 100,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en grec ?",
+    "choices": [
+      "Γεια σου (Yia sou)",
+      "Ευχαριστώ (Efcharistó)",
+      "Αντίο (Adío)",
+      "Ναι (Ne)"
+    ],
+    "answer": 2,
+    "explanation": "« Αντίο » (Adío) signifie « Au revoir »."
+  },
+  {
+    "id": 101,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « White » ?",
+    "choices": [
+      "Noir",
+      "Blanc",
+      "Gris",
+      "Rouge"
+    ],
+    "answer": 1,
+    "explanation": "« White » signifie « blanc »."
+  },
+  {
+    "id": 102,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en espagnol ?",
+    "choices": [
+      "Hola",
+      "Adiós",
+      "Gracias",
+      "Por favor"
+    ],
+    "answer": 2,
+    "explanation": "« Gracias » signifie « Merci »."
+  },
+  {
+    "id": 103,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Buch » ?",
+    "choices": [
+      "Livre",
+      "Stylo",
+      "Papier",
+      "École"
+    ],
+    "answer": 0,
+    "explanation": "« Buch » signifie « livre »."
+  },
+  {
+    "id": 104,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en italien ?",
+    "choices": [
+      "No",
+      "Grazie",
+      "Sì",
+      "Ciao"
+    ],
+    "answer": 2,
+    "explanation": "« Sì » signifie « Oui »."
+  },
+  {
+    "id": 105,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Branco » ?",
+    "choices": [
+      "Rouge",
+      "Vert",
+      "Noir",
+      "Blanc"
+    ],
+    "answer": 3,
+    "explanation": "« Branco » signifie « blanc »."
+  },
+  {
+    "id": 106,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Non » en russe ?",
+    "choices": [
+      "Да (Da)",
+      "Нет (Net)",
+      "Спасибо (Spasibo)",
+      "Привет (Privet)"
+    ],
+    "answer": 1,
+    "explanation": "« Нет » (Net) signifie « Non »."
+  },
+  {
+    "id": 107,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 水 (Mizu) » ?",
+    "choices": [
+      "Feu",
+      "Terre",
+      "Air",
+      "Eau"
+    ],
+    "answer": 3,
+    "explanation": "« 水 » (Mizu) signifie « eau »."
+  },
+  {
+    "id": 108,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en néerlandais ?",
+    "choices": [
+      "Hallo",
+      "Dank je",
+      "Tot ziens",
+      "Goedemiddag"
+    ],
+    "answer": 0,
+    "explanation": "« Hallo » signifie « Bonjour »."
+  },
+  {
+    "id": 109,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot arabe « كتاب (Kitab) » ?",
+    "choices": [
+      "Livre",
+      "Maison",
+      "Voiture",
+      "École"
+    ],
+    "answer": 0,
+    "explanation": "« كتاب » (Kitab) signifie « livre »."
+  },
+  {
+    "id": 110,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en latin ?",
+    "choices": [
+      "Salve",
+      "Vale",
+      "Gratias ago",
+      "Ita"
+    ],
+    "answer": 2,
+    "explanation": "« Gratias ago » signifie « Merci » en latin."
+  },
+  {
+    "id": 111,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Father » ?",
+    "choices": [
+      "Mère",
+      "Père",
+      "Frère",
+      "Oncle"
+    ],
+    "answer": 1,
+    "explanation": "« Father » signifie « père »."
+  },
+  {
+    "id": 112,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en turc ?",
+    "choices": [
+      "Teşekkür ederim",
+      "Merhaba",
+      "Güle güle",
+      "Evet"
+    ],
+    "answer": 1,
+    "explanation": "« Merhaba » signifie « Bonjour »."
+  },
+  {
+    "id": 113,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Hermano » ?",
+    "choices": [
+      "Sœur",
+      "Frère",
+      "Père",
+      "Oncle"
+    ],
+    "answer": 1,
+    "explanation": "« Hermano » signifie « frère »."
+  },
+  {
+    "id": 114,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en allemand ?",
+    "choices": [
+      "Hallo",
+      "Bitte",
+      "Danke",
+      "Tschüss"
+    ],
+    "answer": 2,
+    "explanation": "« Danke » signifie « Merci »."
+  },
+  {
+    "id": 115,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Bambino » ?",
+    "choices": [
+      "Enfant",
+      "Professeur",
+      "Parent",
+      "Étudiant"
+    ],
+    "answer": 0,
+    "explanation": "« Bambino » signifie « enfant »."
+  },
+  {
+    "id": 116,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en chinois (mandarin) ?",
+    "choices": [
+      "你好 (Nǐ hǎo)",
+      "谢谢 (Xièxie)",
+      "再见 (Zàijiàn)",
+      "请 (Qǐng)"
+    ],
+    "answer": 2,
+    "explanation": "« 再见 » (Zàijiàn) signifie « Au revoir »."
+  },
+  {
+    "id": 117,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Chair » ?",
+    "choices": [
+      "Chaise",
+      "Table",
+      "Canapé",
+      "Lit"
+    ],
+    "answer": 0,
+    "explanation": "« Chair » signifie « chaise »."
+  },
+  {
+    "id": 118,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en japonais ?",
+    "choices": [
+      "こんにちは (Konnichiwa)",
+      "ありがとう (Arigatō)",
+      "さようなら (Sayonara)",
+      "はい (Hai)"
+    ],
+    "answer": 1,
+    "explanation": "« ありがとう » (Arigatō) signifie « Merci »."
+  },
+  {
+    "id": 119,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot grec « Νερό (Neró) » ?",
+    "choices": [
+      "Feu",
+      "Eau",
+      "Air",
+      "Terre"
+    ],
+    "answer": 1,
+    "explanation": "« Νερό » (Neró) signifie « eau »."
+  },
+  {
+    "id": 120,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en arabe ?",
+    "choices": [
+      "لا (Lā)",
+      "شكراً (Shukran)",
+      "نعم (Na'am)",
+      "مرحباً (Marhaban)"
+    ],
+    "answer": 2,
+    "explanation": "« نعم » (Na'am) signifie « Oui »."
+  },
+  {
+    "id": 121,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Mother » ?",
+    "choices": [
+      "Mère",
+      "Grand-mère",
+      "Sœur",
+      "Tante"
+    ],
+    "answer": 0,
+    "explanation": "« Mother » signifie « mère »."
+  },
+  {
+    "id": 122,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « S'il vous plaît » en espagnol ?",
+    "choices": [
+      "Gracias",
+      "Hola",
+      "Por favor",
+      "Perdón"
+    ],
+    "answer": 2,
+    "explanation": "« Por favor » signifie « S'il vous plaît »."
+  },
+  {
+    "id": 123,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Apfel » ?",
+    "choices": [
+      "Orange",
+      "Poire",
+      "Pomme",
+      "Banane"
+    ],
+    "answer": 2,
+    "explanation": "« Apfel » signifie « pomme »."
+  },
+  {
+    "id": 124,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonsoir » en anglais ?",
+    "choices": [
+      "Good morning",
+      "Good afternoon",
+      "Good evening",
+      "Good night"
+    ],
+    "answer": 2,
+    "explanation": "« Good evening » signifie « Bonsoir »."
+  },
+  {
+    "id": 125,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Rosso » ?",
+    "choices": [
+      "Vert",
+      "Bleu",
+      "Rouge",
+      "Jaune"
+    ],
+    "answer": 2,
+    "explanation": "« Rosso » signifie « rouge »."
+  },
+  {
+    "id": 126,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en portugais ?",
+    "choices": [
+      "Obrigado",
+      "Adeus",
+      "Olá",
+      "Por favor"
+    ],
+    "answer": 0,
+    "explanation": "« Obrigado » (ou « Obrigada ») signifie « Merci »."
+  },
+  {
+    "id": 127,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 犬 (Inu) » ?",
+    "choices": [
+      "Chat",
+      "Chien",
+      "Oiseau",
+      "Poisson"
+    ],
+    "answer": 1,
+    "explanation": "« 犬 » (Inu) signifie « chien »."
+  },
+  {
+    "id": 128,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en russe ?",
+    "choices": [
+      "Да (Da)",
+      "Спасибо (Spasibo)",
+      "Нет (Net)",
+      "Привет (Privet)"
+    ],
+    "answer": 1,
+    "explanation": "« Спасибо » (Spasibo) signifie « Merci »."
+  },
+  {
+    "id": 129,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot chinois « 猫 (Māo) » ?",
+    "choices": [
+      "Chien",
+      "Cheval",
+      "Chat",
+      "Poisson"
+    ],
+    "answer": 2,
+    "explanation": "« 猫 » (Māo) signifie « chat »."
+  },
+  {
+    "id": 130,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Non » en grec ?",
+    "choices": [
+      "Ναι (Ne)",
+      "Όχι (Óchi)",
+      "Γεια σου (Yia sou)",
+      "Ευχαριστώ (Efcharistó)"
+    ],
+    "answer": 1,
+    "explanation": "« Όχι » (Óchi) signifie « Non »."
+  },
+  {
+    "id": 131,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Brother » ?",
+    "choices": [
+      "Père",
+      "Frère",
+      "Cousin",
+      "Oncle"
+    ],
+    "answer": 1,
+    "explanation": "« Brother » signifie « frère »."
+  },
+  {
+    "id": 132,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en italien ?",
+    "choices": [
+      "Prego",
+      "Grazie",
+      "Ciao",
+      "Arrivederci"
+    ],
+    "answer": 1,
+    "explanation": "« Grazie » signifie « Merci »."
+  },
+  {
+    "id": 133,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Blanco » ?",
+    "choices": [
+      "Noir",
+      "Rouge",
+      "Blanc",
+      "Vert"
+    ],
+    "answer": 2,
+    "explanation": "« Blanco » signifie « blanc »."
+  },
+  {
+    "id": 134,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Pomme » en allemand ?",
+    "choices": [
+      "Birne",
+      "Apfel",
+      "Orange",
+      "Banane"
+    ],
+    "answer": 1,
+    "explanation": "« Apfel » signifie « pomme »."
+  },
+  {
+    "id": 135,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Cidade » ?",
+    "choices": [
+      "Village",
+      "Ville",
+      "Pays",
+      "Rue"
+    ],
+    "answer": 1,
+    "explanation": "« Cidade » signifie « ville »."
+  },
+  {
+    "id": 136,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en grec ?",
+    "choices": [
+      "Γεια σου (Yia sou)",
+      "Ευχαριστώ (Efcharistó)",
+      "Αντίο (Adío)",
+      "Όχι (Óchi)"
+    ],
+    "answer": 0,
+    "explanation": "« Γεια σου » (Yia sou) est une salutation courante en grec."
+  },
+  {
+    "id": 137,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 山 (Yama) » ?",
+    "choices": [
+      "Mer",
+      "Montagne",
+      "Forêt",
+      "Rivière"
+    ],
+    "answer": 1,
+    "explanation": "« 山 » (Yama) signifie « montagne »."
+  },
+  {
+    "id": 138,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en chinois (mandarin) ?",
+    "choices": [
+      "不是 (Bù shì)",
+      "是 (Shì)",
+      "谢谢 (Xièxie)",
+      "你好 (Nǐ hǎo)"
+    ],
+    "answer": 1,
+    "explanation": "« 是 » (Shì) signifie « oui » ou « être » selon le contexte."
+  },
+  {
+    "id": 139,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot arabe « بيت (Bayt) » ?",
+    "choices": [
+      "Maison",
+      "École",
+      "Mosquée",
+      "Jardin"
+    ],
+    "answer": 0,
+    "explanation": "« بيت » (Bayt) signifie « maison »."
+  },
+  {
+    "id": 140,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en allemand ?",
+    "choices": [
+      "Hallo",
+      "Danke",
+      "Tschüss",
+      "Bitte"
+    ],
+    "answer": 2,
+    "explanation": "« Tschüss » signifie « Au revoir »."
+  },
+  {
+    "id": 141,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Sister » ?",
+    "choices": [
+      "Sœur",
+      "Mère",
+      "Tante",
+      "Cousine"
+    ],
+    "answer": 0,
+    "explanation": "« Sister » signifie « sœur »."
+  },
+  {
+    "id": 142,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonsoir » en allemand ?",
+    "choices": [
+      "Guten Abend",
+      "Guten Morgen",
+      "Gute Nacht",
+      "Hallo"
+    ],
+    "answer": 0,
+    "explanation": "« Guten Abend » signifie « Bonsoir »."
+  },
+  {
+    "id": 143,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Escuela » ?",
+    "choices": [
+      "Université",
+      "École",
+      "Classe",
+      "Bibliothèque"
+    ],
+    "answer": 1,
+    "explanation": "« Escuela » signifie « école »."
+  },
+  {
+    "id": 144,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Eau » en allemand ?",
+    "choices": [
+      "Milch",
+      "Saft",
+      "Wasser",
+      "Brot"
+    ],
+    "answer": 2,
+    "explanation": "« Wasser » signifie « eau »."
+  },
+  {
+    "id": 145,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Scuola » ?",
+    "choices": [
+      "Classe",
+      "École",
+      "Université",
+      "Bureau"
+    ],
+    "answer": 1,
+    "explanation": "« Scuola » signifie « école »."
+  },
+  {
+    "id": 146,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en russe ?",
+    "choices": [
+      "Привет (Privet)",
+      "Спасибо (Spasibo)",
+      "До свидания (Do svidaniya)",
+      "Нет (Net)"
+    ],
+    "answer": 0,
+    "explanation": "« Привет » (Privet) est une salutation courante en russe."
+  },
+  {
+    "id": 147,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Sol » ?",
+    "choices": [
+      "Lune",
+      "Étoile",
+      "Soleil",
+      "Ciel"
+    ],
+    "answer": 2,
+    "explanation": "« Sol » signifie « soleil »."
+  },
+  {
+    "id": 148,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en grec ?",
+    "choices": [
+      "Γεια σου (Yia sou)",
+      "Αντίο (Adío)",
+      "Ευχαριστώ (Efcharistó)",
+      "Ναι (Ne)"
+    ],
+    "answer": 2,
+    "explanation": "« Ευχαριστώ » (Efcharistó) signifie « Merci »."
+  },
+  {
+    "id": 149,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 火 (Hi) » ?",
+    "choices": [
+      "Eau",
+      "Vent",
+      "Feu",
+      "Terre"
+    ],
+    "answer": 2,
+    "explanation": "« 火 » (Hi) signifie « feu »."
+  },
+  {
+    "id": 150,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en coréen ?",
+    "choices": [
+      "감사합니다 (Gamsahamnida)",
+      "안녕하세요 (Annyeonghaseyo)",
+      "잘 가요 (Jal gayo)",
+      "네 (Ne)"
+    ],
+    "answer": 2,
+    "explanation": "« 잘 가요 » (Jal gayo) signifie « Au revoir » lorsque la personne part."
+  },
+  {
+    "id": 151,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « River » ?",
+    "choices": [
+      "Montagne",
+      "Rivière",
+      "Océan",
+      "Forêt"
+    ],
+    "answer": 1,
+    "explanation": "« River » signifie « rivière »."
+  },
+  {
+    "id": 152,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci beaucoup » en italien ?",
+    "choices": [
+      "Grazie mille",
+      "Buonasera",
+      "Arrivederci",
+      "Per favore"
+    ],
+    "answer": 0,
+    "explanation": "« Grazie mille » signifie « Merci beaucoup »."
+  },
+  {
+    "id": 153,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Ventana » ?",
+    "choices": [
+      "Porte",
+      "Fenêtre",
+      "Mur",
+      "Plafond"
+    ],
+    "answer": 1,
+    "explanation": "« Ventana » signifie « fenêtre »."
+  },
+  {
+    "id": 154,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonsoir » en portugais ?",
+    "choices": [
+      "Bom dia",
+      "Boa tarde",
+      "Boa noite",
+      "Adeus"
+    ],
+    "answer": 2,
+    "explanation": "« Boa noite » signifie « Bonsoir » ou « Bonne nuit »."
+  },
+  {
+    "id": 155,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Sonne » ?",
+    "choices": [
+      "Lune",
+      "Étoile",
+      "Soleil",
+      "Ciel"
+    ],
+    "answer": 2,
+    "explanation": "« Sonne » signifie « soleil »."
+  },
+  {
+    "id": 156,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Chat » en italien ?",
+    "choices": [
+      "Cane",
+      "Gatto",
+      "Pesce",
+      "Cavallo"
+    ],
+    "answer": 1,
+    "explanation": "« Gatto » signifie « chat »."
+  },
+  {
+    "id": 157,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Mountain » ?",
+    "choices": [
+      "Colline",
+      "Montagne",
+      "Vallée",
+      "Plaine"
+    ],
+    "answer": 1,
+    "explanation": "« Mountain » signifie « montagne »."
+  },
+  {
+    "id": 158,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en coréen ?",
+    "choices": [
+      "아니요 (Aniyo)",
+      "네 (Ne)",
+      "감사합니다 (Gamsahamnida)",
+      "안녕하세요 (Annyeonghaseyo)"
+    ],
+    "answer": 1,
+    "explanation": "« 네 » (Ne) signifie « Oui »."
+  },
+  {
+    "id": 159,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot grec « Σπίτι (Spíti) » ?",
+    "choices": [
+      "École",
+      "Maison",
+      "Ville",
+      "Route"
+    ],
+    "answer": 1,
+    "explanation": "« Σπίτι » (Spíti) signifie « maison »."
+  },
+  {
+    "id": 160,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en arabe ?",
+    "choices": [
+      "شكراً (Shukran)",
+      "مع السلامة (Ma'a salama)",
+      "مرحباً (Marhaban)",
+      "نعم (Na'am)"
+    ],
+    "answer": 2,
+    "explanation": "« مرحباً » (Marhaban) signifie « Bonjour »."
+  },
+  {
+    "id": 161,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Sea » ?",
+    "choices": [
+      "Mer",
+      "Lac",
+      "Rivière",
+      "Océan"
+    ],
+    "answer": 0,
+    "explanation": "« Sea » signifie « mer »."
+  },
+  {
+    "id": 162,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Livre » en italien ?",
+    "choices": [
+      "Penna",
+      "Libro",
+      "Scuola",
+      "Carta"
+    ],
+    "answer": 1,
+    "explanation": "« Libro » signifie « livre »."
+  },
+  {
+    "id": 163,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Stern » ?",
+    "choices": [
+      "Lune",
+      "Soleil",
+      "Étoile",
+      "Planète"
+    ],
+    "answer": 2,
+    "explanation": "« Stern » signifie « étoile »."
+  },
+  {
+    "id": 164,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Fenêtre » en espagnol ?",
+    "choices": [
+      "Puerta",
+      "Techo",
+      "Ventana",
+      "Pared"
+    ],
+    "answer": 2,
+    "explanation": "« Ventana » signifie « fenêtre »."
+  },
+  {
+    "id": 165,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Escola » ?",
+    "choices": [
+      "Bibliothèque",
+      "Université",
+      "École",
+      "Classe"
+    ],
+    "answer": 2,
+    "explanation": "« Escola » signifie « école »."
+  },
+  {
+    "id": 166,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en turc ?",
+    "choices": [
+      "Merhaba",
+      "Hoşça kal",
+      "Teşekkür ederim",
+      "Evet"
+    ],
+    "answer": 2,
+    "explanation": "« Teşekkür ederim » signifie « Merci »."
+  },
+  {
+    "id": 167,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 木 (Ki) » ?",
+    "choices": [
+      "Forêt",
+      "Bois",
+      "Arbre",
+      "Feuille"
+    ],
+    "answer": 2,
+    "explanation": "« 木 » (Ki) signifie « arbre »."
+  },
+  {
+    "id": 168,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en italien ?",
+    "choices": [
+      "Grazie",
+      "Buongiorno",
+      "Arrivederci",
+      "Prego"
+    ],
+    "answer": 2,
+    "explanation": "« Arrivederci » signifie « Au revoir »."
+  },
+  {
+    "id": 169,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot russe « Дом (Dom) » ?",
+    "choices": [
+      "Maison",
+      "École",
+      "Ville",
+      "Jardin"
+    ],
+    "answer": 0,
+    "explanation": "« Дом » (Dom) signifie « maison »."
+  },
+  {
+    "id": 170,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en chinois (mandarin) ?",
+    "choices": [
+      "你好 (Nǐ hǎo)",
+      "再见 (Zàijiàn)",
+      "谢谢 (Xièxie)",
+      "请 (Qǐng)"
+    ],
+    "answer": 2,
+    "explanation": "« 谢谢 » (Xièxie) signifie « Merci »."
+  },
+  {
+    "id": 171,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « School » ?",
+    "choices": [
+      "Église",
+      "École",
+      "Bibliothèque",
+      "Université"
+    ],
+    "answer": 1,
+    "explanation": "« School » signifie « école »."
+  },
+  {
+    "id": 172,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonsoir » en grec ?",
+    "choices": [
+      "Καλησπέρα (Kalispéra)",
+      "Καλημέρα (Kaliméra)",
+      "Αντίο (Adío)",
+      "Ευχαριστώ (Efcharistó)"
+    ],
+    "answer": 0,
+    "explanation": "« Καλησπέρα » (Kalispéra) signifie « Bonsoir »."
+  },
+  {
+    "id": 173,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Mano » ?",
+    "choices": [
+      "Bras",
+      "Main",
+      "Pied",
+      "Doigt"
+    ],
+    "answer": 1,
+    "explanation": "« Mano » signifie « main »."
+  },
+  {
+    "id": 174,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Maison » en anglais ?",
+    "choices": [
+      "School",
+      "Home",
+      "House",
+      "Building"
+    ],
+    "answer": 2,
+    "explanation": "« House » signifie « maison » (bâtiment)."
+  },
+  {
+    "id": 175,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Amico » ?",
+    "choices": [
+      "Frère",
+      "Voisin",
+      "Ami",
+      "Professeur"
+    ],
+    "answer": 2,
+    "explanation": "« Amico » signifie « ami »."
+  },
+  {
+    "id": 176,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Rouge » en allemand ?",
+    "choices": [
+      "Blau",
+      "Grün",
+      "Rot",
+      "Gelb"
+    ],
+    "answer": 2,
+    "explanation": "« Rot » signifie « rouge »."
+  },
+  {
+    "id": 177,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot portugais « Água » ?",
+    "choices": [
+      "Air",
+      "Terre",
+      "Feu",
+      "Eau"
+    ],
+    "answer": 3,
+    "explanation": "« Água » signifie « eau »."
+  },
+  {
+    "id": 178,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en arabe ?",
+    "choices": [
+      "مرحباً (Marhaban)",
+      "شكراً (Shukran)",
+      "نعم (Na'am)",
+      "مع السلامة (Ma'a salama)"
+    ],
+    "answer": 1,
+    "explanation": "« شكراً » (Shukran) signifie « Merci »."
+  },
+  {
+    "id": 179,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 空 (Sora) » ?",
+    "choices": [
+      "Mer",
+      "Montagne",
+      "Ciel",
+      "Nuage"
+    ],
+    "answer": 2,
+    "explanation": "« 空 » (Sora) signifie « ciel »."
+  },
+  {
+    "id": 180,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Au revoir » en russe ?",
+    "choices": [
+      "Спасибо (Spasibo)",
+      "Да (Da)",
+      "Привет (Privet)",
+      "До свидания (Do svidaniya)"
+    ],
+    "answer": 3,
+    "explanation": "« До свидания » (Do svidaniya) signifie « Au revoir »."
+  },
+  {
+    "id": 181,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Window » ?",
+    "choices": [
+      "Porte",
+      "Fenêtre",
+      "Mur",
+      "Toit"
+    ],
+    "answer": 1,
+    "explanation": "« Window » signifie « fenêtre »."
+  },
+  {
+    "id": 182,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonne nuit » en allemand ?",
+    "choices": [
+      "Guten Morgen",
+      "Gute Nacht",
+      "Guten Abend",
+      "Hallo"
+    ],
+    "answer": 1,
+    "explanation": "« Gute Nacht » signifie « Bonne nuit »."
+  },
+  {
+    "id": 183,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot espagnol « Cielo » ?",
+    "choices": [
+      "Mer",
+      "Montagne",
+      "Ciel",
+      "Nuage"
+    ],
+    "answer": 2,
+    "explanation": "« Cielo » signifie « ciel »."
+  },
+  {
+    "id": 184,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Chien » en portugais ?",
+    "choices": [
+      "Gato",
+      "Cão",
+      "Cavalo",
+      "Peixe"
+    ],
+    "answer": 1,
+    "explanation": "« Cão » signifie « chien »."
+  },
+  {
+    "id": 185,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Porta » ?",
+    "choices": [
+      "Fenêtre",
+      "Porte",
+      "Mur",
+      "Toit"
+    ],
+    "answer": 1,
+    "explanation": "« Porta » signifie « porte »."
+  },
+  {
+    "id": 186,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bleu » en espagnol ?",
+    "choices": [
+      "Rojo",
+      "Verde",
+      "Azul",
+      "Negro"
+    ],
+    "answer": 2,
+    "explanation": "« Azul » signifie « bleu »."
+  },
+  {
+    "id": 187,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Brot » ?",
+    "choices": [
+      "Lait",
+      "Pain",
+      "Beurre",
+      "Fromage"
+    ],
+    "answer": 1,
+    "explanation": "« Brot » signifie « pain »."
+  },
+  {
+    "id": 188,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en italien ?",
+    "choices": [
+      "Buongiorno",
+      "Buonasera",
+      "Arrivederci",
+      "Grazie"
+    ],
+    "answer": 0,
+    "explanation": "« Buongiorno » signifie « Bonjour »."
+  },
+  {
+    "id": 189,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 花 (Hana) » ?",
+    "choices": [
+      "Feuille",
+      "Arbre",
+      "Fleur",
+      "Herbe"
+    ],
+    "answer": 2,
+    "explanation": "« 花 » (Hana) signifie « fleur »."
+  },
+  {
+    "id": 190,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en espagnol ?",
+    "choices": [
+      "Hola",
+      "Gracias",
+      "Adiós",
+      "Buenos días"
+    ],
+    "answer": 1,
+    "explanation": "« Gracias » signifie « Merci »."
+  },
+  {
+    "id": 191,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot anglais « Apple » ?",
+    "choices": [
+      "Orange",
+      "Banane",
+      "Pomme",
+      "Poire"
+    ],
+    "answer": 2,
+    "explanation": "« Apple » signifie « pomme »."
+  },
+  {
+    "id": 192,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Merci » en portugais ?",
+    "choices": [
+      "Olá",
+      "Obrigado",
+      "Adeus",
+      "Bom dia"
+    ],
+    "answer": 1,
+    "explanation": "« Obrigado » (ou « Obrigada ») signifie « Merci »."
+  },
+  {
+    "id": 193,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot allemand « Katze » ?",
+    "choices": [
+      "Chien",
+      "Chat",
+      "Cheval",
+      "Lapin"
+    ],
+    "answer": 1,
+    "explanation": "« Katze » signifie « chat »."
+  },
+  {
+    "id": 194,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Soleil » en espagnol ?",
+    "choices": [
+      "Luna",
+      "Cielo",
+      "Sol",
+      "Estrella"
+    ],
+    "answer": 2,
+    "explanation": "« Sol » signifie « soleil »."
+  },
+  {
+    "id": 195,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot italien « Acqua » ?",
+    "choices": [
+      "Air",
+      "Eau",
+      "Feu",
+      "Terre"
+    ],
+    "answer": 1,
+    "explanation": "« Acqua » signifie « eau »."
+  },
+  {
+    "id": 196,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Chat » en anglais ?",
+    "choices": [
+      "Dog",
+      "Bird",
+      "Cat",
+      "Mouse"
+    ],
+    "answer": 2,
+    "explanation": "« Cat » signifie « chat »."
+  },
+  {
+    "id": 197,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot russe « Книга (Kniga) » ?",
+    "choices": [
+      "Stylo",
+      "Livre",
+      "École",
+      "Table"
+    ],
+    "answer": 1,
+    "explanation": "« Книга » (Kniga) signifie « livre »."
+  },
+  {
+    "id": 198,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Oui » en espagnol ?",
+    "choices": [
+      "No",
+      "Sí",
+      "Hola",
+      "Gracias"
+    ],
+    "answer": 1,
+    "explanation": "« Sí » signifie « Oui »."
+  },
+  {
+    "id": 199,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Que signifie le mot japonais « 本 (Hon) » ?",
+    "choices": [
+      "Maison",
+      "Livre",
+      "École",
+      "Journal"
+    ],
+    "answer": 1,
+    "explanation": "« 本 » (Hon) signifie « livre »."
+  },
+  {
+    "id": 200,
+    "category": "Langues",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Comment dit-on « Bonjour » en portugais ?",
+    "choices": [
+      "Boa noite",
+      "Bom dia",
+      "Obrigado",
+      "Adeus"
+    ],
+    "answer": 1,
+    "explanation": "« Bom dia » signifie « Bonjour »."
+  },
+  {
+    "id": 201,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « to go » ?",
+    "choices": [
+      "Goed",
+      "Gone",
+      "Went",
+      "Goes"
+    ],
+    "answer": 2,
+    "explanation": "Le prétérit de « to go » est « went ». « Gone » est le participe passé."
+  },
+  {
+    "id": 202,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel faux ami espagnol signifie « actuellement » et non « actuellement » ?",
+    "choices": [
+      "Actualmente",
+      "Activo",
+      "Actual",
+      "Realidad"
+    ],
+    "answer": 0,
+    "explanation": "« Actualmente » signifie « actuellement ». Le faux ami est que « actually » en anglais signifie « en réalité »."
+  },
+  {
+    "id": 203,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel article défini est masculin au nominatif ?",
+    "choices": [
+      "Die",
+      "Das",
+      "Der",
+      "Den"
+    ],
+    "answer": 2,
+    "explanation": "« Der » est l'article défini masculin au nominatif."
+  },
+  {
+    "id": 204,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le féminin du mot italien « Bello » ?",
+    "choices": [
+      "Belli",
+      "Bella",
+      "Belle",
+      "Bel"
+    ],
+    "answer": 1,
+    "explanation": "« Bello » devient « Bella » au féminin singulier."
+  },
+  {
+    "id": 205,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel est un adjectif ?",
+    "choices": [
+      "Quickly",
+      "Quick",
+      "Quickness",
+      "To quick"
+    ],
+    "answer": 1,
+    "explanation": "« Quick » est un adjectif, tandis que « quickly » est un adverbe."
+  },
+  {
+    "id": 206,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Break the ice » ?",
+    "choices": [
+      "Casser de la glace",
+      "Prendre une pause",
+      "Briser la gêne",
+      "Se disputer"
+    ],
+    "answer": 2,
+    "explanation": "« Break the ice » signifie engager la conversation ou briser la gêne."
+  },
+  {
+    "id": 207,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, lequel est un verbe à l'infinitif ?",
+    "choices": [
+      "Habla",
+      "Hablando",
+      "Hablar",
+      "Habló"
+    ],
+    "answer": 2,
+    "explanation": "« Hablar » est l'infinitif du verbe « parler »."
+  },
+  {
+    "id": 208,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le pluriel allemand de « Kind » (enfant) ?",
+    "choices": [
+      "Kinds",
+      "Kinder",
+      "Kinden",
+      "Kinde"
+    ],
+    "answer": 1,
+    "explanation": "Le pluriel de « Kind » est « Kinder »."
+  },
+  {
+    "id": 209,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel mot est un synonyme de « Happy » ?",
+    "choices": [
+      "Sad",
+      "Angry",
+      "Joyful",
+      "Cold"
+    ],
+    "answer": 2,
+    "explanation": "« Joyful » est un synonyme de « Happy »."
+  },
+  {
+    "id": 210,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, que signifie l'expression « In bocca al lupo » ?",
+    "choices": [
+      "Attention au loup",
+      "Bonne chance",
+      "Cours vite",
+      "À demain"
+    ],
+    "answer": 1,
+    "explanation": "« In bocca al lupo » est une expression italienne qui signifie « Bonne chance »."
+  },
+  {
+    "id": 211,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces mots est un adverbe ?",
+    "choices": [
+      "Quick",
+      "Quickly",
+      "Quicker",
+      "Quickness"
+    ],
+    "answer": 1,
+    "explanation": "« Quickly » est un adverbe signifiant « rapidement »."
+  },
+  {
+    "id": 212,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « manger » ?",
+    "choices": [
+      "Beber",
+      "Comer",
+      "Dormir",
+      "Escribir"
+    ],
+    "answer": 1,
+    "explanation": "« Comer » signifie « manger »."
+  },
+  {
+    "id": 213,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le participe passé du verbe anglais « write » ?",
+    "choices": [
+      "Writed",
+      "Written",
+      "Wrote",
+      "Writing"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « write » est « written »."
+  },
+  {
+    "id": 214,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel est le pluriel du mot « Buch » (livre) ?",
+    "choices": [
+      "Buchs",
+      "Büche",
+      "Bücher",
+      "Buche"
+    ],
+    "answer": 2,
+    "explanation": "Le pluriel de « Buch » est « Bücher »."
+  },
+  {
+    "id": 215,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Once in a blue moon » ?",
+    "choices": [
+      "Très souvent",
+      "Très rarement",
+      "À minuit",
+      "Pendant l'hiver"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie « très rarement »."
+  },
+  {
+    "id": 216,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « demain » ?",
+    "choices": [
+      "Ieri",
+      "Domani",
+      "Oggi",
+      "Stasera"
+    ],
+    "answer": 1,
+    "explanation": "« Domani » signifie « demain »."
+  },
+  {
+    "id": 217,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est l'antonyme de « Expensive » ?",
+    "choices": [
+      "Costly",
+      "Cheap",
+      "Large",
+      "Heavy"
+    ],
+    "answer": 1,
+    "explanation": "« Cheap » est l'antonyme de « Expensive »."
+  },
+  {
+    "id": 218,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, lequel de ces mots signifie « bibliothèque » ?",
+    "choices": [
+      "Librería",
+      "Biblioteca",
+      "Escuela",
+      "Oficina"
+    ],
+    "answer": 1,
+    "explanation": "« Biblioteca » signifie « bibliothèque ». « Librería » signifie « librairie »."
+  },
+  {
+    "id": 219,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces mots est un faux ami avec le français « librairie » ?",
+    "choices": [
+      "Book",
+      "Library",
+      "Bookshop",
+      "Shelf"
+    ],
+    "answer": 1,
+    "explanation": "« Library » signifie « bibliothèque », et non « librairie »."
+  },
+  {
+    "id": 220,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie « Obrigado » ?",
+    "choices": [
+      "Bonjour",
+      "Au revoir",
+      "Merci",
+      "S'il vous plaît"
+    ],
+    "answer": 2,
+    "explanation": "« Obrigado » signifie « Merci »."
+  },
+  {
+    "id": 221,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le comparatif de l'adjectif « good » ?",
+    "choices": [
+      "Gooder",
+      "Better",
+      "Best",
+      "More good"
+    ],
+    "answer": 1,
+    "explanation": "Le comparatif irrégulier de « good » est « better »."
+  },
+  {
+    "id": 222,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel est le féminin de « pequeño » ?",
+    "choices": [
+      "Pequeñita",
+      "Pequeña",
+      "Pequeños",
+      "Pequeñe"
+    ],
+    "answer": 1,
+    "explanation": "Le féminin singulier de « pequeño » est « pequeña »."
+  },
+  {
+    "id": 223,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le passé simple (preterite) du verbe anglais « see » ?",
+    "choices": [
+      "Seen",
+      "Seed",
+      "Saw",
+      "Seeing"
+    ],
+    "answer": 2,
+    "explanation": "Le prétérit de « see » est « saw ». « Seen » est le participe passé."
+  },
+  {
+    "id": 224,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Schnell » ?",
+    "choices": [
+      "Lent",
+      "Grand",
+      "Rapide",
+      "Petit"
+    ],
+    "answer": 2,
+    "explanation": "« Schnell » signifie « rapide »."
+  },
+  {
+    "id": 225,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « It's raining cats and dogs » ?",
+    "choices": [
+      "Il y a beaucoup d'animaux dehors",
+      "Il pleut très fort",
+      "Le temps est agréable",
+      "Il neige"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie qu'il pleut très abondamment."
+  },
+  {
+    "id": 226,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel est le pluriel de « ragazzo » (garçon) ?",
+    "choices": [
+      "Ragazzos",
+      "Ragazze",
+      "Ragazzi",
+      "Ragazzoi"
+    ],
+    "answer": 2,
+    "explanation": "« Ragazzo » devient « ragazzi » au pluriel masculin."
+  },
+  {
+    "id": 227,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces mots est un verbe ?",
+    "choices": [
+      "Beautiful",
+      "Beauty",
+      "Beautify",
+      "Beautifully"
+    ],
+    "answer": 2,
+    "explanation": "« Beautify » signifie « embellir »."
+  },
+  {
+    "id": 228,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, lequel de ces mots signifie « réussir » (un examen) ?",
+    "choices": [
+      "Suspender",
+      "Aprobar",
+      "Intentar",
+      "Olvidar"
+    ],
+    "answer": 1,
+    "explanation": "« Aprobar » signifie réussir un examen."
+  },
+  {
+    "id": 229,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « eat » ?",
+    "choices": [
+      "Eaten",
+      "Ate",
+      "Eated",
+      "Eating"
+    ],
+    "answer": 0,
+    "explanation": "Le participe passé de « eat » est « eaten »."
+  },
+  {
+    "id": 230,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « merci beaucoup » ?",
+    "choices": [
+      "Guten Tag",
+      "Bitte",
+      "Vielen Dank",
+      "Auf Wiedersehen"
+    ],
+    "answer": 2,
+    "explanation": "« Vielen Dank » signifie « merci beaucoup »."
+  },
+  {
+    "id": 231,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « take » ?",
+    "choices": [
+      "Took",
+      "Taken",
+      "Taking",
+      "Taked"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « take » est « taken »."
+  },
+  {
+    "id": 232,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel est le contraire de « alto » ?",
+    "choices": [
+      "Grande",
+      "Bajo",
+      "Pequeño",
+      "Largo"
+    ],
+    "answer": 1,
+    "explanation": "« Bajo » signifie « bas » ou « petit de taille »."
+  },
+  {
+    "id": 233,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel est le féminin de l'article défini « der » au nominatif ?",
+    "choices": [
+      "Das",
+      "Den",
+      "Die",
+      "Dem"
+    ],
+    "answer": 2,
+    "explanation": "« Die » est l'article défini féminin au nominatif."
+  },
+  {
+    "id": 234,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Better late than never » ?",
+    "choices": [
+      "Il vaut mieux partir tôt",
+      "Mieux vaut tard que jamais",
+      "Le temps guérit tout",
+      "Chaque chose en son temps"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie qu'il vaut mieux faire une chose tardivement que ne jamais la faire."
+  },
+  {
+    "id": 235,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « toujours » ?",
+    "choices": [
+      "Mai",
+      "Sempre",
+      "Subito",
+      "Adesso"
+    ],
+    "answer": 1,
+    "explanation": "« Sempre » signifie « toujours »."
+  },
+  {
+    "id": 236,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel est un nom ?",
+    "choices": [
+      "Beautiful",
+      "Beauty",
+      "Beautify",
+      "Beautifully"
+    ],
+    "answer": 1,
+    "explanation": "« Beauty » est un nom signifiant « beauté »."
+  },
+  {
+    "id": 237,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « demain » ?",
+    "choices": [
+      "Hoy",
+      "Ayer",
+      "Mañana",
+      "Ahora"
+    ],
+    "answer": 2,
+    "explanation": "« Mañana » signifie « demain »."
+  },
+  {
+    "id": 238,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Freund » ?",
+    "choices": [
+      "Voisin",
+      "Ennemi",
+      "Ami",
+      "Professeur"
+    ],
+    "answer": 2,
+    "explanation": "« Freund » signifie « ami »."
+  },
+  {
+    "id": 239,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le superlatif de « bad » ?",
+    "choices": [
+      "Baddest",
+      "Worst",
+      "Worse",
+      "More bad"
+    ],
+    "answer": 1,
+    "explanation": "Le superlatif irrégulier de « bad » est « worst »."
+  },
+  {
+    "id": 240,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, quel mot signifie « aujourd'hui » ?",
+    "choices": [
+      "Ontem",
+      "Agora",
+      "Hoje",
+      "Amanhã"
+    ],
+    "answer": 2,
+    "explanation": "« Hoje » signifie « aujourd'hui »."
+  },
+  {
+    "id": 241,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « begin » ?",
+    "choices": [
+      "Began",
+      "Begun",
+      "Beginned",
+      "Beginning"
+    ],
+    "answer": 0,
+    "explanation": "Le prétérit de « begin » est « began ». Le participe passé est « begun »."
+  },
+  {
+    "id": 242,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, que signifie le verbe « entender » ?",
+    "choices": [
+      "Écouter",
+      "Comprendre",
+      "Répondre",
+      "Regarder"
+    ],
+    "answer": 1,
+    "explanation": "« Entender » signifie « comprendre »."
+  },
+  {
+    "id": 243,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel est l'article défini neutre au nominatif ?",
+    "choices": [
+      "Der",
+      "Die",
+      "Das",
+      "Den"
+    ],
+    "answer": 2,
+    "explanation": "« Das » est l'article défini neutre au nominatif."
+  },
+  {
+    "id": 244,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Piece of cake » ?",
+    "choices": [
+      "Un dessert",
+      "Quelque chose de très facile",
+      "Une surprise",
+      "Un repas"
+    ],
+    "answer": 1,
+    "explanation": "« Piece of cake » signifie qu'une tâche est très facile."
+  },
+  {
+    "id": 245,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, que signifie le mot « Felice » ?",
+    "choices": [
+      "Fatigué",
+      "Heureux",
+      "Triste",
+      "Rapide"
+    ],
+    "answer": 1,
+    "explanation": "« Felice » signifie « heureux »."
+  },
+  {
+    "id": 246,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel mot est un antonyme de « Ancient » ?",
+    "choices": [
+      "Old",
+      "Historic",
+      "Modern",
+      "Traditional"
+    ],
+    "answer": 2,
+    "explanation": "« Modern » est l'antonyme de « Ancient »."
+  },
+  {
+    "id": 247,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, lequel de ces mots signifie « rapide » ?",
+    "choices": [
+      "Lento",
+      "Rápido",
+      "Pesado",
+      "Fuerte"
+    ],
+    "answer": 1,
+    "explanation": "« Rápido » signifie « rapide »."
+  },
+  {
+    "id": 248,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « voiture » ?",
+    "choices": [
+      "Haus",
+      "Straße",
+      "Auto",
+      "Zug"
+    ],
+    "answer": 2,
+    "explanation": "« Auto » signifie « voiture »."
+  },
+  {
+    "id": 249,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « drive » ?",
+    "choices": [
+      "Drove",
+      "Driven",
+      "Drived",
+      "Driving"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « drive » est « driven »."
+  },
+  {
+    "id": 250,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Feliz » ?",
+    "choices": [
+      "Heureux",
+      "Fatigué",
+      "Affamé",
+      "Rapide"
+    ],
+    "answer": 0,
+    "explanation": "« Feliz » signifie « heureux »."
+  },
+  {
+    "id": 251,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « choose » ?",
+    "choices": [
+      "Chosen",
+      "Choosed",
+      "Chose",
+      "Choosing"
+    ],
+    "answer": 2,
+    "explanation": "Le prétérit de « choose » est « chose ». Le participe passé est « chosen »."
+  },
+  {
+    "id": 252,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « apprendre » (acquérir des connaissances) ?",
+    "choices": [
+      "Enseñar",
+      "Aprender",
+      "Estudiar",
+      "Entender"
+    ],
+    "answer": 1,
+    "explanation": "« Aprender » signifie « apprendre ». « Enseñar » signifie « enseigner »."
+  },
+  {
+    "id": 253,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Frühstück » ?",
+    "choices": [
+      "Déjeuner",
+      "Petit-déjeuner",
+      "Dîner",
+      "Dessert"
+    ],
+    "answer": 1,
+    "explanation": "« Frühstück » signifie « petit-déjeuner »."
+  },
+  {
+    "id": 254,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Hit the books » ?",
+    "choices": [
+      "Jeter des livres",
+      "Lire un roman",
+      "Étudier sérieusement",
+      "Acheter des livres"
+    ],
+    "answer": 2,
+    "explanation": "« Hit the books » signifie « se mettre à étudier sérieusement »."
+  },
+  {
+    "id": 255,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel est le féminin de « italiano » ?",
+    "choices": [
+      "Italiane",
+      "Italiana",
+      "Italiani",
+      "Italia"
+    ],
+    "answer": 1,
+    "explanation": "Le féminin singulier de « italiano » est « italiana »."
+  },
+  {
+    "id": 256,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces mots est un nom abstrait ?",
+    "choices": [
+      "Freedom",
+      "Table",
+      "Car",
+      "Window"
+    ],
+    "answer": 0,
+    "explanation": "« Freedom » (liberté) est un nom abstrait."
+  },
+  {
+    "id": 257,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « cependant » ?",
+    "choices": [
+      "Porque",
+      "Aunque",
+      "Sin embargo",
+      "Entonces"
+    ],
+    "answer": 2,
+    "explanation": "« Sin embargo » signifie « cependant »."
+  },
+  {
+    "id": 258,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel est le pluriel de « Mann » ?",
+    "choices": [
+      "Manns",
+      "Männer",
+      "Mannen",
+      "Manner"
+    ],
+    "answer": 1,
+    "explanation": "Le pluriel de « Mann » est « Männer »."
+  },
+  {
+    "id": 259,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « break » ?",
+    "choices": [
+      "Broke",
+      "Breaked",
+      "Broken",
+      "Breaking"
+    ],
+    "answer": 2,
+    "explanation": "Le participe passé de « break » est « broken »."
+  },
+  {
+    "id": 260,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, quel mot signifie « fenêtre » ?",
+    "choices": [
+      "Janela",
+      "Porta",
+      "Parede",
+      "Telhado"
+    ],
+    "answer": 0,
+    "explanation": "« Janela » signifie « fenêtre »."
+  },
+  {
+    "id": 261,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « bring » ?",
+    "choices": [
+      "Brung",
+      "Brought",
+      "Bringed",
+      "Bringing"
+    ],
+    "answer": 1,
+    "explanation": "Le prétérit de « bring » est « brought »."
+  },
+  {
+    "id": 262,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « encore » ?",
+    "choices": [
+      "Siempre",
+      "Nunca",
+      "Todavía",
+      "Después"
+    ],
+    "answer": 2,
+    "explanation": "« Todavía » signifie « encore » ou « toujours » selon le contexte."
+  },
+  {
+    "id": 263,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Fenster » ?",
+    "choices": [
+      "Porte",
+      "Fenêtre",
+      "Toit",
+      "Escalier"
+    ],
+    "answer": 1,
+    "explanation": "« Fenster » signifie « fenêtre »."
+  },
+  {
+    "id": 264,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Under the weather » ?",
+    "choices": [
+      "Être en vacances",
+      "Être malade",
+      "Avoir froid",
+      "Être pressé"
+    ],
+    "answer": 1,
+    "explanation": "« Under the weather » signifie « ne pas se sentir bien » ou « être malade »."
+  },
+  {
+    "id": 265,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, que signifie le mot « Lavoro » ?",
+    "choices": [
+      "Vacances",
+      "Travail",
+      "Famille",
+      "Maison"
+    ],
+    "answer": 1,
+    "explanation": "« Lavoro » signifie « travail »."
+  },
+  {
+    "id": 266,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel mot est un synonyme de « Clever » ?",
+    "choices": [
+      "Lazy",
+      "Intelligent",
+      "Weak",
+      "Slow"
+    ],
+    "answer": 1,
+    "explanation": "« Intelligent » est un synonyme de « clever »."
+  },
+  {
+    "id": 267,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « conduire » (un véhicule) ?",
+    "choices": [
+      "Caminar",
+      "Viajar",
+      "Conducir",
+      "Correr"
+    ],
+    "answer": 2,
+    "explanation": "« Conducir » signifie « conduire »."
+  },
+  {
+    "id": 268,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « hôpital » ?",
+    "choices": [
+      "Krankenhaus",
+      "Apotheke",
+      "Schule",
+      "Kirche"
+    ],
+    "answer": 0,
+    "explanation": "« Krankenhaus » signifie « hôpital »."
+  },
+  {
+    "id": 269,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « speak » ?",
+    "choices": [
+      "Spoke",
+      "Spoken",
+      "Speaked",
+      "Speaking"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « speak » est « spoken »."
+  },
+  {
+    "id": 270,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Coração » ?",
+    "choices": [
+      "Poumon",
+      "Cerveau",
+      "Cœur",
+      "Estomac"
+    ],
+    "answer": 2,
+    "explanation": "« Coração » signifie « cœur »."
+  },
+  {
+    "id": 271,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « know » ?",
+    "choices": [
+      "Knowed",
+      "Known",
+      "Knew",
+      "Knowing"
+    ],
+    "answer": 2,
+    "explanation": "Le prétérit de « know » est « knew ». Le participe passé est « known »."
+  },
+  {
+    "id": 272,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « gauche » (direction) ?",
+    "choices": [
+      "Derecha",
+      "Izquierda",
+      "Arriba",
+      "Abajo"
+    ],
+    "answer": 1,
+    "explanation": "« Izquierda » signifie « gauche »."
+  },
+  {
+    "id": 273,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel est le pluriel de « Frau » (femme) ?",
+    "choices": [
+      "Fraus",
+      "Frauen",
+      "Fraue",
+      "Fraunen"
+    ],
+    "answer": 1,
+    "explanation": "Le pluriel de « Frau » est « Frauen »."
+  },
+  {
+    "id": 274,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Let the cat out of the bag » ?",
+    "choices": [
+      "Adopter un chat",
+      "Révéler un secret",
+      "Perdre quelque chose",
+      "Faire une erreur"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie révéler un secret par inadvertance."
+  },
+  {
+    "id": 275,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « ville » ?",
+    "choices": [
+      "Paese",
+      "Casa",
+      "Città",
+      "Strada"
+    ],
+    "answer": 2,
+    "explanation": "« Città » signifie « ville »."
+  },
+  {
+    "id": 276,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est l'antonyme de « Difficult » ?",
+    "choices": [
+      "Hard",
+      "Complicated",
+      "Easy",
+      "Complex"
+    ],
+    "answer": 2,
+    "explanation": "« Easy » est l'antonyme de « difficult »."
+  },
+  {
+    "id": 277,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « ouvrir » ?",
+    "choices": [
+      "Cerrar",
+      "Entrar",
+      "Abrir",
+      "Salir"
+    ],
+    "answer": 2,
+    "explanation": "« Abrir » signifie « ouvrir »."
+  },
+  {
+    "id": 278,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Bahnhof » ?",
+    "choices": [
+      "Aéroport",
+      "Port",
+      "Gare",
+      "Parking"
+    ],
+    "answer": 2,
+    "explanation": "« Bahnhof » signifie « gare »."
+  },
+  {
+    "id": 279,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « fly » ?",
+    "choices": [
+      "Flew",
+      "Flown",
+      "Flyed",
+      "Flying"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « fly » est « flown »."
+  },
+  {
+    "id": 280,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Rua » ?",
+    "choices": [
+      "Maison",
+      "Rue",
+      "Voiture",
+      "Pont"
+    ],
+    "answer": 1,
+    "explanation": "« Rua » signifie « rue »."
+  },
+  {
+    "id": 281,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « drink » ?",
+    "choices": [
+      "Drinked",
+      "Drank",
+      "Drunk",
+      "Drinking"
+    ],
+    "answer": 1,
+    "explanation": "Le prétérit de « drink » est « drank ». Le participe passé est « drunk »."
+  },
+  {
+    "id": 282,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « vite » ?",
+    "choices": [
+      "Despacio",
+      "Rápidamente",
+      "Ayer",
+      "Nunca"
+    ],
+    "answer": 1,
+    "explanation": "« Rápidamente » signifie « rapidement » ou « vite »."
+  },
+  {
+    "id": 283,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « clé » ?",
+    "choices": [
+      "Tür",
+      "Fenster",
+      "Schlüssel",
+      "Schloss"
+    ],
+    "answer": 2,
+    "explanation": "« Schlüssel » signifie « clé »."
+  },
+  {
+    "id": 284,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Burn the midnight oil » ?",
+    "choices": [
+      "Faire un feu",
+      "Travailler tard dans la nuit",
+      "Économiser de l'énergie",
+      "Voyager de nuit"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie travailler ou étudier jusque tard dans la nuit."
+  },
+  {
+    "id": 285,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « mer » ?",
+    "choices": [
+      "Lago",
+      "Mare",
+      "Fiume",
+      "Spiaggia"
+    ],
+    "answer": 1,
+    "explanation": "« Mare » signifie « mer »."
+  },
+  {
+    "id": 286,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le contraire de « Success » ?",
+    "choices": [
+      "Victory",
+      "Achievement",
+      "Failure",
+      "Progress"
+    ],
+    "answer": 2,
+    "explanation": "« Failure » est l'antonyme de « success »."
+  },
+  {
+    "id": 287,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, lequel de ces mots signifie « voisin » ?",
+    "choices": [
+      "Amigo",
+      "Profesor",
+      "Vecino",
+      "Cliente"
+    ],
+    "answer": 2,
+    "explanation": "« Vecino » signifie « voisin »."
+  },
+  {
+    "id": 288,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Apfel » ?",
+    "choices": [
+      "Poire",
+      "Orange",
+      "Pomme",
+      "Banane"
+    ],
+    "answer": 2,
+    "explanation": "« Apfel » signifie « pomme »."
+  },
+  {
+    "id": 289,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « ring » ?",
+    "choices": [
+      "Ringed",
+      "Rung",
+      "Rang",
+      "Ringing"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « ring » est « rung ». Le prétérit est « rang »."
+  },
+  {
+    "id": 290,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, quel mot signifie « plage » ?",
+    "choices": [
+      "Praia",
+      "Montanha",
+      "Floresta",
+      "Ilha"
+    ],
+    "answer": 0,
+    "explanation": "« Praia » signifie « plage »."
+  },
+  {
+    "id": 291,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le prétérit du verbe « sing » ?",
+    "choices": [
+      "Singed",
+      "Sung",
+      "Sang",
+      "Singing"
+    ],
+    "answer": 2,
+    "explanation": "Le prétérit de « sing » est « sang ». Le participe passé est « sung »."
+  },
+  {
+    "id": 292,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « jamais » ?",
+    "choices": [
+      "Siempre",
+      "Nunca",
+      "Todavía",
+      "Ahora"
+    ],
+    "answer": 1,
+    "explanation": "« Nunca » signifie « jamais »."
+  },
+  {
+    "id": 293,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « montagne » ?",
+    "choices": [
+      "Tal",
+      "Wald",
+      "Berg",
+      "See"
+    ],
+    "answer": 2,
+    "explanation": "« Berg » signifie « montagne »."
+  },
+  {
+    "id": 294,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Cost an arm and a leg » ?",
+    "choices": [
+      "Être gratuit",
+      "Être très coûteux",
+      "Être cassé",
+      "Être fabriqué à la main"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie que quelque chose coûte extrêmement cher."
+  },
+  {
+    "id": 295,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « fenêtre » ?",
+    "choices": [
+      "Porta",
+      "Balcone",
+      "Finestra",
+      "Tetto"
+    ],
+    "answer": 2,
+    "explanation": "« Finestra » signifie « fenêtre »."
+  },
+  {
+    "id": 296,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces mots est un synonyme de « Begin » ?",
+    "choices": [
+      "Finish",
+      "Start",
+      "Stop",
+      "Leave"
+    ],
+    "answer": 1,
+    "explanation": "« Start » est un synonyme de « begin »."
+  },
+  {
+    "id": 297,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « vendre » ?",
+    "choices": [
+      "Comprar",
+      "Pagar",
+      "Vender",
+      "Ganar"
+    ],
+    "answer": 2,
+    "explanation": "« Vender » signifie « vendre »."
+  },
+  {
+    "id": 298,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Regen » ?",
+    "choices": [
+      "Vent",
+      "Neige",
+      "Pluie",
+      "Nuage"
+    ],
+    "answer": 2,
+    "explanation": "« Regen » signifie « pluie »."
+  },
+  {
+    "id": 299,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « swim » ?",
+    "choices": [
+      "Swam",
+      "Swum",
+      "Swimmed",
+      "Swimming"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « swim » est « swum ». Le prétérit est « swam »."
+  },
+  {
+    "id": 300,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Chuva » ?",
+    "choices": [
+      "Vent",
+      "Soleil",
+      "Pluie",
+      "Neige"
+    ],
+    "answer": 2,
+    "explanation": "« Chuva » signifie « pluie »."
+  },
+  {
+    "id": 301,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel phrasal verb signifie « abandonner » ?",
+    "choices": [
+      "Give up",
+      "Give in",
+      "Give away",
+      "Give out"
+    ],
+    "answer": 0,
+    "explanation": "« Give up » signifie « abandonner »."
+  },
+  {
+    "id": 302,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, lequel est le participe passé du verbe « escribir » ?",
+    "choices": [
+      "Escribido",
+      "Escribiendo",
+      "Escrito",
+      "Escribía"
+    ],
+    "answer": 2,
+    "explanation": "Le participe passé de « escribir » est « escrito »."
+  },
+  {
+    "id": 303,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « aujourd'hui » ?",
+    "choices": [
+      "Gestern",
+      "Heute",
+      "Morgen",
+      "Jetzt"
+    ],
+    "answer": 1,
+    "explanation": "« Heute » signifie « aujourd'hui »."
+  },
+  {
+    "id": 304,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Call it a day » ?",
+    "choices": [
+      "Téléphoner le lendemain",
+      "Arrêter de travailler",
+      "Commencer une journée",
+      "Prendre un rendez-vous"
+    ],
+    "answer": 1,
+    "explanation": "« Call it a day » signifie arrêter une activité pour aujourd'hui."
+  },
+  {
+    "id": 305,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, que signifie le mot « Domanda » ?",
+    "choices": [
+      "Réponse",
+      "Question",
+      "Livre",
+      "École"
+    ],
+    "answer": 1,
+    "explanation": "« Domanda » signifie « question »."
+  },
+  {
+    "id": 306,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel mot est un faux ami avec le français « sensible » ?",
+    "choices": [
+      "Sensitive",
+      "Reasonable",
+      "Smart",
+      "Wise"
+    ],
+    "answer": 0,
+    "explanation": "« Sensitive » signifie « sensible » au sens émotionnel. Le français « sensible » peut aussi signifier « perceptible » selon le contexte."
+  },
+  {
+    "id": 307,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « peut-être » ?",
+    "choices": [
+      "Nunca",
+      "Quizás",
+      "Siempre",
+      "Entonces"
+    ],
+    "answer": 1,
+    "explanation": "« Quizás » signifie « peut-être »."
+  },
+  {
+    "id": 308,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « train » ?",
+    "choices": [
+      "Bus",
+      "Flugzeug",
+      "Zug",
+      "Schiff"
+    ],
+    "answer": 2,
+    "explanation": "« Zug » signifie « train »."
+  },
+  {
+    "id": 309,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « steal » ?",
+    "choices": [
+      "Stole",
+      "Stealed",
+      "Stolen",
+      "Stealing"
+    ],
+    "answer": 2,
+    "explanation": "Le participe passé de « steal » est « stolen »."
+  },
+  {
+    "id": 310,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Noite » ?",
+    "choices": [
+      "Matin",
+      "Après-midi",
+      "Soirée",
+      "Nuit"
+    ],
+    "answer": 3,
+    "explanation": "« Noite » signifie « nuit »."
+  },
+  {
+    "id": 311,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, que signifie le phrasal verb « look after » ?",
+    "choices": [
+      "Chercher",
+      "Prendre soin de",
+      "Regarder derrière",
+      "Attendre"
+    ],
+    "answer": 1,
+    "explanation": "« Look after » signifie « prendre soin de »."
+  },
+  {
+    "id": 312,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « toutefois » ?",
+    "choices": [
+      "Aunque",
+      "Sin embargo",
+      "Porque",
+      "Mientras"
+    ],
+    "answer": 1,
+    "explanation": "« Sin embargo » signifie « toutefois » ou « cependant »."
+  },
+  {
+    "id": 313,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « rivière » ?",
+    "choices": [
+      "Meer",
+      "Fluss",
+      "See",
+      "Brücke"
+    ],
+    "answer": 1,
+    "explanation": "« Fluss » signifie « rivière »."
+  },
+  {
+    "id": 314,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Once in a while » ?",
+    "choices": [
+      "Une seule fois",
+      "De temps en temps",
+      "Chaque jour",
+      "Très tôt"
+    ],
+    "answer": 1,
+    "explanation": "« Once in a while » signifie « de temps en temps »."
+  },
+  {
+    "id": 315,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « livre » ?",
+    "choices": [
+      "Quaderno",
+      "Pagina",
+      "Libro",
+      "Penna"
+    ],
+    "answer": 2,
+    "explanation": "« Libro » signifie « livre »."
+  },
+  {
+    "id": 316,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces mots est un antonyme de « Increase » ?",
+    "choices": [
+      "Grow",
+      "Expand",
+      "Decrease",
+      "Improve"
+    ],
+    "answer": 2,
+    "explanation": "« Decrease » est l'antonyme de « increase »."
+  },
+  {
+    "id": 317,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « oublier » ?",
+    "choices": [
+      "Recordar",
+      "Olvidar",
+      "Pensar",
+      "Buscar"
+    ],
+    "answer": 1,
+    "explanation": "« Olvidar » signifie « oublier »."
+  },
+  {
+    "id": 318,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « avion » ?",
+    "choices": [
+      "Schiff",
+      "Auto",
+      "Flugzeug",
+      "Fahrrad"
+    ],
+    "answer": 2,
+    "explanation": "« Flugzeug » signifie « avion »."
+  },
+  {
+    "id": 319,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « forget » ?",
+    "choices": [
+      "Forgot",
+      "Forgotten",
+      "Forgetted",
+      "Forgetting"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « forget » est « forgotten »."
+  },
+  {
+    "id": 320,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Escola » ?",
+    "choices": [
+      "École",
+      "Université",
+      "Bibliothèque",
+      "Classe"
+    ],
+    "answer": 0,
+    "explanation": "« Escola » signifie « école »."
+  },
+  {
+    "id": 321,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel phrasal verb signifie « reporter » (une réunion) ?",
+    "choices": [
+      "Put off",
+      "Put out",
+      "Put up",
+      "Put away"
+    ],
+    "answer": 0,
+    "explanation": "« Put off » signifie « reporter »."
+  },
+  {
+    "id": 322,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel mot signifie « malgré » ?",
+    "choices": [
+      "Aunque",
+      "Durante",
+      "Contra",
+      "A pesar de"
+    ],
+    "answer": 3,
+    "explanation": "« A pesar de » signifie « malgré »."
+  },
+  {
+    "id": 323,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, que signifie le mot « Sprache » ?",
+    "choices": [
+      "Parole",
+      "Langue",
+      "Livre",
+      "Écriture"
+    ],
+    "answer": 1,
+    "explanation": "« Sprache » signifie « langue »."
+  },
+  {
+    "id": 324,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Que signifie l'expression anglaise « Keep an eye on » ?",
+    "choices": [
+      "Fermer les yeux",
+      "Surveiller",
+      "Regarder ailleurs",
+      "Ignorer"
+    ],
+    "answer": 1,
+    "explanation": "« Keep an eye on » signifie « surveiller »."
+  },
+  {
+    "id": 325,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En italien, quel mot signifie « soleil » ?",
+    "choices": [
+      "Luna",
+      "Cielo",
+      "Sole",
+      "Stella"
+    ],
+    "answer": 2,
+    "explanation": "« Sole » signifie « soleil »."
+  },
+  {
+    "id": 326,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, lequel de ces verbes est irrégulier ?",
+    "choices": [
+      "Walk",
+      "Jump",
+      "Build",
+      "Open"
+    ],
+    "answer": 2,
+    "explanation": "« Build » est irrégulier : build → built → built."
+  },
+  {
+    "id": 327,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En espagnol, quel verbe signifie « répondre » ?",
+    "choices": [
+      "Preguntar",
+      "Responder",
+      "Escuchar",
+      "Hablar"
+    ],
+    "answer": 1,
+    "explanation": "« Responder » signifie « répondre »."
+  },
+  {
+    "id": 328,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En allemand, quel mot signifie « bibliothèque » ?",
+    "choices": [
+      "Bücherei",
+      "Krankenhaus",
+      "Schule",
+      "Universität"
+    ],
+    "answer": 0,
+    "explanation": "« Bücherei » (ou « Bibliothek ») signifie « bibliothèque »."
+  },
+  {
+    "id": 329,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En anglais, quel est le participe passé du verbe « write » ?",
+    "choices": [
+      "Wrote",
+      "Written",
+      "Writed",
+      "Writing"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « write » est « written »."
+  },
+  {
+    "id": 330,
+    "category": "Langues",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "En portugais, que signifie le mot « Amigo » ?",
+    "choices": [
+      "Voisin",
+      "Ami",
+      "Frère",
+      "Cousin"
+    ],
+    "answer": 1,
+    "explanation": "« Amigo » signifie « ami »."
+  },
+  {
+    "id": 331,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel phrasal verb signifie « trouver une solution » ?",
+    "choices": [
+      "Figure out",
+      "Look up",
+      "Take off",
+      "Break down"
+    ],
+    "answer": 0,
+    "explanation": "« Figure out » signifie comprendre ou trouver une solution."
+  },
+  {
+    "id": 332,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quelle préposition complète correctement la phrase : « Depende ___ ti » ?",
+    "choices": [
+      "en",
+      "de",
+      "a",
+      "con"
+    ],
+    "answer": 1,
+    "explanation": "L'expression correcte est « depender de »."
+  },
+  {
+    "id": 333,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel est le participe passé du verbe « sehen » (voir) ?",
+    "choices": [
+      "Seht",
+      "Sah",
+      "Gesehen",
+      "Sehend"
+    ],
+    "answer": 2,
+    "explanation": "Le participe passé de « sehen » est « gesehen »."
+  },
+  {
+    "id": 334,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « Beat around the bush » ?",
+    "choices": [
+      "Tourner autour du pot",
+      "Se promener en forêt",
+      "Parler rapidement",
+      "Changer de sujet"
+    ],
+    "answer": 0,
+    "explanation": "Cette expression signifie éviter d'aborder directement un sujet."
+  },
+  {
+    "id": 335,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, quel est le pluriel de « uomo » (homme) ?",
+    "choices": [
+      "Uomi",
+      "Uomini",
+      "Uomos",
+      "Uominii"
+    ],
+    "answer": 1,
+    "explanation": "Le pluriel irrégulier de « uomo » est « uomini »."
+  },
+  {
+    "id": 336,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quelle phrase est correctement écrite à la voix passive ?",
+    "choices": [
+      "The cake was eaten by Tom.",
+      "Tom was ate the cake.",
+      "The cake eaten Tom.",
+      "Tom eaten the cake."
+    ],
+    "answer": 0,
+    "explanation": "La voix passive correcte est « The cake was eaten by Tom. »"
+  },
+  {
+    "id": 337,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel mot signifie « défi » ?",
+    "choices": [
+      "Desafío",
+      "Peligro",
+      "Problema",
+      "Victoria"
+    ],
+    "answer": 0,
+    "explanation": "« Desafío » signifie « défi »."
+  },
+  {
+    "id": 338,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel cas est utilisé après la préposition « mit » ?",
+    "choices": [
+      "Nominatif",
+      "Accusatif",
+      "Datif",
+      "Génitif"
+    ],
+    "answer": 2,
+    "explanation": "La préposition « mit » est toujours suivie du datif."
+  },
+  {
+    "id": 339,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « arise » ?",
+    "choices": [
+      "Arose",
+      "Arisen",
+      "Arised",
+      "Arising"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe irrégulier est : arise → arose → arisen."
+  },
+  {
+    "id": 340,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, quel mot signifie « connaissance » (savoir) ?",
+    "choices": [
+      "Conhecimento",
+      "Memória",
+      "Inteligência",
+      "Informação"
+    ],
+    "answer": 0,
+    "explanation": "« Conhecimento » signifie « connaissance » ou « savoir »."
+  },
+  {
+    "id": 341,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel phrasal verb signifie « tolérer » ?",
+    "choices": [
+      "Put up with",
+      "Put away",
+      "Put down",
+      "Put across"
+    ],
+    "answer": 0,
+    "explanation": "« Put up with » signifie « supporter » ou « tolérer »."
+  },
+  {
+    "id": 342,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, lequel de ces mots est un faux ami du français « assister » ?",
+    "choices": [
+      "Asistir",
+      "Ayudar",
+      "Mirar",
+      "Observar"
+    ],
+    "answer": 0,
+    "explanation": "« Asistir » signifie généralement « assister à » (être présent), et non « aider ». Pour « aider », on utilise « ayudar »."
+  },
+  {
+    "id": 343,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel cas est utilisé après la préposition « für » ?",
+    "choices": [
+      "Nominatif",
+      "Datif",
+      "Accusatif",
+      "Génitif"
+    ],
+    "answer": 2,
+    "explanation": "La préposition « für » est toujours suivie de l'accusatif."
+  },
+  {
+    "id": 344,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « The ball is in your court » ?",
+    "choices": [
+      "Tu joues au tennis",
+      "C'est à toi de décider ou d'agir",
+      "Tu as gagné",
+      "Le match est terminé"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie que c'est à l'autre personne de prendre la décision ou d'agir."
+  },
+  {
+    "id": 345,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, quel est le féminin pluriel de « bello » ?",
+    "choices": [
+      "Belli",
+      "Belle",
+      "Bella",
+      "Bel"
+    ],
+    "answer": 1,
+    "explanation": "Le féminin pluriel de « bello » est « belle »."
+  },
+  {
+    "id": 346,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quelle phrase est au present perfect ?",
+    "choices": [
+      "I saw the movie yesterday.",
+      "I have seen that movie.",
+      "I am seeing the movie.",
+      "I will see the movie."
+    ],
+    "answer": 1,
+    "explanation": "« I have seen that movie. » est au present perfect."
+  },
+  {
+    "id": 347,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel est le subjonctif présent de « ser » à la 1ʳᵉ personne du singulier ?",
+    "choices": [
+      "Soy",
+      "Sea",
+      "Era",
+      "Fui"
+    ],
+    "answer": 1,
+    "explanation": "Le subjonctif présent de « ser » à la première personne du singulier est « sea »."
+  },
+  {
+    "id": 348,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, que signifie le mot « Geschwindigkeit » ?",
+    "choices": [
+      "Distance",
+      "Temps",
+      "Vitesse",
+      "Direction"
+    ],
+    "answer": 2,
+    "explanation": "« Geschwindigkeit » signifie « vitesse »."
+  },
+  {
+    "id": 349,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « shake » ?",
+    "choices": [
+      "Shook",
+      "Shaken",
+      "Shaked",
+      "Shaking"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé est « shaken ». Le prétérit est « shook »."
+  },
+  {
+    "id": 350,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, que signifie le mot « Saudade » ?",
+    "choices": [
+      "Joie",
+      "Espoir",
+      "Nostalgie profonde",
+      "Colère"
+    ],
+    "answer": 2,
+    "explanation": "« Saudade » désigne un sentiment profond de nostalgie ou de manque envers une personne, un lieu ou une époque."
+  },
+  {
+    "id": 351,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel phrasal verb signifie « inventer » (une histoire) ?",
+    "choices": [
+      "Make up",
+      "Make out",
+      "Make over",
+      "Make off"
+    ],
+    "answer": 0,
+    "explanation": "« Make up » signifie notamment « inventer » une histoire ou une excuse."
+  },
+  {
+    "id": 352,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel mode verbal est utilisé après l'expression « Es necesario que… » ?",
+    "choices": [
+      "Indicatif",
+      "Infinitif",
+      "Subjonctif",
+      "Conditionnel"
+    ],
+    "answer": 2,
+    "explanation": "Après une expression de nécessité comme « Es necesario que… », on emploie le subjonctif."
+  },
+  {
+    "id": 353,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quelle préposition est toujours suivie du datif ?",
+    "choices": [
+      "Durch",
+      "Ohne",
+      "Mit",
+      "Für"
+    ],
+    "answer": 2,
+    "explanation": "« Mit » est toujours suivie du datif."
+  },
+  {
+    "id": 354,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « Spill the beans » ?",
+    "choices": [
+      "Préparer un repas",
+      "Révéler un secret",
+      "Faire une erreur",
+      "Renverser quelque chose"
+    ],
+    "answer": 1,
+    "explanation": "« Spill the beans » signifie révéler un secret."
+  },
+  {
+    "id": 355,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, lequel de ces mots signifie « pourquoi » ?",
+    "choices": [
+      "Perché",
+      "Quando",
+      "Come",
+      "Dove"
+    ],
+    "answer": 0,
+    "explanation": "« Perché » signifie « pourquoi » ou « parce que » selon le contexte."
+  },
+  {
+    "id": 356,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quelle phrase est grammaticalement correcte ?",
+    "choices": [
+      "If I was you, I'd apologize.",
+      "If I were you, I'd apologize.",
+      "If I am you, I'd apologize.",
+      "If I be you, I'd apologize."
+    ],
+    "answer": 1,
+    "explanation": "Dans une situation hypothétique, l'anglais formel utilise « If I were you »."
+  },
+  {
+    "id": 357,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel mot signifie « chauve-souris » ?",
+    "choices": [
+      "Murciélago",
+      "Lagarto",
+      "Mariposa",
+      "Ardilla"
+    ],
+    "answer": 0,
+    "explanation": "« Murciélago » signifie « chauve-souris »."
+  },
+  {
+    "id": 358,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel est le prétérit du verbe « gehen » (aller) ?",
+    "choices": [
+      "Geht",
+      "Gegangen",
+      "Ging",
+      "Gehen"
+    ],
+    "answer": 2,
+    "explanation": "Le prétérit de « gehen » est « ging ». Le participe passé est « gegangen »."
+  },
+  {
+    "id": 359,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « hide » ?",
+    "choices": [
+      "Hid",
+      "Hidden",
+      "Hided",
+      "Hiding"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « hide » est « hidden »."
+  },
+  {
+    "id": 360,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, quel mot signifie « papillon » ?",
+    "choices": [
+      "Borboleta",
+      "Abelha",
+      "Mosca",
+      "Joaninha"
+    ],
+    "answer": 0,
+    "explanation": "« Borboleta » signifie « papillon »."
+  },
+  {
+    "id": 361,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel phrasal verb signifie « rencontrer quelqu'un par hasard » ?",
+    "choices": [
+      "Run into",
+      "Run away",
+      "Run over",
+      "Run out"
+    ],
+    "answer": 0,
+    "explanation": "« Run into someone » signifie rencontrer quelqu'un par hasard."
+  },
+  {
+    "id": 362,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel temps est utilisé dans la phrase « Había terminado antes de salir » ?",
+    "choices": [
+      "Pretérito perfecto",
+      "Pretérito imperfecto",
+      "Pretérito pluscuamperfecto",
+      "Futuro perfecto"
+    ],
+    "answer": 2,
+    "explanation": "« Había terminado » est au plus-que-parfait (pretérito pluscuamperfecto)."
+  },
+  {
+    "id": 363,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quelle préposition est toujours suivie du génitif ?",
+    "choices": [
+      "Während",
+      "Mit",
+      "Für",
+      "Durch"
+    ],
+    "answer": 0,
+    "explanation": "« Während » est traditionnellement suivie du génitif."
+  },
+  {
+    "id": 364,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « Hit the nail on the head » ?",
+    "choices": [
+      "Construire quelque chose",
+      "Avoir parfaitement raison",
+      "Faire une erreur",
+      "Travailler dur"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie dire exactement ce qu'il faut ou avoir parfaitement raison."
+  },
+  {
+    "id": 365,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, quel mot signifie « mensonge » ?",
+    "choices": [
+      "Verità",
+      "Bugia",
+      "Segreto",
+      "Errore"
+    ],
+    "answer": 1,
+    "explanation": "« Bugia » signifie « mensonge »."
+  },
+  {
+    "id": 366,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « sink » ?",
+    "choices": [
+      "Sank",
+      "Sunken",
+      "Sunk",
+      "Sinked"
+    ],
+    "answer": 2,
+    "explanation": "Le verbe est : sink → sank → sunk. « Sunken » est généralement utilisé comme adjectif."
+  },
+  {
+    "id": 367,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, que signifie le mot « empeño » ?",
+    "choices": [
+      "Fatigue",
+      "Effort",
+      "Chance",
+      "Repos"
+    ],
+    "answer": 1,
+    "explanation": "« Empeño » signifie effort, détermination ou engagement."
+  },
+  {
+    "id": 368,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, que signifie le mot « Herausforderung » ?",
+    "choices": [
+      "Récompense",
+      "Défi",
+      "Objectif",
+      "Victoire"
+    ],
+    "answer": 1,
+    "explanation": "« Herausforderung » signifie « défi »."
+  },
+  {
+    "id": 369,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « bear » (supporter/porter) ?",
+    "choices": [
+      "Bore",
+      "Born",
+      "Borne",
+      "Beared"
+    ],
+    "answer": 2,
+    "explanation": "Le participe passé est généralement « borne » pour le sens « supporter/porter ». « Born » est utilisé pour la naissance."
+  },
+  {
+    "id": 370,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, que signifie le mot « Amanhecer » ?",
+    "choices": [
+      "Crépuscule",
+      "Aube",
+      "Tempête",
+      "Nuit"
+    ],
+    "answer": 1,
+    "explanation": "« Amanhecer » signifie « aube » ou « lever du jour »."
+  },
+  {
+    "id": 371,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel phrasal verb signifie « manquer une occasion » ?",
+    "choices": [
+      "Miss out on",
+      "Take over",
+      "Turn in",
+      "Look up"
+    ],
+    "answer": 0,
+    "explanation": "« Miss out on » signifie manquer une opportunité ou être privé de quelque chose."
+  },
+  {
+    "id": 372,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel est le futur simple du verbe « poner » à la 1ʳᵉ personne du singulier ?",
+    "choices": [
+      "Pondré",
+      "Pondré",
+      "Poneré",
+      "Pondría"
+    ],
+    "answer": 0,
+    "explanation": "Le futur simple de « poner » est irrégulier : pondré, pondrás, pondrá…"
+  },
+  {
+    "id": 373,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel cas est utilisé après la préposition « ohne » ?",
+    "choices": [
+      "Datif",
+      "Nominatif",
+      "Accusatif",
+      "Génitif"
+    ],
+    "answer": 2,
+    "explanation": "La préposition « ohne » est toujours suivie de l'accusatif."
+  },
+  {
+    "id": 374,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « Back to square one » ?",
+    "choices": [
+      "Retourner au point de départ",
+      "Prendre une pause",
+      "Changer de stratégie",
+      "Réussir un projet"
+    ],
+    "answer": 0,
+    "explanation": "« Back to square one » signifie devoir recommencer depuis le début."
+  },
+  {
+    "id": 375,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, quel est le passé composé de « fare » à la 1ʳᵉ personne du singulier ?",
+    "choices": [
+      "Sono fatto",
+      "Ho fatto",
+      "Ebbi fatto",
+      "Facevo"
+    ],
+    "answer": 1,
+    "explanation": "Le passé composé de « fare » est « ho fatto »."
+  },
+  {
+    "id": 376,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel mot est un synonyme de « reliable » ?",
+    "choices": [
+      "Trustworthy",
+      "Careless",
+      "Fragile",
+      "Uncertain"
+    ],
+    "answer": 0,
+    "explanation": "« Trustworthy » signifie digne de confiance et est synonyme de « reliable »."
+  },
+  {
+    "id": 377,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, lequel de ces mots signifie « chauffer » (un aliment) ?",
+    "choices": [
+      "Calentar",
+      "Enfriar",
+      "Hervir",
+      "Asar"
+    ],
+    "answer": 0,
+    "explanation": "« Calentar » signifie réchauffer ou chauffer."
+  },
+  {
+    "id": 378,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, que signifie le mot « Entschuldigung » ?",
+    "choices": [
+      "Merci",
+      "Excusez-moi",
+      "Bienvenue",
+      "Bonne chance"
+    ],
+    "answer": 1,
+    "explanation": "« Entschuldigung » signifie « excusez-moi » ou « pardon »."
+  },
+  {
+    "id": 379,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « freeze » ?",
+    "choices": [
+      "Froze",
+      "Frozen",
+      "Freezed",
+      "Freezing"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : freeze → froze → frozen."
+  },
+  {
+    "id": 380,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, que signifie le mot « Esquecer » ?",
+    "choices": [
+      "Apprendre",
+      "Comprendre",
+      "Oublier",
+      "Retenir"
+    ],
+    "answer": 2,
+    "explanation": "« Esquecer » signifie « oublier »."
+  },
+  {
+    "id": 381,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, que signifie le phrasal verb « carry out » ?",
+    "choices": [
+      "Reporter",
+      "Exécuter / réaliser",
+      "Abandonner",
+      "Découvrir"
+    ],
+    "answer": 1,
+    "explanation": "« Carry out » signifie réaliser ou exécuter une tâche."
+  },
+  {
+    "id": 382,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel est le conditionnel présent du verbe « tener » à la 1ʳᵉ personne du singulier ?",
+    "choices": [
+      "Tendré",
+      "Tenía",
+      "Tendría",
+      "Tengo"
+    ],
+    "answer": 2,
+    "explanation": "Le conditionnel présent de « tener » est « tendría »."
+  },
+  {
+    "id": 383,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel est le participe passé du verbe « schreiben » ?",
+    "choices": [
+      "Schrieb",
+      "Geschrieben",
+      "Schreibt",
+      "Schreibend"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé de « schreiben » est « geschrieben »."
+  },
+  {
+    "id": 384,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « Pull someone's leg » ?",
+    "choices": [
+      "Aider quelqu'un",
+      "Se moquer gentiment de quelqu'un",
+      "Faire tomber quelqu'un",
+      "Encourager quelqu'un"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie plaisanter ou taquiner quelqu'un."
+  },
+  {
+    "id": 385,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, que signifie le mot « scegliere » ?",
+    "choices": [
+      "Attendre",
+      "Choisir",
+      "Dormir",
+      "Écrire"
+    ],
+    "answer": 1,
+    "explanation": "« Scegliere » signifie « choisir »."
+  },
+  {
+    "id": 386,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « tear » ?",
+    "choices": [
+      "Tore",
+      "Torn",
+      "Teared",
+      "Tearing"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : tear → tore → torn."
+  },
+  {
+    "id": 387,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, lequel de ces mots signifie « réaliser » (un rêve) ?",
+    "choices": [
+      "Cumplir",
+      "Romper",
+      "Olvidar",
+      "Esconder"
+    ],
+    "answer": 0,
+    "explanation": "« Cumplir un sueño » signifie réaliser un rêve."
+  },
+  {
+    "id": 388,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, que signifie le mot « Entscheidung » ?",
+    "choices": [
+      "Décision",
+      "Discussion",
+      "Explication",
+      "Question"
+    ],
+    "answer": 0,
+    "explanation": "« Entscheidung » signifie « décision »."
+  },
+  {
+    "id": 389,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « throw » ?",
+    "choices": [
+      "Throwed",
+      "Thrown",
+      "Threw",
+      "Throwing"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : throw → threw → thrown."
+  },
+  {
+    "id": 390,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, que signifie le mot « Janela » ?",
+    "choices": [
+      "Fenêtre",
+      "Porte",
+      "Toit",
+      "Escalier"
+    ],
+    "answer": 0,
+    "explanation": "« Janela » signifie « fenêtre »."
+  },
+  {
+    "id": 391,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, que signifie le phrasal verb « come across » ?",
+    "choices": [
+      "Traverser un pont",
+      "Tomber sur quelqu'un ou quelque chose par hasard",
+      "S'enfuir",
+      "Revenir"
+    ],
+    "answer": 1,
+    "explanation": "« Come across » signifie rencontrer ou trouver quelque chose par hasard."
+  },
+  {
+    "id": 392,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel mot signifie « pourtant » ?",
+    "choices": [
+      "Aunque",
+      "Sin embargo",
+      "Por lo tanto",
+      "Mientras"
+    ],
+    "answer": 1,
+    "explanation": "« Sin embargo » signifie « pourtant » ou « cependant »."
+  },
+  {
+    "id": 393,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, quel cas est utilisé après la préposition « gegen » ?",
+    "choices": [
+      "Nominatif",
+      "Datif",
+      "Accusatif",
+      "Génitif"
+    ],
+    "answer": 2,
+    "explanation": "La préposition « gegen » est toujours suivie de l'accusatif."
+  },
+  {
+    "id": 394,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Que signifie l'expression anglaise « Cut corners » ?",
+    "choices": [
+      "Couper du bois",
+      "Prendre des raccourcis au détriment de la qualité",
+      "Décorer une pièce",
+      "Tracer une ligne"
+    ],
+    "answer": 1,
+    "explanation": "« Cut corners » signifie faire les choses à moindre coût ou plus rapidement, souvent en sacrifiant la qualité."
+  },
+  {
+    "id": 395,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En italien, quel verbe signifie « réussir » ?",
+    "choices": [
+      "Fallire",
+      "Riuscire",
+      "Provare",
+      "Finire"
+    ],
+    "answer": 1,
+    "explanation": "« Riuscire » signifie réussir ou parvenir à faire quelque chose."
+  },
+  {
+    "id": 396,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « arise » ?",
+    "choices": [
+      "Arose",
+      "Arisen",
+      "Arised",
+      "Arising"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe irrégulier est : arise → arose → arisen."
+  },
+  {
+    "id": 397,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En espagnol, quel mot signifie « chauffer » au sens de « réchauffer un repas » ?",
+    "choices": [
+      "Calentar",
+      "Quemar",
+      "Freír",
+      "Hervir"
+    ],
+    "answer": 0,
+    "explanation": "« Calentar » signifie chauffer ou réchauffer."
+  },
+  {
+    "id": 398,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En allemand, que signifie le mot « Möglichkeit » ?",
+    "choices": [
+      "Habitude",
+      "Possibilité",
+      "Difficulté",
+      "Capacité"
+    ],
+    "answer": 1,
+    "explanation": "« Möglichkeit » signifie « possibilité »."
+  },
+  {
+    "id": 399,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En anglais, quel est le participe passé du verbe « awake » ?",
+    "choices": [
+      "Awoke",
+      "Awaked",
+      "Awoken",
+      "Awaking"
+    ],
+    "answer": 2,
+    "explanation": "Le verbe est : awake → awoke → awoken."
+  },
+  {
+    "id": 400,
+    "category": "Langues",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "En portugais, que signifie le mot « Conhecer » ?",
+    "choices": [
+      "Connaître",
+      "Apprendre",
+      "Comprendre",
+      "Retenir"
+    ],
+    "answer": 0,
+    "explanation": "« Conhecer » signifie « connaître » (une personne, un lieu ou quelque chose)."
+  },
+  {
+    "id": 401,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « brush up on » ?",
+    "choices": [
+      "Abandonner",
+      "Réviser ou remettre à niveau",
+      "Inventer",
+      "Ignorer"
+    ],
+    "answer": 1,
+    "explanation": "« Brush up on » signifie réviser ou améliorer des connaissances déjà acquises."
+  },
+  {
+    "id": 402,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, quel est le plus-que-parfait du verbe « hacer » à la 1ʳᵉ personne du singulier ?",
+    "choices": [
+      "Había hecho",
+      "He hecho",
+      "Hice",
+      "Haré"
+    ],
+    "answer": 0,
+    "explanation": "Le plus-que-parfait de « hacer » est « había hecho »."
+  },
+  {
+    "id": 403,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, quel cas est utilisé après la préposition « trotz » ?",
+    "choices": [
+      "Accusatif",
+      "Datif",
+      "Génitif",
+      "Nominatif"
+    ],
+    "answer": 2,
+    "explanation": "« Trotz » est traditionnellement suivie du génitif."
+  },
+  {
+    "id": 404,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Throw in the towel » ?",
+    "choices": [
+      "Faire le ménage",
+      "Abandonner",
+      "Commencer un combat",
+      "Prendre une douche"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression, issue de la boxe, signifie abandonner."
+  },
+  {
+    "id": 405,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, quel mot signifie « préjugé » ?",
+    "choices": [
+      "Pregiudizio",
+      "Giudizio",
+      "Opinione",
+      "Credenza"
+    ],
+    "answer": 0,
+    "explanation": "« Pregiudizio » signifie « préjugé »."
+  },
+  {
+    "id": 406,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, lequel de ces verbes suit le modèle « seek → sought → sought » ?",
+    "choices": [
+      "Teach",
+      "Think",
+      "Bring",
+      "Buy"
+    ],
+    "answer": 0,
+    "explanation": "« Teach » suit le modèle : teach → taught → taught."
+  },
+  {
+    "id": 407,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « ojalá » ?",
+    "choices": [
+      "Malheureusement",
+      "Peut-être",
+      "Pourvu que",
+      "Cependant"
+    ],
+    "answer": 2,
+    "explanation": "« Ojalá » exprime un souhait : « pourvu que »."
+  },
+  {
+    "id": 408,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « selbstverständlich » ?",
+    "choices": [
+      "Éventuellement",
+      "Naturellement / bien sûr",
+      "Rarement",
+      "Malheureusement"
+    ],
+    "answer": 1,
+    "explanation": "« Selbstverständlich » signifie « bien sûr » ou « naturellement »."
+  },
+  {
+    "id": 409,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « strive » ?",
+    "choices": [
+      "Strove",
+      "Striven",
+      "Strived",
+      "Striving"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : strive → strove → striven (forme traditionnelle)."
+  },
+  {
+    "id": 410,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Saudável » ?",
+    "choices": [
+      "Dangereux",
+      "Sain",
+      "Fatigué",
+      "Fragile"
+    ],
+    "answer": 1,
+    "explanation": "« Saudável » signifie « sain » ou « en bonne santé »."
+  },
+  {
+    "id": 411,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « look down on » ?",
+    "choices": [
+      "Admirer",
+      "Mépriser",
+      "Aider",
+      "Encourager"
+    ],
+    "answer": 1,
+    "explanation": "« Look down on » signifie mépriser ou considérer quelqu'un comme inférieur."
+  },
+  {
+    "id": 412,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, quel est le subjonctif imparfait du verbe « ir » à la 1ʳᵉ personne du singulier ?",
+    "choices": [
+      "Fuera",
+      "Iba",
+      "Voy",
+      "Iré"
+    ],
+    "answer": 0,
+    "explanation": "Le subjonctif imparfait de « ir » est « fuera » (ou « fuese »)."
+  },
+  {
+    "id": 413,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, quelle préposition est suivie du génitif dans l'usage standard ?",
+    "choices": [
+      "Während",
+      "Mit",
+      "Nach",
+      "Bei"
+    ],
+    "answer": 0,
+    "explanation": "« Während » est traditionnellement suivie du génitif."
+  },
+  {
+    "id": 414,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Go the extra mile » ?",
+    "choices": [
+      "Faire davantage que ce qui est attendu",
+      "Faire un long voyage",
+      "Abandonner un projet",
+      "Prendre une pause"
+    ],
+    "answer": 0,
+    "explanation": "Cette expression signifie fournir un effort supplémentaire."
+  },
+  {
+    "id": 415,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, quel mot signifie « conscience » (au sens moral) ?",
+    "choices": [
+      "Conoscenza",
+      "Coscienza",
+      "Memoria",
+      "Ricordo"
+    ],
+    "answer": 1,
+    "explanation": "« Coscienza » désigne la conscience morale."
+  },
+  {
+    "id": 416,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « bind » ?",
+    "choices": [
+      "Bound",
+      "Binded",
+      "Bond",
+      "Binding"
+    ],
+    "answer": 0,
+    "explanation": "Le verbe est : bind → bound → bound."
+  },
+  {
+    "id": 417,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « desvelarse » ?",
+    "choices": [
+      "S'endormir",
+      "Se réveiller",
+      "Rester éveillé / ne pas réussir à dormir",
+      "Faire un rêve"
+    ],
+    "answer": 2,
+    "explanation": "« Desvelarse » signifie rester éveillé ou souffrir d'insomnie."
+  },
+  {
+    "id": 418,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Verantwortung » ?",
+    "choices": [
+      "Liberté",
+      "Responsabilité",
+      "Possibilité",
+      "Justice"
+    ],
+    "answer": 1,
+    "explanation": "« Verantwortung » signifie « responsabilité »."
+  },
+  {
+    "id": 419,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « cling » ?",
+    "choices": [
+      "Clang",
+      "Clung",
+      "Clinged",
+      "Clinging"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : cling → clung → clung."
+  },
+  {
+    "id": 420,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Orgulho » ?",
+    "choices": [
+      "Espoir",
+      "Orgueil / fierté",
+      "Peur",
+      "Respect"
+    ],
+    "answer": 1,
+    "explanation": "« Orgulho » signifie « orgueil » ou « fierté » selon le contexte."
+  },
+  {
+    "id": 421,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « bring about » ?",
+    "choices": [
+      "Retarder",
+      "Provoquer / entraîner",
+      "Abandonner",
+      "Remplacer"
+    ],
+    "answer": 1,
+    "explanation": "« Bring about » signifie provoquer ou entraîner un changement."
+  },
+  {
+    "id": 422,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie l'expression « estar de acuerdo » ?",
+    "choices": [
+      "Être en retard",
+      "Être d'accord",
+      "Être en colère",
+      "Être occupé"
+    ],
+    "answer": 1,
+    "explanation": "« Estar de acuerdo » signifie « être d'accord »."
+  },
+  {
+    "id": 423,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Erkenntnis » ?",
+    "choices": [
+      "Connaissance acquise",
+      "Erreur",
+      "Expérience",
+      "Habitude"
+    ],
+    "answer": 0,
+    "explanation": "« Erkenntnis » désigne une connaissance acquise ou une prise de conscience."
+  },
+  {
+    "id": 424,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Bend over backwards » ?",
+    "choices": [
+      "Faire de gros efforts pour aider quelqu'un",
+      "Faire de la gymnastique",
+      "Revenir en arrière",
+      "Abandonner rapidement"
+    ],
+    "answer": 0,
+    "explanation": "Cette expression signifie faire tout son possible pour aider quelqu'un."
+  },
+  {
+    "id": 425,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, quel mot signifie « réussite » ?",
+    "choices": [
+      "Riuscita",
+      "Tentativo",
+      "Errore",
+      "Caduta"
+    ],
+    "answer": 0,
+    "explanation": "« Riuscita » signifie « réussite » ou « succès »."
+  },
+  {
+    "id": 426,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « spring » ?",
+    "choices": [
+      "Sprang",
+      "Sprung",
+      "Springed",
+      "Springing"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : spring → sprang → sprung."
+  },
+  {
+    "id": 427,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, quel mot signifie « persévérance » ?",
+    "choices": [
+      "Perseverancia",
+      "Paciencia",
+      "Constancia",
+      "Les deux réponses A et C sont correctes selon le contexte"
+    ],
+    "answer": 3,
+    "explanation": "« Perseverancia » et « constancia » peuvent toutes deux exprimer l'idée de persévérance, avec une nuance selon le contexte."
+  },
+  {
+    "id": 428,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, quel mot signifie « conviction » ?",
+    "choices": [
+      "Überzeugung",
+      "Entscheidung",
+      "Meinung",
+      "Gedanke"
+    ],
+    "answer": 0,
+    "explanation": "« Überzeugung » signifie « conviction »."
+  },
+  {
+    "id": 429,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « weave » ?",
+    "choices": [
+      "Wove",
+      "Woven",
+      "Weaved",
+      "Weaving"
+    ],
+    "answer": 1,
+    "explanation": "Le participe passé traditionnel est « woven » (bien que « weaved » existe dans certains contextes techniques)."
+  },
+  {
+    "id": 430,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Coragem » ?",
+    "choices": [
+      "Patience",
+      "Courage",
+      "Force",
+      "Espoir"
+    ],
+    "answer": 1,
+    "explanation": "« Coragem » signifie « courage »."
+  },
+  {
+    "id": 431,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « phase out » ?",
+    "choices": [
+      "Introduire progressivement",
+      "Supprimer progressivement",
+      "Accélérer",
+      "Remplacer immédiatement"
+    ],
+    "answer": 1,
+    "explanation": "« Phase out » signifie supprimer ou abandonner progressivement."
+  },
+  {
+    "id": 432,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie l'expression « darse cuenta » ?",
+    "choices": [
+      "Se rendre compte",
+      "Rendre visite",
+      "Faire un calcul",
+      "Prendre une décision"
+    ],
+    "answer": 0,
+    "explanation": "« Darse cuenta » signifie « se rendre compte »."
+  },
+  {
+    "id": 433,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Sehnsucht » ?",
+    "choices": [
+      "Espoir",
+      "Nostalgie profonde ou désir intense",
+      "Colère",
+      "Curiosité"
+    ],
+    "answer": 1,
+    "explanation": "« Sehnsucht » désigne un désir profond ou une nostalgie difficile à traduire précisément."
+  },
+  {
+    "id": 434,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Jump the gun » ?",
+    "choices": [
+      "Prendre de l'avance de manière prématurée",
+      "Sauter un obstacle",
+      "Éviter un problème",
+      "Changer d'avis"
+    ],
+    "answer": 0,
+    "explanation": "« Jump the gun » signifie agir trop tôt ou prématurément."
+  },
+  {
+    "id": 435,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, quel mot signifie « défi » ?",
+    "choices": [
+      "Sfida",
+      "Problema",
+      "Battaglia",
+      "Tentativo"
+    ],
+    "answer": 0,
+    "explanation": "« Sfida » signifie « défi »."
+  },
+  {
+    "id": 436,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « slay » ?",
+    "choices": [
+      "Slayed",
+      "Slain",
+      "Slew",
+      "Slaying"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe traditionnel est : slay → slew → slain. « Slayed » existe aujourd'hui dans certains usages informels."
+  },
+  {
+    "id": 437,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, quel mot signifie « entêtement » ?",
+    "choices": [
+      "Obstinación",
+      "Paciencia",
+      "Esperanza",
+      "Timidez"
+    ],
+    "answer": 0,
+    "explanation": "« Obstinación » signifie « entêtement » ou « obstination »."
+  },
+  {
+    "id": 438,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, quel mot signifie « persévérance » ?",
+    "choices": [
+      "Geduld",
+      "Ausdauer",
+      "Mut",
+      "Treue"
+    ],
+    "answer": 1,
+    "explanation": "« Ausdauer » signifie « endurance » ou « persévérance »."
+  },
+  {
+    "id": 439,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « bid » (enchérir) ?",
+    "choices": [
+      "Bid",
+      "Bade",
+      "Bidden",
+      "Bidded"
+    ],
+    "answer": 0,
+    "explanation": "Pour le sens « enchérir », le verbe est généralement : bid → bid → bid."
+  },
+  {
+    "id": 440,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Liberdade » ?",
+    "choices": [
+      "Justice",
+      "Égalité",
+      "Liberté",
+      "Paix"
+    ],
+    "answer": 2,
+    "explanation": "« Liberdade » signifie « liberté »."
+  },
+  {
+    "id": 441,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « brush off » ?",
+    "choices": [
+      "Ignorer ou éconduire quelqu'un",
+      "Nettoyer soigneusement",
+      "S'excuser",
+      "Récompenser quelqu'un"
+    ],
+    "answer": 0,
+    "explanation": "« Brush off » signifie ignorer, éconduire ou traiter quelqu'un avec désinvolture."
+  },
+  {
+    "id": 442,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « añorar » ?",
+    "choices": [
+      "Détester",
+      "Regretter avec nostalgie",
+      "Découvrir",
+      "Accepter"
+    ],
+    "answer": 1,
+    "explanation": "« Añorar » signifie regretter profondément ou éprouver de la nostalgie."
+  },
+  {
+    "id": 443,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Fingerspitzengefühl » ?",
+    "choices": [
+      "Adresse physique",
+      "Diplomatie et sens du tact",
+      "Rapidité",
+      "Intelligence artificielle"
+    ],
+    "answer": 1,
+    "explanation": "« Fingerspitzengefühl » désigne le tact, la finesse et la capacité à agir avec délicatesse."
+  },
+  {
+    "id": 444,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Burn your bridges » ?",
+    "choices": [
+      "Construire de nouvelles relations",
+      "Couper définitivement toute possibilité de retour",
+      "Voyager loin",
+      "Faire un sacrifice financier"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie rompre définitivement avec une situation ou une personne."
+  },
+  {
+    "id": 445,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, que signifie le mot « rimpianto » ?",
+    "choices": [
+      "Espoir",
+      "Regret",
+      "Bonheur",
+      "Courage"
+    ],
+    "answer": 1,
+    "explanation": "« Rimpianto » signifie « regret »."
+  },
+  {
+    "id": 446,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « forsake » ?",
+    "choices": [
+      "Forsook",
+      "Forsaken",
+      "Forsaked",
+      "Forsaking"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : forsake → forsook → forsaken."
+  },
+  {
+    "id": 447,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, quel mot signifie « perspicacité » ?",
+    "choices": [
+      "Perspicacia",
+      "Paciencia",
+      "Valentía",
+      "Prudencia"
+    ],
+    "answer": 0,
+    "explanation": "« Perspicacia » signifie « perspicacité »."
+  },
+  {
+    "id": 448,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Weltschmerz » ?",
+    "choices": [
+      "Joie de vivre",
+      "Mélancolie face au monde",
+      "Voyage autour du monde",
+      "Paix mondiale"
+    ],
+    "answer": 1,
+    "explanation": "« Weltschmerz » désigne une profonde mélancolie ou désillusion face au monde."
+  },
+  {
+    "id": 449,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « smite » ?",
+    "choices": [
+      "Smote",
+      "Smitten",
+      "Smited",
+      "Smiting"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : smite → smote → smitten."
+  },
+  {
+    "id": 450,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Saudação » ?",
+    "choices": [
+      "Salutation",
+      "Promesse",
+      "Conversation",
+      "Décision"
+    ],
+    "answer": 0,
+    "explanation": "« Saudação » signifie « salutation » ou « salut »."
+  },
+  {
+    "id": 451,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « zero in on » ?",
+    "choices": [
+      "Ignorer complètement",
+      "Se concentrer précisément sur",
+      "Revenir en arrière",
+      "Faire disparaître"
+    ],
+    "answer": 1,
+    "explanation": "« Zero in on » signifie concentrer toute son attention sur un objectif ou un sujet précis."
+  },
+  {
+    "id": 452,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « efímero » ?",
+    "choices": [
+      "Éternel",
+      "Éphémère",
+      "Brillant",
+      "Inutile"
+    ],
+    "answer": 1,
+    "explanation": "« Efímero » signifie « éphémère », de très courte durée."
+  },
+  {
+    "id": 453,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Fernweh » ?",
+    "choices": [
+      "Peur de voyager",
+      "Envie irrésistible de voyager au loin",
+      "Retour au pays",
+      "Voyage d'affaires"
+    ],
+    "answer": 1,
+    "explanation": "« Fernweh » désigne le désir profond de partir vers des contrées lointaines."
+  },
+  {
+    "id": 454,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Read between the lines » ?",
+    "choices": [
+      "Lire rapidement",
+      "Comprendre un message implicite",
+      "Apprendre une langue",
+      "Écrire un résumé"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie comprendre ce qui est sous-entendu sans être dit explicitement."
+  },
+  {
+    "id": 455,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, que signifie le mot « ostinazione » ?",
+    "choices": [
+      "Patience",
+      "Obstination",
+      "Liberté",
+      "Confiance"
+    ],
+    "answer": 1,
+    "explanation": "« Ostinazione » signifie « obstination »."
+  },
+  {
+    "id": 456,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « stride » ?",
+    "choices": [
+      "Strod",
+      "Stridden",
+      "Strided",
+      "Striding"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : stride → strode → stridden."
+  },
+  {
+    "id": 457,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « sosiego » ?",
+    "choices": [
+      "Inquiétude",
+      "Calme et sérénité",
+      "Courage",
+      "Colère"
+    ],
+    "answer": 1,
+    "explanation": "« Sosiego » désigne le calme, la tranquillité et la sérénité."
+  },
+  {
+    "id": 458,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Schadenfreude » ?",
+    "choices": [
+      "Compassion",
+      "Joie éprouvée face au malheur d'autrui",
+      "Peur de l'échec",
+      "Tristesse profonde"
+    ],
+    "answer": 1,
+    "explanation": "« Schadenfreude » désigne le plaisir ressenti devant les malheurs d'une autre personne."
+  },
+  {
+    "id": 459,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « shrink » ?",
+    "choices": [
+      "Shrank",
+      "Shrunk",
+      "Shrinked",
+      "Shrinking"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : shrink → shrank → shrunk."
+  },
+  {
+    "id": 460,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Desafio » ?",
+    "choices": [
+      "Récompense",
+      "Défi",
+      "Habitude",
+      "Victoire"
+    ],
+    "answer": 1,
+    "explanation": "« Desafio » signifie « défi »."
+  },
+  {
+    "id": 461,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « iron out » ?",
+    "choices": [
+      "Repasser un vêtement",
+      "Résoudre ou éliminer des difficultés",
+      "Refuser une proposition",
+      "Quitter un emploi"
+    ],
+    "answer": 1,
+    "explanation": "« Iron out » signifie résoudre progressivement un problème ou éliminer des difficultés."
+  },
+  {
+    "id": 462,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « elocuente » ?",
+    "choices": [
+      "Silencieux",
+      "Éloquent",
+      "Curieux",
+      "Impatient"
+    ],
+    "answer": 1,
+    "explanation": "« Elocuente » signifie « éloquent », qui s'exprime avec aisance."
+  },
+  {
+    "id": 463,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Geborgenheit » ?",
+    "choices": [
+      "Solitude",
+      "Sentiment de sécurité et de réconfort",
+      "Liberté",
+      "Richesse"
+    ],
+    "answer": 1,
+    "explanation": "« Geborgenheit » désigne un profond sentiment de sécurité, de protection et de bien-être."
+  },
+  {
+    "id": 464,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « The last straw » ?",
+    "choices": [
+      "La première étape",
+      "La goutte d'eau qui fait déborder le vase",
+      "Une décision facile",
+      "Une seconde chance"
+    ],
+    "answer": 1,
+    "explanation": "« The last straw » désigne l'événement qui fait perdre définitivement patience."
+  },
+  {
+    "id": 465,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, que signifie le mot « lungimiranza » ?",
+    "choices": [
+      "Prudence",
+      "Prévoyance",
+      "Rapidité",
+      "Discrétion"
+    ],
+    "answer": 1,
+    "explanation": "« Lungimiranza » signifie la prévoyance ou la capacité à anticiper l'avenir."
+  },
+  {
+    "id": 466,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « fling » ?",
+    "choices": [
+      "Flang",
+      "Flung",
+      "Flinged",
+      "Flinging"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : fling → flung → flung."
+  },
+  {
+    "id": 467,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « recelo » ?",
+    "choices": [
+      "Admiration",
+      "Méfiance",
+      "Bonheur",
+      "Espérance"
+    ],
+    "answer": 1,
+    "explanation": "« Recelo » signifie la méfiance ou la suspicion."
+  },
+  {
+    "id": 468,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Torschlusspanik » ?",
+    "choices": [
+      "Peur des portes",
+      "Angoisse de manquer une opportunité en raison du temps qui passe",
+      "Peur des foules",
+      "Stress avant un examen"
+    ],
+    "answer": 1,
+    "explanation": "« Torschlusspanik » désigne l'angoisse de voir les occasions disparaître avec le temps."
+  },
+  {
+    "id": 469,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « abide » (au sens de respecter) ?",
+    "choices": [
+      "Abode",
+      "Abidden",
+      "Abided",
+      "Les formes « abode » et « abided » sont toutes deux admises selon le contexte"
+    ],
+    "answer": 3,
+    "explanation": "Selon l'usage, « abode » est la forme traditionnelle tandis que « abided » est également acceptée dans de nombreux contextes modernes."
+  },
+  {
+    "id": 470,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Sabedoria » ?",
+    "choices": [
+      "Patience",
+      "Sagesse",
+      "Mémoire",
+      "Force"
+    ],
+    "answer": 1,
+    "explanation": "« Sabedoria » signifie « sagesse »."
+  },
+  {
+    "id": 471,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « weed out » ?",
+    "choices": [
+      "Planter des fleurs",
+      "Éliminer ce qui est indésirable",
+      "Prendre une décision",
+      "Reporter une réunion"
+    ],
+    "answer": 1,
+    "explanation": "« Weed out » signifie éliminer les éléments inutiles ou indésirables."
+  },
+  {
+    "id": 472,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « perspicaz » ?",
+    "choices": [
+      "Maladroit",
+      "Perspicace",
+      "Patient",
+      "Silencieux"
+    ],
+    "answer": 1,
+    "explanation": "« Perspicaz » signifie « perspicace », doté d'une grande finesse d'esprit."
+  },
+  {
+    "id": 473,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Weltoffen » ?",
+    "choices": [
+      "Ouvert sur le monde",
+      "Très riche",
+      "Voyageur professionnel",
+      "Étranger"
+    ],
+    "answer": 0,
+    "explanation": "« Weltoffen » désigne une personne ouverte aux autres cultures et au monde."
+  },
+  {
+    "id": 474,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Bite off more than you can chew » ?",
+    "choices": [
+      "Parler trop vite",
+      "Entreprendre plus que ce que l'on peut accomplir",
+      "Manger rapidement",
+      "Abandonner un projet"
+    ],
+    "answer": 1,
+    "explanation": "Cette expression signifie accepter une tâche trop importante par rapport à ses capacités."
+  },
+  {
+    "id": 475,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, que signifie le mot « tenacia » ?",
+    "choices": [
+      "Paresse",
+      "Ténacité",
+      "Curiosité",
+      "Déception"
+    ],
+    "answer": 1,
+    "explanation": "« Tenacia » signifie « ténacité » ou « persévérance »."
+  },
+  {
+    "id": 476,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « strew » ?",
+    "choices": [
+      "Strewed",
+      "Strewn",
+      "Strown",
+      "Strewing"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : strew → strewed → strewn (forme traditionnelle)."
+  },
+  {
+    "id": 477,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « soslayar » ?",
+    "choices": [
+      "Éviter délibérément",
+      "Construire",
+      "Réussir",
+      "Observer"
+    ],
+    "answer": 0,
+    "explanation": "« Soslayar » signifie éviter volontairement ou éluder."
+  },
+  {
+    "id": 478,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Zeitgeist » ?",
+    "choices": [
+      "Fantôme",
+      "Esprit d'une époque",
+      "Ancienne tradition",
+      "Calendrier"
+    ],
+    "answer": 1,
+    "explanation": "« Zeitgeist » désigne l'esprit ou le climat intellectuel caractéristique d'une époque."
+  },
+  {
+    "id": 479,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « tread » ?",
+    "choices": [
+      "Trod",
+      "Trodden",
+      "Treaded",
+      "Treading"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : tread → trod → trodden."
+  },
+  {
+    "id": 480,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Humildade » ?",
+    "choices": [
+      "Humilité",
+      "Honnêteté",
+      "Patience",
+      "Générosité"
+    ],
+    "answer": 0,
+    "explanation": "« Humildade » signifie « humilité »."
+  },
+  {
+    "id": 481,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « mull over » ?",
+    "choices": [
+      "Abandonner une idée",
+      "Réfléchir longuement à quelque chose",
+      "Accepter immédiatement",
+      "Critiquer publiquement"
+    ],
+    "answer": 1,
+    "explanation": "« Mull over » signifie réfléchir attentivement à une question avant de prendre une décision."
+  },
+  {
+    "id": 482,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « fehaciente » ?",
+    "choices": [
+      "Évident ou irréfutable",
+      "Fragile",
+      "Mystérieux",
+      "Inutile"
+    ],
+    "answer": 0,
+    "explanation": "« Fehaciente » qualifie une preuve certaine, fiable ou irréfutable."
+  },
+  {
+    "id": 483,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Feierabend » ?",
+    "choices": [
+      "Jour férié",
+      "Fin de la journée de travail",
+      "Vacances",
+      "Réunion de famille"
+    ],
+    "answer": 1,
+    "explanation": "« Feierabend » désigne le moment où l'on a terminé sa journée de travail."
+  },
+  {
+    "id": 484,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Hit the books » ?",
+    "choices": [
+      "Acheter des livres",
+      "Étudier sérieusement",
+      "Écrire un roman",
+      "Ranger une bibliothèque"
+    ],
+    "answer": 1,
+    "explanation": "« Hit the books » signifie se mettre à étudier intensivement."
+  },
+  {
+    "id": 485,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, que signifie le mot « scorciatoia » ?",
+    "choices": [
+      "Destination",
+      "Raccourci",
+      "Chemin dangereux",
+      "Autoroute"
+    ],
+    "answer": 1,
+    "explanation": "« Scorciatoia » signifie « raccourci », au sens propre comme au sens figuré."
+  },
+  {
+    "id": 486,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « cleave » (fendre) ?",
+    "choices": [
+      "Clove",
+      "Cleft",
+      "Cleaved",
+      "Les réponses B et C sont toutes deux admises selon le contexte"
+    ],
+    "answer": 3,
+    "explanation": "Pour le sens « fendre », les formes « cleft » et « cleaved » sont toutes deux reconnues."
+  },
+  {
+    "id": 487,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « parsimonia » ?",
+    "choices": [
+      "Rapidité",
+      "Lenteur prudente ou modération",
+      "Force",
+      "Intelligence"
+    ],
+    "answer": 1,
+    "explanation": "« Parsimonia » désigne la modération, la prudence ou une lenteur mesurée."
+  },
+  {
+    "id": 488,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Kummerspeck » ?",
+    "choices": [
+      "Un plat traditionnel",
+      "Les kilos pris à cause du chagrin ou du stress",
+      "Une maladie",
+      "Un dessert"
+    ],
+    "answer": 1,
+    "explanation": "« Kummerspeck » désigne les kilos pris en mangeant sous l'effet de la tristesse ou du stress."
+  },
+  {
+    "id": 489,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « hew » ?",
+    "choices": [
+      "Hewn",
+      "Hewed",
+      "Hewn ou hewed",
+      "Hewing"
+    ],
+    "answer": 2,
+    "explanation": "Les formes « hewn » et « hewed » sont toutes deux admises selon le contexte et le registre."
+  },
+  {
+    "id": 490,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Prosperidade » ?",
+    "choices": [
+      "Prospérité",
+      "Popularité",
+      "Protection",
+      "Paix"
+    ],
+    "answer": 0,
+    "explanation": "« Prosperidade » signifie « prospérité »."
+  },
+  {
+    "id": 491,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, que signifie le phrasal verb « cave in » ?",
+    "choices": [
+      "Résister jusqu'au bout",
+      "Céder sous la pression",
+      "Construire un tunnel",
+      "Changer de direction"
+    ],
+    "answer": 1,
+    "explanation": "« Cave in » signifie céder sous la pression ou abandonner une résistance."
+  },
+  {
+    "id": 492,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « inexorable » ?",
+    "choices": [
+      "Évitable",
+      "Inexorable, impossible à arrêter",
+      "Incertain",
+      "Éphémère"
+    ],
+    "answer": 1,
+    "explanation": "« Inexorable » qualifie ce qui ne peut être arrêté, empêché ou fléchi."
+  },
+  {
+    "id": 493,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Verschlimmbessern » ?",
+    "choices": [
+      "Réparer parfaitement",
+      "Aggraver une situation en voulant l'améliorer",
+      "Reporter un projet",
+      "Trouver une solution idéale"
+    ],
+    "answer": 1,
+    "explanation": "« Verschlimmbessern » signifie empirer quelque chose en essayant de l'améliorer."
+  },
+  {
+    "id": 494,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "Que signifie l'expression anglaise « Once in a blue moon » ?",
+    "choices": [
+      "Tous les jours",
+      "Très rarement",
+      "À minuit",
+      "Au printemps"
+    ],
+    "answer": 1,
+    "explanation": "« Once in a blue moon » signifie « très rarement »."
+  },
+  {
+    "id": 495,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En italien, que signifie le mot « intraprendenza » ?",
+    "choices": [
+      "Lenteur",
+      "Esprit d'initiative",
+      "Discrétion",
+      "Fatigue"
+    ],
+    "answer": 1,
+    "explanation": "« Intraprendenza » désigne l'esprit d'initiative et l'audace."
+  },
+  {
+    "id": 496,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « beget » ?",
+    "choices": [
+      "Begot",
+      "Begotten",
+      "Begetted",
+      "Begetting"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : beget → begot → begotten."
+  },
+  {
+    "id": 497,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En espagnol, que signifie le mot « beneplácito » ?",
+    "choices": [
+      "Opposition",
+      "Approbation ou consentement",
+      "Colère",
+      "Curiosité"
+    ],
+    "answer": 1,
+    "explanation": "« Beneplácito » signifie approbation, consentement ou accord."
+  },
+  {
+    "id": 498,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En allemand, que signifie le mot « Lebensmüde » ?",
+    "choices": [
+      "Passionné par la vie",
+      "Las de vivre ou téméraire au point de risquer sa vie",
+      "Très énergique",
+      "En bonne santé"
+    ],
+    "answer": 1,
+    "explanation": "« Lebensmüde » signifie littéralement « fatigué de vivre » et peut aussi qualifier une prise de risque extrêmement dangereuse."
+  },
+  {
+    "id": 499,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En anglais, quel est le participe passé du verbe « forbear » ?",
+    "choices": [
+      "Forbore",
+      "Forborne",
+      "Forbeared",
+      "Forbearing"
+    ],
+    "answer": 1,
+    "explanation": "Le verbe est : forbear → forbore → forborne."
+  },
+  {
+    "id": 500,
+    "category": "Langues",
+    "difficulty": "expert",
+    "points": 20,
+    "question": "En portugais, que signifie le mot « Resiliência » ?",
+    "choices": [
+      "Résilience",
+      "Puissance",
+      "Prudence",
+      "Détermination"
+    ],
+    "answer": 0,
+    "explanation": "« Resiliência » signifie « résilience », c'est-à-dire la capacité à surmonter les difficultés."
+  }
+]
