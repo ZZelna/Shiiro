@@ -603,6 +603,53 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
             continue; // on ne log pas en plus comme "rôle retiré" classique
         }
 
+        // ───── Protection hiérarchique : retrait d'un rôle au-dessus du rôle de référence ─────
+        if (
+            managerRole &&
+            role.position > managerRole.position &&
+            executor &&
+            !executor.roles.cache.has(bypassRoleId) &&
+            !WHITELIST_IDS.includes(executor.id)
+        ) {
+
+            // On ré-attribue le rôle retiré sans autorisation
+            try {
+                await newMember.roles.add(role.id, "Retrait non autorisé d'un rôle supérieur : ré-ajout automatique");
+            } catch (err) {
+                console.log("❌ Impossible de ré-ajouter le rôle :", err);
+            }
+
+            // Et on bannit le responsable, comme pour la création/suppression de rôle
+            try {
+                await newMember.guild.members.ban(executor.id, {
+                    reason: "Retrait non autorisé d'un rôle supérieur à son niveau."
+                });
+            } catch (err) {
+                console.log("❌ Échec du ban (retrait de rôle supérieur) :", err.message);
+            }
+
+            try {
+                await executor.send(
+                    `❌ Vous n'êtes pas autorisé à retirer le rôle **${role.name}**, il est au-dessus de votre niveau d'autorisation.\n` +
+                    `Vous avez été banni. Pour faire appel : ${BYPASS_SERVER_INVITE}`
+                );
+            } catch {}
+
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "! Retrait non autorisé d'un rôle supérieur.\n" +
+                    `Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
+                    `Modérateur: ${moderator} (ID: ${moderatorId})\n` +
+                    `Rôle: ${role.name} (ID: ${role.id})\n` +
+                    "Action: Rôle ré-attribué, responsable banni. ⛔\n" +
+                    `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
+                    "```"
+            });
+
+            continue;
+        }
+
         await logChannel.send({
             content:
                 "```diff\n" +
@@ -662,13 +709,35 @@ if (
 
             await newMember.roles.remove(role).catch(() => {});
 
+            // ✅ En plus du retrait, on bannit désormais le responsable
+            try {
+                await newMember.guild.members.ban(executor.id, {
+                    reason: "Ajout non autorisé d'un rôle supérieur à son niveau."
+                });
+            } catch (err) {
+                console.log("❌ Échec du ban (ajout de rôle supérieur) :", err.message);
+            }
+
             try {
 
                 await executor.send(
-                    `❌ Vous ne pouvez pas attribuer le rôle **${role.name}** car il est au-dessus de votre niveau d'autorisation.`
+                    `❌ Vous ne pouvez pas attribuer le rôle **${role.name}** car il est au-dessus de votre niveau d'autorisation.\n` +
+                    `Vous avez été banni. Pour faire appel : ${BYPASS_SERVER_INVITE}`
                 );
 
             } catch {}
+
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "! Ajout non autorisé d'un rôle supérieur.\n" +
+                    `Utilisateur: ${newMember.user.tag} (ID: ${newMember.id})\n` +
+                    `Modérateur: ${moderator} (ID: ${moderatorId})\n` +
+                    `Rôle: ${role.name} (ID: ${role.id})\n` +
+                    "Action: Rôle retiré, responsable banni. ⛔\n" +
+                    `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
+                    "```"
+            });
 
             continue;
 
@@ -726,6 +795,9 @@ setInterval(async () => {
 
 const WHITELIST_IDS = ["1400111418358894646"];
 
+// ─── Lien du serveur ban / bypass ────────────────────────────────────────────
+const BYPASS_SERVER_INVITE = "https://discord.gg/FZqjCqMmXY";
+
 // ─── roleCreate / roleDelete ──────────────────────────────────────────────────
 
 client.on("roleCreate", async (role) => {
@@ -779,6 +851,7 @@ client.on("roleCreate", async (role) => {
                         "- Bannissement automatique.\n" +
                         `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
                         "Action: Création de rôle sans permission. ⛔\n" +
+                        `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                         "```"
                 });
             } catch (banErr) {
@@ -864,6 +937,7 @@ client.on("roleDelete", async (role) => {
                         "- Bannissement automatique.\n" +
                         `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
                         "Action: Suppression de rôle sans permission. ⛔\n" +
+                        `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                         "```"
                 });
             } catch (banErr) {
@@ -895,6 +969,104 @@ client.on("roleDelete", async (role) => {
 
     } catch (err) {
         console.error("❌ Erreur roleDelete :", err);
+    }
+});
+
+// ─── roleUpdate (déplacement de rôle = ban immédiat) ─────────────────────────
+// Dès qu'un rôle est déplacé (changement de position dans la hiérarchie),
+// le responsable est banni, sauf s'il a le rôle bypass ou est whitelisté.
+
+client.on("roleUpdate", async (oldRole, newRole) => {
+    try {
+
+        // On ne réagit qu'aux changements de position (déplacement du rôle)
+        if (oldRole.position === newRole.position) return;
+
+        const logGuild = client.guilds.cache.get("1519364880677867550");
+        if (!logGuild) return;
+
+        const logChannel = logGuild.channels.cache.get("1519374244063084644");
+        if (!logChannel) return;
+
+        const logs = await newRole.guild.fetchAuditLogs({
+            type: AuditLogEvent.RoleUpdate,
+            limit: 5
+        });
+
+        const entry = logs.entries.find(e =>
+            e.target?.id === newRole.id &&
+            Date.now() - e.createdTimestamp < 5000
+        );
+
+        if (!entry) return;
+
+        const executor = entry.executor;
+
+        if (executor?.bot) {
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "! Rôle déplacé.\n" +
+                    `Rôle: ${newRole.name} (ID: ${newRole.id})\n` +
+                    `Modérateur: ${executor.tag} (BOT)\n` +
+                    `Position: ${oldRole.position} → ${newRole.position}\n` +
+                    "Action: Déplacement de rôle. 🤖\n" +
+                    "```"
+            });
+            return;
+        }
+
+        const bypassRoleId = "1506674274826584284";
+        const member = await newRole.guild.members.fetch(executor.id).catch(() => null);
+
+        if (member && !member.roles.cache.has(bypassRoleId) && !WHITELIST_IDS.includes(executor.id)) {
+
+            try {
+                await newRole.guild.members.ban(executor.id, {
+                    reason: "Déplacement non autorisé d'un rôle dans la hiérarchie"
+                });
+
+                await logChannel.send({
+                    content:
+                        "```diff\n" +
+                        "- Bannissement automatique.\n" +
+                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                        `Rôle déplacé: ${newRole.name} (ID: ${newRole.id})\n` +
+                        `Position: ${oldRole.position} → ${newRole.position}\n` +
+                        "Action: Déplacement de rôle sans permission. ⛔\n" +
+                        `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
+                        "```"
+                });
+            } catch (banErr) {
+                console.error("❌ Échec du ban (roleUpdate) :", banErr.message);
+
+                await logChannel.send({
+                    content:
+                        "```diff\n" +
+                        "! Échec du bannissement automatique.\n" +
+                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                        `Raison: ${banErr.message}\n` +
+                        "Action: Vérifiez les permissions du bot et la hiérarchie des rôles. ⚠️\n" +
+                        "```"
+                }).catch(() => {});
+            }
+
+            return;
+        }
+
+        await logChannel.send({
+            content:
+                "```diff\n" +
+                "~ Rôle déplacé.\n" +
+                `Rôle: ${newRole.name} (ID: ${newRole.id})\n` +
+                `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
+                `Position: ${oldRole.position} → ${newRole.position}\n` +
+                "Action: Déplacement de rôle autorisé. ✅\n" +
+                "```"
+        });
+
+    } catch (err) {
+        console.error("❌ Erreur roleUpdate :", err);
     }
 });
 
@@ -955,6 +1127,7 @@ client.on("channelCreate", async (channel) => {
                     "- Bannissement automatique.\n" +
                     `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
                     "Action: Création de salon sans permission. ⛔\n" +
+                    `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                     "```"
             });
 
@@ -1029,6 +1202,7 @@ client.on("channelDelete", async (channel) => {
                     "- Bannissement automatique.\n" +
                     `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
                     "Action: Suppression de salon sans permission. ⛔\n" +
+                    `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                     "```"
             });
 
