@@ -1,0 +1,7503 @@
+[
+  {
+    "id": 1,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 7 + 8 ?",
+    "choices": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answer": 1,
+    "explanation": "7 + 8 = 15."
+  },
+  {
+    "id": 2,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 9 × 6 ?",
+    "choices": [
+      "52",
+      "54",
+      "56",
+      "58"
+    ],
+    "answer": 1,
+    "explanation": "9 × 6 = 54."
+  },
+  {
+    "id": 3,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 81 ÷ 9 ?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "81 ÷ 9 = 9."
+  },
+  {
+    "id": 4,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moitié de 50 ?",
+    "choices": [
+      "20",
+      "25",
+      "30",
+      "35"
+    ],
+    "answer": 1,
+    "explanation": "La moitié de 50 est 25."
+  },
+  {
+    "id": 5,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 13 + 19 ?",
+    "choices": [
+      "30",
+      "31",
+      "32",
+      "33"
+    ],
+    "answer": 2,
+    "explanation": "13 + 19 = 32."
+  },
+  {
+    "id": 6,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 12 × 12 ?",
+    "choices": [
+      "124",
+      "132",
+      "142",
+      "144"
+    ],
+    "answer": 3,
+    "explanation": "12 × 12 = 144."
+  },
+  {
+    "id": 7,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 100 − 37 ?",
+    "choices": [
+      "61",
+      "62",
+      "63",
+      "64"
+    ],
+    "answer": 2,
+    "explanation": "100 − 37 = 63."
+  },
+  {
+    "id": 8,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut un quart de 80 ?",
+    "choices": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "answer": 1,
+    "explanation": "80 ÷ 4 = 20."
+  },
+  {
+    "id": 9,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le carré de 9 ?",
+    "choices": [
+      "72",
+      "79",
+      "81",
+      "90"
+    ],
+    "answer": 2,
+    "explanation": "9² = 81."
+  },
+  {
+    "id": 10,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la racine carrée de 64 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "√64 = 8."
+  },
+  {
+    "id": 11,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 45 + 28 ?",
+    "choices": [
+      "71",
+      "72",
+      "73",
+      "74"
+    ],
+    "answer": 2,
+    "explanation": "45 + 28 = 73."
+  },
+  {
+    "id": 12,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 96 − 58 ?",
+    "choices": [
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "answer": 2,
+    "explanation": "96 − 58 = 38."
+  },
+  {
+    "id": 13,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 14 × 5 ?",
+    "choices": [
+      "65",
+      "70",
+      "75",
+      "80"
+    ],
+    "answer": 1,
+    "explanation": "14 × 5 = 70."
+  },
+  {
+    "id": 14,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 144 ÷ 12 ?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "144 ÷ 12 = 12."
+  },
+  {
+    "id": 15,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le triple de 18 ?",
+    "choices": [
+      "52",
+      "54",
+      "56",
+      "58"
+    ],
+    "answer": 1,
+    "explanation": "18 × 3 = 54."
+  },
+  {
+    "id": 16,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moitié de 84 ?",
+    "choices": [
+      "40",
+      "41",
+      "42",
+      "44"
+    ],
+    "answer": 2,
+    "explanation": "84 ÷ 2 = 42."
+  },
+  {
+    "id": 17,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le périmètre d'un carré de côté 9 cm ?",
+    "choices": [
+      "18 cm",
+      "27 cm",
+      "36 cm",
+      "81 cm"
+    ],
+    "answer": 2,
+    "explanation": "Le périmètre d'un carré est égal à 4 × le côté : 4 × 9 = 36 cm."
+  },
+  {
+    "id": 18,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de côtés possède un hexagone ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "Un hexagone possède 6 côtés."
+  },
+  {
+    "id": 19,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 10² ?",
+    "choices": [
+      "20",
+      "50",
+      "100",
+      "200"
+    ],
+    "answer": 2,
+    "explanation": "10² = 10 × 10 = 100."
+  },
+  {
+    "id": 20,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel nombre complète la suite : 2, 4, 6, 8, ... ?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 1,
+    "explanation": "La suite augmente de 2 à chaque terme : le terme suivant est 10."
+  },
+  {
+    "id": 21,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 48 + 37 ?",
+    "choices": [
+      "83",
+      "84",
+      "85",
+      "86"
+    ],
+    "answer": 2,
+    "explanation": "48 + 37 = 85."
+  },
+  {
+    "id": 22,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 16 × 4 ?",
+    "choices": [
+      "60",
+      "62",
+      "64",
+      "66"
+    ],
+    "answer": 2,
+    "explanation": "16 × 4 = 64."
+  },
+  {
+    "id": 23,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 144 ÷ 12 ?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 2,
+    "explanation": "144 ÷ 12 = 12."
+  },
+  {
+    "id": 24,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le double de 47 ?",
+    "choices": [
+      "92",
+      "94",
+      "96",
+      "98"
+    ],
+    "answer": 1,
+    "explanation": "47 × 2 = 94."
+  },
+  {
+    "id": 25,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 200 − 83 ?",
+    "choices": [
+      "115",
+      "116",
+      "117",
+      "118"
+    ],
+    "answer": 2,
+    "explanation": "200 − 83 = 117."
+  },
+  {
+    "id": 26,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 5³ ?",
+    "choices": [
+      "100",
+      "115",
+      "125",
+      "135"
+    ],
+    "answer": 2,
+    "explanation": "5³ = 5 × 5 × 5 = 125."
+  },
+  {
+    "id": 27,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la fraction irréductible de 4/8 ?",
+    "choices": [
+      "1/4",
+      "1/2",
+      "2/3",
+      "3/4"
+    ],
+    "answer": 1,
+    "explanation": "4/8 se simplifie en 1/2."
+  },
+  {
+    "id": 28,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 50 % de 84 ?",
+    "choices": [
+      "40",
+      "41",
+      "42",
+      "44"
+    ],
+    "answer": 2,
+    "explanation": "50 % correspond à la moitié de 84, soit 42."
+  },
+  {
+    "id": 29,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un carré de côté 7 cm ?",
+    "choices": [
+      "28 cm²",
+      "42 cm²",
+      "49 cm²",
+      "56 cm²"
+    ],
+    "answer": 2,
+    "explanation": "L'aire d'un carré est côté × côté : 7 × 7 = 49 cm²."
+  },
+{
+  "id": 30,
+  "category": "Mathématiques",
+  "difficulty": "easy",
+  "points": 5,
+  "question": "Quel est le résultat de 18 + 24 ÷ 6 ?",
+  "choices": [
+    "20",
+    "21",
+    "22",
+    "24"
+  ],
+  "answer": 2,
+  "explanation": "On effectue d'abord la division : 24 ÷ 6 = 4, puis 18 + 4 = 22."
+},
+  {
+    "id": 31,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 56 + 29 ?",
+    "choices": [
+      "83",
+      "84",
+      "85",
+      "86"
+    ],
+    "answer": 2,
+    "explanation": "56 + 29 = 85."
+  },
+  {
+    "id": 32,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 18 × 7 ?",
+    "choices": [
+      "124",
+      "126",
+      "128",
+      "130"
+    ],
+    "answer": 1,
+    "explanation": "18 × 7 = 126."
+  },
+  {
+    "id": 33,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 225 ÷ 15 ?",
+    "choices": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answer": 1,
+    "explanation": "225 ÷ 15 = 15."
+  },
+  {
+    "id": 34,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le quadruple de 23 ?",
+    "choices": [
+      "88",
+      "90",
+      "92",
+      "94"
+    ],
+    "answer": 2,
+    "explanation": "23 × 4 = 92."
+  },
+  {
+    "id": 35,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 350 − 178 ?",
+    "choices": [
+      "170",
+      "171",
+      "172",
+      "173"
+    ],
+    "answer": 2,
+    "explanation": "350 − 178 = 172."
+  },
+  {
+    "id": 36,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 10² ?",
+    "choices": [
+      "20",
+      "50",
+      "100",
+      "200"
+    ],
+    "answer": 2,
+    "explanation": "10² = 100."
+  },
+  {
+    "id": 37,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 3/4 ?",
+    "choices": [
+      "6/8",
+      "4/5",
+      "5/8",
+      "9/16"
+    ],
+    "answer": 0,
+    "explanation": "3/4 = 6/8."
+  },
+  {
+    "id": 38,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 25 % de 80 ?",
+    "choices": [
+      "18",
+      "20",
+      "22",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "25 % correspond à un quart. Un quart de 80 = 20."
+  },
+  {
+    "id": 39,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le périmètre d'un rectangle de longueur 8 cm et de largeur 5 cm ?",
+    "choices": [
+      "26 cm",
+      "28 cm",
+      "30 cm",
+      "40 cm"
+    ],
+    "answer": 0,
+    "explanation": "Le périmètre vaut 2 × (8 + 5) = 26 cm."
+  },
+  {
+    "id": 40,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (9 + 3) × 2 ?",
+    "choices": [
+      "22",
+      "24",
+      "26",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "On calcule d'abord la parenthèse : 9 + 3 = 12, puis 12 × 2 = 24."
+  },
+  {
+    "id": 41,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 73 + 28 ?",
+    "choices": [
+      "99",
+      "100",
+      "101",
+      "102"
+    ],
+    "answer": 2,
+    "explanation": "73 + 28 = 101."
+  },
+  {
+    "id": 42,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 24 × 6 ?",
+    "choices": [
+      "138",
+      "140",
+      "142",
+      "144"
+    ],
+    "answer": 3,
+    "explanation": "24 × 6 = 144."
+  },
+  {
+    "id": 43,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 180 ÷ 9 ?",
+    "choices": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "180 ÷ 9 = 20."
+  },
+  {
+    "id": 44,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le triple de 35 ?",
+    "choices": [
+      "95",
+      "100",
+      "105",
+      "110"
+    ],
+    "answer": 2,
+    "explanation": "35 × 3 = 105."
+  },
+  {
+    "id": 45,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 420 − 185 ?",
+    "choices": [
+      "225",
+      "230",
+      "235",
+      "240"
+    ],
+    "answer": 2,
+    "explanation": "420 − 185 = 235."
+  },
+  {
+    "id": 46,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 11² ?",
+    "choices": [
+      "111",
+      "120",
+      "121",
+      "131"
+    ],
+    "answer": 2,
+    "explanation": "11² = 121."
+  },
+  {
+    "id": 47,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 2/5 ?",
+    "choices": [
+      "4/10",
+      "5/12",
+      "6/20",
+      "8/15"
+    ],
+    "answer": 0,
+    "explanation": "2/5 = 4/10."
+  },
+  {
+    "id": 48,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 10 % de 350 ?",
+    "choices": [
+      "25",
+      "30",
+      "35",
+      "40"
+    ],
+    "answer": 2,
+    "explanation": "10 % de 350 = 35."
+  },
+  {
+    "id": 49,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 9 cm et de largeur 4 cm ?",
+    "choices": [
+      "13 cm²",
+      "26 cm²",
+      "36 cm²",
+      "40 cm²"
+    ],
+    "answer": 2,
+    "explanation": "L'aire d'un rectangle est longueur × largeur : 9 × 4 = 36 cm²."
+  },
+  {
+    "id": 50,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 6 + 4 × 5 ?",
+    "choices": [
+      "26",
+      "30",
+      "50",
+      "56"
+    ],
+    "answer": 0,
+    "explanation": "On effectue la multiplication avant l'addition : 4 × 5 = 20, puis 6 + 20 = 26."
+  },
+  {
+    "id": 51,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 84 + 39 ?",
+    "choices": [
+      "121",
+      "122",
+      "123",
+      "124"
+    ],
+    "answer": 2,
+    "explanation": "84 + 39 = 123."
+  },
+  {
+    "id": 52,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 25 × 8 ?",
+    "choices": [
+      "180",
+      "190",
+      "200",
+      "210"
+    ],
+    "answer": 2,
+    "explanation": "25 × 8 = 200."
+  },
+  {
+    "id": 53,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 169 ÷ 13 ?",
+    "choices": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "169 ÷ 13 = 13."
+  },
+  {
+    "id": 54,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moitié de 126 ?",
+    "choices": [
+      "61",
+      "62",
+      "63",
+      "64"
+    ],
+    "answer": 2,
+    "explanation": "126 ÷ 2 = 63."
+  },
+  {
+    "id": 55,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 500 − 275 ?",
+    "choices": [
+      "215",
+      "220",
+      "225",
+      "230"
+    ],
+    "answer": 2,
+    "explanation": "500 − 275 = 225."
+  },
+  {
+    "id": 56,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 12² ?",
+    "choices": [
+      "124",
+      "132",
+      "142",
+      "144"
+    ],
+    "answer": 3,
+    "explanation": "12² = 144."
+  },
+  {
+    "id": 57,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 3/5 ?",
+    "choices": [
+      "6/10",
+      "4/9",
+      "5/12",
+      "7/15"
+    ],
+    "answer": 0,
+    "explanation": "3/5 = 6/10."
+  },
+  {
+    "id": 58,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 75 % de 200 ?",
+    "choices": [
+      "125",
+      "150",
+      "175",
+      "180"
+    ],
+    "answer": 1,
+    "explanation": "75 % de 200 = 150."
+  },
+  {
+    "id": 59,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de centimètres y a-t-il dans 3 mètres ?",
+    "choices": [
+      "30",
+      "300",
+      "3000",
+      "30000"
+    ],
+    "answer": 1,
+    "explanation": "1 mètre = 100 cm, donc 3 mètres = 300 cm."
+  },
+  {
+    "id": 60,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (15 − 3) × 2 ?",
+    "choices": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "answer": 3,
+    "explanation": "15 − 3 = 12 puis 12 × 2 = 24."
+  },
+  {
+    "id": 61,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 96 + 47 ?",
+    "choices": [
+      "141",
+      "142",
+      "143",
+      "144"
+    ],
+    "answer": 2,
+    "explanation": "96 + 47 = 143."
+  },
+  {
+    "id": 62,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 32 × 4 ?",
+    "choices": [
+      "124",
+      "126",
+      "128",
+      "132"
+    ],
+    "answer": 2,
+    "explanation": "32 × 4 = 128."
+  },
+  {
+    "id": 63,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 196 ÷ 14 ?",
+    "choices": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "196 ÷ 14 = 14."
+  },
+  {
+    "id": 64,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moitié de 158 ?",
+    "choices": [
+      "77",
+      "78",
+      "79",
+      "80"
+    ],
+    "answer": 2,
+    "explanation": "158 ÷ 2 = 79."
+  },
+  {
+    "id": 65,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 650 − 289 ?",
+    "choices": [
+      "359",
+      "360",
+      "361",
+      "362"
+    ],
+    "answer": 2,
+    "explanation": "650 − 289 = 361."
+  },
+  {
+    "id": 66,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 15² ?",
+    "choices": [
+      "215",
+      "220",
+      "225",
+      "230"
+    ],
+    "answer": 2,
+    "explanation": "15² = 225."
+  },
+  {
+    "id": 67,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 4/6 ?",
+    "choices": [
+      "1/2",
+      "2/3",
+      "3/5",
+      "5/8"
+    ],
+    "answer": 1,
+    "explanation": "4/6 se simplifie en 2/3."
+  },
+  {
+    "id": 68,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 30 % de 90 ?",
+    "choices": [
+      "24",
+      "27",
+      "30",
+      "33"
+    ],
+    "answer": 1,
+    "explanation": "30 % de 90 = 0,30 × 90 = 27."
+  },
+  {
+    "id": 69,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de millimètres y a-t-il dans 8 centimètres ?",
+    "choices": [
+      "8",
+      "80",
+      "800",
+      "8000"
+    ],
+    "answer": 1,
+    "explanation": "1 cm = 10 mm, donc 8 cm = 80 mm."
+  },
+  {
+    "id": 70,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 7 + (18 ÷ 3) ?",
+    "choices": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "18 ÷ 3 = 6 puis 7 + 6 = 13."
+  },
+  {
+    "id": 71,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 125 + 76 ?",
+    "choices": [
+      "199",
+      "200",
+      "201",
+      "202"
+    ],
+    "answer": 2,
+    "explanation": "125 + 76 = 201."
+  },
+  {
+    "id": 72,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 45 × 3 ?",
+    "choices": [
+      "130",
+      "135",
+      "140",
+      "145"
+    ],
+    "answer": 1,
+    "explanation": "45 × 3 = 135."
+  },
+  {
+    "id": 73,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 324 ÷ 18 ?",
+    "choices": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 2,
+    "explanation": "324 ÷ 18 = 18."
+  },
+  {
+    "id": 74,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le double de 67 ?",
+    "choices": [
+      "132",
+      "133",
+      "134",
+      "136"
+    ],
+    "answer": 2,
+    "explanation": "67 × 2 = 134."
+  },
+  {
+    "id": 75,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 900 − 457 ?",
+    "choices": [
+      "441",
+      "442",
+      "443",
+      "444"
+    ],
+    "answer": 2,
+    "explanation": "900 − 457 = 443."
+  },
+  {
+    "id": 76,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 14² ?",
+    "choices": [
+      "186",
+      "194",
+      "196",
+      "198"
+    ],
+    "answer": 2,
+    "explanation": "14² = 196."
+  },
+  {
+    "id": 77,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 5/10 ?",
+    "choices": [
+      "1/3",
+      "1/2",
+      "2/5",
+      "3/4"
+    ],
+    "answer": 1,
+    "explanation": "5/10 se simplifie en 1/2."
+  },
+  {
+    "id": 78,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 40 % de 150 ?",
+    "choices": [
+      "50",
+      "55",
+      "60",
+      "65"
+    ],
+    "answer": 2,
+    "explanation": "40 % de 150 = 0,40 × 150 = 60."
+  },
+  {
+    "id": 79,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de grammes y a-t-il dans 4 kilogrammes ?",
+    "choices": [
+      "40",
+      "400",
+      "4000",
+      "40000"
+    ],
+    "answer": 2,
+    "explanation": "1 kilogramme = 1000 grammes, donc 4 kg = 4000 g."
+  },
+  {
+    "id": 80,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (20 + 8) ÷ 4 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "20 + 8 = 28 puis 28 ÷ 4 = 7."
+  },
+  {
+    "id": 81,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 7,5 + 2,3 ?",
+    "choices": [
+      "9,6",
+      "9,7",
+      "9,8",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "7,5 + 2,3 = 9,8."
+  },
+  {
+    "id": 82,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est la plus grande ?",
+    "choices": [
+      "1/4",
+      "2/5",
+      "1/2",
+      "3/8"
+    ],
+    "answer": 2,
+    "explanation": "1/2 = 0,5, ce qui est supérieur aux autres fractions proposées."
+  },
+  {
+    "id": 83,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 15 % de 80 ?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "answer": 1,
+    "explanation": "15 % de 80 = 0,15 × 80 = 12."
+  },
+  {
+    "id": 84,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le périmètre d'un carré de côté 12 cm ?",
+    "choices": [
+      "24 cm",
+      "36 cm",
+      "48 cm",
+      "144 cm"
+    ],
+    "answer": 2,
+    "explanation": "Le périmètre d'un carré est égal à 4 × le côté : 4 × 12 = 48 cm."
+  },
+  {
+    "id": 85,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 0,8 × 10 ?",
+    "choices": [
+      "0,8",
+      "8",
+      "80",
+      "800"
+    ],
+    "answer": 1,
+    "explanation": "Multiplier par 10 décale la virgule d'un rang vers la droite : 0,8 × 10 = 8."
+  },
+  {
+    "id": 86,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la racine carrée de 121 ?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 1,
+    "explanation": "11 × 11 = 121."
+  },
+  {
+    "id": 87,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de minutes y a-t-il dans 3 heures ?",
+    "choices": [
+      "120",
+      "150",
+      "180",
+      "240"
+    ],
+    "answer": 2,
+    "explanation": "3 × 60 = 180 minutes."
+  },
+  {
+    "id": 88,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 9 + 6 × 4 ?",
+    "choices": [
+      "45",
+      "33",
+      "60",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "On effectue d'abord la multiplication : 6 × 4 = 24, puis 24 + 9 = 33."
+  },
+  {
+    "id": 89,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 2,5 + 1,75 ?",
+    "choices": [
+      "4",
+      "4,15",
+      "4,25",
+      "4,5"
+    ],
+    "answer": 2,
+    "explanation": "2,5 + 1,75 = 4,25."
+  },
+  {
+    "id": 90,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 15 cm et de largeur 6 cm ?",
+    "choices": [
+      "42 cm²",
+      "60 cm²",
+      "90 cm²",
+      "120 cm²"
+    ],
+    "answer": 2,
+    "explanation": "L'aire d'un rectangle est égale à longueur × largeur : 15 × 6 = 90 cm²."
+  },
+  {
+    "id": 91,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 13,4 + 6,8 ?",
+    "choices": [
+      "19,8",
+      "20",
+      "20,2",
+      "20,4"
+    ],
+    "answer": 2,
+    "explanation": "13,4 + 6,8 = 20,2."
+  },
+  {
+    "id": 92,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est égale à 0,25 ?",
+    "choices": [
+      "1/2",
+      "1/3",
+      "1/4",
+      "3/4"
+    ],
+    "answer": 2,
+    "explanation": "0,25 correspond à 25 %, soit 1/4."
+  },
+  {
+    "id": 93,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 5 % de 240 ?",
+    "choices": [
+      "10",
+      "12",
+      "14",
+      "15"
+    ],
+    "answer": 1,
+    "explanation": "5 % de 240 = 0,05 × 240 = 12."
+  },
+  {
+    "id": 94,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le périmètre d'un rectangle de longueur 14 cm et de largeur 9 cm ?",
+    "choices": [
+      "42 cm",
+      "44 cm",
+      "46 cm",
+      "48 cm"
+    ],
+    "answer": 2,
+    "explanation": "Le périmètre est égal à 2 × (14 + 9) = 46 cm."
+  },
+  {
+    "id": 95,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 1,2 × 10 ?",
+    "choices": [
+      "1,2",
+      "12",
+      "120",
+      "0,12"
+    ],
+    "answer": 1,
+    "explanation": "Multiplier par 10 décale la virgule d'un rang vers la droite : 1,2 × 10 = 12."
+  },
+  {
+    "id": 96,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la racine carrée de 169 ?",
+    "choices": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "13 × 13 = 169."
+  },
+  {
+    "id": 97,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de secondes y a-t-il dans 5 minutes ?",
+    "choices": [
+      "250",
+      "300",
+      "350",
+      "400"
+    ],
+    "answer": 1,
+    "explanation": "5 × 60 = 300 secondes."
+  },
+  {
+    "id": 98,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (16 + 8) ÷ 6 ?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "16 + 8 = 24, puis 24 ÷ 6 = 4."
+  },
+  {
+    "id": 99,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 7,5 − 2,8 ?",
+    "choices": [
+      "4,5",
+      "4,6",
+      "4,7",
+      "4,8"
+    ],
+    "answer": 2,
+    "explanation": "7,5 − 2,8 = 4,7."
+  },
+  {
+    "id": 100,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un triangle de base 12 cm et de hauteur 5 cm ?",
+    "choices": [
+      "24 cm²",
+      "30 cm²",
+      "60 cm²",
+      "72 cm²"
+    ],
+    "answer": 1,
+    "explanation": "L'aire d'un triangle est (base × hauteur) ÷ 2 = (12 × 5) ÷ 2 = 30 cm²."
+  },
+  {
+    "id": 101,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 18 % de 250 ?",
+    "choices": [
+      "40",
+      "45",
+      "50",
+      "55"
+    ],
+    "answer": 1,
+    "explanation": "18 % de 250 = 0,18 × 250 = 45."
+  },
+  {
+    "id": 102,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 9/12 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6"
+    ],
+    "answer": 1,
+    "explanation": "9/12 se simplifie en 3/4."
+  },
+  {
+    "id": 103,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 14,8 + 5,7 ?",
+    "choices": [
+      "19,5",
+      "20,3",
+      "20,5",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "14,8 + 5,7 = 20,5."
+  },
+  {
+    "id": 104,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 2³ ?",
+    "choices": [
+      "4",
+      "6",
+      "8",
+      "16"
+    ],
+    "answer": 2,
+    "explanation": "2³ = 2 × 2 × 2 = 8."
+  },
+  {
+    "id": 105,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 3,6 × 10 ?",
+    "choices": [
+      "3,6",
+      "36",
+      "360",
+      "0,36"
+    ],
+    "answer": 1,
+    "explanation": "Multiplier par 10 décale la virgule d'un rang vers la droite : 3,6 × 10 = 36."
+  },
+  {
+    "id": 106,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le périmètre d'un carré de côté 15 cm ?",
+    "choices": [
+      "45 cm",
+      "50 cm",
+      "60 cm",
+      "75 cm"
+    ],
+    "answer": 2,
+    "explanation": "Le périmètre est égal à 4 × 15 = 60 cm."
+  },
+  {
+    "id": 107,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de millilitres y a-t-il dans 2 litres ?",
+    "choices": [
+      "20",
+      "200",
+      "2000",
+      "20000"
+    ],
+    "answer": 2,
+    "explanation": "1 litre = 1000 mL, donc 2 litres = 2000 mL."
+  },
+  {
+    "id": 108,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 8 × (9 − 4) ?",
+    "choices": [
+      "32",
+      "40",
+      "45",
+      "72"
+    ],
+    "answer": 1,
+    "explanation": "9 − 4 = 5 puis 8 × 5 = 40."
+  },
+  {
+    "id": 109,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 12, 16 et 20 ?",
+    "choices": [
+      "14",
+      "15",
+      "16",
+      "18"
+    ],
+    "answer": 2,
+    "explanation": "(12 + 16 + 20) ÷ 3 = 48 ÷ 3 = 16."
+  },
+  {
+    "id": 110,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 9² − 5² ?",
+    "choices": [
+      "46",
+      "52",
+      "56",
+      "64"
+    ],
+    "answer": 2,
+    "explanation": "9² = 81 et 5² = 25. Donc 81 − 25 = 56."
+  },
+  {
+    "id": 111,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 0,75 × 100 ?",
+    "choices": [
+      "7,5",
+      "75",
+      "750",
+      "0,075"
+    ],
+    "answer": 1,
+    "explanation": "Multiplier par 100 décale la virgule de deux rangs vers la droite : 0,75 × 100 = 75."
+  },
+  {
+    "id": 112,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la fraction irréductible de 8/12 ?",
+    "choices": [
+      "1/2",
+      "2/3",
+      "3/4",
+      "4/5"
+    ],
+    "answer": 1,
+    "explanation": "8/12 se simplifie en divisant le numérateur et le dénominateur par 4 : 2/3."
+  },
+  {
+    "id": 113,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 2,4 + 5,9 ?",
+    "choices": [
+      "8,1",
+      "8,2",
+      "8,3",
+      "8,4"
+    ],
+    "answer": 2,
+    "explanation": "2,4 + 5,9 = 8,3."
+  },
+  {
+    "id": 114,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 3⁴ ?",
+    "choices": [
+      "27",
+      "64",
+      "81",
+      "243"
+    ],
+    "answer": 2,
+    "explanation": "3⁴ = 3 × 3 × 3 × 3 = 81."
+  },
+  {
+    "id": 115,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 2,75 × 4 ?",
+    "choices": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 2,
+    "explanation": "2,75 × 4 = 11."
+  },
+  {
+    "id": 116,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le périmètre d'un triangle équilatéral de côté 11 cm ?",
+    "choices": [
+      "22 cm",
+      "30 cm",
+      "33 cm",
+      "44 cm"
+    ],
+    "answer": 2,
+    "explanation": "Le périmètre d'un triangle équilatéral est égal à 3 × le côté : 3 × 11 = 33 cm."
+  },
+  {
+    "id": 117,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de centimètres y a-t-il dans 2,5 mètres ?",
+    "choices": [
+      "25",
+      "250",
+      "2500",
+      "25000"
+    ],
+    "answer": 1,
+    "explanation": "1 mètre = 100 cm, donc 2,5 m = 250 cm."
+  },
+  {
+    "id": 118,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de 40 ÷ (2 × 5) ?",
+    "choices": [
+      "2",
+      "4",
+      "8",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "2 × 5 = 10 puis 40 ÷ 10 = 4."
+  },
+  {
+    "id": 119,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 8, 10, 12 et 14 ?",
+    "choices": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "answer": 1,
+    "explanation": "(8 + 10 + 12 + 14) ÷ 4 = 44 ÷ 4 = 11."
+  },
+  {
+    "id": 120,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 16² ?",
+    "choices": [
+      "196",
+      "225",
+      "256",
+      "289"
+    ],
+    "answer": 2,
+    "explanation": "16² = 16 × 16 = 256."
+  },
+  {
+    "id": 121,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 12,5 % de 160 ?",
+    "choices": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "answer": 1,
+    "explanation": "12,5 % = 1/8. Un huitième de 160 est égal à 20."
+  },
+  {
+    "id": 122,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 6/9 ?",
+    "choices": [
+      "1/2",
+      "2/3",
+      "3/5",
+      "4/7"
+    ],
+    "answer": 1,
+    "explanation": "6/9 se simplifie en divisant le numérateur et le dénominateur par 3 : 2/3."
+  },
+  {
+    "id": 123,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 4,75 + 3,25 ?",
+    "choices": [
+      "7,5",
+      "7,75",
+      "8",
+      "8,25"
+    ],
+    "answer": 2,
+    "explanation": "4,75 + 3,25 = 8."
+  },
+  {
+    "id": 124,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 4³ ?",
+    "choices": [
+      "16",
+      "32",
+      "64",
+      "128"
+    ],
+    "answer": 2,
+    "explanation": "4³ = 4 × 4 × 4 = 64."
+  },
+  {
+    "id": 125,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 6,4 × 5 ?",
+    "choices": [
+      "30",
+      "31",
+      "32",
+      "34"
+    ],
+    "answer": 2,
+    "explanation": "6,4 × 5 = 32."
+  },
+  {
+    "id": 126,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un carré de côté 13 cm ?",
+    "choices": [
+      "156 cm²",
+      "169 cm²",
+      "182 cm²",
+      "196 cm²"
+    ],
+    "answer": 1,
+    "explanation": "L'aire d'un carré est côté × côté : 13 × 13 = 169 cm²."
+  },
+  {
+    "id": 127,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de grammes y a-t-il dans 2,5 kilogrammes ?",
+    "choices": [
+      "250 g",
+      "2500 g",
+      "25000 g",
+      "2000 g"
+    ],
+    "answer": 1,
+    "explanation": "1 kilogramme = 1000 grammes, donc 2,5 kg = 2500 g."
+  },
+  {
+    "id": 128,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (18 + 6) ÷ 3 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "18 + 6 = 24 puis 24 ÷ 3 = 8."
+  },
+  {
+    "id": 129,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 14, 18 et 22 ?",
+    "choices": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 2,
+    "explanation": "(14 + 18 + 22) ÷ 3 = 54 ÷ 3 = 18."
+  },
+  {
+    "id": 130,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 18² ?",
+    "choices": [
+      "289",
+      "324",
+      "361",
+      "400"
+    ],
+    "answer": 1,
+    "explanation": "18² = 18 × 18 = 324."
+  },
+  {
+    "id": 131,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 35 % de 200 ?",
+    "choices": [
+      "60",
+      "65",
+      "70",
+      "75"
+    ],
+    "answer": 2,
+    "explanation": "35 % de 200 = 0,35 × 200 = 70."
+  },
+  {
+    "id": 132,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 12/16 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6"
+    ],
+    "answer": 1,
+    "explanation": "12/16 se simplifie en divisant le numérateur et le dénominateur par 4 : 3/4."
+  },
+  {
+    "id": 133,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 8,4 + 3,7 ?",
+    "choices": [
+      "11,9",
+      "12",
+      "12,1",
+      "12,2"
+    ],
+    "answer": 2,
+    "explanation": "8,4 + 3,7 = 12,1."
+  },
+  {
+    "id": 134,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 6³ ?",
+    "choices": [
+      "108",
+      "180",
+      "216",
+      "256"
+    ],
+    "answer": 2,
+    "explanation": "6³ = 6 × 6 × 6 = 216."
+  },
+  {
+    "id": 135,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 7,2 × 5 ?",
+    "choices": [
+      "34",
+      "35",
+      "36",
+      "37"
+    ],
+    "answer": 2,
+    "explanation": "7,2 × 5 = 36."
+  },
+  {
+    "id": 136,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 18 cm et de largeur 7 cm ?",
+    "choices": [
+      "112 cm²",
+      "120 cm²",
+      "126 cm²",
+      "140 cm²"
+    ],
+    "answer": 2,
+    "explanation": "L'aire d'un rectangle est longueur × largeur : 18 × 7 = 126 cm²."
+  },
+  {
+    "id": 137,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de millilitres y a-t-il dans 3,5 litres ?",
+    "choices": [
+      "350 mL",
+      "3500 mL",
+      "35000 mL",
+      "3000 mL"
+    ],
+    "answer": 1,
+    "explanation": "1 litre = 1000 mL, donc 3,5 L = 3500 mL."
+  },
+  {
+    "id": 138,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (45 - 15) ÷ 5 ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "45 − 15 = 30 puis 30 ÷ 5 = 6."
+  },
+  {
+    "id": 139,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 9, 12, 15 et 20 ?",
+    "choices": [
+      "13",
+      "14",
+      "14,5",
+      "15"
+    ],
+    "answer": 1,
+    "explanation": "(9 + 12 + 15 + 20) ÷ 4 = 56 ÷ 4 = 14."
+  },
+  {
+    "id": 140,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 17² ?",
+    "choices": [
+      "256",
+      "272",
+      "289",
+      "324"
+    ],
+    "answer": 2,
+    "explanation": "17² = 17 × 17 = 289."
+  },
+  {
+    "id": 141,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 45 % de 80 ?",
+    "choices": [
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "answer": 1,
+    "explanation": "45 % de 80 = 0,45 × 80 = 36."
+  },
+  {
+    "id": 142,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 15/20 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6"
+    ],
+    "answer": 1,
+    "explanation": "15/20 se simplifie en divisant par 5 : 3/4."
+  },
+  {
+    "id": 143,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 9,6 + 4,8 ?",
+    "choices": [
+      "13,4",
+      "14,2",
+      "14,4",
+      "15,2"
+    ],
+    "answer": 2,
+    "explanation": "9,6 + 4,8 = 14,4."
+  },
+  {
+    "id": 144,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 7³ ?",
+    "choices": [
+      "294",
+      "343",
+      "392",
+      "441"
+    ],
+    "answer": 1,
+    "explanation": "7³ = 7 × 7 × 7 = 343."
+  },
+  {
+    "id": 145,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 4,8 × 5 ?",
+    "choices": [
+      "22",
+      "23",
+      "24",
+      "25"
+    ],
+    "answer": 2,
+    "explanation": "4,8 × 5 = 24."
+  },
+  {
+    "id": 146,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 16 cm et de largeur 9 cm ?",
+    "choices": [
+      "126 cm²",
+      "134 cm²",
+      "144 cm²",
+      "152 cm²"
+    ],
+    "answer": 2,
+    "explanation": "16 × 9 = 144 cm²."
+  },
+  {
+    "id": 147,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de centimètres y a-t-il dans 4,2 mètres ?",
+    "choices": [
+      "42",
+      "420",
+      "4200",
+      "42000"
+    ],
+    "answer": 1,
+    "explanation": "1 m = 100 cm, donc 4,2 m = 420 cm."
+  },
+  {
+    "id": 148,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (30 + 18) ÷ 6 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "30 + 18 = 48 puis 48 ÷ 6 = 8."
+  },
+  {
+    "id": 149,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 15, 18, 21 et 26 ?",
+    "choices": [
+      "19",
+      "20",
+      "20,5",
+      "21"
+    ],
+    "answer": 1,
+    "explanation": "(15 + 18 + 21 + 26) ÷ 4 = 80 ÷ 4 = 20."
+  },
+  {
+    "id": 150,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 19² ?",
+    "choices": [
+      "324",
+      "342",
+      "361",
+      "400"
+    ],
+    "answer": 2,
+    "explanation": "19² = 19 × 19 = 361."
+  },
+  {
+    "id": 151,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 60 % de 90 ?",
+    "choices": [
+      "45",
+      "50",
+      "54",
+      "60"
+    ],
+    "answer": 2,
+    "explanation": "60 % de 90 = 0,60 × 90 = 54."
+  },
+  {
+    "id": 152,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 18/24 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6"
+    ],
+    "answer": 1,
+    "explanation": "18/24 se simplifie en divisant le numérateur et le dénominateur par 6 : 3/4."
+  },
+  {
+    "id": 153,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 12,8 + 7,6 ?",
+    "choices": [
+      "19,4",
+      "20,2",
+      "20,4",
+      "21,4"
+    ],
+    "answer": 2,
+    "explanation": "12,8 + 7,6 = 20,4."
+  },
+  {
+    "id": 154,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 8² ?",
+    "choices": [
+      "48",
+      "56",
+      "64",
+      "72"
+    ],
+    "answer": 2,
+    "explanation": "8² = 8 × 8 = 64."
+  },
+  {
+    "id": 155,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 9,5 × 4 ?",
+    "choices": [
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "answer": 2,
+    "explanation": "9,5 × 4 = 38."
+  },
+  {
+    "id": 156,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 22 cm et de largeur 5 cm ?",
+    "choices": [
+      "100 cm²",
+      "105 cm²",
+      "110 cm²",
+      "115 cm²"
+    ],
+    "answer": 2,
+    "explanation": "22 × 5 = 110 cm²."
+  },
+  {
+    "id": 157,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de millimètres y a-t-il dans 6,5 centimètres ?",
+    "choices": [
+      "6,5",
+      "65",
+      "650",
+      "6500"
+    ],
+    "answer": 1,
+    "explanation": "1 cm = 10 mm, donc 6,5 cm = 65 mm."
+  },
+  {
+    "id": 158,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (36 + 12) ÷ 8 ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1,
+    "explanation": "36 + 12 = 48 puis 48 ÷ 8 = 6."
+  },
+  {
+    "id": 159,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 20, 22, 24 et 26 ?",
+    "choices": [
+      "22",
+      "23",
+      "24",
+      "25"
+    ],
+    "answer": 1,
+    "explanation": "(20 + 22 + 24 + 26) ÷ 4 = 92 ÷ 4 = 23."
+  },
+  {
+    "id": 160,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 21² ?",
+    "choices": [
+      "400",
+      "420",
+      "441",
+      "462"
+    ],
+    "answer": 2,
+    "explanation": "21² = 21 × 21 = 441."
+ },
+  {
+    "id": 161,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 25 % de 320 ?",
+    "choices": [
+      "60",
+      "70",
+      "80",
+      "90"
+    ],
+    "answer": 2,
+    "explanation": "25 % correspond à un quart. Un quart de 320 = 80."
+  },
+  {
+    "id": 162,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 20/25 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6"
+    ],
+    "answer": 2,
+    "explanation": "20/25 se simplifie en divisant par 5 : 4/5."
+  },
+  {
+    "id": 163,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 18,7 + 6,9 ?",
+    "choices": [
+      "24,6",
+      "25,4",
+      "25,6",
+      "26,4"
+    ],
+    "answer": 2,
+    "explanation": "18,7 + 6,9 = 25,6."
+  },
+  {
+    "id": 164,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 9² ?",
+    "choices": [
+      "72",
+      "80",
+      "81",
+      "90"
+    ],
+    "answer": 2,
+    "explanation": "9² = 9 × 9 = 81."
+  },
+  {
+    "id": 165,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 8,4 × 6 ?",
+    "choices": [
+      "48,4",
+      "49,6",
+      "50,4",
+      "51,2"
+    ],
+    "answer": 2,
+    "explanation": "8,4 × 6 = 50,4."
+  },
+  {
+    "id": 166,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 24 cm et de largeur 8 cm ?",
+    "choices": [
+      "176 cm²",
+      "184 cm²",
+      "192 cm²",
+      "200 cm²"
+    ],
+    "answer": 2,
+    "explanation": "24 × 8 = 192 cm²."
+  },
+  {
+    "id": 167,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de centimètres y a-t-il dans 5,6 mètres ?",
+    "choices": [
+      "56",
+      "560",
+      "5600",
+      "56000"
+    ],
+    "answer": 1,
+    "explanation": "1 m = 100 cm, donc 5,6 m = 560 cm."
+  },
+  {
+    "id": 168,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (42 + 14) ÷ 7 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "42 + 14 = 56 puis 56 ÷ 7 = 8."
+  },
+  {
+    "id": 169,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 18, 20, 22, 24 et 26 ?",
+    "choices": [
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "answer": 2,
+    "explanation": "(18 + 20 + 22 + 24 + 26) ÷ 5 = 110 ÷ 5 = 22."
+  },
+  {
+    "id": 170,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 22² ?",
+    "choices": [
+      "462",
+      "472",
+      "484",
+      "496"
+    ],
+    "answer": 2,
+    "explanation": "22² = 22 × 22 = 484."
+  },
+  {
+    "id": 171,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 75 % de 240 ?",
+    "choices": [
+      "160",
+      "170",
+      "180",
+      "190"
+    ],
+    "answer": 2,
+    "explanation": "75 % = 3/4. Les 3/4 de 240 valent 180."
+  },
+  {
+    "id": 172,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 21/28 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/7"
+    ],
+    "answer": 1,
+    "explanation": "21/28 se simplifie en divisant le numérateur et le dénominateur par 7 : 3/4."
+  },
+  {
+    "id": 173,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 15,9 + 8,6 ?",
+    "choices": [
+      "23,5",
+      "24,3",
+      "24,5",
+      "25,5"
+    ],
+    "answer": 2,
+    "explanation": "15,9 + 8,6 = 24,5."
+  },
+  {
+    "id": 174,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 11² ?",
+    "choices": [
+      "111",
+      "120",
+      "121",
+      "132"
+    ],
+    "answer": 2,
+    "explanation": "11² = 121."
+  },
+  {
+    "id": 175,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 7,5 × 8 ?",
+    "choices": [
+      "56",
+      "58",
+      "60",
+      "64"
+    ],
+    "answer": 2,
+    "explanation": "7,5 × 8 = 60."
+  },
+  {
+    "id": 176,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 25 cm et de largeur 6 cm ?",
+    "choices": [
+      "130 cm²",
+      "140 cm²",
+      "150 cm²",
+      "160 cm²"
+    ],
+    "answer": 2,
+    "explanation": "25 × 6 = 150 cm²."
+  },
+  {
+    "id": 177,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de millimètres y a-t-il dans 9 centimètres ?",
+    "choices": [
+      "9",
+      "90",
+      "900",
+      "9000"
+    ],
+    "answer": 1,
+    "explanation": "1 cm = 10 mm, donc 9 cm = 90 mm."
+  },
+  {
+    "id": 178,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (64 - 24) ÷ 5 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "64 − 24 = 40 puis 40 ÷ 5 = 8."
+  },
+  {
+    "id": 179,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 12, 16, 20, 24 et 28 ?",
+    "choices": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "(12 + 16 + 20 + 24 + 28) ÷ 5 = 100 ÷ 5 = 20."
+  },
+  {
+    "id": 180,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 23² ?",
+    "choices": [
+      "506",
+      "518",
+      "529",
+      "552"
+    ],
+    "answer": 2,
+    "explanation": "23² = 23 × 23 = 529."
+ },
+  {
+    "id": 181,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 20 % de 350 ?",
+    "choices": [
+      "60",
+      "65",
+      "70",
+      "75"
+    ],
+    "answer": 2,
+    "explanation": "20 % de 350 = 0,20 × 350 = 70."
+  },
+  {
+    "id": 182,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 14/21 ?",
+    "choices": [
+      "1/2",
+      "2/3",
+      "3/5",
+      "4/7"
+    ],
+    "answer": 1,
+    "explanation": "14/21 se simplifie en divisant le numérateur et le dénominateur par 7 : 2/3."
+  },
+  {
+    "id": 183,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 13,8 + 9,4 ?",
+    "choices": [
+      "22,2",
+      "23",
+      "23,2",
+      "24,2"
+    ],
+    "answer": 2,
+    "explanation": "13,8 + 9,4 = 23,2."
+  },
+  {
+    "id": 184,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 12² ?",
+    "choices": [
+      "124",
+      "132",
+      "144",
+      "156"
+    ],
+    "answer": 2,
+    "explanation": "12² = 144."
+  },
+  {
+    "id": 185,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 6,5 × 8 ?",
+    "choices": [
+      "48",
+      "50",
+      "52",
+      "54"
+    ],
+    "answer": 2,
+    "explanation": "6,5 × 8 = 52."
+  },
+  {
+    "id": 186,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 21 cm et de largeur 9 cm ?",
+    "choices": [
+      "171 cm²",
+      "180 cm²",
+      "189 cm²",
+      "198 cm²"
+    ],
+    "answer": 2,
+    "explanation": "21 × 9 = 189 cm²."
+  },
+  {
+    "id": 187,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de millilitres y a-t-il dans 4,5 litres ?",
+    "choices": [
+      "450",
+      "4500",
+      "45000",
+      "5000"
+    ],
+    "answer": 1,
+    "explanation": "1 litre = 1000 mL, donc 4,5 L = 4500 mL."
+  },
+  {
+    "id": 188,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (54 + 18) ÷ 9 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "54 + 18 = 72 puis 72 ÷ 9 = 8."
+  },
+  {
+    "id": 189,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 11, 15, 19, 23 et 27 ?",
+    "choices": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "answer": 1,
+    "explanation": "(11 + 15 + 19 + 23 + 27) ÷ 5 = 95 ÷ 5 = 19."
+  },
+  {
+    "id": 190,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 24² ?",
+    "choices": [
+      "552",
+      "560",
+      "576",
+      "625"
+    ],
+    "answer": 2,
+    "explanation": "24² = 24 × 24 = 576."
+  },
+  {
+    "id": 191,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien vaut 15 % de 400 ?",
+    "choices": [
+      "50",
+      "55",
+      "60",
+      "65"
+    ],
+    "answer": 2,
+    "explanation": "15 % de 400 = 0,15 × 400 = 60."
+  },
+  {
+    "id": 192,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle fraction est équivalente à 16/20 ?",
+    "choices": [
+      "2/3",
+      "3/4",
+      "4/5",
+      "5/6"
+    ],
+    "answer": 2,
+    "explanation": "16/20 se simplifie en divisant le numérateur et le dénominateur par 4 : 4/5."
+  },
+  {
+    "id": 193,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 14,7 + 8,8 ?",
+    "choices": [
+      "22,5",
+      "23,2",
+      "23,5",
+      "24,5"
+    ],
+    "answer": 2,
+    "explanation": "14,7 + 8,8 = 23,5."
+  },
+  {
+    "id": 194,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 13² ?",
+    "choices": [
+      "156",
+      "169",
+      "182",
+      "196"
+    ],
+    "answer": 1,
+    "explanation": "13² = 13 × 13 = 169."
+  },
+  {
+    "id": 195,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien font 8,5 × 8 ?",
+    "choices": [
+      "64",
+      "66",
+      "68",
+      "72"
+    ],
+    "answer": 2,
+    "explanation": "8,5 × 8 = 68."
+  },
+  {
+    "id": 196,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est l'aire d'un rectangle de longueur 28 cm et de largeur 7 cm ?",
+    "choices": [
+      "182 cm²",
+      "189 cm²",
+      "196 cm²",
+      "203 cm²"
+    ],
+    "answer": 2,
+    "explanation": "28 × 7 = 196 cm²."
+  },
+  {
+    "id": 197,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Combien de grammes y a-t-il dans 3,75 kilogrammes ?",
+    "choices": [
+      "375 g",
+      "3000 g",
+      "3500 g",
+      "3750 g"
+    ],
+    "answer": 3,
+    "explanation": "1 kilogramme = 1000 grammes, donc 3,75 kg = 3750 g."
+  },
+  {
+    "id": 198,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quel est le résultat de (63 + 9) ÷ 8 ?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "63 + 9 = 72 puis 72 ÷ 8 = 9."
+  },
+  {
+    "id": 199,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la moyenne de 16, 18, 20, 22 et 24 ?",
+    "choices": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "(16 + 18 + 20 + 22 + 24) ÷ 5 = 100 ÷ 5 = 20."
+  },
+  {
+    "id": 200,
+    "category": "Mathématiques",
+    "difficulty": "easy",
+    "points": 5,
+    "question": "Quelle est la valeur de 25² ?",
+    "choices": [
+      "525",
+      "575",
+      "625",
+      "650"
+    ],
+    "answer": 2,
+    "explanation": "25² = 25 × 25 = 625."
+},
+  {
+    "id": 201,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 3x + 7 = 25",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 2,
+    "explanation": "3x = 18, donc x = 6."
+  },
+  {
+    "id": 202,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 324 ?",
+    "choices": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 2,
+    "explanation": "18 × 18 = 324."
+  },
+  {
+    "id": 203,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 5(x + 4)",
+    "choices": [
+      "5x + 4",
+      "5x + 9",
+      "5x + 20",
+      "20x"
+    ],
+    "answer": 2,
+    "explanation": "5(x + 4) = 5x + 20."
+  },
+  {
+    "id": 204,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un sac contenant 3 boules rouges et 7 bleues, quelle est la probabilité de tirer une boule rouge ?",
+    "choices": [
+      "3/7",
+      "3/10",
+      "7/10",
+      "1/2"
+    ],
+    "answer": 1,
+    "explanation": "Il y a 10 boules au total, dont 3 rouges : la probabilité est 3/10."
+  },
+  {
+    "id": 205,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 2⁵ ?",
+    "choices": [
+      "16",
+      "24",
+      "32",
+      "64"
+    ],
+    "answer": 2,
+    "explanation": "2⁵ = 2 × 2 × 2 × 2 × 2 = 32."
+  },
+  {
+    "id": 206,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "L'aire d'un cercle de rayon 5 cm est : (π ≈ 3,14)",
+    "choices": [
+      "31,4 cm²",
+      "62,8 cm²",
+      "78,5 cm²",
+      "157 cm²"
+    ],
+    "answer": 2,
+    "explanation": "A = πr² = 3,14 × 25 = 78,5 cm²."
+  },
+  {
+    "id": 207,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 5x = 45",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "x = 45 ÷ 5 = 9."
+  },
+  {
+    "id": 208,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la médiane de la série : 3 ; 5 ; 7 ; 9 ; 12 ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "La valeur centrale est 7."
+  },
+  {
+    "id": 209,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 24 et 36 ?",
+    "choices": [
+      "6",
+      "8",
+      "12",
+      "18"
+    ],
+    "answer": 2,
+    "explanation": "Le Plus Grand Commun Diviseur de 24 et 36 est 12."
+  },
+  {
+    "id": 210,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la solution de x² = 49 parmi les propositions ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "7² = 49. (L'équation complète admet aussi -7, mais parmi les propositions, seule 7 est présente.)"
+  },
+  {
+    "id": 211,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 4x - 9 = 19",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "4x = 28, donc x = 7."
+  },
+  {
+    "id": 212,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 400 ?",
+    "choices": [
+      "18",
+      "19",
+      "20",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "20 × 20 = 400."
+  },
+  {
+    "id": 213,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 7(x - 3)",
+    "choices": [
+      "7x - 3",
+      "7x - 10",
+      "7x - 21",
+      "21x - 3"
+    ],
+    "answer": 2,
+    "explanation": "7(x - 3) = 7x - 21."
+  },
+ {
+  "id": 214,
+  "category": "Mathématiques",
+  "difficulty": "medium",
+  "points": 10,
+  "question": "Une boîte contient 5 billes rouges, 4 bleues et 1 verte. Quelle est la probabilité de tirer une bille bleue ?",
+  "choices": [
+    "1/5",
+    "3/10",
+    "2/5",
+    "1/2"
+  ],
+  "answer": 2,
+  "explanation": "Il y a 10 billes au total, dont 4 bleues. La probabilité est donc 4/10, qui se simplifie en 2/5."
+},
+  {
+    "id": 215,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 3⁴ ?",
+    "choices": [
+      "27",
+      "64",
+      "81",
+      "243"
+    ],
+    "answer": 2,
+    "explanation": "3⁴ = 3 × 3 × 3 × 3 = 81."
+  },
+  {
+    "id": 216,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'aire d'un cercle de rayon 6 cm ? (π ≈ 3,14)",
+    "choices": [
+      "94,2 cm²",
+      "100,4 cm²",
+      "113,04 cm²",
+      "120,5 cm²"
+    ],
+    "answer": 2,
+    "explanation": "A = πr² = 3,14 × 6² = 3,14 × 36 = 113,04 cm²."
+  },
+  {
+    "id": 217,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 6x = 54",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "x = 54 ÷ 6 = 9."
+  },
+  {
+    "id": 218,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la médiane de la série : 4 ; 8 ; 9 ; 13 ; 15 ?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "La valeur centrale est 9."
+  },
+  {
+    "id": 219,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 42 et 56 ?",
+    "choices": [
+      "7",
+      "12",
+      "14",
+      "21"
+    ],
+    "answer": 2,
+    "explanation": "Le Plus Grand Commun Diviseur de 42 et 56 est 14."
+  },
+  {
+    "id": 220,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 6 cm et 8 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "9 cm",
+      "10 cm",
+      "11 cm",
+      "12 cm"
+    ],
+    "answer": 1,
+    "explanation": "D'après le théorème de Pythagore : √(6² + 8²) = √100 = 10 cm."
+  },
+  {
+    "id": 221,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 7x - 5 = 44",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "7x = 49, donc x = 7."
+  },
+  {
+    "id": 222,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 625 ?",
+    "choices": [
+      "20",
+      "24",
+      "25",
+      "30"
+    ],
+    "answer": 2,
+    "explanation": "25 × 25 = 625."
+  },
+  {
+    "id": 223,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 4(x + 9)",
+    "choices": [
+      "4x + 9",
+      "4x + 13",
+      "4x + 36",
+      "36x"
+    ],
+    "answer": 2,
+    "explanation": "4(x + 9) = 4x + 36."
+  },
+  {
+    "id": 224,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On lance un dé équilibré à 6 faces. Quelle est la probabilité d'obtenir un nombre supérieur à 4 ?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answer": 1,
+    "explanation": "Les nombres supérieurs à 4 sont 5 et 6 : 2 issues favorables sur 6, soit 2/6 = 1/3."
+  },
+  {
+    "id": 225,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 5³ ?",
+    "choices": [
+      "75",
+      "100",
+      "125",
+      "150"
+    ],
+    "answer": 2,
+    "explanation": "5³ = 5 × 5 × 5 = 125."
+  },
+  {
+    "id": 226,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la circonférence d'un cercle de rayon 7 cm ? (π ≈ 3,14)",
+    "choices": [
+      "21,98 cm",
+      "43,96 cm",
+      "49,00 cm",
+      "153,86 cm"
+    ],
+    "answer": 1,
+    "explanation": "C = 2πr = 2 × 3,14 × 7 = 43,96 cm."
+  },
+  {
+    "id": 227,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 9x = 81",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "x = 81 ÷ 9 = 9."
+  },
+  {
+    "id": 228,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la médiane de la série : 5 ; 9 ; 12 ; 15 ; 18 ?",
+    "choices": [
+      "9",
+      "10",
+      "12",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "La valeur centrale est 12."
+  },
+  {
+    "id": 229,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 54 et 72 ?",
+    "choices": [
+      "12",
+      "18",
+      "24",
+      "36"
+    ],
+    "answer": 1,
+    "explanation": "Le Plus Grand Commun Diviseur de 54 et 72 est 18."
+  },
+  {
+    "id": 230,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 9 cm et 12 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "13 cm",
+      "14 cm",
+      "15 cm",
+      "16 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(9² + 12²) = √(81 + 144) = √225 = 15 cm."
+  },
+  {
+    "id": 231,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 8x + 12 = 76",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "8x = 64, donc x = 8."
+  },
+  {
+    "id": 232,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 441 ?",
+    "choices": [
+      "19",
+      "20",
+      "21",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "21 × 21 = 441."
+  },
+  {
+    "id": 233,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 6(x - 5)",
+    "choices": [
+      "6x - 5",
+      "6x - 11",
+      "6x - 30",
+      "30x - 5"
+    ],
+    "answer": 2,
+    "explanation": "6(x - 5) = 6x - 30."
+  },
+  {
+    "id": 234,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On tire une carte dans un jeu de 52 cartes. Quelle est la probabilité d'obtenir un As ?",
+    "choices": [
+      "1/26",
+      "1/13",
+      "1/10",
+      "1/4"
+    ],
+    "answer": 1,
+    "explanation": "Il y a 4 As dans un jeu de 52 cartes, soit 4/52 = 1/13."
+  },
+  {
+    "id": 235,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 4⁴ ?",
+    "choices": [
+      "64",
+      "128",
+      "256",
+      "512"
+    ],
+    "answer": 2,
+    "explanation": "4⁴ = 4 × 4 × 4 × 4 = 256."
+  },
+  {
+    "id": 236,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'aire d'un disque de rayon 8 cm ? (π ≈ 3,14)",
+    "choices": [
+      "150,72 cm²",
+      "175,84 cm²",
+      "200,96 cm²",
+      "251,20 cm²"
+    ],
+    "answer": 2,
+    "explanation": "A = πr² = 3,14 × 8² = 3,14 × 64 = 200,96 cm²."
+  },
+  {
+    "id": 237,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 12x = 108",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "x = 108 ÷ 12 = 9."
+  },
+  {
+    "id": 238,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la médiane de la série : 2 ; 6 ; 8 ; 11 ; 17 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "La valeur centrale de la série ordonnée est 8."
+  },
+  {
+    "id": 239,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 48 et 60 ?",
+    "choices": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": 3,
+    "explanation": "Le Plus Grand Commun Diviseur de 48 et 60 est 12."
+  },
+  {
+    "id": 240,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 5 cm et 12 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "11 cm",
+      "12 cm",
+      "13 cm",
+      "14 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(5² + 12²) = √(25 + 144) = √169 = 13 cm."
+  },
+  {
+    "id": 241,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 5x - 8 = 42",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "5x = 50, donc x = 10."
+  },
+  {
+    "id": 242,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 529 ?",
+    "choices": [
+      "21",
+      "22",
+      "23",
+      "24"
+    ],
+    "answer": 2,
+    "explanation": "23 × 23 = 529."
+  },
+  {
+    "id": 243,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 9(x + 2)",
+    "choices": [
+      "9x + 2",
+      "9x + 11",
+      "9x + 18",
+      "18x + 2"
+    ],
+    "answer": 2,
+    "explanation": "9(x + 2) = 9x + 18."
+  },
+  {
+    "id": 244,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On lance deux dés équilibrés. Quelle est la probabilité d'obtenir une somme égale à 7 ?",
+    "choices": [
+      "1/12",
+      "1/6",
+      "1/4",
+      "1/3"
+    ],
+    "answer": 1,
+    "explanation": "Il existe 6 combinaisons favorables sur 36 : 6/36 = 1/6."
+  },
+  {
+    "id": 245,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 6³ ?",
+    "choices": [
+      "108",
+      "180",
+      "216",
+      "256"
+    ],
+    "answer": 2,
+    "explanation": "6³ = 6 × 6 × 6 = 216."
+  },
+  {
+    "id": 246,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la circonférence d'un cercle de rayon 9 cm ? (π ≈ 3,14)",
+    "choices": [
+      "50,24 cm",
+      "56,52 cm",
+      "62,80 cm",
+      "65,94 cm"
+    ],
+    "answer": 1,
+    "explanation": "C = 2πr = 2 × 3,14 × 9 = 56,52 cm."
+  },
+  {
+    "id": 247,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 15x = 135",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "x = 135 ÷ 15 = 9."
+  },
+  {
+    "id": 248,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la moyenne des nombres 12, 15, 18, 21 et 24 ?",
+    "choices": [
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "answer": 1,
+    "explanation": "(12 + 15 + 18 + 21 + 24) ÷ 5 = 90 ÷ 5 = 18."
+  },
+  {
+    "id": 249,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PPCM de 12 et 18 ?",
+    "choices": [
+      "24",
+      "30",
+      "36",
+      "48"
+    ],
+    "answer": 2,
+    "explanation": "Le Plus Petit Commun Multiple de 12 et 18 est 36."
+  },
+  {
+    "id": 250,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 8 cm et 15 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "16 cm",
+      "17 cm",
+      "18 cm",
+      "19 cm"
+    ],
+    "answer": 1,
+    "explanation": "√(8² + 15²) = √(64 + 225) = √289 = 17 cm."
+  },
+  {
+    "id": 251,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 9x - 12 = 60",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "9x = 72, donc x = 8."
+  },
+  {
+    "id": 252,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 784 ?",
+    "choices": [
+      "26",
+      "27",
+      "28",
+      "29"
+    ],
+    "answer": 2,
+    "explanation": "28 × 28 = 784."
+  },
+  {
+    "id": 253,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 8(x - 7)",
+    "choices": [
+      "8x - 7",
+      "8x - 15",
+      "8x - 56",
+      "56x - 7"
+    ],
+    "answer": 2,
+    "explanation": "8(x - 7) = 8x - 56."
+  },
+  {
+    "id": 254,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On tire une carte dans un jeu de 52 cartes. Quelle est la probabilité d'obtenir un Roi ?",
+    "choices": [
+      "1/26",
+      "1/13",
+      "1/10",
+      "1/4"
+    ],
+    "answer": 1,
+    "explanation": "Il y a 4 Rois dans un jeu de 52 cartes : 4/52 = 1/13."
+  },
+  {
+    "id": 255,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 7³ ?",
+    "choices": [
+      "294",
+      "343",
+      "392",
+      "512"
+    ],
+    "answer": 1,
+    "explanation": "7³ = 7 × 7 × 7 = 343."
+  },
+  {
+    "id": 256,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'aire d'un disque de rayon 10 cm ? (π ≈ 3,14)",
+    "choices": [
+      "157 cm²",
+      "314 cm²",
+      "628 cm²",
+      "100 cm²"
+    ],
+    "answer": 1,
+    "explanation": "A = πr² = 3,14 × 10² = 3,14 × 100 = 314 cm²."
+  },
+  {
+    "id": 257,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 14x = 112",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "x = 112 ÷ 14 = 8."
+  },
+  {
+    "id": 258,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la médiane de la série : 6 ; 8 ; 12 ; 15 ; 19 ?",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "La valeur centrale est 12."
+  },
+  {
+    "id": 259,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PPCM de 15 et 20 ?",
+    "choices": [
+      "30",
+      "40",
+      "50",
+      "60"
+    ],
+    "answer": 3,
+    "explanation": "Le PPCM de 15 et 20 est 60."
+  },
+  {
+    "id": 260,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 7 cm et 24 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "24 cm",
+      "25 cm",
+      "26 cm",
+      "27 cm"
+    ],
+    "answer": 1,
+    "explanation": "√(7² + 24²) = √(49 + 576) = √625 = 25 cm."
+  },
+  {
+    "id": 261,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 11x + 7 = 95",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "11x = 88, donc x = 8."
+  },
+  {
+    "id": 262,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 900 ?",
+    "choices": [
+      "25",
+      "28",
+      "30",
+      "32"
+    ],
+    "answer": 2,
+    "explanation": "30 × 30 = 900."
+  },
+  {
+    "id": 263,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 12(x + 5)",
+    "choices": [
+      "12x + 5",
+      "12x + 17",
+      "12x + 60",
+      "60x + 5"
+    ],
+    "answer": 2,
+    "explanation": "12(x + 5) = 12x + 60."
+  },
+  {
+    "id": 264,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On lance un dé équilibré. Quelle est la probabilité d'obtenir un nombre pair ?",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answer": 2,
+    "explanation": "Les nombres pairs sont 2, 4 et 6 : 3 issues sur 6, soit 1/2."
+  },
+  {
+    "id": 265,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 8³ ?",
+    "choices": [
+      "256",
+      "384",
+      "512",
+      "640"
+    ],
+    "answer": 2,
+    "explanation": "8³ = 8 × 8 × 8 = 512."
+  },
+  {
+    "id": 266,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la circonférence d'un cercle de rayon 12 cm ? (π ≈ 3,14)",
+    "choices": [
+      "62,80 cm",
+      "69,08 cm",
+      "75,36 cm",
+      "81,40 cm"
+    ],
+    "answer": 2,
+    "explanation": "C = 2πr = 2 × 3,14 × 12 = 75,36 cm."
+  },
+  {
+    "id": 267,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 16x = 144",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "x = 144 ÷ 16 = 9."
+  },
+  {
+    "id": 268,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la moyenne des nombres 14, 18, 22, 26 et 30 ?",
+    "choices": [
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "answer": 2,
+    "explanation": "(14 + 18 + 22 + 26 + 30) ÷ 5 = 110 ÷ 5 = 22."
+  },
+  {
+    "id": 269,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 63 et 84 ?",
+    "choices": [
+      "14",
+      "18",
+      "21",
+      "28"
+    ],
+    "answer": 2,
+    "explanation": "Le Plus Grand Commun Diviseur de 63 et 84 est 21."
+  },
+  {
+    "id": 270,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 20 cm et 21 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "27 cm",
+      "28 cm",
+      "29 cm",
+      "30 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(20² + 21²) = √(400 + 441) = √841 = 29 cm."
+  },
+  {
+    "id": 271,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 6x + 14 = 68",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "6x = 54, donc x = 9."
+  },
+  {
+    "id": 272,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 1024 ?",
+    "choices": [
+      "30",
+      "31",
+      "32",
+      "34"
+    ],
+    "answer": 2,
+    "explanation": "32 × 32 = 1024."
+  },
+  {
+    "id": 273,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 5(2x + 7)",
+    "choices": [
+      "10x + 7",
+      "10x + 12",
+      "10x + 35",
+      "7x + 35"
+    ],
+    "answer": 2,
+    "explanation": "5 × 2x = 10x et 5 × 7 = 35, donc 10x + 35."
+  },
+  {
+    "id": 274,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On lance deux pièces équilibrées. Quelle est la probabilité d'obtenir exactement une face ?",
+    "choices": [
+      "1/4",
+      "1/2",
+      "3/4",
+      "1"
+    ],
+    "answer": 1,
+    "explanation": "Les issues possibles sont PP, PF, FP et FF. Deux issues sur quatre donnent exactement une face : 2/4 = 1/2."
+  },
+  {
+    "id": 275,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 9³ ?",
+    "choices": [
+      "648",
+      "729",
+      "810",
+      "900"
+    ],
+    "answer": 1,
+    "explanation": "9³ = 9 × 9 × 9 = 729."
+  },
+  {
+    "id": 276,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'aire d'un disque de rayon 12 cm ? (π ≈ 3,14)",
+    "choices": [
+      "376,80 cm²",
+      "452,16 cm²",
+      "527,52 cm²",
+      "602,88 cm²"
+    ],
+    "answer": 1,
+    "explanation": "A = πr² = 3,14 × 12² = 3,14 × 144 = 452,16 cm²."
+  },
+  {
+    "id": 277,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 18x = 162",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 1,
+    "explanation": "x = 162 ÷ 18 = 9."
+  },
+  {
+    "id": 278,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la moyenne des nombres 17, 19, 21, 23 et 25 ?",
+    "choices": [
+      "20",
+      "21",
+      "22",
+      "23"
+    ],
+    "answer": 1,
+    "explanation": "(17 + 19 + 21 + 23 + 25) ÷ 5 = 105 ÷ 5 = 21."
+  },
+  {
+    "id": 279,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PPCM de 18 et 24 ?",
+    "choices": [
+      "36",
+      "48",
+      "54",
+      "72"
+    ],
+    "answer": 3,
+    "explanation": "Le PPCM de 18 et 24 est 72."
+  },
+  {
+    "id": 280,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 12 cm et 16 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "18 cm",
+      "19 cm",
+      "20 cm",
+      "21 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(12² + 16²) = √(144 + 256) = √400 = 20 cm."
+  },
+  {
+    "id": 281,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 7x + 15 = 85",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "7x = 70, donc x = 10."
+  },
+  {
+    "id": 282,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 1156 ?",
+    "choices": [
+      "32",
+      "33",
+      "34",
+      "35"
+    ],
+    "answer": 2,
+    "explanation": "34 × 34 = 1156."
+  },
+  {
+    "id": 283,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 3(4x - 5)",
+    "choices": [
+      "12x - 5",
+      "12x - 8",
+      "12x - 15",
+      "7x - 15"
+    ],
+    "answer": 2,
+    "explanation": "3 × 4x = 12x et 3 × (-5) = -15, donc 12x - 15."
+  },
+  {
+    "id": 284,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Une urne contient 6 boules rouges, 5 bleues et 4 vertes. Quelle est la probabilité de tirer une boule verte ?",
+    "choices": [
+      "4/11",
+      "4/15",
+      "5/15",
+      "6/15"
+    ],
+    "answer": 1,
+    "explanation": "Il y a 15 boules au total, dont 4 vertes. La probabilité est donc 4/15."
+  },
+  {
+    "id": 285,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 10³ ?",
+    "choices": [
+      "100",
+      "500",
+      "1000",
+      "10000"
+    ],
+    "answer": 2,
+    "explanation": "10³ = 10 × 10 × 10 = 1000."
+  },
+  {
+    "id": 286,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la circonférence d'un cercle de rayon 15 cm ? (π ≈ 3,14)",
+    "choices": [
+      "78,50 cm",
+      "88,40 cm",
+      "94,20 cm",
+      "102,30 cm"
+    ],
+    "answer": 2,
+    "explanation": "C = 2πr = 2 × 3,14 × 15 = 94,20 cm."
+  },
+  {
+    "id": 287,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 13x = 117",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "x = 117 ÷ 13 = 9."
+  },
+  {
+    "id": 288,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la moyenne des nombres 10, 14, 18, 22 et 26 ?",
+    "choices": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "answer": 2,
+    "explanation": "(10 + 14 + 18 + 22 + 26) ÷ 5 = 90 ÷ 5 = 18."
+  },
+  {
+    "id": 289,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 90 et 126 ?",
+    "choices": [
+      "12",
+      "18",
+      "24",
+      "30"
+    ],
+    "answer": 1,
+    "explanation": "Le PGCD de 90 et 126 est 18."
+  },
+  {
+    "id": 290,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 9 cm et 40 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "40 cm",
+      "41 cm",
+      "42 cm",
+      "43 cm"
+    ],
+    "answer": 1,
+    "explanation": "√(9² + 40²) = √(81 + 1600) = √1681 = 41 cm."
+  },
+  {
+    "id": 291,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 8x - 16 = 64",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "8x = 80, donc x = 10."
+  },
+  {
+    "id": 292,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine carrée de 1296 ?",
+    "choices": [
+      "34",
+      "35",
+      "36",
+      "37"
+    ],
+    "answer": 2,
+    "explanation": "36 × 36 = 1296."
+  },
+  {
+    "id": 293,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : 4(3x + 8)",
+    "choices": [
+      "12x + 8",
+      "12x + 24",
+      "12x + 32",
+      "7x + 32"
+    ],
+    "answer": 2,
+    "explanation": "4 × 3x = 12x et 4 × 8 = 32, donc 12x + 32."
+  },
+  {
+    "id": 294,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Une urne contient 4 boules rouges, 3 bleues et 5 vertes. Quelle est la probabilité de tirer une boule rouge ?",
+    "choices": [
+      "1/4",
+      "1/3",
+      "4/12",
+      "5/12"
+    ],
+    "answer": 1,
+    "explanation": "Il y a 12 boules au total, dont 4 rouges. La probabilité est 4/12 = 1/3."
+  },
+  {
+    "id": 295,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 11² ?",
+    "choices": [
+      "111",
+      "121",
+      "131",
+      "141"
+    ],
+    "answer": 1,
+    "explanation": "11² = 11 × 11 = 121."
+  },
+  {
+    "id": 296,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'aire d'un disque de rayon 15 cm ? (π ≈ 3,14)",
+    "choices": [
+      "565,20 cm²",
+      "706,50 cm²",
+      "942,00 cm²",
+      "314,00 cm²"
+    ],
+    "answer": 1,
+    "explanation": "A = πr² = 3,14 × 15² = 3,14 × 225 = 706,50 cm²."
+  },
+  {
+    "id": 297,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 17x = 136",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "x = 136 ÷ 17 = 8."
+  },
+  {
+    "id": 298,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la moyenne des nombres 9, 12, 15, 18 et 21 ?",
+    "choices": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "answer": 2,
+    "explanation": "(9 + 12 + 15 + 18 + 21) ÷ 5 = 75 ÷ 5 = 15."
+  },
+  {
+    "id": 299,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PPCM de 14 et 21 ?",
+    "choices": [
+      "28",
+      "35",
+      "42",
+      "56"
+    ],
+    "answer": 2,
+    "explanation": "Le PPCM de 14 et 21 est 42."
+  },
+  {
+    "id": 300,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 11 cm et 60 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "60 cm",
+      "61 cm",
+      "62 cm",
+      "63 cm"
+    ],
+    "answer": 1,
+    "explanation": "√(11² + 60²) = √(121 + 3600) = √3721 = 61 cm."
+  },
+  {
+    "id": 301,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 2(x + 5) = 18",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 1,
+    "explanation": "2x + 10 = 18, donc 2x = 8 et x = 4."
+  },
+  {
+    "id": 302,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de |−17| ?",
+    "choices": [
+      "-17",
+      "0",
+      "17",
+      "34"
+    ],
+    "answer": 2,
+    "explanation": "La valeur absolue représente la distance à 0 : |-17| = 17."
+  },
+  {
+    "id": 303,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Factorise : 6x + 18",
+    "choices": [
+      "6(x + 3)",
+      "3(x + 6)",
+      "2(3x + 18)",
+      "6(x + 18)"
+    ],
+    "answer": 0,
+    "explanation": "Le facteur commun est 6 : 6x + 18 = 6(x + 3)."
+  },
+  {
+    "id": 304,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "La probabilité d'obtenir un nombre multiple de 3 en lançant un dé équilibré est :",
+    "choices": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "answer": 1,
+    "explanation": "Les multiples de 3 sont 3 et 6 : 2 issues sur 6, soit 1/3."
+  },
+  {
+    "id": 305,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 2⁸ ?",
+    "choices": [
+      "64",
+      "128",
+      "256",
+      "512"
+    ],
+    "answer": 2,
+    "explanation": "2⁸ = 256."
+  },
+  {
+    "id": 306,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Le volume d'un cube d'arête 5 cm est :",
+    "choices": [
+      "25 cm³",
+      "75 cm³",
+      "100 cm³",
+      "125 cm³"
+    ],
+    "answer": 3,
+    "explanation": "V = a³ = 5³ = 125 cm³."
+  },
+  {
+    "id": 307,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : x/4 = 7",
+    "choices": [
+      "21",
+      "24",
+      "28",
+      "32"
+    ],
+    "answer": 2,
+    "explanation": "x = 7 × 4 = 28."
+  },
+  {
+    "id": 308,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le mode de la série : 2 ; 5 ; 5 ; 7 ; 8 ; 5 ; 9 ?",
+    "choices": [
+      "2",
+      "5",
+      "7",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "La valeur 5 apparaît le plus souvent."
+  },
+  {
+    "id": 309,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 72 et 120 ?",
+    "choices": [
+      "12",
+      "18",
+      "24",
+      "36" 
+    ],
+    "answer": 2,
+    "explanation": "Le PGCD de 72 et 120 est 24."
+  },
+  {
+    "id": 310,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 13 cm et 84 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "84 cm",
+      "85 cm",
+      "86 cm",
+      "87 cm"
+    ],
+    "answer": 1,
+    "explanation": "√(13² + 84²) = √(169 + 7056) = √7225 = 85 cm."
+  },
+  {
+    "id": 311,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 5(x - 2) = 35",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "5x - 10 = 35, donc 5x = 45 et x = 9."
+  },
+  {
+    "id": 312,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine cubique de 512 ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "8 × 8 × 8 = 512."
+  },
+  {
+    "id": 313,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Réduis l'expression : 3x + 5x - 2",
+    "choices": [
+      "8x - 2",
+      "8x + 2",
+      "15x - 2",
+      "15x + 2"
+    ],
+    "answer": 0,
+    "explanation": "3x + 5x = 8x, donc l'expression devient 8x - 2."
+  },
+  {
+    "id": 314,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On lance deux dés équilibrés. Quelle est la probabilité d'obtenir une somme égale à 10 ?",
+    "choices": [
+      "1/18",
+      "1/12",
+      "1/9",
+      "1/6"
+    ],
+    "answer": 1,
+    "explanation": "Les sommes de 10 sont (4,6), (5,5) et (6,4), soit 3 issues sur 36 : 3/36 = 1/12."
+  },
+  {
+    "id": 315,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 12² ?",
+    "choices": [
+      "124",
+      "132",
+      "144",
+      "156"
+    ],
+    "answer": 2,
+    "explanation": "12² = 12 × 12 = 144."
+  },
+  {
+    "id": 316,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Le volume d'un pavé droit de dimensions 4 cm × 5 cm × 8 cm est :",
+    "choices": [
+      "120 cm³",
+      "140 cm³",
+      "160 cm³",
+      "180 cm³"
+    ],
+    "answer": 2,
+    "explanation": "V = longueur × largeur × hauteur = 4 × 5 × 8 = 160 cm³."
+  },
+  {
+    "id": 317,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 3x + 12 = 39",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "3x = 27, donc x = 9."
+  },
+  {
+    "id": 318,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'étendue de la série : 6 ; 9 ; 12 ; 15 ; 20 ?",
+    "choices": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "Étendue = valeur maximale − valeur minimale = 20 − 6 = 14."
+  },
+  {
+    "id": 319,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PPCM de 16 et 20 ?",
+    "choices": [
+      "40",
+      "60",
+      "80",
+      "160"
+    ],
+    "answer": 2,
+    "explanation": "Le PPCM de 16 et 20 est 80."
+  },
+  {
+    "id": 320,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 16 cm et 30 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "32 cm",
+      "33 cm",
+      "34 cm",
+      "35 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(16² + 30²) = √(256 + 900) = √1156 = 34 cm."
+  },
+  {
+    "id": 321,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 4(x + 6) = 52",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "4x + 24 = 52, donc 4x = 28 et x = 7."
+  },
+  {
+    "id": 322,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la racine cubique de 729 ?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 2,
+    "explanation": "9 × 9 × 9 = 729."
+  },
+  {
+    "id": 323,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Réduis l'expression : 7a - 2a + 9",
+    "choices": [
+      "5a + 9",
+      "9a + 5",
+      "5a - 9",
+      "9a - 5"
+    ],
+    "answer": 0,
+    "explanation": "7a - 2a = 5a, donc l'expression devient 5a + 9."
+  },
+  {
+    "id": 324,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On tire une carte dans un jeu de 52 cartes. Quelle est la probabilité d'obtenir une Dame ?",
+    "choices": [
+      "1/26",
+      "1/13",
+      "1/4",
+      "1/52"
+    ],
+    "answer": 1,
+    "explanation": "Il y a 4 Dames dans un jeu de 52 cartes : 4/52 = 1/13."
+  },
+  {
+    "id": 325,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 15² ?",
+    "choices": [
+      "200",
+      "215",
+      "225",
+      "250"
+    ],
+    "answer": 2,
+    "explanation": "15² = 15 × 15 = 225."
+  },
+  {
+    "id": 326,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Le volume d'un cube d'arête 8 cm est :",
+    "choices": [
+      "256 cm³",
+      "384 cm³",
+      "512 cm³",
+      "640 cm³"
+    ],
+    "answer": 2,
+    "explanation": "V = a³ = 8³ = 512 cm³."
+  },
+  {
+    "id": 327,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 5x - 20 = 45",
+    "choices": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "answer": 2,
+    "explanation": "5x = 65, donc x = 13."
+  },
+  {
+    "id": 328,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'étendue de la série : 8 ; 12 ; 14 ; 18 ; 27 ?",
+    "choices": [
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "answer": 2,
+    "explanation": "Étendue = 27 − 8 = 19."
+  },
+  {
+    "id": 329,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 96 et 144 ?",
+    "choices": [
+      "24",
+      "36",
+      "48",
+      "72"
+    ],
+    "answer": 2,
+    "explanation": "Le PGCD de 96 et 144 est 48."
+  },
+  {
+    "id": 330,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 28 cm et 45 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "51 cm",
+      "52 cm",
+      "53 cm",
+      "54 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(28² + 45²) = √(784 + 2025) = √2809 = 53 cm."
+  },
+  {
+    "id": 331,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 9(x - 1) = 54",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "explanation": "9x - 9 = 54, donc 9x = 63 et x = 7."
+  },
+  {
+    "id": 332,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de √1600 ?",
+    "choices": [
+      "35",
+      "38",
+      "40",
+      "42"
+    ],
+    "answer": 2,
+    "explanation": "40 × 40 = 1600."
+  },
+  {
+    "id": 333,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Réduis l'expression : 9y + 4 - 2y",
+    "choices": [
+      "7y + 4",
+      "11y + 4",
+      "7y - 4",
+      "11y - 4"
+    ],
+    "answer": 0,
+    "explanation": "9y - 2y = 7y, donc l'expression devient 7y + 4."
+  },
+  {
+    "id": 334,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "On lance trois pièces équilibrées. Quelle est la probabilité d'obtenir exactement deux faces ?",
+    "choices": [
+      "1/8",
+      "1/4",
+      "3/8",
+      "1/2"
+    ],
+    "answer": 2,
+    "explanation": "Il y a 8 issues possibles. Trois donnent exactement deux faces : FFP, FPF et PFF, soit 3/8."
+  },
+  {
+    "id": 335,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 25² ?",
+    "choices": [
+      "525",
+      "600",
+      "625",
+      "650"
+    ],
+    "answer": 2,
+    "explanation": "25² = 25 × 25 = 625."
+  },
+  {
+    "id": 336,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Le volume d'un pavé droit de dimensions 6 cm × 7 cm × 9 cm est :",
+    "choices": [
+      "324 cm³",
+      "360 cm³",
+      "378 cm³",
+      "420 cm³"
+    ],
+    "answer": 2,
+    "explanation": "V = 6 × 7 × 9 = 378 cm³."
+  },
+  {
+    "id": 337,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 7x + 14 = 84",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "7x = 70, donc x = 10."
+  },
+  {
+    "id": 338,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'étendue de la série : 11 ; 15 ; 19 ; 22 ; 30 ?",
+    "choices": [
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "answer": 2,
+    "explanation": "Étendue = 30 − 11 = 19."
+  },
+  {
+    "id": 339,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PPCM de 18 et 30 ?",
+    "choices": [
+      "60",
+      "72",
+      "90",
+      "120"
+    ],
+    "answer": 2,
+    "explanation": "18 = 2 × 3² et 30 = 2 × 3 × 5, donc PPCM = 2 × 3² × 5 = 90."
+  },
+  {
+    "id": 340,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 36 cm et 48 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "56 cm",
+      "58 cm",
+      "60 cm",
+      "62 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(36² + 48²) = √(1296 + 2304) = √3600 = 60 cm."
+  },
+  {
+    "id": 341,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous l'équation : 4x + 18 = 74",
+    "choices": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "answer": 2,
+    "explanation": "4x = 56, donc x = 14."
+  },
+  {
+    "id": 342,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de √2025 ?",
+    "choices": [
+      "42",
+      "44",
+      "45",
+      "46"
+    ],
+    "answer": 2,
+    "explanation": "45 × 45 = 2025."
+  },
+  {
+    "id": 343,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Développe : (x + 4)(x + 2)",
+    "choices": [
+      "x² + 6x + 8",
+      "x² + 8x + 6",
+      "x² + 4x + 8",
+      "x² + 2x + 8"
+    ],
+    "answer": 0,
+    "explanation": "(x + 4)(x + 2) = x² + 2x + 4x + 8 = x² + 6x + 8."
+  },
+  {
+    "id": 344,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Une urne contient 8 boules blanches et 12 boules noires. Quelle est la probabilité de tirer une boule blanche ?",
+    "choices": [
+      "2/5",
+      "3/5",
+      "1/2",
+      "4/5"
+    ],
+    "answer": 0,
+    "explanation": "Il y a 20 boules au total. La probabilité est 8/20 = 2/5."
+  },
+  {
+    "id": 345,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est la valeur de 30² ?",
+    "choices": [
+      "600",
+      "800",
+      "900",
+      "1200"
+    ],
+    "answer": 2,
+    "explanation": "30² = 30 × 30 = 900."
+  },
+  {
+    "id": 346,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le volume d'un cube d'arête 9 cm ?",
+    "choices": [
+      "648 cm³",
+      "702 cm³",
+      "729 cm³",
+      "810 cm³"
+    ],
+    "answer": 2,
+    "explanation": "V = a³ = 9³ = 729 cm³."
+  },
+  {
+    "id": 347,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Résous : 8x - 24 = 56",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "answer": 2,
+    "explanation": "8x = 80, donc x = 10."
+  },
+  {
+    "id": 348,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quelle est l'étendue de la série : 14 ; 17 ; 21 ; 26 ; 35 ?",
+    "choices": [
+      "19",
+      "20",
+      "21",
+      "22"
+    ],
+    "answer": 2,
+    "explanation": "Étendue = 35 − 14 = 21."
+  },
+  {
+    "id": 349,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Quel est le PGCD de 84 et 126 ?",
+    "choices": [
+      "21",
+      "28",
+      "36",
+      "42"
+    ],
+    "answer": 3,
+    "explanation": "84 = 2² × 3 × 7 et 126 = 2 × 3² × 7, donc le PGCD est 2 × 3 × 7 = 42."
+  },
+  {
+    "id": 350,
+    "category": "Mathématiques",
+    "difficulty": "medium",
+    "points": 10,
+    "question": "Dans un triangle rectangle, les côtés de l'angle droit mesurent 20 cm et 48 cm. Quelle est la longueur de l'hypoténuse ?",
+    "choices": [
+      "50 cm",
+      "51 cm",
+      "52 cm",
+      "53 cm"
+    ],
+    "answer": 2,
+    "explanation": "√(20² + 48²) = √(400 + 2304) = √2704 = 52 cm."
+  },
+  {
+    "id": 351,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous le système : x + y = 9 et x - y = 3.",
+    "choices": [
+      "x = 5 ; y = 4",
+      "x = 6 ; y = 3",
+      "x = 4 ; y = 5",
+      "x = 3 ; y = 6"
+    ],
+    "answer": 1,
+    "explanation": "En additionnant les deux équations : 2x = 12, donc x = 6 puis y = 3."
+  },
+  {
+    "id": 352,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : x² - 16.",
+    "choices": [
+      "(x - 4)²",
+      "(x - 8)(x + 2)",
+      "(x - 4)(x + 4)",
+      "(x + 4)²"
+    ],
+    "answer": 2,
+    "explanation": "C'est une différence de deux carrés : x² - 4² = (x - 4)(x + 4)."
+  },
+  {
+    "id": 353,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 5x³ ?",
+    "choices": [
+      "5x²",
+      "10x²",
+      "15x²",
+      "15x³"
+    ],
+    "answer": 2,
+    "explanation": "La dérivée de x³ est 3x², donc 5 × 3x² = 15x²."
+  },
+  {
+    "id": 354,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Calcule cos(60°).",
+    "choices": [
+      "0",
+      "1/2",
+      "√2/2",
+      "√3/2"
+    ],
+    "answer": 1,
+    "explanation": "cos(60°) = 1/2."
+  },
+  {
+    "id": 355,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(1000) ?",
+    "choices": [
+      "2",
+      "3",
+      "10",
+      "1000"
+    ],
+    "answer": 1,
+    "explanation": "10³ = 1000, donc log₁₀(1000) = 3."
+  },
+  {
+    "id": 356,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 20 premiers entiers positifs ?",
+    "choices": [
+      "190",
+      "200",
+      "210",
+      "220"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 20 × 21 / 2 = 210."
+  },
+  {
+    "id": 357,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la solution de x² - 9 = 0 ?",
+    "choices": [
+      "x = 3 uniquement",
+      "x = -3 uniquement",
+      "x = ±3",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "x² = 9, donc x = -3 ou x = 3."
+  },
+  {
+    "id": 358,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(2 ; 1) vers B(7 ; 5) est :",
+    "choices": [
+      "(5 ; 4)",
+      "(4 ; 5)",
+      "(9 ; 6)",
+      "(5 ; -4)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (7 - 2 ; 5 - 1) = (5 ; 4)."
+  },
+  {
+    "id": 359,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 2 personnes parmi 5 ?",
+    "choices": [
+      "8",
+      "10",
+      "12",
+      "20"
+    ],
+    "answer": 1,
+    "explanation": "C(5,2) = 5 × 4 / (2 × 1) = 10."
+  },
+  {
+    "id": 360,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la forme algébrique de i² ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 1,
+    "explanation": "Par définition du nombre imaginaire, i² = -1."
+  },
+  {
+    "id": 361,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 5x + 6 = 0.",
+    "choices": [
+      "x = 1 ou 6",
+      "x = 2 ou 3",
+      "x = -2 ou -3",
+      "Aucune solution réelle"
+    ],
+    "answer": 1,
+    "explanation": "x² - 5x + 6 = (x - 2)(x - 3), donc x = 2 ou x = 3."
+  },
+  {
+    "id": 362,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe (2x - 3)².",
+    "choices": [
+      "4x² - 12x + 9",
+      "4x² - 6x + 9",
+      "2x² - 12x + 9",
+      "4x² + 12x + 9"
+    ],
+    "answer": 0,
+    "explanation": "(a - b)² = a² - 2ab + b² = 4x² - 12x + 9."
+  },
+  {
+    "id": 363,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = x⁴ ?",
+    "choices": [
+      "4x³",
+      "3x³",
+      "x³",
+      "4x⁴"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de x⁴ est 4x³."
+  },
+  {
+    "id": 364,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de sin(30°) ?",
+    "choices": [
+      "1/2",
+      "√2/2",
+      "√3/2",
+      "1"
+    ],
+    "answer": 0,
+    "explanation": "sin(30°) = 1/2."
+  },
+  {
+    "id": 365,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(0,01) ?",
+    "choices": [
+      "-1",
+      "-2",
+      "2",
+      "0"
+    ],
+    "answer": 1,
+    "explanation": "0,01 = 10⁻², donc log₁₀(0,01) = -2."
+  },
+  {
+    "id": 366,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 50 premiers entiers positifs ?",
+    "choices": [
+      "1225",
+      "1250",
+      "1275",
+      "1300"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 50 × 51 / 2 = 1275."
+  },
+  {
+    "id": 367,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la solution de x² = 64 ?",
+    "choices": [
+      "8 uniquement",
+      "-8 uniquement",
+      "±8",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "x² = 64 implique x = -8 ou x = 8."
+  },
+  {
+    "id": 368,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-2 ; 4) vers B(5 ; -1) est :",
+    "choices": [
+      "(7 ; -5)",
+      "(3 ; -5)",
+      "(7 ; 5)",
+      "(-7 ; 5)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (5 - (-2) ; -1 - 4) = (7 ; -5)."
+  },
+  {
+    "id": 369,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 3 personnes parmi 6 ?",
+    "choices": [
+      "15",
+      "18",
+      "20",
+      "24"
+    ],
+    "answer": 2,
+    "explanation": "C(6,3) = 6 × 5 × 4 / (3 × 2 × 1) = 20."
+  },
+  {
+    "id": 370,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i³ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 3,
+    "explanation": "i³ = i² × i = (-1) × i = -i."
+  },
+  {
+    "id": 371,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² + 7x + 12 = 0.",
+    "choices": [
+      "x = -3 ou -4",
+      "x = 3 ou 4",
+      "x = -2 ou -6",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² + 7x + 12 = (x + 3)(x + 4), donc x = -3 ou x = -4."
+  },
+  {
+    "id": 372,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe : (3x + 2)².",
+    "choices": [
+      "9x² + 12x + 4",
+      "9x² + 6x + 4",
+      "6x² + 12x + 4",
+      "9x² + 4"
+    ],
+    "answer": 0,
+    "explanation": "(a + b)² = a² + 2ab + b² = 9x² + 12x + 4."
+  },
+  {
+    "id": 373,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 7x² ?",
+    "choices": [
+      "7x",
+      "14x",
+      "14x²",
+      "21x"
+    ],
+    "answer": 1,
+    "explanation": "La dérivée de 7x² est 14x."
+  },
+  {
+    "id": 374,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de tan(45°) ?",
+    "choices": [
+      "0",
+      "1",
+      "√2",
+      "√3"
+    ],
+    "answer": 1,
+    "explanation": "tan(45°) = 1."
+  },
+  {
+    "id": 375,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(100000) ?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "100000 = 10⁵, donc log₁₀(100000) = 5."
+  },
+  {
+    "id": 376,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 100 premiers entiers positifs ?",
+    "choices": [
+      "4950",
+      "5000",
+      "5050",
+      "5100"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 100 × 101 / 2 = 5050."
+  },
+  {
+    "id": 377,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 121.",
+    "choices": [
+      "11 uniquement",
+      "-11 uniquement",
+      "±11",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -11 et x = 11."
+  },
+  {
+    "id": 378,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(4 ; -3) vers B(-2 ; 5) est :",
+    "choices": [
+      "(-6 ; 8)",
+      "(6 ; -8)",
+      "(-2 ; 2)",
+      "(2 ; -2)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (-2 - 4 ; 5 - (-3)) = (-6 ; 8)."
+  },
+  {
+    "id": 379,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 2 personnes parmi 8 ?",
+    "choices": [
+      "16",
+      "24",
+      "28",
+      "32"
+    ],
+    "answer": 2,
+    "explanation": "C(8,2) = 8 × 7 / 2 = 28."
+  },
+  {
+    "id": 380,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i⁴ ?",
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "i"
+    ],
+    "answer": 2,
+    "explanation": "i² = -1, donc i⁴ = (i²)² = (-1)² = 1."
+  },
+  {
+    "id": 381,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 10x + 25 = 0.",
+    "choices": [
+      "x = 10",
+      "x = 5",
+      "x = -5",
+      "Deux solutions : 5 et 10"
+    ],
+    "answer": 1,
+    "explanation": "x² - 10x + 25 = (x - 5)², donc l'unique solution est x = 5."
+  },
+  {
+    "id": 382,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe : (x - 6)(x + 6).",
+    "choices": [
+      "x² + 36",
+      "x² - 36",
+      "x² - 12x + 36",
+      "x² + 12x + 36"
+    ],
+    "answer": 1,
+    "explanation": "C'est une différence de deux carrés : (x - 6)(x + 6) = x² - 36."
+  },
+  {
+    "id": 383,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 9x⁵ ?",
+    "choices": [
+      "9x⁴",
+      "36x⁴",
+      "45x⁴",
+      "45x⁵"
+    ],
+    "answer": 2,
+    "explanation": "La dérivée de 9x⁵ est 45x⁴."
+  },
+  {
+    "id": 384,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de cos(0°) ?",
+    "choices": [
+      "0",
+      "1/2",
+      "√2/2",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "cos(0°) = 1."
+  },
+  {
+    "id": 385,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(1) ?",
+    "choices": [
+      "0",
+      "1",
+      "10",
+      "-1"
+    ],
+    "answer": 0,
+    "explanation": "10⁰ = 1, donc log₁₀(1) = 0."
+  },
+  {
+    "id": 386,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 200 premiers entiers positifs ?",
+    "choices": [
+      "19900",
+      "20000",
+      "20100",
+      "20200"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 200 × 201 / 2 = 20100."
+  },
+  {
+    "id": 387,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 49 = 0.",
+    "choices": [
+      "x = 7",
+      "x = -7",
+      "x = ±7",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "x² = 49, donc x = -7 ou x = 7."
+  },
+  {
+    "id": 388,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-5 ; 2) vers B(4 ; -6) est :",
+    "choices": [
+      "(9 ; -8)",
+      "(-9 ; 8)",
+      "(9 ; 8)",
+      "(-9 ; -8)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (4 - (-5) ; -6 - 2) = (9 ; -8)."
+  },
+  {
+    "id": 389,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 4 personnes parmi 8 ?",
+    "choices": [
+      "56",
+      "64",
+      "70",
+      "84"
+    ],
+    "answer": 2,
+    "explanation": "C(8,4) = 70."
+  },
+  {
+    "id": 390,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i⁵ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 2,
+    "explanation": "i⁵ = i⁴ × i = 1 × i = i."
+  },
+  {
+    "id": 391,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² + 2x - 15 = 0.",
+    "choices": [
+      "x = 3 ou -5",
+      "x = 5 ou -3",
+      "x = 15 ou -1",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² + 2x - 15 = (x + 5)(x - 3), donc x = -5 ou x = 3."
+  },
+  {
+    "id": 392,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe : (4x - 1)².",
+    "choices": [
+      "16x² - 8x + 1",
+      "16x² - 4x + 1",
+      "8x² - 8x + 1",
+      "16x² + 8x + 1"
+    ],
+    "answer": 0,
+    "explanation": "(4x - 1)² = (4x)² - 2×4x×1 + 1² = 16x² - 8x + 1."
+  },
+  {
+    "id": 393,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 6x⁶ ?",
+    "choices": [
+      "30x⁵",
+      "36x⁵",
+      "42x⁵",
+      "36x⁶"
+    ],
+    "answer": 1,
+    "explanation": "La dérivée de 6x⁶ est 36x⁵."
+  },
+  {
+    "id": 394,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de sin(90°) ?",
+    "choices": [
+      "0",
+      "1/2",
+      "√2/2",
+      "1"
+    ],
+    "answer": 3,
+    "explanation": "sin(90°) = 1."
+  },
+  {
+    "id": 395,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(1000000) ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "10"
+    ],
+    "answer": 1,
+    "explanation": "1000000 = 10⁶, donc log₁₀(1000000) = 6."
+  },
+  {
+    "id": 396,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 500 premiers entiers positifs ?",
+    "choices": [
+      "124750",
+      "125000",
+      "125250",
+      "125500"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 500 × 501 / 2 = 125250."
+  },
+  {
+    "id": 397,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 196.",
+    "choices": [
+      "14",
+      "-14",
+      "±14",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -14 et x = 14."
+  },
+  {
+    "id": 398,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(3 ; -7) vers B(-5 ; 4) est :",
+    "choices": [
+      "(-8 ; 11)",
+      "(8 ; -11)",
+      "(-2 ; 11)",
+      "(8 ; 11)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (-5 - 3 ; 4 - (-7)) = (-8 ; 11)."
+  },
+  {
+    "id": 399,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 3 personnes parmi 10 ?",
+    "choices": [
+      "90",
+      "100",
+      "120",
+      "150"
+    ],
+    "answer": 2,
+    "explanation": "C(10,3) = (10 × 9 × 8) / (3 × 2 × 1) = 120."
+  },
+  {
+    "id": 400,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i⁶ ?",
+    "choices": [
+      "-1",
+      "1",
+      "i",
+      "-i"
+    ],
+    "answer": 0,
+    "explanation": "i⁶ = i⁴ × i² = 1 × (-1) = -1."
+  },
+  {
+    "id": 401,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - x - 20 = 0.",
+    "choices": [
+      "x = 4 ou -5",
+      "x = 5 ou -4",
+      "x = 2 ou -10",
+      "Aucune solution réelle"
+    ],
+    "answer": 1,
+    "explanation": "x² - x - 20 = (x - 5)(x + 4), donc x = 5 ou x = -4."
+  },
+  {
+    "id": 402,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe : (5x + 2)².",
+    "choices": [
+      "25x² + 20x + 4",
+      "25x² + 10x + 4",
+      "10x² + 20x + 4",
+      "25x² + 4"
+    ],
+    "answer": 0,
+    "explanation": "(5x + 2)² = 25x² + 20x + 4."
+  },
+  {
+    "id": 403,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 8x⁷ ?",
+    "choices": [
+      "48x⁶",
+      "56x⁶",
+      "64x⁶",
+      "56x⁷"
+    ],
+    "answer": 1,
+    "explanation": "La dérivée de 8x⁷ est 56x⁶."
+  },
+  {
+    "id": 404,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de tan(60°) ?",
+    "choices": [
+      "1",
+      "√2",
+      "√3",
+      "2"
+    ],
+    "answer": 2,
+    "explanation": "tan(60°) = √3."
+  },
+  {
+    "id": 405,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e²) ?",
+    "choices": [
+      "1",
+      "2",
+      "e",
+      "e²"
+    ],
+    "answer": 1,
+    "explanation": "Le logarithme népérien est l'inverse de l'exponentielle : ln(e²) = 2."
+  },
+  {
+    "id": 406,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 1000 premiers entiers positifs ?",
+    "choices": [
+      "499500",
+      "500000",
+      "500500",
+      "501000"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 1000 × 1001 / 2 = 500500."
+  },
+  {
+    "id": 407,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 225.",
+    "choices": [
+      "15",
+      "-15",
+      "±15",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -15 et x = 15."
+  },
+  {
+    "id": 408,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-4 ; -2) vers B(7 ; 6) est :",
+    "choices": [
+      "(11 ; 8)",
+      "(-11 ; -8)",
+      "(3 ; 4)",
+      "(11 ; -8)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (7 - (-4) ; 6 - (-2)) = (11 ; 8)."
+  },
+  {
+    "id": 409,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de  choisir 5 personnes parmi 10 ?",
+    "choices": [
+      "210",
+      "240",
+      "252",
+      "300"
+    ],
+    "answer": 2,
+    "explanation": "C(10,5) = 252."
+  },
+  {
+    "id": 410,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i⁷ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 3,
+    "explanation": "i⁷ = i⁴ × i³ = 1 × (-i) = -i."
+  },
+  {
+    "id": 411,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 16x + 64 = 0.",
+    "choices": [
+      "x = 4",
+      "x = 8",
+      "x = 16",
+      "Deux solutions : 4 et 16"
+    ],
+    "answer": 1,
+    "explanation": "x² - 16x + 64 = (x - 8)², donc l'unique solution est x = 8."
+  },
+  {
+    "id": 412,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe : (2x + 5)(2x - 5).",
+    "choices": [
+      "4x² - 25",
+      "4x² + 25",
+      "2x² - 25",
+      "4x² - 10x + 25"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (2x + 5)(2x - 5) = (2x)² - 5² = 4x² - 25."
+  },
+  {
+    "id": 413,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 12x⁴ - 3x² ?",
+    "choices": [
+      "48x³ - 6x",
+      "48x⁴ - 6x",
+      "36x³ - 3x",
+      "12x³ - 6x"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 12x⁴ est 48x³ et celle de -3x² est -6x."
+  },
+  {
+    "id": 414,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de cos(180°) ?",
+    "choices": [
+      "0",
+      "1",
+      "-1",
+      "1/2"
+    ],
+    "answer": 2,
+    "explanation": "cos(180°) = -1."
+  },
+  {
+    "id": 415,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(1) ?",
+    "choices": [
+      "0",
+      "1",
+      "e",
+      "-1"
+    ],
+    "answer": 0,
+    "explanation": "Le logarithme népérien de 1 vaut toujours 0."
+  },
+  {
+    "id": 416,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 250 premiers entiers positifs ?",
+    "choices": [
+      "31125",
+      "31250",
+      "31375",
+      "31500"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 250 × 251 / 2 = 31375."
+  },
+  {
+    "id": 417,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 324.",
+    "choices": [
+      "18",
+      "-18",
+      "±18",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -18 et x = 18."
+  },
+  {
+    "id": 418,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(5 ; -4) vers B(-3 ; 9) est :",
+    "choices": [
+      "(-8 ; 13)",
+      "(8 ; -13)",
+      "(-2 ; 5)",
+      "(2 ; -5)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (-3 - 5 ; 9 - (-4)) = (-8 ; 13)."
+  },
+  {
+    "id": 419,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 2 personnes parmi 12 ?",
+    "choices": [
+      "54",
+      "60",
+      "66",
+      "72"
+    ],
+    "answer": 2,
+    "explanation": "C(12,2) = 12 × 11 / 2 = 66."
+  },
+  {
+    "id": 420,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i⁸ ?",
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "i"
+    ],
+    "answer": 2,
+    "explanation": "i⁸ = (i⁴)² = 1² = 1."
+  },
+  {
+    "id": 421,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 13x + 42 = 0.",
+    "choices": [
+      "x = 6 ou 7",
+      "x = -6 ou -7",
+      "x = 3 ou 14",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 13x + 42 = (x - 6)(x - 7), donc x = 6 ou x = 7."
+  },
+  {
+    "id": 422,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Développe : (3x - 4)(3x + 4).",
+    "choices": [
+      "9x² - 16",
+      "9x² + 16",
+      "6x² - 16",
+      "9x² - 24x + 16"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (3x - 4)(3x + 4) = 9x² - 16."
+  },
+  {
+    "id": 423,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = x⁵ - 4x³ + 2 ?",
+    "choices": [
+      "5x⁴ - 12x²",
+      "5x⁴ - 4x²",
+      "x⁴ - 12x²",
+      "5x⁵ - 12x²"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée est 5x⁴ - 12x²."
+  },
+  {
+    "id": 424,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de sin(45°) ?",
+    "choices": [
+      "1/2",
+      "√2/2",
+      "√3/2",
+      "1"
+    ],
+    "answer": 1,
+    "explanation": "sin(45°) = √2/2."
+  },
+  {
+    "id": 425,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e⁵) ?",
+    "choices": [
+      "4",
+      "5",
+      "e",
+      "e⁵"
+    ],
+    "answer": 1,
+    "explanation": "ln(e⁵) = 5."
+  },
+{
+  "id": 426,
+  "category": "Mathématiques",
+  "difficulty": "hard",
+  "points": 15,
+  "question": "Quelle est la somme des 75 premiers entiers positifs ?",
+  "choices": [
+    "2775",
+    "2800",
+    "2850",
+    "2900"
+  ],
+  "answer": 2,
+  "explanation": "S = 75 × 76 / 2 = 2850."
+},
+  {
+    "id": 427,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 400.",
+    "choices": [
+      "20",
+      "-20",
+      "±20",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -20 et x = 20."
+  },
+  {
+    "id": 428,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-6 ; 3) vers B(2 ; -5) est :",
+    "choices": [
+      "(8 ; -8)",
+      "(-8 ; 8)",
+      "(4 ; -2)",
+      "(-4 ; 2)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (2 - (-6) ; -5 - 3) = (8 ; -8)."
+  },
+  {
+    "id": 429,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 3 personnes parmi 12 ?",
+    "choices": [
+      "180",
+      "200",
+      "220",
+      "240"
+    ],
+    "answer": 2,
+    "explanation": "C(12,3) = (12 × 11 × 10) / (3 × 2 × 1) = 220."
+  },
+  {
+    "id": 430,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i⁹ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 2,
+    "explanation": "i⁹ = i⁸ × i = 1 × i = i."
+ },
+  {
+    "id": 431,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 15x + 56 = 0.",
+    "choices": [
+      "x = 7 ou 8",
+      "x = 6 ou 9",
+      "x = -7 ou -8",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 15x + 56 = (x - 7)(x - 8)."
+  },
+  {
+    "id": 432,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : 9x² - 25.",
+    "choices": [
+      "(3x - 5)(3x + 5)",
+      "(9x - 5)(x + 5)",
+      "(3x - 25)(3x + 25)",
+      "(9x - 25)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (3x)² - 5²."
+  },
+  {
+    "id": 433,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 4x³ + 7x ?",
+    "choices": [
+      "12x² + 7",
+      "12x + 7",
+      "4x² + 7",
+      "12x² + 1"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 4x³ est 12x² et celle de 7x est 7."
+  },
+  {
+    "id": 434,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de cos(30°) ?",
+    "choices": [
+      "1/2",
+      "√2/2",
+      "√3/2",
+      "1"
+    ],
+    "answer": 2,
+    "explanation": "cos(30°) = √3/2."
+  },
+  {
+    "id": 435,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e³) ?",
+    "choices": [
+      "2",
+      "3",
+      "e",
+      "9"
+    ],
+    "answer": 1,
+    "explanation": "ln(e³) = 3."
+  },
+  {
+    "id": 436,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 150 premiers entiers positifs ?",
+    "choices": [
+      "11250",
+      "11325",
+      "11400",
+      "11550"
+    ],
+    "answer": 1,
+    "explanation": "S = 150 × 151 / 2 = 11325."
+  },
+  {
+    "id": 437,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 441.",
+    "choices": [
+      "±21",
+      "21",
+      "-21",
+      "Aucune solution"
+    ],
+    "answer": 0,
+    "explanation": "Les solutions sont x = -21 et x = 21."
+  },
+  {
+    "id": 438,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(2 ; -8) vers B(-7 ; 4) est :",
+    "choices": [
+      "(-9 ; 12)",
+      "(9 ; -12)",
+      "(-5 ; -4)",
+      "(5 ; 4)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (-7 - 2 ; 4 - (-8)) = (-9 ; 12)."
+  },
+  {
+    "id": 439,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 4 personnes parmi 12 ?",
+    "choices": [
+      "420",
+      "495",
+      "540",
+      "660"
+    ],
+    "answer": 1,
+    "explanation": "C(12,4) = 495."
+  },
+  {
+    "id": 440,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹⁰ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 1,
+    "explanation": "i¹⁰ = i⁸ × i² = 1 × (-1) = -1."
+  },
+  {
+    "id": 441,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 18x + 81 = 0.",
+    "choices": [
+      "x = 9",
+      "x = 18",
+      "x = -9",
+      "Deux solutions : 9 et 18"
+    ],
+    "answer": 0,
+    "explanation": "x² - 18x + 81 = (x - 9)², donc l'unique solution est x = 9."
+  },
+  {
+    "id": 442,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : 16x² - 81.",
+    "choices": [
+      "(4x - 9)(4x + 9)",
+      "(16x - 9)(x + 9)",
+      "(4x - 81)(4x + 81)",
+      "(16x - 81)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (4x)² - 9² = (4x - 9)(4x + 9)."
+  },
+  {
+    "id": 443,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 10x⁶ - 2x ?",
+    "choices": [
+      "60x⁵ - 2",
+      "60x⁶ - 2",
+      "50x⁵ - 2",
+      "10x⁵ - 2"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 10x⁶ est 60x⁵ et celle de -2x est -2."
+  },
+  {
+    "id": 444,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de sin(60°) ?",
+    "choices": [
+      "1/2",
+      "√2/2",
+      "√3/2",
+      "1"
+    ],
+    "answer": 2,
+    "explanation": "sin(60°) = √3/2."
+  },
+  {
+    "id": 445,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e⁷) ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "e"
+    ],
+    "answer": 2,
+    "explanation": "ln(e⁷) = 7."
+  },
+  {
+    "id": 446,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 300 premiers entiers positifs ?",
+    "choices": [
+      "44850",
+      "45000",
+      "45150",
+      "45300"
+    ],
+    "answer": 2,
+    "explanation": "S = 300 × 301 / 2 = 45150."
+  },
+  {
+    "id": 447,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 529.",
+    "choices": [
+      "23",
+      "-23",
+      "±23",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -23 et x = 23."
+  },
+  {
+    "id": 448,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-8 ; 5) vers B(4 ; -3) est :",
+    "choices": [
+      "(12 ; -8)",
+      "(-12 ; 8)",
+      "(4 ; -8)",
+      "(12 ; 8)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (4 - (-8) ; -3 - 5) = (12 ; -8)."
+  },
+  {
+    "id": 449,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 6 personnes parmi 12 ?",
+    "choices": [
+      "792",
+      "840",
+      "924",
+      "990"
+    ],
+    "answer": 2,
+    "explanation": "C(12,6) = 924."
+  },
+  {
+    "id": 450,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹¹ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 3,
+    "explanation": "i¹¹ = i⁸ × i³ = 1 × (-i) = -i."
+  },
+  {
+    "id": 451,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 11x + 30 = 0.",
+    "choices": [
+      "x = 5 ou 6",
+      "x = 3 ou 10",
+      "x = -5 ou -6",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 11x + 30 = (x - 5)(x - 6)."
+  },
+  {
+    "id": 452,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : 25x² - 49.",
+    "choices": [
+      "(5x - 7)(5x + 7)",
+      "(25x - 7)(x + 7)",
+      "(5x - 49)(5x + 49)",
+      "(25x - 49)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (5x)² - 7²."
+  },
+  {
+    "id": 453,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 2x⁷ + x² ?",
+    "choices": [
+      "14x⁶ + 2x",
+      "14x⁷ + 2x",
+      "7x⁶ + x",
+      "2x⁶ + 2x"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 2x⁷ est 14x⁶ et celle de x² est 2x."
+  },
+  {
+    "id": 454,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de tan(30°) ?",
+    "choices": [
+      "1/√3",
+      "√2/2",
+      "√3",
+      "1"
+    ],
+    "answer": 0,
+    "explanation": "tan(30°) = 1/√3 = √3/3."
+  },
+  {
+    "id": 455,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e¹⁰) ?",
+    "choices": [
+      "5",
+      "10",
+      "e",
+      "100"
+    ],
+    "answer": 1,
+    "explanation": "ln(e¹⁰) = 10."
+  },
+  {
+    "id": 456,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 400 premiers entiers positifs ?",
+    "choices": [
+      "79800",
+      "80000",
+      "80200",
+      "80400"
+    ],
+    "answer": 2,
+    "explanation": "S = 400 × 401 / 2 = 80200."
+  },
+  {
+    "id": 457,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 625.",
+    "choices": [
+      "25",
+      "-25",
+      "±25",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -25 et x = 25."
+  },
+  {
+    "id": 458,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(6 ; -5) vers B(-4 ; 7) est :",
+    "choices": [
+      "(-10 ; 12)",
+      "(10 ; -12)",
+      "(-2 ; 2)",
+      "(2 ; -2)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (-4 - 6 ; 7 - (-5)) = (-10 ; 12)."
+  },
+  {
+    "id": 459,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 2 personnes parmi 15 ?",
+    "choices": [
+      "95",
+      "100",
+      "105",
+      "110"
+    ],
+    "answer": 2,
+    "explanation": "C(15,2) = 15 × 14 / 2 = 105."
+  },
+  {
+    "id": 460,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹² ?",
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "i"
+    ],
+    "answer": 2,
+    "explanation": "i¹² = (i⁴)³ = 1."
+  },
+  {
+    "id": 461,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 9x + 20 = 0.",
+    "choices": [
+      "x = 4 ou 5",
+      "x = 2 ou 10",
+      "x = -4 ou -5",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 9x + 20 = (x - 4)(x - 5)."
+  },
+  {
+    "id": 462,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : x² - 100.",
+    "choices": [
+      "(x - 10)(x + 10)",
+      "(x - 50)(x + 2)",
+      "(x - 5)(x + 20)",
+      "(x - 100)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : x² - 10²."
+  },
+  {
+    "id": 463,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 5x⁸ ?",
+    "choices": [
+      "40x⁷",
+      "35x⁷",
+      "40x⁸",
+      "5x⁷"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 5x⁸ est 40x⁷."
+  },
+  {
+    "id": 464,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de cos(90°) ?",
+    "choices": [
+      "0",
+      "1",
+      "-1",
+      "1/2"
+    ],
+    "answer": 0,
+    "explanation": "cos(90°) = 0."
+  },
+  {
+    "id": 465,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e⁴)?",
+    "choices": [
+      "2",
+      "4",
+      "8",
+      "e"
+    ],
+    "answer": 1,
+    "explanation": "ln(e⁴) = 4."
+  },
+  {
+    "id": 466,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 600 premiers entiers positifs ?",
+    "choices": [
+      "179700",
+      "180000",
+      "180300",
+      "180600"
+    ],
+    "answer": 2,
+    "explanation": "S = 600 × 601 / 2 = 180300."
+  },
+  {
+    "id": 467,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 729.",
+    "choices": [
+      "27",
+      "-27",
+      "±27",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -27 et x = 27."
+  },
+  {
+    "id": 468,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-7 ; -4) vers B(5 ; 8) est :",
+    "choices": [
+      "(12 ; 12)",
+      "(-12 ; -12)",
+      "(2 ; 4)",
+      "(-2 ; -4)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (5 - (-7) ; 8 - (-4)) = (12 ; 12)."
+  },
+  {
+    "id": 469,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 3 personnes parmi 15 ?",
+    "choices": [
+      "420",
+      "455",
+      "560",
+      "680"
+    ],
+    "answer": 1,
+    "explanation": "C(15,3) = (15 × 14 × 13) / (3 × 2 × 1) = 455."
+  },
+  {
+    "id": 470,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹³ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 2,
+    "explanation": "i¹³ = i¹² × i = 1 × i = i."
+  },
+  {
+    "id": 471,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 21x + 108 = 0.",
+    "choices": [
+      "x = 9 ou 12",
+      "x = 6 ou 18",
+      "x = -9 ou -12",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 21x + 108 = (x - 9)(x - 12)."
+  },
+  {
+    "id": 472,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : 36x² - 1.",
+    "choices": [
+      "(6x - 1)(6x + 1)",
+      "(3x - 1)(12x + 1)",
+      "(6x - 36)(6x + 36)",
+      "(36x - 1)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (6x)² - 1²."
+  },
+  {
+    "id": 473,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 3x⁹ ?",
+    "choices": [
+      "27x⁸",
+      "24x⁸",
+      "27x⁹",
+      "9x⁸"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 3x⁹ est 27x⁸."
+  },
+  {
+    "id": 474,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de tan(90°) ?",
+    "choices": [
+      "0",
+      "1",
+      "Elle n'est pas définie",
+      "∞"
+    ],
+    "answer": 2,
+    "explanation": "tan(90°) n'est pas définie car cos(90°) = 0."
+  },
+  {
+    "id": 475,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de ln(e⁸) ?",
+    "choices": [
+      "4",
+      "8",
+      "16",
+      "e"
+    ],
+    "answer": 1,
+    "explanation": "ln(e⁸) = 8."
+  },
+  {
+    "id": 476,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 800 premiers entiers positifs ?",
+    "choices": [
+      "319600",
+      "320000",
+      "320400",
+      "321000"
+    ],
+    "answer": 2,
+    "explanation": "S = 800 × 801 / 2 = 320400."
+  },
+  {
+    "id": 477,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 900.",
+    "choices": [
+      "30",
+      "-30",
+      "±30",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -30 et x = 30."
+  },
+  {
+    "id": 478,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-9 ; 6) vers B(3 ; -2) est :",
+    "choices": [
+      "(12 ; -8)",
+      "(-12 ; 8)",
+      "(6 ; -4)",
+      "(-6 ; 4)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (3 - (-9) ; -2 - 6) = (12 ; -8)."
+  },
+  {
+    "id": 479,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 4 personnes parmi 15 ?",
+    "choices": [
+      "1265",
+      "1365",
+      "1455",
+      "1555"
+    ],
+    "answer": 1,
+    "explanation": "C(15,4) = (15 × 14 × 13 × 12) / (4 × 3 × 2 × 1) = 1365."
+  },
+  {
+    "id": 480,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹⁴ ?",
+    "choices": [
+      "-1",
+      "1",
+      "i",
+      "-i"
+    ],
+    "answer": 0,
+    "explanation": "i¹⁴ = i¹² × i² = 1 × (-1) = -1."
+  },
+  {
+    "id": 481,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 25x + 156 = 0.",
+    "choices": [
+      "x = 12 ou 13",
+      "x = 10 ou 15",
+      "x = -12 ou -13",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 25x + 156 = (x - 12)(x - 13)."
+  },
+  {
+    "id": 482,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : 49x² - 64.",
+    "choices": [
+      "(7x - 8)(7x + 8)",
+      "(49x - 8)(x + 8)",
+      "(7x - 64)(7x + 64)",
+      "(49x - 64)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (7x)² - 8²."
+  },
+  {
+    "id": 483,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 9x⁴ + 5x² - 1 ?",
+    "choices": [
+      "36x³ + 10x",
+      "36x⁴ + 10x",
+      "9x³ + 5x",
+      "36x³ + 5x"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée est 36x³ + 10x."
+  },
+  {
+    "id": 484,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de cos(120°) ?",
+    "choices": [
+      "-1/2",
+      "1/2",
+      "-√3/2",
+      "√3/2"
+    ],
+    "answer": 0,
+    "explanation": "cos(120°) = -1/2."
+  },
+  {
+    "id": 485,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(0,01) ?",
+    "choices": [
+      "-2",
+      "-1",
+      "2",
+      "0"
+    ],
+    "answer": 0,
+    "explanation": "0,01 = 10⁻², donc log₁₀(0,01) = -2."
+  },
+  {
+    "id": 486,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 900 premiers entiers positifs ?",
+    "choices": [
+      "404550",
+      "405000",
+      "405450",
+      "406000"
+    ],
+    "answer": 2,
+    "explanation": "S = 900 × 901 / 2 = 405450."
+  },
+  {
+    "id": 487,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 1024.",
+    "choices": [
+      "32",
+      "-32",
+      "±32",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -32 et x = 32."
+  },
+  {
+    "id": 488,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-10 ; 8) vers B(6 ; -4) est :",
+    "choices": [
+      "(16 ; -12)",
+      "(-16 ; 12)",
+      "(8 ; -6)",
+      "(-8 ; 6)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (6 - (-10) ; -4 - 8) = (16 ; -12)."
+  },
+  {
+    "id": 489,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 5 personnes parmi 15 ?",
+    "choices": [
+      "2503",
+      "3003",
+      "3276",
+      "3500"
+    ],
+    "answer": 1,
+    "explanation": "C(15,5) = 3003."
+  },
+  {
+    "id": 490,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹⁵ ?",
+    "choices": [
+      "1",
+      "-1",
+      "i",
+      "-i"
+    ],
+    "answer": 3,
+    "explanation": "i¹⁵ = i¹² × i³ = 1 × (-i) = -i."
+  },
+  {
+    "id": 491,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² - 27x + 182 = 0.",
+    "choices": [
+      "x = 13 ou 14",
+      "x = 12 ou 15",
+      "x = -13 ou -14",
+      "Aucune solution réelle"
+    ],
+    "answer": 0,
+    "explanation": "x² - 27x + 182 = (x - 13)(x - 14)."
+  },
+  {
+    "id": 492,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Factorise : 81x² - 16.",
+    "choices": [
+      "(9x - 4)(9x + 4)",
+      "(81x - 4)(x + 4)",
+      "(9x - 16)(9x + 16)",
+      "(81x - 16)"
+    ],
+    "answer": 0,
+    "explanation": "C'est une différence de deux carrés : (9x)² - 4²."
+  },
+  {
+    "id": 493,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la dérivée de f(x) = 7x⁵ - 4x³ + x ?",
+    "choices": [
+      "35x⁴ - 12x² + 1",
+      "35x⁵ - 12x² + 1",
+      "28x⁴ - 12x² + 1",
+      "35x⁴ - 4x² + 1"
+    ],
+    "answer": 0,
+    "explanation": "La dérivée de 7x⁵ est 35x⁴, celle de -4x³ est -12x² et celle de x est 1."
+  },
+  {
+    "id": 494,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur exacte de sin(120°) ?",
+    "choices": [
+      "1/2",
+      "-1/2",
+      "√3/2",
+      "-√3/2"
+    ],
+    "answer": 2,
+    "explanation": "sin(120°) = sin(60°) = √3/2."
+  },
+  {
+    "id": 495,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de log₁₀(100000000) ?",
+    "choices": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2,
+    "explanation": "100000000 = 10⁸, donc log₁₀(100000000) = 8."
+  },
+  {
+    "id": 496,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la somme des 1200 premiers entiers positifs ?",
+    "choices": [
+      "719400",
+      "720000",
+      "720600",
+      "721200"
+    ],
+    "answer": 2,
+    "explanation": "S = n(n + 1)/2 = 1200 × 1201 / 2 = 720600."
+  },
+  {
+    "id": 497,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Résous l'équation : x² = 1225.",
+    "choices": [
+      "35",
+      "-35",
+      "±35",
+      "Aucune solution"
+    ],
+    "answer": 2,
+    "explanation": "Les solutions sont x = -35 et x = 35."
+  },
+  {
+    "id": 498,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Le vecteur allant de A(-12 ; 7) vers B(8 ; -9) est :",
+    "choices": [
+      "(20 ; -16)",
+      "(-20 ; 16)",
+      "(16 ; -20)",
+      "(-16 ; 20)"
+    ],
+    "answer": 0,
+    "explanation": "B - A = (8 - (-12) ; -9 - 7) = (20 ; -16)."
+  },
+  {
+    "id": 499,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Combien existe-t-il de façons de choisir 6 personnes parmi 15 ?",
+    "choices": [
+      "4004",
+      "5005",
+      "6435",
+      "7007"
+    ],
+    "answer": 1,
+    "explanation": "C(15,6) = 5005."
+  },
+  {
+    "id": 500,
+    "category": "Mathématiques",
+    "difficulty": "hard",
+    "points": 15,
+    "question": "Quelle est la valeur de i¹⁶ ?",
+    "choices": [
+      "-1",
+      "0",
+      "1",
+      "i"
+    ],
+    "answer": 2,
+    "explanation": "i¹⁶ = (i⁴)⁴ = 1."
+  }
+]
+
