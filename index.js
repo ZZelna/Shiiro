@@ -1016,54 +1016,55 @@ client.on("roleUpdate", async (oldRole, newRole) => {
             return;
         }
 
-        const bypassRoleId = "1506674274826584284";
+        // ✅ Seul le rôle 1506674274826584284 (et les bots, déjà gérés au-dessus) peut déplacer un rôle
+        const allowedMoveRoleId = "1506674274826584284";
         const member = await newRole.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has(bypassRoleId) && !WHITELIST_IDS.includes(executor.id)) {
+        if (member && member.roles.cache.has(allowedMoveRoleId)) {
 
-            try {
-                await newRole.guild.members.ban(executor.id, {
-                    reason: "Déplacement non autorisé d'un rôle dans la hiérarchie"
-                });
-
-                await logChannel.send({
-                    content:
-                        "```diff\n" +
-                        "- Bannissement automatique.\n" +
-                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
-                        `Rôle déplacé: ${newRole.name} (ID: ${newRole.id})\n` +
-                        `Position: ${oldRole.position} → ${newRole.position}\n` +
-                        "Action: Déplacement de rôle sans permission. ⛔\n" +
-                        `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
-                        "```"
-                });
-            } catch (banErr) {
-                console.error("❌ Échec du ban (roleUpdate) :", banErr.message);
-
-                await logChannel.send({
-                    content:
-                        "```diff\n" +
-                        "! Échec du bannissement automatique.\n" +
-                        `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
-                        `Raison: ${banErr.message}\n` +
-                        "Action: Vérifiez les permissions du bot et la hiérarchie des rôles. ⚠️\n" +
-                        "```"
-                }).catch(() => {});
-            }
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "~ Rôle déplacé.\n" +
+                    `Rôle: ${newRole.name} (ID: ${newRole.id})\n` +
+                    `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
+                    `Position: ${oldRole.position} → ${newRole.position}\n` +
+                    "Action: Déplacement de rôle autorisé. ✅\n" +
+                    "```"
+            });
 
             return;
         }
 
-        await logChannel.send({
-            content:
-                "```diff\n" +
-                "~ Rôle déplacé.\n" +
-                `Rôle: ${newRole.name} (ID: ${newRole.id})\n` +
-                `Modérateur: ${executor.tag} (ID: ${executor.id})\n` +
-                `Position: ${oldRole.position} → ${newRole.position}\n` +
-                "Action: Déplacement de rôle autorisé. ✅\n" +
-                "```"
-        });
+        try {
+            await newRole.guild.members.ban(executor.id, {
+                reason: "Déplacement non autorisé d'un rôle dans la hiérarchie"
+            });
+
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "- Bannissement automatique.\n" +
+                    `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                    `Rôle déplacé: ${newRole.name} (ID: ${newRole.id})\n` +
+                    `Position: ${oldRole.position} → ${newRole.position}\n` +
+                    "Action: Déplacement de rôle non autorisé. ⛔\n" +
+                    `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
+                    "```"
+            });
+        } catch (banErr) {
+            console.error("❌ Échec du ban (roleUpdate) :", banErr.message);
+
+            await logChannel.send({
+                content:
+                    "```diff\n" +
+                    "! Échec du bannissement automatique.\n" +
+                    `Utilisateur: ${executor.tag} (ID: ${executor.id})\n` +
+                    `Raison: ${banErr.message}\n` +
+                    "Action: Vérifiez les permissions du bot et la hiérarchie des rôles. ⚠️\n" +
+                    "```"
+            }).catch(() => {});
+        }
 
     } catch (err) {
         console.error("❌ Erreur roleUpdate :", err);
