@@ -1,0 +1,7702 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Terre",
+      "Mars"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 2,
+    "question": "Quel est l'élément chimique dont le symbole est O ?",
+    "choices": [
+      "Oxygène",
+      "Or",
+      "Osmium",
+      "Ozone"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 3,
+    "question": "Quel organe pompe le sang dans le corps humain ?",
+    "choices": [
+      "Poumons",
+      "Foie",
+      "Cœur",
+      "Reins"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 4,
+    "question": "Combien de planètes composent le Système solaire ?",
+    "choices": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 5,
+    "question": "Quelle est la formule chimique de l'eau ?",
+    "choices": [
+      "H2O",
+      "CO2",
+      "HO2",
+      "H2O2"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 6,
+    "question": "Quel gaz les plantes absorbent-elles principalement ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Dioxyde de carbone",
+      "Hélium"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 7,
+    "question": "Quel est le satellite naturel de la Terre ?",
+    "choices": [
+      "Mars",
+      "Phobos",
+      "La Lune",
+      "Titan"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 8,
+    "question": "Quel est l'animal terrestre le plus rapide ?",
+    "choices": [
+      "Lion",
+      "Guépard",
+      "Antilope",
+      "Autruche"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 9,
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "choices": [
+      "Vénus",
+      "Jupiter",
+      "Mars",
+      "Saturne"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 10,
+    "question": "Quelle est l'étoile du Système solaire ?",
+    "choices": [
+      "Proxima Centauri",
+      "Sirius",
+      "Le Soleil",
+      "Bételgeuse"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 11,
+    "question": "Quelle science étudie les êtres vivants ?",
+    "choices": [
+      "Physique",
+      "Biologie",
+      "Géologie",
+      "Chimie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 12,
+    "question": "Quel est le symbole chimique du fer ?",
+    "choices": [
+      "Fe",
+      "F",
+      "Fr",
+      "Ir"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 13,
+    "question": "Quelle planète possède les anneaux les plus visibles ?",
+    "choices": [
+      "Jupiter",
+      "Uranus",
+      "Saturne",
+      "Neptune"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 14,
+    "question": "Quelle vitamine est produite grâce au Soleil ?",
+    "choices": [
+      "Vitamine A",
+      "Vitamine C",
+      "Vitamine D",
+      "Vitamine E"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 15,
+    "question": "Qui a formulé la théorie de la relativité ?",
+    "choices": [
+      "Newton",
+      "Einstein",
+      "Galilée",
+      "Tesla"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 16,
+    "question": "Quelle planète est la plus grande du système solaire ?",
+    "choices": [
+      "Saturne",
+      "Jupiter",
+      "Neptune",
+      "Terre"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 17,
+    "question": "Quel est le symbole chimique de l'or ?",
+    "choices": [
+      "Or",
+      "Au",
+      "Ag",
+      "Ar"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 18,
+    "question": "Point d'ébullition de l'eau (pression normale) ?",
+    "choices": [
+      "50°C",
+      "80°C",
+      "100°C",
+      "120°C"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 19,
+    "question": "Quelle est la plus petite unité du vivant ?",
+    "choices": [
+      "Atome",
+      "Molécule",
+      "Cellule",
+      "Organe"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 20,
+    "question": "Quel est le symbole chimique de l'argent ?",
+    "choices": [
+      "Ag",
+      "Au",
+      "Ar",
+      "As"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 21,
+    "question": "État de l'eau à -10°C ?",
+    "choices": [
+      "Solide",
+      "Liquide",
+      "Gazeux",
+      "Plasma"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 22,
+    "question": "Quel est le symbole chimique du sodium ?",
+    "choices": [
+      "So",
+      "Sd",
+      "Na",
+      "S"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 23,
+    "question": "Science étudiant les étoiles ?",
+    "choices": [
+      "Astrologie",
+      "Astronomie",
+      "Cosmologie",
+      "Aéronautique"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 24,
+    "question": "Organe principal du système nerveux ?",
+    "choices": [
+      "Cœur",
+      "Poumons",
+      "Estomac",
+      "Cerveau"
+    ],
+    "answer": 3,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 25,
+    "question": "Plus grand mammifère vivant ?",
+    "choices": [
+      "Éléphant",
+      "Girafe",
+      "Baleine bleue",
+      "Dinosaure"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 26,
+    "question": "Quel métal est liquide à température ambiante ?",
+    "choices": [
+      "Or",
+      "Mercure",
+      "Argent",
+      "Plomb"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 27,
+    "question": "Plus gros organe du corps humain ?",
+    "choices": [
+      "Cœur",
+      "Foie",
+      "Peau",
+      "Poumon"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 28,
+    "question": "Gaz le plus abondant dans l'atmosphère ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Argon",
+      "CO2"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 29,
+    "question": "Quel est l'os le plus long du corps ?",
+    "choices": [
+      "Tibia",
+      "Fémur",
+      "Humérus",
+      "Radius"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 30,
+    "question": "Particule à charge électrique négative ?",
+    "choices": [
+      "Proton",
+      "Neutron",
+      "Électron",
+      "Photon"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 31,
+    "question": "Organe filtrant le sang ?",
+    "choices": [
+      "Cœur",
+      "Reins",
+      "Intestins",
+      "Pancréas"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 32,
+    "question": "Nombre moyen d'os chez un adulte ?",
+    "choices": [
+      "150",
+      "206",
+      "300",
+      "350"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 33,
+    "question": "Planète la plus chaude ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 34,
+    "question": "Qui a découvert la pénicilline ?",
+    "choices": [
+      "Pasteur",
+      "Curie",
+      "Fleming",
+      "Darwin"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 35,
+    "question": "pH d'une eau pure ?",
+    "choices": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 36,
+    "question": "Principal gaz à effet de serre ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "CO2",
+      "Hélium"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 37,
+    "question": "Unité de mesure de la force ?",
+    "choices": [
+      "Joule",
+      "Watt",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 38,
+    "question": "Vitesse de la lumière dans le vide ?",
+    "choices": [
+      "100 000 km/s",
+      "300 000 km/s",
+      "500 000 km/s",
+      "1 000 000 km/s"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 39,
+    "question": "Plus petit os du corps humain ?",
+    "choices": [
+      "Malleus",
+      "Incus",
+      "Étrier",
+      "Stapès"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 40,
+    "question": "Planète la plus froide ?",
+    "choices": [
+      "Pluton",
+      "Neptune",
+      "Uranus",
+      "Saturne"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 41,
+    "question": "Étoile la plus proche après le Soleil ?",
+    "choices": [
+      "Sirius",
+      "Proxima Centauri",
+      "Véga",
+      "Alpha Centauri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 42,
+    "question": "Symbole chimique de l'étain ?",
+    "choices": [
+      "Sn",
+      "Ti",
+      "Et",
+      "Ta"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 43,
+    "question": "Origine des lois de l'hérédité ?",
+    "choices": [
+      "Darwin",
+      "Mendel",
+      "Pasteur",
+      "Franklin"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 44,
+    "question": "Unité de fréquence ?",
+    "choices": [
+      "Watt",
+      "Volt",
+      "Hertz",
+      "Ohm"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 45,
+    "question": "Planète avec les plus grandes tempêtes ?",
+    "choices": [
+      "Mars",
+      "Jupiter",
+      "Saturne",
+      "Vénus"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 46,
+    "question": "Quel est le symbole chimique du tungstène ?",
+    "choices": [
+      "Tu",
+      "W",
+      "Tg",
+      "Tn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 47,
+    "question": "Plus grand volcan du système solaire ?",
+    "choices": [
+      "Etna",
+      "Mauna Kea",
+      "Olympus Mons",
+      "Vésuve"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 48,
+    "question": "Qui a découvert l'électron ?",
+    "choices": [
+      "Einstein",
+      "Bohr",
+      "Thomson",
+      "Rutherford"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 49,
+    "question": "Symbole chimique du xénon ?",
+    "choices": [
+      "Xe",
+      "Xn",
+      "X",
+      "Xi"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 50,
+    "question": "Plus grand nerf du corps humain ?",
+    "choices": [
+      "Nerf optique",
+      "Nerf sciatique",
+      "Nerf vague",
+      "Nerf fémoral"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 51,
+    "question": "Quel est le symbole chimique du carbone ?",
+    "choices": [
+      "Ca",
+      "C",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 52,
+    "question": "Quel organe permet de voir ?",
+    "choices": [
+      "Oreille",
+      "Nez",
+      "Œil",
+      "Peau"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 53,
+    "question": "Quel est le premier élément du tableau périodique ?",
+    "choices": [
+      "Hélium",
+      "Hydrogène",
+      "Lithium",
+      "Béryllium"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 54,
+    "question": "Quel est le plus grand océan du monde ?",
+    "choices": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 55,
+    "question": "Processus par lequel les plantes créent leur nourriture ?",
+    "choices": [
+      "Respiration",
+      "Digestion",
+      "Photosynthèse",
+      "Oxydation"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 56,
+    "question": "Quel est le nom de la force qui attire les objets vers la Terre ?",
+    "choices": [
+      "Électromagnétisme",
+      "Gravité",
+      "Friction",
+      "Inertie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 57,
+    "question": "Quel est le symbole chimique de l'azote ?",
+    "choices": [
+      "Az",
+      "N",
+      "Ni",
+      "Ne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 58,
+    "question": "Combien de chambres possède le cœur humain ?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 59,
+    "question": "Qui a formulé les lois de la gravitation ?",
+    "choices": [
+      "Newton",
+      "Einstein",
+      "Kepler",
+      "Galilée"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 60,
+    "question": "Quel gaz est principalement respiré par les humains ?",
+    "choices": [
+      "Azote",
+      "Oxygène",
+      "Hélium",
+      "Argon"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 61,
+    "question": "Quel est le symbole chimique du soufre ?",
+    "choices": [
+      "Su",
+      "So",
+      "S",
+      "Sf"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 62,
+    "question": "Quelle est la température de congélation de l'eau ?",
+    "choices": [
+      "0°C",
+      "10°C",
+      "32°C",
+      "100°C"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 63,
+    "question": "Premier homme à marcher sur la Lune ?",
+    "choices": [
+      "Gagarin",
+      "Armstrong",
+      "Aldrin",
+      "Glenn"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 64,
+    "question": "Quel est le symbole chimique du néon ?",
+    "choices": [
+      "Ne",
+      "N",
+      "No",
+      "Ni"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 65,
+    "question": "Quel est le symbole chimique de l'argon ?",
+    "choices": [
+      "Ar",
+      "Ag",
+      "An",
+      "A"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 66,
+    "question": "Quel organe produit l'insuline ?",
+    "choices": [
+      "Foie",
+      "Pancréas",
+      "Reins",
+      "Cœur"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 67,
+    "question": "Quel métal est utilisé dans les câbles électriques ?",
+    "choices": [
+      "Or",
+      "Fer",
+      "Cuivre",
+      "Plomb"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 68,
+    "question": "Quel est le symbole chimique du zinc ?",
+    "choices": [
+      "Zi",
+      "Zn",
+      "Z",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 69,
+    "question": "Quel est le symbole chimique du magnésium ?",
+    "choices": [
+      "Ma",
+      "Mg",
+      "Mn",
+      "Me"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 70,
+    "question": "Plus grand désert chaud de la planète ?",
+    "choices": [
+      "Gobi",
+      "Kalahari",
+      "Sahara",
+      "Arabique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 71,
+    "question": "Quelle est la planète la plus éloignée du Soleil ?",
+    "choices": [
+      "Uranus",
+      "Neptune",
+      "Pluton",
+      "Saturne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 72,
+    "question": "Quelle est la planète la plus petite ?",
+    "choices": [
+      "Mars",
+      "Vénus",
+      "Mercure",
+      "Terre"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 73,
+    "question": "Quel organe filtre les toxines du sang ?",
+    "choices": [
+      "Cœur",
+      "Foie",
+      "Poumon",
+      "Estomac"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 74,
+    "question": "Quel est le symbole chimique du potassium ?",
+    "choices": [
+      "P",
+      "Po",
+      "K",
+      "Ka"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 75,
+    "question": "Quel organe contrôle l'équilibre ?",
+    "choices": [
+      "Cervelet",
+      "Cerveau",
+      "Oreille interne",
+      "Moelle épinière"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 76,
+    "question": "Quel est le pH d'une solution neutre ?",
+    "choices": [
+      "0",
+      "7",
+      "10",
+      "14"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 77,
+    "question": "Quel est le principal composant des os ?",
+    "choices": [
+      "Fer",
+      "Magnésium",
+      "Calcium",
+      "Potassium"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 78,
+    "question": "Quel est le symbole chimique du plomb ?",
+    "choices": [
+      "Pl",
+      "Pb",
+      "Pd",
+      "P"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 79,
+    "question": "Quelle est la formule chimique de l'ammoniac ?",
+    "choices": [
+      "NH3",
+      "NO3",
+      "H2O",
+      "CH4"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 80,
+    "question": "Quel est le symbole chimique du nickel ?",
+    "choices": [
+      "Ni",
+      "N",
+      "Nk",
+      "Ne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 81,
+    "question": "Quel est le symbole chimique du chrome ?",
+    "choices": [
+      "Ch",
+      "Cr",
+      "Cm",
+      "C"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 82,
+    "question": "Quel est le symbole chimique du phosphore ?",
+    "choices": [
+      "Ph",
+      "P",
+      "Ps",
+      "Po"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 83,
+    "question": "Quel est le symbole chimique du fluor ?",
+    "choices": [
+      "Fl",
+      "F",
+      "Fu",
+      "Fr"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 84,
+    "question": "Quel est le symbole chimique du cobalt ?",
+    "choices": [
+      "Co",
+      "Cb",
+      "Ct",
+      "Cl"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 85,
+    "question": "Quel est le symbole chimique du lithium ?",
+    "choices": [
+      "Li",
+      "Lt",
+      "Lu",
+      "L"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 86,
+    "question": "Quel est le symbole chimique du silicium ?",
+    "choices": [
+      "Si",
+      "S",
+      "Sl",
+      "Sc"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 87,
+    "question": "Quel est le symbole chimique du titane ?",
+    "choices": [
+      "Ti",
+      "Tt",
+      "T",
+      "Ta"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 88,
+    "question": "Quel est le symbole chimique de l'uranium ?",
+    "choices": [
+      "Ur",
+      "U",
+      "Un",
+      "Um"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 89,
+    "question": "Quelle est l'unité de résistance électrique ?",
+    "choices": [
+      "Volt",
+      "Ohm",
+      "Watt",
+      "Ampère"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 90,
+    "question": "Quel est le plus grand organe du système nerveux ?",
+    "choices": [
+      "Cervelet",
+      "Cerveau",
+      "Nerfs",
+      "Moelle"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 91,
+    "question": "Quelle est la formule chimique du méthane ?",
+    "choices": [
+      "CH4",
+      "C2H6",
+      "CO2",
+      "CH3OH"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 92,
+    "question": "Quel est le symbole chimique du bore ?",
+    "choices": [
+      "Bo",
+      "B",
+      "Br",
+      "Be"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 93,
+    "question": "Quelle est l'unité d'énergie ?",
+    "choices": [
+      "Newton",
+      "Joule",
+      "Pascal",
+      "Watt"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 94,
+    "question": "Quelle est la couche d'ozone dans l'atmosphère ?",
+    "choices": [
+      "Troposphère",
+      "Stratosphère",
+      "Mésosphère",
+      "Thermosphère"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 95,
+    "question": "Quel est le symbole chimique du platine ?",
+    "choices": [
+      "Pl",
+      "Pt",
+      "Pa",
+      "Pn"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 96,
+    "question": "Qui a inventé le vaccin contre la rage ?",
+    "choices": [
+      "Fleming",
+      "Pasteur",
+      "Koch",
+      "Salk"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 97,
+    "question": "Quel est le symbole chimique du radium ?",
+    "choices": [
+      "Ra",
+      "Rd",
+      "Ru",
+      "Ri"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 98,
+    "question": "Quel est le symbole chimique du radon ?",
+    "choices": [
+      "Rn",
+      "Rd",
+      "Ra",
+      "Ro"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 99,
+    "question": "Quelle est l'unité de pression ?",
+    "choices": [
+      "Pascal",
+      "Newton",
+      "Bar",
+      "Joule"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 100,
+    "question": "Quel est le symbole chimique du béryllium ?",
+    "choices": [
+      "Be",
+      "Br",
+      "Bl",
+      "By"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 101,
+    "question": "Quel est le symbole chimique du gallium ?",
+    "choices": [
+      "Ga",
+      "Gl",
+      "Gm",
+      "Gn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 102,
+    "question": "Quel est le symbole chimique du germanium ?",
+    "choices": [
+      "Ge",
+      "Gm",
+      "Gr",
+      "Gn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 103,
+    "question": "Quel est le symbole chimique du vanadium ?",
+    "choices": [
+      "Va",
+      "Vn",
+      "V",
+      "Vi"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 104,
+    "question": "Quel est le symbole chimique du cadmium ?",
+    "choices": [
+      "Ca",
+      "Cd",
+      "Cm",
+      "Cn"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 105,
+    "question": "Quel est le symbole chimique du baryum ?",
+    "choices": [
+      "Ba",
+      "Br",
+      "Bm",
+      "Bn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 106,
+    "question": "Quelle cellule transporte l'oxygène ?",
+    "choices": [
+      "Globule blanc",
+      "Plaquette",
+      "Globule rouge",
+      "Neurone"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 107,
+    "question": "Vitesse du son dans l'air (à 20°C) ?",
+    "choices": [
+      "150 m/s",
+      "343 m/s",
+      "500 m/s",
+      "1000 m/s"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 108,
+    "question": "Quel est le principal gaz des géantes gazeuses ?",
+    "choices": [
+      "Hélium",
+      "Hydrogène",
+      "Méthane",
+      "Azote"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 109,
+    "question": "Quel est le plus grand organe lymphatique ?",
+    "choices": [
+      "Rate",
+      "Ganglion",
+      "Thymus",
+      "Amygdale"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 110,
+    "question": "Quel scientifique a découvert la radioactivité ?",
+    "choices": [
+      "Curie",
+      "Becquerel",
+      "Rutherford",
+      "Bohr"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 111,
+    "question": "Symbole chimique de l'antimoine ?",
+    "choices": [
+      "An",
+      "At",
+      "Sb",
+      "Ab"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 112,
+    "question": "Symbole chimique de l'arsenic ?",
+    "choices": [
+      "Ar",
+      "As",
+      "Ac",
+      "Ae"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 113,
+    "question": "Symbole chimique du césium ?",
+    "choices": [
+      "Ce",
+      "Cs",
+      "Cm",
+      "Ca"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 114,
+    "question": "Organe fabricant les globules rouges avant la naissance ?",
+    "choices": [
+      "Moelle osseuse",
+      "Rate",
+      "Foie",
+      "Reins"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 115,
+    "question": "Symbole chimique du rubidium ?",
+    "choices": [
+      "Ru",
+      "Rb",
+      "Rd",
+      "Ri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 116,
+    "question": "Symbole chimique du scandium ?",
+    "choices": [
+      "Sc",
+      "Sd",
+      "Sn",
+      "Sa"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 117,
+    "question": "Symbole chimique du zirconium ?",
+    "choices": [
+      "Zi",
+      "Zr",
+      "Zn",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 118,
+    "question": "Symbole chimique du molybdène ?",
+    "choices": [
+      "Mo",
+      "My",
+      "Ml",
+      "Mb"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 119,
+    "question": "Température moyenne de surface du Soleil ?",
+    "choices": [
+      "2 000 °C",
+      "5 500 °C",
+      "10 000 °C",
+      "15 000 °C"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 120,
+    "question": "Symbole chimique de l'indium ?",
+    "choices": [
+      "In",
+      "Id",
+      "It",
+      "Im"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 121,
+    "question": "Symbole chimique du hafnium ?",
+    "choices": [
+      "Ha",
+      "Hf",
+      "Hm",
+      "Hn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 122,
+    "question": "Symbole chimique du tantale ?",
+    "choices": [
+      "Ta",
+      "Tt",
+      "Tl",
+      "Tn"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 123,
+    "question": "Symbole chimique du niobium ?",
+    "choices": [
+      "Ni",
+      "Nb",
+      "No",
+      "Nu"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 124,
+    "question": "Symbole chimique du rhodium ?",
+    "choices": [
+      "Ro",
+      "Rh",
+      "Rd",
+      "Ri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 125,
+    "question": "Symbole chimique du palladium ?",
+    "choices": [
+      "Pa",
+      "Pl",
+      "Pd",
+      "Pn"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 126,
+    "question": "Symbole chimique du bismuth ?",
+    "choices": [
+      "Bi",
+      "Bs",
+      "Bm",
+      "Bt"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 127,
+    "question": "Symbole chimique du polonium ?",
+    "choices": [
+      "Pl",
+      "Po",
+      "Pm",
+      "Pn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 128,
+    "question": "Symbole chimique du thorium ?",
+    "choices": [
+      "Th",
+      "Ti",
+      "Tr",
+      "To"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 129,
+    "question": "Quelle est la planète ayant le plus puissant champ magnétique ?",
+    "choices": [
+      "Terre",
+      "Saturne",
+      "Jupiter",
+      "Neptune"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 130,
+    "question": "Quel est le plus grand type de cellule du corps humain ?",
+    "choices": [
+      "Ovule",
+      "Neurone",
+      "Adipocyte",
+      "Hépatocyte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 131,
+    "question": "Quel est le plus grand organe endocrinien ?",
+    "choices": [
+      "Hypophyse",
+      "Thyroïde",
+      "Pancréas",
+      "Surrénales"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 132,
+    "question": "Quel scientifique a découvert l'électron ?",
+    "choices": [
+      "Bohr",
+      "Thomson",
+      "Millikan",
+      "Planck"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 133,
+    "question": "Quel est le symbole chimique du krypton ?",
+    "choices": [
+      "Kr",
+      "Kp",
+      "Kn",
+      "Ki"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 134,
+    "question": "Quel est le symbole chimique du xénon ?",
+    "choices": [
+      "Xe",
+      "Xn",
+      "X",
+      "Xi"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 135,
+    "question": "Quel est le plus grand os du visage ?",
+    "choices": [
+      "Nasal",
+      "Maxillaire",
+      "Mandibule",
+      "Zygomatique"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 136,
+    "question": "Quelle planète tourne le plus rapidement sur elle-même ?",
+    "choices": [
+      "Terre",
+      "Mars",
+      "Jupiter",
+      "Vénus"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 137,
+    "question": "Quel est le plus grand désert froid du monde ?",
+    "choices": [
+      "Arctique",
+      "Antarctique",
+      "Groenland",
+      "Patagonie"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 138,
+    "question": "Quelle planète possède la journée la plus longue ?",
+    "choices": [
+      "Vénus",
+      "Mercure",
+      "Neptune",
+      "Saturne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 139,
+    "question": "Quel est le symbole chimique de l'iridium ?",
+    "choices": [
+      "Ir",
+      "Id",
+      "Im",
+      "In"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 140,
+    "question": "Quel organe produit la bile ?",
+    "choices": [
+      "Pancréas",
+      "Vésicule biliaire",
+      "Foie",
+      "Estomac"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 141,
+    "question": "Quelle est la plus grande lune de Saturne ?",
+    "choices": [
+      "Rhéa",
+      "Dioné",
+      "Titan",
+      "Encelade"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 142,
+    "question": "Quel est le gaz le plus léger ?",
+    "choices": [
+      "Oxygène",
+      "Hélium",
+      "Hydrogène",
+      "Azote"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 143,
+    "question": "Quelle est l'unité de flux magnétique ?",
+    "choices": [
+      "Tesla",
+      "Weber",
+      "Henry",
+      "Gauss"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 144,
+    "question": "Quel est le symbole chimique du mercure ?",
+    "choices": [
+      "Me",
+      "Mc",
+      "Hg",
+      "My"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 145,
+    "question": "Quel est le symbole chimique de l'argent (au sens pur) ?",
+    "choices": [
+      "Ag",
+      "Au",
+      "Ar",
+      "As"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 146,
+    "question": "Quelle partie de l'œil capte la lumière ?",
+    "choices": [
+      "Cornée",
+      "Iris",
+      "Rétine",
+      "Cristallin"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 147,
+    "question": "Quelle est la galaxie la plus proche de la Voie lactée ?",
+    "choices": [
+      "Andromède",
+      "Triangle",
+      "Nuages de Magellan",
+      "Cigar"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 148,
+    "question": "Quel acide est présent dans l'estomac ?",
+    "choices": [
+      "Sulfurique",
+      "Chlorhydrique",
+      "Nitrique",
+      "Citrique"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 149,
+    "question": "Quel est le symbole chimique du tellure ?",
+    "choices": [
+      "Te",
+      "Tl",
+      "Tr",
+      "Tu"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 150,
+    "question": "Quelle hormone régule le sommeil ?",
+    "choices": [
+      "Adrénaline",
+      "Mélatonine",
+      "Cortisol",
+      "Insuline"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 151,
+    "question": "Quel est le métal le plus abondant dans la croûte terrestre ?",
+    "choices": [
+      "Fer",
+      "Aluminium",
+      "Calcium",
+      "Sodium"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 152,
+    "question": "Quel est le gaz noble le plus léger ?",
+    "choices": [
+      "Néon",
+      "Argon",
+      "Hélium",
+      "Xénon"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 153,
+    "question": "Quel est le symbole chimique du manganèse ?",
+    "choices": [
+      "Mn",
+      "Mg",
+      "Ma",
+      "Ms"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 154,
+    "question": "Quelle est la principale source d'énergie de la Terre ?",
+    "choices": [
+      "Vent",
+      "Marées",
+      "Soleil",
+      "Géothermie"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 155,
+    "question": "Quel organe produit les globules blancs ?",
+    "choices": [
+      "Moelle osseuse",
+      "Cœur",
+      "Foie",
+      "Reins"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 156,
+    "question": "Symbole chimique du tungstène ?",
+    "choices": [
+      "Tu",
+      "W",
+      "Tg",
+      "Tn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 157,
+    "question": "Quelle est la durée d'une année sur Mars (en jours terrestres) ?",
+    "choices": [
+      "365",
+      "480",
+      "687",
+      "950"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 158,
+    "question": "Quel est le principal constituant de l'acier ?",
+    "choices": [
+      "Carbone",
+      "Fer",
+      "Nickel",
+      "Chrome"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 159,
+    "question": "Quelle est l'unité de mesure de la capacité électrique ?",
+    "choices": [
+      "Henry",
+      "Farad",
+      "Weber",
+      "Tesla"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 160,
+    "question": "Quel organe régule la glycémie ?",
+    "choices": [
+      "Pancréas",
+      "Foie",
+      "Estomac",
+      "Cerveau"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 161,
+    "question": "Quelle est la planète la plus proche de la Terre (en moyenne) ?",
+    "choices": [
+      "Mars",
+      "Vénus",
+      "Mercure",
+      "Jupiter"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 162,
+    "question": "Quel est le symbole chimique de l'iode ?",
+    "choices": [
+      "Io",
+      "Id",
+      "I",
+      "Ie"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 163,
+    "question": "Quel est le nom de la galaxie la plus proche ?",
+    "choices": [
+      "Andromède",
+      "Sombrero",
+      "Triangle",
+      "Cigar"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 164,
+    "question": "Quelle est la vitesse de libération de la Terre (km/s) ?",
+    "choices": [
+      "7.2",
+      "11.2",
+      "15.4",
+      "20.1"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 165,
+    "question": "Symbole chimique du sélénium ?",
+    "choices": [
+      "Se",
+      "Sl",
+      "Sn",
+      "Sm"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 166,
+    "question": "Quelle est la température du zéro absolu (en Celsius) ?",
+    "choices": [
+      "-100",
+      "-273.15",
+      "-300",
+      "-459"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 167,
+    "question": "Quel organe transforme les nutriments en énergie ?",
+    "choices": [
+      "Mitochondries",
+      "Ribosomes",
+      "Noyau",
+      "Lysosomes"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 168,
+    "question": "Quel est le symbole chimique du cuivre ?",
+    "choices": [
+      "Co",
+      "Cu",
+      "Cr",
+      "Cp"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 169,
+    "question": "Quelle est l'unité de puissance ?",
+    "choices": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 170,
+    "question": "Quel gaz est responsable de l'odeur des œufs pourris ?",
+    "choices": [
+      "Sulfure d'hydrogène",
+      "Méthane",
+      "Ammoniac",
+      "Chlore"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 171,
+    "question": "Quelle est la protéine principale des cheveux ?",
+    "choices": [
+      "Collagène",
+      "Kératine",
+      "Élastine",
+      "Fibrine"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 172,
+    "question": "Symbole chimique du strontium ?",
+    "choices": [
+      "St",
+      "Sr",
+      "Sn",
+      "So"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 173,
+    "question": "Quelle est la couche la plus externe de la Terre ?",
+    "choices": [
+      "Noyau",
+      "Manteau",
+      "Croûte",
+      "Asthénosphère"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 174,
+    "question": "Quelle est la planète qui possède des vents dépassant 2000 km/h ?",
+    "choices": [
+      "Neptune",
+      "Jupiter",
+      "Mars",
+      "Saturne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 175,
+    "question": "Quel organe produit les hormones thyroïdiennes ?",
+    "choices": [
+      "Thyroïde",
+      "Hypophyse",
+      "Hypothalamus",
+      "Pancréas"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 176,
+    "question": "Symbole chimique du titane ?",
+    "choices": [
+      "Ta",
+      "Ti",
+      "Tt",
+      "Th"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 177,
+    "question": "Quelle est l'unité de mesure de la radioactivité ?",
+    "choices": [
+      "Gray",
+      "Sievert",
+      "Becquerel",
+      "Curie"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 178,
+    "question": "Combien de valves possède le cœur humain ?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 179,
+    "question": "Quel gaz est utilisé dans les enseignes lumineuses ?",
+    "choices": [
+      "Hélium",
+      "Néon",
+      "Argon",
+      "Krypton"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 180,
+    "question": "Quelle est la planète la moins dense ?",
+    "choices": [
+      "Saturne",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 181,
+    "question": "Symbole chimique de l'hélium ?",
+    "choices": [
+      "H",
+      "He",
+      "Hm",
+      "Hi"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 182,
+    "question": "Quel est le sucre principal du sang ?",
+    "choices": [
+      "Fructose",
+      "Glucose",
+      "Lactose",
+      "Saccharose"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 183,
+    "question": "Quelle est la science des roches ?",
+    "choices": [
+      "Géographie",
+      "Géologie",
+      "Minéralogie",
+      "Paléontologie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 184,
+    "question": "Symbole chimique de l'or ?",
+    "choices": [
+      "Or",
+      "Au",
+      "Ag",
+      "Ar"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 185,
+    "question": "Quelle planète possède le satellite Phobos ?",
+    "choices": [
+      "Jupiter",
+      "Mars",
+      "Saturne",
+      "Uranus"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 186,
+    "question": "Quel acide est utilisé dans les batteries de voiture ?",
+    "choices": [
+      "Acétique",
+      "Sulfurique",
+      "Citrique",
+      "Chlorhydrique"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 187,
+    "question": "Quelle partie du cerveau gère la mémoire ?",
+    "choices": [
+      "Cervelet",
+      "Hippocampe",
+      "Amygdale",
+      "Tronc cérébral"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 188,
+    "question": "Symbole chimique du calcium ?",
+    "choices": [
+      "Ca",
+      "Cl",
+      "Ce",
+      "Cs"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 189,
+    "question": "Quelle planète est connue pour son 'Grand Point Rouge' ?",
+    "choices": [
+      "Mars",
+      "Jupiter",
+      "Saturne",
+      "Neptune"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 190,
+    "question": "Quel métal est le meilleur conducteur électrique ?",
+    "choices": [
+      "Or",
+      "Argent",
+      "Cuivre",
+      "Aluminium"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 191,
+    "question": "Quel gaz est indispensable à la combustion ?",
+    "choices": [
+      "Azote",
+      "Oxygène",
+      "Hélium",
+      "Dioxyde de carbone"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 192,
+    "question": "Symbole chimique du chlore ?",
+    "choices": [
+      "Ch",
+      "Cl",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 193,
+    "question": "Combien de planètes rocheuses y a-t-il dans le système solaire ?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 194,
+    "question": "Quelle vitamine est essentielle pour la vision ?",
+    "choices": [
+      "Vitamine A",
+      "Vitamine B",
+      "Vitamine C",
+      "Vitamine K"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 195,
+    "question": "Symbole chimique du mercure ?",
+    "choices": [
+      "Me",
+      "Hg",
+      "Mr",
+      "My"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 196,
+    "question": "Quelle est la structure d'ADN ?",
+    "choices": [
+      "Hélice simple",
+      "Double hélice",
+      "Feuillet bêta",
+      "Triple hélice"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 197,
+    "question": "Quel est le plus grand primate ?",
+    "choices": [
+      "Chimpanzé",
+      "Orang-outan",
+      "Gorille",
+      "Humain"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 198,
+    "question": "Quel gaz est produit par la décomposition organique ?",
+    "choices": [
+      "Méthane",
+      "Azote",
+      "Oxygène",
+      "Hélium"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 199,
+    "question": "Quelle est l'unité de mesure de la tension électrique ?",
+    "choices": [
+      "Ampère",
+      "Ohm",
+      "Volt",
+      "Watt"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 200,
+    "question": "Quelle est la planète la plus proche du Soleil ?",
+    "choices": [
+      "Vénus",
+      "Terre",
+      "Mercure",
+      "Mars"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 201,
+    "question": "Quel est le constituant principal du gaz naturel ?",
+    "choices": [
+      "Éthane",
+      "Propane",
+      "Méthane",
+      "Butane"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 202,
+    "question": "Quelle est l'unité de mesure de la luminosité apparente ?",
+    "choices": [
+      "Magnitude",
+      "Candela",
+      "Lumen",
+      "Lux"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 203,
+    "question": "Quel organe transforme les graisses ?",
+    "choices": [
+      "Foie",
+      "Pancréas",
+      "Vésicule biliaire",
+      "Intestin grêle"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 204,
+    "question": "Symbole chimique du bore ?",
+    "choices": [
+      "Bo",
+      "Br",
+      "B",
+      "Be"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 205,
+    "question": "Quel est le gaz le plus rare de l'atmosphère terrestre ?",
+    "choices": [
+      "Hélium",
+      "Néon",
+      "Xénon",
+      "Radon"
+    ],
+    "answer": 3,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 206,
+    "question": "Quelle partie de la plante absorbe l'eau ?",
+    "choices": [
+      "Feuilles",
+      "Tige",
+      "Racines",
+      "Fleurs"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 207,
+    "question": "Quel est le métal le plus lourd (densité élevée) ?",
+    "choices": [
+      "Plomb",
+      "Or",
+      "Osmium",
+      "Tungstène"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 208,
+    "question": "Quelle est la distance Terre-Soleil (en millions de km) ?",
+    "choices": [
+      "100",
+      "150",
+      "200",
+      "250"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 209,
+    "question": "Symbole chimique du molybdène ?",
+    "choices": [
+      "Mb",
+      "My",
+      "Mo",
+      "Ml"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 210,
+    "question": "Quel est le nom de la galaxie où nous vivons ?",
+    "choices": [
+      "Andromède",
+      "Voie lactée",
+      "Triangle",
+      "Sombrero"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 211,
+    "question": "Quel organe régule la pression artérielle ?",
+    "choices": [
+      "Cœur",
+      "Reins",
+      "Poumons",
+      "Foie"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 212,
+    "question": "Symbole chimique du lithium ?",
+    "choices": [
+      "Li",
+      "Lt",
+      "Lu",
+      "L"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 213,
+    "question": "Quelle est l'unité de mesure de la température thermodynamique ?",
+    "choices": [
+      "Celsius",
+      "Fahrenheit",
+      "Kelvin",
+      "Rankine"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 214,
+    "question": "Quel est l'élément le plus abondant dans l'Univers ?",
+    "choices": [
+      "Hélium",
+      "Hydrogène",
+      "Oxygène",
+      "Carbone"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 215,
+    "question": "Symbole chimique du cobalt ?",
+    "choices": [
+      "Co",
+      "Cb",
+      "Ct",
+      "Cl"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 216,
+    "question": "Quelle est la planète gazeuse la plus éloignée ?",
+    "choices": [
+      "Neptune",
+      "Uranus",
+      "Saturne",
+      "Jupiter"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 217,
+    "question": "Quel est l'organe qui produit la mélatonine ?",
+    "choices": [
+      "Hypophyse",
+      "Épiphyse",
+      "Thyroïde",
+      "Surrénales"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 218,
+    "question": "Symbole chimique du silicium ?",
+    "choices": [
+      "Si",
+      "S",
+      "Sl",
+      "Sc"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 219,
+    "question": "Quelle est l'unité de mesure de l'inductance ?",
+    "choices": [
+      "Tesla",
+      "Weber",
+      "Henry",
+      "Farad"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 220,
+    "question": "Quel acide est utilisé dans la digestion stomacale ?",
+    "choices": [
+      "Acétique",
+      "Chlorhydrique",
+      "Nitrique",
+      "Sulfurique"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 221,
+    "question": "Symbole chimique du fluor ?",
+    "choices": [
+      "Fl",
+      "F",
+      "Fu",
+      "Fr"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 222,
+    "question": "Quel est le plus grand satellite de Jupiter ?",
+    "choices": [
+      "Io",
+      "Europe",
+      "Ganymède",
+      "Callisto"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 223,
+    "question": "Quel gaz compose majoritairement l'air ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Argon",
+      "CO2"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 224,
+    "question": "Symbole chimique du nickel ?",
+    "choices": [
+      "Ni",
+      "N",
+      "Nk",
+      "Ne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 225,
+    "question": "Quelle est la principale hormone de stress ?",
+    "choices": [
+      "Adrénaline",
+      "Insuline",
+      "Cortisol",
+      "Thyroxine"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 226,
+    "question": "Symbole chimique du chrome ?",
+    "choices": [
+      "Ch",
+      "Cr",
+      "Cm",
+      "C"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 227,
+    "question": "Quelle est la durée de rotation de la Terre ?",
+    "choices": [
+      "12h",
+      "24h",
+      "36h",
+      "48h"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 228,
+    "question": "Symbole chimique du fer ?",
+    "choices": [
+      "Fe",
+      "F",
+      "Fr",
+      "Ir"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 229,
+    "question": "Quelle est la cellule responsable de l'immunité ?",
+    "choices": [
+      "Globule rouge",
+      "Globule blanc",
+      "Plaquette",
+      "Neurone"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 230,
+    "question": "Symbole chimique du phosphore ?",
+    "choices": [
+      "Ph",
+      "P",
+      "Ps",
+      "Po"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 231,
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Terre",
+      "Mars"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 232,
+    "question": "Symbole chimique du titane ?",
+    "choices": [
+      "Ti",
+      "Tt",
+      "T",
+      "Ta"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 233,
+    "question": "Quel est le nom du satellite naturel de la Terre ?",
+    "choices": [
+      "Phobos",
+      "Deimos",
+      "La Lune",
+      "Titan"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 234,
+    "question": "Symbole chimique de l'uranium ?",
+    "choices": [
+      "Ur",
+      "U",
+      "Un",
+      "Um"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 235,
+    "question": "Quelle est la vitesse de la lumière (m/s) ?",
+    "choices": [
+      "3e6",
+      "3e7",
+      "3e8",
+      "3e9"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 236,
+    "question": "Symbole chimique du platine ?",
+    "choices": [
+      "Pl",
+      "Pt",
+      "Pa",
+      "Pn"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 237,
+    "question": "Quel est le plus grand organe du corps ?",
+    "choices": [
+      "Foie",
+      "Peau",
+      "Cœur",
+      "Poumons"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 238,
+    "question": "Symbole chimique du radium ?",
+    "choices": [
+      "Ra",
+      "Rd",
+      "Ru",
+      "Ri"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 239,
+    "question": "Quelle est la température de congélation de l'eau (Celsius) ?",
+    "choices": [
+      "0",
+      "10",
+      "32",
+      "100"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 240,
+    "question": "Symbole chimique du radon ?",
+    "choices": [
+      "Rn",
+      "Rd",
+      "Ra",
+      "Ro"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 241,
+    "question": "Quel est le gaz utilisé pour le gonflage des ballons ?",
+    "choices": [
+      "Hélium",
+      "Hydrogène",
+      "Oxygène",
+      "Azote"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 242,
+    "question": "Symbole chimique du béryllium ?",
+    "choices": [
+      "Be",
+      "Br",
+      "Bl",
+      "By"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 243,
+    "question": "Quel est le plus grand océan ?",
+    "choices": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 244,
+    "question": "Symbole chimique du cadmium ?",
+    "choices": [
+      "Ca",
+      "Cd",
+      "Cm",
+      "Cn"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 245,
+    "question": "Quel est le symbole chimique du zinc ?",
+    "choices": [
+      "Zi",
+      "Zn",
+      "Z",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 246,
+    "question": "Symbole chimique du baryum ?",
+    "choices": [
+      "Ba",
+      "Br",
+      "Bm",
+      "Bn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 247,
+    "question": "Quel est le nom de la force qui nous retient au sol ?",
+    "choices": [
+      "Gravité",
+      "Friction",
+      "Poussée",
+      "Inertie"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 248,
+    "question": "Quel est le symbole chimique du magnésium ?",
+    "choices": [
+      "Ma",
+      "Mg",
+      "Mn",
+      "Me"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 249,
+    "question": "Quelle est l'unité de pression ?",
+    "choices": [
+      "Pascal",
+      "Newton",
+      "Bar",
+      "Joule"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 250,
+    "question": "Quel est le plus grand désert ?",
+    "choices": [
+      "Sahara",
+      "Gobi",
+      "Antarctique",
+      "Arabique"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 251,
+    "question": "Quel est le constituant principal de l'os humain ?",
+    "choices": [
+      "Calcaire",
+      "Hydroxyapatite",
+      "Collagen",
+      "Silice"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 252,
+    "question": "Quel est le symbole chimique du gallium ?",
+    "choices": [
+      "Ga",
+      "Gl",
+      "Gm",
+      "Gn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 253,
+    "question": "Quel organe transforme les glucides en énergie ?",
+    "choices": [
+      "Mitochondries",
+      "Ribosomes",
+      "Noyau",
+      "Vacuoles"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 254,
+    "question": "Symbole chimique du germanium ?",
+    "choices": [
+      "Ge",
+      "Gm",
+      "Gr",
+      "Gn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 255,
+    "question": "Quel est le gaz le plus léger ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Hydrogène",
+      "Hélium"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 256,
+    "question": "Symbole chimique du vanadium ?",
+    "choices": [
+      "Va",
+      "Vn",
+      "V",
+      "Vi"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 257,
+    "question": "Quelle est la cellule nerveuse ?",
+    "choices": [
+      "Néphron",
+      "Neurone",
+      "Hépatocyte",
+      "Adipocyte"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 258,
+    "question": "Quel est le symbole chimique de l'antimoine ?",
+    "choices": [
+      "An",
+      "At",
+      "Sb",
+      "Ab"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 259,
+    "question": "Quelle est la planète la plus chaude ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 260,
+    "question": "Symbole chimique de l'arsenic ?",
+    "choices": [
+      "Ar",
+      "As",
+      "Ac",
+      "Ae"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 261,
+    "question": "Quel est l'organe qui filtre le sang ?",
+    "choices": [
+      "Foie",
+      "Reins",
+      "Cœur",
+      "Poumons"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 262,
+    "question": "Symbole chimique du césium ?",
+    "choices": [
+      "Ce",
+      "Cs",
+      "Cm",
+      "Ca"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 263,
+    "question": "Quel est le plus grand mammifère marin ?",
+    "choices": [
+      "Dauphin",
+      "Orque",
+      "Baleine bleue",
+      "Requin"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 264,
+    "question": "Symbole chimique du rubidium ?",
+    "choices": [
+      "Ru",
+      "Rb",
+      "Rd",
+      "Ri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 265,
+    "question": "Quel gaz est le principal moteur de l'effet de serre ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "CO2",
+      "Hélium"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 266,
+    "question": "Symbole chimique du scandium ?",
+    "choices": [
+      "Sc",
+      "Sd",
+      "Sn",
+      "Sa"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 267,
+    "question": "Quelle est la vitesse du son (environ) ?",
+    "choices": [
+      "100 m/s",
+      "340 m/s",
+      "1000 m/s",
+      "3000 m/s"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 268,
+    "question": "Symbole chimique du zirconium ?",
+    "choices": [
+      "Zi",
+      "Zr",
+      "Zn",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 269,
+    "question": "Quel est le symbole chimique de l'étain ?",
+    "choices": [
+      "Sn",
+      "Ti",
+      "Et",
+      "Ta"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 270,
+    "question": "Quel est le symbole chimique de l'indium ?",
+    "choices": [
+      "In",
+      "Id",
+      "It",
+      "Im"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 271,
+    "question": "Quelle est l'unité de fréquence ?",
+    "choices": [
+      "Hertz",
+      "Volt",
+      "Watt",
+      "Ohm"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 272,
+    "question": "Symbole chimique du hafnium ?",
+    "choices": [
+      "Ha",
+      "Hf",
+      "Hm",
+      "Hn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 273,
+    "question": "Quel est le plus petit os du corps ?",
+    "choices": [
+      "Tibia",
+      "Stapès",
+      "Fémur",
+      "Radius"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 274,
+    "question": "Symbole chimique du tantale ?",
+    "choices": [
+      "Ta",
+      "Tt",
+      "Tl",
+      "Tn"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 275,
+    "question": "Quelle est la planète gazeuse avec des anneaux visibles ?",
+    "choices": [
+      "Jupiter",
+      "Saturne",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 276,
+    "question": "Symbole chimique du niobium ?",
+    "choices": [
+      "Ni",
+      "Nb",
+      "No",
+      "Nu"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 277,
+    "question": "Quel métal est liquide à température ambiante ?",
+    "choices": [
+      "Or",
+      "Argent",
+      "Mercure",
+      "Plomb"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 278,
+    "question": "Symbole chimique du rhodium ?",
+    "choices": [
+      "Ro",
+      "Rh",
+      "Rd",
+      "Ri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 279,
+    "question": "Quelle est la science des étoiles ?",
+    "choices": [
+      "Astrologie",
+      "Astronomie",
+      "Géologie",
+      "Aéronautique"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 280,
+    "question": "Symbole chimique du palladium ?",
+    "choices": [
+      "Pa",
+      "Pl",
+      "Pd",
+      "Pn"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 281,
+    "question": "Quel est le gaz le plus abondant dans l'atmosphère ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Argon",
+      "CO2"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 282,
+    "question": "Symbole chimique du bismuth ?",
+    "choices": [
+      "Bi",
+      "Bs",
+      "Bm",
+      "Bt"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 283,
+    "question": "Quel organe régule la glycémie ?",
+    "choices": [
+      "Foie",
+      "Pancréas",
+      "Estomac",
+      "Cœur"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 284,
+    "question": "Symbole chimique du polonium ?",
+    "choices": [
+      "Pl",
+      "Po",
+      "Pm",
+      "Pn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 285,
+    "question": "Quel est le symbole chimique du carbone ?",
+    "choices": [
+      "Ca",
+      "C",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 286,
+    "question": "Symbole chimique du thorium ?",
+    "choices": [
+      "Th",
+      "Ti",
+      "Tr",
+      "To"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 287,
+    "question": "Quel est le symbole chimique de l'oxygène ?",
+    "choices": [
+      "O",
+      "Ox",
+      "O2",
+      "Oz"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 288,
+    "question": "Symbole chimique du krypton ?",
+    "choices": [
+      "Kr",
+      "Kp",
+      "Kn",
+      "Ki"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 289,
+    "question": "Quel organe permet de respirer ?",
+    "choices": [
+      "Cœur",
+      "Poumons",
+      "Estomac",
+      "Foie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 290,
+    "question": "Symbole chimique du xénon ?",
+    "choices": [
+      "Xe",
+      "Xn",
+      "X",
+      "Xi"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 291,
+    "question": "Quel est le symbole chimique de l'hydrogène ?",
+    "choices": [
+      "H",
+      "Hy",
+      "Hd",
+      "He"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 292,
+    "question": "Symbole chimique de l'iridium ?",
+    "choices": [
+      "Ir",
+      "Id",
+      "Im",
+      "In"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 293,
+    "question": "Quel organe est le siège de la vision ?",
+    "choices": [
+      "Oreille",
+      "Nez",
+      "Œil",
+      "Cerveau"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 294,
+    "question": "Symbole chimique du tellure ?",
+    "choices": [
+      "Te",
+      "Tl",
+      "Tr",
+      "Tu"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 295,
+    "question": "Quel est le symbole chimique du sodium ?",
+    "choices": [
+      "So",
+      "Sd",
+      "Na",
+      "S"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 296,
+    "question": "Quel est le symbole chimique de l'argent ?",
+    "choices": [
+      "Ag",
+      "Au",
+      "Ar",
+      "As"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 297,
+    "question": "Quel est le symbole chimique de l'or ?",
+    "choices": [
+      "Or",
+      "Au",
+      "Ag",
+      "Ar"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 298,
+    "question": "Symbole chimique du chlore ?",
+    "choices": [
+      "Ch",
+      "Cl",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 299,
+    "question": "Quel organe produit l'insuline ?",
+    "choices": [
+      "Pancréas",
+      "Foie",
+      "Reins",
+      "Poumons"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 300,
+    "question": "Quelle est la formule chimique de l'eau ?",
+    "choices": [
+      "HO2",
+      "H2O",
+      "OH2",
+      "H2O2"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 301,
+    "question": "Quelle est la principale hormone de croissance ?",
+    "choices": [
+      "Somatotropine",
+      "Insuline",
+      "Cortisol",
+      "Adrénaline"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 302,
+    "question": "Quel est le symbole chimique du plutonium ?",
+    "choices": [
+      "Pu",
+      "Pl",
+      "Pm",
+      "Po"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 303,
+    "question": "Quelle est l'unité de mesure de la puissance ?",
+    "choices": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 304,
+    "question": "Symbole chimique du soufre ?",
+    "choices": [
+      "Su",
+      "So",
+      "S",
+      "Sf"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 305,
+    "question": "Quelle est la planète la plus grande ?",
+    "choices": [
+      "Saturne",
+      "Jupiter",
+      "Neptune",
+      "Terre"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 306,
+    "question": "Symbole chimique du potassium ?",
+    "choices": [
+      "P",
+      "Po",
+      "K",
+      "Ka"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 307,
+    "question": "Quel organe contrôle l'équilibre ?",
+    "choices": [
+      "Cerveau",
+      "Cervelet",
+      "Oreille interne",
+      "Moelle épinière"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 308,
+    "question": "Symbole chimique du néon ?",
+    "choices": [
+      "Ne",
+      "N",
+      "No",
+      "Ni"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 309,
+    "question": "Quelle est la formule chimique de l'ammoniac ?",
+    "choices": [
+      "NH3",
+      "NO3",
+      "H2O",
+      "CH4"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 310,
+    "question": "Symbole chimique de l'argon ?",
+    "choices": [
+      "Ar",
+      "Ag",
+      "An",
+      "A"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 311,
+    "question": "Quel métal est utilisé dans les câbles électriques ?",
+    "choices": [
+      "Or",
+      "Fer",
+      "Cuivre",
+      "Plomb"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 312,
+    "question": "Symbole chimique du zinc ?",
+    "choices": [
+      "Zi",
+      "Zn",
+      "Z",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 313,
+    "question": "Quel est le pH d'une solution acide ?",
+    "choices": [
+      "Inférieur à 7",
+      "Égal à 7",
+      "Supérieur à 7",
+      "14"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 314,
+    "question": "Symbole chimique du magnésium ?",
+    "choices": [
+      "Ma",
+      "Mg",
+      "Mn",
+      "Me"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 315,
+    "question": "Quel est le plus grand désert chaud ?",
+    "choices": [
+      "Sahara",
+      "Gobi",
+      "Kalahari",
+      "Arabique"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 316,
+    "question": "Symbole chimique du plomb ?",
+    "choices": [
+      "Pl",
+      "Pb",
+      "Pd",
+      "P"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 317,
+    "question": "Quelle est la planète la plus éloignée ?",
+    "choices": [
+      "Neptune",
+      "Uranus",
+      "Saturne",
+      "Jupiter"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 318,
+    "question": "Symbole chimique du nickel ?",
+    "choices": [
+      "Ni",
+      "N",
+      "Nk",
+      "Ne"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 319,
+    "question": "Quel organe produit la bile ?",
+    "choices": [
+      "Pancréas",
+      "Vésicule",
+      "Foie",
+      "Estomac"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 320,
+    "question": "Symbole chimique du chrome ?",
+    "choices": [
+      "Ch",
+      "Cr",
+      "Cm",
+      "C"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 321,
+    "question": "Quelle est l'unité de mesure de la résistance ?",
+    "choices": [
+      "Volt",
+      "Ohm",
+      "Ampère",
+      "Watt"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 322,
+    "question": "Symbole chimique du phosphore ?",
+    "choices": [
+      "Ph",
+      "P",
+      "Ps",
+      "Po"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 323,
+    "question": "Quel est le plus gros muscle humain ?",
+    "choices": [
+      "Biceps",
+      "Grand fessier",
+      "Quadriceps",
+      "Deltoïde"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 324,
+    "question": "Symbole chimique du fluor ?",
+    "choices": [
+      "Fl",
+      "F",
+      "Fu",
+      "Fr"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 325,
+    "question": "Quel est le composant principal de l'air ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Argon",
+      "CO2"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 326,
+    "question": "Symbole chimique du cobalt ?",
+    "choices": [
+      "Co",
+      "Cb",
+      "Ct",
+      "Cl"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 327,
+    "question": "Quelle est la cellule qui capte la lumière ?",
+    "choices": [
+      "Cône",
+      "Neurone",
+      "Globule",
+      "Adipocyte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 328,
+    "question": "Symbole chimique du lithium ?",
+    "choices": [
+      "Li",
+      "Lt",
+      "Lu",
+      "L"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 329,
+    "question": "Quelle est l'unité de mesure de la capacité ?",
+    "choices": [
+      "Farad",
+      "Henry",
+      "Tesla",
+      "Weber"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 330,
+    "question": "Symbole chimique du silicium ?",
+    "choices": [
+      "Si",
+      "S",
+      "Sl",
+      "Sc"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 331,
+    "question": "Quel est le gaz le plus léger ?",
+    "choices": [
+      "Oxygène",
+      "Hélium",
+      "Hydrogène",
+      "Azote"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 332,
+    "question": "Symbole chimique du titane ?",
+    "choices": [
+      "Ti",
+      "Tt",
+      "T",
+      "Ta"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 333,
+    "question": "Quel est le plus grand organe lymphatique ?",
+    "choices": [
+      "Rate",
+      "Thymus",
+      "Ganglion",
+      "Amygdale"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 334,
+    "question": "Symbole chimique de l'uranium ?",
+    "choices": [
+      "Ur",
+      "U",
+      "Un",
+      "Um"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 335,
+    "question": "Quelle est l'unité de mesure de l'énergie ?",
+    "choices": [
+      "Joule",
+      "Watt",
+      "Pascal",
+      "Newton"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 336,
+    "question": "Symbole chimique du bore ?",
+    "choices": [
+      "Bo",
+      "B",
+      "Br",
+      "Be"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 337,
+    "question": "Quelle est la plus grande cellule humaine ?",
+    "choices": [
+      "Ovule",
+      "Neurone",
+      "Hépatocyte",
+      "Adipocyte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 338,
+    "question": "Symbole chimique du platine ?",
+    "choices": [
+      "Pl",
+      "Pt",
+      "Pa",
+      "Pn"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 339,
+    "question": "Quelle est la couche gazeuse autour de la Terre ?",
+    "choices": [
+      "Atmosphère",
+      "Lithosphère",
+      "Hydrosphère",
+      "Biosphère"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 340,
+    "question": "Symbole chimique du radium ?",
+    "choices": [
+      "Ra",
+      "Rd",
+      "Ru",
+      "Ri"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 341,
+    "question": "Quelle est la planète rouge ?",
+    "choices": [
+      "Vénus",
+      "Mars",
+      "Jupiter",
+      "Saturne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 342,
+    "question": "Symbole chimique du radon ?",
+    "choices": [
+      "Rn",
+      "Rd",
+      "Ra",
+      "Ro"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 343,
+    "question": "Quel est l'organe du sens auditif ?",
+    "choices": [
+      "Œil",
+      "Oreille",
+      "Nez",
+      "Peau"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 344,
+    "question": "Symbole chimique du béryllium ?",
+    "choices": [
+      "Be",
+      "Br",
+      "Bl",
+      "By"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 345,
+    "question": "Quel est le métal liquide à température ambiante ?",
+    "choices": [
+      "Or",
+      "Plomb",
+      "Mercure",
+      "Argent"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 346,
+    "question": "Symbole chimique du gallium ?",
+    "choices": [
+      "Ga",
+      "Gl",
+      "Gm",
+      "Gn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 347,
+    "question": "Quelle est la science qui étudie les fossiles ?",
+    "choices": [
+      "Géologie",
+      "Archéologie",
+      "Paléontologie",
+      "Biologie"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 348,
+    "question": "Symbole chimique du germanium ?",
+    "choices": [
+      "Ge",
+      "Gm",
+      "Gr",
+      "Gn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 349,
+    "question": "Quel est le gaz noble le plus lourd ?",
+    "choices": [
+      "Hélium",
+      "Néon",
+      "Radon",
+      "Argon"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 350,
+    "question": "Symbole chimique du vanadium ?",
+    "choices": [
+      "Va",
+      "Vn",
+      "V",
+      "Vi"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 351,
+    "question": "Quel est le symbole chimique du cadmium ?",
+    "choices": [
+      "Ca",
+      "Cd",
+      "Cm",
+      "Cn"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 352,
+    "question": "Quelle est la cellule responsable de l'immunité innée ?",
+    "choices": [
+      "Lymphocyte",
+      "Phagocyte",
+      "Neurone",
+      "Adipocyte"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 353,
+    "question": "Quel est le symbole chimique du baryum ?",
+    "choices": [
+      "Ba",
+      "Br",
+      "Bm",
+      "Bn"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 354,
+    "question": "Quelle est l'unité de mesure de l'intensité sonore ?",
+    "choices": [
+      "Hertz",
+      "Décibel",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 355,
+    "question": "Symbole chimique de l'antimoine ?",
+    "choices": [
+      "An",
+      "At",
+      "Sb",
+      "Ab"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 356,
+    "question": "Quel est le plus grand océan ?",
+    "choices": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 357,
+    "question": "Symbole chimique de l'arsenic ?",
+    "choices": [
+      "Ar",
+      "As",
+      "Ac",
+      "Ae"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 358,
+    "question": "Quelle est la science des êtres vivants ?",
+    "choices": [
+      "Géologie",
+      "Biologie",
+      "Physique",
+      "Chimie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 359,
+    "question": "Symbole chimique du césium ?",
+    "choices": [
+      "Ce",
+      "Cs",
+      "Cm",
+      "Ca"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 360,
+    "question": "Quel organe pompe le sang ?",
+    "choices": [
+      "Poumons",
+      "Foie",
+      "Cœur",
+      "Reins"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 361,
+    "question": "Symbole chimique du rubidium ?",
+    "choices": [
+      "Ru",
+      "Rb",
+      "Rd",
+      "Ri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 362,
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Terre",
+      "Mars"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 363,
+    "question": "Symbole chimique du scandium ?",
+    "choices": [
+      "Sc",
+      "Sd",
+      "Sn",
+      "Sa"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 364,
+    "question": "Quel gaz est nécessaire à la respiration ?",
+    "choices": [
+      "Azote",
+      "Oxygène",
+      "Hélium",
+      "Argon"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 365,
+    "question": "Symbole chimique du zirconium ?",
+    "choices": [
+      "Zi",
+      "Zr",
+      "Zn",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 366,
+    "question": "Quelle est la plus grande planète ?",
+    "choices": [
+      "Saturne",
+      "Jupiter",
+      "Neptune",
+      "Terre"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 367,
+    "question": "Symbole chimique du molybdène ?",
+    "choices": [
+      "Mo",
+      "My",
+      "Ml",
+      "Mb"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 368,
+    "question": "Quelle est l'unité de mesure de la force ?",
+    "choices": [
+      "Joule",
+      "Watt",
+      "Newton",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 369,
+    "question": "Symbole chimique de l'indium ?",
+    "choices": [
+      "In",
+      "Id",
+      "It",
+      "Im"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 370,
+    "question": "Quel est le métal conducteur par excellence ?",
+    "choices": [
+      "Or",
+      "Argent",
+      "Fer",
+      "Cuivre"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 371,
+    "question": "Symbole chimique du hafnium ?",
+    "choices": [
+      "Ha",
+      "Hf",
+      "Hm",
+      "Hn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 372,
+    "question": "Quelle est la température de congélation de l'eau ?",
+    "choices": [
+      "0°C",
+      "10°C",
+      "32°C",
+      "100°C"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 373,
+    "question": "Symbole chimique du tantale ?",
+    "choices": [
+      "Ta",
+      "Tt",
+      "Tl",
+      "Tn"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 374,
+    "question": "Quel est le composant principal des os ?",
+    "choices": [
+      "Calcium",
+      "Fer",
+      "Magnésium",
+      "Potassium"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 375,
+    "question": "Symbole chimique du niobium ?",
+    "choices": [
+      "Ni",
+      "Nb",
+      "No",
+      "Nu"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 376,
+    "question": "Quelle est la vitesse de la lumière ?",
+    "choices": [
+      "100 000 km/s",
+      "300 000 km/s",
+      "500 000 km/s",
+      "1 000 000 km/s"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 377,
+    "question": "Symbole chimique du rhodium ?",
+    "choices": [
+      "Ro",
+      "Rh",
+      "Rd",
+      "Ri"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 378,
+    "question": "Quel organe produit l'insuline ?",
+    "choices": [
+      "Foie",
+      "Pancréas",
+      "Reins",
+      "Cœur"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 379,
+    "question": "Symbole chimique du palladium ?",
+    "choices": [
+      "Pa",
+      "Pl",
+      "Pd",
+      "Pn"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 380,
+    "question": "Quelle est la planète rouge ?",
+    "choices": [
+      "Vénus",
+      "Jupiter",
+      "Mars",
+      "Saturne"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 381,
+    "question": "Symbole chimique du bismuth ?",
+    "choices": [
+      "Bi",
+      "Bs",
+      "Bm",
+      "Bt"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 382,
+    "question": "Quelle est l'unité de mesure de la tension électrique ?",
+    "choices": [
+      "Ampère",
+      "Ohm",
+      "Volt",
+      "Watt"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 383,
+    "question": "Symbole chimique du polonium ?",
+    "choices": [
+      "Pl",
+      "Po",
+      "Pm",
+      "Pn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 384,
+    "question": "Quel gaz est le principal moteur du réchauffement ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "CO2",
+      "Hélium"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 385,
+    "question": "Symbole chimique du thorium ?",
+    "choices": [
+      "Th",
+      "Ti",
+      "Tr",
+      "To"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 386,
+    "question": "Quelle est la cellule responsable de la vision ?",
+    "choices": [
+      "Cône",
+      "Neurone",
+      "Globule",
+      "Adipocyte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 387,
+    "question": "Symbole chimique du krypton ?",
+    "choices": [
+      "Kr",
+      "Kp",
+      "Kn",
+      "Ki"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 388,
+    "question": "Quelle est l'unité de mesure de la capacité ?",
+    "choices": [
+      "Farad",
+      "Henry",
+      "Tesla",
+      "Weber"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 389,
+    "question": "Symbole chimique du xénon ?",
+    "choices": [
+      "Xe",
+      "Xn",
+      "X",
+      "Xi"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 390,
+    "question": "Quelle est la plus grande cellule humaine ?",
+    "choices": [
+      "Ovule",
+      "Neurone",
+      "Hépatocyte",
+      "Adipocyte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 391,
+    "question": "Symbole chimique de l'iridium ?",
+    "choices": [
+      "Ir",
+      "Id",
+      "Im",
+      "In"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 392,
+    "question": "Quelle est la couche gazeuse autour de la Terre ?",
+    "choices": [
+      "Atmosphère",
+      "Lithosphère",
+      "Hydrosphère",
+      "Biosphère"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 393,
+    "question": "Symbole chimique du tellure ?",
+    "choices": [
+      "Te",
+      "Tl",
+      "Tr",
+      "Tu"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 394,
+    "question": "Quelle est la science des fossiles ?",
+    "choices": [
+      "Géologie",
+      "Archéologie",
+      "Paléontologie",
+      "Biologie"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 395,
+    "question": "Symbole chimique du radium ?",
+    "choices": [
+      "Ra",
+      "Rd",
+      "Ru",
+      "Ri"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 396,
+    "question": "Quel est le gaz le plus rare ?",
+    "choices": [
+      "Hélium",
+      "Néon",
+      "Radon",
+      "Argon"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 397,
+    "question": "Symbole chimique du radon ?",
+    "choices": [
+      "Rn",
+      "Rd",
+      "Ra",
+      "Ro"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 398,
+    "question": "Quel est l'organe du sens auditif ?",
+    "choices": [
+      "Œil",
+      "Oreille",
+      "Nez",
+      "Peau"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 399,
+    "question": "Symbole chimique du béryllium ?",
+    "choices": [
+      "Be",
+      "Br",
+      "Bl",
+      "By"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 400,
+    "question": "Quel est le métal liquide à température ambiante ?",
+    "choices": [
+      "Or",
+      "Plomb",
+      "Mercure",
+      "Argent"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 401,
+    "question": "Quel est le constituant principal de l'acier ?",
+    "choices": [
+      "Carbone",
+      "Fer",
+      "Nickel",
+      "Chrome"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 402,
+    "question": "Quelle est l'unité de mesure de la capacité électrique ?",
+    "choices": [
+      "Henry",
+      "Farad",
+      "Weber",
+      "Tesla"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 403,
+    "question": "Quel organe régule la glycémie ?",
+    "choices": [
+      "Pancréas",
+      "Foie",
+      "Estomac",
+      "Cerveau"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 404,
+    "question": "Quelle est la planète la plus proche de la Terre ?",
+    "choices": [
+      "Mars",
+      "Vénus",
+      "Mercure",
+      "Jupiter"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 405,
+    "question": "Quel est le symbole chimique de l'iode ?",
+    "choices": [
+      "Io",
+      "Id",
+      "I",
+      "Ie"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 406,
+    "question": "Quel est le nom de la galaxie la plus proche ?",
+    "choices": [
+      "Andromède",
+      "Sombrero",
+      "Triangle",
+      "Cigar"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 407,
+    "question": "Quelle est la vitesse de libération de la Terre (km/s) ?",
+    "choices": [
+      "7.2",
+      "11.2",
+      "15.4",
+      "20.1"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 408,
+    "question": "Quel est le symbole chimique du sélénium ?",
+    "choices": [
+      "Se",
+      "Sl",
+      "Sn",
+      "Sm"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 409,
+    "question": "Quelle est la température du zéro absolu (en Celsius) ?",
+    "choices": [
+      "-100",
+      "-273.15",
+      "-300",
+      "-459"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 410,
+    "question": "Quel organe transforme les nutriments en énergie ?",
+    "choices": [
+      "Mitochondries",
+      "Ribosomes",
+      "Noyau",
+      "Lysosomes"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 411,
+    "question": "Quel est le symbole chimique du cuivre ?",
+    "choices": [
+      "Co",
+      "Cu",
+      "Cr",
+      "Cp"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 412,
+    "question": "Quelle est l'unité de puissance ?",
+    "choices": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 413,
+    "question": "Quel gaz est responsable de l'odeur des œufs pourris ?",
+    "choices": [
+      "Sulfure d'hydrogène",
+      "Méthane",
+      "Ammoniac",
+      "Chlore"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 414,
+    "question": "Quelle est la protéine principale des cheveux ?",
+    "choices": [
+      "Collagène",
+      "Kératine",
+      "Élastine",
+      "Fibrine"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 415,
+    "question": "Quel est le symbole chimique du strontium ?",
+    "choices": [
+      "St",
+      "Sr",
+      "Sn",
+      "So"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 416,
+    "question": "Quelle est la couche la plus externe de la Terre ?",
+    "choices": [
+      "Noyau",
+      "Manteau",
+      "Croûte",
+      "Asthénosphère"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 417,
+    "question": "Quelle est la planète qui possède des vents dépassant 2000 km/h ?",
+    "choices": [
+      "Neptune",
+      "Jupiter",
+      "Mars",
+      "Saturne"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 418,
+    "question": "Quel organe produit les hormones thyroïdiennes ?",
+    "choices": [
+      "Thyroïde",
+      "Hypophyse",
+      "Hypothalamus",
+      "Pancréas"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 419,
+    "question": "Quel est le symbole chimique du titane ?",
+    "choices": [
+      "Ta",
+      "Ti",
+      "Tt",
+      "Th"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 420,
+    "question": "Quelle est l'unité de mesure de la radioactivité ?",
+    "choices": [
+      "Gray",
+      "Sievert",
+      "Becquerel",
+      "Curie"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 421,
+    "question": "Combien de valves possède le cœur humain ?",
+    "choices": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 422,
+    "question": "Quel gaz est utilisé dans les enseignes lumineuses ?",
+    "choices": [
+      "Hélium",
+      "Néon",
+      "Argon",
+      "Krypton"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 423,
+    "question": "Quelle est la planète la moins dense ?",
+    "choices": [
+      "Saturne",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 424,
+    "question": "Quel est le symbole chimique de l'hélium ?",
+    "choices": [
+      "H",
+      "He",
+      "Hm",
+      "Hi"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 425,
+    "question": "Quel est le sucre principal du sang ?",
+    "choices": [
+      "Fructose",
+      "Glucose",
+      "Lactose",
+      "Saccharose"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 426,
+    "question": "Quelle est la science des roches ?",
+    "choices": [
+      "Géographie",
+      "Géologie",
+      "Minéralogie",
+      "Paléontologie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 427,
+    "question": "Quel est le symbole chimique de l'or ?",
+    "choices": [
+      "Or",
+      "Au",
+      "Ag",
+      "Ar"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 428,
+    "question": "Quelle planète possède le satellite Phobos ?",
+    "choices": [
+      "Jupiter",
+      "Mars",
+      "Saturne",
+      "Uranus"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 429,
+    "question": "Quel acide est utilisé dans les batteries de voiture ?",
+    "choices": [
+      "Acétique",
+      "Sulfurique",
+      "Citrique",
+      "Chlorhydrique"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 430,
+    "question": "Quelle partie du cerveau gère la mémoire ?",
+    "choices": [
+      "Cervelet",
+      "Hippocampe",
+      "Amygdale",
+      "Tronc cérébral"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 431,
+    "question": "Quel est le symbole chimique du calcium ?",
+    "choices": [
+      "Ca",
+      "Cl",
+      "Ce",
+      "Cs"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 432,
+    "question": "Quelle planète est connue pour son 'Grand Point Rouge' ?",
+    "choices": [
+      "Mars",
+      "Jupiter",
+      "Saturne",
+      "Neptune"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 433,
+    "question": "Quel métal est le meilleur conducteur électrique ?",
+    "choices": [
+      "Or",
+      "Argent",
+      "Cuivre",
+      "Aluminium"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 434,
+    "question": "Quel gaz est indispensable à la combustion ?",
+    "choices": [
+      "Azote",
+      "Oxygène",
+      "Hélium",
+      "Dioxyde de carbone"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 435,
+    "question": "Quel est le symbole chimique du chlore ?",
+    "choices": [
+      "Ch",
+      "Cl",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 436,
+    "question": "Combien de planètes rocheuses y a-t-il dans le système solaire ?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 437,
+    "question": "Quelle vitamine est essentielle pour la vision ?",
+    "choices": [
+      "Vitamine A",
+      "Vitamine B",
+      "Vitamine C",
+      "Vitamine K"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 438,
+    "question": "Quel est le symbole chimique du mercure ?",
+    "choices": [
+      "Me",
+      "Hg",
+      "Mr",
+      "My"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 439,
+    "question": "Quelle est la structure d'ADN ?",
+    "choices": [
+      "Hélice simple",
+      "Double hélice",
+      "Feuillet bêta",
+      "Triple hélice"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 440,
+    "question": "Quel est le plus grand primate ?",
+    "choices": [
+      "Chimpanzé",
+      "Orang-outan",
+      "Gorille",
+      "Humain"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 441,
+    "question": "Quel gaz est produit par la décomposition organique ?",
+    "choices": [
+      "Méthane",
+      "Azote",
+      "Oxygène",
+      "Hélium"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 442,
+    "question": "Quelle est l'unité de mesure de la tension électrique ?",
+    "choices": [
+      "Ampère",
+      "Ohm",
+      "Volt",
+      "Watt"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 443,
+    "question": "Quelle est la planète la plus proche du Soleil ?",
+    "choices": [
+      "Vénus",
+      "Terre",
+      "Mercure",
+      "Mars"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 444,
+    "question": "Quel est le symbole chimique du fer ?",
+    "choices": [
+      "Fe",
+      "F",
+      "Fr",
+      "Ir"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 445,
+    "question": "Quel est le symbole chimique du manganèse ?",
+    "choices": [
+      "Mn",
+      "Mg",
+      "Ma",
+      "Ms"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 446,
+    "question": "Quelle est la principale source d'énergie de la Terre ?",
+    "choices": [
+      "Vent",
+      "Marées",
+      "Soleil",
+      "Géothermie"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 447,
+    "question": "Quel organe produit les globules blancs ?",
+    "choices": [
+      "Moelle osseuse",
+      "Cœur",
+      "Foie",
+      "Reins"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 448,
+    "question": "Quel est le symbole chimique du tungstène ?",
+    "choices": [
+      "Tu",
+      "W",
+      "Tg",
+      "Tn"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 449,
+    "question": "Quelle est la durée d'une année sur Mars (en jours terrestres) ?",
+    "choices": [
+      "365",
+      "480",
+      "687",
+      "950"
+    ],
+    "answer": 2,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 450,
+    "question": "Quel est le symbole chimique du carbone ?",
+    "choices": [
+      "Ca",
+      "C",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 451,
+    "question": "Quel organe permet de voir ?",
+    "choices": [
+      "Oreille",
+      "Nez",
+      "Œil",
+      "Peau"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 452,
+    "question": "Quel est le premier élément du tableau périodique ?",
+    "choices": [
+      "Hélium",
+      "Hydrogène",
+      "Lithium",
+      "Béryllium"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 453,
+    "question": "Quel est le plus grand océan ?",
+    "choices": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 454,
+    "question": "Processus par lequel les plantes créent leur nourriture ?",
+    "choices": [
+      "Respiration",
+      "Digestion",
+      "Photosynthèse",
+      "Oxydation"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 455,
+    "question": "Nom de la force qui attire les objets vers la Terre ?",
+    "choices": [
+      "Électromagnétisme",
+      "Gravité",
+      "Friction",
+      "Inertie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 456,
+    "question": "Quel est le symbole chimique de l'azote ?",
+    "choices": [
+      "Az",
+      "N",
+      "Ni",
+      "Ne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 457,
+    "question": "Combien de chambres possède le cœur humain ?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 458,
+    "question": "Qui a formulé les lois de la gravitation ?",
+    "choices": [
+      "Newton",
+      "Einstein",
+      "Kepler",
+      "Galilée"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 459,
+    "question": "Quel gaz est principalement respiré par les humains ?",
+    "choices": [
+      "Azote",
+      "Oxygène",
+      "Hélium",
+      "Argon"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 460,
+    "question": "Quel est le symbole chimique du soufre ?",
+    "choices": [
+      "Su",
+      "So",
+      "S",
+      "Sf"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 461,
+    "question": "Quelle est la température de congélation de l'eau ?",
+    "choices": [
+      "0°C",
+      "10°C",
+      "32°C",
+      "100°C"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 462,
+    "question": "Premier homme à marcher sur la Lune ?",
+    "choices": [
+      "Gagarin",
+      "Armstrong",
+      "Aldrin",
+      "Glenn"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 463,
+    "question": "Quel est le symbole chimique du néon ?",
+    "choices": [
+      "Ne",
+      "N",
+      "No",
+      "Ni"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 464,
+    "question": "Quel est le symbole chimique de l'argon ?",
+    "choices": [
+      "Ar",
+      "Ag",
+      "An",
+      "A"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 465,
+    "question": "Quel organe produit l'insuline ?",
+    "choices": [
+      "Foie",
+      "Pancréas",
+      "Reins",
+      "Cœur"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 466,
+    "question": "Quel métal est utilisé dans les câbles électriques ?",
+    "choices": [
+      "Or",
+      "Fer",
+      "Cuivre",
+      "Plomb"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 467,
+    "question": "Quel est le symbole chimique du zinc ?",
+    "choices": [
+      "Zi",
+      "Zn",
+      "Z",
+      "Ze"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 468,
+    "question": "Quel est le symbole chimique du magnésium ?",
+    "choices": [
+      "Ma",
+      "Mg",
+      "Mn",
+      "Me"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 469,
+    "question": "Plus grand désert chaud de la planète ?",
+    "choices": [
+      "Gobi",
+      "Kalahari",
+      "Sahara",
+      "Arabique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 470,
+    "question": "Planète la plus éloignée du Soleil ?",
+    "choices": [
+      "Uranus",
+      "Neptune",
+      "Pluton",
+      "Saturne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 471,
+    "question": "Planète la plus petite ?",
+    "choices": [
+      "Mars",
+      "Vénus",
+      "Mercure",
+      "Terre"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 472,
+    "question": "Unité de fréquence ?",
+    "choices": [
+      "Hertz",
+      "Volt",
+      "Watt",
+      "Ohm"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 473,
+    "question": "Planète gazeuse avec anneaux visibles ?",
+    "choices": [
+      "Jupiter",
+      "Saturne",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 474,
+    "question": "Science des étoiles ?",
+    "choices": [
+      "Astrologie",
+      "Astronomie",
+      "Géologie",
+      "Aéronautique"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 475,
+    "question": "Gaz le plus abondant dans l'atmosphère ?",
+    "choices": [
+      "Oxygène",
+      "Azote",
+      "Argon",
+      "CO2"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 476,
+    "question": "Symbole chimique du carbone ?",
+    "choices": [
+      "Ca",
+      "C",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 477,
+    "question": "Symbole chimique de l'oxygène ?",
+    "choices": [
+      "O",
+      "Ox",
+      "O2",
+      "Oz"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 478,
+    "question": "Organe permettant de respirer ?",
+    "choices": [
+      "Cœur",
+      "Poumons",
+      "Estomac",
+      "Foie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 479,
+    "question": "Symbole chimique de l'hydrogène ?",
+    "choices": [
+      "H",
+      "Hy",
+      "Hd",
+      "He"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 480,
+    "question": "Organe siège de la vision ?",
+    "choices": [
+      "Oreille",
+      "Nez",
+      "Œil",
+      "Cerveau"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 481,
+    "question": "Symbole chimique du sodium ?",
+    "choices": [
+      "So",
+      "Sd",
+      "Na",
+      "S"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 482,
+    "question": "Symbole chimique de l'argent ?",
+    "choices": [
+      "Ag",
+      "Au",
+      "Ar",
+      "As"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 483,
+    "question": "Symbole chimique de l'or ?",
+    "choices": [
+      "Or",
+      "Au",
+      "Ag",
+      "Ar"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 484,
+    "question": "Symbole chimique du chlore ?",
+    "choices": [
+      "Ch",
+      "Cl",
+      "Co",
+      "Cr"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 485,
+    "question": "Formule chimique de l'eau ?",
+    "choices": [
+      "HO2",
+      "H2O",
+      "OH2",
+      "H2O2"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 486,
+    "question": "Unité de mesure de la puissance ?",
+    "choices": [
+      "Joule",
+      "Newton",
+      "Watt",
+      "Pascal"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 487,
+    "question": "Planète la plus grande ?",
+    "choices": [
+      "Saturne",
+      "Jupiter",
+      "Neptune",
+      "Terre"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 488,
+    "question": "Symbole chimique du néon ?",
+    "choices": [
+      "Ne",
+      "N",
+      "No",
+      "Ni"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 489,
+    "question": "Quel organe pompe le sang ?",
+    "choices": [
+      "Poumons",
+      "Foie",
+      "Cœur",
+      "Reins"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 490,
+    "question": "Symbole chimique du magnésium ?",
+    "choices": [
+      "Ma",
+      "Mg",
+      "Mn",
+      "Me"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 491,
+    "question": "Quel gaz utilisé pour le gonflage des ballons ?",
+    "choices": [
+      "Hélium",
+      "Hydrogène",
+      "Oxygène",
+      "Azote"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 492,
+    "question": "Plus grand océan ?",
+    "choices": [
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 493,
+    "question": "Force qui retient au sol ?",
+    "choices": [
+      "Gravité",
+      "Friction",
+      "Poussée",
+      "Inertie"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 494,
+    "question": "Symbole chimique du fer ?",
+    "choices": [
+      "Fe",
+      "F",
+      "Fr",
+      "Ir"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 495,
+    "question": "Planète la plus proche du Soleil ?",
+    "choices": [
+      "Mercure",
+      "Vénus",
+      "Terre",
+      "Mars"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 496,
+    "question": "Satellite naturel de la Terre ?",
+    "choices": [
+      "Phobos",
+      "Deimos",
+      "La Lune",
+      "Titan"
+    ],
+    "answer": 2,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 497,
+    "question": "Symbole chimique du calcium ?",
+    "choices": [
+      "Ca",
+      "Cl",
+      "Ce",
+      "Cs"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 498,
+    "question": "Planète rouge ?",
+    "choices": [
+      "Vénus",
+      "Jupiter",
+      "Mars",
+      "Saturne"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 499,
+    "question": "Organe sens auditif ?",
+    "choices": [
+      "Œil",
+      "Oreille",
+      "Nez",
+      "Peau"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 500,
+    "question": "Science des êtres vivants ?",
+    "choices": [
+      "Géologie",
+      "Biologie",
+      "Physique",
+      "Chimie"
+    ],
+    "answer": 1,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 501,
+    "question": "Quel est le seul métal qui ne réagit pas avec l'acide nitrique seul ?",
+    "choices": [
+      "Or",
+      "Argent",
+      "Cuivre",
+      "Platine"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 502,
+    "question": "Quel est l'inventeur de la machine à vapeur moderne ?",
+    "choices": [
+      "James Watt",
+      "Thomas Edison",
+      "Nikola Tesla",
+      "Isaac Newton"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 503,
+    "question": "Quelle est la mesure de la pression atmosphérique au niveau de la mer en hPa ?",
+    "choices": [
+      "900",
+      "1013",
+      "1150",
+      "850"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 504,
+    "question": "Quelle maladie est causée par une carence en vitamine C ?",
+    "choices": [
+      "Rachitisme",
+      "Béri-béri",
+      "Scorbut",
+      "Pellagre"
+    ],
+    "answer": 2,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 505,
+    "question": "Quel est le nom du processus de division cellulaire sexuelle ?",
+    "choices": [
+      "Mitose",
+      "Méiose",
+      "Fission",
+      "Bourgeonnement"
+    ],
+    "answer": 1,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 506,
+    "question": "Quelle est la deuxième loi de la thermodynamique liée à ?",
+    "choices": [
+      "Énergie",
+      "Entropie",
+      "Masse",
+      "Vitesse"
+    ],
+    "answer": 1,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 507,
+    "question": "Quel est le principal minerai d'aluminium ?",
+    "choices": [
+      "Bauxite",
+      "Hématite",
+      "Galène",
+      "Pyrite"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 508,
+    "question": "Quelle est la vitesse de libération de la Lune (en km/s) ?",
+    "choices": [
+      "2.38",
+      "11.2",
+      "5.4",
+      "1.5"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 509,
+    "question": "Quel est le nom de la vallée la plus profonde connue dans le système solaire ?",
+    "choices": [
+      "Valles Marineris",
+      "Grand Canyon",
+      "Rift Valley",
+      "Olympus Mons"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 510,
+    "question": "Quel acide est produit lors d'un effort physique intense par les muscles ?",
+    "choices": [
+      "Acide lactique",
+      "Acide citrique",
+      "Acide sulfurique",
+      "Acide malique"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 511,
+    "question": "Quelle planète possède un jour plus long que son année ?",
+    "choices": [
+      "Vénus",
+      "Mercure",
+      "Mars",
+      "Neptune"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 512,
+    "question": "Quel scientifique a découvert les rayons X ?",
+    "choices": [
+      "Roentgen",
+      "Curie",
+      "Becquerel",
+      "Einstein"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 513,
+    "question": "Quel est le composant principal du verre ?",
+    "choices": [
+      "Silice",
+      "Carbonate de calcium",
+      "Alumine",
+      "Plomb"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 514,
+    "question": "Quel est l'élément chimique le plus électronégatif ?",
+    "choices": [
+      "Fluor",
+      "Oxygène",
+      "Chlore",
+      "Azote"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 515,
+    "question": "Quel est l'organe du corps humain qui possède le plus de bactéries ?",
+    "choices": [
+      "Côlon",
+      "Estomac",
+      "Foie",
+      "Poumons"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 516,
+    "question": "Quelle est la durée moyenne d'un cycle menstruel humain ?",
+    "choices": [
+      "28 jours",
+      "20 jours",
+      "35 jours",
+      "40 jours"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 517,
+    "question": "Quelle est la masse volumique de l'eau pure en g/cm³ ?",
+    "choices": [
+      "1",
+      "0.5",
+      "2",
+      "0.8"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 518,
+    "question": "Quel est le nom de la protéine qui transporte le fer dans le sang ?",
+    "choices": [
+      "Transferrine",
+      "Ferritine",
+      "Hémoglobine",
+      "Albumine"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 519,
+    "question": "Quelle est la planète gazeuse qui tourne sur le côté (axe très incliné) ?",
+    "choices": [
+      "Uranus",
+      "Neptune",
+      "Saturne",
+      "Jupiter"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 520,
+    "question": "Quel physicien a proposé le principe d'incertitude ?",
+    "choices": [
+      "Heisenberg",
+      "Bohr",
+      "Schrödinger",
+      "Planck"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 521,
+    "question": "Quelle est l'unité de mesure de l'éclairement lumineux ?",
+    "choices": [
+      "Lux",
+      "Lumen",
+      "Candela",
+      "Watt"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 522,
+    "question": "Quel gaz est produit par les volcans en grande quantité ?",
+    "choices": [
+      "Dioxyde de soufre",
+      "Méthane",
+      "Azote",
+      "Hélium"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 523,
+    "question": "Quel est le nom du muscle cardiaque ?",
+    "choices": [
+      "Myocarde",
+      "Péricarde",
+      "Endocarde",
+      "Épicarde"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 524,
+    "question": "Quel est le diamètre approximatif de la Terre en km ?",
+    "choices": [
+      "12 700",
+      "6 400",
+      "20 000",
+      "40 000"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 525,
+    "question": "Quelle est la période orbitale de la Lune autour de la Terre ?",
+    "choices": [
+      "27.3 jours",
+      "24 heures",
+      "30 jours",
+      "365 jours"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 526,
+    "question": "Quel est l'isotope le plus courant de l'hydrogène ?",
+    "choices": [
+      "Protium",
+      "Deutérium",
+      "Tritium",
+      "Hélium"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 527,
+    "question": "Quelle est la principale fonction du foie ?",
+    "choices": [
+      "Détoxification",
+      "Digestion",
+      "Pompage",
+      "Filtration"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 528,
+    "question": "Quelle est la température du soleil à sa surface (Kelvin) ?",
+    "choices": [
+      "5 800",
+      "2 000",
+      "10 000",
+      "1 000"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 529,
+    "question": "Quel est le gaz utilisé dans les ampoules à incandescence pour éviter l'oxydation ?",
+    "choices": [
+      "Argon",
+      "Azote",
+      "Hélium",
+      "Xénon"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 530,
+    "question": "Quelle est la distance moyenne Terre-Lune (km) ?",
+    "choices": [
+      "384 000",
+      "150 000",
+      "500 000",
+      "100 000"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 531,
+    "question": "Quel est le type de roche formé par refroidissement du magma ?",
+    "choices": [
+      "Igneuse",
+      "Sédimentaire",
+      "Métamorphique",
+      "Calcaire"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 532,
+    "question": "Quel est l'organe qui régule la température corporelle ?",
+    "choices": [
+      "Hypothalamus",
+      "Cervelet",
+      "Cerveau",
+      "Peau"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 533,
+    "question": "Quel est le nom du plus petit os de l'oreille moyenne ?",
+    "choices": [
+      "Étrier",
+      "Enclume",
+      "Marteau",
+      "Stapès"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 534,
+    "question": "Quel élément est au centre de la molécule d'hémoglobine ?",
+    "choices": [
+      "Fer",
+      "Magnésium",
+      "Calcium",
+      "Zinc"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 535,
+    "question": "Quelle est la galaxie dont fait partie le Soleil ?",
+    "choices": [
+      "Voie lactée",
+      "Andromède",
+      "Triangle",
+      "Cigar"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 536,
+    "question": "Quelle est la forme géométrique d'une orbite planétaire ?",
+    "choices": [
+      "Ellipse",
+      "Cercle",
+      "Parabole",
+      "Hyperbole"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 537,
+    "question": "Quel est l'élément métallique le plus abondant dans le corps humain ?",
+    "choices": [
+      "Calcium",
+      "Fer",
+      "Potassium",
+      "Sodium"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 538,
+    "question": "Quelle est l'unité de mesure de l'angle solide ?",
+    "choices": [
+      "Stéradian",
+      "Radian",
+      "Degré",
+      "Grade"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 539,
+    "question": "Quel gaz est le principal composant de l'atmosphère de Vénus ?",
+    "choices": [
+      "CO2",
+      "Azote",
+      "Oxygène",
+      "Hélium"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 540,
+    "question": "Quel est le nom de la ligne imaginaire traversant les pôles ?",
+    "choices": [
+      "Axe de rotation",
+      "Équateur",
+      "Tropique",
+      "Méridien"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 541,
+    "question": "Quel phénomène cause les marées ?",
+    "choices": [
+      "Gravité lunaire",
+      "Vent",
+      "Température",
+      "Rotation terrestre"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 542,
+    "question": "Quelle est l'unité de mesure de la pression ?",
+    "choices": [
+      "Pascal",
+      "Joule",
+      "Watt",
+      "Newton"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 543,
+    "question": "Quel est le nom du gaz inerte le plus abondant dans l'atmosphère ?",
+    "choices": [
+      "Argon",
+      "Néon",
+      "Hélium",
+      "Krypton"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 544,
+    "question": "Quelle est la cellule capable de phagocytose ?",
+    "choices": [
+      "Macrophage",
+      "Neurone",
+      "Adipocyte",
+      "Myocyte"
+    ],
+    "answer": 0,
+    "difficulty": "hard",
+    "category": "Science",
+    "points": 15
+  },
+  {
+    "id": 545,
+    "question": "Quel est le nom de la couche de la peau la plus profonde ?",
+    "choices": [
+      "Hypoderme",
+      "Derme",
+      "Épiderme",
+      "Cornée"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 546,
+    "question": "Quelle est la formule chimique du sel de table ?",
+    "choices": [
+      "NaCl",
+      "KCl",
+      "CaCl2",
+      "MgCl2"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  },
+  {
+    "id": 547,
+    "question": "Quel est l'organe qui filtre les déchets du sang ?",
+    "choices": [
+      "Reins",
+      "Foie",
+      "Cœur",
+      "Poumons"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 548,
+    "question": "Quelle est l'unité de mesure de la charge électrique ?",
+    "choices": [
+      "Coulomb",
+      "Ampère",
+      "Volt",
+      "Farad"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 549,
+    "question": "Quel est le nom de la vitesse constante de la lumière ?",
+    "choices": [
+      "C",
+      "V",
+      "E",
+      "M"
+    ],
+    "answer": 0,
+    "difficulty": "medium",
+    "category": "Science",
+    "points": 10
+  },
+  {
+    "id": 550,
+    "question": "Quel est le nom de l'échelle de mesure des séismes ?",
+    "choices": [
+      "Richter",
+      "Celsius",
+      "Kelvin",
+      "Beaufort"
+    ],
+    "answer": 0,
+    "difficulty": "easy",
+    "category": "Science",
+    "points": 5
+  }
+]
