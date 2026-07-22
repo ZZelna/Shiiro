@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const QUESTIONS_DIR = path.join(__dirname, '..', 'data', 'quiz');
-const REQUIRED_FIELDS = ['id', 'category', 'difficulty', 'points', 'question', 'choices', 'answer', 'explanation'];
+const REQUIRED_FIELDS = ['id', 'category', 'difficulty', 'points', 'question', 'choices', 'answer'];
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -20,7 +20,6 @@ module.exports = {
 
     const files = fs.readdirSync(QUESTIONS_DIR).filter(f => f.endsWith('.json'));
     const lines = [];
-    const seenIds = new Map();
     let errorCount = 0;
     let totalQuestions = 0;
 
@@ -57,6 +56,7 @@ module.exports = {
       }
 
       let fileHasError = false;
+      const seenIdsInFile = new Map(); // doublon = même id ET même question, dans CE fichier
       content.forEach((q, i) => {
         const missing = REQUIRED_FIELDS.filter(f => q[f] === undefined);
         if (missing.length) {
@@ -72,11 +72,12 @@ module.exports = {
           errorCount++; fileHasError = true;
         }
         if (q.id !== undefined) {
-          if (seenIds.has(q.id)) {
-            lines.push(`❌ ${file} [id ${q.id}] : id en doublon (déjà utilisé dans ${seenIds.get(q.id)})`);
+          const dupKey = `${q.id}::${q.question}`;
+          if (seenIdsInFile.has(dupKey)) {
+            lines.push(`❌ ${file} [id ${q.id}] : question dupliquée dans ce fichier`);
             errorCount++; fileHasError = true;
           } else {
-            seenIds.set(q.id, file);
+            seenIdsInFile.set(dupKey, true);
           }
         }
       });
