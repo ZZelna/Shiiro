@@ -148,11 +148,10 @@ function buildQuestionContainer(question, { reveal = false } = {}) {
 
   if (reveal) {
     container.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
-    container.addTextDisplayComponents(
-      new TextDisplayBuilder().setContent(
-        `✅ **Bonne réponse : ${question.choices[question.answer]}**\n💡 ${question.explanation}`
-      )
-    );
+    const revealText = question.explanation
+      ? `✅ **Bonne réponse : ${question.choices[question.answer]}**\n💡 ${question.explanation}`
+      : `✅ **Bonne réponse : ${question.choices[question.answer]}**`;
+    container.addTextDisplayComponents(new TextDisplayBuilder().setContent(revealText));
   }
 
   return container;
