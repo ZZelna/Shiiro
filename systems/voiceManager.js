@@ -54,20 +54,34 @@ async function deleteVoice(channel) {
         channelId: channel.id
     });
 
-    // Ce n'est pas un vocal temporaire
     if (!data) return;
 
-    // Il y a encore quelqu'un dedans
-    if (channel.members.size > 0) return;
+    // Si quelqu'un est encore dans le vocal
+    if (channel.members.size > 0) {
 
+        // Si l'ancien propriétaire est toujours présent
+        if (channel.members.has(data.ownerId)) return;
+
+        // Nouveau propriétaire
+        const newOwner = channel.members.first();
+
+        if (!newOwner) return;
+
+        data.ownerId = newOwner.id;
+
+        await data.save();
+
+        return;
+
+    }
+
+    // Plus personne dans le salon
     setTimeout(async () => {
 
         const refreshed = channel.guild.channels.cache.get(channel.id);
 
-        // Le salon a déjà été supprimé
         if (!refreshed) return;
 
-        // Quelqu'un est revenu entre-temps
         if (refreshed.members.size > 0) return;
 
         await VoiceChannel.deleteOne({
