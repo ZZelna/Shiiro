@@ -10,12 +10,12 @@ const {
 
 // 🔧 Configure ici les rôles de pings proposés aux membres
 const PING_ROLES = [
-    { id: "ID_ROLE_ANIMATIONS", label: "Animations Ping", emoji: "📌" },
-    { id: "ID_ROLE_CASINO", label: "Casino Ping", emoji: "📌" },
-    { id: "ID_ROLE_NITRO", label: "Nitro Ping", emoji: "📌" },
-    { id: "ID_ROLE_PARTENARIATS", label: "Partenariats Ping", emoji: "📌" },
-    { id: "ID_ROLE_RECRUTEMENT", label: "Recrutement Ping", emoji: "🎭" },
-    { id: "ID_ROLE_NOUVEAUTES", label: "Ping nouveautés", emoji: "📌" },
+    { id: "1507068883541032970", label: "Animations Ping", emoji: "🧩" },
+    { id: "1507068991624056992", label: "Casino Ping", emoji: "💴" },
+    { id: "1509970024167903352", label: "Nitro Ping", emoji: "🔮" },
+    { id: "1507068934912999535", label: "Partenariats Ping", emoji: "🤝" },
+    { id: "1508529433269633204", label: "Recrutement Ping", emoji: "🛡️" },
+    { id: "1515021439927980192", label: "Ping nouveautés", emoji: "🎭" },
 ];
 
 // Construit le message Components V2 avec l'état actuel des boutons
