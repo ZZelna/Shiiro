@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shiiro Profile</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="profile">
+
+    <!-- Bannière -->
+    <div class="banner">
+        <img src="{{BANNER}}" alt="">
+    </div>
+
+    <!-- Carte principale -->
+    <div class="card">
+
+        <!-- Avatar -->
+        <div class="avatar-container">
+
+            <img class="frame" src="{{FRAME}}" alt="">
+
+            <img class="avatar"
+                 src="{{AVATAR}}"
+                 alt="">
+
+        </div>
+
+        <!-- Nom -->
+
+        <h1 class="username">
+
+            {{USERNAME}}
+
+        </h1>
+
+        <!-- Prestige -->
+
+        <div class="prestige">
+
+            👑 Prestige {{PRESTIGE}}
+
+        </div>
+
+        <!-- Titre -->
+
+        <div class="title">
+
+            {{TITLE}}
+
+        </div>
+
+        <!-- Barre XP -->
+
+        <section class="section">
+
+            <h2>
+
+                📈 Progression
+
+            </h2>
+
+            <div class="level">
+
+                Niveau {{LEVEL}}
+
+            </div>
+
+            <div class="xp-bar">
+
+                <div class="xp-fill"
+                     style="width:{{XP_PERCENT}}%">
+                </div>
+
+            </div>
+
+            <div class="xp-text">
+
+                {{XP}} / {{NEXT_LEVEL}}
+
+            </div>
+
+        </section>
+
+        <!-- Économie -->
+
+        <section class="section">
+
+            <h2>
+
+                💴 Économie
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="box">
+
+                    <span>Yens</span>
+
+                    <strong>
+
+                        {{YENS}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Banque</span>
+
+                    <strong>
+
+                        {{BANK}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Gifts</span>
+
+                    <strong>
+
+                        {{GIFTS}}
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Quiz -->
+
+        <section class="section">
+
+            <h2>
+
+                🧠 Quiz
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="box">
+
+                    <span>Questions</span>
+
+                    <strong>
+
+                        {{QUESTIONS}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Réussite</span>
+
+                    <strong>
+
+                        {{ACCURACY}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Streak</span>
+
+                    <strong>
+
+                        {{STREAK}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Record</span>
+
+                    <strong>
+
+                        {{BEST_STREAK}}
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Récompenses -->
+
+        <section class="section">
+
+            <h2>
+
+                🏆 Récompenses
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="box">
+
+                    <span>Badges</span>
+
+                    <strong>
+
+                        {{BADGES}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Titres</span>
+
+                    <strong>
+
+                        {{TITLES}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Cadre</span>
+
+                    <strong>
+
+                        {{FRAME_NAME}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Aura</span>
+
+                    <strong>
+
+                        {{AURA}}
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Classements -->
+
+        <section class="section">
+
+            <h2>
+
+                🥇 Classements
+
+            </h2>
+
+            <div class="grid">
+
+                <div class="box">
+
+                    <span>Global</span>
+
+                    <strong>
+
+                        #{{GLOBAL}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Quiz</span>
+
+                    <strong>
+
+                        #{{QUIZ_RANK}}
+
+                    </strong>
+
+                </div>
+
+                <div class="box">
+
+                    <span>Fortune</span>
+
+                    <strong>
+
+                        #{{RICH_RANK}}
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
