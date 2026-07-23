@@ -258,7 +258,6 @@ async function executeDuel(interaction) {
   );
 
   const inviteMessage = await channel.send({
-    content: `${opponent}`,
     flags: MessageFlags.IsComponentsV2,
     components: [buildInviteContainer(null, inviteRow)],
   });
@@ -488,7 +487,6 @@ async function executeDuo2v2(interaction) {
   );
 
   const inviteMessage = await channel.send({
-    content: `${teammate} ${opp1} ${opp2}`,
     flags: MessageFlags.IsComponentsV2,
     components: [buildInviteContainer(null, inviteRow)],
   });
