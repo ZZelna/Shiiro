@@ -1,0 +1,126 @@
+/* ======================================================
+                    SHIIRO RESPONSIVE
+====================================================== */
+
+/* ==========================
+        GRANDS ÉCRANS
+========================== */
+
+@media (min-width:1600px){
+
+    .profile-container{
+
+        max-width:1600px;
+
+    }
+
+}
+
+/* ==========================
+        LAPTOP
+========================== */
+
+@media (max-width:1200px){
+
+    .profile-container{
+
+        width:95%;
+
+    }
+
+}
+
+/* ==========================
+        TABLETTE
+========================== */
+
+@media (max-width:900px){
+
+    .profile-header{
+
+        flex-direction:column;
+        text-align:center;
+
+    }
+
+    .profile-avatar{
+
+        margin-bottom:20px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================
+        MOBILE
+========================== */
+
+@media (max-width:650px){
+
+    body{
+
+        padding:20px;
+
+    }
+
+    .profile-container{
+
+        width:100%;
+
+        border-radius:18px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .banner{
+
+        height:180px;
+
+    }
+
+    .profile-avatar{
+
+        width:120px;
+        height:120px;
+
+    }
+
+}
+
+/* ==========================
+        PETIT MOBILE
+========================== */
+
+@media (max-width:420px){
+
+    .profile-avatar{
+
+        width:95px;
+        height:95px;
+
+    }
+
+    .username{
+
+        font-size:22px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+}
