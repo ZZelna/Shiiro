@@ -19,6 +19,9 @@ const SOLO_ANSWER_TIME_MS = 20_000;
 const DUEL_CHALLENGE_TIMEOUT_MS = 60_000;
 const DUEL_ROUND_TIME_MS = 15_000;
 const DUEL_WIN_XP_BONUS = 20;
+const DUO_CHALLENGE_TIMEOUT_MS = 90_000;
+const DUO_ROUND_TIME_MS = 20_000;
+const DUO_TEAM_WIN_XP_BONUS = 15;
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -51,12 +54,31 @@ module.exports = {
             .addChoices({ name: '3', value: 3 }, { name: '5', value: 5 }, { name: '10', value: 10 })
             .setRequired(false)
         )
+    )
+    .addSubcommand(sub =>
+      sub.setName('duo2v2')
+        .setDescription('Défie une autre équipe de 2 en 2v2')
+        .addUserOption(option =>
+          option.setName('coequipier').setDescription('Ton coéquipier').setRequired(true)
+        )
+        .addUserOption(option =>
+          option.setName('adversaire1').setDescription('Premier adversaire').setRequired(true)
+        )
+        .addUserOption(option =>
+          option.setName('adversaire2').setDescription('Second adversaire').setRequired(true)
+        )
+        .addIntegerOption(option =>
+          option.setName('manches').setDescription('Nombre de questions (défaut : 5)')
+            .addChoices({ name: '3', value: 3 }, { name: '5', value: 5 }, { name: '10', value: 10 })
+            .setRequired(false)
+        )
     ),
 
   async execute(interaction) {
     const subcommand = interaction.options.getSubcommand();
     if (subcommand === 'solo') return executeSolo(interaction);
     if (subcommand === 'duel') return executeDuel(interaction);
+    if (subcommand === 'duo2v2') return executeDuo2v2(interaction);
   },
 };
 
@@ -392,6 +414,242 @@ async function executeDuel(interaction) {
 
   const finalContainer = new ContainerBuilder().setAccentColor(0x57F287);
   finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 🏁 Fin du duel'));
+  finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(resultText));
+
+  await channel.send({ flags: MessageFlags.IsComponentsV2, components: [finalContainer] });
+}
+
+// =========================================================
+// /quiz duo2v2
+// =========================================================
+async function executeDuo2v2(interaction) {
+  const teammate = interaction.options.getUser('coequipier');
+  const opp1 = interaction.options.getUser('adversaire1');
+  const opp2 = interaction.options.getUser('adversaire2');
+  const rounds = interaction.options.getInteger('manches') ?? 5;
+
+  const teamA = [interaction.user, teammate];
+  const teamB = [opp1, opp2];
+  const allPlayers = [...teamA, ...teamB];
+
+  const ids = allPlayers.map(p => p.id);
+  if (new Set(ids).size !== 4) {
+    return interaction.reply({ content: '❌ Les 4 joueurs doivent être distincts.', ephemeral: true });
+  }
+  if (allPlayers.some(p => p.bot)) {
+    return interaction.reply({ content: '❌ Aucun des 4 joueurs ne peut être un bot.', ephemeral: true });
+  }
+
+  const config = await GuildConfig.findOne({ guildId: interaction.guild.id });
+  const channelId = config?.channels?.duo2v2;
+  if (!channelId) {
+    return interaction.reply({
+      content: "❌ Le salon duo-2v2 n'est pas configuré. Un admin doit d'abord utiliser `/setup-arene`.",
+      ephemeral: true,
+    });
+  }
+  const channel = await interaction.guild.channels.fetch(channelId).catch(() => null);
+  if (!channel) {
+    return interaction.reply({ content: '❌ Le salon duo-2v2 est introuvable.', ephemeral: true });
+  }
+
+  await interaction.reply({ content: `👥 Défi 2v2 envoyé dans ${channel} !`, ephemeral: true });
+
+  // --- Étape 1 : invitation (les 3 autres joueurs doivent accepter) ---
+  const toConfirm = [teammate, opp1, opp2];
+  const confirmedIds = new Set();
+
+  const buildInviteContainer = (statusLine, rowComponents) => {
+    const c = new ContainerBuilder().setAccentColor(0x5865F2);
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 👥 Défi 2v2 lancé !'));
+    c.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(
+        `**Équipe A** : ${teamA.join(' & ')}\n**Équipe B** : ${teamB.join(' & ')}\n` +
+        `(${rounds} questions)\n\n${teammate}, ${opp1}, ${opp2} — cliquez sur Accepter pour confirmer votre présence.`
+      )
+    );
+    c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    c.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(
+        `✅ Confirmé(s) : ${confirmedIds.size ? [...confirmedIds].map(id => `<@${id}>`).join(', ') : 'aucun'}`
+      )
+    );
+    if (statusLine) {
+      c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+      c.addTextDisplayComponents(new TextDisplayBuilder().setContent(statusLine));
+    }
+    if (rowComponents) c.addActionRowComponents(rowComponents);
+    return c;
+  };
+
+  const inviteRow = new ActionRowBuilder().addComponents(
+    new ButtonBuilder().setCustomId('duo_accept').setLabel('Accepter').setStyle(ButtonStyle.Success),
+    new ButtonBuilder().setCustomId('duo_decline').setLabel('Refuser').setStyle(ButtonStyle.Danger),
+  );
+
+  const inviteMessage = await channel.send({
+    content: `${teammate} ${opp1} ${opp2}`,
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildInviteContainer(null, inviteRow)],
+  });
+
+  const disabledInviteRow = new ActionRowBuilder().addComponents(
+    ButtonBuilder.from(inviteRow.components[0]).setDisabled(true),
+    ButtonBuilder.from(inviteRow.components[1]).setDisabled(true),
+  );
+
+  const outcome = await new Promise(resolve => {
+    const collector = inviteMessage.createMessageComponentCollector({
+      componentType: ComponentType.Button,
+      time: DUO_CHALLENGE_TIMEOUT_MS,
+      filter: i => toConfirm.some(p => p.id === i.user.id),
+    });
+
+    collector.on('collect', async i => {
+      if (i.customId === 'duo_decline') {
+        await i.reply({ content: 'Défi refusé.', ephemeral: true });
+        collector.stop('declined');
+        return;
+      }
+      confirmedIds.add(i.user.id);
+      await i.update({ flags: MessageFlags.IsComponentsV2, components: [buildInviteContainer(null, inviteRow)] });
+      if (confirmedIds.size === 3) collector.stop('confirmed');
+    });
+
+    collector.on('end', (_collected, reason) => resolve(reason));
+  });
+
+  if (outcome !== 'confirmed') {
+    const statusLine = outcome === 'declined' ? '❌ Un des joueurs a refusé le défi.' : '⌛ Défi expiré, tout le monde n\'a pas confirmé.';
+    return inviteMessage.edit({
+      flags: MessageFlags.IsComponentsV2,
+      components: [buildInviteContainer(statusLine, disabledInviteRow)],
+    });
+  }
+
+  await inviteMessage.edit({
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildInviteContainer('✅ Tout le monde a confirmé ! Ça commence...', disabledInviteRow)],
+  });
+
+  // --- Étape 2 : les manches ---
+  const teamScores = { A: 0, B: 0 };
+  const playerScores = Object.fromEntries(allPlayers.map(p => [p.id, 0]));
+  const playerCorrect = Object.fromEntries(allPlayers.map(p => [p.id, 0]));
+  const teamOf = id => (teamA.some(p => p.id === id) ? 'A' : 'B');
+
+  for (let round = 1; round <= rounds; round++) {
+    const question = pickQuestion({});
+    if (!question) break;
+
+    const row = new ActionRowBuilder().addComponents(
+      question.choices.map((choice, i) =>
+        new ButtonBuilder()
+          .setCustomId(`duoans_${i}`)
+          .setLabel(`${LETTERS[i]}. ${choice}`)
+          .setStyle(ButtonStyle.Secondary)
+      )
+    );
+
+    const container = new ContainerBuilder().setAccentColor(0x5865F2);
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`### 👥 2v2 — Manche ${round}/${rounds}`)
+    );
+    container.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    container.addTextDisplayComponents(new TextDisplayBuilder().setContent(question.question));
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(
+        `-# Chacun répond pour son équipe • ${question.points} points • ${DUO_ROUND_TIME_MS / 1000}s`
+      )
+    );
+    container.addActionRowComponents(row);
+
+    const roundMessage = await channel.send({ flags: MessageFlags.IsComponentsV2, components: [container] });
+
+    const answered = new Set();
+    const roundCorrect = [];
+
+    const collector = roundMessage.createMessageComponentCollector({
+      componentType: ComponentType.Button,
+      time: DUO_ROUND_TIME_MS,
+      filter: i => allPlayers.some(p => p.id === i.user.id),
+    });
+
+    await new Promise(resolve => {
+      collector.on('collect', async i => {
+        if (answered.has(i.user.id)) {
+          return i.reply({ content: 'Tu as déjà répondu à cette manche.', ephemeral: true });
+        }
+        answered.add(i.user.id);
+
+        const isCorrect = Number(i.customId.split('_')[1]) === question.answer;
+        if (isCorrect) {
+          const team = teamOf(i.user.id);
+          teamScores[team] += question.points;
+          playerScores[i.user.id] += question.points;
+          playerCorrect[i.user.id] += 1;
+          roundCorrect.push(i.user.id);
+          await i.reply({ content: `✅ Bonne réponse ! +${question.points} points pour l'équipe ${team}`, ephemeral: true });
+        } else {
+          await i.reply({ content: '❌ Mauvaise réponse.', ephemeral: true });
+        }
+      });
+
+      collector.on('end', () => resolve());
+    });
+
+    const disabledRow = new ActionRowBuilder().addComponents(
+      row.components.map(btn => ButtonBuilder.from(btn).setDisabled(true))
+    );
+    const foundText = roundCorrect.length
+      ? `🎯 Ont trouvé : ${roundCorrect.map(id => `<@${id}>`).join(', ')}`
+      : "😶 Personne n'a trouvé.";
+
+    const revealContainer = new ContainerBuilder().setAccentColor(0x5865F2);
+    revealContainer.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`### 👥 2v2 — Manche ${round}/${rounds}`)
+    );
+    revealContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    revealContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(question.question));
+    revealContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    revealContainer.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(
+        `✅ **Bonne réponse : ${question.choices[question.answer]}**\n${foundText}\n` +
+        `📊 Score actuel — Équipe A : **${teamScores.A}** • Équipe B : **${teamScores.B}**`
+      )
+    );
+    revealContainer.addActionRowComponents(disabledRow);
+
+    await roundMessage.edit({ flags: MessageFlags.IsComponentsV2, components: [revealContainer] }).catch(() => {});
+  }
+
+  // --- Étape 3 : résultat final ---
+  let resultText;
+  let winningTeam = null;
+
+  if (teamScores.A === teamScores.B) {
+    resultText = `🤝 Égalité parfaite ! Équipe A ${teamScores.A} - ${teamScores.B} Équipe B`;
+  } else {
+    winningTeam = teamScores.A > teamScores.B ? teamA : teamB;
+    const label = teamScores.A > teamScores.B ? 'A' : 'B';
+    resultText = `🏆 L'équipe ${label} (${winningTeam.join(' & ')}) remporte le 2v2 ! ` +
+      `(${Math.max(teamScores.A, teamScores.B)} - ${Math.min(teamScores.A, teamScores.B)})`;
+  }
+
+  for (const player of allPlayers) {
+    const profile = await getOrCreateProfile(player.id, interaction.guild.id);
+    let xpGain = playerScores[player.id];
+    if (winningTeam && winningTeam.some(p => p.id === player.id)) xpGain += DUO_TEAM_WIN_XP_BONUS;
+    profile.xp += xpGain;
+    profile.level = levelFromXp(profile.xp);
+    profile.questionsAnswered += rounds;
+    profile.questionsCorrect += playerCorrect[player.id];
+    profile.lastPlayedAt = new Date();
+    await profile.save();
+  }
+
+  const finalContainer = new ContainerBuilder().setAccentColor(0x57F287);
+  finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 🏁 Fin du 2v2'));
   finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(resultText));
 
   await channel.send({ flags: MessageFlags.IsComponentsV2, components: [finalContainer] });
