@@ -28,20 +28,26 @@ function buildPingContainer(member) {
         )
         .addSeparatorComponents(new SeparatorBuilder());
 
-    const row = new ActionRowBuilder();
+    // Discord limite chaque ActionRow à 5 boutons max, on découpe donc par groupes de 5
+    const MAX_BUTTONS_PER_ROW = 5;
+    for (let i = 0; i < PING_ROLES.length; i += MAX_BUTTONS_PER_ROW) {
+        const chunk = PING_ROLES.slice(i, i + MAX_BUTTONS_PER_ROW);
+        const row = new ActionRowBuilder();
 
-    for (const role of PING_ROLES) {
-        const hasRole = member.roles.cache.has(role.id);
-        row.addComponents(
-            new ButtonBuilder()
-                .setCustomId(`ping_toggle_${role.id}`)
-                .setLabel(role.label)
-                .setEmoji(role.emoji)
-                .setStyle(hasRole ? ButtonStyle.Success : ButtonStyle.Secondary)
-        );
+        for (const role of chunk) {
+            const hasRole = member.roles.cache.has(role.id);
+            row.addComponents(
+                new ButtonBuilder()
+                    .setCustomId(`ping_toggle_${role.id}`)
+                    .setLabel(role.label)
+                    .setEmoji(role.emoji)
+                    .setStyle(hasRole ? ButtonStyle.Success : ButtonStyle.Secondary)
+            );
+        }
+
+        container.addActionRowComponents(row);
     }
 
-    container.addActionRowComponents(row);
     return container;
 }
 
@@ -54,7 +60,7 @@ module.exports = async (interaction) => {
     const role = interaction.guild.roles.cache.get(roleId);
 
     if (!role) {
-        return interaction.reply({ content: "❌ Ce rôle n'existe plus.", ephemeral: true });
+        return interaction.reply({ content: "❌ Ce rôle n'existe plus.", flags: MessageFlags.Ephemeral });
     }
 
     const member = interaction.member;
@@ -70,7 +76,7 @@ module.exports = async (interaction) => {
         console.error(err);
         return interaction.reply({
             content: "❌ Je n'ai pas la permission de gérer ce rôle (vérifie la hiérarchie des rôles).",
-            ephemeral: true,
+            flags: MessageFlags.Ephemeral,
         });
     }
 
