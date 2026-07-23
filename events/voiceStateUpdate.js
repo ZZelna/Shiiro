@@ -1,21 +1,43 @@
-const { createVoice } = require("../systems/voiceManager");
+const {
+    createVoice,
+    deleteVoice
+} = require("../systems/voiceManager");
+
 const config = require("../config/voiceConfig");
 
 module.exports = async (oldState, newState) => {
 
-    if (!newState.member) return;
+    // Création du salon
+    if (
+        newState.member &&
+        newState.channel &&
+        newState.channel.id === config.createChannelId
+    ) {
 
-    if (!newState.channel) return;
+        try {
 
-    if (newState.channel.id !== config.createChannelId) return;
+            await createVoice(newState.member);
 
-    try {
+        } catch (err) {
 
-        await createVoice(newState.member);
+            console.error("[VOICE CREATE]", err);
 
-    } catch (err) {
+        }
 
-        console.error("[VOICE CREATE]", err);
+    }
+
+    // Suppression du salon vide
+    if (oldState.channel) {
+
+        try {
+
+            await deleteVoice(oldState.channel);
+
+        } catch (err) {
+
+            console.error("[VOICE DELETE]", err);
+
+        }
 
     }
 
