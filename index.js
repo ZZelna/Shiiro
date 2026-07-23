@@ -1373,8 +1373,9 @@ client.on("guildBanRemove", async (ban) => {
 });
 
 // ─── VoiceStats ───────────────────────────────────────────────────────────────
-
+const tempVoice = require("./events/voiceStateUpdate");
 const VoiceStats = require("./models/VoiceStats");
+client.on("voiceStateUpdate", tempVoice);
 const voiceJoins = new Map();
 
 client.on("voiceStateUpdate", async (oldState, newState) => {
