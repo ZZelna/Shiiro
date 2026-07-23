@@ -1,0 +1,123 @@
+/* ======================================================
+                    SHIIRO THEMES
+====================================================== */
+
+/* =======================
+        BRONZE
+======================= */
+
+.theme-bronze{
+
+    --primary:#B87333;
+    --secondary:#D99A4E;
+    --surface:#241A14;
+
+}
+
+/* =======================
+        ARGENT
+======================= */
+
+.theme-silver{
+
+    --primary:#C0C0C0;
+    --secondary:#ECECEC;
+    --surface:#1D2027;
+
+}
+
+/* =======================
+            OR
+======================= */
+
+.theme-gold{
+
+    --primary:#FFD700;
+    --secondary:#FFE87A;
+    --surface:#231E11;
+
+}
+
+/* =======================
+        PLATINE
+======================= */
+
+.theme-platinum{
+
+    --primary:#9FD8FF;
+    --secondary:#D8F4FF;
+    --surface:#17242E;
+
+}
+
+/* =======================
+        DIAMANT
+======================= */
+
+.theme-diamond{
+
+    --primary:#6ED4FF;
+    --secondary:#CFF7FF;
+    --surface:#13232D;
+
+}
+
+/* =======================
+        SAPHIR
+======================= */
+
+.theme-sapphire{
+
+    --primary:#2D7FFF;
+    --secondary:#6DAAFF;
+    --surface:#101B33;
+
+}
+
+/* =======================
+        EMERAUDE
+======================= */
+
+.theme-emerald{
+
+    --primary:#2ECC71;
+    --secondary:#8AFFC0;
+    --surface:#10251B;
+
+}
+
+/* =======================
+        AMETHYSTE
+======================= */
+
+.theme-amethyst{
+
+    --primary:#A855F7;
+    --secondary:#D8B4FE;
+    --surface:#1B1530;
+
+}
+
+/* =======================
+        COSMIQUE
+======================= */
+
+.theme-cosmic{
+
+    --primary:#5B7FFF;
+    --secondary:#9FBBFF;
+    --surface:#0D1024;
+
+}
+
+/* =======================
+        MYTHIQUE
+======================= */
+
+.theme-mythic{
+
+    --primary:#FFD54A;
+    --secondary:#FFF2B2;
+    --surface:#151515;
+
+}
