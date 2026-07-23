@@ -1,5 +1,4 @@
 const confessionHandler = require("../../events/confession");
-
 const handleTicketInteraction = require("./ticketHandler");
 const handleCasinoInteraction = require("./casinoHandler");
 const handleClanInteraction = require("./clanHandler");
@@ -7,10 +6,9 @@ const handleCustomRoleInteraction = require("./customRoleHandler");
 const handleCasinoHelpInteraction = require("./casinoHelpHandler");
 const handleSurveyInteraction = require("./surveyHandler");
 const handleGiveawayInteraction = require("./giveawayHandler");
-
+const handlePingInteraction = require("./pingHandler"); // 👈 AJOUT
 
 module.exports = async (interaction) => {
-
     // =========================
     // CONFESSIONS
     // =========================
@@ -50,4 +48,9 @@ module.exports = async (interaction) => {
     // GIVEAWAYS
     // =========================
     await handleGiveawayInteraction(interaction);
+
+    // =========================
+    // PINGS (choix des rôles de notif)
+    // =========================
+    await handlePingInteraction(interaction); // 👈 AJOUT
 };
