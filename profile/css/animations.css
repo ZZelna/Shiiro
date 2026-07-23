@@ -1,0 +1,214 @@
+/* ======================================================
+                    SHIIRO ANIMATIONS
+====================================================== */
+
+/* ==========================
+        APPARITION
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+        GLOW
+========================== */
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:
+        0 0 10px rgba(77,163,255,.15);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 35px rgba(77,163,255,.40);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 10px rgba(77,163,255,.15);
+
+    }
+
+}
+
+/* ==========================
+        XP BAR
+========================== */
+
+@keyframes xpFill{
+
+    from{
+
+        width:0%;
+
+    }
+
+}
+
+/* ==========================
+        FLOAT
+========================== */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ==========================
+        SHINE
+========================== */
+
+@keyframes shine{
+
+    from{
+
+        background-position:-250px;
+
+    }
+
+    to{
+
+        background-position:350px;
+
+    }
+
+}
+
+/* ==========================
+        ROTATION
+========================== */
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+        PULSE
+========================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================
+        SPARKLES
+========================== */
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:.2;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+    }
+
+}
+
+/* ==========================
+        CLASSES
+========================== */
+
+.fade{
+
+    animation:fadeIn .8s ease forwards;
+
+}
+
+.glow{
+
+    animation:glow 3s infinite;
+
+}
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
