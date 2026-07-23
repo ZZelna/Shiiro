@@ -19,7 +19,6 @@ async function createVoice(member) {
         parent: config.categoryId,
 
         permissionOverwrites: [
-
             {
                 id: guild.id,
                 allow: [
@@ -27,7 +26,6 @@ async function createVoice(member) {
                     PermissionFlagsBits.ViewChannel
                 ]
             }
-
         ]
 
     });
@@ -48,8 +46,43 @@ async function createVoice(member) {
 
 }
 
+async function deleteVoice(channel) {
+
+    if (!channel) return;
+
+    const data = await VoiceChannel.findOne({
+        channelId: channel.id
+    });
+
+    // Ce n'est pas un vocal temporaire
+    if (!data) return;
+
+    // Il y a encore quelqu'un dedans
+    if (channel.members.size > 0) return;
+
+    setTimeout(async () => {
+
+        const refreshed = channel.guild.channels.cache.get(channel.id);
+
+        // Le salon a déjà été supprimé
+        if (!refreshed) return;
+
+        // Quelqu'un est revenu entre-temps
+        if (refreshed.members.size > 0) return;
+
+        await VoiceChannel.deleteOne({
+            channelId: refreshed.id
+        });
+
+        await refreshed.delete().catch(() => {});
+
+    }, config.deleteDelay);
+
+}
+
 module.exports = {
 
-    createVoice
+    createVoice,
+    deleteVoice
 
 };
