@@ -3,6 +3,8 @@ const {
 } = require("discord.js");
 
 const CasinoProfile = require("../../models/CasinoProfile");
+const QuizProfile = require("../../models/QuizProfile");
+const { xpForLevel } = require("../../utils/quizEngine");
 
 module.exports = {
     name: "casino",
@@ -47,7 +49,48 @@ module.exports = {
                     value: `${profile.gifts.toLocaleString()}`,
                     inline: true
                 }
-            )
+            );
+
+        // --- Ajout des stats de quiz, si le joueur a déjà un profil ---
+        const quizProfile = await QuizProfile.findOne({
+            userId: message.author.id,
+            guildId: message.guild.id
+        });
+
+        if (quizProfile) {
+            const xpAtLevel = xpForLevel(quizProfile.level);
+            const xpNextLevel = xpForLevel(quizProfile.level + 1);
+            const progress = quizProfile.xp - xpAtLevel;
+            const span = xpNextLevel - xpAtLevel;
+            const accuracy = quizProfile.questionsAnswered > 0
+                ? Math.round((quizProfile.questionsCorrect / quizProfile.questionsAnswered) * 100)
+                : 0;
+
+            embed.addFields(
+                {
+                    name: "🧠 Niveau Quiz",
+                    value: `${quizProfile.level}`,
+                    inline: true
+                },
+                {
+                    name: "⭐ XP",
+                    value: `${progress}/${span} (${quizProfile.xp} total)`,
+                    inline: true
+                },
+                {
+                    name: "🔥 Streak",
+                    value: `${quizProfile.streak} (meilleur : ${quizProfile.bestStreak})`,
+                    inline: true
+                },
+                {
+                    name: "📊 Bonnes réponses",
+                    value: `${quizProfile.questionsCorrect}/${quizProfile.questionsAnswered} (${accuracy}%)`,
+                    inline: true
+                }
+            );
+        }
+
+        embed
             .setFooter({
                 text: "Shiiro Casino"
             })
