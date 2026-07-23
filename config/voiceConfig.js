@@ -1,10 +1,10 @@
 module.exports = {
 
-    createChannelId: "",
+    createChannelId: "1529973161850966097",
 
-    categoryId: "",
+    categoryId: "1529973015729803334",
 
-    channelPrefix: "🎧・",
+    channelPrefix: "🌸・",
 
     deleteDelay: 10000
 
