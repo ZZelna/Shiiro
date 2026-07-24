@@ -96,9 +96,16 @@ module.exports = {
             })
             .setTimestamp();
 
-        return message.reply({
-            embeds: [embed]
-        });
+      try {
+    await message.author.send({
+        embeds: [embed]
+    });
 
+    return message.reply("📩 Ton profil casino t'a été envoyé en message privé.");
+} catch (err) {
+    return message.reply(
+        "❌ Je n'ai pas pu t'envoyer de message privé. Vérifie que tes MP sont ouverts."
+    );
+}
     }
 };
