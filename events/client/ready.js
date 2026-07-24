@@ -5,8 +5,8 @@ const {
     ActivityType
 } = require("discord.js");
 
-const statsVoice = require("../events/ready/statsVoice");
-const autoQuiz = require("../systems/autoQuiz");
+const statsVoice = require("../ready/statsVoice");
+const autoQuiz = require("../../systems/autoQuiz");
 
 module.exports = async (
     client,
