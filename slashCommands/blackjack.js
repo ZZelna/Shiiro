@@ -772,3 +772,6 @@ async function resolveGame(
     });
 
 }
+} // ferme execute()
+
+}; // ferme module.exports
