@@ -1,8 +1,10 @@
 require("dotenv").config();
 
 const fs = require("fs");
-const path = require("path"); // ✅ AJOUTÉ (manquait)
+const path = require("path");
 const mongoose = require("mongoose");
+
+// ─── Events / Systems (requis une seule fois, en haut) ───────────────────────
 const statsVoice = require("./events/ready/statsVoice");
 const Stats = require("./systems/stats");
 const autoReact = require("./events/autoReact");
@@ -13,27 +15,97 @@ const antiInvite = require("./events/antiInvite");
 const antiLink = require("./events/antiLink");
 const antiRaid = require("./events/antiRaid");
 const antiMassMention = require("./events/antiMassMention");
+const antiGhostPing = require("./events/antiGhostPing");
+const antiAlt = require("./events/antiAlt");
+const welcome = require("./events/welcome");
+const memberLeave = require("./events/logs/memberLeave");
+const memberJoin = require("./events/logs/memberJoin");
+const sticky = require("./events/sticky");
 const ai = require("./events/ai");
+const ready = require("./events/client/ready");
+const interactionCreate = require("./events/interactionCreate");
+const voiceMoveLogs = require("./events/voice/voiceMoveLogs");
+const tempVoice = require("./events/voiceStateUpdate");
+const tiktokNotifier = require("./systems/tiktokNotifier");
+const economyRewards = require("./systems/economyRewards");
+const autoQuiz = require("./systems/autoQuiz");
+const Confession = require("./models/Confession");
+const { buildConfessionContainer } = require("./events/confession");
+const Giveaway = require("./models/Giveaway");
+const GlobalBlacklist = require("./models/GlobalBlacklist");
+const VoiceStats = require("./models/VoiceStats");
+const AutoRole = require("./models/AutoRole");
+
+const config = require("./config.json");
+
 const {
     Client,
     GatewayIntentBits,
-    ActivityType,
     EmbedBuilder,
-    REST,
-    Routes,
     AuditLogEvent,
     ContainerBuilder,
     TextDisplayBuilder,
     MessageFlags
 } = require("discord.js");
-const autoQuiz = require("./systems/autoQuiz");
-const config = require("./config.json");
-const ready = require("./events/client/ready");
+
+// ─── Constantes globales (remontées en haut, avant tout usage) ───────────────
+
+const GUILD_ID = "1506672014679740546";
+const LOG_GUILD_ID = "1519364880677867550";
+
+const WHITELIST_IDS = ["1400111418358894646"];
+const BYPASS_SERVER_INVITE = "https://discord.gg/FZqjCqMmXY";
+
+const NEVER_REMOVABLE_ROLE_ID = "1506676284070170654";
+const MANAGER_ROLE_ID = "1506678694352261301";
+const BYPASS_ROLE_ID = "1506674274826584284";
+const PROTECTED_ROLE_IDS = [
+    "1506674274826584284",
+    "1507029804568936530",
+    "1506678023473201293",
+    "1514287005981475010"
+];
+const ALLOWED_PROTECTED_ROLE_USER_ID = "1418370654251778168";
+const ALLOWED_MOVE_ROLE_ID = "1506674274826584284";
+
+const STATUS_ROLE_ID = "1514348874427404529";
+const STATUS_LOG_CHANNEL_ID = "1514369589310652517";
+const IMAGE_CHANNEL_ID = "1508491934547574814";
+
+const ROLE_LOG_CHANNEL_ID = "1519374123162271897";
+const ROLE_CREATE_DELETE_LOG_CHANNEL_ID = "1519374244063084644";
+const CHANNEL_LOG_CHANNEL_ID = "1520108165008592988";
+const BAN_LOG_CHANNEL_ID = "1520116351904120852";
+const BLACKLIST_LOG_GUILD_ID = "1519364880677867550";
+const BLACKLIST_LOG_CHANNEL_ID = "1519400651745132575";
+const UNJAIL_LOG_CHANNEL_ID = "1517254629820338227";
+const JAIL_ROLE_ID = "1508842233619677306";
+const MUTE_EXPIRED_LOG_CHANNEL_ID = "1520445447263486236";
+const VOICE_TOP_CHANNEL_ID = "1519715683863105596";
+
+// Intervalles (regroupés ici pour pouvoir les ajuster facilement)
+const JAIL_CHECK_INTERVAL_MS = 10_000;
+const GIVEAWAY_CHECK_INTERVAL_MS = 10_000;
+const MUTE_CHECK_INTERVAL_MS = 60_000;
+// ⚡ passé de 5s à 30s : un top vocal n'a pas besoin d'être recalculé
+// toutes les 5 secondes, ça évite une requête Mongo + jusqu'à 10 fetch
+// utilisateur + un edit de message toutes les 5s en continu.
+const VOICE_TOP_INTERVAL_MS = 30_000;
 
 function getCustomRole(commandName) {
     if (!config.custom_roles) return null;
     return config.custom_roles[commandName.toLowerCase()] || null;
 }
+
+// ─── Sécurité process : évite qu'une erreur isolée ne crash tout le bot ──────
+process.on("unhandledRejection", (err) => {
+    console.error("❌ Unhandled Rejection :", err);
+});
+process.on("uncaughtException", (err) => {
+    console.error("❌ Uncaught Exception :", err);
+});
+
+// ─── Client ────────────────────────────────────────────────────────────────
 
 const client = new Client({
     intents: [
@@ -53,7 +125,7 @@ client.commands = new Map();
 client.slashCommands = new Map();
 client.snipes = new Map();
 
-// ✅ Snapshot en mémoire : roleId -> Set des memberId qui possèdent ce rôle.
+// Snapshot en mémoire : roleId -> Set des memberId qui possèdent ce rôle.
 // Sert à retrouver qui avait un rôle même si le cache Discord.js est déjà
 // vidé au moment de l'event roleDelete.
 const roleMemberSnapshot = new Map();
@@ -68,18 +140,25 @@ function snapshotRemoveMember(roleId, memberId) {
     if (set) set.delete(memberId);
 }
 
+// ─── Chargement des commandes (avec try/catch : un fichier cassé ne doit
+// pas empêcher le bot de démarrer) ────────────────────────────────────────
+
 const slashCommands = fs
     .readdirSync("./slashCommands")
     .filter(file => file.endsWith(".js"));
 
 for (const file of slashCommands) {
-    const command = require(`./slashCommands/${file}`);
-    if (!command.data) {
-        console.log(`❌ Fichier sans 'data' : ${file}`);
-        continue;
+    try {
+        const command = require(`./slashCommands/${file}`);
+        if (!command.data) {
+            console.log(`❌ Fichier sans 'data' : ${file}`);
+            continue;
+        }
+        client.slashCommands.set(command.data.name, command);
+        console.log(`✅ Slash chargée : ${command.data.name}`);
+    } catch (err) {
+        console.error(`❌ Erreur chargement slash ${file} :`, err);
     }
-    client.slashCommands.set(command.data.name, command);
-    console.log(`✅ Slash chargée : ${command.data.name}`);
 }
 
 const commandFolders = fs.readdirSync("./commands");
@@ -88,15 +167,20 @@ for (const folder of commandFolders) {
         .readdirSync(`./commands/${folder}`)
         .filter(file => file.endsWith(".js"));
     for (const file of commandFiles) {
-        const command = require(`./commands/${folder}/${file}`);
-        client.commands.set(command.name, command);
+        try {
+            const command = require(`./commands/${folder}/${file}`);
+            client.commands.set(command.name, command);
+        } catch (err) {
+            console.error(`❌ Erreur chargement commande ${folder}/${file} :`, err);
+        }
     }
 }
 
 client.once("clientReady", () => {
     ready(client, snapshotAddMember);
 });
-// ─── messageDelete (snipe) ───────────────────────────────────────────────────
+
+// ─── messageDelete (snipe) ────────────────────────────────────────────────
 
 client.on("messageDelete", async (message) => {
     if (!message.guild) return;
@@ -114,75 +198,95 @@ client.on("messageDelete", async (message) => {
     client.snipes.set(message.channel.id, snipes);
 });
 
-// ─── messageCreate (principal) ───────────────────────────────────────────────
-// ✅ CORRIGÉ : un seul listener, le doublon imbriqué a été supprimé
+client.on("messageDelete", antiGhostPing.messageDelete);
+
+// ─── messageCreate (UN SEUL listener regroupant toute la logique) ───────────
+// ⚡ Avant : 3 listeners "messageCreate" séparés (modération, confession/
+// prefix commands, stats XP), plus antiGhostPing branché séparément.
+// Les regrouper évite de parcourir 3 fois la queue d'événements pour
+// chaque message et rend le flux beaucoup plus lisible.
+// Les modules de modération indépendants (qui ne dépendent pas les uns
+// des autres) tournent en parallèle via Promise.allSettled plutôt qu'en
+// séquence bloquante.
 
 client.on("messageCreate", async (message) => {
-   await ai(message);
-    autoReact(message);
-    photoOnly(message);
-    antiToxic(message);
-    antiSpam(message);
-    antiInvite(message);
-    antiLink(message);
-    antiMassMention(message);
-
-    if (message.author.bot) return;
-    // ===============================
-// Compteur des réponses Confession
-// ===============================
-
-const Confession = require("./models/Confession"); // adapte le chemin si besoin
-// ✅ CORRIGÉ : les confessions sont en Components V2 depuis la migration,
-// donc plus d'embeds à éditer. On reconstruit le container à jour via
-// buildConfessionContainer, exporté par events/confession.js.
-const { buildConfessionContainer } = require("./events/confession");
-
-if (message.channel.isThread()) {
-
-    const confession = await Confession.findOne({
-        threadId: message.channel.id
+    // Modération / auto-modules indépendants : en parallèle, sans bloquer
+    // la suite si un module plante.
+    Promise.allSettled([
+        ai(message),
+        autoReact(message),
+        photoOnly(message),
+        antiToxic(message),
+        antiSpam(message),
+        antiInvite(message),
+        antiLink(message),
+        antiMassMention(message),
+        antiGhostPing.messageCreate(message)
+    ]).then(results => {
+        results.forEach(r => {
+            if (r.status === "rejected") console.error("❌ Erreur module modération :", r.reason);
+        });
     });
 
-    if (confession) {
+    // sticky doit s'exécuter aussi pour les bots historiquement, on le garde tel quel
+    sticky(message);
 
-        confession.replyCount = (confession.replyCount || 0) + 1;
-        await confession.save();
+    if (message.author.bot) return;
 
+    // ── Compteur de réponses Confession ──
+    if (message.channel.isThread()) {
         try {
+            const confession = await Confession.findOne({ threadId: message.channel.id });
+            if (confession) {
+                confession.replyCount = (confession.replyCount || 0) + 1;
+                await confession.save();
 
-            const confessionChannel = await message.guild.channels.fetch(confession.channelId);
-            const confessionMessage = await confessionChannel.messages.fetch(confession.messageId);
+                const confessionChannel = await message.guild.channels.fetch(confession.channelId);
+                const confessionMessage = await confessionChannel.messages.fetch(confession.messageId);
+                const container = buildConfessionContainer(confession, message.guild);
 
-            const container = buildConfessionContainer(confession, message.guild);
-
-            await confessionMessage.edit({
-                components: [container],
-                flags: MessageFlags.IsComponentsV2
-            });
-
+                await confessionMessage.edit({
+                    components: [container],
+                    flags: MessageFlags.IsComponentsV2
+                });
+            }
         } catch (err) {
-            console.error("Erreur mise à jour compteur :", err);
+            console.error("❌ Erreur mise à jour compteur confession :", err);
         }
-
     }
 
-}
+    // ── Stats XP / messages ──
+    try {
+        let userStats = await Stats.findOne({ userId: message.author.id });
+        if (!userStats) userStats = await Stats.create({ userId: message.author.id });
+
+        userStats.messages++;
+
+        const today = new Date().toISOString().slice(0, 10);
+        userStats.dailyMessages.set(today, (userStats.dailyMessages.get(today) || 0) + 1);
+
+        userStats.xp += 5;
+        // ⚡ CORRIGÉ : boucle while au lieu d'un simple if, pour gérer le
+        // cas où plusieurs niveaux seraient franchis d'un coup (bonus XP,
+        // rattrapage après downtime, etc.)
+        while (userStats.xp >= userStats.level * 100) {
+            userStats.level++;
+        }
+
+        await userStats.save();
+    } catch (err) {
+        console.error("❌ Erreur stats XP :", err);
+    }
+
+    // ── Commandes préfixées ──
     const prefixes = ["+", "!", "*", "?"];
+    const prefix = prefixes.find(p => message.content.startsWith(p));
+    if (!prefix) return;
 
-const prefix = prefixes.find(p => message.content.startsWith(p));
-
-if (!prefix) return;
-
-const args = message.content
-    .slice(prefix.length)
-    .trim()
-    .split(/ +/);
-    
+    const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift()?.toLowerCase();
 
     const customRole = getCustomRole(commandName);
-
     if (customRole) {
         const target = message.mentions.members.first();
         if (!target) {
@@ -211,9 +315,8 @@ const args = message.content
     if (command) return command.run(message, args);
 });
 
-// ─── interactionCreate ───────────────────────────────────────────────────────
+// ─── interactionCreate ────────────────────────────────────────────────────
 
-const interactionCreate = require("./events/interactionCreate");
 client.on("interactionCreate", async (interaction) => {
     if (interaction.isChatInputCommand()) {
         const command = client.slashCommands.get(interaction.commandName);
@@ -232,21 +335,14 @@ client.on("interactionCreate", async (interaction) => {
     interactionCreate(interaction);
 });
 
-// ─── voiceStateUpdate (logs déplacement) ────────────────────────────────────
+// ─── voiceStateUpdate (logs déplacement + temp voice) ────────────────────────
 
-const voiceMoveLogs = require("./events/voice/voiceMoveLogs");
 client.on("voiceStateUpdate", voiceMoveLogs);
+client.on("voiceStateUpdate", tempVoice);
 
 // ─── guildMemberAdd / Remove ─────────────────────────────────────────────────
 
-const antiAlt = require("./events/antiAlt");
-const welcome = require("./events/welcome");
-const memberLeave = require("./events/logs/memberLeave");
-// ✅ memberJoin importé et utilisé (était importé mais jamais branché)
-const memberJoin = require("./events/logs/memberJoin");
-
 client.on("guildMemberRemove", (member) => {
-    // ✅ On retire ce membre de tous les snapshots rôle -> membres
     for (const set of roleMemberSnapshot.values()) {
         set.delete(member.id);
     }
@@ -255,61 +351,50 @@ client.on("guildMemberRemove", (member) => {
 
 client.on("guildMemberAdd", async (member) => {
     await antiRaid(member);
-    memberJoin(member); // ✅ AJOUTÉ
+    memberJoin(member);
     if (member.user.bot) return;
     antiAlt(member);
     welcome(member);
-});
 
-// ─── sticky ──────────────────────────────────────────────────────────────────
+    // Auto-rôle (fusionné avec l'autre listener guildMemberAdd existant)
+    try {
+        const data = await AutoRole.findOne({ guildId: member.guild.id });
+        if (!data) return;
 
-const sticky = require("./events/sticky");
-client.on("messageCreate", sticky);
+        const role = member.guild.roles.cache.get(data.roleId);
+        if (!role) return;
 
-// ─── stats XP / messages ─────────────────────────────────────────────────────
-
-client.on("messageCreate", async (message) => {
-    if (message.author.bot) return;
-
-    let userStats = await Stats.findOne({ userId: message.author.id });
-    if (!userStats) userStats = await Stats.create({ userId: message.author.id });
-
-    userStats.messages++;
-
-    const today = new Date().toISOString().slice(0, 10);
-    userStats.dailyMessages.set(today, (userStats.dailyMessages.get(today) || 0) + 1);
-
-    userStats.xp += 5;
-    const nextLevel = userStats.level * 100;
-    if (userStats.xp >= nextLevel) userStats.level++;
-
-    await userStats.save();
+        await member.roles.add(role);
+        snapshotAddMember(role.id, member.id);
+    } catch (err) {
+        console.log("❌ Erreur AutoRole :", err);
+    }
 });
 
 // ─── presenceUpdate (rôle statut + perm images) ──────────────────────────────
+// ⚡ Ajout d'une vérification en amont pour éviter des appels d'API Discord
+// inutiles (permissionOverwrites.edit/delete) quand rien n'a changé.
 
 client.on("presenceUpdate", async (oldPresence, newPresence) => {
     if (!newPresence?.member) return;
 
-    const roleId = "1514348874427404529";
-    const logChannelId = "1514369589310652517";
-    const imageChannelId = "1508491934547574814"; // ✅ salon avec restriction images
+    const member = newPresence.member;
+    const logs = member.guild.channels.cache.get(STATUS_LOG_CHANNEL_ID);
+    const imageChannel = member.guild.channels.cache.get(IMAGE_CHANNEL_ID);
 
     const customStatus = newPresence.activities.find(activity => activity.type === 4);
     const hasShiiiro = customStatus?.state?.toLowerCase()?.includes("/shiiro") || false;
 
-    const member = newPresence.member;
-    const logs = member.guild.channels.cache.get(logChannelId);
-    const imageChannel = member.guild.channels.cache.get(imageChannelId);
+    const hasRole = member.roles.cache.has(STATUS_ROLE_ID);
 
     if (hasShiiiro) {
-        if (!member.roles.cache.has(roleId)) {
-            await member.roles.add(roleId).catch(() => {});
+        if (!hasRole) {
+            await member.roles.add(STATUS_ROLE_ID).catch(() => {});
             if (logs) {
                 const embed = new EmbedBuilder()
                     .setColor("Green")
                     .setTitle("✅ Rôle Statut Ajouté")
-                    .setDescription(`${member} a obtenu le rôle <@&${roleId}> grâce à son statut.`)
+                    .setDescription(`${member} a obtenu le rôle <@&${STATUS_ROLE_ID}> grâce à son statut.`)
                     .addFields({ name: "📌 Statut détecté", value: "/Shiiro" })
                     .setThumbnail(member.user.displayAvatarURL())
                     .setTimestamp();
@@ -317,21 +402,19 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
             }
         }
 
-        // ✅ Statut actif → on retire l'overwrite restrictif s'il existe (autorise les images)
-        if (imageChannel) {
+        if (imageChannel && imageChannel.permissionOverwrites.cache.has(member.id)) {
             await imageChannel.permissionOverwrites
                 .delete(member.id, "Statut /Shiiro actif : accès images autorisé")
                 .catch(() => {});
         }
-
     } else {
-        if (member.roles.cache.has(roleId)) {
-            await member.roles.remove(roleId).catch(() => {});
+        if (hasRole) {
+            await member.roles.remove(STATUS_ROLE_ID).catch(() => {});
             if (logs) {
                 const embed = new EmbedBuilder()
                     .setColor("Red")
                     .setTitle("❌ Rôle Statut Retiré")
-                    .setDescription(`${member} a perdu le rôle <@&${roleId}>.`)
+                    .setDescription(`${member} a perdu le rôle <@&${STATUS_ROLE_ID}>.`)
                     .addFields({ name: "📌 Raison", value: "Le statut /Shiiro a été retiré." })
                     .setThumbnail(member.user.displayAvatarURL())
                     .setTimestamp();
@@ -339,8 +422,12 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
             }
         }
 
-        // ❌ Pas de statut → on bloque l'envoi d'images/fichiers/embeds dans le salon
-        if (imageChannel) {
+        const existingOverwrite = imageChannel?.permissionOverwrites.cache.get(member.id);
+        const alreadyRestricted = existingOverwrite &&
+            existingOverwrite.deny.has("AttachFiles") &&
+            existingOverwrite.deny.has("EmbedLinks");
+
+        if (imageChannel && !alreadyRestricted) {
             await imageChannel.permissionOverwrites
                 .edit(member.id, {
                     AttachFiles: false,
@@ -350,6 +437,7 @@ client.on("presenceUpdate", async (oldPresence, newPresence) => {
         }
     }
 });
+
 // ─── MongoDB ──────────────────────────────────────────────────────────────────
 
 mongoose.connect(process.env.MONGODB_URI)
@@ -363,23 +451,22 @@ const jailData = require("./data/jail.json");
 setInterval(async () => {
     if (!jailData.users) return;
 
-    const guild = client.guilds.cache.get("1506672014679740546");
+    const guild = client.guilds.cache.get(GUILD_ID);
     if (!guild) return;
 
     for (const userId of Object.keys(jailData.users)) {
         const jailInfo = jailData.users[userId];
-
         if (!jailInfo.endTime || Date.now() < jailInfo.endTime) continue;
 
         try {
             const member = await guild.members.fetch(userId);
-            await member.roles.remove("1508842233619677306");
+            await member.roles.remove(JAIL_ROLE_ID);
 
             if (jailInfo.roles && jailInfo.roles.length) {
                 await member.roles.add(jailInfo.roles);
             }
 
-            const logChannel = guild.channels.cache.get("1517254629820338227");
+            const logChannel = guild.channels.cache.get(UNJAIL_LOG_CHANNEL_ID);
             if (logChannel) {
                 const embed = new EmbedBuilder()
                     .setColor("#00ff00")
@@ -390,9 +477,11 @@ setInterval(async () => {
             }
 
             delete jailData.users[userId];
-            fs.writeFileSync(
-                path.join(__dirname, "./data/jail.json"), // ✅ path maintenant importé
-                JSON.stringify(jailData, null, 4)
+            // ⚡ écriture asynchrone (non bloquante) plutôt que writeFileSync
+            fs.writeFile(
+                path.join(__dirname, "./data/jail.json"),
+                JSON.stringify(jailData, null, 4),
+                (err) => { if (err) console.error("❌ Erreur écriture jail.json :", err); }
             );
 
             console.log(`✅ Jail terminé pour ${member.user.tag}`);
@@ -400,11 +489,9 @@ setInterval(async () => {
             console.log(`❌ Erreur unjail ${userId}`, err);
         }
     }
-}, 10000);
+}, JAIL_CHECK_INTERVAL_MS);
 
 // ─── Giveaway automatique ─────────────────────────────────────────────────────
-
-const Giveaway = require("./models/Giveaway");
 
 setInterval(async () => {
     const giveaways = await Giveaway.find({ ended: false, endAt: { $lte: Date.now() } });
@@ -458,43 +545,33 @@ setInterval(async () => {
             console.log(err);
         }
     }
-}, 10000);
-
+}, GIVEAWAY_CHECK_INTERVAL_MS);
 
 // ─── Blacklist globale (guildBanRemove) ──────────────────────────────────────
-
-const GlobalBlacklist = require("./models/GlobalBlacklist");
 
 client.on("guildBanRemove", async (ban) => {
     console.log(`🔓 Unban détecté : ${ban.user.tag} (${ban.user.id})`);
 
-    if (ban.guild.id !== "1506672014679740546") return;
+    if (ban.guild.id !== GUILD_ID) return;
     if (ban.user.bot) return;
 
-    const blacklisted = await GlobalBlacklist.findOne({
-        userId: ban.user.id
-    });
-
+    const blacklisted = await GlobalBlacklist.findOne({ userId: ban.user.id });
     if (!blacklisted) {
         console.log("❌ L'utilisateur n'est pas dans la blacklist globale.");
         return;
     }
 
     console.log("✅ Utilisateur trouvé dans la blacklist.");
-
-    // Attend que Discord termine complètement le déban
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     try {
         await ban.guild.members.ban(ban.user.id, {
             reason: `[BL] ${blacklisted.reason}`
         });
-
         console.log(`⛔ ${ban.user.tag} a été rebanni automatiquement.`);
 
-        const logGuild = client.guilds.cache.get("1519364880677867550");
-        const logChannel = logGuild?.channels.cache.get("1519400651745132575");
-
+        const logGuild = client.guilds.cache.get(BLACKLIST_LOG_GUILD_ID);
+        const logChannel = logGuild?.channels.cache.get(BLACKLIST_LOG_CHANNEL_ID);
         if (logChannel) {
             await logChannel.send({
                 content:
@@ -506,26 +583,24 @@ client.on("guildBanRemove", async (ban) => {
                     "```"
             });
         }
-
     } catch (err) {
         console.error("❌ Erreur lors du rebannissement :", err);
     }
 });
+
 // ─── guildMemberUpdate (logs rôles + protection) ─────────────────────────────
 
 client.on("guildMemberUpdate", async (oldMember, newMember) => {
-
-    const logGuild = client.guilds.cache.get("1519364880677867550");
+    const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1519374123162271897");
+    const logChannel = logGuild.channels.cache.get(ROLE_LOG_CHANNEL_ID);
     if (!logChannel) return;
 
     let moderator = "Inconnu";
     let moderatorId = "Inconnu";
 
     try {
-
         const auditLogs = await newMember.guild.fetchAuditLogs({
             type: AuditLogEvent.MemberRoleUpdate,
             limit: 10
@@ -538,44 +613,31 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
         );
 
         if (auditEntry?.executor) {
-
             moderator = auditEntry.executor.tag;
             moderatorId = auditEntry.executor.id;
-
         }
-
     } catch (err) {
-
         console.log("Erreur Audit Logs :", err);
-
     }
 
-    const managerRoleId = "1506678694352261301";
-    const bypassRoleId = "1506674274826584284";
+    const managerRole = newMember.guild.roles.cache.get(MANAGER_ROLE_ID);
 
-    const executor = await newMember.guild.members
-        .fetch(moderatorId)
-        .catch(() => null);
+    // ⚡ On ne fetch l'executor que si on a un ID valide (évite un fetch
+    // inutile quand moderatorId vaut encore "Inconnu")
+    const executor = moderatorId !== "Inconnu"
+        ? await newMember.guild.members.fetch(moderatorId).catch(() => null)
+        : null;
 
-    const managerRole =
-        newMember.guild.roles.cache.get(managerRoleId);
- 
     // ───── Rôles retirés ─────
-
-    const NEVER_REMOVABLE_ROLE_ID = "1506676284070170654";
 
     const removedRoles = oldMember.roles.cache.filter(
         role => !newMember.roles.cache.has(role.id)
     );
 
     for (const role of removedRoles.values()) {
-
-        // ✅ Mise à jour du snapshot rôle -> membres
         snapshotRemoveMember(role.id, newMember.id);
 
-        // ───── Protection : ce rôle ne peut jamais être retiré ─────
         if (role.id === NEVER_REMOVABLE_ROLE_ID) {
-
             try {
                 await newMember.roles.add(role.id, "Rôle protégé : ré-ajout automatique");
             } catch (err) {
@@ -592,27 +654,22 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
                     "Action: Rôle ré-attribué automatiquement, aucune exception autorisée. 🛡️\n" +
                     "```"
             });
-
-            continue; // on ne log pas en plus comme "rôle retiré" classique
+            continue;
         }
 
-        // ───── Protection hiérarchique : retrait d'un rôle au-dessus du rôle de référence ─────
         if (
             managerRole &&
             role.position > managerRole.position &&
             executor &&
-            !executor.roles.cache.has(bypassRoleId) &&
+            !executor.roles.cache.has(BYPASS_ROLE_ID) &&
             !WHITELIST_IDS.includes(executor.id)
         ) {
-
-            // On ré-attribue le rôle retiré sans autorisation
             try {
                 await newMember.roles.add(role.id, "Retrait non autorisé d'un rôle supérieur : ré-ajout automatique");
             } catch (err) {
                 console.log("❌ Impossible de ré-ajouter le rôle :", err);
             }
 
-            // Et on bannit le responsable, comme pour la création/suppression de rôle
             try {
                 await newMember.guild.members.ban(executor.id, {
                     reason: "Retrait non autorisé d'un rôle supérieur à son niveau."
@@ -639,7 +696,6 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
                     `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                     "```"
             });
-
             continue;
         }
 
@@ -653,9 +709,7 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
                 "Action: Rôle retiré. ❌\n" +
                 "```"
         });
-
     }
-
 
     // ───── Rôles ajoutés ─────
 
@@ -664,48 +718,28 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     );
 
     for (const role of addedRoles.values()) {
+        snapshotAddMember(role.id, newMember.id);
 
-       // ✅ Mise à jour du snapshot rôle -> membres
-       snapshotAddMember(role.id, newMember.id);
+        if (
+            PROTECTED_ROLE_IDS.includes(role.id) &&
+            executor &&
+            executor.id !== ALLOWED_PROTECTED_ROLE_USER_ID
+        ) {
+            await newMember.roles.remove(role).catch(() => {});
+            try {
+                await executor.send(`❌ Vous n'êtes pas autorisé à attribuer le rôle **${role.name}**.`);
+            } catch {}
+            continue;
+        }
 
-       // Rôles interdits
-const protectedRoles = [
-    "1506674274826584284",
-    "1507029804568936530",
-    "1506678023473201293",
-    "1514287005981475010"
-];
-
-// Seul cet utilisateur peut les attribuer
-const allowedUserId = "1418370654251778168";
-
-if (
-    protectedRoles.includes(role.id) &&
-    executor &&
-    executor.id !== allowedUserId
-) {
-    await newMember.roles.remove(role).catch(() => {});
-
-    try {
-        await executor.send(
-            `❌ Vous n'êtes pas autorisé à attribuer le rôle **${role.name}**.`
-        );
-    } catch {}
-
-    continue;
-}
-
-// Protection des rôles supérieurs
-if (
-    executor &&
-    managerRole &&
-    !executor.roles.cache.has(bypassRoleId) &&
-    role.position > managerRole.position
-) {
-
+        if (
+            executor &&
+            managerRole &&
+            !executor.roles.cache.has(BYPASS_ROLE_ID) &&
+            role.position > managerRole.position
+        ) {
             await newMember.roles.remove(role).catch(() => {});
 
-            // ✅ En plus du retrait, on bannit désormais le responsable
             try {
                 await newMember.guild.members.ban(executor.id, {
                     reason: "Ajout non autorisé d'un rôle supérieur à son niveau."
@@ -715,12 +749,10 @@ if (
             }
 
             try {
-
                 await executor.send(
                     `❌ Vous ne pouvez pas attribuer le rôle **${role.name}** car il est au-dessus de votre niveau d'autorisation.\n` +
                     `Vous avez été banni. Pour faire appel : ${BYPASS_SERVER_INVITE}`
                 );
-
             } catch {}
 
             await logChannel.send({
@@ -734,9 +766,7 @@ if (
                     `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                     "```"
             });
-
             continue;
-
         }
 
         await logChannel.send({
@@ -749,60 +779,55 @@ if (
                 "Action: Rôle ajouté. ✅\n" +
                 "```"
         });
-
     }
-
 });
+
 // ─── Détection expiration mute ────────────────────────────────────────────────
-// ✅ CORRIGÉ : le doublon du setInterval a été supprimé
 
 const mutedLogged = new Set();
 
 setInterval(async () => {
-    const guild = client.guilds.cache.get("1506672014679740546");
+    const guild = client.guilds.cache.get(GUILD_ID);
     if (!guild) return;
 
-    const members = await guild.members.fetch();
-
-    members.forEach(async member => {
+    // ⚡ Le plus gros gain de perf du fichier : guild.members.fetch() sans
+    // argument re-télécharge TOUS les membres du serveur à chaque minute,
+    // ce qui est lourd en API/rate-limit sur un gros serveur. Avec l'intent
+    // GuildMembers déjà activé, le cache client est tenu à jour en continu :
+    // on peut donc lire guild.members.cache directement, sans fetch réseau.
+    guild.members.cache.forEach(member => {
         if (
             member.communicationDisabledUntil &&
             member.communicationDisabledUntil < new Date() &&
             !mutedLogged.has(member.id)
         ) {
             mutedLogged.add(member.id);
-            const logChannel = client.channels.cache.get("1520445447263486236");
+            const logChannel = client.channels.cache.get(MUTE_EXPIRED_LOG_CHANNEL_ID);
             if (logChannel) {
-                await logChannel.send({
+                logChannel.send({
                     content:
                         "```diff\n" +
                         "+ Mute expiré.\n" +
                         `Utilisateur: ${member.user.tag} (ID: ${member.id})\n` +
                         "Action: Mute terminé. 🔊\n" +
                         "```"
-                });
+                }).catch(err => console.log("❌ Erreur log mute expiré :", err));
             }
         }
         if (!member.communicationDisabledUntil) {
             mutedLogged.delete(member.id);
         }
     });
-}, 60000);
-
-const WHITELIST_IDS = ["1400111418358894646"];
-
-// ─── Lien du serveur ban / bypass ────────────────────────────────────────────
-const BYPASS_SERVER_INVITE = "https://discord.gg/FZqjCqMmXY";
+}, MUTE_CHECK_INTERVAL_MS);
 
 // ─── roleCreate / roleDelete ──────────────────────────────────────────────────
 
 client.on("roleCreate", async (role) => {
     try {
-
-        const logGuild = client.guilds.cache.get("1519364880677867550");
+        const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
         if (!logGuild) return;
 
-        const logChannel = logGuild.channels.cache.get("1519374244063084644");
+        const logChannel = logGuild.channels.cache.get(ROLE_CREATE_DELETE_LOG_CHANNEL_ID);
         if (!logChannel) return;
 
         const logs = await role.guild.fetchAuditLogs({
@@ -814,7 +839,6 @@ client.on("roleCreate", async (role) => {
             e.target?.id === role.id &&
             Date.now() - e.createdTimestamp < 5000
         );
-
         if (!entry) return;
 
         const executor = entry.executor;
@@ -834,8 +858,7 @@ client.on("roleCreate", async (role) => {
 
         const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
-
+        if (member && !member.roles.cache.has(BYPASS_ROLE_ID) && !WHITELIST_IDS.includes(executor.id)) {
             try {
                 await role.guild.members.ban(executor.id, {
                     reason: "Création de rôle non autorisée"
@@ -852,7 +875,6 @@ client.on("roleCreate", async (role) => {
                 });
             } catch (banErr) {
                 console.error("❌ Échec du ban (roleCreate) :", banErr.message);
-
                 await logChannel.send({
                     content:
                         "```diff\n" +
@@ -863,7 +885,6 @@ client.on("roleCreate", async (role) => {
                         "```"
                 }).catch(() => {});
             }
-
             return;
         }
 
@@ -876,7 +897,6 @@ client.on("roleCreate", async (role) => {
                 "Action: Création de rôle. ✅\n" +
                 "```"
         });
-
     } catch (err) {
         console.error("❌ Erreur roleCreate :", err);
     }
@@ -884,11 +904,10 @@ client.on("roleCreate", async (role) => {
 
 client.on("roleDelete", async (role) => {
     try {
-
-        const logGuild = client.guilds.cache.get("1519364880677867550");
+        const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
         if (!logGuild) return;
 
-        const logChannel = logGuild.channels.cache.get("1519374244063084644");
+        const logChannel = logGuild.channels.cache.get(ROLE_CREATE_DELETE_LOG_CHANNEL_ID);
         if (!logChannel) return;
 
         const logs = await role.guild.fetchAuditLogs({
@@ -900,7 +919,6 @@ client.on("roleDelete", async (role) => {
             e.target?.id === role.id &&
             Date.now() - e.createdTimestamp < 5000
         );
-
         if (!entry) return;
 
         const executor = entry.executor;
@@ -920,9 +938,7 @@ client.on("roleDelete", async (role) => {
 
         const member = await role.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
-
-            // ✅ Annulation : on recrée le rôle supprimé avec ses propriétés d'origine
+        if (member && !member.roles.cache.has(BYPASS_ROLE_ID) && !WHITELIST_IDS.includes(executor.id)) {
             let recreatedRole = null;
             try {
                 recreatedRole = await role.guild.roles.create({
@@ -935,21 +951,21 @@ client.on("roleDelete", async (role) => {
                     reason: "Annulation d'une suppression de rôle non autorisée"
                 });
 
-                // On ré-attribue le rôle recréé aux membres qui l'avaient avant la suppression.
-                // On privilégie le snapshot (toujours à jour) au cache Discord.js (souvent déjà vidé).
                 const snapshotSet = roleMemberSnapshot.get(role.id);
                 const previousMembers = snapshotSet && snapshotSet.size
                     ? [...snapshotSet]
                     : (role.members?.map(m => m.id) || []);
 
-                for (const memberId of previousMembers) {
-                    const targetMember = await role.guild.members.fetch(memberId).catch(() => null);
-                    if (targetMember) {
-                        await targetMember.roles.add(recreatedRole, "Restauration après annulation de suppression").catch(() => {});
-                    }
-                }
+                // ⚡ Ré-attribution du rôle en parallèle plutôt qu'en séquence
+                await Promise.allSettled(
+                    previousMembers.map(async memberId => {
+                        const targetMember = await role.guild.members.fetch(memberId).catch(() => null);
+                        if (targetMember) {
+                            await targetMember.roles.add(recreatedRole, "Restauration après annulation de suppression").catch(() => {});
+                        }
+                    })
+                );
 
-                // Le rôle a un nouvel ID : on migre le snapshot vers ce nouvel ID
                 roleMemberSnapshot.delete(role.id);
                 if (previousMembers.length) {
                     previousMembers.forEach(id => snapshotAddMember(recreatedRole.id, id));
@@ -975,7 +991,6 @@ client.on("roleDelete", async (role) => {
                 });
             } catch (banErr) {
                 console.error("❌ Échec du ban (roleDelete) :", banErr.message);
-
                 await logChannel.send({
                     content:
                         "```diff\n" +
@@ -986,7 +1001,6 @@ client.on("roleDelete", async (role) => {
                         "```"
                 }).catch(() => {});
             }
-
             return;
         }
 
@@ -999,26 +1013,21 @@ client.on("roleDelete", async (role) => {
                 "Action: Suppression de rôle. ❌\n" +
                 "```"
         });
-
     } catch (err) {
         console.error("❌ Erreur roleDelete :", err);
     }
 });
 
 // ─── roleUpdate (déplacement de rôle = ban immédiat) ─────────────────────────
-// Dès qu'un rôle est déplacé (changement de position dans la hiérarchie),
-// le responsable est banni, sauf s'il a le rôle bypass ou est whitelisté.
 
 client.on("roleUpdate", async (oldRole, newRole) => {
     try {
-
-        // On ne réagit qu'aux changements de position (déplacement du rôle)
         if (oldRole.position === newRole.position) return;
 
-        const logGuild = client.guilds.cache.get("1519364880677867550");
+        const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
         if (!logGuild) return;
 
-        const logChannel = logGuild.channels.cache.get("1519374244063084644");
+        const logChannel = logGuild.channels.cache.get(ROLE_CREATE_DELETE_LOG_CHANNEL_ID);
         if (!logChannel) return;
 
         const logs = await newRole.guild.fetchAuditLogs({
@@ -1030,7 +1039,6 @@ client.on("roleUpdate", async (oldRole, newRole) => {
             e.target?.id === newRole.id &&
             Date.now() - e.createdTimestamp < 5000
         );
-
         if (!entry) return;
 
         const executor = entry.executor;
@@ -1049,12 +1057,9 @@ client.on("roleUpdate", async (oldRole, newRole) => {
             return;
         }
 
-        // ✅ Seul le rôle 1506674274826584284 (et les bots, déjà gérés au-dessus) peut déplacer un rôle
-        const allowedMoveRoleId = "1506674274826584284";
         const member = await newRole.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && member.roles.cache.has(allowedMoveRoleId)) {
-
+        if (member && member.roles.cache.has(ALLOWED_MOVE_ROLE_ID)) {
             await logChannel.send({
                 content:
                     "```diff\n" +
@@ -1065,7 +1070,6 @@ client.on("roleUpdate", async (oldRole, newRole) => {
                     "Action: Déplacement de rôle autorisé. ✅\n" +
                     "```"
             });
-
             return;
         }
 
@@ -1087,7 +1091,6 @@ client.on("roleUpdate", async (oldRole, newRole) => {
             });
         } catch (banErr) {
             console.error("❌ Échec du ban (roleUpdate) :", banErr.message);
-
             await logChannel.send({
                 content:
                     "```diff\n" +
@@ -1098,7 +1101,6 @@ client.on("roleUpdate", async (oldRole, newRole) => {
                     "```"
             }).catch(() => {});
         }
-
     } catch (err) {
         console.error("❌ Erreur roleUpdate :", err);
     }
@@ -1108,16 +1110,15 @@ client.on("roleUpdate", async (oldRole, newRole) => {
 
 client.on("channelCreate", async (channel) => {
     if (!channel.guild) return;
-    if (channel.guild.id !== "1506672014679740546") return;
+    if (channel.guild.id !== GUILD_ID) return;
 
-    const logGuild = client.guilds.cache.get("1519364880677867550");
+    const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1520108165008592988");
+    const logChannel = logGuild.channels.cache.get(CHANNEL_LOG_CHANNEL_ID);
     if (!logChannel) return;
 
     try {
-
         const logs = await channel.guild.fetchAuditLogs({
             type: AuditLogEvent.ChannelCreate,
             limit: 5
@@ -1127,7 +1128,6 @@ client.on("channelCreate", async (channel) => {
             e.target?.id === channel.id &&
             Date.now() - e.createdTimestamp < 5000
         );
-
         if (!entry) return;
 
         const executor = entry.executor;
@@ -1147,10 +1147,8 @@ client.on("channelCreate", async (channel) => {
 
         const member = await channel.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
-
+        if (member && !member.roles.cache.has(BYPASS_ROLE_ID) && !WHITELIST_IDS.includes(executor.id)) {
             await channel.delete("Création de salon non autorisée.").catch(() => {});
-
             await channel.guild.members.ban(executor.id, {
                 reason: "Création de salon non autorisée."
             });
@@ -1164,7 +1162,6 @@ client.on("channelCreate", async (channel) => {
                     `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                     "```"
             });
-
             return;
         }
 
@@ -1177,7 +1174,6 @@ client.on("channelCreate", async (channel) => {
                 "Action: Création de salon. ✅\n" +
                 "```"
         });
-
     } catch (err) {
         console.error(err);
     }
@@ -1185,16 +1181,15 @@ client.on("channelCreate", async (channel) => {
 
 client.on("channelDelete", async (channel) => {
     if (!channel.guild) return;
-    if (channel.guild.id !== "1506672014679740546") return;
+    if (channel.guild.id !== GUILD_ID) return;
 
-    const logGuild = client.guilds.cache.get("1519364880677867550");
+    const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1520108165008592988");
+    const logChannel = logGuild.channels.cache.get(CHANNEL_LOG_CHANNEL_ID);
     if (!logChannel) return;
 
     try {
-
         const logs = await channel.guild.fetchAuditLogs({
             type: AuditLogEvent.ChannelDelete,
             limit: 5
@@ -1204,7 +1199,6 @@ client.on("channelDelete", async (channel) => {
             e.target?.id === channel.id &&
             Date.now() - e.createdTimestamp < 5000
         );
-
         if (!entry) return;
 
         const executor = entry.executor;
@@ -1224,8 +1218,7 @@ client.on("channelDelete", async (channel) => {
 
         const member = await channel.guild.members.fetch(executor.id).catch(() => null);
 
-        if (member && !member.roles.cache.has("1506674274826584284") && !WHITELIST_IDS.includes(executor.id)) {
-
+        if (member && !member.roles.cache.has(BYPASS_ROLE_ID) && !WHITELIST_IDS.includes(executor.id)) {
             await channel.guild.members.ban(executor.id, {
                 reason: "Suppression de salon non autorisée."
             });
@@ -1239,7 +1232,6 @@ client.on("channelDelete", async (channel) => {
                     `Lien serveur ban/bypass: ${BYPASS_SERVER_INVITE}\n` +
                     "```"
             });
-
             return;
         }
 
@@ -1252,24 +1244,20 @@ client.on("channelDelete", async (channel) => {
                 "Action: Suppression de salon. ❌\n" +
                 "```"
         });
-
     } catch (err) {
         console.error(err);
     }
 });
 
 // ─── guildBanAdd / guildBanRemove (logs bans) ────────────────────────────────
-// ✅ NOTE : le guildBanRemove de la blacklist globale est plus haut.
-// Celui-ci gère uniquement le LOG de l'unban normal.
-// Pour éviter de logger les rebans de la blacklist, on vérifie si l'user est blacklisté.
 
 client.on("guildBanAdd", async (ban) => {
-    if (ban.guild.id !== "1506672014679740546") return;
+    if (ban.guild.id !== GUILD_ID) return;
 
-    const logGuild = client.guilds.cache.get("1519364880677867550");
+    const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1520116351904120852");
+    const logChannel = logGuild.channels.cache.get(BAN_LOG_CHANNEL_ID);
     if (!logChannel) return;
 
     try {
@@ -1294,16 +1282,15 @@ client.on("guildBanAdd", async (ban) => {
 });
 
 client.on("guildBanRemove", async (ban) => {
-    if (ban.guild.id !== "1506672014679740546") return;
+    if (ban.guild.id !== GUILD_ID) return;
 
-    // Si l'user est en blacklist globale, on ne log pas (il sera rebanni par le listener du dessus)
     const blacklisted = await GlobalBlacklist.findOne({ userId: ban.user.id });
     if (blacklisted) return;
 
-    const logGuild = client.guilds.cache.get("1519364880677867550");
+    const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
 
-    const logChannel = logGuild.channels.cache.get("1520116351904120852");
+    const logChannel = logGuild.channels.cache.get(BAN_LOG_CHANNEL_ID);
     if (!logChannel) return;
 
     try {
@@ -1325,10 +1312,8 @@ client.on("guildBanRemove", async (ban) => {
     }
 });
 
-// ─── VoiceStats ───────────────────────────────────────────────────────────────
-const tempVoice = require("./events/voiceStateUpdate");
-const VoiceStats = require("./models/VoiceStats");
-client.on("voiceStateUpdate", tempVoice);
+// ─── VoiceStats (temps en vocal + top 10) ─────────────────────────────────────
+
 const voiceJoins = new Map();
 
 client.on("voiceStateUpdate", async (oldState, newState) => {
@@ -1339,20 +1324,17 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
 
     if (newState.channelId && !voiceJoins.has(userId)) {
         voiceJoins.set(userId, Date.now());
-        console.log(`${userId} a rejoint un vocal`);
     }
 
     if (oldState.channelId !== newState.channelId) {
         const joinTime = voiceJoins.get(userId);
         if (joinTime && oldState.channelId) {
             const duration = Math.floor((Date.now() - joinTime) / 1000);
-            console.log("Mongo update:", userId, duration);
             await VoiceStats.findOneAndUpdate(
                 { userId },
                 { $inc: { totalSeconds: duration } },
                 { upsert: true }
             );
-            console.log(`${userId} : ${duration}s sauvegardées`);
             voiceJoins.delete(userId);
         }
         if (newState.channelId) {
@@ -1361,25 +1343,32 @@ client.on("voiceStateUpdate", async (oldState, newState) => {
     }
 });
 
-// Top 10 vocal toutes les 5s
+// Top 10 vocal — recalculé toutes les 30s (au lieu de 5s)
 setInterval(async () => {
     try {
-        const channel = client.channels.cache.get("1519715683863105596");
+        const channel = client.channels.cache.get(VOICE_TOP_CHANNEL_ID);
         if (!channel) return;
 
-        const stats = await VoiceStats.find().sort({ totalSeconds: -1 }).limit(10);
+        // ⚡ .lean() : ces documents ne sont pas modifiés, pas besoin
+        // d'instancier des documents Mongoose complets pour de la lecture pure.
+        const stats = await VoiceStats.find().sort({ totalSeconds: -1 }).limit(10).lean();
 
         let content = "🎤 **TOP 10 VOCAL (24H)**\n\n";
 
         if (!stats.length) {
             content += "Aucune donnée.";
         } else {
-            for (let i = 0; i < stats.length; i++) {
-                const user = await client.users.fetch(stats[i].userId).catch(() => null);
-                const hours = Math.floor(stats[i].totalSeconds / 3600);
-                const minutes = Math.floor((stats[i].totalSeconds % 3600) / 60);
+            // ⚡ Fetch des 10 utilisateurs en parallèle plutôt qu'en séquence
+            const users = await Promise.all(
+                stats.map(s => client.users.fetch(s.userId).catch(() => null))
+            );
+
+            stats.forEach((stat, i) => {
+                const user = users[i];
+                const hours = Math.floor(stat.totalSeconds / 3600);
+                const minutes = Math.floor((stat.totalSeconds % 3600) / 60);
                 content += `${i + 1}. ${user ? user.username : "Inconnu"} — ${hours}h ${minutes}m\n`;
-            }
+            });
         }
 
         const messages = await channel.messages.fetch({ limit: 10 });
@@ -1393,44 +1382,14 @@ setInterval(async () => {
     } catch (err) {
         console.log("Erreur Top Vocal :", err);
     }
-}, 5000);
+}, VOICE_TOP_INTERVAL_MS);
 
-// ─── antiGhostPing ────────────────────────────────────────────────────────────
+// ─── Systèmes annexes ─────────────────────────────────────────────────────────
 
-const antiGhostPing = require("./events/antiGhostPing");
-client.on("messageCreate", antiGhostPing.messageCreate);
-client.on("messageDelete", antiGhostPing.messageDelete);
-// ─── GuildmemberAdd ────────────────────────────────────────────────────────────
-const AutoRole = require("./models/AutoRole");
-
-client.on("guildMemberAdd", async member => {
-
-    const data = await AutoRole.findOne({
-        guildId: member.guild.id
-    });
-
-    if (!data) return;
-
-    const role = member.guild.roles.cache.get(data.roleId);
-
-    if (!role) return;
-
-    try {
-        await member.roles.add(role);
-        snapshotAddMember(role.id, member.id); // ✅ Mise à jour du snapshot
-    } catch (err) {
-        console.log(err);
-    }
-
-});
-const tiktokNotifier = require("./systems/tiktokNotifier");
 tiktokNotifier(client);
-
-const economyRewards = require("./systems/economyRewards");
 economyRewards(client);
-
 require("./Verify/server")(client);
+
 // ─── Login ────────────────────────────────────────────────────────────────────
 
-console.log("TOKEN =", process.env.DISCORD_TOKEN);
 client.login(process.env.DISCORD_TOKEN);
