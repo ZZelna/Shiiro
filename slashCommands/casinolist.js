@@ -23,7 +23,7 @@ module.exports = {
             });
         }
 
-        const profiles = await CasinoProfile.find().sort({ coins: -1 });
+const profiles = await CasinoProfile.find().sort({ yens: -1 });
 
         if (!profiles.length) {
             return interaction.reply({
@@ -47,7 +47,7 @@ module.exports = {
                 .map((profile, index) => {
                     return `**${start + index + 1}.** <@${profile.userId}>
 🆔 \`${profile.userId}\`
-💰 **${profile.coins ?? 0}** pièces`;
+💴 **${(profile.yens ?? 0).toLocaleString("fr-FR")}** yens`;
                 })
                 .join("\n\n");
 
