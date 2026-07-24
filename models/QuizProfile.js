@@ -10,6 +10,12 @@ const quizProfileSchema = new Schema({
   questionsAnswered: { type: Number, default: 0 },
   questionsCorrect: { type: Number, default: 0 },
   lastPlayedAt: { type: Date, default: null },
+  // Prestige
+  prestige: { type: Number, default: 0 }, // 0 = pas encore prestige, 1-10 = palier atteint
+  badges: { type: [String], default: [] },
+  title: { type: String, default: null },
+  frame: { type: String, default: null },
+  pendingDrops: { type: Number, default: 0 },
 });
 
 // Un profil par joueur et par serveur
