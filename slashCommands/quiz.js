@@ -21,16 +21,16 @@ const { pickQuestion, computeXpGain, levelFromXp, xpForLevel } = require('../uti
 const PRESTIGE_LEVEL_REQUIRED = 100;
 const PRESTIGE_XP_BONUS_PER_TIER = 0.05; // +5% d'XP par palier de prestige (Prestige I = +5%, ..., Prestige X = +50%)
 const PRESTIGE_TIERS = [
-  { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: null, extra: null, yens: 50_000 },
-  { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Titre exclusif', extra: null, yens: 100_000 },
-  { name: 'Prestige III', badge: '🥇 Badge Prestige III', frame: 'Cadre Or', title: null, extra: '1 drop', yens: 200_000 },
-  { name: 'Prestige IV', badge: '💠 Badge Prestige IV', frame: 'Cadre Platine', title: null, extra: 'Bannière de profil', yens: 300_000 },
-  { name: 'Prestige V', badge: '💎 Badge Prestige V', frame: 'Cadre Diamant', title: null, extra: 'Mascotte exclusive', yens: 500_000 },
-  { name: 'Prestige VI', badge: '🔷 Badge Prestige VI', frame: null, title: 'Titre rare', extra: 'Effet de profil', yens: 750_000 },
-  { name: 'Prestige VII', badge: '🟢 Badge Prestige VII', frame: 'Cadre Émeraude', title: null, extra: '2 drops', yens: 1_000_000 },
-  { name: 'Prestige VIII', badge: '🔮 Badge Prestige VIII', frame: 'Cadre Améthyste animé', title: null, extra: 'Bannière animée', yens: 1_500_000 },
-  { name: 'Prestige IX', badge: '🌌 Badge Prestige IX', frame: 'Cadre Cosmique', title: null, extra: 'Aura de profil', yens: 2_000_000 },
-  { name: 'Prestige X', badge: '👑 Badge Mythique', frame: 'Cadre Mythique animé', title: 'Le Légendaire', extra: 'Hall of Fame', yens: 5_000_000 },
+  { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: 'Novice', extra: null, yens: 50_000 },
+  { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Apprenti', extra: null, yens: 100_000 },
+  { name: 'Prestige III', badge: '🥇 Badge Prestige III', frame: 'Cadre Or', title: 'Érudit', extra: '1 drop', yens: 200_000 },
+  { name: 'Prestige IV', badge: '💠 Badge Prestige IV', frame: 'Cadre Platine', title: 'Gardien', extra: 'Bannière de profil', yens: 300_000 },
+  { name: 'Prestige V', badge: '💎 Badge Prestige V', frame: 'Cadre Diamant', title: 'Champion', extra: '2 drop', yens: 500_000 },
+  { name: 'Prestige VI', badge: '🔷 Badge Prestige VI', frame: null, title: 'Héro', extra: 'Effet de profil', yens: 750_000 },
+  { name: 'Prestige VII', badge: '🟢 Badge Prestige VII', frame: 'Cadre Émeraude', title: 'Seigneur', extra: '4 drops', yens: 1_000_000 },
+  { name: 'Prestige VIII', badge: '🔮 Badge Prestige VIII', frame: 'Cadre Améthyste animé', title: 'Légende', extra: 'Bannière animée', yens: 1_500_000 },
+  { name: 'Prestige IX', badge: '🌌 Badge Prestige IX', frame: 'Cadre Cosmique animé', title: 'Mythe', extra: 'Aura de profil', yens: 2_000_000 },
+  { name: 'Prestige X', badge: '👑 Badge Mythique', frame: 'Cadre Mythique animé', title: 'Transcendant', extra: 'Hall of Fame', yens: 5_000_000 },
 ];
 
 const LETTERS = ['A', 'B', 'C', 'D'];
