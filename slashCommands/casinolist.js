@@ -16,21 +16,14 @@ module.exports = {
 
     async execute(interaction) {
 
-        if (interaction.user.id !== "1418370654251778168") {
-            return interaction.reply({
-                content: "❌ Vous ne pouvez pas utiliser cette commande.",
-                ephemeral: true
-            });
-        }
+       const ROLE_ID = "1506674274826584284";
 
-const profiles = await CasinoProfile.find().sort({ yens: -1 });
-
-        if (!profiles.length) {
-            return interaction.reply({
-                content: "❌ Aucun profil casino trouvé.",
-                ephemeral: true
-            });
-        }
+if (!interaction.member.roles.cache.has(ROLE_ID)) {
+    return interaction.reply({
+        content: "❌ Vous devez posséder le rôle autorisé pour utiliser cette commande.",
+        ephemeral: true
+    });
+}
 
         const perPage = 25;
         const totalPages = Math.ceil(profiles.length / perPage);
