@@ -28,6 +28,7 @@ const {
 } = require("discord.js");
 const autoQuiz = require("./systems/autoQuiz");
 const config = require("./config.json");
+const ready = require("./events/client/ready");
 
 function getCustomRole(commandName) {
     if (!config.custom_roles) return null;
