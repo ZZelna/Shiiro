@@ -1,13 +1,13 @@
 const { EmbedBuilder } = require("discord.js");
 const CasinoProfile = require("../models/CasinoProfile");
 
-// ✅ ID du serveur principal
+// ✅ Serveur principal uniquement
 const MAIN_GUILD_ID = "1506672014679740546";
 
-// Rôle donné automatiquement quand le statut /Shiiro est actif (voir presenceUpdate)
+// Rôle donné automatiquement quand le statut /Shiiro est actif
 const STATUT_ROLE_ID = "1514348874427404529";
 
-// Salon de logs pour les récompenses économie
+// Salon de logs
 const LOG_GUILD_ID = "1519364880677867550";
 const LOG_CHANNEL_ID = "1523695742978494554";
 
@@ -20,24 +20,25 @@ function getLogChannel(client) {
 const MESSAGES_THRESHOLD = 10;
 const REWARD_MESSAGES = 100;
 
-const VOICE_BLOCK_MS = 30 * 60 * 1000; // 30 minutes
+const VOICE_BLOCK_MS = 30 * 60 * 1000;
 const REWARD_VOICE_BASE = 5000;
-const REWARD_VOICE_STATUT = 5000; // bonus si le rôle statut est actif au moment du palier
+const REWARD_VOICE_STATUT = 5000;
 
+// ✅ Ne crée plus automatiquement de profil
 async function addYens(userId, amount) {
-    let profile = await CasinoProfile.findOne({ userId });
 
-    if (!profile) {
-        profile = await CasinoProfile.create({ userId });
-    }
+    const profile = await CasinoProfile.findOne({ userId });
+
+    if (!profile) return null;
 
     const boostActive =
         profile.boostEnd &&
         profile.boostEnd > new Date();
 
-    const multiplier = boostActive
-        ? profile.boostMultiplier
-        : 1;
+    const multiplier =
+        boostActive
+            ? profile.boostMultiplier
+            : 1;
 
     const finalAmount = Math.round(amount * multiplier);
 
@@ -51,13 +52,12 @@ async function addYens(userId, amount) {
         boostActive,
         multiplier
     };
+
 }
 
 module.exports = function economyRewards(client) {
 
-    // ─────────────────────────────────────────────
-    // Récompenses messages
-    // ─────────────────────────────────────────────
+    // ───── Récompense messages ─────
 
     const messageCounts = new Map();
 
@@ -66,7 +66,7 @@ module.exports = function economyRewards(client) {
         if (message.author.bot) return;
         if (!message.guild) return;
 
-        // ✅ Uniquement sur le serveur principal
+        // ✅ Serveur principal uniquement
         if (message.guild.id !== MAIN_GUILD_ID) return;
 
         const userId = message.author.id;
@@ -83,6 +83,9 @@ module.exports = function economyRewards(client) {
                 const result =
                     await addYens(userId, REWARD_MESSAGES);
 
+                // ✅ Aucun profil = aucune récompense
+                if (!result) return;
+
                 const logChannel =
                     getLogChannel(client);
 
@@ -91,9 +94,7 @@ module.exports = function economyRewards(client) {
                     const embed = new EmbedBuilder()
                         .setColor("Gold")
                         .setTitle("💬 Récompense Messages")
-                        .setDescription(
-                            `${message.author} a gagné **${result.gained} yens** (10 messages envoyés).`
-                        )
+                        .setDescription(`${message.author} a gagné **${result.gained} yens** (10 messages envoyés).`)
                         .addFields(
                             {
                                 name: "💰 Nouveau solde",
@@ -110,17 +111,14 @@ module.exports = function economyRewards(client) {
                         )
                         .setTimestamp();
 
-                    logChannel
-                        .send({ embeds: [embed] })
-                        .catch(() => {});
+                    logChannel.send({
+                        embeds: [embed]
+                    }).catch(() => {});
                 }
 
             } catch (err) {
 
-                console.error(
-                    "❌ Erreur récompense messages :",
-                    err
-                );
+                console.error("❌ Erreur récompense messages :", err);
 
             }
 
@@ -132,9 +130,7 @@ module.exports = function economyRewards(client) {
 
     });
 
-    // ─────────────────────────────────────────────
-    // Récompenses vocal
-    // ─────────────────────────────────────────────
+    // ───── Récompense vocal ─────
 
     const voiceJoinTimes = new Map();
     const voiceRewardedBlocks = new Map();
@@ -147,7 +143,6 @@ module.exports = function economyRewards(client) {
         if (!member) return;
         if (member.user.bot) return;
 
-        // ✅ Uniquement sur le serveur principal
         if (member.guild.id !== MAIN_GUILD_ID) return;
 
         const userId = member.id;
@@ -177,26 +172,24 @@ module.exports = function economyRewards(client) {
 
             const elapsed = Date.now() - joinTime;
 
-            const blocksEarned =
-                Math.floor(elapsed / VOICE_BLOCK_MS);
+            const blocksEarned = Math.floor(
+                elapsed / VOICE_BLOCK_MS
+            );
 
             const alreadyRewarded =
                 voiceRewardedBlocks.get(userId) || 0;
 
-            if (blocksEarned <= alreadyRewarded) continue;
-
-            const newBlocks =
-                blocksEarned - alreadyRewarded;
+            if (blocksEarned <= alreadyRewarded)
+                continue;
 
             voiceRewardedBlocks.set(
                 userId,
                 blocksEarned
             );
 
-            const member =
-                await guild.members
-                    .fetch(userId)
-                    .catch(() => null);
+            const member = await guild.members
+                .fetch(userId)
+                .catch(() => null);
 
             if (!member) continue;
 
@@ -210,7 +203,8 @@ module.exports = function economyRewards(client) {
                     : 0);
 
             const totalReward =
-                rewardPerBlock * newBlocks;
+                rewardPerBlock *
+                (blocksEarned - alreadyRewarded);
 
             try {
 
@@ -219,6 +213,9 @@ module.exports = function economyRewards(client) {
                         userId,
                         totalReward
                     );
+
+                // ✅ Aucun profil créé = aucune récompense
+                if (!result) continue;
 
                 const logChannel =
                     getLogChannel(client);
@@ -230,7 +227,7 @@ module.exports = function economyRewards(client) {
                             .setColor("Aqua")
                             .setTitle("🎙️ Récompense Vocal")
                             .setDescription(
-                                `${member} a gagné **${result.gained} yens** (${newBlocks} palier(s) de 30 min).`
+                                `${member} a gagné **${result.gained} yens** (${blocksEarned - alreadyRewarded} palier(s) de 30 min).`
                             )
                             .addFields(
                                 {
@@ -255,11 +252,9 @@ module.exports = function economyRewards(client) {
                             )
                             .setTimestamp();
 
-                    logChannel
-                        .send({
-                            embeds: [embed]
-                        })
-                        .catch(() => {});
+                    logChannel.send({
+                        embeds: [embed]
+                    }).catch(() => {});
                 }
 
             } catch (err) {
