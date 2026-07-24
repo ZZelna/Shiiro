@@ -91,58 +91,6 @@ for (const folder of commandFolders) {
         client.commands.set(command.name, command);
     }
 }
-
-// ───Ready ───────────────────────────────────────────────────
-client.once("clientReady", async () => {
-    console.log(`${client.user.tag} est connecté !`);
-
-    await statsVoice(client);
-
-    // ✅ Construction du snapshot initial roleId -> membres
-    try {
-        const mainGuild = client.guilds.cache.get("1506672014679740546");
-        if (mainGuild) {
-            const allMembers = await mainGuild.members.fetch();
-            allMembers.forEach(m => {
-                m.roles.cache.forEach(role => {
-                    snapshotAddMember(role.id, m.id);
-                });
-            });
-            console.log("✅ Snapshot rôles/membres initialisé");
-        }
-    } catch (err) {
-        console.error("❌ Erreur snapshot rôles/membres :", err);
-    }
-
-    client.user.setPresence({
-        activities: [{
-            name: ".gg/shiiro",
-            type: ActivityType.Streaming,
-            url: "https://twitch.tv/leox123bs"
-        }],
-        status: "online"
-    });
-
-    autoQuiz(client);
-    console.log("🎯 Auto Quiz démarré");
-
-    const commands = [];
-    client.slashCommands.forEach(command => {
-        commands.push(command.data.toJSON());
-    });
-
-    const rest = new REST({ version: "10" }).setToken(process.env.DISCORD_TOKEN);
-console.log(`Nombre de slash commands : ${commands.length}`);
-    try {
-        await rest.put(
-            Routes.applicationCommands(client.user.id),
-            { body: commands }
-        );
-        console.log("✅ Slash commands enregistrées");
-    } catch (err) {
-        console.error("❌ Erreur slash commands :", err);
-    }
-    });
 // ─── messageDelete (snipe) ───────────────────────────────────────────────────
 
 client.on("messageDelete", async (message) => {
