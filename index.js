@@ -92,6 +92,10 @@ for (const folder of commandFolders) {
         client.commands.set(command.name, command);
     }
 }
+
+client.once("clientReady", () => {
+    ready(client, snapshotAddMember);
+});
 // ─── messageDelete (snipe) ───────────────────────────────────────────────────
 
 client.on("messageDelete", async (message) => {
