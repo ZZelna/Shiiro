@@ -60,7 +60,8 @@ module.exports = {
       .setTitle("🔧 Configuration de l'Arène")
       .setDescription(
         `✅ **${Object.keys(found).length}** salons détectés et enregistrés.` +
-        (missing.length ? `\n⚠️ Introuvables : ${missing.map(s => `\`${s}\``).join(', ')}` : '')
+        (missing.length ? `\n⚠️ Introuvables : ${missing.map(s => `\`${s}\``).join(', ')}` : '') +
+        `\n\nℹ️ Pour les rôles de prestige, utilise \`/setup-prestige-roles\`.`
       );
 
     await interaction.editReply({ embeds: [embed] });
