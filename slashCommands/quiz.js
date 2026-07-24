@@ -19,6 +19,7 @@ const CasinoProfile = require('../models/CasinoProfile');
 const { pickQuestion, computeXpGain, levelFromXp, xpForLevel } = require('../utils/quizEngine');
 
 const PRESTIGE_LEVEL_REQUIRED = 100;
+const PRESTIGE_XP_BONUS_PER_TIER = 0.05; // +5% d'XP par palier de prestige (Prestige I = +5%, ..., Prestige X = +50%)
 const PRESTIGE_TIERS = [
   { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: null, extra: null, yens: 50_000 },
   { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Titre exclusif', extra: null, yens: 100_000 },
@@ -171,13 +172,9 @@ async function executeSolo(interaction) {
 
     if (isCorrect) {
       const newStreak = profile.streak + 1;
-      const xpGain = computeXpGain(question, newStreak);
-      const newXp = profile.xp + xpGain;
-      const oldLevel = profile.level;
-      const newLevel = levelFromXp(newXp);
+      const baseXp = computeXpGain(question, newStreak);
+      const { gainedXp, oldLevel, newLevel, milestoneLines } = await grantXp(profile, baseXp);
 
-      profile.xp = newXp;
-      profile.level = newLevel;
       profile.streak = newStreak;
       profile.bestStreak = Math.max(profile.bestStreak, newStreak);
       profile.questionsAnswered += 1;
@@ -185,8 +182,9 @@ async function executeSolo(interaction) {
       profile.lastPlayedAt = new Date();
       await profile.save();
 
-      let reply = `✅ Bonne réponse ! +${xpGain} XP (streak x${newStreak})`;
+      let reply = `✅ Bonne réponse ! +${gainedXp} XP (streak x${newStreak})`;
       if (newLevel > oldLevel) reply += `\n🎉 Niveau supérieur ! Tu passes niveau **${newLevel}**.`;
+      if (milestoneLines.length) reply += `\n${milestoneLines.join('\n')}`;
 
       await i.reply({ content: reply, ephemeral: true });
     } else {
@@ -430,12 +428,18 @@ async function executeDuel(interaction) {
     resultText = `🏆 ${winner} remporte le duel ! (${Math.max(p1Score, p2Score)} - ${Math.min(p1Score, p2Score)})\n${loser} peut prendre sa revanche à tout moment.`;
   }
 
+  const milestoneAnnouncements = [];
+
   for (const player of players) {
     const profile = await getOrCreateProfile(player.id, interaction.guild.id);
-    let xpGain = correctCounts[player.id] > 0 ? scores[player.id] : 0;
-    if (winner && winner.id === player.id) xpGain += DUEL_WIN_XP_BONUS;
-    profile.xp += xpGain;
-    profile.level = levelFromXp(profile.xp);
+    let baseXp = correctCounts[player.id] > 0 ? scores[player.id] : 0;
+    if (winner && winner.id === player.id) baseXp += DUEL_WIN_XP_BONUS;
+
+    const { milestoneLines } = await grantXp(profile, baseXp);
+    if (milestoneLines.length) {
+      milestoneAnnouncements.push(`**${player.username}**\n${milestoneLines.join('\n')}`);
+    }
+
     profile.questionsAnswered += rounds;
     profile.questionsCorrect += correctCounts[player.id];
     profile.lastPlayedAt = new Date();
@@ -445,6 +449,10 @@ async function executeDuel(interaction) {
   const finalContainer = new ContainerBuilder().setAccentColor(0x57F287);
   finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 🏁 Fin du duel'));
   finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(resultText));
+  if (milestoneAnnouncements.length) {
+    finalContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(milestoneAnnouncements.join('\n\n')));
+  }
 
   await channel.send({ flags: MessageFlags.IsComponentsV2, components: [finalContainer] });
 }
@@ -665,12 +673,18 @@ async function executeDuo2v2(interaction) {
       `(${Math.max(teamScores.A, teamScores.B)} - ${Math.min(teamScores.A, teamScores.B)})`;
   }
 
+  const milestoneAnnouncements = [];
+
   for (const player of allPlayers) {
     const profile = await getOrCreateProfile(player.id, interaction.guild.id);
-    let xpGain = playerScores[player.id];
-    if (winningTeam && winningTeam.some(p => p.id === player.id)) xpGain += DUO_TEAM_WIN_XP_BONUS;
-    profile.xp += xpGain;
-    profile.level = levelFromXp(profile.xp);
+    let baseXp = playerScores[player.id];
+    if (winningTeam && winningTeam.some(p => p.id === player.id)) baseXp += DUO_TEAM_WIN_XP_BONUS;
+
+    const { milestoneLines } = await grantXp(profile, baseXp);
+    if (milestoneLines.length) {
+      milestoneAnnouncements.push(`**${player.username}**\n${milestoneLines.join('\n')}`);
+    }
+
     profile.questionsAnswered += rounds;
     profile.questionsCorrect += playerCorrect[player.id];
     profile.lastPlayedAt = new Date();
@@ -680,6 +694,10 @@ async function executeDuo2v2(interaction) {
   const finalContainer = new ContainerBuilder().setAccentColor(0x57F287);
   finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 🏁 Fin du 2v2'));
   finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(resultText));
+  if (milestoneAnnouncements.length) {
+    finalContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(milestoneAnnouncements.join('\n\n')));
+  }
 
   await channel.send({ flags: MessageFlags.IsComponentsV2, components: [finalContainer] });
 }
@@ -868,4 +886,67 @@ async function getOrCreateProfile(userId, guildId) {
     profile = await QuizProfile.create({ userId, guildId });
   }
   return profile;
+}
+
+/**
+ * Ajoute de l'XP à un profil en appliquant le bonus de prestige, met à jour le niveau,
+ * et déclenche les récompenses de palier de niveau (tous les 5/10/25/50 niveaux + niveau 100).
+ * IMPORTANT : ne fait pas le profile.save() — l'appelant doit le faire après.
+ * Retourne { baseXp, bonusXp, gainedXp, oldLevel, newLevel, milestoneLines }
+ */
+async function grantXp(profile, baseXp) {
+  const multiplier = 1 + profile.prestige * PRESTIGE_XP_BONUS_PER_TIER;
+  const gainedXp = Math.round(baseXp * multiplier);
+  const oldLevel = profile.level;
+
+  profile.xp += gainedXp;
+  profile.level = levelFromXp(profile.xp);
+
+  const milestoneLines = await applyLevelMilestones(profile, oldLevel, profile.level);
+
+  return { baseXp, bonusXp: gainedXp - baseXp, gainedXp, oldLevel, newLevel: profile.level, milestoneLines };
+}
+
+/**
+ * Hypothèses non précisées dans la doc, à ajuster si besoin :
+ * - Yens tous les 5 niveaux : (niveau / 5) × 1000
+ * - Badge + titre tous les 10 niveaux, cadre + drop tous les 25, collection + drop tous les 50
+ * - Textes de badge/titre/cadre : placeholders "Niveau X", à remplacer par du contenu réel si tu en as
+ */
+async function applyLevelMilestones(profile, oldLevel, newLevel) {
+  const lines = [];
+
+  for (let level = oldLevel + 1; level <= newLevel; level++) {
+    if (level % 5 === 0) {
+      const yensReward = (level / 5) * 1000;
+      await CasinoProfile.findOneAndUpdate(
+        { userId: profile.userId },
+        { $inc: { yens: yensReward } },
+        { upsert: true }
+      );
+      lines.push(`💴 Niveau ${level} : +${yensReward.toLocaleString()} Yens`);
+    }
+    if (level % 10 === 0) {
+      profile.badges.push(`🎖️ Niveau ${level}`);
+      profile.title = `Titre Niveau ${level}`;
+      lines.push(`🎖️ Niveau ${level} : nouveau badge + titre`);
+    }
+    if (level % 25 === 0) {
+      profile.frame = `Cadre Niveau ${level}`;
+      profile.pendingDrops += 1;
+      lines.push(`🖼️ Niveau ${level} : nouveau cadre de profil + 1 récompense exclusive`);
+    }
+    if (level % 50 === 0) {
+      profile.badges.push(`💎 Collection Niveau ${level}`);
+      profile.pendingDrops += 1;
+      lines.push(`💎 Niveau ${level} : objet de collection rare + bonus spécial`);
+    }
+    if (level === 100) {
+      profile.badges.push('🏆');
+      profile.title = 'Titre exclusif Niveau 100';
+      lines.push('🏆 Niveau 100 : récompense de fin de progression + `/quiz prestige` débloqué !');
+    }
+  }
+
+  return lines;
 }
