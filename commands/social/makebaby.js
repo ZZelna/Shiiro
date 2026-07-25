@@ -9,7 +9,7 @@ module.exports = {
 
     name: "makebaby",
 
-    async run(message, args) {
+    async run(message) {
 
         const childMember = message.mentions.members.first();
 
@@ -33,23 +33,47 @@ module.exports = {
                 "❌ Vous devez être marié."
             );
 
-        const family = await Family.findOne({
+        let family = await Family.findOne({
             marriageId: marriage._id
         });
 
-        if (!family)
-            return message.reply(
-                "❌ Famille introuvable."
-            );
+        if (!family) {
+
+            family = await Family.create({
+
+                guildId: message.guild.id,
+
+                ownerId: marriage.proposerId,
+
+                marriageId: marriage._id,
+
+                name: `Famille ${message.author.username}`,
+
+                members: marriage.users,
+
+                children: [],
+
+                lastBaby: null,
+
+                maxChildren: 3,
+
+                level: 1,
+
+                xp: 0,
+
+                coins: 0
+
+            });
+
+        }
 
         if (!family.children)
             family.children = [];
 
-        const alreadyChild = family.children.find(
-            c => c.userId === childMember.id
-        );
+        if (!family.members)
+            family.members = [];
 
-        if (alreadyChild)
+        if (family.members.includes(childMember.id))
             return message.reply(
                 "❌ Cette personne fait déjà partie de votre famille."
             );
@@ -80,9 +104,9 @@ module.exports = {
             filter,
             max: 1,
             time: 60000
-        }).catch(() => null);
+        });
 
-        if (!collected || !collected.first())
+        if (!collected.size)
             return message.reply(
                 "⌛ Temps écoulé."
             );
@@ -99,6 +123,8 @@ module.exports = {
                 ? "Garçon"
                 : "Fille";
 
+        family.members.push(childMember.id);
+
         family.children.push({
 
             userId: childMember.id,
@@ -113,7 +139,7 @@ module.exports = {
 
             intelligence: 0,
 
-            createdAt: Date.now()
+            createdAt: new Date()
 
         });
 
@@ -128,29 +154,29 @@ module.exports = {
             .setTitle("👶 Naissance")
 
             .setDescription(
-                `${childMember} rejoint officiellement votre famille !`
+                `${childMember} rejoint officiellement votre famille ❤️`
             )
 
             .addFields(
                 {
-                    name: "Prénom",
+                    name: "👤 Prénom",
                     value: firstName,
                     inline: true
                 },
                 {
-                    name: "Genre",
+                    name: "⚧ Genre",
                     value: gender,
                     inline: true
                 },
                 {
-                    name: "Âge",
+                    name: "🎂 Âge",
                     value: "0 an",
                     inline: true
                 }
             )
 
             .setFooter({
-                text: "Bienvenue dans la famille ❤️"
+                text: "Bienvenue dans votre nouvelle famille ❤️"
             });
 
         return message.reply({
