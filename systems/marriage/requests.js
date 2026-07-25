@@ -2,19 +2,15 @@
 
 const requests = new Map();
 
-/*
-Structure :
-
-{
-    authorId: {
-        targetId,
-        guildId,
-        createdAt
-    }
-}
-*/
-
 module.exports = {
+
+    set(authorId, targetId, guildId) {
+        requests.set(authorId, {
+            targetId,
+            guildId,
+            createdAt: Date.now()
+        });
+    },
 
     create(authorId, targetId, guildId) {
         requests.set(authorId, {
@@ -26,6 +22,10 @@ module.exports = {
 
     get(authorId) {
         return requests.get(authorId);
+    },
+
+    has(authorId) {
+        return requests.has(authorId);
     },
 
     delete(authorId) {
@@ -45,10 +45,6 @@ module.exports = {
         return null;
     },
 
-    has(authorId) {
-        return requests.has(authorId);
-    },
-
     clearExpired(maxAge = 5 * 60 * 1000) {
         const now = Date.now();
 
@@ -57,6 +53,18 @@ module.exports = {
                 requests.delete(authorId);
             }
         }
+    },
+
+    values() {
+        return requests.values();
+    },
+
+    entries() {
+        return requests.entries();
+    },
+
+    clear() {
+        requests.clear();
     }
 
 };
