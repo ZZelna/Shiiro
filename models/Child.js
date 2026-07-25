@@ -71,6 +71,11 @@ module.exports = mongoose.model(
             default: 1
         },
 
+        lastSchool: {
+    type: Number,
+    default: 0
+},
+        
         job: {
             type: String,
             default: null
