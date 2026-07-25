@@ -46,7 +46,7 @@ module.exports = {
 
         const reward = 25000;
 
-        family.coins += reward;
+        family.yens = (family.yens || 0) + reward;
         family.xp += 250;
         family.lastDaily = now;
 
@@ -58,37 +58,28 @@ module.exports = {
         await family.save();
 
         const embed = new EmbedBuilder()
-
             .setColor("#57F287")
-
             .setTitle("🎁 Récompense familiale")
-
             .setDescription(
                 `Votre famille reçoit **${reward.toLocaleString("fr-FR")} ¥**.`
             )
-
             .addFields(
-
                 {
-                    name: "🏦 Banque",
-                    value: `${family.coins.toLocaleString("fr-FR")} ¥`,
+                    name: "🏦 Banque familiale",
+                    value: `${(family.yens || 0).toLocaleString("fr-FR")} ¥`,
                     inline: true
                 },
-
                 {
                     name: "⭐ Niveau",
                     value: family.level.toString(),
                     inline: true
                 },
-
                 {
                     name: "✨ XP",
-                    value: family.xp.toString(),
+                    value: family.xp.toLocaleString("fr-FR"),
                     inline: true
                 }
-
             )
-
             .setTimestamp();
 
         return message.reply({
