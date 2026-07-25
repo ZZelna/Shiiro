@@ -20,8 +20,8 @@ module.exports = {
             return message.reply("❌ Vous n'êtes pas marié.");
 
         const family = await Family.findOne({
-            marriageId: marriage._id
-        });
+    marriageId: marriage._id
+}).populate("children");
 
         if (!family)
             return message.reply("❌ Aucune famille trouvée.");
