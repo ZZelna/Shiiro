@@ -7,6 +7,7 @@ const Family = require("../../models/Family");
 const Child = require("../../models/Child");
 
 module.exports = {
+
     name: "couple",
 
     async run(message) {
@@ -37,17 +38,21 @@ module.exports = {
               })
             : 0;
 
-        const marriedDays = Math.floor(
-            (Date.now() - marriage.marriedAt.getTime()) /
-            86400000
-        );
+        const marriedDays = marriage.marriedAt
+            ? Math.floor(
+                  (Date.now() - marriage.marriedAt.getTime()) /
+                  86400000
+              )
+            : 0;
+
+        const voiceSeconds = marriage.voiceSeconds || 0;
 
         const voiceHours = Math.floor(
-            (marriage.voiceSeconds || 0) / 3600
+            voiceSeconds / 3600
         );
 
         const voiceMinutes = Math.floor(
-            ((marriage.voiceSeconds || 0) % 3600) / 60
+            (voiceSeconds % 3600) / 60
         );
 
         const embed = new EmbedBuilder()
@@ -56,13 +61,17 @@ module.exports = {
 
             .setAuthor({
                 name: `${message.author.username} ❤️ ${partner?.username || "Inconnu"}`
-            })
+            });
 
-            .setThumbnail(
-                partner?.displayAvatarURL({
+        if (partner) {
+            embed.setThumbnail(
+                partner.displayAvatarURL({
                     size: 512
                 })
-            )
+            );
+        }
+
+        embed
 
             .addFields(
 
@@ -121,7 +130,7 @@ module.exports = {
                 },
 
                 {
-                    name: "👨‍👩‍👧 Famille",
+                    name: "🏡 Famille",
                     value: family?.name || "Aucune",
                     inline: true
                 }
@@ -139,4 +148,5 @@ module.exports = {
         });
 
     }
+
 };
