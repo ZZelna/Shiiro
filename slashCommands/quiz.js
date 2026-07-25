@@ -21,6 +21,11 @@ const { getLevelBadge, getLevelFrame, getLevelCollection, getLevelYens } = requi
 
 const PRESTIGE_LEVEL_REQUIRED = 100;
 const PRESTIGE_XP_BONUS_PER_TIER = 0.05; // +5% d'XP par palier de prestige (Prestige I = +5%, ..., Prestige X = +50%)
+const BR_MIN_PLAYERS = 5;
+const BR_DEFAULT_JOIN_TIME_MS = 60_000;
+const BR_ROUND_TIME_MS = 15_000;
+const BR_MAX_ROUNDS = 50;
+const BR_WIN_XP_BONUS = 50;
 const PRESTIGE_TIERS = [
   { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: null, extra: null, yens: 50_000 },
   { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Titre exclusif', extra: null, yens: 100_000 },
@@ -110,6 +115,13 @@ module.exports = {
     .addSubcommand(sub =>
       sub.setName('prestige')
         .setDescription(`Passe au palier de prestige suivant (niveau ${PRESTIGE_LEVEL_REQUIRED} requis)`)
+    )
+    .addSubcommand(sub =>
+      sub.setName('battle-royale')
+        .setDescription('Lance une battle royale : élimination directe, le dernier debout gagne')
+        .addIntegerOption(option =>
+          option.setName('inscription').setDescription("Durée d'inscription en secondes (défaut : 60)").setRequired(false)
+        )
     ),
 
   async execute(interaction) {
@@ -119,6 +131,7 @@ module.exports = {
     if (subcommand === 'duo2v2') return executeDuo2v2(interaction);
     if (subcommand === 'profil') return executeProfil(interaction);
     if (subcommand === 'prestige') return executePrestige(interaction);
+    if (subcommand === 'battle-royale') return executeBattleRoyale(interaction);
   },
 };
 
@@ -871,6 +884,224 @@ async function executePrestige(interaction) {
   );
 
   await interaction.reply({ flags: MessageFlags.IsComponentsV2, components: [container] });
+}
+
+// =========================================================
+// /quiz battle-royale
+// =========================================================
+async function executeBattleRoyale(interaction) {
+  const joinTimeMs = (interaction.options.getInteger('inscription') ?? 60) * 1000;
+
+  const config = await GuildConfig.findOne({ guildId: interaction.guild.id });
+  const channelId = config?.channels?.battleRoyale;
+  if (!channelId) {
+    return interaction.reply({
+      content: "❌ Le salon battle-royale n'est pas configuré. Un admin doit d'abord utiliser `/setup-arene`.",
+      ephemeral: true,
+    });
+  }
+  const channel = await interaction.guild.channels.fetch(channelId).catch(() => null);
+  if (!channel) {
+    return interaction.reply({ content: '❌ Le salon battle-royale est introuvable.', ephemeral: true });
+  }
+
+  await interaction.reply({ content: `💥 Battle royale lancée dans ${channel} !`, ephemeral: true });
+
+  // --- Étape 1 : inscriptions ---
+  const joined = new Map(); // userId -> User
+
+  const buildJoinContainer = (statusLine, rowComponents) => {
+    const c = new ContainerBuilder().setAccentColor(0xED4245);
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 💥 Battle Royale — Inscriptions ouvertes !'));
+    c.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(
+        `Clique sur **Rejoindre** avant la fin du timer. Minimum **${BR_MIN_PLAYERS}** joueurs pour lancer la partie.`
+      )
+    );
+    c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    const list = joined.size ? [...joined.values()].map(u => u.username).join(', ') : '_personne pour l\'instant_';
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent(`👥 **${joined.size} inscrit(s)** : ${list}`));
+    if (statusLine) {
+      c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+      c.addTextDisplayComponents(new TextDisplayBuilder().setContent(statusLine));
+    }
+    if (rowComponents) c.addActionRowComponents(rowComponents);
+    return c;
+  };
+
+  const joinRow = new ActionRowBuilder().addComponents(
+    new ButtonBuilder().setCustomId('br_join').setLabel('Rejoindre').setStyle(ButtonStyle.Success)
+  );
+
+  const joinMessage = await channel.send({
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildJoinContainer(null, joinRow)],
+  });
+
+  await new Promise(resolve => {
+    const collector = joinMessage.createMessageComponentCollector({
+      componentType: ComponentType.Button,
+      time: joinTimeMs,
+    });
+
+    collector.on('collect', async i => {
+      if (i.user.bot) return i.reply({ content: '❌ Les bots ne peuvent pas participer.', ephemeral: true });
+      if (joined.has(i.user.id)) {
+        return i.reply({ content: 'Tu es déjà inscrit !', ephemeral: true });
+      }
+      joined.set(i.user.id, i.user);
+      await i.update({ flags: MessageFlags.IsComponentsV2, components: [buildJoinContainer(null, joinRow)] });
+    });
+
+    collector.on('end', () => resolve());
+  });
+
+  const disabledJoinRow = new ActionRowBuilder().addComponents(
+    ButtonBuilder.from(joinRow.components[0]).setDisabled(true)
+  );
+
+  if (joined.size < BR_MIN_PLAYERS) {
+    return joinMessage.edit({
+      flags: MessageFlags.IsComponentsV2,
+      components: [buildJoinContainer(`❌ Pas assez de joueurs (${joined.size}/${BR_MIN_PLAYERS} minimum). Partie annulée.`, disabledJoinRow)],
+    });
+  }
+
+  await joinMessage.edit({
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildJoinContainer('✅ Inscriptions closes ! La partie commence...', disabledJoinRow)],
+  });
+
+  // --- Étape 2 : élimination directe ---
+  let alive = [...joined.values()];
+  const playerPoints = Object.fromEntries(alive.map(p => [p.id, 0]));
+  const playerCorrect = Object.fromEntries(alive.map(p => [p.id, 0]));
+  let round = 0;
+
+  while (alive.length > 1 && round < BR_MAX_ROUNDS) {
+    round++;
+    const question = pickQuestion({});
+    if (!question) break;
+
+    const row = new ActionRowBuilder().addComponents(
+      question.choices.map((choice, i) =>
+        new ButtonBuilder()
+          .setCustomId(`brans_${i}`)
+          .setLabel(`${LETTERS[i]}. ${choice}`)
+          .setStyle(ButtonStyle.Secondary)
+      )
+    );
+
+    const container = new ContainerBuilder().setAccentColor(0xED4245);
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`### 💥 Battle Royale — Manche ${round} • ${alive.length} survivants`)
+    );
+    container.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    container.addTextDisplayComponents(new TextDisplayBuilder().setContent(question.question));
+    container.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`-# Mauvaise réponse = éliminé • ${question.points} points • ${BR_ROUND_TIME_MS / 1000}s`)
+    );
+    container.addActionRowComponents(row);
+
+    const roundMessage = await channel.send({ flags: MessageFlags.IsComponentsV2, components: [container] });
+
+    const answered = new Map(); // userId -> boolean (correct ?)
+
+    const collector = roundMessage.createMessageComponentCollector({
+      componentType: ComponentType.Button,
+      time: BR_ROUND_TIME_MS,
+      filter: i => alive.some(p => p.id === i.user.id),
+    });
+
+    await new Promise(resolve => {
+      collector.on('collect', async i => {
+        if (answered.has(i.user.id)) {
+          return i.reply({ content: 'Tu as déjà répondu à cette manche.', ephemeral: true });
+        }
+        const isCorrect = Number(i.customId.split('_')[1]) === question.answer;
+        answered.set(i.user.id, isCorrect);
+        if (isCorrect) {
+          playerPoints[i.user.id] += question.points;
+          playerCorrect[i.user.id] += 1;
+        }
+        await i.reply({ content: isCorrect ? '✅ Bonne réponse !' : '❌ Mauvaise réponse... prie pour les autres.', ephemeral: true });
+      });
+
+      collector.on('end', () => resolve());
+    });
+
+    const disabledRow = new ActionRowBuilder().addComponents(
+      row.components.map(btn => ButtonBuilder.from(btn).setDisabled(true))
+    );
+
+    // Ceux qui n'ont pas répondu comptent comme mauvaise réponse
+    const survivors = alive.filter(p => answered.get(p.id) === true);
+    const eliminated = alive.filter(p => answered.get(p.id) !== true);
+
+    let resultLine;
+    if (survivors.length === 0) {
+      // Manche "safe" : personne n'a trouvé, personne n'est éliminé
+      resultLine = "😶 Personne n'a trouvé la bonne réponse — manche neutralisée, tout le monde reste en jeu.";
+    } else {
+      alive = survivors;
+      resultLine = eliminated.length
+        ? `💀 Éliminé(s) : ${eliminated.map(p => p.username).join(', ')}\n✅ Toujours en jeu : ${survivors.map(p => p.username).join(', ')}`
+        : `✅ Tout le monde a trouvé, personne n'est éliminé.`;
+    }
+
+    const revealContainer = new ContainerBuilder().setAccentColor(0xED4245);
+    revealContainer.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`### 💥 Battle Royale — Manche ${round}`)
+    );
+    revealContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    revealContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(question.question));
+    revealContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    revealContainer.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`✅ **Bonne réponse : ${question.choices[question.answer]}**\n${resultLine}`)
+    );
+    revealContainer.addActionRowComponents(disabledRow);
+
+    await roundMessage.edit({ flags: MessageFlags.IsComponentsV2, components: [revealContainer] }).catch(() => {});
+  }
+
+  // --- Étape 3 : résultat final ---
+  const winner = alive.length === 1 ? alive[0] : null;
+  const coWinners = alive.length > 1 ? alive : null; // limite de manches atteinte, égalité
+
+  let resultText;
+  if (winner) {
+    resultText = `🏆 ${winner} remporte la Battle Royale avec **${joined.size}** participants !`;
+  } else {
+    resultText = `🤝 Limite de manches atteinte — victoire partagée entre ${coWinners.map(p => p).join(', ')} !`;
+  }
+
+  const milestoneAnnouncements = [];
+  for (const player of joined.values()) {
+    const profile = await getOrCreateProfile(player.id, interaction.guild.id);
+    let baseXp = playerPoints[player.id];
+    const isWinner = winner ? winner.id === player.id : coWinners.some(p => p.id === player.id);
+    if (isWinner) baseXp += BR_WIN_XP_BONUS;
+
+    const { milestoneLines } = await grantXp(profile, baseXp);
+    if (milestoneLines.length) {
+      milestoneAnnouncements.push(`**${player.username}**\n${milestoneLines.join('\n')}`);
+    }
+
+    profile.questionsAnswered += round;
+    profile.questionsCorrect += playerCorrect[player.id];
+    profile.lastPlayedAt = new Date();
+    await profile.save();
+  }
+
+  const finalContainer = new ContainerBuilder().setAccentColor(0x57F287);
+  finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent('### 🏁 Fin de la Battle Royale'));
+  finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(resultText));
+  if (milestoneAnnouncements.length) {
+    finalContainer.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    finalContainer.addTextDisplayComponents(new TextDisplayBuilder().setContent(milestoneAnnouncements.join('\n\n')));
+  }
+
+  await channel.send({ flags: MessageFlags.IsComponentsV2, components: [finalContainer] });
 }
 
 // =========================================================
