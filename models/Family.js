@@ -43,6 +43,10 @@ module.exports = mongoose.model(
             type: Number,
             default: 3
         },
+        yens: {
+    type: Number,
+    default: 0
+},
 
         level: {
             type: Number,
