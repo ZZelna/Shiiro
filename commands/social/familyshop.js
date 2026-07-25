@@ -15,22 +15,62 @@ module.exports = {
             .setTitle("🏪 Boutique Familiale")
 
             .setDescription(
-`Bienvenue dans la boutique de votre famille !
+                "Améliorez votre famille grâce aux différentes améliorations disponibles."
+            )
 
-🛏️ **Maison plus grande** — 250 000 ¥
+            .addFields(
 
-👶 **+1 enfant maximum** — 500 000 ¥
+                {
+                    name: "🏠 Agrandissement de la maison",
+                    value:
+                        "💴 **250 000 ¥**\nPasse au niveau supérieur de maison.",
+                    inline: false
+                },
 
-💰 **+5 % revenus familiaux** — 1 000 000 ¥
+                {
+                    name: "👶 Emplacement d'enfant",
+                    value:
+                        "💴 **500 000 ¥**\nDébloque **+1 enfant** (maximum +10).",
+                    inline: false
+                },
 
-🎖️ **Badge Famille** — 2 500 000 ¥
+                {
+                    name: "💰 Revenus familiaux",
+                    value:
+                        "💴 **1 000 000 ¥**\nAugmente les revenus familiaux de **5 %**.",
+                    inline: false
+                },
 
-🏰 **Villa** — 5 000 000 ¥
+                {
+                    name: "🎖️ Badge de famille",
+                    value:
+                        "💴 **2 500 000 ¥**\nDébloque un badge exclusif pour votre famille.",
+                    inline: false
+                },
 
-👑 **Château** — 15 000 000 ¥`
-            );
+                {
+                    name: "🏰 Villa",
+                    value:
+                        "💴 **5 000 000 ¥**\nTransforme votre maison en **Villa**.",
+                    inline: false
+                },
 
-        message.reply({
+                {
+                    name: "👑 Château",
+                    value:
+                        "💴 **15 000 000 ¥**\nDébloque le prestigieux **Château** familial.",
+                    inline: false
+                }
+
+            )
+
+            .setFooter({
+                text: "Utilisez *buyfamily <objet> pour effectuer un achat."
+            })
+
+            .setTimestamp();
+
+        return message.reply({
             embeds: [embed]
         });
 
