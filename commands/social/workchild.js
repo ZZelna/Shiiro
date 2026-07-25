@@ -2,6 +2,7 @@ const { EmbedBuilder } = require("discord.js");
 
 const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
+const Child = require("../../models/Child");
 const CasinoProfile = require("../../models/CasinoProfile");
 
 module.exports = {
@@ -10,7 +11,12 @@ module.exports = {
 
     async run(message, args) {
 
-        const index = Number(args[0]) - 1;
+        const index = Number(args[0]);
+
+        if (!index || index < 1)
+            return message.reply(
+                "❌ Utilisation : `*workchild <numéro>`"
+            );
 
         const marriage = await Marriage.findOne({
             guildId: message.guild.id,
@@ -18,29 +24,50 @@ module.exports = {
         });
 
         if (!marriage)
-            return message.reply("❌ Vous devez être marié.");
+            return message.reply(
+                "❌ Vous devez être marié."
+            );
 
         const family = await Family.findOne({
             marriageId: marriage._id
         });
 
         if (!family)
-            return;
+            return message.reply(
+                "❌ Famille introuvable."
+            );
 
-        const child = family.children[index];
+        const children = await Child.find({
+            familyId: family._id
+        }).sort({
+            createdAt: 1
+        });
+
+        const child = children[index - 1];
 
         if (!child)
-            return message.reply("❌ Enfant introuvable.");
+            return message.reply(
+                "❌ Enfant introuvable."
+            );
 
         if (child.age < 18)
-            return message.reply("👶 Cet enfant est trop jeune pour travailler.");
+            return message.reply(
+                "👶 Cet enfant est trop jeune pour travailler."
+            );
 
-        if (child.lastWork && Date.now() - child.lastWork < 86400000)
-            return message.reply("💼 Cet enfant a déjà travaillé aujourd'hui.");
+        if (
+            child.lastWork &&
+            Date.now() - child.lastWork < 86400000
+        )
+            return message.reply(
+                "💼 Cet enfant a déjà travaillé aujourd'hui."
+            );
 
         const salary = Math.floor(Math.random() * 2500) + 1500;
 
         child.lastWork = Date.now();
+        child.salary = salary;
+        child.job = child.job || "Employé";
 
         let profile = await CasinoProfile.findOne({
             userId: message.author.id
@@ -51,20 +78,64 @@ module.exports = {
                 userId: message.author.id
             });
 
-        profile.coins += salary;
+        profile.yens = (profile.yens || 0) + salary;
 
+        child.xp += 30;
+
+        while (child.xp >= child.level * 100) {
+            child.xp -= child.level * 100;
+            child.level++;
+        }
+
+        await child.save();
         await profile.save();
-        await family.save();
 
-        message.reply({
-            embeds: [
-                new EmbedBuilder()
-                .setColor("Green")
-                .setTitle("💼 Premier salaire")
-                .setDescription(
-                    `**${child.name}** est allé travailler.\n\n💴 +${salary.toLocaleString()} yens`
-                )
-            ]
+        const embed = new EmbedBuilder()
+
+            .setColor("Green")
+
+            .setTitle("💼 Journée de travail")
+
+            .setDescription(
+                `**${child.name}** est allé travailler aujourd'hui.`
+            )
+
+            .addFields(
+
+                {
+                    name: "💴 Salaire",
+                    value: `${salary.toLocaleString("fr-FR")} ¥`,
+                    inline: true
+                },
+
+                {
+                    name: "👔 Métier",
+                    value: child.job,
+                    inline: true
+                },
+
+                {
+                    name: "⭐ Niveau",
+                    value: `${child.level}`,
+                    inline: true
+                },
+
+                {
+                    name: "🧠 XP gagnée",
+                    value: "+30",
+                    inline: true
+                }
+
+            )
+
+            .setFooter({
+                text: "Shiiro • Famille"
+            })
+
+            .setTimestamp();
+
+        return message.reply({
+            embeds: [embed]
         });
 
     }
