@@ -12,24 +12,28 @@ module.exports = {
     async run(message) {
 
         const marriage = await Marriage.findOne({
-
             guildId: message.guild.id,
-
             users: message.author.id
-
         });
 
         if (!marriage)
             return message.reply("❌ Vous n'êtes pas marié.");
 
         const family = await Family.findOne({
-
             marriageId: marriage._id
-
         });
 
         if (!family)
             return message.reply("❌ Vous n'avez pas encore créé votre famille.");
+
+        const parent1 = `<@${marriage.users[0]}>`;
+        const parent2 = `<@${marriage.users[1]}>`;
+
+        const children = family.children.length
+            ? family.children.map(c =>
+                `👶 **${c.name}** (<@${c.userId}>)`
+            ).join("\n")
+            : "Aucun enfant";
 
         const embed = new EmbedBuilder()
 
@@ -38,42 +42,40 @@ module.exports = {
             .setTitle(`🏡 ${family.name}`)
 
             .addFields(
-
                 {
                     name: "👑 Parents",
-                    value: family.parents.map(id => `<@${id}>`).join("\n")
+                    value: `${parent1}\n${parent2}`,
+                    inline: false
                 },
-
                 {
                     name: "👶 Enfants",
-                    value: family.children.length
-                        ? family.children.map(id => `<@${id}>`).join("\n")
-                        : "Aucun"
+                    value: children,
+                    inline: false
                 },
-
                 {
                     name: "⭐ Niveau",
-                    value: family.level.toString(),
+                    value: `${family.level}`,
                     inline: true
                 },
-
                 {
                     name: "✨ XP",
                     value: family.xp.toLocaleString("fr-FR"),
                     inline: true
                 },
-
                 {
-                    name: "💰 Banque",
-                    value: `${family.Yens.toLocaleString("fr-FR")} ¥`,
+                    name: "👨‍👩‍👧 Membres",
+                    value: `${family.children.length + 2}`,
                     inline: true
                 }
-
             )
+
+            .setFooter({
+                text: "Shiiro • Famille"
+            })
 
             .setTimestamp();
 
-        message.reply({
+        return message.reply({
             embeds: [embed]
         });
 
