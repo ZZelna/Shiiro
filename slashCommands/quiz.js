@@ -1,5 +1,6 @@
 const {
   SlashCommandBuilder,
+  PermissionFlagsBits,
   ContainerBuilder,
   TextDisplayBuilder,
   SeparatorBuilder,
@@ -16,7 +17,8 @@ const GuildConfig = require('../models/GuildConfig');
 const QuizProfile = require('../models/QuizProfile');
 const PrestigeConfig = require('../models/PrestigeConfig');
 const CasinoProfile = require('../models/CasinoProfile');
-const { pickQuestion, computeXpGain, levelFromXp, xpForLevel } = require('../utils/quizEngine');
+const BossFight = require('../models/BossFight');
+const { pickQuestion, computeXpGain, levelFromXp, xpForLevel, loadAllQuestions } = require('../utils/quizEngine');
 const { getLevelBadge, getLevelFrame, getLevelCollection, getLevelYens } = require('../utils/levelRewards');
 
 const PRESTIGE_LEVEL_REQUIRED = 100;
@@ -26,6 +28,10 @@ const BR_DEFAULT_JOIN_TIME_MS = 60_000;
 const BR_ROUND_TIME_MS = 15_000;
 const BR_MAX_ROUNDS = 50;
 const BR_WIN_XP_BONUS = 50;
+// Récompense totale distribuée à la mort du boss, proportionnellement aux dégâts infligés.
+// Hypothèse non précisée : Yens = 10x les PV max, XP = 1x les PV max (un boss plus gros rapporte plus).
+const BOSS_YENS_PER_MAX_HP = 10;
+const BOSS_XP_PER_MAX_HP = 1;
 const PRESTIGE_TIERS = [
   { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: null, extra: null, yens: 50_000 },
   { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Titre exclusif', extra: null, yens: 100_000 },
@@ -122,6 +128,23 @@ module.exports = {
         .addIntegerOption(option =>
           option.setName('inscription').setDescription("Durée d'inscription en secondes (défaut : 60)").setRequired(false)
         )
+    )
+    .addSubcommand(sub =>
+      sub.setName('boss-spawn')
+        .setDescription('[Admin] Fait apparaître le boss hebdomadaire')
+        .addIntegerOption(option =>
+          option.setName('pv').setDescription('Points de vie du boss').setRequired(true)
+        )
+        .addStringOption(option =>
+          option.setName('nom').setDescription('Nom du boss (défaut : Boss)').setRequired(false)
+        )
+        .addStringOption(option =>
+          option.setName('categorie').setDescription('Domaine du boss (ex: Histoire, Géographie, Espace). Vide = toutes catégories').setRequired(false)
+        )
+    )
+    .addSubcommand(sub =>
+      sub.setName('boss')
+        .setDescription('Attaque le boss hebdomadaire avec une question')
     ),
 
   async execute(interaction) {
@@ -132,6 +155,8 @@ module.exports = {
     if (subcommand === 'profil') return executeProfil(interaction);
     if (subcommand === 'prestige') return executePrestige(interaction);
     if (subcommand === 'battle-royale') return executeBattleRoyale(interaction);
+    if (subcommand === 'boss-spawn') return executeBossSpawn(interaction);
+    if (subcommand === 'boss') return executeBossAttack(interaction);
   },
 };
 
@@ -1102,6 +1127,266 @@ async function executeBattleRoyale(interaction) {
   }
 
   await channel.send({ flags: MessageFlags.IsComponentsV2, components: [finalContainer] });
+}
+
+// =========================================================
+// /quiz boss-spawn (admin) & /quiz boss (attaque)
+// =========================================================
+function buildBossContainer(boss, statusLine) {
+  const c = new ContainerBuilder().setAccentColor(boss.currentHp > 0 ? 0xED4245 : 0x57F287);
+  const categoryLabel = boss.category ? ` — ${boss.category}` : '';
+  c.addTextDisplayComponents(new TextDisplayBuilder().setContent(`### 👹 ${boss.name}${categoryLabel}`));
+  const bar = buildProgressBar(boss.currentHp, boss.maxHp, 20);
+  c.addTextDisplayComponents(
+    new TextDisplayBuilder().setContent(`${bar}\n**PV : ${Math.max(boss.currentHp, 0)} / ${boss.maxHp}**`)
+  );
+  c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+
+  const damageEntries = [...boss.damageByPlayer.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const topText = damageEntries.length
+    ? damageEntries.map(([id, dmg], i) => `${i + 1}. <@${id}> — ${dmg} dégâts`).join('\n')
+    : '_Aucune attaque pour l\'instant._';
+  c.addTextDisplayComponents(new TextDisplayBuilder().setContent(`**🏆 Top attaquants**\n${topText}`));
+
+  if (statusLine) {
+    c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent(statusLine));
+  } else if (boss.currentHp > 0) {
+    c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent('-# Utilise `/quiz boss` pour attaquer !'));
+  }
+
+  return c;
+}
+
+async function executeBossSpawn(interaction) {
+  if (!interaction.member.permissions.has(PermissionFlagsBits.ManageGuild)) {
+    return interaction.reply({ content: "❌ Réservé aux admins.", ephemeral: true });
+  }
+
+  const hp = interaction.options.getInteger('pv');
+  const name = interaction.options.getString('nom') ?? 'Boss';
+  const category = interaction.options.getString('categorie');
+
+  if (hp <= 0) {
+    return interaction.reply({ content: '❌ Les PV doivent être supérieurs à 0.', ephemeral: true });
+  }
+
+  if (category) {
+    const matches = loadAllQuestions().some(q => q.category.toLowerCase() === category.toLowerCase());
+    if (!matches) {
+      const knownCategories = [...new Set(loadAllQuestions().map(q => q.category))].sort();
+      return interaction.reply({
+        content: `❌ Catégorie \`${category}\` introuvable. Catégories disponibles : ${knownCategories.join(', ')}`,
+        ephemeral: true,
+      });
+    }
+  }
+
+  const existing = await BossFight.findOne({ guildId: interaction.guild.id, active: true });
+  if (existing) {
+    return interaction.reply({
+      content: `❌ Un boss est déjà actif (**${existing.name}**, ${existing.currentHp}/${existing.maxHp} PV). Il doit être vaincu avant d'en invoquer un autre.`,
+      ephemeral: true,
+    });
+  }
+
+  const config = await GuildConfig.findOne({ guildId: interaction.guild.id });
+  const channelId = config?.channels?.bossHebdo;
+  if (!channelId) {
+    return interaction.reply({
+      content: "❌ Le salon boss-hebdo n'est pas configuré. Utilise d'abord `/setup-arene`.",
+      ephemeral: true,
+    });
+  }
+  const channel = await interaction.guild.channels.fetch(channelId).catch(() => null);
+  if (!channel) {
+    return interaction.reply({ content: '❌ Le salon boss-hebdo est introuvable.', ephemeral: true });
+  }
+
+  const boss = await BossFight.findOneAndUpdate(
+    { guildId: interaction.guild.id },
+    {
+      guildId: interaction.guild.id,
+      name,
+      category: category || null,
+      maxHp: hp,
+      currentHp: hp,
+      active: true,
+      channelId: channel.id,
+      messageId: null,
+      damageByPlayer: new Map(),
+      startedAt: new Date(),
+      endedAt: null,
+    },
+    { upsert: true, new: true }
+  );
+
+  const message = await channel.send({
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildBossContainer(boss, null)],
+  });
+
+  boss.messageId = message.id;
+  await boss.save();
+
+  await interaction.reply({
+    content: `👹 **${name}**${category ? ` (${category})` : ''} est apparu dans ${channel} avec ${hp} PV !`,
+    ephemeral: true,
+  });
+}
+
+async function executeBossAttack(interaction) {
+  const boss = await BossFight.findOne({ guildId: interaction.guild.id, active: true });
+  if (!boss) {
+    return interaction.reply({ content: "❌ Aucun boss actif en ce moment. Attends qu'un admin en invoque un.", ephemeral: true });
+  }
+
+  const question = pickQuestion({ category: boss.category || undefined });
+  if (!question) {
+    return interaction.reply({ content: '❌ Aucune question disponible pour ce boss.', ephemeral: true });
+  }
+
+  const row = new ActionRowBuilder().addComponents(
+    question.choices.map((choice, i) =>
+      new ButtonBuilder()
+        .setCustomId(`bossans_${i}`)
+        .setLabel(`${LETTERS[i]}. ${choice}`)
+        .setStyle(ButtonStyle.Secondary)
+    )
+  );
+
+  const buildAttackContainer = (revealText, rowComponents) => {
+    const c = new ContainerBuilder().setAccentColor(0xED4245);
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent(`### ⚔️ Attaque contre ${boss.name}`));
+    c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+    c.addTextDisplayComponents(new TextDisplayBuilder().setContent(question.question));
+    c.addTextDisplayComponents(
+      new TextDisplayBuilder().setContent(`-# Bonne réponse = ${question.points} dégâts • ${SOLO_ANSWER_TIME_MS / 1000}s`)
+    );
+    if (revealText) {
+      c.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+      c.addTextDisplayComponents(new TextDisplayBuilder().setContent(revealText));
+    }
+    if (rowComponents) c.addActionRowComponents(rowComponents);
+    return c;
+  };
+
+  const message = await interaction.reply({
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildAttackContainer(null, row)],
+    ephemeral: true,
+    fetchReply: true,
+  });
+
+  const disabledRow = new ActionRowBuilder().addComponents(
+    row.components.map(btn => ButtonBuilder.from(btn).setDisabled(true))
+  );
+
+  let response;
+  try {
+    response = await message.awaitMessageComponent({
+      componentType: ComponentType.Button,
+      time: SOLO_ANSWER_TIME_MS,
+      filter: i => i.user.id === interaction.user.id,
+    });
+  } catch {
+    return interaction.editReply({
+      flags: MessageFlags.IsComponentsV2,
+      components: [buildAttackContainer("⌛ Temps écoulé, tu n'as pas attaqué.", disabledRow)],
+    }).catch(() => {});
+  }
+
+  const isCorrect = Number(response.customId.split('_')[1]) === question.answer;
+
+  if (!isCorrect) {
+    await response.update({
+      flags: MessageFlags.IsComponentsV2,
+      components: [buildAttackContainer(
+        `❌ Raté ! La bonne réponse était **${question.choices[question.answer]}**. Le boss ne prend pas de dégâts.`,
+        disabledRow
+      )],
+    }).catch(() => {});
+    return;
+  }
+
+  // Boss déjà mort entre-temps (race condition avec une autre attaque simultanée)
+  const freshBoss = await BossFight.findOne({ guildId: interaction.guild.id, active: true });
+  if (!freshBoss) {
+    await response.update({
+      flags: MessageFlags.IsComponentsV2,
+      components: [buildAttackContainer('✅ Bonne réponse, mais le boss est déjà vaincu !', disabledRow)],
+    }).catch(() => {});
+    return;
+  }
+
+  const damage = question.points;
+  const currentDamage = freshBoss.damageByPlayer.get(interaction.user.id) || 0;
+  freshBoss.damageByPlayer.set(interaction.user.id, currentDamage + damage);
+  freshBoss.currentHp = Math.max(freshBoss.currentHp - damage, 0);
+
+  const defeated = freshBoss.currentHp <= 0;
+  if (defeated) {
+    freshBoss.active = false;
+    freshBoss.endedAt = new Date();
+  }
+  await freshBoss.save();
+
+  await response.update({
+    flags: MessageFlags.IsComponentsV2,
+    components: [buildAttackContainer(
+      `✅ Touché ! **-${damage} PV** au boss (${Math.max(freshBoss.currentHp, 0)}/${freshBoss.maxHp} restants).`,
+      disabledRow
+    )],
+  }).catch(() => {});
+
+  // Met à jour le message public de statut du boss
+  const bossChannel = await interaction.guild.channels.fetch(freshBoss.channelId).catch(() => null);
+  const bossMessage = bossChannel && freshBoss.messageId
+    ? await bossChannel.messages.fetch(freshBoss.messageId).catch(() => null)
+    : null;
+
+  if (bossMessage) {
+    const statusLine = defeated ? `☠️ **${freshBoss.name} est vaincu !** Distribution des récompenses en cours...` : null;
+    await bossMessage.edit({ flags: MessageFlags.IsComponentsV2, components: [buildBossContainer(freshBoss, statusLine)] }).catch(() => {});
+  }
+
+  if (defeated && bossChannel) {
+    await distributeBossRewards(interaction.guild.id, freshBoss, bossChannel);
+  }
+}
+
+async function distributeBossRewards(guildId, boss, channel) {
+  const totalDamage = [...boss.damageByPlayer.values()].reduce((sum, d) => sum + d, 0);
+  const totalYens = boss.maxHp * BOSS_YENS_PER_MAX_HP;
+  const totalXp = boss.maxHp * BOSS_XP_PER_MAX_HP;
+
+  const lines = [];
+  for (const [userId, damage] of boss.damageByPlayer.entries()) {
+    const share = totalDamage > 0 ? damage / totalDamage : 0;
+    const yensReward = Math.round(totalYens * share);
+    const xpReward = Math.round(totalXp * share);
+
+    const profile = await getOrCreateProfile(userId, guildId);
+    const { milestoneLines } = await grantXp(profile, xpReward);
+    profile.lastPlayedAt = new Date();
+    await profile.save();
+
+    await CasinoProfile.findOneAndUpdate({ userId }, { $inc: { yens: yensReward } }, { upsert: true });
+
+    lines.push(`<@${userId}> — ${damage} dégâts → +${yensReward.toLocaleString()} Yens, +${xpReward} XP` +
+      (milestoneLines.length ? `\n${milestoneLines.map(l => `　${l}`).join('\n')}` : ''));
+  }
+
+  const container = new ContainerBuilder().setAccentColor(0x57F287);
+  container.addTextDisplayComponents(new TextDisplayBuilder().setContent(`### 🏆 ${boss.name} vaincu !`));
+  container.addTextDisplayComponents(
+    new TextDisplayBuilder().setContent(`**${boss.damageByPlayer.size}** participants ont infligé un total de **${totalDamage}** dégâts.`)
+  );
+  container.addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small));
+  container.addTextDisplayComponents(new TextDisplayBuilder().setContent(lines.join('\n') || '_Aucun participant enregistré._'));
+
+  await channel.send({ flags: MessageFlags.IsComponentsV2, components: [container] });
 }
 
 // =========================================================
