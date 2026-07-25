@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 module.exports = mongoose.model(
     "Family",
     new mongoose.Schema({
+
         guildId: {
             type: String,
             required: true
@@ -10,8 +11,7 @@ module.exports = mongoose.model(
 
         name: {
             type: String,
-            required: true,
-            maxlength: 30
+            default: "Famille"
         },
 
         ownerId: {
@@ -30,9 +30,51 @@ module.exports = mongoose.model(
         },
 
         children: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Child"
+            userId: {
+                type: String,
+                required: true
+            },
+
+            name: {
+                type: String,
+                required: true
+            },
+
+            gender: {
+                type: String,
+                default: "Inconnu"
+            },
+
+            age: {
+                type: Number,
+                default: 0
+            },
+
+            happiness: {
+                type: Number,
+                default: 100
+            },
+
+            intelligence: {
+                type: Number,
+                default: 0
+            },
+
+            createdAt: {
+                type: Date,
+                default: Date.now
+            }
         }],
+
+        lastBaby: {
+            type: Number,
+            default: null
+        },
+
+        maxChildren: {
+            type: Number,
+            default: 3
+        },
 
         level: {
             type: Number,
@@ -53,5 +95,6 @@ module.exports = mongoose.model(
             type: Date,
             default: Date.now
         }
+
     })
 );
