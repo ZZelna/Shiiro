@@ -7,13 +7,14 @@ const Family = require("../../models/Family");
 const CasinoProfile = require("../../models/CasinoProfile");
 
 module.exports = {
+
     name: "depositfamily",
 
     async run(message, args) {
 
-        const amount = parseInt(args[0]);
+        const amount = Number(args[0]);
 
-        if (!amount || amount <= 0)
+        if (!Number.isInteger(amount) || amount <= 0)
             return message.reply("❌ Montant invalide.");
 
         const marriage = await Marriage.findOne({
@@ -38,11 +39,15 @@ module.exports = {
         if (!profile)
             return message.reply("❌ Profil casino introuvable.");
 
-        if (profile.coins < amount)
+        if ((profile.yens || 0) < amount)
             return message.reply("❌ Vous ne possédez pas assez de yens.");
 
-        profile.coins -= amount;
-        family.coins += amount;
+        family.yens = family.yens || 0;
+        family.xp = family.xp || 0;
+        family.level = family.level || 1;
+
+        profile.yens -= amount;
+        family.yens += amount;
 
         family.xp += Math.floor(amount / 100);
 
@@ -55,28 +60,41 @@ module.exports = {
         await family.save();
 
         const embed = new EmbedBuilder()
+
             .setColor("#2ECC71")
+
             .setTitle("🏦 Dépôt familial")
+
             .setDescription(
-                `${message.author} dépose **${amount.toLocaleString("fr-FR")} ¥** dans la banque familiale.`
+                `${message.author} a déposé **${amount.toLocaleString("fr-FR")} ¥** dans la banque familiale.`
             )
+
             .addFields(
+
                 {
-                    name: "💰 Banque",
-                    value: `${family.coins.toLocaleString("fr-FR")} ¥`,
+                    name: "💰 Banque familiale",
+                    value: `${family.yens.toLocaleString("fr-FR")} ¥`,
                     inline: true
                 },
+
                 {
                     name: "⭐ Niveau",
-                    value: family.level.toString(),
+                    value: `${family.level}`,
                     inline: true
                 },
+
                 {
                     name: "✨ XP",
-                    value: family.xp.toString(),
+                    value: `${family.xp}/${family.level * 1000}`,
                     inline: true
                 }
+
             )
+
+            .setFooter({
+                text: "Shiiro • Famille"
+            })
+
             .setTimestamp();
 
         return message.reply({
