@@ -53,6 +53,10 @@ lastDaily: {
     type: Number,
     default: null
 },
+        houseLevel: {
+    type: Number,
+    default: 0
+},
         
         level: {
             type: Number,
