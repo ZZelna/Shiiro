@@ -4,6 +4,7 @@ const {
 
 const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
+const Child = require("../../models/Child");
 
 module.exports = {
 
@@ -51,27 +52,11 @@ module.exports = {
 
                 members: marriage.users,
 
-                children: [],
-
-                lastBaby: null,
-
-                maxChildren: 3,
-
-                level: 1,
-
-                xp: 0,
-
-                coins: 0
+                children: []
 
             });
 
         }
-
-        if (!family.children)
-            family.children = [];
-
-        if (!family.members)
-            family.members = [];
 
         if (family.members.includes(childMember.id))
             return message.reply(
@@ -107,9 +92,7 @@ module.exports = {
         });
 
         if (!collected.size)
-            return message.reply(
-                "⌛ Temps écoulé."
-            );
+            return message.reply("⌛ Temps écoulé.");
 
         const firstName = collected.first().content.trim();
 
@@ -123,11 +106,15 @@ module.exports = {
                 ? "Garçon"
                 : "Fille";
 
-        family.members.push(childMember.id);
+        const child = await Child.create({
 
-        family.children.push({
+            guildId: message.guild.id,
+
+            familyId: family._id,
 
             userId: childMember.id,
+
+            adopted: false,
 
             name: firstName,
 
@@ -137,11 +124,21 @@ module.exports = {
 
             happiness: 100,
 
+            health: 100,
+
             intelligence: 0,
 
-            createdAt: new Date()
+            level: 1,
+
+            xp: 0,
+
+            school: 1
 
         });
+
+        family.members.push(childMember.id);
+
+        family.children.push(child._id);
 
         family.lastBaby = Date.now();
 
@@ -171,6 +168,11 @@ module.exports = {
                 {
                     name: "🎂 Âge",
                     value: "0 an",
+                    inline: true
+                },
+                {
+                    name: "🧬 Type",
+                    value: "Enfant biologique",
                     inline: true
                 }
             )
