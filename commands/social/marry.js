@@ -11,9 +11,27 @@ const requests = require("../../systems/marriage/requests");
 module.exports = {
     name: "marry",
 
-    async run(message) {
+    async run(message, args) {
 
-        const target = message.mentions.members.first();
+        let target = null;
+
+        // Mention
+        const mention = message.mentions.users.first();
+
+        if (mention) {
+            target = await message.guild.members
+                .fetch(mention.id)
+                .catch(() => null);
+        }
+
+        // ID
+        if (!target && args[0]) {
+            const id = args[0].replace(/[<@!>]/g, "");
+
+            target = await message.guild.members
+                .fetch(id)
+                .catch(() => null);
+        }
 
         if (!target)
             return message.reply("❌ Mentionnez un utilisateur.");
@@ -51,27 +69,25 @@ module.exports = {
             .setColor("#ff69b4")
             .setTitle("💍 Demande en mariage")
             .setDescription(
-                `${target}, ${message.author} souhaite vous épouser.\n\n` +
-                "Cliquez sur un bouton ci-dessous."
+                `${target}, ${message.author} souhaite vous épouser.\n\nCliquez sur **Accepter** ou **Refuser** ci-dessous.`
             )
             .setFooter({
                 text: "Cette demande expire dans 60 secondes."
             });
 
-        const row = new ActionRowBuilder()
-            .addComponents(
-                new ButtonBuilder()
-                    .setCustomId("marry_accept")
-                    .setLabel("Accepter")
-                    .setEmoji("💍")
-                    .setStyle(ButtonStyle.Success),
+        const row = new ActionRowBuilder().addComponents(
+            new ButtonBuilder()
+                .setCustomId("marry_accept")
+                .setLabel("Accepter")
+                .setEmoji("💍")
+                .setStyle(ButtonStyle.Success),
 
-                new ButtonBuilder()
-                    .setCustomId("marry_refuse")
-                    .setLabel("Refuser")
-                    .setEmoji("❌")
-                    .setStyle(ButtonStyle.Danger)
-            );
+            new ButtonBuilder()
+                .setCustomId("marry_refuse")
+                .setLabel("Refuser")
+                .setEmoji("❌")
+                .setStyle(ButtonStyle.Danger)
+        );
 
         const msg = await message.channel.send({
             embeds: [embed],
@@ -84,73 +100,66 @@ module.exports = {
 
         collector.on("collect", async interaction => {
 
-            if (interaction.user.id !== target.id)
+            if (interaction.user.id !== target.id) {
                 return interaction.reply({
                     content: "❌ Cette demande ne vous est pas destinée.",
                     ephemeral: true
                 });
+            }
 
             if (interaction.customId === "marry_refuse") {
 
                 requests.delete(requestKey);
+                collector.stop("refused");
 
-                collector.stop();
-
-                await interaction.update({
+                return interaction.update({
                     embeds: [
                         EmbedBuilder.from(embed)
                             .setColor("Red")
-                            .setDescription("❌ La demande a été refusée.")
+                            .setDescription("❌ La demande en mariage a été refusée.")
                     ],
                     components: []
                 });
-
-                return;
             }
 
             if (interaction.customId === "marry_accept") {
 
                 requests.delete(requestKey);
-
-                collector.stop();
+                collector.stop("accepted");
 
                 await Marriage.create({
                     guildId: message.guild.id,
-                    users: [
-                        message.author.id,
-                        target.id
-                    ],
-                    proposerId: message.author.id
+                    users: [message.author.id, target.id],
+                    proposerId: message.author.id,
+                    createdAt: new Date()
                 });
 
-                await interaction.update({
+                return interaction.update({
                     embeds: [
                         new EmbedBuilder()
                             .setColor("Green")
                             .setTitle("💍 Mariage")
                             .setDescription(
-                                `Félicitations ${message.author} ❤️ ${target}\n\n` +
-                                "Vous êtes désormais mariés !"
+                                `🎉 Félicitations ${message.author} ❤️ ${target}\n\nVous êtes désormais mariés !`
                             )
                     ],
                     components: []
                 });
-
             }
 
         });
 
         collector.on("end", async (_, reason) => {
 
-            if (reason !== "time") return;
-
             requests.delete(requestKey);
+
+            if (reason !== "time") return;
 
             await msg.edit({
                 embeds: [
                     EmbedBuilder.from(embed)
                         .setColor("Orange")
-                        .setDescription("⌛ La demande a expiré.")
+                        .setDescription("⌛ La demande en mariage a expiré.")
                 ],
                 components: []
             }).catch(() => {});
