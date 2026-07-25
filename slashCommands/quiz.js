@@ -17,21 +17,29 @@ const QuizProfile = require('../models/QuizProfile');
 const PrestigeConfig = require('../models/PrestigeConfig');
 const CasinoProfile = require('../models/CasinoProfile');
 const { pickQuestion, computeXpGain, levelFromXp, xpForLevel } = require('../utils/quizEngine');
+const { getLevelBadge, getLevelFrame, getLevelCollection, getLevelYens } = require('../utils/levelRewards');
 
 const PRESTIGE_LEVEL_REQUIRED = 100;
 const PRESTIGE_XP_BONUS_PER_TIER = 0.05; // +5% d'XP par palier de prestige (Prestige I = +5%, ..., Prestige X = +50%)
 const PRESTIGE_TIERS = [
-  { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: 'Novice', extra: null, yens: 50_000 },
-  { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Apprenti', extra: null, yens: 100_000 },
-  { name: 'Prestige III', badge: '🥇 Badge Prestige III', frame: 'Cadre Or', title: 'Érudit', extra: '1 drop', yens: 200_000 },
-  { name: 'Prestige IV', badge: '💠 Badge Prestige IV', frame: 'Cadre Platine', title: 'Gardien', extra: 'Bannière de profil', yens: 300_000 },
-  { name: 'Prestige V', badge: '💎 Badge Prestige V', frame: 'Cadre Diamant', title: 'Champion', extra: '2 drop', yens: 500_000 },
-  { name: 'Prestige VI', badge: '🔷 Badge Prestige VI', frame: null, title: 'Héro', extra: 'Effet de profil', yens: 750_000 },
-  { name: 'Prestige VII', badge: '🟢 Badge Prestige VII', frame: 'Cadre Émeraude', title: 'Seigneur', extra: '4 drops', yens: 1_000_000 },
-  { name: 'Prestige VIII', badge: '🔮 Badge Prestige VIII', frame: 'Cadre Améthyste animé', title: 'Légende', extra: 'Bannière animée', yens: 1_500_000 },
-  { name: 'Prestige IX', badge: '🌌 Badge Prestige IX', frame: 'Cadre Cosmique animé', title: 'Mythe', extra: 'Aura de profil', yens: 2_000_000 },
-  { name: 'Prestige X', badge: '👑 Badge Mythique', frame: 'Cadre Mythique animé', title: 'Transcendant', extra: 'Hall of Fame', yens: 5_000_000 },
+  { name: 'Prestige I', badge: '🥉 Badge Prestige I', frame: 'Cadre Bronze', title: null, extra: null, yens: 50_000 },
+  { name: 'Prestige II', badge: '🥈 Badge Prestige II', frame: 'Cadre Argent', title: 'Titre exclusif', extra: null, yens: 100_000 },
+  { name: 'Prestige III', badge: '🥇 Badge Prestige III', frame: 'Cadre Or', title: null, extra: '1 drop', yens: 200_000 },
+  { name: 'Prestige IV', badge: '💠 Badge Prestige IV', frame: 'Cadre Platine', title: null, extra: 'Bannière de profil', yens: 300_000 },
+  { name: 'Prestige V', badge: '💎 Badge Prestige V', frame: 'Cadre Diamant', title: null, extra: 'Mascotte exclusive', yens: 500_000 },
+  { name: 'Prestige VI', badge: '🔷 Badge Prestige VI', frame: null, title: 'Titre rare', extra: 'Effet de profil', yens: 750_000 },
+  { name: 'Prestige VII', badge: '🟢 Badge Prestige VII', frame: 'Cadre Émeraude', title: null, extra: '2 drops', yens: 1_000_000 },
+  { name: 'Prestige VIII', badge: '🔮 Badge Prestige VIII', frame: 'Cadre Améthyste animé', title: null, extra: 'Bannière animée', yens: 1_500_000 },
+  { name: 'Prestige IX', badge: '🌌 Badge Prestige IX', frame: 'Cadre Cosmique animé', title: null, extra: 'Aura de profil', yens: 2_000_000 },
+  { name: 'Prestige X', badge: '👑 Badge Mythique', frame: 'Cadre Mythique animé', title: 'Le Légendaire', extra: 'Hall of Fame', yens: 5_000_000 },
 ];
+
+// Le cadre de profil devient animé à partir du Prestige VIII
+const ANIMATED_FRAME_MIN_TIER = 8;
+function isFrameAnimated(prestigeTier) {
+  return prestigeTier >= ANIMATED_FRAME_MIN_TIER;
+}
+
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 const SOLO_ANSWER_TIME_MS = 20_000;
@@ -908,17 +916,16 @@ async function grantXp(profile, baseXp) {
 }
 
 /**
- * Hypothèses non précisées dans la doc, à ajuster si besoin :
- * - Yens tous les 5 niveaux : (niveau / 5) × 1000
- * - Badge + titre tous les 10 niveaux, cadre + drop tous les 25, collection + drop tous les 50
- * - Textes de badge/titre/cadre : placeholders "Niveau X", à remplacer par du contenu réel si tu en as
+ * Le contenu réel (textes de titres/badges/cadres, montants de Yens) se modifie
+ * dans utils/levelRewards.js — pas ici. Tant qu'une entrée y est vide (""),
+ * un texte générique de secours "Niveau X" est utilisé à la place.
  */
 async function applyLevelMilestones(profile, oldLevel, newLevel) {
   const lines = [];
 
   for (let level = oldLevel + 1; level <= newLevel; level++) {
     if (level % 5 === 0) {
-      const yensReward = (level / 5) * 1000;
+      const yensReward = getLevelYens(level);
       await CasinoProfile.findOneAndUpdate(
         { userId: profile.userId },
         { $inc: { yens: yensReward } },
@@ -926,25 +933,42 @@ async function applyLevelMilestones(profile, oldLevel, newLevel) {
       );
       lines.push(`💴 Niveau ${level} : +${yensReward.toLocaleString()} Yens`);
     }
-    if (level % 10 === 0) {
-      profile.badges.push(`🎖️ Niveau ${level}`);
-      profile.title = `Titre Niveau ${level}`;
-      lines.push(`🎖️ Niveau ${level} : nouveau badge + titre`);
+
+    if (level % 10 === 0 && level !== 100) {
+      const cfg = getLevelBadge(level);
+      const emoji = cfg?.emoji || '🎖️';
+      const badgeText = cfg?.badge || `Badge Niveau ${level}`;
+      const titleText = cfg?.title || `Titre Niveau ${level}`;
+      profile.badges.push(`${emoji} ${badgeText}`);
+      profile.title = titleText;
+      lines.push(`${emoji} Niveau ${level} : badge **${badgeText}** + titre **${titleText}**`);
     }
+
     if (level % 25 === 0) {
-      profile.frame = `Cadre Niveau ${level}`;
+      const cfg = getLevelFrame(level);
+      const frameText = cfg?.frame || `Cadre Niveau ${level}`;
+      const extraText = cfg?.extra || null;
+      profile.frame = frameText;
       profile.pendingDrops += 1;
-      lines.push(`🖼️ Niveau ${level} : nouveau cadre de profil + 1 récompense exclusive`);
+      lines.push(`🖼️ Niveau ${level} : cadre **${frameText}**` + (extraText ? ` + ${extraText}` : ' + 1 récompense exclusive'));
     }
+
     if (level % 50 === 0) {
-      profile.badges.push(`💎 Collection Niveau ${level}`);
+      const cfg = getLevelCollection(level);
+      const collectionText = cfg?.collection || `Collection Niveau ${level}`;
+      const bonusText = cfg?.bonus || 'bonus spécial';
+      profile.badges.push(`💎 ${collectionText}`);
       profile.pendingDrops += 1;
-      lines.push(`💎 Niveau ${level} : objet de collection rare + bonus spécial`);
+      lines.push(`💎 Niveau ${level} : **${collectionText}** + ${bonusText}`);
     }
+
     if (level === 100) {
-      profile.badges.push('🏆');
-      profile.title = 'Titre exclusif Niveau 100';
-      lines.push('🏆 Niveau 100 : récompense de fin de progression + `/quiz prestige` débloqué !');
+      const cfg = getLevelBadge(100);
+      const badgeText = cfg?.badge || 'Badge Niveau 100';
+      const titleText = cfg?.title || 'Titre exclusif Niveau 100';
+      profile.badges.push(`🏆 ${badgeText}`);
+      profile.title = titleText;
+      lines.push(`🏆 Niveau 100 : badge **${badgeText}** + titre **${titleText}** + \`/quiz prestige\` débloqué !`);
     }
   }
 
