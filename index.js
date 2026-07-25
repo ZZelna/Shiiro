@@ -35,6 +35,7 @@ const Giveaway = require("./models/Giveaway");
 const GlobalBlacklist = require("./models/GlobalBlacklist");
 const VoiceStats = require("./models/VoiceStats");
 const AutoRole = require("./models/AutoRole");
+const handleCustomRoleGrant = require("./systems/customRoleGrant");
 
 const config = require("./config.json");
 
@@ -91,11 +92,6 @@ const MUTE_CHECK_INTERVAL_MS = 60_000;
 // toutes les 5 secondes, ça évite une requête Mongo + jusqu'à 10 fetch
 // utilisateur + un edit de message toutes les 5s en continu.
 const VOICE_TOP_INTERVAL_MS = 30_000;
-
-function getCustomRole(commandName) {
-    if (!config.custom_roles) return null;
-    return config.custom_roles[commandName.toLowerCase()] || null;
-}
 
 // ─── Sécurité process : évite qu'une erreur isolée ne crash tout le bot ──────
 process.on("unhandledRejection", (err) => {
@@ -286,30 +282,11 @@ client.on("messageCreate", async (message) => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift()?.toLowerCase();
 
-    const customRole = getCustomRole(commandName);
-    if (customRole) {
-        const target = message.mentions.members.first();
-        if (!target) {
-            return message.reply(`❌ Utilisation : +${commandName} @utilisateur`);
-        }
-        if (message.author.id !== customRole.owner_id) {
-            return message.reply("❌ Vous n'êtes pas propriétaire de ce rôle.");
-        }
-        const role = message.guild.roles.cache.get(customRole.role_id);
-        if (!role) {
-            return message.reply("❌ Rôle introuvable.");
-        }
-        try {
-            if (target.roles.cache.has(role.id)) {
-                await target.roles.remove(role);
-                return message.reply(`➖ ${role.name} retiré à ${target.user.tag}`);
-            }
-            await target.roles.add(role);
-            return message.reply(`➕ ${role.name} ajouté à ${target.user.tag}`);
-        } catch {
-            return message.reply("❌ Impossible de modifier ce rôle.");
-        }
-    }
+    // Rôles perso partageables (base MongoDB) : +nomcommande @personne
+    // Renvoie true si commandName correspondait à un rôle perso (traité, succès ou échec) ;
+    // false si aucun rôle perso ne porte ce nom -> on continue vers les commandes classiques.
+    const grantHandled = await handleCustomRoleGrant(message, commandName);
+    if (grantHandled) return;
 
     const command = client.commands.get(commandName);
     if (command) return command.run(message, args);
