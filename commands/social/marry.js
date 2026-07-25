@@ -63,7 +63,11 @@ module.exports = {
         if (requests.has(requestKey))
             return message.reply("❌ Une demande est déjà en attente.");
 
-        requests.set(requestKey, true);
+requests.create(
+    requestKey,
+    target.id,
+    message.guild.id
+);
 
         const embed = new EmbedBuilder()
             .setColor("#ff69b4")
