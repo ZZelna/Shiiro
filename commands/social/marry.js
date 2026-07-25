@@ -6,8 +6,8 @@ const {
 } = require("discord.js");
 
 const Marriage = require("../../models/Marriage");
-const requests = require("../../systems/marriage/requests");
 const Family = require("../../models/Family");
+const requests = require("../../systems/marriage/requests");
 
 module.exports = {
     name: "marry",
@@ -16,7 +16,6 @@ module.exports = {
 
         let target = null;
 
-        // Mention
         const mention = message.mentions.users.first();
 
         if (mention) {
@@ -25,7 +24,6 @@ module.exports = {
                 .catch(() => null);
         }
 
-        // ID
         if (!target && args[0]) {
             const id = args[0].replace(/[<@!>]/g, "");
 
@@ -64,17 +62,17 @@ module.exports = {
         if (requests.has(requestKey))
             return message.reply("❌ Une demande est déjà en attente.");
 
-requests.create(
-    requestKey,
-    target.id,
-    message.guild.id
-);
+        requests.create(
+            requestKey,
+            target.id,
+            message.guild.id
+        );
 
         const embed = new EmbedBuilder()
             .setColor("#ff69b4")
             .setTitle("💍 Demande en mariage")
             .setDescription(
-                `${target}, ${message.author} souhaite vous épouser.\n\nCliquez sur **Accepter** ou **Refuser** ci-dessous.`
+                `${target}, ${message.author} souhaite vous épouser.\n\nCliquez sur **Accepter** ou **Refuser**.`
             )
             .setFooter({
                 text: "Cette demande expire dans 60 secondes."
@@ -132,21 +130,36 @@ requests.create(
                 requests.delete(requestKey);
                 collector.stop("accepted");
 
-             const marriage = await Marriage.create({
-    guildId: message.guild.id,
-    users: [
-        message.author.id,
-        target.id
-    ],
-    proposerId: message.author.id
-});
+                const marriage = await Marriage.create({
+                    guildId: message.guild.id,
+                    users: [
+                        message.author.id,
+                        target.id
+                    ],
+                    proposerId: message.author.id
+                });
 
-await Family.create({
-    marriageId: marriage._id,
-    children: [],
-    lastBaby: null,
-    maxChildren: 3
-});
+                await Family.create({
+                    guildId: message.guild.id,
+                    ownerId: message.author.id,
+                    marriageId: marriage._id,
+
+                    name: `Famille ${message.author.username}`,
+
+                    members: [
+                        message.author.id,
+                        target.id
+                    ],
+
+                    children: [],
+
+                    lastBaby: null,
+                    maxChildren: 3,
+
+                    level: 1,
+                    xp: 0,
+                    coins: 0
+                });
 
                 return interaction.update({
                     embeds: [
@@ -177,6 +190,7 @@ await Family.create({
                 ],
                 components: []
             }).catch(() => {});
+
         });
 
     }
