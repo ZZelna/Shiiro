@@ -241,18 +241,13 @@ async function handleCustomRoleDeleteButton(interaction) {
     return interaction.reply({ content: "❌ Tu n'as pas de rôle perso à supprimer.", ephemeral: true });
   }
 
-  const sharedCount = existing.sharedWith?.length || 0;
-  const warningExtra = sharedCount > 0
-    ? ` Il sera aussi retiré aux **${sharedCount}** membre(s) à qui tu l'avais donné.`
-    : '';
-
   const confirmRow = new ActionRowBuilder().addComponents(
     new ButtonBuilder().setCustomId('customrole_delete_confirm').setLabel('Confirmer la suppression').setStyle(ButtonStyle.Danger),
     new ButtonBuilder().setCustomId('customrole_delete_cancel').setLabel('Annuler').setStyle(ButtonStyle.Secondary),
   );
 
   await interaction.reply({
-    content: `⚠️ Tu es sur le point de supprimer ton rôle perso **${existing.name}**.${warningExtra} Cette action est irréversible.`,
+    content: `⚠️ Tu es sur le point de supprimer ton rôle perso **${existing.name}**. Cette action est irréversible.`,
     components: [confirmRow],
     ephemeral: true,
   });
@@ -281,12 +276,10 @@ async function handleCustomRoleDeleteConfirm(interaction) {
     await role.delete(`Suppression du rôle perso par ${interaction.user.tag}`).catch(() => {});
   }
 
-  const sharedCount = existing.sharedWith?.length || 0;
   await CustomRole.deleteOne({ guildId: interaction.guild.id, userId: interaction.user.id });
 
-  const extra = sharedCount > 0 ? ` Il a aussi été retiré aux **${sharedCount}** membre(s) qui l'avaient reçu.` : '';
   await interaction.update({
-    content: `✅ Ton rôle perso **${existing.name}** a été supprimé.${extra}`,
+    content: `✅ Ton rôle perso **${existing.name}** a été supprimé.`,
     components: [],
   });
 }
