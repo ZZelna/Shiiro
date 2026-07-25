@@ -24,6 +24,11 @@ const guildConfigSchema = new Schema({
     misesAJour: { type: String, default: null },
     evenements: { type: String, default: null },
   },
+  // Rôle donné par l'autre bot au niveau 70, qui débloque la création de rôle perso
+  customRoleUnlockRoleId: { type: String, default: null },
+  // Les rôles perso doivent toujours rester positionnés strictement entre ces deux rôles
+  customRoleTopRoleId: { type: String, default: null },    // plafond (le rôle perso reste en-dessous)
+  customRoleBottomRoleId: { type: String, default: null }, // plancher (le rôle perso reste au-dessus)
 });
 
 module.exports = model('GuildConfig', guildConfigSchema);
