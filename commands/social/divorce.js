@@ -7,8 +7,10 @@ const {
 
 const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
+const Child = require("../../models/Child");
 
 module.exports = {
+
     name: "divorce",
 
     async run(message) {
@@ -21,26 +23,43 @@ module.exports = {
         if (!marriage)
             return message.reply("❌ Vous n'êtes pas marié.");
 
-        const partnerId = marriage.users.find(id => id !== message.author.id);
+        const partnerId = marriage.users.find(
+            id => id !== message.author.id
+        );
 
         const embed = new EmbedBuilder()
-            .setColor("#ff5555")
+
+            .setColor("#E74C3C")
+
             .setTitle("💔 Divorce")
+
             .setDescription(
-                `Êtes-vous certain de vouloir divorcer de <@${partnerId}> ?\n\nCette action est irréversible.`
+                `Êtes-vous certain de vouloir divorcer de <@${partnerId}> ?\n\n⚠️ Cette action supprimera également votre famille et tous vos enfants.`
             );
 
-        const row = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("divorce_yes")
-                .setLabel("Confirmer")
-                .setStyle(ButtonStyle.Danger),
+        const row = new ActionRowBuilder()
 
-            new ButtonBuilder()
-                .setCustomId("divorce_no")
-                .setLabel("Annuler")
-                .setStyle(ButtonStyle.Secondary)
-        );
+            .addComponents(
+
+                new ButtonBuilder()
+
+                    .setCustomId("divorce_yes")
+
+                    .setLabel("Confirmer")
+
+                    .setEmoji("💔")
+
+                    .setStyle(ButtonStyle.Danger),
+
+                new ButtonBuilder()
+
+                    .setCustomId("divorce_no")
+
+                    .setLabel("Annuler")
+
+                    .setStyle(ButtonStyle.Secondary)
+
+            );
 
         const msg = await message.reply({
             embeds: [embed],
@@ -61,12 +80,32 @@ module.exports = {
 
             if (interaction.customId === "divorce_no") {
 
-                collector.stop();
+                collector.stop("cancel");
 
                 return interaction.update({
-                    content: "❌ Divorce annulé.",
-                    embeds: [],
+                    embeds: [
+                        new EmbedBuilder()
+                            .setColor("Orange")
+                            .setTitle("💔 Divorce")
+                            .setDescription("Le divorce a été annulé.")
+                    ],
                     components: []
+                });
+
+            }
+
+            const family = await Family.findOne({
+                marriageId: marriage._id
+            });
+
+            if (family) {
+
+                await Child.deleteMany({
+                    familyId: family._id
+                });
+
+                await Family.deleteOne({
+                    _id: family._id
                 });
 
             }
@@ -75,37 +114,53 @@ module.exports = {
                 _id: marriage._id
             });
 
-            await Family.deleteOne({
-                marriageId: marriage._id
-            });
-
-            collector.stop();
+            collector.stop("confirmed");
 
             return interaction.update({
+
                 embeds: [
+
                     new EmbedBuilder()
+
                         .setColor("Green")
+
                         .setTitle("💔 Divorce")
-                        .setDescription("Le divorce a été prononcé.")
+
+                        .setDescription(
+                            "Le divorce a été prononcé.\n\nVotre famille et vos enfants ont été supprimés."
+                        )
+
                 ],
+
                 components: []
+
             });
 
         });
 
         collector.on("end", async (_, reason) => {
 
-            if (reason !== "time") return;
+            if (reason !== "time")
+                return;
 
             await msg.edit({
+
                 embeds: [
+
                     EmbedBuilder.from(embed)
-                        .setDescription("⌛ Temps écoulé.")
+
+                        .setColor("Orange")
+
+                        .setDescription("⌛ Le délai de confirmation est expiré.")
+
                 ],
+
                 components: []
+
             }).catch(() => {});
 
         });
 
     }
+
 };
