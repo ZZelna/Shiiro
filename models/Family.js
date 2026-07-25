@@ -30,40 +30,8 @@ module.exports = mongoose.model(
         },
 
         children: [{
-            userId: {
-                type: String,
-                required: true
-            },
-
-            name: {
-                type: String,
-                required: true
-            },
-
-            gender: {
-                type: String,
-                default: "Inconnu"
-            },
-
-            age: {
-                type: Number,
-                default: 0
-            },
-
-            happiness: {
-                type: Number,
-                default: 100
-            },
-
-            intelligence: {
-                type: Number,
-                default: 0
-            },
-
-            createdAt: {
-                type: Date,
-                default: Date.now
-            }
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Child"
         }],
 
         lastBaby: {
@@ -86,7 +54,7 @@ module.exports = mongoose.model(
             default: 0
         },
 
-        coins: {
+        Yens: {
             type: Number,
             default: 0
         },
