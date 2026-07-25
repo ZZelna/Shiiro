@@ -4,6 +4,7 @@ const {
 
 const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
+const Child = require("../../models/Child");
 
 module.exports = {
 
@@ -13,40 +14,64 @@ module.exports = {
 
         const index = Number(args[0]) - 1;
 
+        if (isNaN(index) || index < 0)
+            return message.reply(
+                "❌ Utilisation : `*birthday <numéro de l'enfant>`"
+            );
+
         const marriage = await Marriage.findOne({
             guildId: message.guild.id,
             users: message.author.id
         });
 
         if (!marriage)
-            return message.reply("❌ Vous devez être marié.");
+            return message.reply(
+                "❌ Vous devez être marié."
+            );
 
         const family = await Family.findOne({
             marriageId: marriage._id
         });
 
         if (!family)
-            return;
+            return message.reply(
+                "❌ Famille introuvable."
+            );
 
-        const child = family.children[index];
+        const children = await Child.find({
+            familyId: family._id
+        }).sort({
+            createdAt: 1
+        });
+
+        const child = children[index];
 
         if (!child)
-            return message.reply("❌ Enfant introuvable.");
+            return message.reply(
+                "❌ Enfant introuvable."
+            );
 
         child.age++;
 
         let reward = "";
 
-        if (child.age === 6)
-            reward = "📚 Il peut maintenant aller à l'école.";
+        switch (child.age) {
 
-        if (child.age === 18)
-            reward = "💼 Il est désormais majeur et peut travailler.";
+            case 6:
+                reward = "📚 Il peut maintenant aller à l'école.";
+                break;
 
-        if (child.age === 25)
-            reward = "💍 Il est prêt à fonder sa propre famille.";
+            case 18:
+                reward = "💼 Il est désormais majeur et peut travailler.";
+                break;
 
-        await family.save();
+            case 25:
+                reward = "💍 Il est prêt à fonder sa propre famille.";
+                break;
+
+        }
+
+        await child.save();
 
         const embed = new EmbedBuilder()
 
@@ -55,16 +80,39 @@ module.exports = {
             .setTitle("🎂 Anniversaire")
 
             .setDescription(
-                `🎉 **${child.name}** fête ses **${child.age} ans** !`
-            );
+                `🎉 **${child.name}** fête aujourd'hui ses **${child.age} ans** !`
+            )
 
-        if (reward)
+            .addFields(
+                {
+                    name: "👤 Membre",
+                    value: `<@${child.userId}>`,
+                    inline: true
+                },
+                {
+                    name: "⚧ Genre",
+                    value: child.gender,
+                    inline: true
+                },
+                {
+                    name: "🎂 Âge",
+                    value: `${child.age} ans`,
+                    inline: true
+                }
+            )
+
+            .setTimestamp();
+
+        if (reward) {
+
             embed.addFields({
                 name: "🎁 Déblocage",
                 value: reward
             });
 
-        message.reply({
+        }
+
+        return message.reply({
             embeds: [embed]
         });
 
