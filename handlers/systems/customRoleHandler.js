@@ -26,6 +26,36 @@ async function isEligible(member, guildId) {
 }
 
 /**
+ * Repositionne le rôle perso pour qu'il reste toujours strictement entre le plafond et le plancher
+ * configurés, tout en se calant sur le rôle le plus élevé que possède déjà le membre (dans cette fourchette).
+ */
+async function positionCustomRole(guild, member, role) {
+  const config = await GuildConfig.findOne({ guildId: guild.id });
+  const topId = config?.customRoleTopRoleId;
+  const bottomId = config?.customRoleBottomRoleId;
+  if (!topId || !bottomId) return; // pas configuré -> on laisse Discord placer par défaut
+
+  const topRole = await guild.roles.fetch(topId).catch(() => null);
+  const bottomRole = await guild.roles.fetch(bottomId).catch(() => null);
+  if (!topRole || !bottomRole) return;
+
+  const min = bottomRole.position + 1;
+  const max = topRole.position - 1;
+  if (max < min) return; // bornes mal configurées (trop proches), on ne touche à rien
+
+  // Rôle le plus élevé du membre, en excluant son propre rôle perso et @everyone
+  const memberHighest = member.roles.cache
+    .filter(r => r.id !== role.id && r.id !== guild.id)
+    .sort((a, b) => b.position - a.position)
+    .first();
+
+  const highestPosition = memberHighest ? memberHighest.position : min;
+  const targetPosition = Math.min(Math.max(highestPosition, min), max);
+
+  await role.setPosition(targetPosition).catch(() => {});
+}
+
+/**
  * Clic sur le bouton "Créer / modifier mon rôle" -> ouvre le modal (pré-rempli si un rôle existe déjà)
  */
 async function handleCustomRoleButton(interaction) {
@@ -136,6 +166,7 @@ async function handleCustomRoleModal(interaction) {
           { guildId: interaction.guild.id, userId: interaction.user.id, roleId: role.id, name, color: rawColor, icon: null, updatedAt: new Date() },
           { upsert: true }
         );
+        await positionCustomRole(interaction.guild, interaction.member, role);
         return interaction.editReply(
           `✅ Rôle **${name}** enregistré, mais l'icône image n'a pas pu être appliquée (le serveur n'a probablement pas le niveau de boost requis). Utilise un emoji à la place si tu veux une icône.`
         );
@@ -151,6 +182,7 @@ async function handleCustomRoleModal(interaction) {
     { guildId: interaction.guild.id, userId: interaction.user.id, roleId: role.id, name, color: rawColor, icon: rawIcon, updatedAt: new Date() },
     { upsert: true }
   );
+  await positionCustomRole(interaction.guild, interaction.member, role);
 
   await interaction.editReply(`✅ Ton rôle perso **${name}** a été ${existing ? 'mis à jour' : 'créé et attribué'} !`);
 }
