@@ -7,6 +7,7 @@ const {
 
 const Marriage = require("../../models/Marriage");
 const requests = require("../../systems/marriage/requests");
+const Family = require("../../models/Family");
 
 module.exports = {
     name: "marry",
@@ -131,12 +132,21 @@ requests.create(
                 requests.delete(requestKey);
                 collector.stop("accepted");
 
-                await Marriage.create({
-                    guildId: message.guild.id,
-                    users: [message.author.id, target.id],
-                    proposerId: message.author.id,
-                    createdAt: new Date()
-                });
+             const marriage = await Marriage.create({
+    guildId: message.guild.id,
+    users: [
+        message.author.id,
+        target.id
+    ],
+    proposerId: message.author.id
+});
+
+await Family.create({
+    marriageId: marriage._id,
+    children: [],
+    lastBaby: null,
+    maxChildren: 3
+});
 
                 return interaction.update({
                     embeds: [
