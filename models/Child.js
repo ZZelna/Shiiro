@@ -22,14 +22,12 @@ module.exports = mongoose.model(
 
         name: {
             type: String,
-            required: true,
-            maxlength: 20
+            required: true
         },
 
         gender: {
             type: String,
-            enum: ["Garçon", "Fille"],
-            required: true
+            default: "Inconnu"
         },
 
         age: {
@@ -52,11 +50,6 @@ module.exports = mongoose.model(
             default: 0
         },
 
-        school: {
-            type: Number,
-            default: 1
-        },
-
         level: {
             type: Number,
             default: 1
@@ -66,6 +59,32 @@ module.exports = mongoose.model(
             type: Number,
             default: 0
         },
+
+        school: {
+            type: Number,
+            default: 1
+        },
+
+        job: {
+            type: String,
+            default: null
+        },
+
+        salary: {
+            type: Number,
+            default: 0
+        },
+
+        marriedTo: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Child",
+            default: null
+        },
+
+        children: [{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Child"
+        }],
 
         createdAt: {
             type: Date,
