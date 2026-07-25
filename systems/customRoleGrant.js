@@ -35,7 +35,18 @@ module.exports = async function handleCustomRoleGrant(message, commandName) {
   }
 
   if (target.roles.cache.has(role.id)) {
-    await message.reply(`ℹ️ ${target} a déjà ce rôle.`);
+    // La cible a déjà le rôle -> on le retire (toggle), sauf si c'est le propriétaire lui-même
+    if (target.id === message.author.id) {
+      await message.reply("❌ Tu ne peux pas te retirer ton propre rôle perso avec cette commande. Utilise le bouton \"Supprimer mon rôle perso\" si tu veux t'en débarrasser complètement.");
+      return true;
+    }
+
+    await target.roles.remove(role).catch(() => null);
+
+    customRole.sharedWith = customRole.sharedWith.filter(id => id !== target.id);
+    await customRole.save();
+
+    await message.reply(`➖ Le rôle **${customRole.name}** a été retiré à ${target}.`);
     return true;
   }
 
@@ -46,6 +57,6 @@ module.exports = async function handleCustomRoleGrant(message, commandName) {
     await customRole.save();
   }
 
-  await message.reply(`✅ ${target} a reçu le rôle **${customRole.name}** !`);
+  await message.reply(`➕ ${target} a reçu le rôle **${customRole.name}** !`);
   return true;
 };
