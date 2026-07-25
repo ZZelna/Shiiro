@@ -4,6 +4,7 @@ const {
 
 const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
+const Child = require("../../models/Child");
 
 module.exports = {
     name: "couple",
@@ -18,84 +19,122 @@ module.exports = {
         if (!marriage)
             return message.reply("❌ Vous n'êtes pas marié.");
 
-        const partnerId = marriage.users.find(id => id !== message.author.id);
+        const partnerId = marriage.users.find(
+            id => id !== message.author.id
+        );
 
-        const partner =
-            await message.client.users.fetch(partnerId).catch(() => null);
+        const partner = await message.client.users
+            .fetch(partnerId)
+            .catch(() => null);
 
         const family = await Family.findOne({
             marriageId: marriage._id
         });
 
+        const children = family
+            ? await Child.countDocuments({
+                  familyId: family._id
+              })
+            : 0;
+
         const marriedDays = Math.floor(
             (Date.now() - marriage.marriedAt.getTime()) /
-            (1000 * 60 * 60 * 24)
+            86400000
         );
 
-        const voiceHours = Math.floor((marriage.voiceSeconds || 0) / 3600);
-        const voiceMinutes = Math.floor(((marriage.voiceSeconds || 0) % 3600) / 60);
+        const voiceHours = Math.floor(
+            (marriage.voiceSeconds || 0) / 3600
+        );
+
+        const voiceMinutes = Math.floor(
+            ((marriage.voiceSeconds || 0) % 3600) / 60
+        );
 
         const embed = new EmbedBuilder()
+
             .setColor("#5DADE2")
+
             .setAuthor({
                 name: `${message.author.username} ❤️ ${partner?.username || "Inconnu"}`
             })
-            .setThumbnail(partner?.displayAvatarURL({
-                size: 512
-            }))
+
+            .setThumbnail(
+                partner?.displayAvatarURL({
+                    size: 512
+                })
+            )
+
             .addFields(
+
                 {
                     name: "💍 Conjoint",
                     value: `<@${partnerId}>`,
                     inline: true
                 },
+
                 {
                     name: "📅 Mariés depuis",
                     value: `${marriedDays} jour(s)`,
                     inline: true
                 },
+
                 {
-                    name: "❤️ Love",
-                    value: `${marriage.love}`,
+                    name: "❤️ Amour",
+                    value: `${marriage.love || 0}`,
                     inline: true
                 },
+
                 {
                     name: "💋 Bisous",
-                    value: `${marriage.kisses}`,
+                    value: `${marriage.kisses || 0}`,
                     inline: true
                 },
+
                 {
                     name: "🤗 Câlins",
-                    value: `${marriage.hugs}`,
+                    value: `${marriage.hugs || 0}`,
                     inline: true
                 },
+
                 {
                     name: "🎁 Cadeaux",
-                    value: `${marriage.gifts}`,
+                    value: `${marriage.gifts || 0}`,
                     inline: true
                 },
+
                 {
                     name: "🎤 Temps vocal",
                     value: `${voiceHours}h ${voiceMinutes}m`,
                     inline: true
                 },
+
                 {
                     name: "💬 Messages",
-                    value: `${marriage.messagesTogether}`,
+                    value: `${marriage.messagesTogether || 0}`,
                     inline: true
                 },
+
+                {
+                    name: "👶 Enfants",
+                    value: `${children}`,
+                    inline: true
+                },
+
                 {
                     name: "👨‍👩‍👧 Famille",
-                    value: family ? family.name : "Aucune",
-                    inline: false
+                    value: family?.name || "Aucune",
+                    inline: true
                 }
+
             )
+
             .setFooter({
                 text: "Shiiro • Couple"
             })
+
             .setTimestamp();
 
-        message.reply({
+        return message.reply({
             embeds: [embed]
         });
 
