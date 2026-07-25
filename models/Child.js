@@ -25,6 +25,12 @@ module.exports = mongoose.model(
             required: true
         },
 
+        // Nouveau champ
+        adopted: {
+            type: Boolean,
+            default: false
+        },
+
         gender: {
             type: String,
             default: "Inconnu"
