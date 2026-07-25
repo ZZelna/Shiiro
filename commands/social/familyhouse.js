@@ -31,17 +31,40 @@ module.exports = {
         });
 
         if (!family)
-            return;
+            return message.reply("❌ Vous n'avez pas encore de famille.");
 
-        message.reply({
-            embeds: [
-                new EmbedBuilder()
-                .setColor("#F39C12")
-                .setTitle("🏡 Votre maison")
-                .setDescription(
-                    `**Niveau : ${family.houseLevel}**\n\n${houses[family.houseLevel]}`
-                )
-            ]
+        const level = Math.max(
+            0,
+            Math.min(family.houseLevel || 0, houses.length - 1)
+        );
+
+        const embed = new EmbedBuilder()
+            .setColor("#F39C12")
+            .setTitle("🏡 Maison familiale")
+            .setDescription(houses[level])
+            .addFields(
+                {
+                    name: "🏠 Niveau",
+                    value: `${level + 1}/${houses.length}`,
+                    inline: true
+                },
+                {
+                    name: "👨‍👩‍👧 Famille",
+                    value: family.name,
+                    inline: true
+                },
+                {
+                    name: "💰 Banque",
+                    value: `${(family.yens || 0).toLocaleString("fr-FR")} ¥`,
+                    inline: true
+                }
+            )
+            .setFooter({
+                text: "Améliorez votre maison pour débloquer de nouveaux niveaux."
+            });
+
+        return message.reply({
+            embeds: [embed]
         });
 
     }
