@@ -1,7 +1,11 @@
-const { EmbedBuilder } = require("discord.js");
+const {
+    EmbedBuilder
+} = require("discord.js");
+
 const Marriage = require("../../models/Marriage");
 
 module.exports = {
+
     name: "kiss",
 
     async run(message) {
@@ -9,7 +13,9 @@ module.exports = {
         const target = message.mentions.members.first();
 
         if (!target)
-            return message.reply("❌ Mentionnez votre partenaire.");
+            return message.reply(
+                "❌ Mentionnez votre partenaire."
+            );
 
         const marriage = await Marriage.findOne({
             guildId: message.guild.id,
@@ -17,39 +23,56 @@ module.exports = {
         });
 
         if (!marriage)
-            return message.reply("❌ Vous n'êtes pas marié.");
+            return message.reply(
+                "❌ Vous n'êtes pas marié."
+            );
 
         if (!marriage.users.includes(target.id))
-            return message.reply("❌ Cette personne n'est pas votre partenaire.");
+            return message.reply(
+                "❌ Cette personne n'est pas votre partenaire."
+            );
 
-        marriage.kisses += 1;
-        marriage.love += 10;
+        marriage.kisses = (marriage.kisses || 0) + 1;
+        marriage.love = (marriage.love || 0) + 10;
 
         await marriage.save();
 
         const embed = new EmbedBuilder()
-            .setColor("#ff5ba7")
+
+            .setColor("#FF5BA7")
+
             .setTitle("💋 Bisou")
+
             .setDescription(
-                `${message.author} embrasse ${target} ❤️`
+                `${message.author} embrasse tendrement ${target} ❤️`
             )
+
             .addFields(
+
                 {
-                    name: "💋 Total de bisous",
-                    value: marriage.kisses.toString(),
+                    name: "💋 Bisous",
+                    value: `${marriage.kisses}`,
                     inline: true
                 },
+
                 {
-                    name: "❤️ Love gagné",
+                    name: "❤️ Amour gagné",
                     value: "+10",
                     inline: true
                 },
+
                 {
-                    name: "❤️ Love total",
-                    value: marriage.love.toString(),
+                    name: "💖 Amour total",
+                    value: `${marriage.love}`,
                     inline: true
                 }
+
             )
+
+            .setFooter({
+                text: "Shiiro • Couple"
+            })
+
             .setTimestamp();
 
         return message.reply({
@@ -57,4 +80,5 @@ module.exports = {
         });
 
     }
+
 };
