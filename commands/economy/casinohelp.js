@@ -26,12 +26,12 @@ module.exports = {
                 .setDescription(`
 • \`*casino\` : voir son profil casino
 • \`*daily\` : avoir son quota quotidien
-• \`*claim\` : récupérer son quota
+• \`*work\` : récupérer son quota
 • \`*gift\` : ouvrir un cadeau
 • \`*rob\` : voler un utilisateur
-• \`*pileface pile montant\` : parier côté pile
-• \`*pileface face montant\` : parier côté face
-• \`*blackjack\` : parier contre la banque
+• \`/pileface pile montant\` : parier côté pile
+• \`/pileface face montant\` : parier côté face
+• \`/blackjack\` : parier contre la banque
 • \`*timers\` : voir ses compteurs
 • \`*luck\` : voir les taux de chances
 • \`*topcoins\` : voir le top casino
