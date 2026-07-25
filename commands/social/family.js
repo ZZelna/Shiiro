@@ -65,7 +65,7 @@ module.exports = {
 
                 {
                     name: "💰 Banque",
-                    value: `${family.coins.toLocaleString("fr-FR")} ¥`,
+                    value: `${family.Yens.toLocaleString("fr-FR")} ¥`,
                     inline: true
                 }
 
