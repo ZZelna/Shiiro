@@ -6,14 +6,22 @@ const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
 
 module.exports = {
+
     name: "startfamily",
 
     async run(message, args) {
 
-        const familyName = args.join(" ");
+        const familyName = args.join(" ").trim();
 
         if (!familyName)
-            return message.reply("❌ Donnez un nom à votre famille.");
+            return message.reply(
+                "❌ Donnez un nom à votre famille."
+            );
+
+        if (familyName.length > 30)
+            return message.reply(
+                "❌ Le nom de famille ne peut pas dépasser 30 caractères."
+            );
 
         const marriage = await Marriage.findOne({
             guildId: message.guild.id,
@@ -21,14 +29,18 @@ module.exports = {
         });
 
         if (!marriage)
-            return message.reply("❌ Vous devez être marié.");
+            return message.reply(
+                "❌ Vous devez être marié."
+            );
 
         const already = await Family.findOne({
             marriageId: marriage._id
         });
 
         if (already)
-            return message.reply("❌ Vous possédez déjà une famille.");
+            return message.reply(
+                "❌ Vous possédez déjà une famille."
+            );
 
         const family = await Family.create({
 
@@ -36,17 +48,23 @@ module.exports = {
 
             marriageId: marriage._id,
 
+            ownerId: message.author.id,
+
             name: familyName,
 
-            parents: marriage.users,
+            members: marriage.users,
 
             children: [],
 
-            coins: 0,
+            yens: 0,
 
             xp: 0,
 
-            level: 1
+            level: 1,
+
+            maxChildren: 3,
+
+            lastBaby: null
 
         });
 
@@ -57,25 +75,41 @@ module.exports = {
             .setTitle("👨‍👩‍👧 Nouvelle famille")
 
             .setDescription(
-                `La famille **${family.name}** vient d'être fondée !`
+                `🎉 La famille **${family.name}** vient d'être fondée !`
             )
 
             .addFields(
+
                 {
                     name: "👑 Parents",
-                    value: marriage.users.map(id => `<@${id}>`).join("\n")
+                    value: marriage.users
+                        .map(id => `<@${id}>`)
+                        .join("\n")
                 },
+
+                {
+                    name: "👥 Membres",
+                    value: `${family.members.length}`,
+                    inline: true
+                },
+
                 {
                     name: "🏡 Niveau",
-                    value: "1",
+                    value: `${family.level}`,
                     inline: true
                 },
+
                 {
-                    name: "💰 Banque",
-                    value: "0 ¥",
+                    name: "💴 Banque",
+                    value: `${family.yens.toLocaleString("fr-FR")} ¥`,
                     inline: true
                 }
+
             )
+
+            .setFooter({
+                text: "Shiiro • Famille"
+            })
 
             .setTimestamp();
 
