@@ -5,32 +5,23 @@ const {
 const Marriage = require("../../models/Marriage");
 const Family = require("../../models/Family");
 
-const names = [
-    "Akira",
-    "Yuki",
-    "Ren",
-    "Sora",
-    "Haru",
-    "Aiko",
-    "Miyu",
-    "Kaito",
-    "Noa",
-    "Shiro",
-    "Kaori",
-    "Rin",
-    "Leo",
-    "Eden",
-    "Sena",
-    "Hina",
-    "Yuna",
-    "Itsuki"
-];
-
 module.exports = {
 
     name: "makebaby",
 
-    async run(message) {
+    async run(message, args) {
+
+        const childMember = message.mentions.members.first();
+
+        if (!childMember)
+            return message.reply(
+                "❌ Utilisation : `*makebaby @enfant`"
+            );
+
+        if (childMember.user.bot)
+            return message.reply(
+                "❌ Un bot ne peut pas être votre enfant."
+            );
 
         const marriage = await Marriage.findOne({
             guildId: message.guild.id,
@@ -38,37 +29,69 @@ module.exports = {
         });
 
         if (!marriage)
-            return message.reply("❌ Vous devez être marié.");
+            return message.reply(
+                "❌ Vous devez être marié."
+            );
 
         const family = await Family.findOne({
             marriageId: marriage._id
         });
 
         if (!family)
-            return message.reply("❌ Famille introuvable.");
+            return message.reply(
+                "❌ Famille introuvable."
+            );
 
         if (!family.children)
             family.children = [];
 
-        const maxChildren = family.maxChildren || 3;
+        const alreadyChild = family.children.find(
+            c => c.userId === childMember.id
+        );
 
-        if (family.children.length >= maxChildren)
-            return message.reply("👶 Votre famille est déjà complète.");
+        if (alreadyChild)
+            return message.reply(
+                "❌ Cette personne fait déjà partie de votre famille."
+            );
+
+        if (family.children.length >= (family.maxChildren || 3))
+            return message.reply(
+                "👶 Votre famille est complète."
+            );
 
         if (
             family.lastBaby &&
             Date.now() - family.lastBaby < 86400000
         ) {
-
             return message.reply(
-                "🍼 Vous devez attendre avant d'avoir un nouvel enfant."
+                "🍼 Vous devez attendre 24 heures avant un nouvel enfant."
             );
-
         }
 
-        if (Math.random() > 0.70)
+        await message.reply(
+            `👶 Quel sera le prénom de ${childMember} ?\nVous avez **60 secondes** pour répondre.`
+        );
+
+        const filter = m =>
+            m.author.id === message.author.id &&
+            m.channel.id === message.channel.id;
+
+        const collected = await message.channel.awaitMessages({
+            filter,
+            max: 1,
+            time: 60000
+        }).catch(() => null);
+
+        if (!collected || !collected.first())
             return message.reply(
-                "😅 Aucun bébé aujourd'hui... Réessayez demain."
+                "⌛ Temps écoulé."
+            );
+
+        const firstName = collected.first().content.trim();
+
+        if (firstName.length < 2 || firstName.length > 20)
+            return message.reply(
+                "❌ Le prénom doit contenir entre 2 et 20 caractères."
             );
 
         const gender =
@@ -76,13 +99,11 @@ module.exports = {
                 ? "Garçon"
                 : "Fille";
 
-        const child = {
+        family.children.push({
 
-            id: Date.now().toString(),
+            userId: childMember.id,
 
-            name: names[
-                Math.floor(Math.random() * names.length)
-            ],
+            name: firstName,
 
             gender,
 
@@ -94,9 +115,7 @@ module.exports = {
 
             createdAt: Date.now()
 
-        };
-
-        family.children.push(child);
+        });
 
         family.lastBaby = Date.now();
 
@@ -109,26 +128,32 @@ module.exports = {
             .setTitle("👶 Naissance")
 
             .setDescription(
-                `Bienvenue à **${child.name}** !`
+                `${childMember} rejoint officiellement votre famille !`
             )
 
             .addFields(
-
                 {
-                    name: "Genre",
-                    value: child.gender,
+                    name: "Prénom",
+                    value: firstName,
                     inline: true
                 },
-
+                {
+                    name: "Genre",
+                    value: gender,
+                    inline: true
+                },
                 {
                     name: "Âge",
                     value: "0 an",
                     inline: true
                 }
+            )
 
-            );
+            .setFooter({
+                text: "Bienvenue dans la famille ❤️"
+            });
 
-        message.reply({
+        return message.reply({
             embeds: [embed]
         });
 
