@@ -22,19 +22,21 @@ module.exports = {
         if (!marriage.users.includes(target.id))
             return message.reply("❌ Cette personne n'est pas votre partenaire.");
 
-        marriage.hugs += 1;
-        marriage.love += 8;
+        marriage.hugs = (marriage.hugs || 0) + 1;
+        marriage.love = (marriage.love || 0) + 8;
 
         await marriage.save();
 
         const embed = new EmbedBuilder()
             .setColor("#6BCBFF")
             .setTitle("🤗 Câlin")
-            .setDescription(`${message.author} fait un énorme câlin à ${target} ❤️`)
+            .setDescription(
+                `${message.author} fait un énorme câlin à ${target} ❤️`
+            )
             .addFields(
                 {
                     name: "🤗 Câlins",
-                    value: marriage.hugs.toString(),
+                    value: `${marriage.hugs}`,
                     inline: true
                 },
                 {
@@ -43,11 +45,14 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: "❤️ Love total",
-                    value: marriage.love.toString(),
+                    name: "💖 Love total",
+                    value: `${marriage.love.toLocaleString("fr-FR")}`,
                     inline: true
                 }
             )
+            .setFooter({
+                text: "Shiiro • Couple"
+            })
             .setTimestamp();
 
         return message.reply({
