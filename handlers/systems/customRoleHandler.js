@@ -10,6 +10,8 @@ const GuildConfig = require('../../models/GuildConfig');
 const CustomRole = require('../../models/CustomRole');
 
 const HEX_REGEX = /^#?[0-9A-Fa-f]{6}$/;
+const COMMAND_REGEX = /^[a-z0-9_-]{2,20}$/;
+const RESERVED_COMMANDS = ['profile', 'help', 'ping']; // complète avec tes commandes existantes
 
 /**
  * Vérifie si le membre a le droit de créer un rôle perso :
@@ -96,10 +98,19 @@ async function handleCustomRoleButton(interaction) {
     .setRequired(false);
   if (existing?.icon) iconInput.setValue(existing.icon);
 
+  const commandInput = new TextInputBuilder()
+    .setCustomId('customrole_command')
+    .setLabel('Nom de la commande (ex: ascension)')
+    .setStyle(TextInputStyle.Short)
+    .setMaxLength(20)
+    .setRequired(true);
+  if (existing) commandInput.setValue(existing.commandName);
+
   modal.addComponents(
     new ActionRowBuilder().addComponents(nameInput),
     new ActionRowBuilder().addComponents(colorInput),
     new ActionRowBuilder().addComponents(iconInput),
+    new ActionRowBuilder().addComponents(commandInput),
   );
 
   await interaction.showModal(modal);
@@ -121,11 +132,27 @@ async function handleCustomRoleModal(interaction) {
   const name = interaction.fields.getTextInputValue('customrole_name').trim();
   const rawColor = interaction.fields.getTextInputValue('customrole_color').trim();
   const rawIcon = interaction.fields.getTextInputValue('customrole_icon')?.trim() || null;
+  const rawCommand = interaction.fields.getTextInputValue('customrole_command').trim().toLowerCase();
 
   if (!HEX_REGEX.test(rawColor)) {
     return interaction.editReply('❌ Couleur invalide. Utilise un code hex à 6 caractères, ex: `#5865F2`.');
   }
   const color = parseInt(rawColor.replace('#', ''), 16);
+
+  if (!COMMAND_REGEX.test(rawCommand)) {
+    return interaction.editReply('❌ Nom de commande invalide. Utilise 2 à 20 caractères : lettres minuscules, chiffres, `-` ou `_`.');
+  }
+  if (RESERVED_COMMANDS.includes(rawCommand)) {
+    return interaction.editReply(`❌ \`${rawCommand}\` est réservé, choisis un autre nom.`);
+  }
+  const commandTaken = await CustomRole.findOne({
+    guildId: interaction.guild.id,
+    commandName: rawCommand,
+    userId: { $ne: interaction.user.id },
+  });
+  if (commandTaken) {
+    return interaction.editReply(`❌ La commande \`+${rawCommand}\` est déjà utilisée par quelqu'un d'autre.`);
+  }
 
   const isImageUrl = rawIcon && /^https?:\/\//i.test(rawIcon);
   const isEmoji = rawIcon && !isImageUrl;
@@ -163,8 +190,17 @@ async function handleCustomRoleModal(interaction) {
         }
         await CustomRole.findOneAndUpdate(
           { guildId: interaction.guild.id, userId: interaction.user.id },
-          { guildId: interaction.guild.id, userId: interaction.user.id, roleId: role.id, name, color: rawColor, icon: null, updatedAt: new Date() },
-          { upsert: true }
+          {
+            guildId: interaction.guild.id,
+            userId: interaction.user.id,
+            roleId: role.id,
+            name,
+            color: rawColor,
+            icon: null,
+            commandName: rawCommand,
+            updatedAt: new Date(),
+          },
+          { upsert: true, setDefaultsOnInsert: true }
         );
         await positionCustomRole(interaction.guild, interaction.member, role);
         return interaction.editReply(
@@ -179,12 +215,21 @@ async function handleCustomRoleModal(interaction) {
 
   await CustomRole.findOneAndUpdate(
     { guildId: interaction.guild.id, userId: interaction.user.id },
-    { guildId: interaction.guild.id, userId: interaction.user.id, roleId: role.id, name, color: rawColor, icon: rawIcon, updatedAt: new Date() },
-    { upsert: true }
+    {
+      guildId: interaction.guild.id,
+      userId: interaction.user.id,
+      roleId: role.id,
+      name,
+      color: rawColor,
+      icon: rawIcon,
+      commandName: rawCommand,
+      updatedAt: new Date(),
+    },
+    { upsert: true, setDefaultsOnInsert: true }
   );
   await positionCustomRole(interaction.guild, interaction.member, role);
 
-  await interaction.editReply(`✅ Ton rôle perso **${name}** a été ${existing ? 'mis à jour' : 'créé et attribué'} !`);
+  await interaction.editReply(`✅ Ton rôle perso **${name}** a été ${existing ? 'mis à jour' : 'créé et attribué'} ! Attribue-le avec \`+${rawCommand} @personne\`.`);
 }
 
 /**
@@ -196,20 +241,28 @@ async function handleCustomRoleDeleteButton(interaction) {
     return interaction.reply({ content: "❌ Tu n'as pas de rôle perso à supprimer.", ephemeral: true });
   }
 
+  const sharedCount = existing.sharedWith?.length || 0;
+  const warningExtra = sharedCount > 0
+    ? ` Il sera aussi retiré aux **${sharedCount}** membre(s) à qui tu l'avais donné.`
+    : '';
+
   const confirmRow = new ActionRowBuilder().addComponents(
     new ButtonBuilder().setCustomId('customrole_delete_confirm').setLabel('Confirmer la suppression').setStyle(ButtonStyle.Danger),
     new ButtonBuilder().setCustomId('customrole_delete_cancel').setLabel('Annuler').setStyle(ButtonStyle.Secondary),
   );
 
   await interaction.reply({
-    content: `⚠️ Tu es sur le point de supprimer ton rôle perso **${existing.name}**. Cette action est irréversible.`,
+    content: `⚠️ Tu es sur le point de supprimer ton rôle perso **${existing.name}**.${warningExtra} Cette action est irréversible.`,
     components: [confirmRow],
     ephemeral: true,
   });
 }
 
 /**
- * Confirmation ou annulation de la suppression
+ * Confirmation ou annulation de la suppression.
+ * Si confirmée, le rôle Discord est supprimé, ce qui retire automatiquement
+ * le rôle à TOUT LE MONDE (propriétaire + membres de sharedWith) puisqu'il
+ * s'agit du même objet "role" côté Discord. On nettoie juste la base ensuite.
  */
 async function handleCustomRoleDeleteConfirm(interaction) {
   if (interaction.customId === 'customrole_delete_cancel') {
@@ -223,13 +276,17 @@ async function handleCustomRoleDeleteConfirm(interaction) {
 
   const role = await interaction.guild.roles.fetch(existing.roleId).catch(() => null);
   if (role) {
+    // Supprimer le rôle côté Discord le retire instantanément de tous les membres qui le portaient,
+    // qu'il s'agisse du propriétaire ou de quelqu'un présent dans sharedWith.
     await role.delete(`Suppression du rôle perso par ${interaction.user.tag}`).catch(() => {});
   }
 
+  const sharedCount = existing.sharedWith?.length || 0;
   await CustomRole.deleteOne({ guildId: interaction.guild.id, userId: interaction.user.id });
 
+  const extra = sharedCount > 0 ? ` Il a aussi été retiré aux **${sharedCount}** membre(s) qui l'avaient reçu.` : '';
   await interaction.update({
-    content: `✅ Ton rôle perso **${existing.name}** a été supprimé.`,
+    content: `✅ Ton rôle perso **${existing.name}** a été supprimé.${extra}`,
     components: [],
   });
 }
