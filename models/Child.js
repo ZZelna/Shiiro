@@ -25,10 +25,20 @@ module.exports = mongoose.model(
             required: true
         },
 
-        // Nouveau champ
+        // Enfant adopté ou biologique
         adopted: {
             type: Boolean,
             default: false
+        },
+
+        // Type de naissance
+        birthType: {
+            type: String,
+            enum: [
+                "biological",
+                "adopted"
+            ],
+            default: "biological"
         },
 
         gender: {
@@ -47,6 +57,11 @@ module.exports = mongoose.model(
         },
 
         health: {
+            type: Number,
+            default: 100
+        },
+
+        energy: {
             type: Number,
             default: 100
         },
@@ -71,11 +86,30 @@ module.exports = mongoose.model(
             default: 1
         },
 
+        // Cooldowns
+
         lastSchool: {
-    type: Number,
-    default: 0
-},
-        
+            type: Number,
+            default: 0
+        },
+
+        lastWork: {
+            type: Number,
+            default: 0
+        },
+
+        lastPlay: {
+            type: Number,
+            default: 0
+        },
+
+        lastFeed: {
+            type: Number,
+            default: 0
+        },
+
+        // Travail
+
         job: {
             type: String,
             default: null
@@ -86,11 +120,21 @@ module.exports = mongoose.model(
             default: 0
         },
 
+        // Mariage
+
         marriedTo: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Child",
             default: null
         },
+
+        spouseId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Child",
+            default: null
+        },
+
+        // Enfants
 
         children: [{
             type: mongoose.Schema.Types.ObjectId,
