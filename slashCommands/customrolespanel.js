@@ -1,126 +1,192 @@
 const {
     SlashCommandBuilder,
-    PermissionFlagsBits,
-    EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
-    ButtonStyle
+    ButtonStyle,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MediaGalleryBuilder,
+    MediaGalleryItemBuilder,
+    MessageFlags
 } = require("discord.js");
 
-const STAFF_ROLE_ID = "1506674274826584284";
+const CustomRole = require("../models/CustomRole");
+
+const ALLOWED_ROLE = "1506674274826584284";
 
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("customrolespanel")
-        .setDescription("Ouvre le panneau de gestion des rôles personnalisés")
-        .setDefaultMemberPermissions(PermissionFlagsBits.ManageRoles),
+        .setDescription("Affiche le panneau de gestion des rôles personnalisés"),
 
     async execute(interaction) {
 
-        if (!interaction.member.roles.cache.has(STAFF_ROLE_ID)) {
+        if (!interaction.member.roles.cache.has(ALLOWED_ROLE)) {
             return interaction.reply({
-                content: "❌ Vous n'avez pas accès à ce panneau.",
+                content: "❌ Vous n'avez pas la permission.",
                 ephemeral: true
             });
         }
 
-        const embed = new EmbedBuilder()
-            .setColor("#5865F2")
-            .setTitle("🎛️ Gestion des rôles personnalisés")
-            .setDescription(
-                [
-                    "Bienvenue dans le **centre d'administration des rôles personnalisés**.",
-                    "",
-                    "Sélectionnez une action à effectuer à l'aide des boutons ci-dessous."
-                ].join("\n")
+        const roles = await CustomRole.find({
+            guildId: interaction.guild.id
+        });
+
+        const totalRoles = roles.length;
+
+        const owners = new Set(
+            roles.map(r => r.userId)
+        ).size;
+
+        const sharedMembers = roles.reduce(
+            (total, role) => total + (role.sharedWith?.length || 0),
+            0
+        );
+
+        const container = new ContainerBuilder()
+            .setAccentColor(0x5865F2)
+
+            .addTextDisplayComponents(
+                new TextDisplayBuilder()
+                    .setContent("## 🎨 Gestion des rôles personnalisés")
             )
-            .setFooter({
-                text: "Shiiro • Gestion des rôles personnalisés"
-            })
-            .setTimestamp();
 
-        const row1 = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("customroles:list")
-                .setLabel("Liste")
-                .setEmoji("📋")
-                .setStyle(ButtonStyle.Primary),
+            .addTextDisplayComponents(
+                new TextDisplayBuilder()
+                    .setContent("**Centre d'administration Shiiro**")
+            )
 
-            new ButtonBuilder()
-                .setCustomId("customroles:search")
-                .setLabel("Rechercher")
-                .setEmoji("🔍")
-                .setStyle(ButtonStyle.Success),
+            .addSeparatorComponents(
+                new SeparatorBuilder()
+                    .setDivider(true)
+                    .setSpacing(SeparatorSpacingSize.Small)
+            )
 
-            new ButtonBuilder()
-                .setCustomId("customroles:delete")
-                .setLabel("Supprimer")
-                .setEmoji("🗑️")
-                .setStyle(ButtonStyle.Danger)
-        );
+            .addTextDisplayComponents(
+                new TextDisplayBuilder()
+                    .setContent(
+                        "Bienvenue dans le panneau de gestion des **rôles personnalisés**.\n\n" +
+                        "Depuis ce centre d'administration vous pouvez consulter, rechercher, modifier, supprimer, transférer et réparer tous les rôles personnalisés du serveur."
+                    )
+            )
 
-        const row2 = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("customroles:repair")
-                .setLabel("Réparer")
-                .setEmoji("🛠️")
-                .setStyle(ButtonStyle.Secondary),
+            .addTextDisplayComponents(
+                new TextDisplayBuilder()
+                    .setContent(
+                        `### 📊 Statistiques\n\n` +
+                        `🎨 **Rôles personnalisés :** ${totalRoles}\n` +
+                        `👑 **Propriétaires :** ${owners}\n` +
+                        `👥 **Partages actifs :** ${sharedMembers}\n` +
+                        `⚙️ **Commandes créées :** ${totalRoles}`
+                    )
+            )
 
-            new ButtonBuilder()
-                .setCustomId("customroles:stats")
-                .setLabel("Statistiques")
-                .setEmoji("📊")
-                .setStyle(ButtonStyle.Secondary),
+            .addMediaGalleryComponents(
+                new MediaGalleryBuilder().addItems(
+                    new MediaGalleryItemBuilder().setURL(
+                        "https://cdn.discordapp.com/attachments/1504557264311292036/1519046386337972377/FA548C65-1804-4C87-88B8-598D73C37DEB.png"
+                    )
+                )
+            )
 
-            new ButtonBuilder()
-                .setCustomId("customroles:sync")
-                .setLabel("Synchroniser")
-                .setEmoji("🔄")
-                .setStyle(ButtonStyle.Secondary)
-        );
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
 
-        const row3 = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("customroles:export")
-                .setLabel("Exporter")
-                .setEmoji("📤")
-                .setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder()
+                        .setCustomId("customroles:list")
+                        .setLabel("Liste")
+                        .setEmoji("📋")
+                        .setStyle(ButtonStyle.Primary),
 
-            new ButtonBuilder()
-                .setCustomId("customroles:import")
-                .setLabel("Importer")
-                .setEmoji("📥")
-                .setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder()
+                        .setCustomId("customroles:search")
+                        .setLabel("Rechercher")
+                        .setEmoji("🔍")
+                        .setStyle(ButtonStyle.Success),
 
-            new ButtonBuilder()
-                .setCustomId("customroles:transfer")
-                .setLabel("Transférer")
-                .setEmoji("👑")
-                .setStyle(ButtonStyle.Secondary)
-        );
+                    new ButtonBuilder()
+                        .setCustomId("customroles:create")
+                        .setLabel("Créer")
+                        .setEmoji("➕")
+                        .setStyle(ButtonStyle.Secondary),
 
-        const row4 = new ActionRowBuilder().addComponents(
-            new ButtonBuilder()
-                .setCustomId("customroles:rename")
-                .setLabel("Renommer")
-                .setEmoji("✏️")
-                .setStyle(ButtonStyle.Secondary),
+                    new ButtonBuilder()
+                        .setCustomId("customroles:delete")
+                        .setLabel("Supprimer")
+                        .setEmoji("🗑️")
+                        .setStyle(ButtonStyle.Danger)
+                )
+            )
 
-            new ButtonBuilder()
-                .setCustomId("customroles:edit")
-                .setLabel("Modifier")
-                .setEmoji("🎨")
-                .setStyle(ButtonStyle.Secondary)
-        );
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:rename")
+                        .setLabel("Renommer")
+                        .setEmoji("✏️")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:edit")
+                        .setLabel("Modifier")
+                        .setEmoji("🎨")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:transfer")
+                        .setLabel("Transférer")
+                        .setEmoji("👑")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:sync")
+                        .setLabel("Synchroniser")
+                        .setEmoji("🔄")
+                        .setStyle(ButtonStyle.Secondary)
+                )
+            )
+
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:stats")
+                        .setLabel("Statistiques")
+                        .setEmoji("📊")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:repair")
+                        .setLabel("Réparer")
+                        .setEmoji("🛠️")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:export")
+                        .setLabel("Exporter")
+                        .setEmoji("📤")
+                        .setStyle(ButtonStyle.Secondary),
+
+                    new ButtonBuilder()
+                        .setCustomId("customroles:import")
+                        .setLabel("Importer")
+                        .setEmoji("📥")
+                        .setStyle(ButtonStyle.Secondary)
+                )
+            );
+
+        await interaction.channel.send({
+            components: [container],
+            flags: MessageFlags.IsComponentsV2
+        });
 
         await interaction.reply({
-            embeds: [embed],
-            components: [
-                row1,
-                row2,
-                row3,
-                row4
-            ]
+            content: "✅ Panneau des rôles personnalisés envoyé.",
+            ephemeral: true
         });
+
     }
 };
