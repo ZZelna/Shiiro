@@ -86,7 +86,7 @@ module.exports = {
             .addMediaGalleryComponents(
                 new MediaGalleryBuilder().addItems(
                     new MediaGalleryItemBuilder().setURL(
-                        "https://cdn.discordapp.com/attachments/1504557264311292036/1519046386337972377/FA548C65-1804-4C87-88B8-598D73C37DEB.png"
+                        "https://cdn.discordapp.com/attachments/1503085829675815023/1531039205546000575/173C4930-CD72-4011-9AB7-F693A6DAE188.png?ex=6a67c2df&is=6a66715f&hm=af41d07d46ab8bfbdaf04e7c30acf7f806104d4f48fe237b2382d9fd3aaf0476&"
                     )
                 )
             )
