@@ -1,15 +1,19 @@
+const create = require("./create");
+const remove = require("./delete");
+const rename = require("./rename");
+const modify = require("./modify");
+const transfer = require("./transfer");
+const share = require("./share");
+const unshare = require("./unshare");
+
 const list = require("./list");
 const search = require("./search");
 const stats = require("./stats");
 const repair = require("./repair");
 const exportRoles = require("./export");
 const importRoles = require("./import");
-const rename = require("./rename");
-const modify = require("./modify");
-const transfer = require("./transfer");
-const deleteRole = require("./delete");
 
-module.exports = async (interaction) => {
+module.exports = async interaction => {
 
     if (
         !interaction.isButton() &&
@@ -19,7 +23,17 @@ module.exports = async (interaction) => {
 
     const id = interaction.customId;
 
+    /* ===========================
+       PANNEAU PRINCIPAL
+    =========================== */
+
     switch (id) {
+
+        case "customrole_create":
+            return create(interaction);
+
+        case "customrole_delete":
+            return remove(interaction);
 
         case "customroles_list":
             return list(interaction);
@@ -41,8 +55,44 @@ module.exports = async (interaction) => {
 
     }
 
+    /* ===========================
+       MENUS DÉROULANTS
+    =========================== */
+
     if (id === "customroles_select")
-        return;
+        return list(interaction);
+
+    if (id === "customroles_delete_select")
+        return remove(interaction);
+
+    if (id === "customroles_transfer_select")
+        return transfer(interaction);
+
+    if (id === "customroles_share_select")
+        return share(interaction);
+
+    if (id === "customroles_unshare_select")
+        return unshare(interaction);
+
+    /* ===========================
+       MODALS
+    =========================== */
+
+    if (id === "customrole_modal")
+        return create(interaction);
+
+    if (id.startsWith("rename_modal_"))
+        return rename(interaction);
+
+    if (id.startsWith("modify_modal_"))
+        return modify(interaction);
+
+    if (id.startsWith("transfer_modal_"))
+        return transfer(interaction);
+
+    /* ===========================
+       BOUTONS
+    =========================== */
 
     if (id.startsWith("rename_"))
         return rename(interaction);
@@ -54,6 +104,12 @@ module.exports = async (interaction) => {
         return transfer(interaction);
 
     if (id.startsWith("delete_"))
-        return deleteRole(interaction);
+        return remove(interaction);
+
+    if (id.startsWith("share_"))
+        return share(interaction);
+
+    if (id.startsWith("unshare_"))
+        return unshare(interaction);
 
 };
