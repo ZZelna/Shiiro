@@ -8,7 +8,7 @@ const {
     PermissionFlagsBits
 } = require("discord.js");
 
-const CustomRole = require("../models/CustomRole");
+const CustomRole = require("../../models/CustomRole");
 
 const ALLOWED_ROLE = "1506674274826584284";
 
