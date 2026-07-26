@@ -44,6 +44,11 @@ function normalizeHex(hex) {
 }
 
 module.exports = async function handleCustomRoles(interaction) {
+    const isButtonForUs = interaction.isButton() && interaction.customId.startsWith("customroles:");
+    const isModalForUs = interaction.isModalSubmit() && interaction.customId.startsWith("customroles:");
+
+    if (!isButtonForUs && !isModalForUs) return; // pas pour nous, on laisse passer
+
     if (!isAllowed(interaction)) {
         return interaction.reply({
             content: "❌ Vous n'avez pas la permission.",
@@ -51,7 +56,7 @@ module.exports = async function handleCustomRoles(interaction) {
         });
     }
 
-    if (interaction.isButton()) {
+    if (isButtonForUs) {
         const action = interaction.customId.split(":")[1];
 
         switch (action) {
@@ -72,7 +77,7 @@ module.exports = async function handleCustomRoles(interaction) {
         }
     }
 
-    if (interaction.isModalSubmit()) {
+    if (isModalForUs) {
         const action = interaction.customId.split(":")[1];
 
         switch (action) {
