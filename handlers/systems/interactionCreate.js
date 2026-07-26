@@ -3,6 +3,7 @@ const handleTicketInteraction = require("./ticketHandler");
 const handleCasinoInteraction = require("./casinoHandler");
 const handleClanInteraction = require("./clanHandler");
 const handleCustomRoleInteraction = require("./customRoleHandler");
+const handleCustomRolePanelInteraction = require("./customRolePanelHandler"); // 👈 AJOUT
 const handleCasinoHelpInteraction = require("./casinoHelpHandler");
 const handleSurveyInteraction = require("./surveyHandler");
 const handleGiveawayInteraction = require("./giveawayHandler");
@@ -30,9 +31,14 @@ module.exports = async (interaction) => {
     await handleClanInteraction(interaction);
 
     // =========================
-    // RÔLES PERSONNALISÉS
+    // RÔLES PERSONNALISÉS (self-service)
     // =========================
     await handleCustomRoleInteraction(interaction);
+
+    // =========================
+    // PANNEAU ADMIN - RÔLES PERSONNALISÉS
+    // =========================
+    await handleCustomRolePanelInteraction(interaction); // 👈 AJOUT
 
     // =========================
     // AIDE CASINO (pagination)
