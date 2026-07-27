@@ -615,6 +615,14 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
         snapshotRemoveMember(role.id, newMember.id);
 
         if (role.id === NEVER_REMOVABLE_ROLE_ID) {
+            // ⚡ Exception jail : si le membre est actuellement en train
+            // d'être placé en prison (il a déjà le rôle jail), on ne
+            // restaure PAS le rôle protégé, sinon /jail (et /securejail)
+            // devient inopérant : le rôle de base réapparaît aussitôt.
+            if (newMember.roles.cache.has(JAIL_ROLE_ID)) {
+                continue;
+            }
+
             try {
                 await newMember.roles.add(role.id, "Rôle protégé : ré-ajout automatique");
             } catch (err) {
@@ -633,6 +641,11 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
             });
             continue;
         }
+
+        // ⚡ Exception bot : un retrait de rôle effectué par le bot lui-même
+        // (jail, autorole, custom roles, etc.) ne doit jamais être traité
+        // comme un contournement de hiérarchie par un humain.
+        if (executor?.id === client.user.id) continue;
 
         if (
             managerRole &&
@@ -696,6 +709,11 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
 
     for (const role of addedRoles.values()) {
         snapshotAddMember(role.id, newMember.id);
+
+        // ⚡ Exception bot : un ajout de rôle effectué par le bot lui-même
+        // (ré-attribution après jail, autorole, custom roles, etc.) ne
+        // doit jamais être traité comme un contournement de hiérarchie.
+        if (executor?.id === client.user.id) continue;
 
         if (
             PROTECTED_ROLE_IDS.includes(role.id) &&
