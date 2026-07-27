@@ -1,34 +1,216 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const guildConfigSchema = new Schema({
-  guildId: { type: String, required: true, unique: true },
-  channels: {
-    // Jouer aux quiz
-    quizSolo: { type: String, default: null },
-    duel: { type: String, default: null },
-    duo2v2: { type: String, default: null },
-    battleRoyale: { type: String, default: null },
-    tournoi: { type: String, default: null },
-    classeVsClasse: { type: String, default: null },
-    bossHebdo: { type: String, default: null },
-    marathon: { type: String, default: null },
-    // Progression
-    profil: { type: String, default: null },
-    succes: { type: String, default: null },
-    collections: { type: String, default: null },
-    boutique: { type: String, default: null },
-    inventaire: { type: String, default: null },
-    // Informations quiz
-    classements: { type: String, default: null },
-    xpEtNiveaux: { type: String, default: null },
-    misesAJour: { type: String, default: null },
-    evenements: { type: String, default: null },
-  },
-  // Rôle donné par l'autre bot au niveau 70, qui débloque la création de rôle perso
-  customRoleUnlockRoleId: { type: String, default: null },
-  // Les rôles perso doivent toujours rester positionnés strictement entre ces deux rôles
-  customRoleTopRoleId: { type: String, default: null },    // plafond (le rôle perso reste en-dessous)
-  customRoleBottomRoleId: { type: String, default: null }, // plancher (le rôle perso reste au-dessus)
+    guildId: {
+        type: String,
+        required: true,
+        unique: true
+    },
+
+    version: {
+        type: Number,
+        default: 1
+    },
+
+    plugins: {
+
+        // ───────────────────────────────
+        // CASINO
+        // ───────────────────────────────
+        casino: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                main: String,
+                logs: String,
+                shop: String,
+                wins: String
+            },
+
+            roles: {
+                admin: String,
+                staff: String
+            },
+
+            settings: {
+                currency: {
+                    type: String,
+                    default: "¥"
+                },
+
+                maxBet: {
+                    type: Number,
+                    default: 100000
+                },
+
+                cooldown: {
+                    type: Number,
+                    default: 60
+                }
+            }
+        },
+
+        // ───────────────────────────────
+        // QUIZ
+        // ───────────────────────────────
+        quiz: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                solo: String,
+                duel: String,
+                duo2v2: String,
+                battleRoyale: String,
+                tournoi: String,
+                classeVsClasse: String,
+                bossHebdo: String,
+                marathon: String
+            }
+        },
+
+        // ───────────────────────────────
+        // PROGRESSION
+        // ───────────────────────────────
+        progression: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                profil: String,
+                succes: String,
+                collections: String,
+                boutique: String,
+                inventaire: String
+            }
+        },
+
+        // ───────────────────────────────
+        // INFORMATIONS
+        // ───────────────────────────────
+        informations: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                classements: String,
+                xpEtNiveaux: String,
+                misesAJour: String,
+                evenements: String
+            }
+        },
+
+        // ───────────────────────────────
+        // TICKETS
+        // ───────────────────────────────
+        tickets: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            category: String,
+
+            channels: {
+                logs: String,
+                transcripts: String
+            },
+
+            roles: {
+                support: String
+            }
+        },
+
+        // ───────────────────────────────
+        // MODÉRATION
+        // ───────────────────────────────
+        moderation: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                logs: String,
+                reports: String
+            },
+
+            roles: {
+                admin: String,
+                moderator: String
+            }
+        },
+
+        // ───────────────────────────────
+        // GIVEAWAYS
+        // ───────────────────────────────
+        giveaways: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                main: String
+            },
+
+            roles: {
+                manager: String
+            }
+        },
+
+        // ───────────────────────────────
+        // WELCOME
+        // ───────────────────────────────
+        welcome: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            channels: {
+                welcome: String,
+                goodbye: String
+            }
+        },
+
+        // ───────────────────────────────
+        // CUSTOM ROLES
+        // ───────────────────────────────
+        customRoles: {
+
+            enabled: {
+                type: Boolean,
+                default: true
+            },
+
+            unlockRole: String,
+
+            topRole: String,
+
+            bottomRole: String
+        }
+    }
+
+}, {
+    timestamps: true
 });
 
-module.exports = model('GuildConfig', guildConfigSchema);
+module.exports = model("GuildConfig", guildConfigSchema);
