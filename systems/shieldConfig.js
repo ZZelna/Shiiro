@@ -1,4 +1,5 @@
 const ShieldConfig = require("../models/ShieldConfig");
+const { getPermissionList } = require("./permissionLists");
 
 const DEFAULT_MODULE = {
     enabled: true,
@@ -7,7 +8,9 @@ const DEFAULT_MODULE = {
     whitelistLinks: [],
     punishment: "timeout",
     timeoutDuration: 20,
-    logsChannel: null
+    logsChannel: null,
+    exemptOwners: false,
+    exemptWhitelist: false
 };
 
 // Récupère les réglages d'un module pour une guilde. Crée le document
@@ -47,4 +50,21 @@ async function updateShieldConfig(guildId, moduleId, update) {
     return doc.modules.get(moduleId);
 }
 
-module.exports = { getShieldConfig, updateShieldConfig };
+// Vrai si le membre doit être exempté du module : liste des
+// propriétaires, liste blanche (toutes deux gérées via
+// /permissionlist), ou rôle/utilisateur indépendant choisi pour ce
+// module précis (config.ignoredRoles).
+async function isBypassed(member, config) {
+    if (!member || !config) return false;
+
+    if (config.exemptOwners || config.exemptWhitelist) {
+        const list = await getPermissionList(member.guild.id);
+        if (config.exemptOwners && list.owners.includes(member.id)) return true;
+        if (config.exemptWhitelist && list.whitelist.includes(member.id)) return true;
+    }
+
+    return member.roles.cache.some(role => config.ignoredRoles.includes(role.id))
+        || config.ignoredRoles.includes(member.id);
+}
+
+module.exports = { getShieldConfig, updateShieldConfig, isBypassed };
