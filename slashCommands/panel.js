@@ -158,14 +158,14 @@ async function renderPanel(interaction, moduleId) {
 
     return {
         components: [buildContainer(moduleLabel, config), ...buildComponents(moduleId, config, permissionCounts)],
-        flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+        flags: MessageFlags.IsComponentsV2
     };
 }
 
 function textMessage(text) {
     return {
         components: [new ContainerBuilder().addTextDisplayComponents(new TextDisplayBuilder().setContent(text))],
-        flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+        flags: MessageFlags.IsComponentsV2
     };
 }
 
@@ -270,7 +270,7 @@ module.exports = {
                         ),
                         new ActionRowBuilder().addComponents(channelSelect)
                     ],
-                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+                    flags: MessageFlags.IsComponentsV2
                 });
 
                 const channelInteraction = await message
@@ -306,7 +306,7 @@ module.exports = {
                         ),
                         new ActionRowBuilder().addComponents(channelSelect)
                     ],
-                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+                    flags: MessageFlags.IsComponentsV2
                 });
 
                 const channelInteraction = await message
@@ -340,7 +340,7 @@ module.exports = {
                         ),
                         new ActionRowBuilder().addComponents(listChoiceSelect)
                     ],
-                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+                    flags: MessageFlags.IsComponentsV2
                 });
 
                 const choiceInteraction = await message
@@ -379,7 +379,7 @@ module.exports = {
                         ),
                         new ActionRowBuilder().addComponents(userSelect)
                     ],
-                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+                    flags: MessageFlags.IsComponentsV2
                 });
 
                 const usersInteraction = await message
