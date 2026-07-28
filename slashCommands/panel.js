@@ -7,10 +7,7 @@ const {
     StringSelectMenuBuilder,
     RoleSelectMenuBuilder,
     ChannelSelectMenuBuilder,
-    ChannelType,
-    ModalBuilder,
-    TextInputBuilder,
-    TextInputStyle
+    ChannelType
 } = require("discord.js");
 
 const { getShieldConfig, updateShieldConfig } = require("../systems/shieldConfig");
@@ -30,80 +27,98 @@ const PUNISHMENTS = [
     { value: "ban", label: "Bannissement" }
 ];
 
-const PANEL_TIMEOUT_MS = 120_000;
+const PANEL_TIMEOUT_MS = 180_000;
 
-function buildModuleSelectRow() {
-    const select = new StringSelectMenuBuilder()
-        .setCustomId("panel_module_select")
-        .setPlaceholder("Choisis le module que tu souhaites configurer.")
-        .addOptions(MODULES.map(m => ({ label: m.label, value: m.id })));
+// ─── Construction de l'embed récap (bloc du haut sur ta capture) ────────────
 
-    return new ActionRowBuilder().addComponents(select);
-}
-
-function buildConfigEmbed(moduleLabel, config) {
+function buildEmbed(moduleLabel, config) {
     const punishmentLabel = PUNISHMENTS.find(p => p.value === config.punishment)?.label || config.punishment;
+
+    const lines = [
+        `État: ${config.enabled ? "✅" : "❌"}`,
+        `Logs: ${config.logsChannel ? "✅" : "❌"}`,
+        `Permission: ${config.ignoredRoles.length ? "🔓" : "🔒"}`,
+        `Punition: ${punishmentLabel}${config.punishment === "timeout" ? ` (${config.timeoutDuration}s)` : ""}.`,
+        `Salon: ${config.ignoredChannels.length ? "✅" : "🔒"}`
+    ];
+
+    if (config.ignoredRoles.length) {
+        lines.push("", "Rôles exemptés:", ...config.ignoredRoles.map(id => `    • <@&${id}>`));
+    }
 
     return new EmbedBuilder()
         .setColor(config.enabled ? "Green" : "Red")
-        .setTitle(`⚙️ ${moduleLabel}`)
-        .addFields(
-            { name: "État", value: config.enabled ? "✅ Activé" : "🚫 Désactivé", inline: true },
-            {
-                name: "Punition",
-                value: config.punishment === "timeout"
-                    ? `${punishmentLabel} (${config.timeoutDuration}s)`
-                    : punishmentLabel,
-                inline: true
-            },
-            { name: "Logs", value: config.logsChannel ? `<#${config.logsChannel}>` : "Non défini", inline: true },
-            {
-                name: "Salons ignorés",
-                value: config.ignoredChannels.length ? config.ignoredChannels.map(id => `<#${id}>`).join(", ") : "Aucun"
-            },
-            {
-                name: "Rôles exemptés (Permission)",
-                value: config.ignoredRoles.length ? config.ignoredRoles.map(id => `<@&${id}>`).join(", ") : "Aucun"
-            }
-        );
+        .setTitle(`• ${moduleLabel}`)
+        .setDescription(lines.join("\n"));
 }
 
-function buildActionRows(moduleId, enabled) {
-    const row1 = new ActionRowBuilder().addComponents(
+// ─── Construction des lignes de composants (tout visible en même temps) ─────
+
+function buildComponents(moduleId, config) {
+    const moduleSelect = new StringSelectMenuBuilder()
+        .setCustomId("panel_module_select")
+        .setPlaceholder("Choisis le module que tu souhaites configurer.")
+        .addOptions(
+            MODULES.map(m => ({
+                label: m.label,
+                value: m.id,
+                default: m.id === moduleId
+            }))
+        );
+
+    const punitionSelect = new StringSelectMenuBuilder()
+        .setCustomId("panel_punition_select")
+        .setPlaceholder("Choisis la punition que le bot effectuera.")
+        .addOptions(
+            PUNISHMENTS.map(p => ({
+                label: p.label,
+                value: p.value,
+                default: p.value === config.punishment
+            }))
+        );
+
+    const permissionSelect = new RoleSelectMenuBuilder()
+        .setCustomId("panel_permission_select")
+        .setPlaceholder("Choisis les rôles exemptés de ce module.")
+        .setMinValues(0)
+        .setMaxValues(10)
+        .setDefaultRoles(config.ignoredRoles);
+
+    const actionButtons = new ActionRowBuilder().addComponents(
         new ButtonBuilder()
-            .setCustomId(`panel_toggle_${moduleId}`)
-            .setLabel(enabled ? "Désactiver" : "Activer")
-            .setStyle(enabled ? ButtonStyle.Danger : ButtonStyle.Success),
+            .setCustomId("panel_toggle")
+            .setLabel(config.enabled ? "Désactiver" : "Activer")
+            .setStyle(config.enabled ? ButtonStyle.Danger : ButtonStyle.Success),
         new ButtonBuilder()
-            .setCustomId(`panel_permission_${moduleId}`)
-            .setLabel("Permission")
-            .setStyle(ButtonStyle.Secondary),
-        new ButtonBuilder()
-            .setCustomId(`panel_logs_${moduleId}`)
+            .setCustomId("panel_logs")
             .setLabel("Logs")
             .setStyle(ButtonStyle.Secondary),
         new ButtonBuilder()
-            .setCustomId(`panel_salon_${moduleId}`)
+            .setCustomId("panel_salon")
             .setLabel("Salon")
-            .setStyle(ButtonStyle.Primary)
-    );
-
-    const row2 = new ActionRowBuilder().addComponents(
-        new ButtonBuilder()
-            .setCustomId(`panel_punition_${moduleId}`)
-            .setLabel("Punition")
-            .setStyle(ButtonStyle.Secondary),
-        new ButtonBuilder()
-            .setCustomId("panel_back")
-            .setLabel("Retour")
-            .setStyle(ButtonStyle.Secondary),
+            .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
             .setCustomId("panel_close")
             .setLabel("Fermer")
-            .setStyle(ButtonStyle.Danger)
+            .setStyle(ButtonStyle.Secondary)
     );
 
-    return [row1, row2];
+    return [
+        new ActionRowBuilder().addComponents(moduleSelect),
+        new ActionRowBuilder().addComponents(punitionSelect),
+        new ActionRowBuilder().addComponents(permissionSelect),
+        actionButtons
+    ];
+}
+
+async function renderPanel(interaction, moduleId) {
+    const moduleLabel = MODULES.find(m => m.id === moduleId).label;
+    const config = await getShieldConfig(interaction.guild.id, moduleId);
+
+    return {
+        embeds: [buildEmbed(moduleLabel, config)],
+        components: buildComponents(moduleId, config)
+    };
 }
 
 module.exports = {
@@ -123,221 +138,124 @@ module.exports = {
             });
         }
 
-        await interaction.reply({
-            content: "**Choisis le module que tu souhaites configurer.**",
-            components: [buildModuleSelectRow()],
-            ephemeral: true
-        });
+        let moduleId = MODULES[0].id;
+        const payload = await renderPanel(interaction, moduleId);
 
+        await interaction.reply({ ...payload, ephemeral: true });
         const message = await interaction.fetchReply();
-        await runModuleSelectLoop(interaction, message);
+
+        // Boucle unique : tout se passe sur le même message, on le
+        // met à jour (update) à chaque interaction plutôt que d'ouvrir
+        // des étapes séparées.
+        while (true) {
+            let componentInteraction;
+            try {
+                componentInteraction = await message.awaitMessageComponent({
+                    filter: i => i.user.id === interaction.user.id,
+                    time: PANEL_TIMEOUT_MS
+                });
+            } catch {
+                await interaction.editReply({ content: "⏳ Panel expiré.", embeds: [], components: [] }).catch(() => {});
+                return;
+            }
+
+            const { customId } = componentInteraction;
+
+            if (customId === "panel_close") {
+                await componentInteraction.update({ content: "Panel fermé.", embeds: [], components: [] });
+                return;
+            }
+
+            if (customId === "panel_module_select") {
+                moduleId = componentInteraction.values[0];
+                const newPayload = await renderPanel(interaction, moduleId);
+                await componentInteraction.update(newPayload);
+                continue;
+            }
+
+            if (customId === "panel_punition_select") {
+                await updateShieldConfig(interaction.guild.id, moduleId, { punishment: componentInteraction.values[0] });
+                const newPayload = await renderPanel(interaction, moduleId);
+                await componentInteraction.update(newPayload);
+                continue;
+            }
+
+            if (customId === "panel_permission_select") {
+                await updateShieldConfig(interaction.guild.id, moduleId, { ignoredRoles: componentInteraction.values });
+                const newPayload = await renderPanel(interaction, moduleId);
+                await componentInteraction.update(newPayload);
+                continue;
+            }
+
+            if (customId === "panel_toggle") {
+                const config = await getShieldConfig(interaction.guild.id, moduleId);
+                await updateShieldConfig(interaction.guild.id, moduleId, { enabled: !config.enabled });
+                const newPayload = await renderPanel(interaction, moduleId);
+                await componentInteraction.update(newPayload);
+                continue;
+            }
+
+            if (customId === "panel_logs") {
+                const config = await getShieldConfig(interaction.guild.id, moduleId);
+                const channelSelect = new ChannelSelectMenuBuilder()
+                    .setCustomId("panel_logs_select")
+                    .setPlaceholder("Choisis le salon de logs.")
+                    .addChannelTypes(ChannelType.GuildText);
+
+                if (config.logsChannel) channelSelect.setDefaultChannels([config.logsChannel]);
+
+                await componentInteraction.update({
+                    content: "Choisis le salon de logs :",
+                    embeds: [],
+                    components: [new ActionRowBuilder().addComponents(channelSelect)]
+                });
+
+                const channelInteraction = await message
+                    .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
+                    .catch(() => null);
+
+                if (channelInteraction) {
+                    await updateShieldConfig(interaction.guild.id, moduleId, { logsChannel: channelInteraction.values[0] });
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await channelInteraction.update(newPayload);
+                } else {
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await interaction.editReply(newPayload).catch(() => {});
+                }
+                continue;
+            }
+
+            if (customId === "panel_salon") {
+                const config = await getShieldConfig(interaction.guild.id, moduleId);
+                const channelSelect = new ChannelSelectMenuBuilder()
+                    .setCustomId("panel_salon_select")
+                    .setPlaceholder("Choisis les salons ignorés par ce module.")
+                    .addChannelTypes(ChannelType.GuildText)
+                    .setMinValues(0)
+                    .setMaxValues(10);
+
+                if (config.ignoredChannels.length) channelSelect.setDefaultChannels(config.ignoredChannels);
+
+                await componentInteraction.update({
+                    content: "Choisis les salons ignorés :",
+                    embeds: [],
+                    components: [new ActionRowBuilder().addComponents(channelSelect)]
+                });
+
+                const channelInteraction = await message
+                    .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
+                    .catch(() => null);
+
+                if (channelInteraction) {
+                    await updateShieldConfig(interaction.guild.id, moduleId, { ignoredChannels: channelInteraction.values });
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await channelInteraction.update(newPayload);
+                } else {
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await interaction.editReply(newPayload).catch(() => {});
+                }
+                continue;
+            }
+        }
     }
 };
-
-async function runModuleSelectLoop(interaction, message) {
-    let selectInteraction;
-    try {
-        selectInteraction = await message.awaitMessageComponent({
-            filter: i => i.user.id === interaction.user.id,
-            time: PANEL_TIMEOUT_MS
-        });
-    } catch {
-        return interaction.editReply({ content: "⏳ Panel expiré.", components: [] }).catch(() => {});
-    }
-
-    if (selectInteraction.customId === "panel_close") {
-        return selectInteraction.update({ content: "Panel fermé.", embeds: [], components: [] });
-    }
-
-    if (selectInteraction.customId === "panel_back") {
-        await selectInteraction.update({
-            content: "**Choisis le module que tu souhaites configurer.**",
-            embeds: [],
-            components: [buildModuleSelectRow()]
-        });
-        return runModuleSelectLoop(interaction, message);
-    }
-
-    if (selectInteraction.customId === "panel_module_select") {
-        const moduleId = selectInteraction.values[0];
-        await selectInteraction.deferUpdate();
-        return runModulePanel(interaction, message, moduleId);
-    }
-
-    return runModuleSelectLoop(interaction, message);
-}
-
-async function runModulePanel(interaction, message, moduleId) {
-    const moduleLabel = MODULES.find(m => m.id === moduleId).label;
-    const config = await getShieldConfig(interaction.guild.id, moduleId);
-
-    await interaction.editReply({
-        content: "",
-        embeds: [buildConfigEmbed(moduleLabel, config)],
-        components: buildActionRows(moduleId, config.enabled)
-    });
-
-    let componentInteraction;
-    try {
-        componentInteraction = await message.awaitMessageComponent({
-            filter: i => i.user.id === interaction.user.id,
-            time: PANEL_TIMEOUT_MS
-        });
-    } catch {
-        return interaction.editReply({ content: "⏳ Panel expiré.", embeds: [], components: [] }).catch(() => {});
-    }
-
-    const { customId } = componentInteraction;
-
-    if (customId === "panel_close") {
-        return componentInteraction.update({ content: "Panel fermé.", embeds: [], components: [] });
-    }
-
-    if (customId === "panel_back") {
-        await componentInteraction.update({
-            content: "**Choisis le module que tu souhaites configurer.**",
-            embeds: [],
-            components: [buildModuleSelectRow()]
-        });
-        return runModuleSelectLoop(interaction, message);
-    }
-
-    if (customId === `panel_toggle_${moduleId}`) {
-        await updateShieldConfig(interaction.guild.id, moduleId, { enabled: !config.enabled });
-        await componentInteraction.deferUpdate();
-        return runModulePanel(interaction, message, moduleId);
-    }
-
-    if (customId === `panel_permission_${moduleId}`) {
-        const roleSelect = new RoleSelectMenuBuilder()
-            .setCustomId(`panel_permission_select_${moduleId}`)
-            .setPlaceholder("Choisis les rôles exemptés de ce module.")
-            .setMinValues(0)
-            .setMaxValues(10);
-
-        await componentInteraction.update({
-            content: "Choisis les rôles exemptés :",
-            embeds: [],
-            components: [new ActionRowBuilder().addComponents(roleSelect)]
-        });
-
-        const roleInteraction = await message
-            .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
-            .catch(() => null);
-
-        if (roleInteraction) {
-            await updateShieldConfig(interaction.guild.id, moduleId, { ignoredRoles: roleInteraction.values });
-            await roleInteraction.deferUpdate();
-        }
-        return runModulePanel(interaction, message, moduleId);
-    }
-
-    if (customId === `panel_logs_${moduleId}`) {
-        const channelSelect = new ChannelSelectMenuBuilder()
-            .setCustomId(`panel_logs_select_${moduleId}`)
-            .setPlaceholder("Choisis le salon de logs.")
-            .addChannelTypes(ChannelType.GuildText);
-
-        await componentInteraction.update({
-            content: "Choisis le salon de logs :",
-            embeds: [],
-            components: [new ActionRowBuilder().addComponents(channelSelect)]
-        });
-
-        const channelInteraction = await message
-            .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
-            .catch(() => null);
-
-        if (channelInteraction) {
-            await updateShieldConfig(interaction.guild.id, moduleId, { logsChannel: channelInteraction.values[0] });
-            await channelInteraction.deferUpdate();
-        }
-        return runModulePanel(interaction, message, moduleId);
-    }
-
-    if (customId === `panel_salon_${moduleId}`) {
-        const channelSelect = new ChannelSelectMenuBuilder()
-            .setCustomId(`panel_salon_select_${moduleId}`)
-            .setPlaceholder("Choisis les salons ignorés par ce module.")
-            .addChannelTypes(ChannelType.GuildText)
-            .setMinValues(0)
-            .setMaxValues(10);
-
-        await componentInteraction.update({
-            content: "Choisis les salons ignorés :",
-            embeds: [],
-            components: [new ActionRowBuilder().addComponents(channelSelect)]
-        });
-
-        const channelInteraction = await message
-            .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
-            .catch(() => null);
-
-        if (channelInteraction) {
-            await updateShieldConfig(interaction.guild.id, moduleId, { ignoredChannels: channelInteraction.values });
-            await channelInteraction.deferUpdate();
-        }
-        return runModulePanel(interaction, message, moduleId);
-    }
-
-    if (customId === `panel_punition_${moduleId}`) {
-        const punitionSelect = new StringSelectMenuBuilder()
-            .setCustomId(`panel_punition_select_${moduleId}`)
-            .setPlaceholder("Choisis la punition que le bot effectuera.")
-            .addOptions(PUNISHMENTS.map(p => ({ label: p.label, value: p.value })));
-
-        await componentInteraction.update({
-            content: "**Choisis la punition que le bot effectuera.**",
-            embeds: [],
-            components: [new ActionRowBuilder().addComponents(punitionSelect)]
-        });
-
-        const punitionInteraction = await message
-            .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
-            .catch(() => null);
-
-        if (!punitionInteraction) {
-            return runModulePanel(interaction, message, moduleId);
-        }
-
-        const chosenPunishment = punitionInteraction.values[0];
-
-        // Si "timeout" est choisi, on demande la durée via une modale.
-        if (chosenPunishment === "timeout") {
-            const modal = new ModalBuilder()
-                .setCustomId(`panel_timeout_modal_${moduleId}`)
-                .setTitle("Durée de la mise en sourdine");
-
-            const durationInput = new TextInputBuilder()
-                .setCustomId("duration")
-                .setLabel("Durée en secondes")
-                .setStyle(TextInputStyle.Short)
-                .setValue(String(config.timeoutDuration))
-                .setRequired(true);
-
-            modal.addComponents(new ActionRowBuilder().addComponents(durationInput));
-
-            await punitionInteraction.showModal(modal);
-
-            const modalInteraction = await punitionInteraction
-                .awaitModalSubmit({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
-                .catch(() => null);
-
-            if (modalInteraction) {
-                const seconds = parseInt(modalInteraction.fields.getTextInputValue("duration"), 10);
-                await updateShieldConfig(interaction.guild.id, moduleId, {
-                    punishment: "timeout",
-                    timeoutDuration: Number.isFinite(seconds) && seconds > 0 ? seconds : config.timeoutDuration
-                });
-                await modalInteraction.deferUpdate();
-            }
-        } else {
-            await updateShieldConfig(interaction.guild.id, moduleId, { punishment: chosenPunishment });
-            await punitionInteraction.deferUpdate();
-        }
-
-        return runModulePanel(interaction, message, moduleId);
-    }
-
-    return runModulePanel(interaction, message, moduleId);
-}
