@@ -16,6 +16,7 @@ const {
 const { getShieldConfig, updateShieldConfig } = require("../systems/shieldConfig");
 const { getPermissionList } = require("../systems/permissionLists");
 const PermissionList = require("../models/PermissionList");
+const COLORS = require("../config/colors").panel;
 
 // ⚠️ À adapter : rôles autorisés à ouvrir le panel de configuration.
 const ALLOWED_PANEL_ROLES = ["1506674274826584284"];
@@ -23,7 +24,14 @@ const ALLOWED_PANEL_ROLES = ["1506674274826584284"];
 const MODULES = [
     { id: "antiSpam", label: "Message contenant du spam" },
     { id: "antiLink", label: "Message contenant des liens" },
-    { id: "antiToxic", label: "Message contenant un taux de toxicité" }
+    { id: "antiToxic", label: "Message contenant un taux de toxicité" },
+    { id: "roleAdd", label: "Ajout de rôle" },
+    { id: "roleRemove", label: "Enlever un rôle" },
+    { id: "roleCreate", label: "Création de rôle" },
+    { id: "roleDelete", label: "Suppression de rôle" },
+    { id: "roleMove", label: "Déplacement de rôle" },
+    { id: "channelCreate", label: "Création de salon" },
+    { id: "channelDelete", label: "Suppression de salon" }
 ];
 
 const PUNISHMENTS = [
@@ -47,9 +55,7 @@ const PANEL_TIMEOUT_MS = 180_000;
 function buildContainer(moduleLabel, config) {
     const punishmentLabel = PUNISHMENTS.find(p => p.value === config.punishment)?.label || config.punishment;
 
-    const lines = [
-        `**• ${moduleLabel}**`,
-        "",
+    const statusLines = [
         `État: ${config.enabled ? "✅" : "❌"}`,
         `Logs: ${config.logsChannel ? "✅" : "❌"}`,
         `Permission: ${(config.exemptOwners || config.exemptWhitelist || config.ignoredRoles.length) ? "🔓" : "🔒"}`,
@@ -58,12 +64,13 @@ function buildContainer(moduleLabel, config) {
     ];
 
     if (config.ignoredRoles.length) {
-        lines.push("", "Rôles exemptés:", ...config.ignoredRoles.map(id => `    • <@&${id}>`));
+        statusLines.push("", "Rôles exemptés:", ...config.ignoredRoles.map(id => `    • <@&${id}>`));
     }
 
     return new ContainerBuilder()
-        .setAccentColor(config.enabled ? 0x2ECC71 : 0xED4245)
-        .addTextDisplayComponents(new TextDisplayBuilder().setContent(lines.join("\n")));
+        .setAccentColor(config.enabled ? COLORS.enabled : COLORS.disabled)
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent(`**• ${moduleLabel}**`))
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent("```\n" + statusLines.join("\n") + "\n```"));
 }
 
 function buildComponents(moduleId, config, permissionCounts) {
