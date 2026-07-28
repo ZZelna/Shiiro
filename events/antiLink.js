@@ -1,19 +1,11 @@
-const ShieldConfig = require("../models/ShieldConfig");
+const { getShieldConfig } = require("../systems/shieldConfig");
 
 module.exports = async (message) => {
 
     if (!message.guild) return;
     if (message.author.bot) return;
 
-    let config = await ShieldConfig.findOne({
-        guildId: message.guild.id
-    });
-
-    if (!config) {
-        config = await ShieldConfig.create({
-            guildId: message.guild.id
-        });
-    }
+    const config = await getShieldConfig(message.guild.id, "antiLink");
 
     if (!config.enabled) return;
 
