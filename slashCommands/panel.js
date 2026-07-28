@@ -1,16 +1,21 @@
 const {
     SlashCommandBuilder,
-    EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
     ButtonStyle,
     StringSelectMenuBuilder,
     RoleSelectMenuBuilder,
+    UserSelectMenuBuilder,
     ChannelSelectMenuBuilder,
-    ChannelType
+    ChannelType,
+    ContainerBuilder,
+    TextDisplayBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const { getShieldConfig, updateShieldConfig } = require("../systems/shieldConfig");
+const { getPermissionList } = require("../systems/permissionLists");
+const PermissionList = require("../models/PermissionList");
 
 // ⚠️ À adapter : rôles autorisés à ouvrir le panel de configuration.
 const ALLOWED_PANEL_ROLES = ["1506674274826584284"];
@@ -27,17 +32,27 @@ const PUNISHMENTS = [
     { value: "ban", label: "Bannissement" }
 ];
 
+const EMOJIS = {
+    enabled: "1531500779586981949",
+    disabled: "1531500833785516213",
+    logs: "1531503528219119727",
+    salon: "1531503587589623880",
+    close: "1531503556274688123"
+};
+
 const PANEL_TIMEOUT_MS = 180_000;
 
-// ─── Construction de l'embed récap (bloc du haut sur ta capture) ────────────
+// ─── Container V2 (remplace l'embed du haut) ─────────────────────────────────
 
-function buildEmbed(moduleLabel, config) {
+function buildContainer(moduleLabel, config) {
     const punishmentLabel = PUNISHMENTS.find(p => p.value === config.punishment)?.label || config.punishment;
 
     const lines = [
+        `**• ${moduleLabel}**`,
+        "",
         `État: ${config.enabled ? "✅" : "❌"}`,
         `Logs: ${config.logsChannel ? "✅" : "❌"}`,
-        `Permission: ${config.ignoredRoles.length ? "🔓" : "🔒"}`,
+        `Permission: ${(config.exemptOwners || config.exemptWhitelist || config.ignoredRoles.length) ? "🔓" : "🔒"}`,
         `Punition: ${punishmentLabel}${config.punishment === "timeout" ? ` (${config.timeoutDuration}s)` : ""}.`,
         `Salon: ${config.ignoredChannels.length ? "✅" : "🔒"}`
     ];
@@ -46,15 +61,12 @@ function buildEmbed(moduleLabel, config) {
         lines.push("", "Rôles exemptés:", ...config.ignoredRoles.map(id => `    • <@&${id}>`));
     }
 
-    return new EmbedBuilder()
-        .setColor(config.enabled ? "Green" : "Red")
-        .setTitle(`• ${moduleLabel}`)
-        .setDescription(lines.join("\n"));
+    return new ContainerBuilder()
+        .setAccentColor(config.enabled ? 0x2ECC71 : 0xED4245)
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent(lines.join("\n")));
 }
 
-// ─── Construction des lignes de composants (tout visible en même temps) ─────
-
-function buildComponents(moduleId, config) {
+function buildComponents(moduleId, config, permissionCounts) {
     const moduleSelect = new StringSelectMenuBuilder()
         .setCustomId("panel_module_select")
         .setPlaceholder("Choisis le module que tu souhaites configurer.")
@@ -77,9 +89,27 @@ function buildComponents(moduleId, config) {
             }))
         );
 
-    const permissionSelect = new RoleSelectMenuBuilder()
+    const permissionSelect = new StringSelectMenuBuilder()
         .setCustomId("panel_permission_select")
-        .setPlaceholder("Choisis les rôles exemptés de ce module.")
+        .setPlaceholder("Choisis les utilisateurs autorisé.")
+        .setMinValues(0)
+        .setMaxValues(2)
+        .addOptions([
+            {
+                label: `Utilisateur dans la liste des propriétaires. (${permissionCounts.owners})`,
+                value: "owners",
+                default: config.exemptOwners
+            },
+            {
+                label: `Utilisateur dans la liste blanche. (${permissionCounts.whitelist})`,
+                value: "whitelist",
+                default: config.exemptWhitelist
+            }
+        ]);
+
+    const independentSelect = new RoleSelectMenuBuilder()
+        .setCustomId("panel_independent_select")
+        .setPlaceholder("Utilisateur indépendant : rôle spécifique à ce module.")
         .setMinValues(0)
         .setMaxValues(10)
         .setDefaultRoles(config.ignoredRoles);
@@ -88,22 +118,26 @@ function buildComponents(moduleId, config) {
         new ButtonBuilder()
             .setCustomId("panel_toggle")
             .setLabel(config.enabled ? "Désactiver" : "Activer")
-            .setEmoji(config.enabled ? { id: "1531500833785516213" } : { id: "1531500779586981949" })
+            .setEmoji({ id: config.enabled ? EMOJIS.disabled : EMOJIS.enabled })
             .setStyle(config.enabled ? ButtonStyle.Danger : ButtonStyle.Success),
         new ButtonBuilder()
             .setCustomId("panel_logs")
             .setLabel("Logs")
-            .setEmoji({ id: "1531503528219119727" })
+            .setEmoji({ id: EMOJIS.logs })
             .setStyle(ButtonStyle.Secondary),
         new ButtonBuilder()
             .setCustomId("panel_salon")
             .setLabel("Salon")
-            .setEmoji({ id: "1531503587589623880" })
+            .setEmoji({ id: EMOJIS.salon })
             .setStyle(ButtonStyle.Primary),
+        new ButtonBuilder()
+            .setCustomId("panel_lists")
+            .setLabel("Listes")
+            .setStyle(ButtonStyle.Secondary),
         new ButtonBuilder()
             .setCustomId("panel_close")
             .setLabel("Fermer")
-            .setEmoji({ id: "1531503556274688123" })
+            .setEmoji({ id: EMOJIS.close })
             .setStyle(ButtonStyle.Secondary)
     );
 
@@ -111,6 +145,7 @@ function buildComponents(moduleId, config) {
         new ActionRowBuilder().addComponents(moduleSelect),
         new ActionRowBuilder().addComponents(punitionSelect),
         new ActionRowBuilder().addComponents(permissionSelect),
+        new ActionRowBuilder().addComponents(independentSelect),
         actionButtons
     ];
 }
@@ -118,10 +153,19 @@ function buildComponents(moduleId, config) {
 async function renderPanel(interaction, moduleId) {
     const moduleLabel = MODULES.find(m => m.id === moduleId).label;
     const config = await getShieldConfig(interaction.guild.id, moduleId);
+    const permissionList = await getPermissionList(interaction.guild.id);
+    const permissionCounts = { owners: permissionList.owners.length, whitelist: permissionList.whitelist.length };
 
     return {
-        embeds: [buildEmbed(moduleLabel, config)],
-        components: buildComponents(moduleId, config)
+        components: [buildContainer(moduleLabel, config), ...buildComponents(moduleId, config, permissionCounts)],
+        flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+    };
+}
+
+function textMessage(text) {
+    return {
+        components: [new ContainerBuilder().addTextDisplayComponents(new TextDisplayBuilder().setContent(text))],
+        flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
     };
 }
 
@@ -145,7 +189,7 @@ module.exports = {
         let moduleId = MODULES[0].id;
         const payload = await renderPanel(interaction, moduleId);
 
-        await interaction.reply({ ...payload, ephemeral: true });
+        await interaction.reply(payload);
         const message = await interaction.fetchReply();
 
         // Boucle unique : tout se passe sur le même message, on le
@@ -159,14 +203,14 @@ module.exports = {
                     time: PANEL_TIMEOUT_MS
                 });
             } catch {
-                await interaction.editReply({ content: "⏳ Panel expiré.", embeds: [], components: [] }).catch(() => {});
+                await interaction.editReply(textMessage("⏳ Panel expiré.")).catch(() => {});
                 return;
             }
 
             const { customId } = componentInteraction;
 
             if (customId === "panel_close") {
-                await componentInteraction.update({ content: "Panel fermé.", embeds: [], components: [] });
+                await componentInteraction.update(textMessage("Panel fermé."));
                 return;
             }
 
@@ -185,6 +229,17 @@ module.exports = {
             }
 
             if (customId === "panel_permission_select") {
+                const values = componentInteraction.values;
+                await updateShieldConfig(interaction.guild.id, moduleId, {
+                    exemptOwners: values.includes("owners"),
+                    exemptWhitelist: values.includes("whitelist")
+                });
+                const newPayload = await renderPanel(interaction, moduleId);
+                await componentInteraction.update(newPayload);
+                continue;
+            }
+
+            if (customId === "panel_independent_select") {
                 await updateShieldConfig(interaction.guild.id, moduleId, { ignoredRoles: componentInteraction.values });
                 const newPayload = await renderPanel(interaction, moduleId);
                 await componentInteraction.update(newPayload);
@@ -209,9 +264,13 @@ module.exports = {
                 if (config.logsChannel) channelSelect.setDefaultChannels([config.logsChannel]);
 
                 await componentInteraction.update({
-                    content: "Choisis le salon de logs :",
-                    embeds: [],
-                    components: [new ActionRowBuilder().addComponents(channelSelect)]
+                    components: [
+                        new ContainerBuilder().addTextDisplayComponents(
+                            new TextDisplayBuilder().setContent("Choisis le salon de logs :")
+                        ),
+                        new ActionRowBuilder().addComponents(channelSelect)
+                    ],
+                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
                 });
 
                 const channelInteraction = await message
@@ -241,9 +300,13 @@ module.exports = {
                 if (config.ignoredChannels.length) channelSelect.setDefaultChannels(config.ignoredChannels);
 
                 await componentInteraction.update({
-                    content: "Choisis les salons ignorés :",
-                    embeds: [],
-                    components: [new ActionRowBuilder().addComponents(channelSelect)]
+                    components: [
+                        new ContainerBuilder().addTextDisplayComponents(
+                            new TextDisplayBuilder().setContent("Choisis les salons ignorés :")
+                        ),
+                        new ActionRowBuilder().addComponents(channelSelect)
+                    ],
+                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
                 });
 
                 const channelInteraction = await message
@@ -260,6 +323,80 @@ module.exports = {
                 }
                 continue;
             }
-        }
-    }
-};
+
+            if (customId === "panel_lists") {
+                const listChoiceSelect = new StringSelectMenuBuilder()
+                    .setCustomId("panel_lists_choice")
+                    .setPlaceholder("Quelle liste veux-tu modifier ?")
+                    .addOptions([
+                        { label: "Liste des propriétaires", value: "owners" },
+                        { label: "Liste blanche", value: "whitelist" }
+                    ]);
+
+                await componentInteraction.update({
+                    components: [
+                        new ContainerBuilder().addTextDisplayComponents(
+                            new TextDisplayBuilder().setContent("Quelle liste veux-tu modifier ?")
+                        ),
+                        new ActionRowBuilder().addComponents(listChoiceSelect)
+                    ],
+                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+                });
+
+                const choiceInteraction = await message
+                    .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
+                    .catch(() => null);
+
+                if (!choiceInteraction) {
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await interaction.editReply(newPayload).catch(() => {});
+                    continue;
+                }
+
+                const listName = choiceInteraction.values[0]; // "owners" | "whitelist"
+                const permissionList = await getPermissionList(interaction.guild.id);
+
+                const userSelect = new UserSelectMenuBuilder()
+                    .setCustomId("panel_lists_users")
+                    .setPlaceholder(
+                        listName === "owners"
+                            ? "Choisis les propriétaires."
+                            : "Choisis les utilisateurs de la liste blanche."
+                    )
+                    .setMinValues(0)
+                    .setMaxValues(25);
+
+                if (permissionList[listName].length) userSelect.setDefaultUsers(permissionList[listName]);
+
+                await choiceInteraction.update({
+                    components: [
+                        new ContainerBuilder().addTextDisplayComponents(
+                            new TextDisplayBuilder().setContent(
+                                listName === "owners"
+                                    ? "Choisis les propriétaires (remplace la liste actuelle) :"
+                                    : "Choisis les utilisateurs de la liste blanche (remplace la liste actuelle) :"
+                            )
+                        ),
+                        new ActionRowBuilder().addComponents(userSelect)
+                    ],
+                    flags: MessageFlags.IsComponentsV2 | MessageFlags.Ephemeral
+                });
+
+                const usersInteraction = await message
+                    .awaitMessageComponent({ filter: i => i.user.id === interaction.user.id, time: PANEL_TIMEOUT_MS })
+                    .catch(() => null);
+
+                if (usersInteraction) {
+                    await PermissionList.findOneAndUpdate(
+                        { guildId: interaction.guild.id },
+                        { $set: { [listName]: usersInteraction.values } },
+                        { upsert: true }
+                    );
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await usersInteraction.update(newPayload);
+                } else {
+                    const newPayload = await renderPanel(interaction, moduleId);
+                    await interaction.editReply(newPayload).catch(() => {});
+                }
+                continue;
+            }
