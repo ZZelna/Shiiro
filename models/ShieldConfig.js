@@ -1,38 +1,79 @@
-const mongoose = require("mongoose");
+const ShieldConfig = require("../models/ShieldConfig");
+const { getPermissionList } = require("./permissionLists");
 
-// Réglages d'un module individuel (antiSpam / antiLink / antiToxic).
-const ModuleSettingsSchema = new mongoose.Schema({
-    enabled: { type: Boolean, default: true },
-    ignoredChannels: { type: [String], default: [] },
-    ignoredRoles: { type: [String], default: [] },
-    whitelistLinks: { type: [String], default: [] },
-    punishment: { type: String, default: "timeout" },
-    timeoutDuration: { type: Number, default: 20 },
-    logsChannel: { type: String, default: null }
-}, { _id: false });
+const DEFAULT_MODULE = {
+    enabled: true,
+    ignoredChannels: [],
+    ignoredRoles: [],
+    whitelistLinks: [],
+    punishment: "timeout",
+    timeoutDuration: 20,
+    logsChannel: null,
+    exemptOwners: false,
+    exemptWhitelist: false
+};
 
-// ⚡ Un seul document par guilde (comme avant, même index guildId
-// unique), mais les réglages de chaque module vivent maintenant dans
-// une Map interne au lieu d'être éclatés en plusieurs documents.
-// Aucune modification d'index nécessaire côté MongoDB.
-const ShieldConfigSchema = new mongoose.Schema({
-
-    guildId: {
-        type: String,
-        required: true,
-        unique: true
-    },
-
-    // clé = moduleId ("antiSpam" | "antiLink" | "antiToxic"), valeur = ses réglages
-    modules: {
-        type: Map,
-        of: ModuleSettingsSchema,
-        default: {}
+// Récupère les réglages d'un module pour une guilde. Crée le document
+// de guilde et/ou l'entrée du module avec les valeurs par défaut si
+// besoin. Aucun risque de conflit d'index : un seul document par
+// guildId, exactement comme avant.
+async function getShieldConfig(guildId, moduleId) {
+    let doc = await ShieldConfig.findOne({ guildId });
+    if (!doc) {
+        doc = await ShieldConfig.create({ guildId, modules: {} });
     }
 
-});
+    let moduleConfig = doc.modules.get(moduleId);
+    if (!moduleConfig) {
+        doc.modules.set(moduleId, DEFAULT_MODULE);
+        await doc.save();
+        moduleConfig = doc.modules.get(moduleId);
+    }
 
-module.exports = mongoose.model(
-    "ShieldConfig",
-    ShieldConfigSchema
-);
+    return moduleConfig;
+}
+
+// Met à jour (fusion partielle) les réglages d'un module.
+async function updateShieldConfig(guildId, moduleId, update) {
+    let doc = await ShieldConfig.findOne({ guildId });
+    if (!doc) {
+        doc = await ShieldConfig.create({ guildId, modules: {} });
+    }
+
+    const current = doc.modules.get(moduleId) || DEFAULT_MODULE;
+    const currentPlain = typeof current.toObject === "function" ? current.toObject() : current;
+
+    const merged = { ...currentPlain, ...update };
+    doc.modules.set(moduleId, merged);
+    await doc.save();
+
+    return doc.modules.get(moduleId);
+}
+
+// Vrai si le membre doit être exempté du module : liste des
+// propriétaires, liste blanche (toutes deux gérées via
+// /permissionlist), ou rôle/utilisateur indépendant choisi pour ce
+// module précis (config.ignoredRoles).
+async function isBypassed(member, config) {
+    if (!member || !config) return false;
+
+    if (config.exemptOwners || config.exemptWhitelist) {
+        const list = await getPermissionList(member.guild.id);
+        if (config.exemptOwners && list.owners.includes(member.id)) return true;
+        if (config.exemptWhitelist && list.whitelist.includes(member.id)) return true;
+    }
+
+    return member.roles.cache.some(role => config.ignoredRoles.includes(role.id))
+        || config.ignoredRoles.includes(member.id);
+}
+
+// Envoie un message dans le salon de logs configuré pour ce module
+// (si un salon a été défini via /panel et qu'il existe toujours).
+async function sendModuleLog(guild, config, content) {
+    if (!config.logsChannel) return;
+    const logChannel = guild.channels.cache.get(config.logsChannel);
+    if (!logChannel) return;
+    await logChannel.send({ content }).catch(() => {});
+}
+
+module.exports = { getShieldConfig, updateShieldConfig, isBypassed, sendModuleLog };
