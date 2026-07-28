@@ -1,4 +1,4 @@
-const { getShieldConfig } = require("../systems/shieldConfig");
+const { getShieldConfig, isBypassed } = require("../systems/shieldConfig");
 
 const warnings = new Map();
 
@@ -16,11 +16,8 @@ module.exports = async (message) => {
     if (config?.ignoredChannels?.includes(message.channel.id))
         return;
 
-    if (
-        message.member.roles.cache.some(role =>
-            config?.ignoredRoles?.includes(role.id)
-        )
-    ) return;
+    if (await isBypassed(message.member, config))
+        return;
 
     if (message.member.permissions.has("Administrator"))
         return;
