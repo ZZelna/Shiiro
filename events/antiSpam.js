@@ -1,4 +1,4 @@
-const { getShieldConfig, isBypassed } = require("../systems/shieldConfig");
+const { getShieldConfig, isBypassed, sendModuleLog } = require("../systems/shieldConfig");
 
 const cache = new Map();
 
@@ -67,6 +67,12 @@ module.exports = async (message) => {
             warn.delete().catch(() => {});
         }, 5000);
 
+        await sendModuleLog(
+            message.guild,
+            config,
+            `🚫 **Spam détecté** — ${message.author.tag} (${message.author.id}) dans <#${message.channel.id}> — punition : ${config.punishment}.`
+        );
+
         cache.delete(userId);
 
         return;
@@ -98,6 +104,12 @@ module.exports = async (message) => {
         setTimeout(() => {
             warn.delete().catch(() => {});
         }, 5000);
+
+        await sendModuleLog(
+            message.guild,
+            config,
+            `🚫 **Spam répétitif détecté** — ${message.author.tag} (${message.author.id}) dans <#${message.channel.id}> — punition : ${config.punishment}.`
+        );
 
         cache.delete(userId);
 
