@@ -88,18 +88,22 @@ function buildComponents(moduleId, config) {
         new ButtonBuilder()
             .setCustomId("panel_toggle")
             .setLabel(config.enabled ? "Désactiver" : "Activer")
+            .setEmoji(config.enabled ? { id: "1531500833785516213" } : { id: "1531500779586981949" })
             .setStyle(config.enabled ? ButtonStyle.Danger : ButtonStyle.Success),
         new ButtonBuilder()
             .setCustomId("panel_logs")
             .setLabel("Logs")
+            .setEmoji({ id: "1531503528219119727" })
             .setStyle(ButtonStyle.Secondary),
         new ButtonBuilder()
             .setCustomId("panel_salon")
             .setLabel("Salon")
+            .setEmoji({ id: "1531503587589623880" })
             .setStyle(ButtonStyle.Primary),
         new ButtonBuilder()
             .setCustomId("panel_close")
             .setLabel("Fermer")
+            .setEmoji({ id: "1531503556274688123" })
             .setStyle(ButtonStyle.Secondary)
     );
 
