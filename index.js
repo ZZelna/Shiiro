@@ -36,6 +36,7 @@ const GlobalBlacklist = require("./models/GlobalBlacklist");
 const VoiceStats = require("./models/VoiceStats");
 const AutoRole = require("./models/AutoRole");
 const handleCustomRoleGrant = require("./systems/customRoleGrant");
+const { getShieldConfig } = require("./systems/shieldConfig");
 
 const config = require("./config.json");
 
@@ -605,12 +606,16 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
         ? await newMember.guild.members.fetch(moderatorId).catch(() => null)
         : null;
 
+    const roleRemoveConfig = await getShieldConfig(newMember.guild.id, "roleRemove");
+    const roleAddConfig = await getShieldConfig(newMember.guild.id, "roleAdd");
+
     // ───── Rôles retirés ─────
 
     const removedRoles = oldMember.roles.cache.filter(
         role => !newMember.roles.cache.has(role.id)
     );
 
+    if (roleRemoveConfig.enabled)
     for (const role of removedRoles.values()) {
         snapshotRemoveMember(role.id, newMember.id);
 
@@ -707,6 +712,7 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
         role => !oldMember.roles.cache.has(role.id)
     );
 
+    if (roleAddConfig.enabled)
     for (const role of addedRoles.values()) {
         snapshotAddMember(role.id, newMember.id);
 
@@ -819,6 +825,9 @@ setInterval(async () => {
 
 client.on("roleCreate", async (role) => {
     try {
+        const shieldConfig = await getShieldConfig(role.guild.id, "roleCreate");
+        if (!shieldConfig.enabled) return;
+
         const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
         if (!logGuild) return;
 
@@ -899,6 +908,9 @@ client.on("roleCreate", async (role) => {
 
 client.on("roleDelete", async (role) => {
     try {
+        const shieldConfig = await getShieldConfig(role.guild.id, "roleDelete");
+        if (!shieldConfig.enabled) return;
+
         const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
         if (!logGuild) return;
 
@@ -1019,6 +1031,9 @@ client.on("roleUpdate", async (oldRole, newRole) => {
     try {
         if (oldRole.position === newRole.position) return;
 
+        const shieldConfig = await getShieldConfig(newRole.guild.id, "roleMove");
+        if (!shieldConfig.enabled) return;
+
         const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
         if (!logGuild) return;
 
@@ -1107,6 +1122,9 @@ client.on("channelCreate", async (channel) => {
     if (!channel.guild) return;
     if (channel.guild.id !== GUILD_ID) return;
 
+    const shieldConfig = await getShieldConfig(channel.guild.id, "channelCreate");
+    if (!shieldConfig.enabled) return;
+
     const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
 
@@ -1177,6 +1195,9 @@ client.on("channelCreate", async (channel) => {
 client.on("channelDelete", async (channel) => {
     if (!channel.guild) return;
     if (channel.guild.id !== GUILD_ID) return;
+
+    const shieldConfig = await getShieldConfig(channel.guild.id, "channelDelete");
+    if (!shieldConfig.enabled) return;
 
     const logGuild = client.guilds.cache.get(LOG_GUILD_ID);
     if (!logGuild) return;
