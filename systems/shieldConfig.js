@@ -67,4 +67,13 @@ async function isBypassed(member, config) {
         || config.ignoredRoles.includes(member.id);
 }
 
-module.exports = { getShieldConfig, updateShieldConfig, isBypassed };
+// Envoie un message dans le salon de logs configuré pour ce module
+// (si un salon a été défini via /panel et qu'il existe toujours).
+async function sendModuleLog(guild, config, content) {
+    if (!config.logsChannel) return;
+    const logChannel = guild.channels.cache.get(config.logsChannel);
+    if (!logChannel) return;
+    await logChannel.send({ content }).catch(() => {});
+}
+
+module.exports = { getShieldConfig, updateShieldConfig, isBypassed, sendModuleLog };
