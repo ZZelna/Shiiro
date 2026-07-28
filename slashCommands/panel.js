@@ -10,6 +10,8 @@ const {
     ChannelType,
     ContainerBuilder,
     TextDisplayBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
     MessageFlags
 } = require("discord.js");
 
@@ -22,16 +24,16 @@ const COLORS = require("../config/colors").panel;
 const ALLOWED_PANEL_ROLES = ["1506674274826584284"];
 
 const MODULES = [
-    { id: "antiSpam", label: "Message contenant du spam" },
-    { id: "antiLink", label: "Message contenant des liens" },
-    { id: "antiToxic", label: "Message contenant un taux de toxicité" },
-    { id: "roleAdd", label: "Ajout de rôle" },
-    { id: "roleRemove", label: "Enlever un rôle" },
-    { id: "roleCreate", label: "Création de rôle" },
-    { id: "roleDelete", label: "Suppression de rôle" },
-    { id: "roleMove", label: "Déplacement de rôle" },
-    { id: "channelCreate", label: "Création de salon" },
-    { id: "channelDelete", label: "Suppression de salon" }
+    { id: "antiSpam", label: "Message contenant du spam", icon: "🚫" },
+    { id: "antiLink", label: "Message contenant des liens", icon: "🔗" },
+    { id: "antiToxic", label: "Message contenant un taux de toxicité", icon: "☣️" },
+    { id: "roleAdd", label: "Ajout de rôle", icon: "➕" },
+    { id: "roleRemove", label: "Enlever un rôle", icon: "➖" },
+    { id: "roleCreate", label: "Création de rôle", icon: "✨" },
+    { id: "roleDelete", label: "Suppression de rôle", icon: "🗑️" },
+    { id: "roleMove", label: "Déplacement de rôle", icon: "↕️" },
+    { id: "channelCreate", label: "Création de salon", icon: "📁" },
+    { id: "channelDelete", label: "Suppression de salon", icon: "📂" }
 ];
 
 const PUNISHMENTS = [
@@ -52,7 +54,7 @@ const PANEL_TIMEOUT_MS = 180_000;
 
 // ─── Container V2 (remplace l'embed du haut) ─────────────────────────────────
 
-function buildContainer(moduleLabel, config) {
+function buildContainer(module, config) {
     const punishmentLabel = PUNISHMENTS.find(p => p.value === config.punishment)?.label || config.punishment;
 
     const statusLines = [
@@ -63,17 +65,24 @@ function buildContainer(moduleLabel, config) {
         `Salon: ${config.ignoredChannels.length ? "✅" : "🔒"}`
     ];
 
+    const container = new ContainerBuilder()
+        .setAccentColor(config.enabled ? COLORS.enabled : COLORS.disabled)
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent(`### ${module.icon} ${module.label}`))
+        .addSeparatorComponents(new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small).setDivider(true))
+        .addTextDisplayComponents(new TextDisplayBuilder().setContent("```\n" + statusLines.join("\n") + "\n```"));
+
     if (config.ignoredRoles.length) {
-        statusLines.push("", "Rôles exemptés:", ...config.ignoredRoles.map(id => `    • <@&${id}>`));
+        container.addTextDisplayComponents(
+            new TextDisplayBuilder().setContent(
+                `**Rôles exemptés**\n${config.ignoredRoles.map(id => `> <@&${id}>`).join("\n")}`
+            )
+        );
     }
 
-    return new ContainerBuilder()
-        .setAccentColor(config.enabled ? COLORS.enabled : COLORS.disabled)
-        .addTextDisplayComponents(new TextDisplayBuilder().setContent(`**• ${moduleLabel}**`))
-        .addTextDisplayComponents(new TextDisplayBuilder().setContent("```\n" + statusLines.join("\n") + "\n```"));
+    return container;
 }
 
-function buildComponents(moduleId, config, permissionCounts) {
+function buildComponents(moduleId, config, permissionCounts, moduleStates) {
     const moduleSelect = new StringSelectMenuBuilder()
         .setCustomId("panel_module_select")
         .setPlaceholder("Choisis le module que tu souhaites configurer.")
@@ -81,6 +90,7 @@ function buildComponents(moduleId, config, permissionCounts) {
             MODULES.map(m => ({
                 label: m.label,
                 value: m.id,
+                emoji: { id: moduleStates[m.id] ? EMOJIS.enabled : EMOJIS.disabled },
                 default: m.id === moduleId
             }))
         );
@@ -158,13 +168,23 @@ function buildComponents(moduleId, config, permissionCounts) {
 }
 
 async function renderPanel(interaction, moduleId) {
-    const moduleLabel = MODULES.find(m => m.id === moduleId).label;
+    const module = MODULES.find(m => m.id === moduleId);
     const config = await getShieldConfig(interaction.guild.id, moduleId);
     const permissionList = await getPermissionList(interaction.guild.id);
     const permissionCounts = { owners: permissionList.owners.length, whitelist: permissionList.whitelist.length };
 
+    // État de chaque module, pour afficher l'icône verte/rouge dans le select.
+    const moduleStates = {};
+    await Promise.all(
+        MODULES.map(async m => {
+            moduleStates[m.id] = m.id === moduleId
+                ? config.enabled
+                : (await getShieldConfig(interaction.guild.id, m.id)).enabled;
+        })
+    );
+
     return {
-        components: [buildContainer(moduleLabel, config), ...buildComponents(moduleId, config, permissionCounts)],
+        components: [buildContainer(module, config), ...buildComponents(moduleId, config, permissionCounts, moduleStates)],
         flags: MessageFlags.IsComponentsV2
     };
 }
