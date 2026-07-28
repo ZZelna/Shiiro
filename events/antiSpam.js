@@ -1,4 +1,4 @@
-const ShieldConfig = require("../models/ShieldConfig");
+const { getShieldConfig } = require("../systems/shieldConfig");
 
 const cache = new Map();
 
@@ -7,9 +7,7 @@ module.exports = async (message) => {
     if (!message.guild) return;
     if (message.author.bot) return;
 
-    const config = await ShieldConfig.findOne({
-        guildId: message.guild.id
-    });
+    const config = await getShieldConfig(message.guild.id, "antiSpam");
 
     if (!config?.enabled) return;
 
