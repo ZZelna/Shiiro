@@ -1,4 +1,4 @@
-const { getShieldConfig, isBypassed } = require("../systems/shieldConfig");
+const { getShieldConfig, isBypassed, sendModuleLog } = require("../systems/shieldConfig");
 
 const warnings = new Map();
 
@@ -139,5 +139,11 @@ console.log("Détecté :", detected);
     setTimeout(() => {
         warn.delete().catch(() => {});
     }, 5000);
+
+    await sendModuleLog(
+        message.guild,
+        config,
+        `⚠️ **Langage interdit détecté** — ${message.author.tag} (${message.author.id}) dans <#${message.channel.id}> — avertissement n°${warnCount} — punition : ${config.punishment}.`
+    );
 
 };
