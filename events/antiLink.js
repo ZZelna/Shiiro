@@ -1,4 +1,4 @@
-const { getShieldConfig } = require("../systems/shieldConfig");
+const { getShieldConfig, isBypassed } = require("../systems/shieldConfig");
 
 module.exports = async (message) => {
 
@@ -17,6 +17,9 @@ module.exports = async (message) => {
     return;
 
     if (config.ignoredChannels.includes(message.channel.id))
+        return;
+
+    if (await isBypassed(message.member, config))
         return;
 
     if (
