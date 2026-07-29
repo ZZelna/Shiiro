@@ -1,65 +1,31 @@
-const fs = require("fs");
-const path = require("path");
+const Jail = require("../../models/Jail");
 
-const JAIL_FILE = path.join(__dirname, "..", "data", "jail.json");
-
-function ensureFile() {
-    const dir = path.dirname(JAIL_FILE);
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-    if (!fs.existsSync(JAIL_FILE)) fs.writeFileSync(JAIL_FILE, "{}");
+async function isJailed(userId) {
+    const entry = await Jail.findOne({ userId });
+    return Boolean(entry);
 }
 
-function loadJail() {
-    ensureFile();
-    try {
-        const raw = fs.readFileSync(JAIL_FILE, "utf8");
-        return JSON.parse(raw || "{}");
-    } catch {
-        return {};
-    }
+async function getJailEntry(userId) {
+    return Jail.findOne({ userId });
 }
 
-function saveJail(data) {
-    ensureFile();
-    fs.writeFileSync(JAIL_FILE, JSON.stringify(data, null, 4));
+async function setJailEntry(userId, entry) {
+    return Jail.findOneAndUpdate(
+        { userId },
+        { userId, ...entry },
+        { upsert: true, new: true }
+    );
 }
 
-function isJailed(userId) {
-    const data = loadJail();
-    return Boolean(data[userId]);
+async function updateJailEntry(userId, partial) {
+    return Jail.findOneAndUpdate({ userId }, partial, { new: true });
 }
 
-function getJailEntry(userId) {
-    const data = loadJail();
-    return data[userId] || null;
-}
-
-function setJailEntry(userId, entry) {
-    const data = loadJail();
-    data[userId] = entry;
-    saveJail(data);
-}
-
-function updateJailEntry(userId, partial) {
-    const data = loadJail();
-    if (!data[userId]) return null;
-    data[userId] = { ...data[userId], ...partial };
-    saveJail(data);
-    return data[userId];
-}
-
-function deleteJailEntry(userId) {
-    const data = loadJail();
-    if (!data[userId]) return null;
-    const entry = data[userId];
-    delete data[userId];
-    saveJail(data);
-    return entry;
+async function deleteJailEntry(userId) {
+    return Jail.findOneAndDelete({ userId });
 }
 
 module.exports = {
-    loadJail,
-    saveJail,
     isJailed,
     getJailEntry,
     setJailEntry,
