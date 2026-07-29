@@ -12,7 +12,7 @@ module.exports = {
         // ───── LOGS MESSAGES ─────
         messages: "1519366440375812246",
         messageUpdates: "1530310047756714155",
-        messageDeletes: "1530310172897972325k",
+        messageDeletes: "1530310172897972325",
         ghostPings: "1530351152531505172",
 
         // ───── LOGS RÔLES ─────
