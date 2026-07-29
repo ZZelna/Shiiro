@@ -60,7 +60,7 @@ module.exports = {
         // =========================
         // DÉJÀ EN SECUREJAIL ?
         // =========================
-        if (isJailed(target.id) || target.roles.cache.has(JAIL_ROLE_ID)) {
+        if ((await isJailed(target.id)) || target.roles.cache.has(JAIL_ROLE_ID)) {
             return interaction.reply({
                 content: "❌ Ce membre est déjà en SecureJail.",
                 ephemeral: true
@@ -97,7 +97,7 @@ module.exports = {
             .filter(r => r.managed)
             .map(r => r.id);
 
-        setJailEntry(target.id, {
+        await setJailEntry(target.id, {
             roles: savedRoles,
             date: new Date().toISOString(),
             moderatorId: interaction.user.id,
@@ -156,7 +156,7 @@ module.exports = {
             });
         }
 
-        updateJailEntry(target.id, { channelId: jailChannel.id });
+        await updateJailEntry(target.id, { channelId: jailChannel.id });
 
         // =========================
         // MESSAGE DANS LE SALON (V2 — user-facing)
@@ -189,7 +189,7 @@ module.exports = {
         // =========================
         const logContent = logBuilder.build("Membre placé en SecureJail", [
             logBuilder.member(target),
-            `👮 Modérateur : ${interaction.user.tag} (${interaction.user.id})`,
+            `🛡️ Modérateur : ${interaction.user.tag} (${interaction.user.id})`,
             `📋 Raison     : ${reason}`,
             logBuilder.channel(jailChannel),
             `🗂️ Rôles sauvegardés : ${savedRoles.length}`
