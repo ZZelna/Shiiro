@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { isJailed, getJailEntry, deleteJailEntry } = require("../../utils/managers/jailStorage");
-const logger = require("../../utils/logger");
-const logBuilder = require("../../utils/logBuilder");
+const logger = require("../utils/logger");
+const logBuilder = require("../utils/logBuilder");
 const logTypes = require("../utils/logTypes");
 
 const MOD_ROLES = ["1517238655444451520", "1506674274826584284"];
