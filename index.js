@@ -422,52 +422,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log("✅ MongoDB connecté !"))
     .catch(err => console.error("❌ Erreur MongoDB :", err));
 
-// ─── Unjail automatique ───────────────────────────────────────────────────────
 
-const jailData = require("./data/jail.json");
-
-setInterval(async () => {
-    if (!jailData.users) return;
-
-    const guild = client.guilds.cache.get(GUILD_ID);
-    if (!guild) return;
-
-    for (const userId of Object.keys(jailData.users)) {
-        const jailInfo = jailData.users[userId];
-        if (!jailInfo.endTime || Date.now() < jailInfo.endTime) continue;
-
-        try {
-            const member = await guild.members.fetch(userId);
-            await member.roles.remove(JAIL_ROLE_ID);
-
-            if (jailInfo.roles && jailInfo.roles.length) {
-                await member.roles.add(jailInfo.roles);
-            }
-
-            const logChannel = guild.channels.cache.get(UNJAIL_LOG_CHANNEL_ID);
-            if (logChannel) {
-                const embed = new EmbedBuilder()
-                    .setColor("#00ff00")
-                    .setTitle("🔓 Unjail")
-                    .setDescription(`${member} a été libéré automatiquement`)
-                    .setTimestamp();
-                logChannel.send({ embeds: [embed] });
-            }
-
-            delete jailData.users[userId];
-            // ⚡ écriture asynchrone (non bloquante) plutôt que writeFileSync
-            fs.writeFile(
-                path.join(__dirname, "./data/jail.json"),
-                JSON.stringify(jailData, null, 4),
-                (err) => { if (err) console.error("❌ Erreur écriture jail.json :", err); }
-            );
-
-            console.log(`✅ Jail terminé pour ${member.user.tag}`);
-        } catch (err) {
-            console.log(`❌ Erreur unjail ${userId}`, err);
-        }
-    }
-}, JAIL_CHECK_INTERVAL_MS);
 
 // ─── Giveaway automatique ─────────────────────────────────────────────────────
 
