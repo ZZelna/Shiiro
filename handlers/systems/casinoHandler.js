@@ -11,12 +11,12 @@ const {
     SeparatorSpacingSize,
     MessageFlags
 } = require("discord.js");
-const CasinoProfile = require("../models/CasinoProfile");
-const Clan = require("../models/Clan");
-const colors = require("../utils/colors");
-const logger = require("../utils/logger");
-const logBuilder = require("../utils/logBuilder");
-const logTypes = require("../utils/logTypes");
+const CasinoProfile = require("../../models/CasinoProfile");
+const Clan = require("../../models/Clan");
+const colors = require("../../utils/colors");
+const logger = require("../../utils/logger");
+const logBuilder = require("../../utils/logBuilder");
+const logTypes = require("../../utils/logTypes");
 
 const LOGS_CASINO = "1520766436388245585";
 
