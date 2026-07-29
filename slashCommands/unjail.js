@@ -32,7 +32,7 @@ module.exports = {
 
         const targetUser = interaction.options.getUser("membre");
 
-        if (!isJailed(targetUser.id)) {
+        if (!(await isJailed(targetUser.id))) {
             return interaction.reply({
                 content: "❌ Ce membre n'est pas en SecureJail.",
                 ephemeral: true
@@ -41,7 +41,7 @@ module.exports = {
 
         await interaction.deferReply({ ephemeral: true });
 
-        const entry = getJailEntry(targetUser.id);
+        const entry = await getJailEntry(targetUser.id);
 
         // =========================
         // RESTAURATION DES RÔLES
@@ -83,7 +83,7 @@ module.exports = {
         // =========================
         // NETTOYAGE jail.json
         // =========================
-        deleteJailEntry(targetUser.id);
+        await deleteJailEntry(targetUser.id);
 
         // =========================
         // LOGS
