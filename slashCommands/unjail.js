@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
-const { isJailed, getJailEntry, deleteJailEntry } = require("../../utils/managers/jailStorage");
+const { isJailed, getJailEntry, deleteJailEntry } = require("../utils/managers/jailStorage");
 const logger = require("../utils/logger");
 const logBuilder = require("../utils/logBuilder");
 const logTypes = require("../utils/logTypes");
