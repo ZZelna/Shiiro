@@ -1,8 +1,56 @@
-const { EmbedBuilder } = require("discord.js");
-const CasinoProfile = require("../../models/CasinoProfile");
-const Clan = require("../../models/Clan");
+const {
+    EmbedBuilder,
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle,
+    ContainerBuilder,
+    SectionBuilder,
+    TextDisplayBuilder,
+    ThumbnailBuilder,
+    SeparatorBuilder,
+    SeparatorSpacingSize,
+    MessageFlags
+} = require("discord.js");
+const CasinoProfile = require("../models/CasinoProfile");
+const Clan = require("../models/Clan");
+const colors = require("../utils/colors");
+const logger = require("../utils/logger");
+const logBuilder = require("../utils/logBuilder");
+const logTypes = require("../utils/logTypes");
 
 const LOGS_CASINO = "1520766436388245585";
+
+const GIFT_IMAGE =
+    "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png";
+
+// Couleur d'accent du container selon la rareté du lot obtenu
+const RARITY_COLORS = {
+    "Commun": colors.DEFAULT,
+    "Rare": colors.CHANNEL,
+    "Épique": colors.SERVER,
+    "Légendaire": colors.ROLE
+};
+
+const GIFT_REWARDS = [
+    { chance: 20, roleId: "1519383713014878279", name: "🔊 Perm VOC Chat", rarity: "Commun" },
+    { chance: 15, roleId: "1519633537156907088", name: "🖼️ Perm Pic", rarity: "Commun" },
+    { chance: 15, roleId: "1519633572850438225", name: "🎨 Perm Banner", rarity: "Commun" },
+    { chance: 10, roleId: "1523705733567479909", name: "✨ Perm Animation", rarity: "Rare" },
+    { chance: 10, roleId: "1513950039289106502", name: "✏️ Perm Rename", rarity: "Rare" },
+    { chance: 15, roleId: "1519383437419610332", name: "💴 50 000 ¥", rarity: "Commun" },
+    { chance: 8, roleId: "1519383482113982474", name: "💴 100 000 ¥", rarity: "Épique" },
+    { chance: 4, roleId: "1519383516658405456", name: "💴 250 000 ¥", rarity: "Épique" },
+    { chance: 2, roleId: "1519383549223108618", name: "💴 500 000 ¥", rarity: "Légendaire" },
+    { chance: 1, roleId: "1519383582198464593", name: "💴 1 000 000 ¥", rarity: "Légendaire" }
+];
+
+const GIFT_YENS_ROLE_IDS = [
+    "1519383437419610332",
+    "1519383482113982474",
+    "1519383516658405456",
+    "1519383549223108618",
+    "1519383582198464593"
+];
 
 module.exports = async function handleCasinoInteraction(interaction) {
 
@@ -72,26 +120,14 @@ module.exports = async function handleCasinoInteraction(interaction) {
         }
 
         profile.gifts -= 1;
+        profile.giftsOpened = (profile.giftsOpened || 0) + 1;
         await profile.save();
-
-        const rewards = [
-            { chance: 20, roleId: "1519383713014878279", name: "🔊 Perm VOC Chat" },
-            { chance: 15, roleId: "1519633537156907088", name: "🖼️ Perm Pic" },
-            { chance: 15, roleId: "1519633572850438225", name: "🎨 Perm Banner" },
-            { chance: 10, roleId: "1523705733567479909", name: "✨ Perm Animation" },
-            { chance: 10, roleId: "1513950039289106502", name: "✏️ Perm Rename" },
-            { chance: 15, roleId: "1519383437419610332", name: "💴 50 000 ¥" },
-            { chance: 8, roleId: "1519383482113982474", name: "💴 100 000 ¥" },
-            { chance: 4, roleId: "1519383516658405456", name: "💴 250 000 ¥" },
-            { chance: 2, roleId: "1519383549223108618", name: "💴 500 000 ¥" },
-            { chance: 1, roleId: "1519383582198464593", name: "💴 1 000 000 ¥" }
-        ];
 
         let roll = Math.random() * 100;
         let cumulative = 0;
         let reward = null;
 
-        for (const item of rewards) {
+        for (const item of GIFT_REWARDS) {
             cumulative += item.chance;
             if (roll <= cumulative) {
                 reward = item;
@@ -101,7 +137,7 @@ module.exports = async function handleCasinoInteraction(interaction) {
 
         const role = interaction.guild.roles.cache.get(reward.roleId);
 
-        let rewardText = reward.name;
+        let resultLine = reward.name;
         let logAction = "";
 
         if (role && interaction.member.roles.cache.has(role.id)) {
@@ -109,8 +145,8 @@ module.exports = async function handleCasinoInteraction(interaction) {
             profile.yens += 5000;
             await profile.save();
 
-            rewardText = `${reward.name}\n\n💰 Récompense déjà possédée\n➜ Compensation : 5 000 ¥`;
-            logAction = `Récompense déjà possédée — Compensation : 5 000 ¥`;
+            resultLine = `${reward.name}\n\n💰 Récompense déjà possédée\n➜ Compensation : 5 000 ¥`;
+            logAction = "Récompense déjà possédée — Compensation : 5 000 ¥";
 
             await interaction.channel.send({
                 content: `<@&1506709088451690708> <@&1506674274826584284>\n\n⚠️ ${interaction.user} possédait déjà **${reward.name}**.\n\n💰 Une compensation de **5 000 ¥** lui a été accordée.`
@@ -120,15 +156,7 @@ module.exports = async function handleCasinoInteraction(interaction) {
 
             await interaction.member.roles.add(role);
 
-            const yensRoles = [
-                "1519383437419610332",
-                "1519383482113982474",
-                "1519383516658405456",
-                "1519383549223108618",
-                "1519383582198464593"
-            ];
-
-            if (yensRoles.includes(role.id)) {
+            if (GIFT_YENS_ROLE_IDS.includes(role.id)) {
                 await interaction.channel.send({
                     content: `<@&1506709088451690708> <@&1506674274826584284>\n\n🎁 ${interaction.user} a obtenu **${reward.name}**.`
                 });
@@ -137,35 +165,63 @@ module.exports = async function handleCasinoInteraction(interaction) {
             logAction = "Rôle attribué.";
         }
 
-        const resultEmbed = new EmbedBuilder()
-            .setColor("Gold")
-            .setTitle("🎁 Cadeau Ouvert")
-            .setDescription(rewardText)
-            .addFields({
-                name: "🎁 Gifts restants",
-                value: `${profile.gifts}`,
-                inline: true
-            })
-            .setImage(
-                "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
+        // =========================
+        // COMPOSANT RÉSULTAT (V2)
+        // =========================
+        const accentColor = RARITY_COLORS[reward.rarity] || colors.CASINO;
+
+        const resultContainer = new ContainerBuilder()
+            .setAccentColor(accentColor)
+            .addSectionComponents(
+                new SectionBuilder()
+                    .addTextDisplayComponents(
+                        new TextDisplayBuilder().setContent(
+                            `### 🎁 Cadeau Ouvert\n` +
+                            `**Rareté :** ${reward.rarity}\n\n` +
+                            `${resultLine}`
+                        )
+                    )
+                    .setThumbnailAccessory(
+                        new ThumbnailBuilder().setURL(GIFT_IMAGE)
+                    )
+            )
+            .addSeparatorComponents(
+                new SeparatorBuilder().setSpacing(SeparatorSpacingSize.Small)
+            )
+            .addTextDisplayComponents(
+                new TextDisplayBuilder().setContent(
+                    `🎁 Gifts restants : **${profile.gifts}**\n` +
+                    `📦 Gifts ouverts au total : **${profile.giftsOpened}**`
+                )
             );
+
+        // Chaîne d'ouverture : bouton direct si le membre a encore des Gifts
+        if (profile.gifts > 0) {
+            resultContainer.addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+                    new ButtonBuilder()
+                        .setCustomId(`gift_open_${interaction.user.id}`)
+                        .setLabel("Ouvrir un autre Gift")
+                        .setEmoji("🎁")
+                        .setStyle(ButtonStyle.Success)
+                )
+            );
+        }
 
         await interaction.update({
-            embeds: [resultEmbed],
-            components: []
+            components: [resultContainer],
+            flags: MessageFlags.IsComponentsV2
         });
 
-        try {
-            const logsGuild = interaction.client.guilds.cache.find(g =>
-                g.channels.cache.has(LOGS_CASINO)
-            );
-            const logsChannel = logsGuild?.channels.cache.get(LOGS_CASINO);
-            if (logsChannel) {
-                await logsChannel.send({
-                    content: `\`\`\`- Gift ouvert.\nUtilisateur: ${interaction.user.username} (ID: ${interaction.user.id})\nRécompense: ${reward.name}\nAction: ${logAction}\nGifts restants: ${profile.gifts}\`\`\``
-                });
-            }
-        } catch {}
+        const logContent = logBuilder.build("Gift ouvert", [
+            `👤 Utilisateur : ${interaction.user.tag} (${interaction.user.id})`,
+            `🎁 Récompense   : ${reward.name} (${reward.rarity})`,
+            `📋 Action       : ${logAction || "Aucune action supplémentaire."}`,
+            `🎁 Gifts restants : ${profile.gifts}`,
+            `📦 Total ouverts  : ${profile.giftsOpened}`
+        ]);
+
+        await logger.send(interaction.client, logTypes.CASINO, logContent);
         return;
     }
 
