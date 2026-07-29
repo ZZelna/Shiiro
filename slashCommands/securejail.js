@@ -8,7 +8,7 @@ const {
     SeparatorSpacingSize,
     MessageFlags
 } = require("discord.js");
-const { isJailed, setJailEntry, updateJailEntry } = require("../../utils/managers/jailStorage");
+const { isJailed, setJailEntry, updateJailEntry } = require("../utils/managers/jailStorage");
 const logger = require("../../utils/logger");
 const logBuilder = require("../../utils/logBuilder");
 const logTypes = require("../../utils/logTypes");
