@@ -16,7 +16,7 @@ const colors = require("../utils/colors");
 
 const MOD_ROLES = ["1517238655444451520", "1506674274826584284"];
 const JAIL_ROLE_ID = "1508842233619677306";
-const JAIL_CATEGORY_ID = "1519335515797586160";
+const JAIL_CATEGORY_ID = "1532095120688812152";
 
 module.exports = {
     data: new SlashCommandBuilder()
