@@ -1,58 +1,69 @@
 const {
-   SlashCommandBuilder,
-   EmbedBuilder,
-   ActionRowBuilder,
-   ButtonBuilder,
-   ButtonStyle
+    SlashCommandBuilder,
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle,
+    ContainerBuilder,
+    SectionBuilder,
+    TextDisplayBuilder,
+    ThumbnailBuilder,
+    MessageFlags
 } = require("discord.js");
 
 const CasinoProfile = require("../models/CasinoProfile");
-
-const LOGS_CASINO = "1520766436388245585";
+const colors = require("../utils/colors");
 
 module.exports = {
-   data: new SlashCommandBuilder()
-       .setName("gift")
-       .setDescription("Ouvrir un cadeau aléatoire"),
+    data: new SlashCommandBuilder()
+        .setName("gift")
+        .setDescription("Ouvrir un cadeau aléatoire"),
 
-   async execute(interaction) {
+    async execute(interaction) {
 
-       const profile = await CasinoProfile.findOne({
-           userId: interaction.user.id
-       });
+        const profile = await CasinoProfile.findOne({
+            userId: interaction.user.id
+        });
 
-       if (!profile || profile.gifts <= 0) {
-           return interaction.reply({
-               content: "❌ Tu ne possèdes aucun Gift.",
-               ephemeral: true
-           });
-       }
+        if (!profile || profile.gifts <= 0) {
+            return interaction.reply({
+                content: "❌ Tu ne possèdes aucun Gift.",
+                ephemeral: true
+            });
+        }
 
-       const embed = new EmbedBuilder()
-           .setColor("Gold")
-           .setTitle("🎁 Gift Casino")
-           .setDescription(
-               `Tu possèdes actuellement **${profile.gifts} Gift(s)**.\n\nClique sur **Ouvrir** pour découvrir ta récompense.`
-           )
-           .setImage(
-               "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
-           );
+        const giftContainer = new ContainerBuilder()
+            .setAccentColor(colors.CASINO)
+            .addSectionComponents(
+                new SectionBuilder()
+                    .addTextDisplayComponents(
+                        new TextDisplayBuilder().setContent(
+                            `### 🎁 Gift Casino\n` +
+                            `Tu possèdes actuellement **${profile.gifts} Gift(s)**.\n` +
+                            `Clique sur **Ouvrir** pour découvrir ta récompense.`
+                        )
+                    )
+                    .setThumbnailAccessory(
+                        new ThumbnailBuilder().setURL(
+                            "https://cdn.discordapp.com/attachments/1516128872243134696/1519637866391797790/IMG_8903.png"
+                        )
+                    )
+            )
+            .addActionRowComponents(
+                new ActionRowBuilder().addComponents(
+                    new ButtonBuilder()
+                        .setCustomId(`gift_open_${interaction.user.id}`)
+                        .setLabel("Ouvrir")
+                        .setEmoji("🎁")
+                        .setStyle(ButtonStyle.Success)
+                )
+            );
 
-       const row = new ActionRowBuilder()
-           .addComponents(
-               new ButtonBuilder()
-                   .setCustomId(`gift_open_${interaction.user.id}`)
-                   .setLabel("Ouvrir")
-                   .setEmoji("🎁")
-                   .setStyle(ButtonStyle.Success)
-           );
+        await interaction.reply({
+            components: [giftContainer],
+            flags: MessageFlags.IsComponentsV2
+        });
 
-       await interaction.reply({
-           embeds: [embed],
-           components: [row]
-       });
-
-       // Le log se fait au moment de l'ouverture du gift, pas ici
-       // Cherche le handler du bouton "gift_open_" pour y ajouter le log
-   }
+        // Le log se fait au moment de l'ouverture du gift, pas ici
+        // Cherche le handler du bouton "gift_open_" pour y ajouter le log
+    }
 };
