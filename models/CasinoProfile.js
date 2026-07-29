@@ -12,6 +12,10 @@ module.exports = mongoose.model(
       type: Number,
       default: 0
     },
+    giftsOpened: {
+      type: Number,
+      default: 0
+    },
     boostMultiplier: {
       type: Number,
       default: 1
