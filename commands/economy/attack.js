@@ -4,7 +4,7 @@ const {
 
 const CasinoProfile = require("../../models/CasinoProfile");
 const Coffre = require("../../models/Coffre");
-const { getCasinoChannel } = require("../../utils/managers/casinoChannelManager");
+const { getCasinoChannels } = require("../../utils/managers/casinoChannelManager");
 
 const COOLDOWN = 30 * 60 * 1000;
 const MAX_HITS = 10000;
@@ -22,17 +22,17 @@ module.exports = {
 
     async run(message) {
 
-        const allowedChannelId = await getCasinoChannel(message.guild.id);
+        const allowedChannelIds = await getCasinoChannels(message.guild.id);
 
-        if (!allowedChannelId) {
+        if (!allowedChannelIds.length) {
             return message.reply(
                 "❌ Aucun salon casino n'est configuré. Un modérateur doit utiliser **/casinosalon**."
             );
         }
 
-        if (message.channel.id !== allowedChannelId) {
+        if (!allowedChannelIds.includes(message.channel.id)) {
             return message.reply(
-                `❌ Cette commande est uniquement utilisable dans <#${allowedChannelId}>.`
+                `❌ Cette commande est uniquement utilisable dans : ${allowedChannelIds.map(id => `<#${id}>`).join(", ")}`
             );
         }
 
