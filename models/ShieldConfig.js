@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-// Réglages d'un module individuel (antiSpam / antiLink / antiToxic).
+// Réglages d'un module individuel (antiSpam / antiLink / antiToxic / ...).
 const ModuleSettingsSchema = new mongoose.Schema({
     enabled: { type: Boolean, default: true },
     ignoredChannels: { type: [String], default: [] },
@@ -12,7 +12,11 @@ const ModuleSettingsSchema = new mongoose.Schema({
 
     // ⚡ Exemptions basées sur les listes globales (voir models/PermissionList.js)
     exemptOwners: { type: Boolean, default: false },
-    exemptWhitelist: { type: Boolean, default: false }
+    exemptWhitelist: { type: Boolean, default: false },
+
+    // ⚡ Traçabilité de la dernière modification via /panel
+    lastEditedBy: { type: String, default: null },
+    lastEditedAt: { type: Date, default: null }
 }, { _id: false });
 
 // ⚡ Un seul document par guilde (même index guildId unique qu'avant),
@@ -25,7 +29,7 @@ const ShieldConfigSchema = new mongoose.Schema({
         unique: true
     },
 
-    // clé = moduleId ("antiSpam" | "antiLink" | "antiToxic"), valeur = ses réglages
+    // clé = moduleId ("antiSpam" | "antiLink" | "antiToxic" | ...), valeur = ses réglages
     modules: {
         type: Map,
         of: ModuleSettingsSchema,
