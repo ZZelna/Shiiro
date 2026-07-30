@@ -1,16 +1,16 @@
 const CasinoChannel = require("../../models/CasinoChannel");
 
-async function getCasinoChannel(guildId) {
+async function getCasinoChannels(guildId) {
     const doc = await CasinoChannel.findOne({ guildId });
-    return doc?.channelId || null;
+    return doc?.channelIds || [];
 }
 
-async function setCasinoChannel(guildId, channelId) {
+async function setCasinoChannels(guildId, channelIds) {
     return CasinoChannel.findOneAndUpdate(
         { guildId },
-        { guildId, channelId },
+        { guildId, channelIds },
         { upsert: true, new: true }
     );
 }
 
-module.exports = { getCasinoChannel, setCasinoChannel };
+module.exports = { getCasinoChannels, setCasinoChannels };
