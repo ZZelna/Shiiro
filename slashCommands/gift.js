@@ -12,6 +12,7 @@ const {
 
 const CasinoProfile = require("../models/CasinoProfile");
 const colors = require("../utils/colors");
+const { checkCasinoChannel } = require("../utils/guards/casinoChannelGuard");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -19,6 +20,8 @@ module.exports = {
         .setDescription("Ouvrir un cadeau aléatoire"),
 
     async execute(interaction) {
+
+        if (!(await checkCasinoChannel(interaction))) return;
 
         const profile = await CasinoProfile.findOne({
             userId: interaction.user.id
