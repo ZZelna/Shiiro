@@ -3,6 +3,7 @@ const {
 } = require("discord.js");
 
 const CasinoProfile = require("../../models/CasinoProfile");
+const { checkCasinoChannel } = require("../../utils/guards/casinoChannelGuard");
 
 const LOGS_CASINO = "1520766436388245585";
 
@@ -11,13 +12,7 @@ module.exports = {
 
     async run(message, args) {
 
-        const ALLOWED_CHANNEL = "1519055718416781412";
-
-        if (message.channel.id !== ALLOWED_CHANNEL) {
-            return message.reply(
-                "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>."
-            );
-        }
+        if (!(await checkCasinoChannel(message))) return;
 
         const target = message.mentions.users.first();
 
