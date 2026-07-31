@@ -4,6 +4,7 @@ const {
 } = require("discord.js");
 
 const CasinoProfile = require("../models/CasinoProfile");
+const { checkGameChannel } = require("../utils/guards/gameChannelGuard");
 
 const DAILY_LIMIT = 500000;
 
@@ -28,6 +29,9 @@ module.exports = {
    ),
 
  async execute(interaction) {
+
+   if (!(await checkGameChannel(interaction))) return;
+
    const side = interaction.options.getString("côté");
    const bet = interaction.options.getInteger("mise");
 
