@@ -1,26 +1,16 @@
 const {
-    SlashCommandBuilder,
     EmbedBuilder
 } = require("discord.js");
 
+const { checkCasinoChannel } = require("../../utils/guards/casinoChannelGuard");
+
 module.exports = {
 
-    data: new SlashCommandBuilder()
-        .setName("luck")
-        .setDescription(
-            "Affiche les probabilités des Gifts"
-        ),
+    name: "luck",
 
-    async execute(interaction) {
+    async run(message) {
 
-        const ALLOWED_CHANNEL = "1519055718416781412";
-
-        if (interaction.channelId !== ALLOWED_CHANNEL) {
-            return interaction.reply({
-                content: "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>.",
-                ephemeral: true
-            });
-        }
+        if (!(await checkCasinoChannel(message))) return;
 
         const embed =
             new EmbedBuilder()
@@ -56,9 +46,8 @@ module.exports = {
                 })
                 .setTimestamp();
 
-        return interaction.reply({
-            embeds: [embed],
-            ephemeral: true
+        return message.reply({
+            embeds: [embed]
         });
 
     }
