@@ -4,22 +4,17 @@ const {
 
 const CasinoProfile = require("../../models/CasinoProfile");
 const Bounty = require("../../models/Bounty");
+const { checkCasinoChannel } = require("../../utils/guards/casinoChannelGuard");
 
 const COOLDOWN = 30 * 60 * 1000;
-const LOGS_CASINO = "1519055718416781412";
+const LOGS_CASINO = "1531527921640935445";
 
 module.exports = {
     name: "rob",
 
     async run(message, args) {
 
-        const ALLOWED_CHANNEL = "1519055718416781412";
-
-        if (message.channel.id !== ALLOWED_CHANNEL) {
-            return message.reply(
-                "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>."
-            );
-        }
+        if (!(await checkCasinoChannel(message))) return;
 
         const target = message.mentions.users.first();
 
