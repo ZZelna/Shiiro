@@ -3,19 +3,14 @@ const {
 } = require("discord.js");
 
 const Clan = require("../../models/Clan");
+const { checkCasinoChannel } = require("../../utils/guards/casinoChannelGuard");
 
 module.exports = {
     name: "myclan",
 
     async run(message) {
 
-        const ALLOWED_CHANNEL = "1519055718416781412";
-
-        if (message.channel.id !== ALLOWED_CHANNEL) {
-            return message.reply(
-                "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>."
-            );
-        }
+        if (!(await checkCasinoChannel(message))) return;
 
         const clan = await Clan.findOne({
             members: message.author.id
