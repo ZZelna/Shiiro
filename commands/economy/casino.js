@@ -5,19 +5,14 @@ const {
 const CasinoProfile = require("../../models/CasinoProfile");
 const QuizProfile = require("../../models/QuizProfile");
 const { xpForLevel } = require("../../utils/quizEngine");
+const { checkCasinoChannel } = require("../../utils/guards/casinoChannelGuard");
 
 module.exports = {
     name: "casino",
 
     async run(message) {
 
-        const ALLOWED_CHANNEL = "1519055718416781412";
-
-        if (message.channel.id !== ALLOWED_CHANNEL) {
-            return message.reply(
-                "❌ Cette commande est uniquement utilisable dans <#1519055718416781412>."
-            );
-        }
+        if (!(await checkCasinoChannel(message))) return;
 
         const profile = await CasinoProfile.findOne({
             userId: message.author.id
