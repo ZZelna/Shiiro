@@ -9,12 +9,11 @@ const {
 } = require("discord.js");
 
 const CasinoProfile = require("../models/CasinoProfile");
+const { checkGameChannel } = require("../utils/guards/gameChannelGuard");
 
 //──────────────────────────────────────
 // Configuration
 //──────────────────────────────────────
-
-const ALLOWED_CHANNEL = "1523677940750225508";
 
 const DAILY_LIMIT = 500000;
 const MAX_BET = 25000;
@@ -299,15 +298,7 @@ module.exports = {
 
     async execute(interaction) {
 
-        if (interaction.channelId !== ALLOWED_CHANNEL) {
-
-            return interaction.reply({
-                content:
-                    `❌ Cette commande est uniquement utilisable dans <#${ALLOWED_CHANNEL}>.`,
-                ephemeral: true
-            });
-
-        }
+        if (!(await checkGameChannel(interaction))) return;
 
         const bet =
             interaction.options.getInteger("mise");
@@ -500,171 +491,176 @@ module.exports = {
 
             });
         //──────────────────────────────────────
-// Gestion des boutons
-//──────────────────────────────────────
+        // Gestion des boutons
+        //──────────────────────────────────────
 
-collector.on("collect", async i => {
+        collector.on("collect", async i => {
 
-    //──────────────
-    // Tirer
-    //──────────────
+            //──────────────
+            // Tirer
+            //──────────────
 
-    if (i.customId === "hit") {
+            if (i.customId === "hit") {
 
-        playerHand.push(drawCard());
+                playerHand.push(drawCard());
 
-        const value = getHandValue(playerHand);
+                const value = getHandValue(playerHand);
 
-        if (value > 21) {
+                if (value > 21) {
 
-            collector.stop("bust");
+                    collector.stop("bust");
 
-            user.yens -= currentBet;
-            user.dailyBet = alreadyBet + currentBet;
+                    user.yens -= currentBet;
+                    user.dailyBet = alreadyBet + currentBet;
 
-            await user.save();
+                    await user.save();
 
-            return i.update({
+                    return i.update({
 
-                components: [
+                        components: [
 
-                    buildContainer(
+                            buildContainer(
 
-                        COLORS.Red,
+                                COLORS.Red,
 
-                        "Bust !",
+                                "Bust !",
 
-                        `🧑 Ta main : ${handToString(playerHand)} — **${value}**\n\n` +
-                        `❌ Tu dépasses 21.\n` +
-                        `Tu perds **${currentBet.toLocaleString()} Yens**.\n\n` +
-                        `💴 Solde : **${user.yens.toLocaleString()} Yens**`
+                                `🧑 Ta main : ${handToString(playerHand)} — **${value}**\n\n` +
+                                `❌ Tu dépasses 21.\n` +
+                                `Tu perds **${currentBet.toLocaleString()} Yens**.\n\n` +
+                                `💴 Solde : **${user.yens.toLocaleString()} Yens**`
 
-                    )
+                            )
 
-                ],
+                        ],
 
-                flags: MessageFlags.IsComponentsV2
+                        flags: MessageFlags.IsComponentsV2
 
-            });
+                    });
 
-        }
+                }
 
-        return i.update({
+                return i.update({
 
-            components: [
+                    components: [
 
-                buildContainer(
+                        buildContainer(
 
-                    COLORS.Blue,
+                            COLORS.Blue,
 
-                    "Blackjack",
+                            "Blackjack",
 
-                    `🧑 Ta main : ${handToString(playerHand)} — **${value}**\n` +
-                    `🏦 Dealer : ${dealerHand[0].value}${dealerHand[0].suit} ❓\n\n` +
-                    `💴 Mise : **${currentBet.toLocaleString()} Yens**`,
+                            `🧑 Ta main : ${handToString(playerHand)} — **${value}**\n` +
+                            `🏦 Dealer : ${dealerHand[0].value}${dealerHand[0].suit} ❓\n\n` +
+                            `💴 Mise : **${currentBet.toLocaleString()} Yens**`,
 
-                    buildButtons({
-                        canDouble: false,
-                        canSplit: false,
-                        canInsurance: false
-                    })
+                            buildButtons({
+                                canDouble: false,
+                                canSplit: false,
+                                canInsurance: false
+                            })
 
-                )
+                        )
 
-            ],
+                    ],
 
-            flags: MessageFlags.IsComponentsV2
+                    flags: MessageFlags.IsComponentsV2
+
+                });
+
+            }
+
+            //──────────────
+            // Rester
+            //──────────────
+
+            if (i.customId === "stand") {
+
+                collector.stop("stand");
+
+                return resolveGame(
+                    i,
+                    playerHand,
+                    dealerHand,
+                    currentBet,
+                    user,
+                    alreadyBet
+                );
+
+            }
+
+            //──────────────
+            // Doubler
+            //──────────────
+
+            if (i.customId === "double") {
+
+                if (user.yens < currentBet * 2) {
+
+                    return i.reply({
+                        content: "❌ Tu n'as pas assez de Yens pour doubler.",
+                        ephemeral: true
+                    });
+
+                }
+
+                currentBet *= 2;
+
+                playerHand.push(drawCard());
+
+                collector.stop("double");
+
+                return resolveGame(
+                    i,
+                    playerHand,
+                    dealerHand,
+                    currentBet,
+                    user,
+                    alreadyBet
+                );
+
+            }
+
+            //──────────────
+            // Assurance (V2)
+            //──────────────
+
+            if (i.customId === "insurance") {
+
+                return i.reply({
+
+                    content:
+                        "🛡️ L'assurance sera disponible dans la prochaine mise à jour.",
+
+                    ephemeral: true
+
+                });
+
+            }
+
+            //──────────────
+            // Split (V2)
+            //──────────────
+
+            if (i.customId === "split") {
+
+                return i.reply({
+
+                    content:
+                        "✂️ Le Split arrivera dans la prochaine mise à jour.",
+
+                    ephemeral: true
+
+                });
+
+            }
 
         });
 
     }
 
-    //──────────────
-    // Rester
-    //──────────────
+};
 
-    if (i.customId === "stand") {
-
-        collector.stop("stand");
-
-        return resolveGame(
-            i,
-            playerHand,
-            dealerHand,
-            currentBet,
-            user,
-            alreadyBet
-        );
-
-    }
-
-    //──────────────
-    // Doubler
-    //──────────────
-
-    if (i.customId === "double") {
-
-        if (user.yens < currentBet * 2) {
-
-            return i.reply({
-                content: "❌ Tu n'as pas assez de Yens pour doubler.",
-                ephemeral: true
-            });
-
-        }
-
-        currentBet *= 2;
-
-        playerHand.push(drawCard());
-
-        collector.stop("double");
-
-        return resolveGame(
-            i,
-            playerHand,
-            dealerHand,
-            currentBet,
-            user,
-            alreadyBet
-        );
-
-    }
-
-    //──────────────
-    // Assurance (V2)
-    //──────────────
-
-    if (i.customId === "insurance") {
-
-        return i.reply({
-
-            content:
-                "🛡️ L'assurance sera disponible dans la prochaine mise à jour.",
-
-            ephemeral: true
-
-        });
-
-    }
-
-    //──────────────
-    // Split (V2)
-    //──────────────
-
-    if (i.customId === "split") {
-
-        return i.reply({
-
-            content:
-                "✂️ Le Split arrivera dans la prochaine mise à jour.",
-
-            ephemeral: true
-
-        });
-
-    }
-
-});
 //──────────────────────────────────────
 // Résolution de la partie
 //──────────────────────────────────────
@@ -772,6 +768,3 @@ async function resolveGame(
     });
 
 }
-} // ferme execute()
-
-}; // ferme module.exports
